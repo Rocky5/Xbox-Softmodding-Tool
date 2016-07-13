@@ -1,0 +1,66 @@
+
+%include 'tools\tmp'
+
+; Check the partition variable & change it to the correct format.
+%ifidni Partition,'C'
+%define	Partition 'Partition2'
+%endif
+%ifidni Partition,'E'
+%define	Partition 'Partition1'
+%endif
+%ifidni Partition,'F'
+%define	Partition 'Partition6'
+%endif
+%ifidni Partition,'G'
+%define	Partition 'Partition7'
+%endif
+%ifidni Partition,'Unprotected'
+%define	Partition 'Partition14'
+%endif
+
+;-----------------------------------------
+%define	TV0	1				; TRAY_BOOT							= 1
+%define	TV1	0				; TRI_BOOT							= 2
+%define	TV2	0				; PATCH_BACK_MS_KEY					= 4
+%define	TV3	8				; OPEN_DASH_WITH_NKP				= 8
+%define	TV4	0				; OPEN_DASH_shadowC_OFF				= 16
+%define	TV5	32				; CLOSE_TRAY_ALLWAYS				= 32
+%define	TV6	0				; KINGROACH_VERSION					= 64
+%define	TV7	0				; BOOT_DASH_ONLY					= 128
+%define	TV8	0				; DISABLE_VIRTUAL_EEPROM_TRAY_OPEN	= 256
+%define	VFR	0				; VIDEO_FORCE_PROGRESSIVE			= 1
+%define	VFP	0				; VIDEO_FORCE_RGB					= 2
+%define VFF	0				; FLICKER_FILTER					= 4
+%define FF_VAL	0			; FLICKER_FILTER_VALUE				= 5
+%define FAN_SPEED	10		; FAN_SPEED							= 10
+%define LED_COLOR1	00FFh	; LED_COLOR1 Orange					= 00FFh
+%define LED_COLOR2	000Fh	; LED_COLOR2 Green					= 000Fh
+;------------------------------
+%define	VID_SET		VFR+VFP+VFF
+%define TRAY_VAL	TV0+TV1+TV2+TV3+TV4+TV5+TV6+TV7+TV8
+;------------------------------
+fstart: dd	FAN_SPEED, TRAY_VAL, LED_COLOR1, LED_COLOR1
+	dd	LED_COLOR2, VID_SET, FF_VAL, LED_COLOR2
+	dd	0,0,0,0
+	times   64-$+fstart db 0
+;------------------------------
+DB1:	db	'\Device\Harddisk0\Partition1\Prep\default.xbe'
+	times   80-$+DB1 db 0
+;------------------------------
+DB2:	db	'\Device\Harddisk0\Partition14\nkpatcher\dashloader\default.xbe'
+	times   80-$+DB2 db 0
+;------------------------------
+DB3:	db	'\Device\Harddisk0\Partition14\nkpatcher\rescuedash\default.xbe'
+	times   80-$+DB3 db 0
+;------------------------------
+DB4:	db	'\Device\Harddisk0', '\', Partition, '\', Dash_Folder, '\', XBE_Name
+	times   80-$+DB4 db 0
+;------------------------------
+DB5:	db	''
+	times   80-$+DB5 db 0
+;------------------------------
+;;; END OF FILE
+
+
+
+

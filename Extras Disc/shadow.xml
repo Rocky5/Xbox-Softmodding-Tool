@@ -1,0 +1,809 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Unleashx>
+	<Settings>
+		<Preference>
+			<AbortOnError>Yes</AbortOnError>
+			<ContextMenu AllowUninstall="No" AllowItemEdit="No" AllowRecentList="No" LinkToSave="No" LinkToGame="No"/>
+			<Skin Path="D:\Skins\">ShadowC</Skin>
+			<VideoSettings Soften="No" Widescreen="No" UsePAL60="No" FastRefresh="Yes" EnableTextureCompression="No" Use720P="No" Use480P="Yes" FilterLevel="0"/>
+			<LiveUpdate AutoCheck="No"/>
+			<AutoVideoMode MultiRegion="Off" UsePAL60="No">no</AutoVideoMode>
+			<Games AutoLaunch="No"/>
+			<DVD AutoLaunch="No"/>
+			<AudioCD AutoLaunch="No"/>
+			<EnableDriveF>Yes</EnableDriveF>
+			<EnableDriveG>Yes</EnableDriveG>
+			<FanSpeed>1.00</FanSpeed>
+			<Use24HFormat>Yes</Use24HFormat>
+			<SNTP Synchronize="Yes" HTTP="Yes" Port="80">143.210.16.201</SNTP>
+			<AutoSetTime>Yes</AutoSetTime>
+			<ScreenSaver Wait="300">
+				<Text>2016 Softmodding Tool</Text>
+			</ScreenSaver>
+		</Preference>
+		<Network Type="DHCP" Enable="Yes">
+			<AutoDetect>yes</AutoDetect>
+			<IP>192.168.1.6</IP>
+			<Subnet>255.255.255.255</Subnet>
+			<Gateway>192.168.1.1</Gateway>
+			<DNS1>192.168.1.1</DNS1>
+		</Network>
+		<FTP Enable="Yes">
+			<MaxUsers>10</MaxUsers>
+			<AllowAnon>No</AllowAnon>
+		</FTP>
+		<Audio>
+			<EnableSoundEffect>No</EnableSoundEffect>
+		</Audio>
+		<Shortcut>
+			<GP_BLACK>D:\Applications\Enigmah-X\default.xbe</GP_BLACK>
+		</Shortcut>
+		<LED>
+			<Default>Red</Default>
+		</LED>
+	</Settings>
+	<Menu>
+
+		<List Text="Disclaimer" Sort="Off" Batch="True">
+			<Item Action="MessageBox" arg1="Information">You have disabled the ShadowC protection, be warned I take no responsibility for the action you take hear on out.</Item>
+			<Item Action="MessageBox" arg1="Information">Note: this disc is for use with the "2016 Softmodding Tool v1.0 &amp; newer versions. If you haven't already you can use this disc to update/upgrade your softmod to the latest version.</Item>
+		</List>
+
+		<List Text="Re-enable ShadowC" Sort="Off" Batch="True">
+			<Item Action="AskUser" arg1="Warning!">Do you want me to re-enable the ShadowC protection? This will restart the Xbox.</Item>
+			<Item Action="D:\no sc disc\reboot.xbe">Enable ShadowC</Item>
+		</List>
+
+		<Item>------------------------------------------</Item>
+
+		<Item>Applications</Item>
+
+		<List Text="Enter Menu" Sort="Off">
+
+			<List Text="Information" Sort="Off" Batch="True">
+				<Item Action="MessageBox" arg1="Information">In this menu you can install dashboards or applications as applications only, due to the ShadowC partition being disabled.</Item>
+			</List>
+
+			<Item>------------------------------------------</Item>
+
+			<Item>Avalaunch</Item>
+
+			<List Text="Install to" Sort="Off">
+
+				<Item>Avalaunch Options</Item>
+
+				<Item>------------------------------------------</Item>
+
+				<List Text="E:\Applications\" Sort="Off" Batch="True">
+					<Item Action="AskUser" arg1="Continue" arg2="This will install Avalaunch to E:\Applications\ if there is a previous installation residing there it will be overwritten."/>
+					<Item Action="Copy" arg1="dummy" arg2="E:\Applications\Avalaunch">Remove old dashboard</Item>
+					<Item Action="Delete" arg1="E:\Applications\Avalaunch">Remove old E:\Applications\Avalaunch\</Item>
+					<Item Action="Unzip" arg1="D:\Dashboards\Avalaunch.zip" arg2="E:\Applications\Avalaunch">Installing dash to E:\Applications\Avalaunch\</Item>
+					<Item Action="Format" arg1="Z"/>
+					<Item Action="MessageBox" arg1="Done">That's Avalaunch installed to "E:\Applications\Avalaunch"</Item>
+				</list>
+
+			</list>
+
+			<Item>EvolutionX</Item>
+
+			<List Text="Install to" Sort="Off">
+
+				<Item>EvolutionX Options</Item>
+
+				<Item>------------------------------------------</Item>
+
+				<List Text="E:\Applications\" Sort="Off" Batch="True">
+					<Item Action="AskUser" arg1="Continue" arg2="This will install EvolutionX to E:\Applications\ if there is a previous installation residing there it will be overwritten."/>
+					<Item Action="Copy" arg1="dummy" arg2="E:\Applications\EvolutionX">Remove old dashboard</Item>
+					<Item Action="Delete" arg1="E:\Applications\EvolutionX">Remove old E:\Applications\EvolutionX\</Item>
+					<Item Action="Unzip" arg1="D:\Dashboards\EvolutionX.zip" arg2="E:\Applications\EvolutionX">Installing dash to E:\Applications\EvolutionX\</Item>
+					<Item Action="Format" arg1="Z"/>
+					<Item Action="MessageBox" arg1="Done">That's EvolutionX installed to "E:\Applications\EvolutionX"</Item>
+				</list>
+
+			</list>
+
+			<Item>UnleashX</Item>
+
+			<List Text="Install to" Sort="Off">
+
+				<Item>UnleashX Options</Item>
+
+				<Item>------------------------------------------</Item>
+
+				<List Text="E:\Applications\" Sort="Off" Batch="True">
+					<Item Action="AskUser" arg1="Continue" arg2="This will install UnleashX to E:\Applications\ if there is a previous installation residing there it will be overwritten."/>
+					<Item Action="Copy" arg1="dummy" arg2="E:\Applications\UnleashX">Remove old dashboard</Item>
+					<Item Action="Delete" arg1="E:\Applications\UnleashX">Remove old E:\Applications\UnleashX\</Item>
+					<Item Action="Unzip" arg1="D:\Dashboards\UnleashX.zip" arg2="E:\Applications\UnleashX">Installing dash to E:\Applications\UnleashX\</Item>
+					<Item Action="MessageBox" arg1="Done">That's UnleashX installed to "E:\Applications\UnleashX"</Item>
+				</list>
+			</list>
+
+			<Item>XBMC4Kids</Item>
+
+			<List Text="Install to" Sort="Off">
+
+				<Item>XBMC4Kids Options</Item>
+				<List Text="Why Empty?" Sort="Off" Batch="True">
+					<Item Action="MessageBox" arg1="">This must be installed in userland mode, ie, the ShadowC partition not disabled.</Item>
+				</List>
+
+			</list>
+
+			<Item>XBMC4Xbox</Item>
+
+			<List Text="Install to" Sort="Off">
+
+				<Item>XBMC4Xbox Options</Item>
+				<Item>v3.5.3</Item>
+
+				<Item>------------------------------------------</Item>
+
+				<List Text="E:\Applications\" Sort="Off" Batch="True">
+					<Item Action="AskUser" arg1="Continue" arg2="This will install XBMC4Xbox to E:\Applications\ if there is a previous installation residing there it will be overwritten."/>
+					<Item Action="Copy" arg1="dummy" arg2="E:\Applications\XBMC4Xbox">Remove old dashboard</Item>
+					<Item Action="Delete" arg1="E:\Applications\XBMC4Xbox">Remove old E:\Applications\XBMC4Xbox\</Item>
+					<Item Action="Unzip" arg1="D:\Dashboards\XBMC4Xbox.zip" arg2="E:\Applications\XBMC4Xbox">Installing dash to E:\Applications\XBMC4Xbox\</Item>
+					<Item Action="Format" arg1="Z"/>
+					<Item Action="MessageBox" arg1="Done">That's XBMC4Xbox installed to "E:\Applications\XBMC4Xbox"</Item>
+				</list>
+
+			</list>
+
+			<Item>------------------------------------------</Item>
+
+			<Item>DVD2Xbox</Item>
+
+			<List Text="Information" Sort="Off" Batch="True">
+				<Item Action="MessageBox" arg1="Information">DVD2Xbox is used to rip game discs to your Xbox hardrive. It can also be used to rip audio CDs & DVD discs.</Item>
+			</List>
+
+			<List Text="Install to" Sort="Off">
+
+				<Item>DVD2Xbox Options</Item>
+
+				<Item>------------------------------------------</Item>
+
+				<List Text="E:\Applications\" Sort="Off" Batch="True">
+					<Item Action="AskUser" arg1="Continue" arg2="This will install DVD2Xbox to E:\Applications\DVD2Xbox\ if there is currently a application residing there it will be overwritten."/>
+					<Item Action="Copy" arg1="dummy" arg2="E:\Applications\DVD2Xbox">Remove old application</Item>
+					<Item Action="Delete" arg1="E:\Applications\DVD2Xbox">Remove old E:\Applications\DVD2Xbox\</Item>
+					<Item Action="Unzip" arg1="D:\Applications\DVD2Xbox.zip" arg2="E:\Applications\DVD2Xbox">Installing dash to E:\Applications\DVD2Xbox\</Item>
+					<Item Action="Format" arg1="Z"/>
+					<Item Action="MessageBox" arg1="Done">That's DVD2Xbox installed to "E:\Applications\DVD2Xbox"</Item>
+				</list>
+
+			</list>
+
+			<Item>DVDX v2</Item>
+
+			<List Text="Information" Sort="Off" Batch="True">
+				<Item Action="MessageBox" arg1="Information">DVDX v2 is used to play DVD movies without the need for the DVD kit.</Item>
+			</List>
+
+			<List Text="Install to" Sort="Off">
+
+				<Item>DVDX v2 Options</Item>
+
+				<Item>------------------------------------------</Item>
+
+				<List Text="E:\Applications\" Sort="Off" Batch="True">
+					<Item Action="AskUser" arg1="Continue" arg2="This will install DVDX v2 to E:\Applications\DVDX v2\ if there is currently a application residing there it will be overwritten."/>
+					<Item Action="Copy" arg1="dummy" arg2="E:\Applications\DVDX v2">Remove old application</Item>
+					<Item Action="Delete" arg1="E:\Applications\DVDX v2">Remove old E:\Applications\DVDX v2\</Item>
+					<Item Action="Unzip" arg1="D:\Applications\DVDX v2.zip" arg2="E:\Applications\DVDX v2">Installing dash to E:\Applications\DVDX v2\</Item>
+					<Item Action="Format" arg1="Z"/>
+					<Item Action="MessageBox" arg1="Done">That's DVDX v2 installed to "E:\Applications\DVDX v2"</Item>
+				</list>
+
+			</list>
+
+			<Item>EEPROM Backuperer</Item>
+
+			<List Text="Information" Sort="Off" Batch="True">
+				<Item Action="MessageBox" arg1="Information">The EEPROM Backuperer is used to backup your current Xbox EEPROM. The output files will be placed in "E:\Backups\EEPROM\", note this is a silent app. ie, you will not get a GUI.</Item>
+			</List>
+
+			<List Text="Install to" Sort="Off">
+
+				<Item>EEPROM Backuperer Options</Item>
+
+				<Item>------------------------------------------</Item>
+
+				<List Text="E:\Applications\" Sort="Off" Batch="True">
+					<Item Action="AskUser" arg1="Continue" arg2="This will install the EEPROM Backuperer to E:\Applications\EEPROM Backuperer\ if there is currently a application residing there it will be overwritten."/>
+					<Item Action="Copy" arg1="dummy" arg2="E:\Applications\EEPROM Backuperer">Remove old application</Item>
+					<Item Action="Delete" arg1="E:\Applications\EEPROM Backuperer">Remove old E:\Applications\EEPROM Backuperer</Item>
+					<Item Action="Unzip" arg1="D:\Applications\EEPROM Backuperer.zip" arg2="E:\Applications\EEPROM Backuperer">Installing dash to E:\Applications\EEPROM Backuperer\</Item>
+					<Item Action="Format" arg1="Z"/>
+					<Item Action="MessageBox" arg1="Done">That's EEPROM Backuperer installed to "E:\Applications\EEPROM Backuperer\"</Item>
+				</list>
+
+			</list>
+
+			<Item>Enigmah-X</Item>
+
+			<List Text="Information" Sort="Off" Batch="True">
+				<Item Action="MessageBox" arg1="Information">This is a video mode switcher, that is used to switch a PAL console to an NTSC  console, or visa versa.</Item>
+			</List>
+
+			<List Text="Install to" Sort="Off">
+
+				<Item>Enigmah-X Options</Item>
+
+				<Item>------------------------------------------</Item>
+
+				<List Text="E:\Applications\" Sort="Off" Batch="True">
+					<Item Action="AskUser" arg1="Continue" arg2="This will install Enigmah-X to E:\Applications\Enigmah-X\ if there is currently a application residing there it will be overwritten."/>
+					<Item Action="Copy" arg1="dummy" arg2="E:\Applications\Enigmah-X">Remove old application</Item>
+					<Item Action="Delete" arg1="E:\Applications\Enigmah-X">Remove old E:\Applications\Enigmah-X\</Item>
+					<Item Action="Unzip" arg1="D:\Applications\Enigmah-X.zip" arg2="E:\Applications\Enigmah-X">Installing dash to E:\Applications\Enigmah-X\</Item>
+					<Item Action="Format" arg1="Z"/>
+					<Item Action="MessageBox" arg1="Done">That's Enigmah-X installed to "E:\Applications\Enigmah-X"</Item>
+				</list>
+
+			</list>
+
+			<List Text="Run from disc" Sort="Off" Batch="True">
+				<Item Action="AskUser" arg1="Continue" arg2="Are you sure you want to launch Enigmah-X?"/>
+				<Item Action="D:\Applications\Enigmah-X\default.xbe">Run Enigmah-X Tool</Item>
+			</list>
+
+			<Item>NKPatcher Shortcut</Item>
+
+			<List Text="Information" Sort="Off" Batch="True">
+				<Item Action="MessageBox" arg1="Information">This will reinstall the NKPatcher Settings Shortcut into the Applications menu.</Item>
+			</List>
+
+			<List Text="Reinstall" Sort="Off" Batch="True">
+				<Item Action="AskUser" arg1="Continue" arg2="This will install NKPatcher Settings launcher to E:\Applications\NKPatcher Settings\ if there is currently a application residing there it will be overwritten."/>
+				<Item Action="Copy" arg1="dummy" arg2="E:\Applications\NKPatcher Settings">Remove old application</Item>
+				<Item Action="Delete" arg1="E:\Applications\NKPatcher Settings">Remove old E:\Applications\NKPatcher Settings\</Item>
+				<Item Action="Copy" arg1="D:\Applications\NKPatcher Settings\" arg2="E:\Applications\NKPatcher Settings">Installing dash to E:\Applications\NKPatcher Settings\</Item>
+				<Item Action="MessageBox" arg1="Done">That's NKPatcher Settings installed to "E:\Applications\NKPatcher Settings"</Item>
+			</list>
+
+			<Item>Xored Mini</Item>
+
+			<List Text="Information" Sort="Off" Batch="True">
+				<Item Action="MessageBox" arg1="Information">Xored Mini is used to apply trainers to your games. I include 882 trainers.</Item>
+			</List>
+
+			<List Text="Install to" Sort="Off">
+
+				<Item>Xored Mini Options</Item>
+
+				<Item>------------------------------------------</Item>
+
+				<List Text="E:\Applications\" Sort="Off" Batch="True">
+					<Item Action="AskUser" arg1="Continue" arg2="This will install Xored Mini launcher to E:\Applications\Xored Mini\ if there is currently a application residing there it will be overwritten."/>
+					<Item Action="Copy" arg1="dummy" arg2="E:\Applications\Xored Mini">Remove old application</Item>
+					<Item Action="Delete" arg1="E:\Applications\Xored Mini">Remove old E:\Applications\Xored Mini\</Item>
+					<Item Action="Unzip" arg1="D:\Applications\Xored Mini.zip" arg2="E:\Applications\Xored Mini">Installing dash to E:\Applications\Xored Mini\</Item>
+					<Item Action="Format" arg1="Z"/>
+					<Item Action="MessageBox" arg1="Done">That's Xored Mini installed to "E:\Applications\Xored Mini"</Item>
+				</list>
+
+			</list>
+
+		</list>
+
+		<Item>NKPatcher Settings</Item>
+
+		<List Text="Enter Menu" Sort="Off">
+
+			<List Text="Information" Sort="Off" Batch="True">
+
+				<Item Action="MessageBox" Arg1="Information">Welcome to the disc version of NKPatcher Settings. \n\nHere you will be able to change a few of the NKPatcher functions &amp; the LED colour of your Xbox.</Item>
+			</List>
+
+			<Item>------------------------------------------</Item>
+
+			<!-- --------------------------------- -->
+			<!-- ------- Dashboard Section ------- -->
+			<!-- --------------------------------- -->
+
+			<List Text="Dashboards" Sort="Off">
+				<List Text="Why Empty?" Sort="Off" Batch="True">
+					<Item Action="MessageBox" arg1="">These options must be used via the HDD version of NKPatcher Settings. Run NKPatcher Settings from your dashboard applications menu.</Item>
+				</List>
+			</List>
+
+			<!-- --------------------------------- -->
+			<!-- ------- Fan Speed Section ------- -->
+			<!-- --------------------------------- -->
+
+			<List Text="Fan Speed" Sort="Off">
+				<List Text="Information" Sort="Off" Batch="True">
+					<Item Action="MessageBox" Arg1="Information">These will adjust the fan speed of your Xbox, from the Default 20% all the way up to 100% (noisy as hell)</Item>
+				</List>
+				<Item>------------------------------------------</Item>
+				<List Text="Default" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\fan\default-fan.png">
+					<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\fan"/>
+					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\fan\default-fan.png"/>
+					<Item Action="Copy" arg1="C:\nkpatcher\configs\fan files\FAN1.bin" arg2="C:\nkpatcher\configs\FAN.bin"/>
+					<Item Action="Delete" arg1="C:\nkpatcher\configs\FAN.bin"/>
+					<Item Action="MessageBox" Arg1="Complete">Setting saved. \nChanges will take affect on next boot.</Item>
+				</List>
+				<List Text="30%" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\fan\fan-30.png">
+					<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\fan"/>
+					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\fan\fan-30.png"/>
+					<Item Action="Copy" arg1="C:\nkpatcher\configs\fan files\FAN1.bin" arg2="C:\nkpatcher\configs\FAN.bin"/>
+					<Item Action="MessageBox" Arg1="Complete">Setting saved. \nChanges will take affect on next boot.</Item>
+				</List>
+				<List Text="40%" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\fan\fan-40.png">
+					<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\fan"/>
+					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\fan\fan-40.png"/>
+					<Item Action="Copy" arg1="C:\nkpatcher\configs\fan files\FAN2.bin" arg2="C:\nkpatcher\configs\FAN.bin"/>
+					<Item Action="MessageBox" Arg1="Complete">Setting saved. \nChanges will take affect on next boot.</Item>
+				</List>
+				<List Text="50%" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\fan\fan-50.png">
+					<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\fan"/>
+					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\fan\fan-50.png"/>
+					<Item Action="Copy" arg1="C:\nkpatcher\configs\fan files\FAN3.bin" arg2="C:\nkpatcher\configs\FAN.bin"/>
+					<Item Action="MessageBox" Arg1="Complete">Setting saved. \nChanges will take affect on next boot.</Item>
+				</List>
+				<List Text="60%" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\fan\fan-60.png">
+					<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\fan"/>
+					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\fan\fan-60.png"/>
+					<Item Action="Copy" arg1="C:\nkpatcher\configs\fan files\FAN4.bin" arg2="C:\nkpatcher\configs\FAN.bin"/>
+					<Item Action="MessageBox" Arg1="Complete">Setting saved. \nChanges will take affect on next boot.</Item>
+				</List>
+				<List Text="70%" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\fan\fan-70.png">
+					<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\fan"/>
+					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\fan\fan-70.png"/>
+					<Item Action="Copy" arg1="C:\nkpatcher\configs\fan files\FAN5.bin" arg2="C:\nkpatcher\configs\FAN.bin"/>
+					<Item Action="MessageBox" Arg1="Complete">Setting saved. \nChanges will take affect on next boot.</Item>
+				</List>
+				<List Text="80%" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\fan\fan-80.png">
+					<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\fan"/>
+					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\fan\fan-80.png"/>
+					<Item Action="Copy" arg1="C:\nkpatcher\configs\fan files\FAN6.bin" arg2="C:\nkpatcher\configs\FAN.bin"/>
+					<Item Action="MessageBox" Arg1="Complete">Setting saved. \nChanges will take affect on next boot.</Item>
+				</List>
+				<List Text="90%" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\fan\fan-90.png">
+					<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\fan"/>
+					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\fan\fan-90.png"/>
+					<Item Action="Copy" arg1="C:\nkpatcher\configs\fan files\FAN7.bin" arg2="C:\nkpatcher\configs\FAN.bin"/>
+					<Item Action="MessageBox" Arg1="Complete">Setting saved. \nChanges will take affect on next boot.</Item>
+				</List>
+				<List Text="100%" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\fan\fan-100.png">
+					<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\fan"/>
+					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\fan\fan-100.png"/>
+					<Item Action="Copy" arg1="C:\nkpatcher\configs\fan files\FAN8.bin" arg2="C:\nkpatcher\configs\FAN.bin"/>
+					<Item Action="MessageBox" Arg1="Complete">Setting saved. \nChanges will take affect on next boot.</Item>
+				</List>
+			</List>
+
+			<!-- ------------------------------------ -->
+			<!-- ------- Kernel Fonts Section ------- -->
+			<!-- ------------------------------------ -->
+
+			<List Text="Kernel Fonts" Sort="Off">
+				<List Text="Information" Sort="Off" Batch="True">
+					<Item Action="MessageBox" Arg1="Info">This menu displays what Xbox Kernel Font is enabled. This process is automated &amp; is done when the softmod is installed.</Item>
+				</List>
+				<Item>------------------------------------------</Item>
+				<List Text="Generic" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font\generic.png"/>
+				<List Text="K:1.0.3944.1" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font\K.1.0.3944.1.png"/>
+				<List Text="K:1.0.4034.1" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font\K.1.0.4034.1.png"/>
+				<List Text="K:1.0.4627.1" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font\K.1.0.4627.1.png"/>
+				<List Text="K:1.0.4817.1" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font\K.1.0.4817.1.png"/>
+				<List Text="K:1.0.5101.1" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font\K.1.0.5101.1.png"/>
+				<List Text="K:1.0.5530.1" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font\K.1.0.5530.1.png"/>
+				<List Text="K:1.0.5713.1" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font\K.1.0.5713.1.png"/>
+				<List Text="K:1.0.5838.1" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font\K.1.0.5838.1.png"/>
+				<Item>------------------------------------------</Item>
+				<List Text="Xbox is Crashing, look here." Sort="Off">
+					<List Text="Information" Sort="Off" Batch="True">
+						<Item Action="MessageBox" Arg1="Information">These are to be used if you are getting random crashes on boot. Start at Fix 1 &amp; then test to see if it's still crashing. If not, you're sorted.</Item>
+						<Item Action="MessageBox" Arg1="Information">If you are still getting crashing after applying Fix 1, then try Fix 2 and test again &amp; if for some strange reason you are still crashing, try Fix 3. If its still crashing after this, buy a new Xbox.</Item>
+					</List>
+					<Item>------------------------------------------</Item>
+					<List Text="Remove" Sort="Off" Batch="True">
+						<Item Action="Copy" arg1="dummy" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font-Sxtf"/>
+						<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font-Sxtf"/>
+						<Item Action="Copy" arg1="dummy" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font-Sxtf"/>
+						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\s.xtf"/>
+						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\s2.xtf"/>
+						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\s3.xtf"/>
+						<Item Action="Delete" arg1="C:\xodash\s.xtf"/>
+						<Item Action="Delete" arg1="C:\xodash\s2.xtf"/>
+						<Item Action="Delete" arg1="C:\xodash\s3.xtf"/>
+						<Item Action="MessageBox" Arg1="Complete">Setting saved. \nChanges will take affect on next boot.</Item>
+					</List>
+					<List Text="Fix 1" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font-Sxtf\Sxtf-1.png">
+						<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font-Sxtf"/>
+						<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font-Sxtf\Sxtf-1.png"/>
+						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\s.xtf"/>
+						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\s2.xtf"/>
+						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\s3.xtf"/>
+						<Item Action="Delete" arg1="C:\xodash\s2.xtf"/>
+						<Item Action="Delete" arg1="C:\xodash\s3.xtf"/>
+						<Item Action="MessageBox" Arg1="Complete">Setting saved. \nChanges will take affect on next boot.</Item>
+					</List>
+					<List Text="Fix 2" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font-Sxtf\Sxtf-2.png">
+						<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font-Sxtf"/>
+						<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font-Sxtf\Sxtf-2.png"/>
+						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\s.xtf"/>
+						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\s2.xtf"/>
+						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\s3.xtf"/>
+						<Item Action="Delete" arg1="C:\xodash\s3.xtf"/>
+						<Item Action="MessageBox" Arg1="Complete">Setting saved. \nChanges will take affect on next boot.</Item>
+					</List>
+					<List Text="Fix 3" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font-Sxtf\Sxtf-3.png">
+						<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font-Sxtf"/>
+						<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font-Sxtf\Sxtf-3.png"/>
+						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\s.xtf"/>
+						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\s2.xtf"/>
+						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\s3.xtf"/>
+						<Item Action="MessageBox" Arg1="Complete">Setting saved. \nChanges will take affect on next boot.</Item>
+					</List>
+				</List>
+			</List>
+
+			<!-- ---------------------------------- -->
+			<!-- ------- LED Colour Section ------- -->
+			<!-- ---------------------------------- -->
+
+			<List Text="Led Colours" Sort="Off">
+				<List Text="Information" Sort="Off" Batch="True">
+					<Item Action="MessageBox" Arg1="Information">These will change your front LED colour, from the Default Orange to the not so eye pleasing Christmas lights.</Item>
+				</List>
+				<Item>------------------------------------------</Item>
+				<List Text="Orange" Sort="Off" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led\orange.png">
+					<Item>Orange Options</Item>
+					<Item>------------------------------------------</Item>
+					<List Text="Solid (Default)" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led\default-led.png">
+						<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led"/>
+						<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led\orange.png"/>
+						<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led\default-led.png"/>
+						<Item Action="Copy" arg1="C:\nkpatcher\configs\led files\led1.bin" arg2="C:\nkpatcher\configs\LED.bin"/>
+						<Item Action="Delete" arg1="C:\nkpatcher\configs\LED.bin"/>
+						<Item Action="MessageBox" Arg1="Complete">Setting saved. \nChanges will take affect on next boot.</Item>
+					</List>
+					<List Text="Flash Slow" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led\led-3.png">
+						<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led"/>
+						<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led\orange.png"/>
+						<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led\led-3.png"/>
+						<Item Action="Copy" arg1="C:\nkpatcher\configs\led files\led2.bin" arg2="C:\nkpatcher\configs\LED.bin"/>
+						<Item Action="MessageBox" Arg1="Complete">Setting saved. \nChanges will take affect on next boot.</Item>
+					</List>
+					<List Text="Flash Fast" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led\led-2.png">
+						<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led"/>
+						<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led\orange.png"/>
+						<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led\led-2.png"/>
+						<Item Action="Copy" arg1="C:\nkpatcher\configs\led files\led1.bin" arg2="C:\nkpatcher\configs\LED.bin"/>
+						<Item Action="MessageBox" Arg1="Complete">Setting saved. \nChanges will take affect on next boot.</Item>
+					</List>
+				</List>
+				<List Text="Red" Sort="Off" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led\red.png">
+					<Item>Red Options</Item>
+					<Item>------------------------------------------</Item>
+					<List Text="Solid" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led\led-4.png">
+						<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led"/>
+						<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led\red.png"/>
+						<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led\led-4.png"/>
+						<Item Action="Copy" arg1="C:\nkpatcher\configs\led files\led3.bin" arg2="C:\nkpatcher\configs\LED.bin"/>
+						<Item Action="MessageBox" Arg1="Complete">Setting saved. \nChanges will take affect on next boot.</Item>
+					</List>
+					<List Text="Flash Slow" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led\led-6.png">
+						<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led"/>
+						<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led\red.png"/>
+						<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led\led-6.png"/>
+						<Item Action="Copy" arg1="C:\nkpatcher\configs\led files\led5.bin" arg2="C:\nkpatcher\configs\LED.bin"/>
+						<Item Action="MessageBox" Arg1="Complete">Setting saved. \nChanges will take affect on next boot.</Item>
+					</List>
+					<List Text="Flash Fast" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led\led-5.png">
+						<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led"/>
+						<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led\red.png"/>
+						<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led\led-5.png"/>
+						<Item Action="Copy" arg1="C:\nkpatcher\configs\led files\led4.bin" arg2="C:\nkpatcher\configs\LED.bin"/>
+						<Item Action="MessageBox" Arg1="Complete">Setting saved. \nChanges will take affect on next boot.</Item>
+					</List>
+				</List>
+				<List Text="Green" Sort="Off" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led\green.png">
+					<Item>Green Options</Item>
+					<Item>------------------------------------------</Item>
+					<List Text="Solid" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led\led-7.png">
+						<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led"/>
+						<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led\green.png"/>
+						<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led\led-7.png"/>
+						<Item Action="Copy" arg1="C:\nkpatcher\configs\led files\led6.bin" arg2="C:\nkpatcher\configs\LED.bin"/>
+						<Item Action="MessageBox" Arg1="Complete">Setting saved. \nChanges will take affect on next boot.</Item>
+					</List>
+					<List Text="Flash Slow" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led\led-9.png">
+						<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led"/>
+						<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led\green.png"/>
+						<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led\led-9.png"/>
+						<Item Action="Copy" arg1="C:\nkpatcher\configs\led files\led8.bin" arg2="C:\nkpatcher\configs\LED.bin"/>
+						<Item Action="MessageBox" Arg1="Complete">Setting saved. \nChanges will take affect on next boot.</Item>
+					</List>
+					<List Text="Flash Fast" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led\led-8.png">
+						<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led"/>
+						<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led\green.png"/>
+						<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led\led-8.png"/>
+						<Item Action="Copy" arg1="C:\nkpatcher\configs\led files\led7.bin" arg2="C:\nkpatcher\configs\LED.bin"/>
+						<Item Action="MessageBox" Arg1="Complete">Setting saved. \nChanges will take affect on next boot.</Item>
+					</List>
+				</List>
+				<List Text="Cycling" Sort="Off" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led\cycle.png">
+					<Item>Cycling Options</Item>
+					<Item>------------------------------------------</Item>
+					<List Text="Version 1" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led\led-10.png">
+						<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led"/>
+						<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led\cycle.png"/>
+						<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led\led-10.png"/>
+						<Item Action="Copy" arg1="C:\nkpatcher\configs\led files\led9.bin" arg2="C:\nkpatcher\configs\LED.bin"/>
+						<Item Action="MessageBox" Arg1="Complete">Setting saved. \nChanges will take affect on next boot.</Item>
+					</List>
+					<List Text="Version 2" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led\led-11.png">
+						<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led"/>
+						<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led\cycle.png"/>
+						<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led\led-11.png"/>
+						<Item Action="Copy" arg1="C:\nkpatcher\configs\led files\led10.bin" arg2="C:\nkpatcher\configs\LED.bin"/>
+						<Item Action="MessageBox" Arg1="Complete">Setting saved. \nChanges will take affect on next boot.</Item>
+					</List>
+				</List>
+				<List Text="Turn Off" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led\led-12.png">
+					<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led"/>
+					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led\led-12.png"/>
+					<Item Action="Copy" arg1="C:\nkpatcher\configs\led files\led11.bin" arg2="C:\nkpatcher\configs\LED.bin"/>
+					<Item Action="MessageBox" Arg1="Complete">Setting saved. \nChanges will take affect on next boot.</Item>
+				</List>
+			</List>
+
+			<!-- -------------------------------------- -->
+			<!-- ------- Partition Type Section ------- -->
+			<!-- -------------------------------------- -->
+
+			<List Text="Partition Types" Sort="Off">
+				<List Text="Information" Sort="Off" Batch="True">
+					<Item Action="MessageBox" Arg1="Information">Default:\nF takes all the space.\n\nPatition F &amp; G:\nF - 137GB / G - takes the rest.\n\nXBPartitioner:\nCustom partition table.</Item>
+				</List>
+				<Item>------------------------------------------</Item>
+				<List Text="Default" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\part\default-part.png">
+					<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\part"/>
+					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\part\default-part.png"/>
+					<Item Action="Copy" arg1="C:\nkpatcher\configs\nkpatcher\6.xbe" arg2="C:\nkpatcher\default.xbe"/>
+					<Item Action="MessageBox" Arg1="Complete">Setting saved. \nChanges will take affect on next boot.</Item>
+				</List>
+				<List Text="Partition F &amp; G" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\part\default-FG.png">
+					<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\part"/>
+					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\part\default-FG.png"/>
+					<Item Action="Copy" arg1="C:\nkpatcher\configs\nkpatcher\67.xbe" arg2="C:\nkpatcher\default.xbe"/>
+					<Item Action="MessageBox" Arg1="Complete">Setting saved. \nChanges will take affect on next boot.</Item>
+				</List>
+				<List Text="XBPartitioner" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\part\XBP-part.png">
+					<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\part"/>
+					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\part\XBP-part.png"/>
+					<Item Action="Copy" arg1="C:\nkpatcher\configs\nkpatcher\6.xbe" arg2="C:\nkpatcher\default.xbe"/>
+					<Item Action="MessageBox" Arg1="Complete">Setting saved. \nChanges will take affect on next boot.</Item>
+				</List>
+			</List>
+
+			<!-- ---------------------------------- -->
+			<!-- ------- Video mode Section ------- -->
+			<!-- ---------------------------------- -->
+
+			<List Text="Video Modes" Sort="Off">
+				<List Text="Why Empty?" Sort="Off" Batch="True">
+					<Item Action="MessageBox" arg1="">These options must be used via the HDD version of NKPatcher Settings. Run NKPatcher Settings from your dashboard applications menu.</Item>
+				</List>
+			</List>
+
+			<!-- ---------------------------------- -->
+			<!-- Here is the Virtual EEPROM section -->
+			<!-- ---------------------------------- -->
+
+			<List Text="Virtual EEPROM" Sort="Off">
+				<List Text="Why Empty?" Sort="Off" Batch="True">
+					<Item Action="MessageBox" arg1="">These options must be used via the HDD version of NKPatcher Settings. Run NKPatcher Settings from your dashboard applications menu.</Item>
+				</List>
+			</List>
+		</List>
+
+		<Item>Other Stuff</Item>
+
+		<List Text="Enter Menu" Sort="Off">
+
+			<List Text="Information" Sort="Off" Batch="True">
+				<Item Action="MessageBox" arg1="Information">Just some things that don't belong in other sub menus.</Item>
+			</List>
+
+			<Item>------------------------------------------</Item>
+
+			<Item>MS Dashboards</Item>
+
+			<List Text="Enter Menu" Sort="Off">	
+
+				<List Text="Why Empty?" Sort="Off" Batch="True">
+					<Item Action="MessageBox" arg1="">This must be installed in userland mode, ie, the ShadowC partition not disabled.</Item>
+				</List>
+
+			</list>
+
+			<Item>------------------------------------------</Item>
+
+			<Item>Maintenance</Item>
+
+			<List Text="Clear Xbox Cache" Sort="Off" Batch="True">
+				<Item Action="AskUser" arg1="Clear CACHE?">Doing this can help with some games or applications that are crashing or refusing to boot.</Item>
+				<Item Action="Copy" Arg1="Dummy" Arg2="E:\CACHE"/>
+				<Item Action="Delete" Arg1="E:\CACHE"/>
+				<Item Action="Copy" Arg1="Dummy" Arg2="E:\CACHE"/>
+				<Item Action="Format" Arg1="X"/>
+				<Item Action="Format" Arg1="Y"/>
+				<Item Action="Format" Arg1="Z"/>
+				<Item Action="MessageBox" Arg1="Complete">The CACHE has been cleared!</Item>
+			</List>
+
+
+		</list>
+
+		<Item>------------------------------------------</Item>
+
+		<Item>Advanced Features</Item>
+
+		<List Text="Enter Menu" Sort="Off">
+
+			<List Text="Information" Sort="Off" Batch="True" password="">
+				<Item Action="MessageBox" arg1="Information">In this menu you can update your 2016 Softmod to the latest version, or upgrade older softmods as well as revert to a stock Xbox.</Item>
+				<Item Action="MessageBox" arg1="Disclaimer!">If you don't know what these do, or you don't know how they work, do not use them. I take no responsibility for you mucking about with things you don't understand.</Item>
+			</list>
+
+			<Item>------------------------------------------</Item>
+
+			<Item>Update</Item>
+
+			<List Text="2014 Softmod" Sort="Off" Batch="True" password="">
+				<Item Action="MessageBox" arg1="Info">This option is for upgrading your 2014 \nsoftmod installation to the 2016 version. \n\nYour current dashboard will not be effected.</Item>
+				<Item Action="AskUser" arg1="Continue?" arg2="I'm about to do some checks, to makes \nsure you're running my 2014 Softmod kit. \n\nContinue with the Upgrade?"/>
+				<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\Configs\settings.xml" arg2="E:\UDATA\21585554\000000000000\Configs\settings.xm">2014 softmod not installed</Item>
+				<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\Configs\settings.xm" arg2="E:\UDATA\21585554\000000000000\Configs\settings.xml">2014 softmod not installed</Item>
+				<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\NoVC.bin" arg2="E:\UDATA\21585554\000000000000\NoVC.bi">2014 softmod not installed</Item>
+				<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\NoVC.bi" arg2="E:\UDATA\21585554\000000000000\NoVC.bin">2014 softmod not installed</Item>
+				<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\reboot.xbe" arg2="E:\UDATA\21585554\000000000000\reboot.xb">2014 softmod not installed</Item>
+				<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\reboot.xb" arg2="E:\UDATA\21585554\000000000000\reboot.xbe">2014 softmod not installed</Item>
+				<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\videoset.dat" arg2="E:\UDATA\21585554\000000000000\videoset.da">2014 softmod not installed</Item>
+				<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\videoset.da" arg2="E:\UDATA\21585554\000000000000\videoset.dat">2014 softmod not installed</Item>
+				<Item Action="MessageBox" arg1="Success">OK it would appear you're running my 2014 Softmod, so I will continue onto the next step.</Item>
+				<Item Action="Copy" arg1="D:\skins\Update Softmod" arg2="E:\Prep\skins\Update Softmod"/>
+				<Item Action="Copy" arg1="D:\skins\skin files" arg2="E:\Prep\skins\skin files"/>
+				<Item Action="Copy" arg1="D:\configs\updatesoftmod.xml" arg2="E:\Prep\Config.xml"/>
+				<Item Action="Copy" arg1="D:\softmod files\" arg2="E:\Prep\"/>
+				<Item Action="E:\Prep\default.xbe"/>
+			</list>
+
+			<List Text="2016 Softmod" Sort="Off" Batch="True" password="">
+				<Item Action="MessageBox" arg1="Info">This option is for updating your 2016 \nsoftmod installation to the latest version. \n\nYour current dashboard will not be effected.</Item>
+				<Item Action="AskUser" arg1="Continue?" arg2="I'm about to do some checks, to makes \nsure you're running my 2016 Softmod. \n\nContinue with the Upgrade?"/>
+				<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\Configs\settings.xml" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\Configs\settings.xm">2016 softmod not installed</Item>
+				<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\Configs\settings.xm" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\Configs\settings.xml">2016 softmod not installed</Item>
+				<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\reboot xbe\default.xbe" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\reboot xbe\default.xb">2016 softmod not installed</Item>
+				<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\reboot xbe\default.xb" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\reboot xbe\default.xbe">2016 softmod not installed</Item>
+				<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\softmod files\videoset.dat" arg2="E:\UDATA\21585554\000000000000\softmod files\videoset.da">2016 softmod not installed</Item>
+				<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\softmod files\videoset.da" arg2="E:\UDATA\21585554\000000000000\softmod files\videoset.dat">2016 softmod not installed</Item>
+				<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\softmod files\install.xbe" arg2="E:\UDATA\21585554\000000000000\softmod files\install.xb">2016 softmod not installed</Item>
+				<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\softmod files\install.xb" arg2="E:\UDATA\21585554\000000000000\softmod files\install.xbe">2016 softmod not installed</Item>
+				<Item Action="MessageBox" arg1="Success">OK it would appear you're running my 2016 Softmod, so I will continue onto the next step.</Item>
+				<Item Action="Copy" arg1="D:\skins\Update Softmod" arg2="E:\Prep\skins\Update Softmod"/>
+				<Item Action="Copy" arg1="D:\skins\skin files" arg2="E:\Prep\skins\skin files"/>
+				<Item Action="Copy" arg1="D:\configs\updatesoftmod.xml" arg2="E:\Prep\Config.xml"/>
+				<Item Action="Copy" arg1="D:\softmod files\" arg2="E:\Prep\"/>
+				<Item Action="E:\Prep\default.xbe"/>
+			</list>
+
+			<Item>Upgrade</Item>
+
+			<List Text="Older Softmods" Sort="Off" Batch="True" password="">
+				<Item Action="AskUser" arg1="Upgrade?" arg2="This option is for upgrading your old non \n2016 softmod or it can be used to install \na clean installation of the 2016 Softmod. \n\nAre you sure you want to do this?"/>
+				<Item Action="Copy" arg1="D:\skins\Upgrade Softmod" arg2="E:\Prep\skins\Upgrade Softmod"/>
+				<Item Action="Copy" arg1="D:\skins\skin files" arg2="E:\Prep\skins\skin files"/>
+				<Item Action="Copy" arg1="D:\configs\upgradesoftmod.xml" arg2="E:\Prep\Config.xml"/>
+				<Item Action="Copy" arg1="D:\softmod files\" arg2="E:\Prep\"/>
+				<Item Action="E:\Prep\default.xbe"/>
+			</list>
+
+			<Item>Restore Xbox</Item>
+
+			<List Text="Factory Reset" Sort="Off" Batch="True" password="">
+				<Item Action="MessageBox" arg1="Warning!">Please note, this option will revert your Xbox to the state it was in when originally purchased. ie, all content from the E partition will be removed, this includes Applications, Saves, DLC &amp; any other content residing on the E partition.</Item>
+				<Item Action="MessageBox" arg1="Note!">I will also install all the exploitable saves so you can resoftmod the system at a later date. I also include the UDDAE exploit so you can resoftmod the system without needing one of the exploitable games.</Item>
+				<Item Action="AskUser" arg1="Restore?" arg2="Are you sure you want to continue?"/>
+				<Item Action="Copy" arg1="D:\skins\Factory Reset" arg2="E:\Prep\skins\Factory Reset"/>
+				<Item Action="Copy" arg1="D:\skins\skin files" arg2="E:\Prep\skins\skin files"/>
+				<Item Action="Copy" arg1="D:\configs\factoryreset.xml" arg2="E:\Prep\Config.xml"/>
+				<Item Action="Copy" arg1="D:\softmod files\boot.cfg" arg2="E:\Prep\"/>
+				<Item Action="Copy" arg1="D:\softmod files\default.xbe" arg2="E:\Prep\"/>
+				<Item Action="Copy" arg1="D:\softmod files\NoVC.bin" arg2="E:\Prep\"/>
+				<Item Action="Copy" arg1="D:\softmod files\unleashx.xbe" arg2="E:\Prep\"/>
+				<Item Action="Format" arg1="Y"/>
+				<Item Action="Copy" arg1="D:\skins\Factory Reset" arg2="Y:\Prep\skins\Factory Reset"/>
+				<Item Action="Copy" arg1="D:\skins\skin files" arg2="Y:\Prep\skins\skin files"/>
+				<Item Action="Copy" arg1="D:\configs\factoryreset.xml" arg2="Y:\Prep\Config.xml"/>
+				<Item Action="Copy" arg1="D:\softmod files\boot.cfg" arg2="Y:\Prep\"/>
+				<Item Action="Copy" arg1="D:\softmod files\default.xbe" arg2="Y:\Prep\"/>
+				<Item Action="Copy" arg1="D:\softmod files\NoVC.bin" arg2="Y:\Prep\"/>
+				<Item Action="Copy" arg1="D:\softmod files\unleashx.xbe" arg2="Y:\Prep\"/>
+				<Item Action="Copy" arg1="D:\softmod files\Softmod Files\" arg2="Y:\Softmod Files\"/>
+				<Item Action="Copy" arg1="D:\MSDashboards\Audio.zip" arg2="Y:\"/>
+				<Item Action="Copy" arg1="D:\MSDashboards\5960.zip" arg2="Y:\"/>
+				<Item Action="Copy" arg1="D:\MSDashboards\UDDAE-C.zip" arg2="Y:\"/>
+				<Item Action="Copy" arg1="D:\MSDashboards\UDDAE-E.zip" arg2="Y:\"/>
+				<Item Action="E:\Prep\default.xbe"/>
+			</list>
+
+			<Item>------------------------------------------</Item>
+
+			<Item>Extras</Item>
+
+			<List Text="Advanced Apps" Sort="Off">
+				<List Text="Information" Sort="On" Batch="True">
+					<Item Action="MessageBox" arg1="Information">These applications are to be used by people that know what they are doing. I take no responsibility for users formatting or breaking there Xbox.</Item>
+				</List>
+
+				<Item>------------------------------------------</Item>
+
+
+				<Item>Chimp 261812</Item>
+
+				<List Text="Information" Sort="Off" Batch="True">
+					<Item Action="MessageBox" arg1="Information">This is the latest version of Chimp &amp; it supports all Xbox versions. You use Chimp to install larger HDD's for Softmodded Xbox's, please search Youtube for "Chimp 261812"</Item>
+				</List>
+
+				<List Text="Install to" Sort="Off">
+
+					<Item>Chimp 261812 Options</Item>
+
+					<Item>------------------------------------------</Item>
+
+					<List Text="E:\Applications\" Sort="Off" Batch="True">
+						<Item Action="AskUser" arg1="Continue" arg2="This will install Chimp 261812 to E:\Applications\Chimp\ if there is currently a application residing there it will be overwritten & linuxboot.cfg to E:\."/>
+						<Item Action="Copy" arg1="dummy" arg2="E:\Applications\Chimp"/>
+						<Item Action="Delete" arg1="E:\Applications\Chimp">Remove old E:\Applications\Chimp\</Item>
+						<Item Action="Unzip" arg1="D:\Applications\Chimp261812.zip" arg2="E:\">Installing app to E:\Applications\Chimp\</Item>
+						<Item Action="Format" arg1="Z"/>
+						<Item Action="MessageBox" arg1="Done">That's Chimp 261812 installed to "E:\Applications\Chimp\"</Item>
+					</list>
+
+				</list>
+
+				<Item>XBPartitioner</Item>
+
+				<List Text="Information" Sort="Off" Batch="True">
+					<Item Action="MessageBox" arg1="Information">XBpartitioner is used to Format large HDD's, mainly the Extra Partitions (F &amp; G) after cloning with Chimp. So please be careful with this applications. It's other use, is custom partitions.</Item>
+				</List>
+
+				<List Text="Install to" Sort="Off">
+
+					<Item>XBPartitioner</Item>
+					<Item>v1.3</Item>
+
+					<Item>------------------------------------------</Item>
+
+					<List Text="E:\Applications\" Sort="Off" Batch="True">
+						<Item Action="AskUser" arg1="Continue" arg2="This will install XBpartitioner to E:\Applications\XBpartitioner\ if there is currently a application residing there it will be overwritten."/>
+						<Item Action="Copy" arg1="dummy" arg2="E:\Applications\XBpartitioner"/>
+						<Item Action="Delete" arg1="E:\Applications\XBpartitioner">Remove old E:\Applications\XBpartitioner\</Item>
+						<Item Action="Unzip" arg1="D:\Applications\XBpartitioner.zip" arg2="E:\Applications\XBpartitioner">Installing app to E:\Applications\XBpartitioner\</Item>
+						<Item Action="Format" arg1="Z"/>
+						<Item Action="MessageBox" arg1="Done">That's XBpartitioner installed to "E:\Applications\XBpartitioner\"</Item>
+					</list>
+
+				</list>
+
+			</List>
+
+			<Item>File Manager</Item>
+
+			<List Text="Enter" Sort="Off" Batch="True" password="">
+				<Item Action="MessageBox" arg1="Warning!">Be careful when using this, as you can potentially remove something you're not meant to.</Item>
+				<Item Action="FileManager">Filemanager</Item>
+			</list>
+
+		</list>
+	</Menu>
+</Unleashx>

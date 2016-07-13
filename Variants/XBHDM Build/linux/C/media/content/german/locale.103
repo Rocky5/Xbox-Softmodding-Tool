@@ -1,0 +1,5 @@
+MonthFirstFormatting=1
+TwentyFourHourTime=0
+DateSeperator=/
+IntegerSeperator=,
+TimeSeperator=:

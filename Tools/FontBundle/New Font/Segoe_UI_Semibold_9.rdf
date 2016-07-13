@@ -1,0 +1,16 @@
+
+
+out_packedresource		Segoe_UI_Semibold_9.xpr
+
+Texture Font
+{
+	Source	Segoe_UI_Semibold_9.tga
+	Format	D3DFMT_A4R4G4B4
+	Levels	1
+}
+
+UserData FontData
+{
+	DataFile	Segoe_UI_Semibold_9.abc
+}
+

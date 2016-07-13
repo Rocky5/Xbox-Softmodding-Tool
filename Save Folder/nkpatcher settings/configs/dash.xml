@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Unleashx>
+	<Settings>
+		<Preference>
+			<AbortOnError>Yes</AbortOnError>
+			<ContextMenu AllowUninstall="No" AllowItemEdit="No" AllowRecentList="No" LinkToSave="No" LinkToGame="No"/>
+			<Skin Path="Skins\">Softmod</Skin>
+			<VideoSettings Soften="No" Widescreen="No" UsePAL60="No" FastRefresh="Yes" EnableTextureCompression="No" Use720P="No" Use480P="Yes" FilterLevel="0"/>
+			<LiveUpdate AutoCheck="No"/>
+			<AutoVideoMode MultiRegion="Off" UsePAL60="No">no</AutoVideoMode>
+			<Games AutoLaunch="No"/>
+			<DVD AutoLaunch="No"/>
+			<AudioCD AutoLaunch="No"/>
+			<EnableDriveF>Yes</EnableDriveF>
+			<EnableDriveG>Yes</EnableDriveG>
+			<FanSpeed>1.00</FanSpeed>
+			<Use24HFormat>Yes</Use24HFormat>
+			<SNTP Synchronize="Yes" HTTP="Yes" Port="80">143.210.16.201</SNTP>
+			<AutoSetTime>Yes</AutoSetTime>
+			<ScreenSaver Wait="300">
+				<Text>2016 Softmodding Tool</Text>
+			</ScreenSaver>
+			<DVDMediaCheck>Extended</DVDMediaCheck>
+		</Preference>
+		<Network Type="DHCP" Enable="Yes">
+			<AutoDetect>yes</AutoDetect>
+			<IP>192.168.1.6</IP>
+			<Subnet>255.255.255.255</Subnet>
+			<Gateway>192.168.1.1</Gateway>
+			<DNS1>192.168.1.1</DNS1>
+		</Network>
+		<FTP Enable="Yes">
+			<MaxUsers>10</MaxUsers>
+			<AllowAnon>No</AllowAnon>
+		</FTP>
+		<Audio>
+			<EnableSoundEffect>No</EnableSoundEffect>
+		</Audio>
+		<LED>
+			<Default>Orange</Default>
+		</LED>
+	</Settings>
+	<Menu>
+		<Item Action="LaunchDVD">Launch Disc</Item>
+		<List Text="Applications" Sort="On" Auto="On" DelayLoad="True">
+			<Path>C:\Applications</Path>
+			<Path>E:\Applications</Path>
+			<Path>F:\Applications</Path>
+			<Path>G:\Applications</Path>
+			<Path>C:\Apps</Path>
+			<Path>E:\Apps</Path>
+			<Path>F:\Apps</Path>
+			<Path>G:\Apps</Path>
+		</List>
+		<List Text="Emulators" Sort="On" Auto="On" DelayLoad="True">
+			<Path>E:\Emulators</Path>
+			<Path>F:\Emulators</Path>
+			<Path>G:\Emulators</Path>
+			<Path>E:\Emus</Path>
+			<Path>F:\Emus</Path>
+			<Path>G:\Emus</Path>
+		</List>
+		<List Text="Games" Sort="On" Auto="On" DelayLoad="True">
+			<Path>E:\Games</Path>
+			<Path>F:\Games</Path>
+			<Path>G:\Games</Path>
+		</List>
+		<List Text="Homebrew" Sort="On" Auto="On" DelayLoad="True">
+			<Path>E:\Homebrew</Path>
+			<Path>F:\Homebrew</Path>
+			<Path>G:\Homebrew</Path>
+		</List>
+		<List Text="System" Sort="On" Auto="On">
+			<Item Action="CopyDVD">Copy DVD</Item>
+			<Item Action="Filemanager">File Explorer</Item>
+			<List Text="Miscellaneous" Sort="on" Auto="On">
+				<List Text="Clear Xbox Cache" Sort="Off" Batch="True">
+					<Item Action="AskUser" arg1="Clear CACHE?">Doing this can help with some games or applications that are crashing or refusing to boot.</Item>
+					<Item Action="Copy" Arg1="Dummy" Arg2="E:\CACHE"/>
+					<Item Action="Delete" Arg1="E:\CACHE"/>
+					<Item Action="Copy" Arg1="Dummy" Arg2="E:\CACHE"/>
+					<Item Action="Format" Arg1="X"/>
+					<Item Action="Format" Arg1="Y"/>
+					<Item Action="Format" Arg1="Z"/>
+					<Item Action="MessageBox" Arg1="Complete">The CACHE has been cleared!</Item>
+				</List>
+				<List Text="Network" Sort="Off">
+					<Item Action="FTPStop">Stop FTP Server</Item>
+					<Item Action="FTPStart">Start FTP Server</Item>
+					<Item Action="FTPReset">Reset FTP Server</Item>
+					<Item Action="NETReset">Restart Network</Item>
+				</List>
+				<List Text="Restart/Shutdown" Sort="Off" Auto="On">
+					<Item Action="Restart">Soft Restart</Item>
+					<Item Action="PowerCycle">Full Restart</Item>
+					<Item Action="Shutdown">Shutdown</Item>
+				</List>
+				<Item Action="SetClock">Set Time/Date</Item>
+				<List Text="Tray Open/Close" Sort="off" Batch="True">
+					<Item Action="TrayOpen">Tray Open</Item>
+					<Item Action="TrayClose">Tray Close</Item>
+				</List>
+			</List>
+			<Item Action="SavesManager">Saves Manager</Item>
+			<Item Action="Settings">Settings</Item>
+			<Item Action="Skins">Skins</Item>
+		</List>
+	</Menu>
+</Unleashx>

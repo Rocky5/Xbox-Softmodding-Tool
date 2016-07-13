@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Unleashx>
+	<Settings>
+		<Preference>
+			<AbortOnError>Yes</AbortOnError>
+			<ContextMenu AllowUninstall="No" AllowItemEdit="No" AllowRecentList="No" LinkToSave="No" LinkToGame="No"/>
+			<Skin Path="Skins\">ReSoftmod Dash</Skin>
+			<VideoSettings Soften="No" Widescreen="No" UsePAL60="No" FastRefresh="Yes" EnableTextureCompression="No" Use720P="No" Use480P="Yes" FilterLevel="0"/>
+			<LiveUpdate AutoCheck="No"/>
+			<AutoVideoMode MultiRegion="Off" UsePAL60="No">no</AutoVideoMode>
+			<Games AutoLaunch="No"/>
+			<DVD AutoLaunch="No"/>
+			<AudioCD AutoLaunch="No"/>
+			<EnableDriveF>Yes</EnableDriveF>
+			<EnableDriveG>Yes</EnableDriveG>
+			<FanSpeed>1.00</FanSpeed>
+			<Use24HFormat>Yes</Use24HFormat>
+			<SNTP Synchronize="Yes" HTTP="Yes" Port="80">143.210.16.201</SNTP>
+			<AutoSetTime>Yes</AutoSetTime>
+			<ScreenSaver Wait="300">
+				<Text>2016 Softmodding Tool</Text>
+			</ScreenSaver>
+		</Preference>
+		<Network Type="DHCP" Enable="Yes">
+			<AutoDetect>yes</AutoDetect>
+			<IP>192.168.1.6</IP>
+			<Subnet>255.255.255.255</Subnet>
+			<Gateway>192.168.1.1</Gateway>
+			<DNS1>192.168.1.1</DNS1>
+		</Network>
+		<FTP Enable="Yes">
+			<MaxUsers>10</MaxUsers>
+			<AllowAnon>No</AllowAnon>
+		</FTP>
+		<Audio>
+			<EnableSoundEffect>No</EnableSoundEffect>
+		</Audio>
+		<LED>
+			<Default>Flashing Red</Default>
+		</LED>
+	</Settings>
+	<Menu>
+		<List Text="NKPatcher Settings" Sort="Off">
+
+			<List Text="Yeah, load NKPatcher Settings." Sort="Off" Batch="True">
+				<list>
+					<Item Action="E:\UDATA\21585554\000000000000\softmod files\install.xbe"/>
+				</list>
+			</list>
+
+			<Item>-</Item>
+
+			<Item>Press (B) to Exit this menu.</Item>
+		</list>
+
+		<Item>-</Item>
+
+		<List Text="Resoftmod my Xbox" Sort="Off">
+
+			<List Text="Yes, I really want to start fresh." Sort="Off" Batch="True">
+				<list>
+					<Item Action="MessageBox" arg1="Warning">I need to do a file check. If it fails, don't worry. You can insert the 2016 Softmodding Tool Extras Disc &amp; press the following (LT+RT+Black+Start) to load the disc &amp; then use the Upgrade Older Softmods option, located in the Advanced Features menu.</Item>
+					<list>
+						<Item Action="Rename" arg1="C:\nkpatcher\rescuedash\resoftmod files.zip" arg2="C:\nkpatcher\rescuedash\resoftmod files.zi">resoftmod files are missing</Item>
+						<Item Action="Rename" arg1="C:\nkpatcher\rescuedash\resoftmod files.zi" arg2="C:\nkpatcher\rescuedash\resoftmod files.zip"/>
+					</list>
+					<Item Action="MessageBox" arg1="hmm">Found the file I need :)</Item>
+					<Item Action="Copy" arg1="dummy" arg2="E:\UDATA\21585554"/>
+					<Item Action="Delete" arg1="E:\UDATA\21585554"/>
+					<Item Action="UnZip" arg1="C:\nkpatcher\rescuedash\resoftmod files.zip"  arg2="E:\UDATA\21585554\"/>
+					<Item Action="Copy" arg1="C:\nkpatcher\rescuedash\alt xbe\"  arg2="E:\UDATA\21585554\000000000000\"/>
+					<Item Action="E:\UDATA\21585554\000000000000\install.xbe"/>
+				</list>
+			</list>
+
+			<Item>-</Item>
+
+			<Item>Press (B) to Exit this menu.</Item>
+		</list>
+	</Menu>
+</Unleashx>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Unleashx>
+	<Settings>
+		<Preference>
+			<AbortOnError>Yes</AbortOnError>
+			<ContextMenu AllowUninstall="No" AllowItemEdit="No" AllowRecentList="No" LinkToSave="No" LinkToGame="No"/>
+			<Skin Path="Skins\">Factory Reset</Skin>
+			<VideoSettings Soften="No" Widescreen="No" UsePAL60="No" FastRefresh="Yes" EnableTextureCompression="No" Use720P="No" Use480P="Yes" FilterLevel="0"/>
+			<LiveUpdate AutoCheck="No"/>
+			<AutoVideoMode MultiRegion="Off" UsePAL60="No">no</AutoVideoMode>
+			<Games AutoLaunch="No"/>
+			<DVD AutoLaunch="No"/>
+			<AudioCD AutoLaunch="No"/>
+			<EnableDriveF>Yes</EnableDriveF>
+			<EnableDriveG>Yes</EnableDriveG>
+			<FanSpeed>1.00</FanSpeed>
+			<Use24HFormat>Yes</Use24HFormat>
+			<SNTP Synchronize="Yes" HTTP="Yes" Port="80">143.210.16.201</SNTP>
+			<AutoSetTime>Yes</AutoSetTime>
+			<ScreenSaver Wait="300">
+				<Text>2016 Softmodding Tool</Text>
+			</ScreenSaver>
+			<LanguageFile>E:\Prep\skins\Factory Reset\lang.xml</LanguageFile>
+		</Preference>
+		<Network Type="DHCP" Enable="Yes">
+			<AutoDetect>yes</AutoDetect>
+			<IP>192.168.1.6</IP>
+			<Subnet>255.255.255.255</Subnet>
+			<Gateway>192.168.1.1</Gateway>
+			<DNS1>192.168.1.1</DNS1>
+		</Network>
+		<FTP Enable="Yes">
+			<MaxUsers>10</MaxUsers>
+			<AllowAnon>No</AllowAnon>
+		</FTP>
+		<Audio>
+			<EnableSoundEffect>No</EnableSoundEffect>
+		</Audio>
+		<LED>
+			<Default>Red</Default>
+		</LED>
+	</Settings>
+	<Menu>
+
+		<List Text="Finish Restore" Sort="Off">
+
+			<List Text="Yes, I really want to." Sort="Off" Batch="True">
+					<Item Action="Format" arg1="E"/>
+					<Item Action="Copy" arg1="Y:\Prep\" arg2="E:\Prep\"/>
+					<Item Action="Copy" arg1="Y:\Softmod Files\4d530017\" arg2="E:\UDATA\4d530017\"/>
+					<Item Action="Copy" arg1="Y:\Softmod Files\4541000d\" arg2="E:\UDATA\4541000d\"/>
+					<Item Action="Copy" arg1="Y:\Softmod Files\21585554\" arg2="E:\UDATA\21585554\"/>
+					<Item Action="Copy" arg1="Y:\Softmod Files\SC-NTSC\5553000c\" arg2="E:\UDATA\5553000c\"/>
+					<list>
+						<Item Action="AskUser" Arg1="Regions" arg2="What region of Splinter Cell do you own? \n\nIf you don't own the game that's OK just select the region your Xbox is from."/>
+						<Item Action="Delete" arg1="E:\UDATA\5553000c"/>
+						<Item Action="Copy" arg1="Y:\Softmod Files\SC-PAL\5553000c\" arg2="E:\UDATA\5553000c\"/>
+					</list>
+					<Item Action="Format" arg1="C"/>
+					<Item Action="Unzip" arg1="Y:\5960.zip" arg2="C:\"/>
+					<Item Action="Unzip" arg1="Y:\UDDAE-C.zip" arg2="C:\"/>
+					<Item Action="Unzip" arg1="Y:\UDDAE-E.zip" arg2="E:\"/>
+					<Item Action="Unzip" arg1="Y:\Audio.zip" arg2="C:\"/>
+					<Item Action="Delete" arg1="E:\Prep\"/>
+					<Item Action="Format" arg1="X"/>
+					<Item Action="Format" arg1="Y"/>
+					<Item Action="Format" arg1="Z"/>
+					<Item Action="MessageBox" Arg1="Done">That's your Xbox restored to stock, I will now restart your Xbox. Please remove/eject the disc from the DVD drive after the system has restarted, as it will no longer function, until you resoftmod the system.</Item>
+					<Item Action="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\reboot xbe\default.xbe"/>
+			</list>
+
+			<Item>-</Item>
+
+			<Item>Press (B) to Exit this menu.</Item>
+		</list>
+
+		<Item>-</Item>
+
+		<List Text="Exit & Clean up" Sort="Off">
+			<List Text="Get me out of here. I don't want to restore Xbox." Sort="Off" Batch="True">
+				<list>
+					<Item Action="Delete" arg1="E:\Prep"/>
+					<Item Action="Restart">Restart</Item>
+				</list>
+			</list>
+
+			<Item>-</Item>
+
+			<Item>Press (B) to Exit this menu.</Item>
+		</list>
+	</Menu>
+</Unleashx>

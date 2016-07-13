@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Unleashx>
+	<Settings>
+		<Preference>
+			<AbortOnError>Yes</AbortOnError>
+			<ContextMenu AllowUninstall="No" AllowItemEdit="No" AllowRecentList="No" LinkToSave="No" LinkToGame="No"/>
+			<Skin Path="D:\Skins\">Softmod</Skin>
+			<VideoSettings Soften="No" Widescreen="No" UsePAL60="No" FastRefresh="Yes" EnableTextureCompression="No" Use720P="No" Use480P="Yes" FilterLevel="0"/>
+			<LiveUpdate AutoCheck="No"/>
+			<AutoVideoMode MultiRegion="Off" UsePAL60="No">no</AutoVideoMode>
+			<Games AutoLaunch="No"/>
+			<DVD AutoLaunch="No"/>
+			<AudioCD AutoLaunch="No"/>
+			<EnableDriveF>Yes</EnableDriveF>
+			<EnableDriveG>Yes</EnableDriveG>
+			<FanSpeed>1.00</FanSpeed>
+			<Use24HFormat>Yes</Use24HFormat>
+			<SNTP Synchronize="Yes" HTTP="Yes" Port="80">143.210.16.201</SNTP>
+			<AutoSetTime>Yes</AutoSetTime>
+			<ScreenSaver Wait="300">
+				<Text>2016 Softmodding Tool</Text>
+			</ScreenSaver>
+		</Preference>
+		<Network Type="DHCP" Enable="Yes">
+			<AutoDetect>yes</AutoDetect>
+			<IP>192.168.1.6</IP>
+			<Subnet>255.255.255.255</Subnet>
+			<Gateway>192.168.1.1</Gateway>
+			<DNS1>192.168.1.1</DNS1>
+		</Network>
+		<FTP Enable="Yes">
+			<MaxUsers>10</MaxUsers>
+			<AllowAnon>No</AllowAnon>
+		</FTP>
+		<Audio>
+			<EnableSoundEffect>No</EnableSoundEffect>
+		</Audio>
+		<LED>
+			<Default>Green</Default>
+		</LED>
+	</Settings>
+	<Menu>
+
+		<list Text="Information" Sort="Off" Batch="True">
+			<Item Action="MessageBox" Arg1="">Welcome to the Microsoft Dashboard installer.</Item>
+		</list>
+
+		<Item>Stock MS Dash 5960</Item>
+
+		<list Text="Information" Sort="Off" Batch="True">
+			<Item Action="MessageBox" Arg1="Info">This was the last official dashboard MS released for the Xbox.</Item>
+		</list>
+
+		<list Text="Install" Sort="Off" Batch="True">
+			<Item Action="MessageBox" Arg1="">You are about to install the stock 5960 Microsoft Dashboard.</Item>
+			<Item Action="AskUser" Arg1="" Arg2="Proceed with installation? \n\nMS Dashboard total size is 138MB"/>
+			<!-- Remove old files (or if they don't exist create & remove) -->
+			<Item Action="Copy" arg1="dummy" arg2="C:\xboxdashdata.185ead00\">Copying C:\xboxdashdata.185ead00\</Item>
+			<Item Action="Delete" arg1="C:\xboxdashdata.185ead00\">Deleting C:\xboxdashdata.185ead00\</Item>
+			<Item Action="Copy" arg1="dummy" arg2="C:\Xbox Book.xtf">Copying C:\Xbox Book.xtf</Item>
+			<Item Action="Delete" arg1="C:\Xbox Book.xtf">Deleting C:\Xbox Book.xtf</Item>
+			<Item Action="Copy" arg1="dummy" arg2="C:\Xbox.xtf">Copying C:\Xbox.xtf</Item>
+			<Item Action="Delete" arg1="C:\Xbox.xtf">Deleting C:\Xbox.xtf</Item>
+			<Item Action="Copy" arg1="dummy" arg2="C:\Audio\">Copying C:\Audio\</Item>
+			<Item Action="Delete" arg1="C:\Audio\">Deleting C:\Audio\</Item>
+			<Item Action="Copy" arg1="dummy" arg2="C:\fonts\">Copying C:\fonts\</Item>
+			<Item Action="Delete" arg1="C:\fonts\">Deleting C:\fonts\</Item>
+			<Item Action="Copy" arg1="dummy" arg2="C:\XboxDash\">Copying C:\XboxDash\</Item>
+			<Item Action="Delete" arg1="C:\XboxDash\">Deleting C:\XboxDash\</Item>
+			<Item Action="Copy" arg1="dummy" arg2="C:\xodash\">Copying C:\xodash\</Item>
+			<Item Action="Delete" arg1="C:\xodash\">Deleting C:\xodash\</Item>
+			<Item Action="Copy" arg1="dummy" arg2="C:\xboxdash.xbe">Copying C:\xboxdash.xbe</Item>
+			<Item Action="Delete" arg1="C:\xboxdash.xbe">Deleting C:\xboxdash.xbe</Item>
+			<Item Action="Copy" arg1="dummy" arg2="E:\Applications\MSDash\">Copying E:\Applications\MSDash</Item>
+			<Item Action="Delete" arg1="E:\Applications\MSDash\">Deleting E:\Applications\MSDash</Item>
+			<list>
+				<Item Action="AskUser" arg1="Audio" arg2="Install the Audio? \n\nThis is not needed for the dashboard to function. \n\nAudio increases the total size to 171MB"/>
+				<Item Action="Unzip" arg1="D:\MSDashboards\Audio.zip" arg2="C:\"/>
+			</list>
+			<Item Action="Unzip" arg1="D:\MSDashboards\5960.zip" arg2="C:\"/>
+			<Item Action="Copy" arg1="C:\xboxdash.xbe" arg2="E:\Applications\MSDash\default.xbe">Copying C:\xboxdash.xbe</Item>
+			<Item Action="Delete" arg1="C:\xboxdash.xbe">Deleting C:\xboxdash.xbe</Item>
+			<Item Action="Copy" arg1="dummy" arg2="E:\Prep\"/>
+			<Item Action="Delete" arg1="E:\Prep\"/>
+			<Item Action="MessageBox" arg1="Done">That's the MS Dashboard installed. Turn off your Xbox or eject the disc.</Item>
+		</list>
+
+		<Item>Hacked MS Dash 4920</Item>
+
+		<list Text="Information" Sort="Off" Batch="True">
+			<Item Action="MessageBox" Arg1="Info">Feature list. \n\n1) Defaults to Games Saves list. \n2) XBL functionality removed. \n3) Smaller footprint. \n4) Update Safe.</Item>
+		</list>
+
+		<list Text="Install" Sort="Off" Batch="True">
+			<Item Action="MessageBox" Arg1="">You are about to install the hacked 4920 Microsoft Dashboard.</Item>
+			<Item Action="AskUser" Arg1="" Arg2="Proceed with installation? \n\nMS Dashboard total size is 63MB"/>
+			<!-- Remove old files (or if they don't exist create & remove) -->
+			<Item Action="Copy" arg1="dummy" arg2="C:\xboxdashdata.185ead00\">Copying C:\xboxdashdata.185ead00\</Item>
+			<Item Action="Delete" arg1="C:\xboxdashdata.185ead00\">Deleting C:\xboxdashdata.185ead00\</Item>
+			<Item Action="Copy" arg1="dummy" arg2="C:\Xbox Book.xtf">Copying C:\Xbox Book.xtf</Item>
+			<Item Action="Delete" arg1="C:\Xbox Book.xtf">Deleting C:\Xbox Book.xtf</Item>
+			<Item Action="Copy" arg1="dummy" arg2="C:\Xbox.xtf">Copying C:\Xbox.xtf</Item>
+			<Item Action="Delete" arg1="C:\Xbox.xtf">Deleting C:\Xbox.xtf</Item>
+			<Item Action="Copy" arg1="dummy" arg2="C:\Audio\">Copying C:\Audio\</Item>
+			<Item Action="Delete" arg1="C:\Audio\">Deleting C:\Audio\</Item>
+			<Item Action="Copy" arg1="dummy" arg2="C:\fonts\">Copying C:\fonts\</Item>
+			<Item Action="Delete" arg1="C:\fonts\">Deleting C:\fonts\</Item>
+			<Item Action="Copy" arg1="dummy" arg2="C:\XboxDash\">Copying C:\XboxDash\</Item>
+			<Item Action="Delete" arg1="C:\XboxDash\">Deleting C:\XboxDash\</Item>
+			<Item Action="Copy" arg1="dummy" arg2="C:\xodash\">Copying C:\xodash\</Item>
+			<Item Action="Delete" arg1="C:\xodash\">Deleting C:\xodash\</Item>
+			<Item Action="Copy" arg1="dummy" arg2="C:\xboxdash.xbe">Copying C:\xboxdash.xbe</Item>
+			<Item Action="Delete" arg1="C:\xboxdash.xbe">Deleting C:\xboxdash.xbe</Item>
+			<Item Action="Copy" arg1="dummy" arg2="E:\Applications\MSDash\">Copying E:\Applications\MSDash</Item>
+			<Item Action="Delete" arg1="E:\Applications\MSDash\">Deleting E:\Applications\MSDash</Item>
+			<list>
+				<Item Action="AskUser" arg1="Audio" arg2="Install the Audio? \n\nThis is not needed for the dashboard to function. \n\nAudio increases the total size to 98MB"/>
+				<Item Action="Unzip" arg1="D:\MSDashboards\Audio.zip" arg2="C:\"/>
+			</list>
+			<Item Action="Unzip" arg1="D:\MSDashboards\4920.zip" arg2="C:\"/>
+			<Item Action="Copy" arg1="C:\xboxdash.xbe" arg2="E:\Applications\MSDash\default.xbe">Copying C:\xboxdash.xbe</Item>
+			<Item Action="Delete" arg1="C:\xboxdash.xbe">Deleting C:\xboxdash.xbe</Item>
+			<Item Action="Copy" arg1="dummy" arg2="E:\Prep\"/>
+			<Item Action="Delete" arg1="E:\Prep\"/>
+			<Item Action="MessageBox" arg1="Done">That's the MS Dashboard installed. Turn off your Xbox or eject the disc.</Item>
+		</list>
+
+
+	</Menu>
+</UnleashX>

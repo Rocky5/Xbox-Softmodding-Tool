@@ -1,0 +1,129 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Usage</title>
+<style>
+<!--
+ p.MsoNormal
+	{mso-style-parent:"";
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	margin-left:0cm; margin-right:0cm; margin-top:0cm}
+-->
+</style>
+</head>
+
+<body>
+
+<p class="MsoNormal" style="text-autospace: none"><b><i>
+<span style="font-size: 18.0pt; font-family: Arial; color: #C1C1C1">Usage</span></i></b></p>
+<p class="MsoNormal" style="text-autospace: none">&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none"><b><i>
+<span style="font-family: Arial; color: black">Note on FAT32 partitions :</span></i></b></p>
+<p class="MsoNormal" style="text-autospace: none">
+<span style="font-family: ArialMT; color: black">FAT32 partitions have a file 
+size limitation of 2 GiB. XDVDFS_Maker doesn't</span></p>
+<p class="MsoNormal" style="text-autospace: none">
+<span style="font-family: ArialMT; color: black">check which type of partition 
+it's writing to, please check the type of your partition</span></p>
+<p class="MsoNormal" style="text-autospace: none">
+<span style="font-family: ArialMT; color: black">before running the tool. Other 
+types of partitions (NTFS, EXT2/3, HFS/+) don't</span></p>
+<p class="MsoNormal" style="text-autospace: none">
+<span style="font-family: ArialMT; color: black">have that kind of limitation.</span></p>
+<p class="MsoNormal" style="text-autospace: none">
+&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none">
+<span style="font-size: 9.0pt; font-family: ArialMT; color: black">&#9679; </span><b>
+<span style="font-family: Arial; color: black">xdvdfs_maker – Image Creation 
+Tool</span></b></p>
+<p class="MsoNormal" style="text-autospace: none"><b>
+<span style="font-family: Arial; color: black">&nbsp;&nbsp;&nbsp; </span></b></p>
+<p class="MsoNormal" style="text-autospace: none"><b>
+<span style="font-family: Arial">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style="font-family: Arial; color: black">xdvdfs_maker [Options] [Root 
+Directory] [Image File]</span></b></p>
+<p class="MsoNormal" style="text-autospace: none">&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none"><i>
+<span style="font-family: Arial">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style="font-family: Arial; color: black">Options:</span></i></p>
+<p class="MsoNormal" style="text-autospace: none">
+<span style="font-family: ArialMT; color: black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>-pad</b> Pad the image to 4.38GiB. 
+(</span><i><span style="font-family: Arial; color: black">see: Note on FAT32 
+partitions</span></i><span style="font-family: ArialMT; color: black">)</span></p>
+<p class="MsoNormal" style="text-autospace: none">
+&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>-OEIBuf [n]</b> Will leave a gap of [n] Mega Bytes near the outside edge of 
+the</p>
+<p class="MsoNormal" style="text-autospace: none">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+disc when padding an image to 4.38 GB. This option can be used to avoid</p>
+<p class="MsoNormal" style="text-autospace: none">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+writing to areas of imperfections sometimes found near the outside of cheaper</p>
+<p class="MsoNormal" style="text-autospace: none">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+discs.</p>
+<p class="MsoNormal" style="text-autospace: none">
+&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none">
+<span style="font-family: ArialMT; color: black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>-ordercreate [filename]</b> creates 
+an order file based upon the files</span></p>
+<p class="MsoNormal" style="text-autospace: none">
+<span style="font-family: ArialMT; color: black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; in the [Root Directory]</span></p>
+<p class="MsoNormal" style="text-autospace: none">
+&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none">
+<span style="font-family: ArialMT; color: black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>-newlayoutformat</b> Specifies the 
+layout file you pass in is of the</span></p>
+<p class="MsoNormal" style="text-autospace: none">
+<span style="font-family: ArialMT; color: black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; newer format used for CloneXB’s 
+mods.</span></p>
+<p class="MsoNormal" style="text-autospace: none">&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none"><i>
+<span style="font-family: Arial">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><b><span style="font-family: Arial; color: black">-</span></b></i><span style="font-family: ArialMT; color: black"><b>opt1</b> 
+Uses a method of layout optimization which puts all layer 1</span></p>
+<p class="MsoNormal" style="text-autospace: none">
+<span style="font-family: ArialMT; color: black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; files from the original disc at 
+the beginning of your ISO.</span></p>
+<p class="MsoNormal" style="text-autospace: none">
+<span style="font-family: ArialMT; color: black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; This should be used when 
+backing up original XBOX discs.</span></p>
+<p class="MsoNormal" style="text-autospace: none">&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none"><i>
+<span style="font-family: Arial; color: black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>-</b></span></i><span style="font-family: ArialMT; color: black"><b>opt2</b> 
+Is the same as -opt1 but after moving layer 1 files to the beginning</span></p>
+<p class="MsoNormal" style="text-autospace: none">
+<span style="font-family: ArialMT; color: black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; of the disc the layer 1 files 
+are placed in reverse order. This can</span></p>
+<p class="MsoNormal" style="text-autospace: none">
+<span style="font-family: ArialMT; color: black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+sometimes be better that -opt1 in cases where there are only a few</span></p>
+<p class="MsoNormal" style="text-autospace: none">
+<span style="font-family: ArialMT; color: black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+but very large files on layer 1.</span></p>
+<p class="MsoNormal" style="text-autospace: none">&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none">
+<span style="font-family: ArialMT; color: black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>-order [filename]</b> Will use the 
+file layout specified in the text file.</span></p>
+<p class="MsoNormal" style="text-autospace: none">&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none"><i>
+<span style="font-family: Arial; color: black; font-weight:700">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Note: In this mode only files 
+mentioned in the layout</span></i></p>
+<p class="MsoNormal" style="text-autospace: none"><i>
+<span style="font-family: Arial; color: black; font-weight:700">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; file will be included in the 
+image.</span></i></p>
+
+</body>
+
+</html>

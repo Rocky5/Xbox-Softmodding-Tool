@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Resource Name="English">
+	<OK>Understood</OK>
+	<YES>PAL Region</YES>
+	<NO>NTSC Region</NO>
+</Resource>

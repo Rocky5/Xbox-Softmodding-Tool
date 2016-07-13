@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Unleashx>
+	<Settings>
+		<Preference>
+			<AbortOnError>Yes</AbortOnError>
+			<ContextMenu AllowUninstall="No" AllowItemEdit="No" AllowRecentList="No" LinkToSave="No" LinkToGame="No"/>
+			<Skin Path="E:\UDATA\21585554\000000000000\nkpatcher settings\Skins\">Softmod</Skin>
+			<VideoSettings Soften="No" Widescreen="No" UsePAL60="No" FastRefresh="Yes" EnableTextureCompression="No" Use720P="No" Use480P="Yes" FilterLevel="0"/>
+			<LiveUpdate AutoCheck="No"/>
+			<AutoVideoMode MultiRegion="Off" UsePAL60="No">no</AutoVideoMode>
+			<Games AutoLaunch="No"/>
+			<DVD AutoLaunch="No"/>
+			<AudioCD AutoLaunch="No"/>
+			<EnableDriveF>Yes</EnableDriveF>
+			<EnableDriveG>Yes</EnableDriveG>
+			<FanSpeed>1.00</FanSpeed>
+			<Use24HFormat>Yes</Use24HFormat>
+			<SNTP Synchronize="Yes" HTTP="Yes" Port="80">143.210.16.201</SNTP>
+			<AutoSetTime>Yes</AutoSetTime>
+			<ScreenSaver Wait="300">
+				<Text>2016 Softmodding Tool</Text>
+			</ScreenSaver>
+			<LanguageFile>E:\UDATA\21585554\000000000000\nkpatcher settings\Skins\Softmod\lang.xml</LanguageFile>
+		</Preference>
+		<Network Type="DHCP" Enable="Yes">
+			<AutoDetect>yes</AutoDetect>
+			<IP>192.168.1.6</IP>
+			<Subnet>255.255.255.255</Subnet>
+			<Gateway>192.168.1.1</Gateway>
+			<DNS1>192.168.1.1</DNS1>
+		</Network>
+		<FTP Enable="Yes">
+			<MaxUsers>10</MaxUsers>
+			<AllowAnon>No</AllowAnon>
+		</FTP>
+		<Audio>
+			<EnableSoundEffect>No</EnableSoundEffect>
+		</Audio>
+		<LED>
+			<Default>Red</Default>
+		</LED>
+	</Settings>
+	<Menu>
+		<List Text="Press the (A) Button" Sort="Off" Batch="True">
+			<!-- Formating C & Y to install the Softmod files -->
+			<Item Action="Format" arg1="Y">Format Y:\</Item>
+			<Item Action="Unrar" arg1="E:\UDATA\21585554\000000000000\softmod files\Files.rar" arg2="Y:\">Unrar files.rar to Y:\</Item>
+			<Item Action="Format" arg1="C">Format C:\</Item>
+			<Item Action="Unrar" arg1="Y:\xboxdash.rar" arg2="C:\">Unrar xboxdash.rar to C:\</Item>
+			<Item Action="Unrar" arg1="Y:\nkpatcher.rar" arg2="C:\">Unrar nkpatcher.rar to C:\</Item>
+			<Item Action="Zip" arg1="E:\UDATA\21585554\" arg2="C:\nkpatcher\rescuedash\resoftmod files.zip">Cloning Softmod directory to C:\</Item>
+			<Item Action="Unrar" arg1="Y:\nkp settings.rar" arg2="E:\UDATA\21585554\000000000000\">Unrar nkp setting.rar to softmod save directory</Item>
+			<!-- Install the ShadowC image -->
+			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\savemeta.xbx" arg2="C:\nkpatcher\shadowc\shadowc.img">Copy savemeta.xbe to fix shadowc extraction</Item>
+			<Item Action="Copy" arg1="C:\nkpatcher\shadowc\shadowc.img" arg2="Z:\shadowc.img">Copy shadowc (savemeta.xbe) to Y:\ to fix shadowc extraction</Item>
+			<Item Action="Unrar" arg1="Y:\shadowc.rar" arg2="C:\nkpatcher\shadowc\">Unrar shadowc.rar to C:\</Item>
+			<!-- Backup the installer config & replace it with the NKPatcher Settings Config. -->
+			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\configs\settings.xml" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\config.xml">Copy settings.xml to config.xml</Item>
+			<!-- Setting up dash settings -->
+			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\unleashx.xbe" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\dash settings\unleashx.xbe">Copy unleashx.xbe to dash settings</Item>
+			<Item Action="Copy" arg1="dummy" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\dash settings\toggles">Copy dummy to dash settings toggles</Item>
+			<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\dash settings\toggles">Delete toggles</Item>
+			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\dash settings\toggles\CDashboard.png">Copy enabled.png CDashboard.png</Item>
+			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\configs\alt xbe's\nkpatcher settings\disabled.xbe" arg2="E:\UDATA\21585554\000000000000\softmod files\install.xbe">Copy install.xbe to softmod files</Item>
+			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\configs\alt xbe's\dash settings\disabled.xbe" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\dash settings\default.xbe">Copy disabled.xbe to dash settings</Item>
+			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\configs\alt xbe's\reload nkp\disabled.xbe" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\reload nkp\default.xbe">Copy disabled.xbe to reload nkp</Item>
+			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\configs\alt xbe's\resoftmod dash\disabled.xbe" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\resoftmod dash\default.xbe">Copy disabled.xbe resoftmod dash</Item>
+			<!-- Install the splash & screen dimensions for UnleashX -->
+			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\softmod files\splash.jpg" arg2="E:\UDATA\9e115330\0064122817A8\">Copy splash.jpg to unleashx save directory</Item>
+			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\softmod files\videoset.dat" arg2="E:\UDATA\9e115330\0064122817A8\">Copy videoset.dat to unleashx save directory</Item>
+			<!-- Setting up NKPatcher Settings shortcut -->
+			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\default.xbe" arg2="E:\Applications\NKPatcher Settings\">Copy default.xbe to NKPatcher Settings</Item>
+			<Item Action="Copy" arg1="dummy" arg2="E:\Applications\NKPatcher Settings\modules">Copy dummy to modules</Item>
+			<!-- Settings up the "resoftmod dash", this is used for when you load a disc based game exploit. -->
+			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\unleashx.xbe" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\resoftmod dash\unleashx.xbe">Copy unleashx to resoftmod dash</Item>
+			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\resoftmod dash\default.xbe" arg2="E:\UDATA\21585554\000000000000\install.xbe">Copy default.xbe to install.xbe</Item>
+			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\resoftmod dash\default.xbe" arg2="E:\UDATA\4541000d\000000000000\default.xbe">Copy default.xbe to default.xbe</Item>
+			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\resoftmod dash\default.xbe" arg2="E:\UDATA\4d530017\62D648EBF155\default.xbe">Copt default.xbe to default.xbe</Item>
+			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\configs\alt xbe's\resoftmod dash\disabled.xbe" arg2="E:\UDATA\21585554\000000000000\install.xbe">Copy disabled.xbe install.xbe</Item>
+			<!-- Setting up rescue dashboards -->
+			<Item Action="Copy" arg1="dummy" arg2="C:\nkpatcher\rescuedash\skins">Copy dummy to C rescuedash</Item>
+			<Item Action="Delete" arg1="C:\nkpatcher\rescuedash\skins">Delete C rescuedash skin</Item>
+			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\configs\alt xbe's\rescuedash\disabled.xbe" arg2="C:\nkpatcher\rescuedash\default.xbe">Copy disabled.xbe to C rescuedash</Item>
+			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\unleashx.xbe" arg2="C:\nkpatcher\rescuedash\">Copy unleashx.xbe to C rescuedash</Item>
+			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\skins\RescueDash_C" arg2="C:\nkpatcher\rescuedash\skins\RescueDash_C">Copy skin to C rescuedash</Item>
+			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\softmod files\Skin Files" arg2="C:\nkpatcher\rescuedash\skins\RescueDash_C\skin files">Copy skin to C rescuedash</Item>
+			<Item Action="Copy" arg1="dummy" arg2="E:\TDATA\rescuedash">Copy dummy to T rescuedash</Item>
+			<Item Action="Delete" arg1="E:\TDATA\rescuedash">Delete T rescuedash</Item>
+			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\unleashx.xbe" arg2="E:\TDATA\rescuedash\default.xbe">Copy unleashx.xbe to T rescuedash</Item>
+			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\configs\recovery.xml" arg2="E:\TDATA\rescuedash\Config.xml">Copy recovery.xml to T rescuedash</Item>
+			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\skins\RescueDash_E\" arg2="E:\TDATA\rescuedash\skins\RescueDash_E\">Copy skin to T rescuedash</Item>
+			<Item Action="Copy" arg1="dummy" arg2="E:\UDATA\rescuedash">Copy dummy to U rescuedash</Item>
+			<Item Action="Delete" arg1="E:\UDATA\rescuedash">Delete U rescuedash</Item>
+			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\unleashx.xbe" arg2="E:\UDATA\rescuedash\default.xbe">Copy unleashx.xbe to U rescuedash</Item>
+			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\configs\recovery.xml" arg2="E:\UDATA\rescuedash\Config.xml">Copy recovery.xml to U rescuedash</Item>
+			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\skins\RescueDash_E\" arg2="E:\UDATA\rescuedash\skins\RescueDash_E\">Copy skin to U rescuedash</Item>
+			<!-- Cleanup & put a folder in C for the end user to read -->
+			<Item Action="Copy" arg1="dummy" arg2="C:\Do not touch anything in here">Copy dummy to C:\Do not touch anything in here</Item>
+			<Item Action="Format" arg1="X">Format X</Item>
+			<Item Action="Format" arg1="Y">Format Y</Item>
+			<Item Action="Format" arg1="Z">Format Z</Item>
+			<Item Action="MessageBox" Arg1="Important Info">Your EEPROM backup will be placed in \n\n"E:\Backups\EEPROM\" \n\nCopy the EEPROM folder to your PC once the dashboard has loaded and keep it safe.</Item>
+			<Item Action="MessageBox" Arg1="Done">So that's you all softmodded. See, I told you it was painless ;) but now I need to power cycle the Xbox, so take the disc out when the Xbox starts up again.</Item>
+			<Item Action="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\eeprom backuperer\default.xbe">Run eeprom backuperer</Item>
+		</list>
+	</List>
+</Menu>
+</Unleashx>

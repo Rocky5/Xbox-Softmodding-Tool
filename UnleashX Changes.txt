@@ -1,0 +1,876 @@
+
+
+
+For features and description, please see UnleashX documentation, or the change
+logs for the last 3 releases, or so ;).
+
+
+****	Change Log	****
+
+UnleashX V0.39.0528 Build 584
+Version:	0.39 Build 584
+Status		Alpha
+Release Date:	05/28/2007
+
+
+
+*Fixed	Problem displaying Zipped skins properly.
+*Fixed	Black color in images are rendered as transparent.
+*Fixed	Dash lockup when scrolling up in Game Manager.
+*Fixed	MP3 files are now playable directly from USB FAT32 devices.
+
+*Changed	z-buffer bit depth to 16-bit from 32-bit to decrease
+		memory footprint.
+
+*Added	"Compress Texture" in video settings. Default is Off/No/False.
+	Settings this to true enables the Dash to use Texture compression
+	for big images, decreasing the memory requirement to display those
+	in exchange for a lesser quality image. You can set this to "Yes" if
+	you are using a skin with lots of videos/images 
+*Added	"Browse Folder" in Music manager. You can now select folders
+	containing MP3 and WMA files and the dash will queue them
+*Added	WMA playback support for ISO9660 disc/USB FAT32 devices.
+	Note: Files are copied to a temp folder. File streaming in XACT
+	appears to be broken so I can't play from the media source directly.
+
+
+Note: 	Live Update server will only work with V0.39.0515A Build 583
+
+
+
+
+For features and description, please see UnleashX documentation, or the change
+logs for the last 3 releases, or so ;).
+
+
+****	Change Log	****
+
+UnleashX V0.39.0515 Build 583
+Version:	0.39 Build 583
+Status		Alpha
+Release Date:	05/15/2007
+
+
+
+*Fixed	UnRar code failing on some Rar archives.
+*Fixed	Right and Bottom offset of Playlist background image.
+*Fixed	Music info database for custom soundtracks.
+*Fixed	Improved USB Keyboard handling
+*Fixed	InfoText: Drive C Size display
+*Fixed	Xbox Information. Incorrect label for "Xbox Info"
+*Fixed	Better handling of long soundtrack name.
+
+*Changed "Middle" alignment reverted back to old implementation.
+*Changed Re-wrote InfoText source which demands too much memory causing
+	 corruption in the display
+
+
+*Added	AlbumArt for custom soundtrack. Drop a file named "folder.jpg" or
+	"folder.png" in each of your custom soundtrack folder. You can
+	then display the album art like the following in either the main
+	screen, or the music player.
+
+	<Image Left="520" Top="285" Width="90" Height="80" Source="AlbumArt" />
+
+*Added 	Limited USB mouse support.
+*Added	Rotate and accordion effect to the SlideShow screensaver
+*Added	SlideShow to Image viewer. To invoke: select an image to display from
+	File Explorer, when the Image viewer comes up, press "Start" button
+	Button Control:
+		A/Start: Pause/Resume
+		Y: Turn off/On effect
+		DPad Up: Increase interval by 1 sec
+		DPad Down: Decrease interval by 1 sec (min 2 sec)
+*Added	Full support for USB1.1-compliant FAT32 devices via File Explorer. Write
+	speed is still slow. I patched the XDK library to go around the 4GB
+	limit hardcoded into the system but my mobile HD still wouldn't work.
+	It could be that it's not USB1.1 compliant but I ran out of hardware
+	to test. Tested with 128MB, 512MB, 1GB flash disk and 4GB iPod Nano. Let
+	me know if you have success with bigger HDD. 
+		Read rate: ~1MB/sec
+		Write Rate: ~350Kb/sec
+		Multiple partition is supported (Max 4 partition)
+		Limited to a single mounted device.
+
+
+
+
+
+
+
+For features and description, please see UnleashX documentation, or the change
+logs for the last 3 releases, or so ;).
+
+
+****	Change Log	****
+
+UnleashX V0.39.0221 Build 572
+Version:	0.39 Build 572
+Status		Alpha
+Release Date:	02/21/2006
+
+*Fixed	InfoText that doesn't have "Width" attribute doesn't show up.
+*Fixed	Newsticker only displays the first item after it's done displaying
+	the first set of news items. (Continuous only)
+
+*Changed	Copy and Edit screen of Music Player reverted to old style.
+		Use MMBorderColor, MMLightBackColor to modify the dialog.
+
+*Added	Copy and Edit screen of Music Player can now have it's own background
+	image like the Playlist. Format is:
+
+	<Dialog OffsetX="x" OffsetX2="x2" OffsetY="y" OffsetY2="y2">
+			<BackGround>dlgbground.png</BackGround>
+	</Dialog>
+	Where:
+		x = offset from left where text should start
+		y = offset from top where text should start
+		x2 = offset from right (default equals x)
+		y2 = offset from bottom. (default equals y)
+*Added	Right and Bottom offset for Playlist image. Format is same as the
+	<Dialog> node.
+*Added	InfoText: Drive Free space in percent format. 2 digit, non-decimal
+	format only.
+	C_PFree, E_PFree, F_PFree, G_PFree, $C_PFree$, $E_PFree$, $F_PFree$
+	$G_PFree$
+*Added	Extended DVD Media check. Experimental and haven't been tested as
+	I don't use PC-DVD drive. This can be found in Storage setting, under
+	DVD Information.
+*Added	Music info database for custom soundtracks (music Not ripped via MS-dash).
+	This will be placed in the selected music folder and named "Info.xml"
+*Added	Custom soundtracks is now listed in music player. Can only be played and 
+	renamed(ATM).
+
+Misc:
+For some reason, the music getting cut off doesn't happen on my xbox, but I added
+extra check, nonetheless. Of course, I cannot test it. If you can tell me or send 
+me a sample that does that constantly, that'd be great.
+
+
+
+
+For features and description, please see UnleashX documentation.
+
+****	Change Log	****
+
+
+UnleashX V0.39.0212 Build 570
+Version:	0.39 Build 570
+Status		Alpha
+Release Date:	02/12/2006
+
+
+*Fixed	FTP client should be more tolerant with 0 byte-sized file
+*Fixed	Right-aligned screen items were off by significant pixels
+*Fixed	Bug in title searching where it always search for icons and videos 
+	everytime, making it appear somehow slower.
+*Fixed	Copy and Edit screen of Media Player always using the default
+	skin
+
+*Added	File manager sorting option: Name, Size, Type and Date. Press start
+	to activate
+*Added	Video mode: You can now change betwen PAL and NTSC. Setting is 
+	persistent, meaning it won't reset on reboot. On bootup, you can 
+	hold Back+LT to change to PAL, Back+RT to NTSC instantly.
+*Added	Video Settings: Widescreen/Normal, HDTV Modes are now persistent 
+	and will affect programs that uses them, including MS dash.
+*Added	Storage Settings: Hard disk can be lock/unlock now. 
+	WARNING: Not tested with apps that patches the ROM, or any of the 
+	virtual drive stuff.
+*Added	Storage Settings: Full S.M.A.R.T. reporting, including but not limited 
+	to HD Temp. Sometimes, you would see the current value greater than 
+	the max recorded value. This is because I don't update the data in the 
+	disk.
+*Added	RSS Newsfeed: Continuous settings. Makes RSS feeds like news ticker.
+	Defaults to On. When turned on, Newsfeed will ALWAYS scroll and no
+	custom text can be added to this item.
+*Added	RSS Newsfeed: Separator. You can customize the separator for each item.
+*Added	HDTemp, HDTempC, HDTempF to InfoText for HDD Temperature.
+
+
+
+
+UnleashX V0.38.0515 Build 565
+Version:	0.38 Build 565
+Status		Alpha
+Release Date:	05/15/2005
+
+*Fixed	Preview video looping bug introduced in build 564.
+*Fixed	Relative path wasn't working for "List" element type.
+*Fixed	Items that are not visible in FTP client window is not being deleted.
+*Fixed	A problem with the "Fonts" collection that could cause the font to
+	render huge display.
+*Fixed	Video screensaver renders semi-opaque when file explorer or music 
+	player is active.
+
+
+*Added	Network link status to system info, and also to screen Text Item.
+	100Mbps/Full Duplex, 10Mbps/Half Duplex...etc.
+	Ex: <Text Left="514" Top="376" Source="LinkStatus" />
+*Added	FreeMemory and TotalMemory added to screen text item.
+	Ex: <Text Left="550" Top="285" Source="FreeMemory" />
+*Added	MMActiveForeColor to the color scheme.
+*Added	Force 24H time display format. Note: Time setting control is still 
+	in 12H format (and will probably remain that way).
+
+
+Note: 	This is a quick fix release intended to address the issues listed above.
+	Some unconfirmed/reported bugs may still exists.
+
+Erratum:
+"SITE FREESIZE" that was mentioned in 564 was supposed to read: "SITE FREESPACE"
+
+
+
+
+UnleashX V0.38.0508 Build 564
+Version:	0.38 Build 564
+Status		Alpha
+Release Date:	05/08/2005
+
+
+*Fixed	Ambient sound stopped working.
+*Fixed	C:\xboxdash.xbe is used/inserted automatically when the Audio CD player 
+	is blank and you modified the Autoplay option.
+*Fixed	Screen flashes when transferring files to/from the xbox.
+*Fixed	SITE FreeSize is reporting a wrong value if the free HD space on the 
+	target drive is more than 3.5GB (approx.).
+*Fixed	Extracting Rar files was very slow. 
+*Fixed	Auto-shutdown was not functioning properly.
+*Fixed	Playlist does not display the name of song when played using the file 
+	explorer.
+*Fixed	Removing the language file causes the xbox to reboot, but changes are
+	still saved.
+
+
+
+*Added	Auto-log off of FTP users after 5 minutes of inactivity.
+*Added	"Relative" attribute to the MusicPlayer section. This will cause the 
+	coordinates of the items to be relative to the top-left coordinate of 
+	the player window, rather than the screen. Default value is False.
+	Ex: <MusicPlayer Left="10" Top="96" Width="308" Height="288" 
+		Relative="True">
+	This means that an item with (0,0) coordinate will be shown at (10,96).
+	Note: Playlist window is still absolute.
+*Added	"Direction" attribute to the "Progress" and "Volume" element of the
+	music player, which controls the way these element are drawn. Acceptable
+	values are "Up", "Left", "Right" and "Down" with "Left" being the default.
+*Added	The button ("Element" element) sequence is now honored by the player,
+	meaning you can re-order them and the control sequence will follow that
+	order. It is also possible to omit a button and still keep the sequence
+	intact.
+
+	Note: For music player related skinning, take a look at 
+	OrangeShapes_ConstantineMP.zip. This is a skin based on OrangeShapes
+	with Constantine music player theme.
+
+
+*Changed	ScreenSaver will default to Text mode if Slideshow path or video 
+		file is not found.
+*Changed	On screensaver text mode, the "tick" sound is suppressed if 
+		background music is playing.
+*Changed	All fonts has been modified to include characters above ASCII 127. 
+		Hence, the caption should also display accented characters.
+
+
+
+
+UnleashX V0.38.0501 Build 562
+Version:	0.38 Build 562
+Status		Alpha
+Release Date:	05/01/2005
+
+*Fixed	Freezing in Game Saves Manager when downlading or trying to download a game
+	save file.
+*Fixed	Can't transfer 0 Byte to/from FTP Server
+*Fixed	Can't trasfer to/from FTP Server any filename with unicode characters
+*Fixed	File manager and FTP client doesn't correctly display filenames containing
+	characters above ASCII 127.
+*Fixed	FTP Server halts to a slow when more than one client is transferring files
+*Fixed	FTP client can now connect to EvolutionX FTP Server
+*Fixed	FTP Site editor only accepts/stores up to 20 characters for the address.
+
+*Fixed	Bug in ISO9660 Disc parsing routine
+*Fixed	Booting the dash from Drive G over writes its configuration file
+*Fixed 	Xml parser fails to parse an xml document if a comment element contains ">"
+
+
+
+*Added 	Formating option directly from the file manager. Just highlight the drive
+	then select Format. Disabled for Drive C, E, F & G. Use an script for that.
+*Added	Formating of Memory Unit. Use the file manager to do this. Uninitialized 
+	memory unit, including those FAT/FAT32 formatted MU, can now be formatted.
+*Added	Audio CD playback capability. Leave the Audio CD Software Player option 
+	blank to use the dash for playback.
+*Added	Ability to play MP3 and WAV (wma is still experimental) files directly from
+	an ISO9660 disc. Use the file manager to select your audio file.
+*Added	Fully skinable Music Player front end. See this XBS link for more info:
+		http://forums.xbox-scene.com/index.php"showtopic=382746#
+*Added	Capability to localize some text and messages via external xml file. This 
+	means that a lot of text can now appear in your favorite language.
+	See this XBS link for info: 
+		http://forums.xbox-scene.com/index.php"showtopic=335352&st=16#
+	Note: Not 100% of strings are localizable, yet.
+*Added 	Xbox soundtrack manager. The same usual stuff found in MS Dash. Copy, edit, 
+	rename, delete...etc, except CDDA to WMA or CD ripping.
+*Added	LED settings -See under system settings. You can now assign LED color 
+	when the following events occur: ScreenSaver, File copying, FTP Send, 
+	FTP Receive, FTP Boost, and when the system is busy doing background tasks. 
+	All LED combinations are available, flashing and alternating.
+
+*ADDED	Mapped right thumbstick to lower-right portion on screen calibration.
+
+*Changed	Picture slideshow screensaver is now random
+*Changed	Upgraded UnRar engine to 3.40
+
+
+
+
+-Improved Skinning support. 
+*Screen	items can now be stacked/ordered by adding the zIndex attribute, i.e., 
+	zIndex="5". Items with the same zIndex value will be drawn in the order they
+	are found. zIndex don't have to be sequential or continuous, meaning you can
+	use 1,2,3,5,8,10...n. This means that you can now draw in this manner: 
+		text, image, shape, text, text, image...etc. 
+	However, menu item is still on top of everything else.
+*Added	Fonts collection. You can now have a fonts collection and use them where 
+	they're possible. So, it is now possible to display Text items using different fonts. 
+	The Format is:
+		<Fonts>
+			<Font Name="MyFont">mycoolfont.xpr</Font>
+			<Font Name="MyOtherFont">whatever.xpr</Font>
+		</Fonts>
+
+	Then use them like this:
+		<Text Left="180" Top="142" Source="SongTime" Font="MyFont" zIndex="2" />
+
+*Added 	a few more items for text source
+	-SongTrack - concatenation of song and soundtrack 
+	-SongBitRate - Ex: 128 KBPS...etc
+	-SongLength - Ex: 5:12
+	-SongFrequency - Ex: 44.1KHz (Almost always)
+	-SongChannel - Audio CD, Stereo or Mono
+
+
+Live Update Server: 209.225.8.65/unleashx. Use this for the Server option as an 
+alternative server.
+
+
+
+UnleashX V0.37.1218 Build 543
+Version:	0.37 Build 543
+Status		Alpha
+Release Date:	12/18/2004
+
+
+*Fixed	FTP Server transfer bug.
+*Fixed	Bug in FTP client where a 0 byte file will fail the process, and stop
+	 the entire queue
+*Fixed	Bug FTP Client issuing/requesting for file/folder with invalid
+	 character/s.
+*Fixed	Bug where any disc you insert after inserting an ISO9660 disc won't be
+	 recognize and requires a reboot.
+*Fixed	Lock up when switching from skins with video background.
+*Fixed	WMA Song title gets cut off after the 15th character.
+*Fixed	BGM not playing after boot up when there's a preview video on the first
+	 menu item
+*Fixed	More accurate display FTP client transfer rate.
+*Fixed	Filter Level, not properly set on boot up.
+
+*Added	Cancel confirmation dialog when transferring (ftp client). Transfer
+	 still continues in the background until you actually confirms.
+*Added	Network Settings: FTP Client - Minimum and maximum Port number when
+	 using Active transfer (not PASV) for the ftp client (so it should be
+	 firewall friendly now).
+*Added	Network Settings: FTP Client - option to turn off auto-search for Xbox
+	 peers.
+*Added	FTP Client: Remote (Server) and Local(Xbox) Path to sites.
+*Added	Enable/Disable option for "Open Containing folder" in File manager
+*Added	Enable/Disable option for "Open Saves Folder" in File manager
+*Added	skin-configurable (replaceable) splash screen. For zipped skins,
+	 just add "UXSplash.jpg" in the archive, no need to modify the xml.
+	 For non-zipped skins, drop "UXSplash.jpg" in the same folder as the skin.
+
+*Changed	Color of the cursor bar is now the same as the text color
+		 (virtual kb, text editor).
+*Changed	Removed Splash Screen fade out after menu is loaded.
+
+
+Note:	This is a Quick fix release addressing the issues listed above.
+
+New Live Update Server: 209.225.8.65/unleashx. Use this for
+the Server option as an alternative server.
+
+
+
+
+Version: 0.37.1207A Build 536
+Release Date:	12/07/2004
+
+*Fixed		corrupt transfer of files less than 1MB in size.
+*Fixed		Empty/shrinking message box.
+
+Note:	This is a Quick fix releas addressing the issues listed above.
+
+
+
+
+Version: 0.37.1205A Build 534
+Release Date: 12/05/2004
+
+*Fixed		Lock up when launching an app too soon when Network is enabled and no cable
+		is plugged in.
+*Fixed		Game Saves Manager doesn't create the  proper destination when transferring
+		game saves from Memory unit to HD. HD to MU is fine.
+*Fixed		Text Editor is misalligned on PAL video mode.
+*Fixed		Scrolling text flickers.
+*Fixed		XML parser generates empty Xml element (<>).
+*Fixed		RSS feeds with URL not ending in .xml are filtered out.
+*Fixed		System settings does not reflect the changes until next reboot.
+*Fixed		Some MP3s gets cut off near the end.
+*Fixed		Music skips, or pauses when going in/out of a submenu, or opening the
+		Storage option.
+*Fixed		Random music, is now really random.
+*Fixed		WMA is now more skip-resistant.
+*Fixed		Video screen saver plays at a faster rate when activated the second time.
+*Fixed		Default Destination folder when copying is being ignored.
+*Fixed		Auto-File renaming generates invalid filename if the file extension is more
+		than 4 characters long.
+
+*Changed	FTP Server File IO routine improvement for faster, more efficient transfer.
+*Changed	Background music manager totally rewritten.
+*Changed	WMAs and MP3s can now reside in the same folder.
+*Changed	Smaller and faster MP3 decoding engine.
+*Changed	Transition of the Total progress bar indicator is now smoother and more
+		accurate. 
+*Changed	Music volume control now affects WMVs and XMVs too.
+*Changed	Default screen calibration data now uses smaller values.
+*Changed	Audio/Music settings has it's own section in config.xml. If you are using
+		BGM, you must reconfigure the music options.
+
+*Added		FTP client for your Xbox-to-Xbox, Xbox-to-PC file transfer needs.
+*Added		Live Dash Update with self-check feature.
+*Added		Auto-check for new version.
+*Added		Embedded Xml-only skins. There are currently 11 skins made by Jezz_X and 
+		Kthulu.
+*Added		File manager now supports ISO9660 format.
+*Added		Surround 5.1 for MP3 playback.
+*Added		Surround 5.1 for XMVs and WMVs (preview movie)
+*Added		Time elapse, estimated remaining time and transfer rate to the progress bar
+		indicator (File operation).
+*Added		<WindowBackCOLOR> and <WindowForeCOLOR> to the Color scheme tags. These 
+		currently applies to the Text editor's background and foreground color, 
+		respectively.
+*Added		Exposed embedded fonts used by the dash. You can use the following tags,
+		in place of the font filename: 
+		    MenuFont -The font the main menu uses (Arial 16)
+		    SmallFont, -font used in the dialogs, virtual keyboard...etc (xboxbook 12)
+		    InfoFont -font used by InfoText (xboxbook 14)
+		    CaptionFont  -font used by dialog caption/Loading screen(Xbox 14)
+		Example: <Font>CaptionFont</Font>
+*Added		Used kernel calls to provide kernel version, Hardware info and hddkey(used to 
+		come from eeprom data).
+*Added		FREESPACE site command to the FTP server. (SITE FREESPACE <Drive Letter>)
+*Added		Enable/Disable Recently launched title list.
+*Added		modifed mkjones' logo as a Splash screen. The logo came from Javienn, further
+		modified with kthulu's tip.
+*Added		Textured Settings' background.
+*Added		Ability to change sound effects (.wav) use by the dash (Initial implementation).
+
+
+
+Version: 0.36.0620A Build 499
+Release Date: 06/07/2004
+
+*Fixed	Stupid bug that could lock the dash when launching an app too soon when
+	BGM is enabled.
+*Fixed	locking up when changing skins and there's an icon on the systems submenu
+*Fixed  weird scrolling up of the menu items when using the free format menu style
+*Fixed  HTTP Proxy settings/saving
+*Fixed  Password/Passcode is ignored when showing the context menu.
+*Fixed  Icon/Video assignment on the menu item editor for items other than an xbe.
+*Fixed  GameIcon tag should now work again, although skinners should use the
+	<Image> tag instead.
+*Fixed  Minor bug when installing skin.
+
+*Changed Removed Blue screen on startup
+*Changed Flicker Filter level set to 2 by default
+*Changed Soften display set to True by default
+*Changed 32bit is now the default color quality again
+*Changed Copy command changed back to older implementation
+*Changed Modified line drawings to use native DX Render State
+	 for line thickness, instead of drawing the lines several times.
+*Changed Filtered the 'A' and 'Start' button to prevent the event from
+	 bubbling up when screensave is active.
+*Changed System Settings and put ScreenSaver in its own section
+*Changed Editing the title of a menu item when it's an xbe will also edit the
+	 title of the xbe.
+*Changed Option to launch a title in NTSC/PAL mode is now enabled regardless of
+	 the video switching settings.
+*Changed Only one ftp client can transfer in boost mode at anytime.
+*Changed Networking internal parameters to improve data throughput.
+
+*Added  "SafeBorder" Attribute to <FileManager> section of the skin with default
+	value set to True. For new skins that want to maximize the viewport, you
+	must set specifically add this attribute and set it to False.
+*Added  "DrawBorder" attribute to <FileManager> section of the skin with default
+	value set to False. 
+*Added  "Enable BGM" option to ScreenSaver section with default value set to True 
+	(useful for video screensavers).
+*Added  Launch homebrew titles (region 0) in NTSC/PAL mode.
+*Added  Additional check to ensure randomness when selecting music.
+*Added  "Info" IR button maps to "Y" button so you invoke file downloading
+
+
+Note:  This is a Quick fix release -some reported bugs may still exists.
+Make sure your xbe, zipped skin file, custom music...etc., doesn't contain multiple 
+periods (".") in its file name. It seems the search file API has a problem when 
+using search filter such as "*.mp3" or "*.zip". It won't return files like 
+"my.cool.song.mp3". I'll take a look on this and it's probably something wrong on my 
+part, but I don't wanna take out the filter and check for the extension myself.
+I'm using the standard FindFirstFile/FindNextFile API, if anyone has a tip, that
+would be cool.
+
+
+
+Version: 0.35.0605A Build 439
+Release Date: 06/07/2004
+
+
+Fixed:	"SkinFile" Game saves gets corrupted when switching zipped skins frequently
+Fixed:	Screen gets corrupted when launching an xbox title when WideScreen is enabled
+Fixed:	Going in and out of sub menus causes unnecessary pauses.
+Fixed:	Going in and out of sub menu pauses the BGM.
+Fixed:	Going in and out of sub menu too quickly will mess the menu structure.
+Fixed:	Launching an Xbox title too quickly on bootup when BGM is enabled crashes
+	the dashboard.
+Fixed:	Virtual workspace of the text editor is now narrower so the cursor doesn't
+	get too close to the right edge.
+Fxed:	Sometimes, items in a batch script executes without waiting for the current
+	item to finish its task.
+Fixed:	X2IGR_ON/X2IGROFF was interchanged.
+Fixed:	SITE SHUTDOWN doesn't work.
+Fixed:	Only a few BGM gets played overtime.
+Fixed:	The image size being reported by image viewer is wrong.
+Fixed:	Images equal to and bigger than 1200x720 pixels doesn't load.
+	Note: Free memory must be greater than 10MB for images to load succesfully.
+
+
+Changed: DelayLoad default value set to "False". Disk I/O has been optimized.
+Changed: Settings screen are now logically grouped, so it's easier to find
+	 what you are looking for without having to go thru a long list.
+Changed: ScreenSaver text can now accept a value pointing to a valid XMV/WMV
+	 file, or a valid path containing images for slideshow with 6 different 
+	 transition effect.
+	 Note: Use moderate sized images (1MP and below), especially when using a
+	 resource intensive skin.
+Changed: Settings that requires valid path or file uses file/folder browser
+	 instead of the virtual keyboard.
+Changed: Free/Used memory is now in KB.
+
+
+Skinning engine:
+Added:	Loading screen background now accepts the presets "GameIcon" and 
+	"GamePreview" for its value.
+Added:	InfoText item scrolling. Add an attribute named "Scroll" to any infotext and
+	set the value to 1 -scroll only when the content is wider than the width, 
+	2 -always scroll the content, or 0 to disable scrolling.
+	Note: Newsfeed are the only item that scrolls by default (Scroll="1").
+Added:	Menu item scrolling. Unlike Infotext, only the selected item will scroll
+	and it will only scroll when the content is bigger than the width 
+	(equivalent to Scroll="1").
+Note:	For text/items to scroll, the Width attribute must be provided.
+Added:	Smooth scrolling now uses Lerp for calculating the next position for
+	smoother animation.
+
+Settings -Video:
+Added:	Support for HDTV modes (1080i, 720p, 480p). Note: These settings must also 
+	be enabled from MS dash since this deals with EEPROM.
+Added:	Soften display option.
+Added:	Flicker Filter level. Set this option to 2 to minimize flickering, while
+	maintaining sharpness on 480i.
+Added:	Option to limit the refresh rate to 60Hz. 
+	Note: 1080i is always limited at 60Hz.
+Added:	Switchable color display quality (16 bit/32 bit).
+	Note: Using 16 bit color on 1080i mode will improve the video performance.
+Added:	Screen calibration with individual settings for each screen mode.
+Added:	Safe boot mode. Press and hold "Back" button to ignore video settings and force
+	the dash to boot at 480i. Holding the back button will also ignore the 
+	calibration settings.
+
+Settings - Time/Network/FTP/HTTP:
+Added:	SNTP server port.
+Added:	HTTP protocol for time synchronization.
+Added:	Time will default to the last time you launched an Xbox title when the
+	clock becomes invalid.
+Added:	Xbox Auto-detect. Right now, only Qwix/AvaLaunch uses this feature and is
+	disabled by default.
+Note:	Auto-detect send the username/password pair in clear text.
+Added:	Minimum and maximum port for passive transfer, so those behind a firewall
+	can configure the FTP server to use a limited range of port for better
+	compatibility. Minimum port number is 1024.
+Added:	Avalaunch's Boost mode technology.
+Added:	Configurable SYST(em) name so the current release of Qwix will work with it.
+	To make Qwix work with UnleashX, provide the same response to SYST as
+	AvaLaunch's.
+	Note: This is only necessary until Devenic releases a new version that properly
+	detects boost mode compatibility.
+Added:	HTTP proxy server and port configuration.
+
+Settings - Music/BGM:
+Added:	MP3 playback with ID3 V1.1 support. Can read Album/singer/song title info.
+Added:	Folder name will be use for Soundtrack name.
+
+Settings - File operation:
+Added:	Auto-rename invalid/long filename for both FTP server and file explorer.
+	Off by default.
+Added:	Xbe Auto-Patch enable/disable settings.
+Added:	Skip on error settings, instead of aborting outright. Off by default.
+Added:	Default destination folder for backing up xbe title.
+Added:	Option to uninstall xbox title found on the HD, accessible from the 
+	context menu.
+
+Settings - Font:
+Added:	Configurable font scaling with individual settings for each screen mode.
+Added:	Configurable font Scrolling speed. Default is 20ms.
+
+Settings - Autorun:
+Added:	You can use the gamepad buttons to launch applications during bootup, or
+	the IR button anytime while in the menu after the dash has completely
+	booted. You can map different Xbes to A, B, X, Y, Start, White and Black,
+	while you can use 0~9 on the IR remote control.
+
+Others:
+Added:	Unrar can now handle RARv3.0+ with multi-volume/spanned archive capability.
+	Thanks to grebulon for providing the code, making this possible.
+	Note: Using the dash to unrar huge archive may not be a good idea.
+Added:	"UnRar" to the list of action commands. Unzip/UnRar usage can be 
+	interchanged.
+Added:	Top 10 most recent launched titles. Press "X" while in the menu, or bring 
+	up the context menu to display the list.
+Added:	"Delete Game" option to the context menu and a corresponding settings to turn this
+	Off/On. This is turned Off by default.
+Added:	Launch in NTSC/PAL option to the context menu. Automatic Video mode switching
+	should be enabled for this option to be visible.
+Added:	Simple Menu Item editor. Gives you to option to edit/assign icon, preview video, 
+	password, passcode, as well as the title. For xbox titles, the title change is not 
+	permanent and only items.xml/config.xml gets edited. For entries found in items.xml,
+	title may revert back to the embedded title when he timestamp don't match that of 
+	the cache.
+Added:	Game Saves Manager. This module list down all game saves, as well as downloadable
+	content found in your harddisk alphabetically. It could also list down saves from 
+	your memory unit, if one is found. You can copy saves HD to MU and vice-versa. 
+	This module also allows you to delete individual item, as well as all saves for 
+	a game. To enable this feature, add the following line to your config.xml
+	<Item Action="SavesManager">Game Saves Manager</Item>
+	Note: As a precaution, this feature is only available when the dash is run from the 
+	HD.
+Added:	Added online downloading and installation of game saves from www.xbox-saves.com
+	courtesy of TeamX4. I'd like to particularly thank Keiths, Lc204 and Savvy of
+	www.xbox-saves.com for making this possible. To enable downloading, open Game 
+	Saves Manager, highlight the game you wanted to download saves for, and hit the 
+	"Y" button. If one or more games is found, you will be presented with a list for 
+	you to choose from. Note: It will not overwrite any existing games saves on your
+	xbox. Some games, like "Mortal Combat: DA" can only contain one game save. In 
+	order for you download a save for this type of game, you must delete the item first.
+	Note: Downloading of game saves is subject to the rules and regulations of the site. 
+	Please support them by visiting their site.
+Added:	Online downloading of skin from www.allxboxskins.com and www.xbox-skins.net with
+	automatic checking and installation of zipped and rarred files. Thanks to koldfuzion
+	and BLazeD for making this possible. 
+	Note: Downloading of skins is subject to the rules and regulations of the site. 
+	Please support them by visiting their site.
+	Note: AXS uses thumbnail for preview, while Xbox-Skins uses a full size image.
+Added:	Game Icon and preview video downloader with auto-request if one is not found. 
+	Start by invoking the menu item editor, select the appropriate option, then hit 
+	"Start" to bring up a context menu. Thanks to BLazeD, koldfuzion, flattspot...etc
+	for building and maintaining the online game DB.
+
+
+
+Version:	0.31.0222A
+Release Date:	02/29/2004
+Note:		Quick fix release, no major enhancement.
+
+Fixed:	Full USB keyboard functionality when in Text editor. Keys should act like they should. Press L/RWinkey to bring up the menu
+Fixed:	Menu list gets messed up when going in and out of submenu if done quickly.
+Fixed:	Menu items alignment when using the free form layout.
+Fixed:	True-Widescreen support. Somehow, it got messed up during one of the updates.
+
+Added:	Passcode using just the gamepad. Valid characters for Passcodes are: A, B, X, Y, W(hite), L(eft), R(ight), U(p), D(own) and 0~9 (using the IR). Passcodes are case sensitive  and have a maximum of 15 characters. Note that Password and Passcode can't be use in the same function/action together, and Password takes precendence over passcode.
+	<Passcode MaxTries="3">ABXY</Passcode> -for system passcode or
+	<Item Action="LaunchDVD" Passcode="1234567890">Launch DVD</Item>
+Added:	DelayLoad attribute to submenus/automenus with a default value of True. Setting this to "False" will instruct the dash to scan all related files on boot up, adding a little delay while booting up.
+	<List Text="Applications" Sort="On" Auto="On" DelayLoad="False">
+Added:	EnableMusic attribute to the "Preview" element so you have more control about how the BGM behaves. 
+Added:	Forced video mode switching for multi-region titles.
+Added:	When video mode autoswitch is enabled, all titles can be force to boot to specific video system by editing config.xml/items.xml by adding/editing the Region attribute. Valid values are 1, 2, 4, and 7(multi).
+
+
+
+Version:	0.30.0222A
+Release Date:	02/22/2004
+
+Fixed:	Frequent lock ups when doing an IGR.
+Fixed:	XBE Title editor messes up the title when editing to a shorter title.
+Fixed:	Pressing Display button on the IR control to turn the xbox off was broken.
+Fixed:	Using MessageBox in batch execution cancels the entire process.
+Fixed:	Fan Speed gradually goes back to the default value.
+Fixed:	Fan Speed and Memory display doesn't include the fraction part. 2.5x is being displayed as 2.0x.
+Fixed:	or rather changed. Embedded game icons won't show if you didn't put anything on the Item element in config.xml.
+Fixed:	Problem with the newer IR Control.
+Fixed:	Background music (BGM) gets muted even though the audio of preview video is disabled.
+
+Changed:	EnableDriveF default value was changed to False. This should ensure greater compatibility with older BIOSes.
+Changed:	Default Infotext Font was expanded to include characters 128~255, so it's now possible to display the " and " characters.
+Changed:	Virtual keyboard expanded to include accented characters.The Alphabet<->Symbol button is now changed to Alphabet->Symbol->Accents
+Changed:	USB keyboard mapping to gamepad events. Enter key maps to A, Esc to B, Ctrl+Enter to Start and Ctrl+Esc to Back button. This should make using USB keyboard with the text editor easier.
+Changed:	WMA (BGM) decoding engine, and overall handling. Random option limits the selection to the same track and will only change track if all the songs have been played.
+Changed:	Option to play ripped WMA only, custom music only, or both. The old configuration will still work (<EnableSoundTrack>True</EnableSoundTrack>) but it will be mapped to "Off" and "Both".
+		<EnableSoundTrack>Both</EnableSoundTrack> -Posible values:Off, Xbox, Custom, Both
+Changed:	"Copy DVD" option on the file manager so that instead of taking the current selected item as the destination, it will ask the user for one, using the virtual keyboard.
+Changed:	Batch command is now expanded to handle any number of level. Previous implementation will only handle the "Items" element from the parent "List" element. The parent "List" element can contain as many "List" element up to several levels deep. Because of this the "AskUser" command is modified to exit the current level and skip the remaining items on queue, unless it belongs to the top level menu.
+Changed:	"Path" element can now be placed right after the "Menu" Element, not just within a "List" element.
+		All your games can now be listed on the root menu, not just as a sub menu.
+
+Added:	Integrated Text Editor. Find and select your txt, xml, ini from the File Manager.
+Added:	Video mode Auto-Detect/Auto-Switch using Cherry's patch code so it's EEPROM safe (Doesn't modify and write to EEPROM). Force PAL60 option is also included. A simple reboot reverts everything back to original settings. It's smart enough to apply only when needed. Note: Multi-region titles like RainbowSix3 won't be set.
+	<AutoVideoMode UsePAL60="False">True</AutoVideoMode>
+Added:	LED Color settings. Possible values: Default, Red, Orange, Off
+Added:	CPU Temperature Threshold. The dash will dynamically increase the fan speed until it reaches the desirable temperature level.
+	<LEDColor>Orange</LEDColor>
+Added:	Horizontal Menu layout. <Menu Horizontal="True" Smooth="True" ShowIcon="True" Rotate="False">
+	This will also enable Dpad Left and Right as an additional input for navigation.
+Added:	Freeform Menu layout. You can now put items anywhere on the screen.
+	<Menu Smooth="True" ShowIcon="True" Rotate="False">
+		<ItemPos Left="285" Top="96"></ItemPos>
+		<ItemPos Left="310" Top="138"></ItemPos>
+		<ItemPos Left="315" Top="180"></ItemPos>
+		<ItemPos Left="310" Top="222"></ItemPos>
+		<ItemPos Left="290" Top="264"></ItemPos>
+	</Menu>
+	The ItemPos element can contain Width and Alignment attributes.
+Added:	You can now include a non-selectable menu item. To do this, don't include the action attribute to an Item element.
+	<Item Icon="C:\Games\Action.png"> -= Action =- </Item>
+Added:	You can now include a blank, non-selectable menu item. To do this, don't include the action attribute, and don't put anything for the value to an Item element.
+	<Item></Item>
+Added:	TextEditor to the Action command. Ex: <Item Action="TextEditor">Text Editor</Item>
+Added:	X2IGR_ON/X2IGR_OFF action commands. Ex: <Item Action="X2IGR_OFF">Turn Off X2 IGR</Item>
+Added:	SetClock action command. Ex: <Item Action="SetClock">Date/Time Settings</Item>
+Added:	InputBox action command. Displays the virtual keyboard and wait for user"s input. This is useful when doing an installer disk, giving the user the capability to choose the destination.
+	<Item Action="InputBox" Arg1="KB Caption">Sample Value</Item>
+
+	To use the value entered by user later, you can use the keyword KBResult or $KBResult$ to combine it with any text. Ex: <Item Action="MessageBox" Arg1="Hi">You entered "$KBResult$"</Item>, or
+	<Item Action="Copy" Arg1="D:\CDrive" Arg2="KBResult">Copy C Backup</Item>
+ 
+	Note that the use of $KBResult$ is case sensitive. Also, do not use KBResult and $KBResult$ after asking for password. In the event that a password is required for an item, ask for another input again from the user.
+Added:	Context Menu. Press start button to bring it up. Options available are Select/Play, Information, and Backup to Harddisk (backup only for that specific game/title). The type of information displayed is dependent on the type of the currently selected item. The context menu will be expanded to include more actions in the future.
+Added:	Ability to personalize/name your DVD compilation disk by simply adding a file named "DiskTitle.txt" containing the alternate Title you want. Instead of having a disk with title showing as "UnleashX CD", or "MediaXMenu"(") or "RemoteX"/"Evox CD", you can have it like "MultiGame disk Vol. 2" or "Halo/MechAssault Disk". Note: For UnleashX bootdisk without this file, auto-launching is suppressed irregardless of your setting.
+
+
+
+Version:	0.26.0119A
+Release Date:	01/19/2004
+
+Fixed:	Won't boot on BIOSes patched with Big F partition.
+Fixed:	Crown/crosshair doesn't rotate when triggers are use to move between menu items.
+Fixed:	Memory Units drive assignment conflicts with Drive F & G when inserted on Port 1. Thanks to BenJeremy for the hack.
+Fixed:	Root of Memory units is not accessible. Instead of the actual root Root, it displays the Saved game's metadata.
+Fixed:	WMV playback is choppy. Also, WMV9 file makes the dash crash.
+Fixed:	Music doesn't play when you press right thumbstick, if you disabled background music in your settings.
+Fixed:	DDS formatted, DXT3 compressed game icons doesn't show up (Hunter: The Reckoning...etc.)
+Fixed:	Skin settings doesn't save if "Settings" section isn't found.
+Fixed:	FTP compatibility with some FTP client (xFer and Qwix and I hope some Unix based clients too -sorry, don't have anything to test this on).
+Fixed:	File Manager won't do anything if the current selection is the first item ("..") and you select "Copy".
+Fixed:	Smoother navigation when using the IR remote control.
+Fixed:	Pressing the Back button while virtual keyboard is being displayed should dimiss ONLY the virtual keyboard, not the current screen/dialog.
+
+Added:	Capability to format new Harddisk and restore backup when run from from CD-R/RW or DVD. See hdprepare_movie.txt for details. Thanks to Modchip-Source (www.modchipsource.com) for providing the HD used for testing.
+Added:	New Action command: "PrepareHD". Performs formatting of HD as if you just installed a new disk. Run only from DVD/CD to avoid error because of open files. Ex: <Item Action="PrepareHD">Prepare New HD</Item>
+Added:	New Action command: "Delete". Deletes a single file or a directory recursively -please be cautious and don't blame me for lost data. Deleting from action command WILL NOT ASK for your confirmation. Ex: <Item Action="Delete" Arg1="C:\Items.xml">Delete Cache</Item>, or  Ex: <Item Action="C:\Skins">Delete Skins folder</Item>
+Added:	New Action command: "Zip". Zip a single file or a directory.  Ex: <Item Action="Zip" Arg1="C:\Skins" Arg2="C:\Skins.zip">Zip up Skins folder</Item>. Format is Command-Source file/folder-destination file
+Added:	New Action command: "UnZip". Expands a zip file.  Ex: <Item Action="UnZip" Arg1="C:\skins.zip" Arg2="C:\Skins">Extract Skins</Item>. Format is Command-Source zip file-destination folder
+Added:	FTP SITE EXEC command. Ex: SITE EXEC <Fullpath to XBE>
+Added:	XBE Title editor. Find and highlight your xbe using the File manager, bring up the menu, and find "Rename XBE Title" option.
+Added:	Detects if an XBE was modified -then updates the cache to reflect info. (Should now update the title when you use XBERenamer, or any XBE-editing tool)
+
+Added:	Music can now be controlled using the IR. Play, Pause, Stop, Forward(next song), Reverse(prev. song), Skip+(next Soundtrack), Skip-(prev. soundtrack)
+Added:	Enable/disable Preview video via the Black button (only for skins that uses preview videos)
+Added:	Windowed/Fullscreen mode for preview video via Right thumbstick press, or Display on the IR control. (Menu items will still show up when in full screen mode)
+Added:	Background Sound effect is now muted when Music is playing.
+Added:	Background music is muted when preview video is playing.
+
+Changed:	All XBE can now be patch(Media flag), not just "default.xbe" -Thanks to xeero, BTW.
+
+
+
+Version:	0.25.1218A
+Release Date:	12/18/2003
+
+Fixed: 	FTP server resume command -This isn't actually a bug but most FTP client like to use REST then STOR rather than the APPEnd command.
+Fixed: 	XML Parser. -There was a bug when setting the attribute. Setting the value works fine, so this should fix the problem with some settings not being save like <DVD AutoLaunch="True" />
+Fixed: 	Track/song skip. Using the DPad and White button to change soundtrack scrolls too fast..
+Fixed: 	UnleashX ignores the Width attribute of the menu on custom skins (Please specify a wider Width for your skins). UnleashX uses 270 for the standard mode and 350 on Widescreen mode.
+Fixed: 	AskUser action. Fix to treat "B" button as cancel.
+Fixed: 	Embedded Game Icon using XPR1 format should now display properly (Top Spin...etc.).
+Fixed: 	Cell images get's corrupted when the fog is turned off.
+Fixed:	Music should stop playing when the right thumbstick is pressed and won't continue until it has been press again.
+Fixed:	Music won't play if you only have one soundtrack stored.
+Added:	Unrar (works with V2.0 Rar only -Winrar 2.9). Rar 3.0 can be displayed but can't be extracted.
+Added:	Cycle news item (Black + DPad Right)
+Added:	Newsfeed and Item interval can be configured from the settings menu.
+Added:	Ability to turn off the arrows on the menu from the skin file( <Menu ShowArrows="False"> )
+Added:	Skin can show preview from the skin selection menu(requires the presence of preview.jpg). Preview can be toggled by pressing the White button (Off by default).
+Added:	skin files can be packed into zip file. It doesn't have to be extracted. It can have "preview.jpg" too to display the skin preview.
+Added:	User defined path for the music (currently, supports WMA format only)
+Added:	File Manager can now have a custom background (png or jpg). Format is:
+	<FileManager>
+		<BackGround>Background.png</BackGround>
+	</FileManager>
+	This section should be in the same level as the Main section, not within.
+Added:	Loading screen can now have a custom background, and the text turned off. Format is:
+	<LoadingScreen ShowInfo="True">
+		<BackGround>Background.png</BackGround>
+	</LoadingScreen>
+	This section should be in the same level as the Main section, not within.
+Added:	Xbox System Info. Press the Y button when on the main menu. This is also accessible from the settings screen. 
+Added:	Video support directly from the file manager, or thru skinning. To toggle between fullscreen and windowed mode, press the right thumbstick. Look for the WinUX skin and the updated docs to see how videos can be integrated into your skin.
+Added:	Preview video for your games, apps, even the top most menu. Name your movies "preview.xmv" or "Preview.wmv" and drop it into the game folder for auto detection.
+Added:	Intro Movie. Now, UnleashX can display an intro movie before showing up the main screen. Intro Movies can be interrupted by pressing the buttons. 
+Changed:	Screen Capture new keypad combo -LeftThumbpress + Black Button.
+Changed:	Fast scroll speed is now variable depending on how hard you pressed the trigger buttons. Fast scrolling using the trigger button is slower than using the left thumbstick -this is by design.
+Changed:	Used a smaller font for the Settings Screen.
+Changed:	It should now respond to All controller, if you have more than one plugged in.
+Changed:	Removed the drive statistics on the FTP server. Some clients just wouldn't know how to handle the info. Modified it into SITE DRIVESTAT command.
+	
+
+Version:	0.2.1201A
+Release Date:	12/01/2003
+
+Fixed: 	Memory Unit detection. MUs are now properly detected. NOTE: Mounting MU on Port 1, Slot A would probably throw an error. Please use another port.
+Fixed:	USB Keyboard now works properly. 
+Fixed:	Zipping/Unzipping of files to a non existing folder would cause the process to fail.
+Fixed:	Lock ups on xboxes without the Audio folder
+Fixed:	DVD/CD Player on drive F can't be detected on bootup.
+Fixed:	Game name is one charecter short for Xbox titles that doesn't have title name
+Fixed:	Detects properly if UnleashX was launch as the default dash or as an application
+Fixed:	Depending on which mode it was run, Reboot will either go back to the default dash, or resets the system.
+Fixed:	InterChanged: L/R trigger for fast scrolling
+Fixed:	Menu Item spacing is too wide for skins that suppresses game icon.
+Fixed:	File manager, sometimes, doesn't respond to the commands. It just sits there saying checking for files but there's really nothing going on
+Fixed:	Added a check when saving settings to a read-only config.xml.
+Added:	Quick Reset ( <Item Action="Reset">Reset</Item> )
+Added:	Powercycle ( <Item Action="PowerCycle">Power Cycle</Item> )
+Added:	Displays the current file when zipping.
+Added:	Displays the destination file when moving/copying.
+Added:	The fog can now be turned off from the skins ( <Main Fog="False"> )
+Added:	Ability to change Main Menu font thru skinning. Please only use XPR (Add <Font>MyFont.xpr</Font> INSIDE the "<Menu></Menu>" element)
+Added:	Ability to change InfoText font thru skinning. Please only use XPR ( <InfoFont>MyFont.xpr</InfoFont> )
+Added:	Ability to scale infotext in both direction using "ScaleX" and "ScaleY" attribute. Note: Value is in percent without the % sign. Default is 100 and can not be less than 25. ( <Text Left="35" Top="30" ScaleX="150" ScaleY="150" Source="IP"/> )
+Added:	Ability to customize infotext further by using your own text. ( <Text Left="35" Top="30" ScaleX="150" ScaleY="150" Source="My IP: $IP$"/> ) Note: $IP$ will be replaced with the current IP. The ID enclosed in $ sign is case sensitive, meaning $IP$ will work and $ip$ won't. Please see skinning overview for details.
+
+
+
+Version:	0.1.1126A
+Release Date:	11/27/2003
+First public release

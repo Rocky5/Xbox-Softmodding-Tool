@@ -1,0 +1,18 @@
+How to re-enable the softmod.
+
+1. Power on the system.
+2. Now this is a little tedious.
+--- Select Music
+--- blank soundtrack
+--- Copy
+--- Copy
+--- New Soundtrack
+--- Enter <<Eggsßox>> (with two '<' Symbols, capital 'E', beta Accent 'ß' and two '>' Symbols)
+--- Done the MS logo will appear & the MSdash will reload.
+--- Select Music
+--- blank soundtrack
+--- Copy
+--- Copy
+--- New Soundtrack
+--- Ok
+--- Resoftmod your Xbox.

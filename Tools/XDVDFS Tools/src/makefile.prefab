@@ -1,0 +1,32 @@
+########################################
+# Programs used during build and paths #
+########################################
+
+AS = nasm -f elf
+LD = ld
+CC = gcc
+AR = ar
+
+INCDIR = ../include
+BINDIR = output
+
+#####################
+# Compilation Flags #
+#####################
+
+ASFLAGS =
+LDFLAGS = -s
+
+# Generic  MacOS X (G3 and up)
+#CCFLAGS = -mcpu=750 -O4 -D_DARWIN_ -Wall -fomit-frame-pointer -ffast-math
+
+# MacOS X (G4 7450 and up)
+#CCFLAGS = -mcpu=7450 -maltivec -O4 -D_DARWIN_ -Wall -fomit-frame-pointer -ffast-math
+
+# Generic X86 (586 and up)
+CCFLAGS = -mcpu=pentium -O4 -Wall -fomit-frame-pointer -ffast-math
+
+# Athlon-XP
+#CCFLAGS = -mcpu=athlon-xp -O4 -Wall -fomit-frame-pointer -ffast-math
+
+ARFLAGS = cr

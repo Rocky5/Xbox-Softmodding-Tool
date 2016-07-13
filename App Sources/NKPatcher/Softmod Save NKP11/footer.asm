@@ -1,0 +1,7 @@
+	align 16
+
+EOC:
+TLS:
+TIMES 0x18 DB 0x0
+
+EOF:

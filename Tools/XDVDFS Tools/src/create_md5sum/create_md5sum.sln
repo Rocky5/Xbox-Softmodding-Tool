@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "create_md5sum", "create_md5sum.vcproj", "{4D55673A-42A3-4AEE-BDC0-B6AF7ABC50DD}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{4D55673A-42A3-4AEE-BDC0-B6AF7ABC50DD}.Debug.ActiveCfg = Debug|Win32
+		{4D55673A-42A3-4AEE-BDC0-B6AF7ABC50DD}.Debug.Build.0 = Debug|Win32
+		{4D55673A-42A3-4AEE-BDC0-B6AF7ABC50DD}.Release.ActiveCfg = Release|Win32
+		{4D55673A-42A3-4AEE-BDC0-B6AF7ABC50DD}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal
