@@ -66,7 +66,7 @@
 			Avalaunch
 			EvolutionX
 			UnleashX
-			XBMC 3.5.2
+			XBMC 3.5.3
 			XBMC4Kids
 			
 		***
