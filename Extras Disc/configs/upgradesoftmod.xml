@@ -61,7 +61,7 @@
 				<list>
 					<Item Action="AskUser" Arg1="Regions" arg2="What region of Splinter Cell do you own? \n\nIf you don't own the game that's OK just select the region your Xbox is from."/>
 					<Item Action="Delete" arg1="E:\UDATA\5553000c">Delete SC</Item>
-					<Item Action="Copy" arg1="Y:\Softmod Files\SC-PAL\5553000c\" arg2="E:\UDATA\5553000c\">Copy SC save PAL</Item>
+					<Item Action="Copy" arg1="Softmod Files\SC-PAL\5553000c\" arg2="E:\UDATA\5553000c\">Copy SC save PAL</Item>
 				</list>
 				<!-- Formating C & Y to install the Softmod files -->
 				<Item Action="Format" arg1="Y">Format Y:\</Item>
