@@ -211,6 +211,7 @@
 				Name="VCPreLinkEventTool"/>
 			<Tool
 				Name="XboxDeploymentTool"
+				ExcludedFromBuild="TRUE"
 				RemotePath="xe:\$(SolutionName)\$(TargetName).xbe"
 				Progress="TRUE"/>
 			<Tool
