@@ -40,7 +40,7 @@
 			(For the dashboard xbe & the disc xbe)
 		30)	Added version number to the installer & rescudash skins.
 		31) Now you can resoftmod your Xbox from the Xbox, even if you have formatted the ShadowC & E partition.
-		32) 
+		32) Added background music.
 		**)	Other improvements to the backend of the softmod, as well as fixes & stuff I have probably forgot.
 
 	Extras Disc vRC3:

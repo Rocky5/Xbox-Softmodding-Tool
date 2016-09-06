@@ -33,10 +33,22 @@
 			<AllowAnon>No</AllowAnon>
 		</FTP>
 		<Audio>
-			<EnableSoundEffect>No</EnableSoundEffect>
+			<EnableSoundEffect>Yes</EnableSoundEffect>
+			<Ambient>D:\skins\skin files\music\background.wav</Ambient>
+			<SoundVolume>80</SoundVolume>
+			<Scroll>dummy.wav</Scroll>
+			<Select>dummy.wav</Select>
+			<Action_Complete>dummy.wav</Action_Complete>
+			<Keyboard_Stroke>dummy.wav</Keyboard_Stroke>
+			<Back>dummy.wav</Back>
+			<Menu_Up>dummy.wav</Menu_Up>
+			<Menu_Down>dummy.wav</Menu_Down>
+			<Game_Save_Select>dummy.wav</Game_Save_Select>
+			<Memory_Slot>dummy.wav</Memory_Slot>
 		</Audio>
 		<Shortcut>
 			<GP_BLACK>D:\Applications\Enigmah-X\default.xbe</GP_BLACK>
+			<GP_WHITE>D:\no sc disc\disable.xbe</GP_WHITE>
 		</Shortcut>
 		<LED>
 			<Default>Orange</Default>

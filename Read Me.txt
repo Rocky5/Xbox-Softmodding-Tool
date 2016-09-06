@@ -143,10 +143,9 @@
 			M8+ bios
 		UnleashX:
 			James for such an amazing dashboard, without his work on UnleashX there would be no Softmod installers as we know it.
-		SPPV:
-			For uploading the NKP11.u04 Source.
-			http://www.emuxtras.net/forum/viewtopic.php?f=193&t=2212&p=46574&hilit=nkp11.u04#p46574
 		The original XBMC team
 			For XBMC Shortcut XBE Source
 		MS Source leak:
 			& without this person we wouldn't have the bios files or NKPatchers we have today.
+		Background Music
+			http://www.dl-sounds.com/royalty-free/house-loop-2016/
