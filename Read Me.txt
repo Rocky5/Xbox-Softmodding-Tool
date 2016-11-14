@@ -1,5 +1,5 @@
 
-	Read Me - 2016 Softmodding Tool vRC3 Created by Rocky5
+	Read Me - 2016 Softmodding Tool v1 Pre Release Created by Rocky5
 
 
 	Main Features:
@@ -89,7 +89,7 @@
 			FIFA 07 - real gameplay mod
 			Operation Flashpoint Elite - Addons
 			Richard Burns Rally - Textures & realistic damage & physics.
-			WWE Wrestlemania XXI - CrazyChris ModPack v1, crap-loads of changes.
+			WWE Wrestlemania XXI - CrazyChris ModPack v1 Pre Release, crap-loads of changes.
 			
 		*****
 			C:\XBMC\default.xbe

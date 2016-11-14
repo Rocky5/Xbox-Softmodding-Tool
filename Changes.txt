@@ -1,10 +1,10 @@
 
-	Read Me - 2016 Softmodding Tool vRC3 Created by Rocky5
+	Read Me - 2016 Softmodding Tool v1 Pre Release Created by Rocky5
 
 
 	Changes from 2014 Softmod Kit:
 
-	Softmod vRC3:
+	Softmod v1 Pre Release:
 		1)	Now set the correct Kernel font for the Xbox during the softmod. Full proof now, its all automated.
 		2)	Changed the ShadowC partition to a partition number XBMC or other Dashboards cant see or access.
 		3)	Updated Dashloader to reflect the above changes.
@@ -41,12 +41,13 @@
 		30)	Added version number to the installer & rescudash skins.
 		31) Now you can resoftmod your Xbox from the Xbox, even if you have formatted the ShadowC & E partition.
 		32) Added background music.
+		33) Added new menu items to NKPatcher Settings for installing the Kernel font for your Xbox. ( I no longer do it when softmodding, check the github commit log for more info )
 		**)	Other improvements to the backend of the softmod, as well as fixes & stuff I have probably forgot.
 
-	Extras Disc vRC3:
+	Extras Disc v1 Pre Release:
 		1)	Updated XBMC v3.5 to XBMC v3.5.3.
 		2)	NKPatcher settings menu rearranged & improved.
-		3)	Added the changed from Softmod vRC3, for the update/upgrade Softmod menu.
+		3)	Added the changed from Softmod v1 Pre Release, for the update/upgrade Softmod menu.
 		4)	Fixed Xored Mini not installing to the Xbox HDD.
 		5)	Changed how I install the MS Dashboards & made it so they appear in the Applications menu.
 		6)	Added my custom Configmagic EEPROM Backup Tool.

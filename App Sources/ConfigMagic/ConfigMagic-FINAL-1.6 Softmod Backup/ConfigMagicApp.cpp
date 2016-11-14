@@ -55,6 +55,8 @@
 #define Reboot_File "D:\\Reboot.enabled"
 #define Override_File "D:\\Standalone_Mode.enabled"
 #define Backup "E:\\Prep\\done.xbe"
+#define Update_Font "D:\\Update_Font.enabled"
+#define Restore_Font "D:\\Restore_Font.enabled"
 
 //////////////////////////////////////////////////////////////////////
 // Create Directory paths.
@@ -131,7 +133,6 @@ HRESULT ConfigMagicApp::Initialize()
 		CopyFile("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\Skins\\Dashboard\\skin.xml", "C:\\Dashboard\\Skins\\Softmod\\skin.xml", NULL);
 		CopyFile("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\Skins\\Dashboard\\UXSplash.jpg", "C:\\Dashboard\\Skins\\Softmod\\UXSplash.jpg", NULL);
 		XKUtils::XBOXPowerCycle();
-		XKUtils::LaunchXBE(NKPLoader);
 	}
 	else
 	{
@@ -229,18 +230,20 @@ HRESULT ConfigMagicApp::Initialize()
 				remove("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\font\\K.1.0.5530.1.png");
 				remove("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\font\\K.1.0.5713.1.png");
 				remove("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\font\\K.1.0.5838.1.png");
-				CopyFile(tmpFileName, xbox_xtf_File_Path, 1);
-				CopyFile("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\enabled.png", tmpFileName2, 1);
-				CopyFile("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\enabled.png", SecondRun, 1);
+				CopyFile(Generic_Font_File, xbox_xtf_File_Path, 1);
+				CopyFile("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\enabled.png", "E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\font\\generic.png", NULL);
+				CopyFile("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\enabled.png", SecondRun, NULL);
 				XKUtils::LaunchXBE(FirstRunXBE);
-//				XKUtils::XBOXReset();
-				XKUtils::XBOXPowerCycle();
 			}
-				else
+		}
+	else
+		{
+			std::ifstream updaterun(UpdateRunBin);
+			if (updaterun.good())
 			{
-				stream.close();
+				updaterun.close();
 				remove(xbox_xtf_File_Path);
-				remove(FirstRunBin);
+				remove(UpdateRunBin);
 				remove("C:\\NKPatcher\\Configs\\shadowc_off.bin");
 				remove("E:\\Prep\\default.xbe");
 				RemoveDirectory("E:\\Prep");
@@ -255,68 +258,56 @@ HRESULT ConfigMagicApp::Initialize()
 				remove("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\font\\K.1.0.5838.1.png");
 				CopyFile(Generic_Font_File, xbox_xtf_File_Path, 1);
 				CopyFile("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\enabled.png", "E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\font\\generic.png", NULL);
-				CopyFile("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\enabled.png", SecondRun, NULL);
-				XKUtils::LaunchXBE(FirstRunXBE);
-//				XKUtils::XBOXReset();
-				XKUtils::XBOXPowerCycle();
+				XKUtils::LaunchXBE(NKPLoader);
 			}
-		}
-	else
-		{
-			std::ifstream updaterun(UpdateRunBin);
-			if (updaterun.good())
+
+			std::ifstream updatefont(Update_Font);
+			if (updatefont.good())
 			{
-				updaterun.close();
-				std::ifstream updaterun(tmpFileName);
-				if (updaterun.good())
-				{
-					updaterun.close();
-					remove(xbox_xtf_File_Path);
-					remove(UpdateRunBin);
-					remove("C:\\NKPatcher\\Configs\\shadowc_off.bin");
-					remove("E:\\Prep\\default.xbe");
-					RemoveDirectory("E:\\Prep");
-					remove("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\font\\generic.png");
-					remove("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\font\\K.1.0.3944.1.png");
-					remove("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\font\\K.1.0.4034.1.png");
-					remove("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\font\\K.1.0.4627.1.png");
-					remove("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\font\\K.1.0.4817.1.png");
-					remove("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\font\\K.1.0.5101.1.png");
-					remove("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\font\\K.1.0.5530.1.png");
-					remove("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\font\\K.1.0.5713.1.png");
-					remove("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\font\\K.1.0.5838.1.png");
-					CopyFile(tmpFileName, xbox_xtf_File_Path, 1);
-					CopyFile("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\enabled.png", tmpFileName2, NULL);
-					XKUtils::LaunchXBE(NKPLoader);
-	//				XKUtils::XBOXReset();
-				}
-					else
-				{
-					updaterun.close();
-					remove(xbox_xtf_File_Path);
-					remove(UpdateRunBin);
-					remove("C:\\NKPatcher\\Configs\\shadowc_off.bin");
-					remove("E:\\Prep\\default.xbe");
-					RemoveDirectory("E:\\Prep");
-					remove("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\font\\generic.png");
-					remove("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\font\\K.1.0.3944.1.png");
-					remove("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\font\\K.1.0.4034.1.png");
-					remove("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\font\\K.1.0.4627.1.png");
-					remove("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\font\\K.1.0.4817.1.png");
-					remove("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\font\\K.1.0.5101.1.png");
-					remove("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\font\\K.1.0.5530.1.png");
-					remove("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\font\\K.1.0.5713.1.png");
-					remove("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\font\\K.1.0.5838.1.png");
-					CopyFile(Generic_Font_File, xbox_xtf_File_Path, 1);
-					CopyFile("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\enabled.png", "E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\font\\generic.png", NULL);
-					XKUtils::LaunchXBE(NKPLoader);
-	//				XKUtils::XBOXReset();
-					XKUtils::XBOXPowerCycle();
-				}
+				updatefont.close();
+				remove(xbox_xtf_File_Path);
+				remove(Update_Font);
+				remove("C:\\NKPatcher\\Configs\\shadowc_off.bin");
+				remove("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\font\\generic.png");
+				remove("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\font\\K.1.0.3944.1.png");
+				remove("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\font\\K.1.0.4034.1.png");
+				remove("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\font\\K.1.0.4627.1.png");
+				remove("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\font\\K.1.0.4817.1.png");
+				remove("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\font\\K.1.0.5101.1.png");
+				remove("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\font\\K.1.0.5530.1.png");
+				remove("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\font\\K.1.0.5713.1.png");
+				remove("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\font\\K.1.0.5838.1.png");
+				CopyFile(tmpFileName, xbox_xtf_File_Path, 1);
+				CopyFile("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\enabled.png", tmpFileName2, 1);
+				CopyFile("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\enabled.png", SecondRun, 1);
 			}
-		else
+				else
 			{
-				updaterun.close();
+				updatefont.close();
+			}
+				
+			std::ifstream restorefont(Restore_Font);
+			if (restorefont.good())
+			{
+				restorefont.close();
+				remove(xbox_xtf_File_Path);
+				remove(Restore_Font);
+				remove("C:\\NKPatcher\\Configs\\shadowc_off.bin");
+				remove("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\font\\generic.png");
+				remove("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\font\\K.1.0.3944.1.png");
+				remove("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\font\\K.1.0.4034.1.png");
+				remove("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\font\\K.1.0.4627.1.png");
+				remove("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\font\\K.1.0.4817.1.png");
+				remove("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\font\\K.1.0.5101.1.png");
+				remove("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\font\\K.1.0.5530.1.png");
+				remove("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\font\\K.1.0.5713.1.png");
+				remove("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\font\\K.1.0.5838.1.png");
+				CopyFile(Generic_Font_File, xbox_xtf_File_Path, 1);
+				CopyFile("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\enabled.png", "E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\font\\generic.png", NULL);
+			}
+				else
+			{
+				restorefont.close();
 			}
 		}
 	}
