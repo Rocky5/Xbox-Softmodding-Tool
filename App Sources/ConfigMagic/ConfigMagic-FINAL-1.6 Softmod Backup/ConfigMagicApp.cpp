@@ -208,12 +208,9 @@ HRESULT ConfigMagicApp::Initialize()
 		strcat(tmpFileName2, tmpFileStr);
 		strcat(tmpFileName2, ".png");
 		//WriteKERNELInfoFile(tmpFileName);
+		
 		std::ifstream stream(FirstRunBin);
 		if (stream.good())
-		{
-			stream.close();
-			std::ifstream stream(tmpFileName);
-			if (stream.good())
 			{
 				stream.close();
 				remove(xbox_xtf_File_Path);
@@ -235,11 +232,9 @@ HRESULT ConfigMagicApp::Initialize()
 				CopyFile("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\enabled.png", SecondRun, NULL);
 				XKUtils::LaunchXBE(FirstRunXBE);
 			}
-		}
-	else
-		{
-			std::ifstream updaterun(UpdateRunBin);
-			if (updaterun.good())
+		
+		std::ifstream updaterun(UpdateRunBin);
+		if (updaterun.good())
 			{
 				updaterun.close();
 				remove(xbox_xtf_File_Path);
@@ -261,8 +256,8 @@ HRESULT ConfigMagicApp::Initialize()
 				XKUtils::LaunchXBE(NKPLoader);
 			}
 
-			std::ifstream updatefont(Update_Font);
-			if (updatefont.good())
+		std::ifstream updatefont(Update_Font);
+		if (updatefont.good())
 			{
 				updatefont.close();
 				remove(xbox_xtf_File_Path);
@@ -279,15 +274,11 @@ HRESULT ConfigMagicApp::Initialize()
 				remove("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\font\\K.1.0.5838.1.png");
 				CopyFile(tmpFileName, xbox_xtf_File_Path, 1);
 				CopyFile("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\enabled.png", tmpFileName2, 1);
-				CopyFile("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\enabled.png", SecondRun, 1);
+				XKUtils::XBOXRebootToDash();
 			}
-				else
-			{
-				updatefont.close();
-			}
-				
-			std::ifstream restorefont(Restore_Font);
-			if (restorefont.good())
+			
+		std::ifstream restorefont(Restore_Font);
+		if (restorefont.good())
 			{
 				restorefont.close();
 				remove(xbox_xtf_File_Path);
@@ -304,12 +295,8 @@ HRESULT ConfigMagicApp::Initialize()
 				remove("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\font\\K.1.0.5838.1.png");
 				CopyFile(Generic_Font_File, xbox_xtf_File_Path, 1);
 				CopyFile("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\enabled.png", "E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\font\\generic.png", NULL);
+				XKUtils::XBOXRebootToDash();
 			}
-				else
-			{
-				restorefont.close();
-			}
-		}
 	}
 
 	//switch eeprom context Back to previous

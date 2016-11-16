@@ -214,18 +214,20 @@
 					<Item Action="MessageBox" Arg1="Info">In here you can install the correct kernel font for your Xbox, or fix random crashes using the xft font delay.</Item>
 				</List>
 				<Item>------------------------------------------</Item>
-				<List Text="Install Kernel Font" Sort="Off">
+				<List Text="Kernel Font Options" Sort="Off">
 					<List Text="Information" Sort="Off" Batch="True">
-						<Item Action="MessageBox" Arg1="Info">This will install the proper kernel font for your Xbox Kernel. \nPros:\n100% exploit boot compatibility. \n\nCons:\nCannot use this HDD on another kernel version.</Item>
-						<Item Action="MessageBox" Arg1="Info">If you ever want to clone this HDD to another Xbox. Please restore the kernel font first, by selecting the "Restore Font" option. This is only necessary if you have used the "Install Font" option.</Item>
+						<Item Action="MessageBox" Arg1="Info">These options will install the proper kernel font for your Xbox Kernel or restore the generic version.</Item>
+						<Item Action="MessageBox" Arg1="Kernel Specific">Pros:\n100% exploit boot compatibility. \n\nCons:\nCannot use this HDD on another kernel version.</Item>
+						<Item Action="MessageBox" Arg1="Generic">Pros:\nCan be used on any Xbox kernel version. \n\nCons:\nOn rare occasions can crash on or after the XLogo screen.</Item>
+						<Item Action="MessageBox" Arg1="Note">If you ever want to clone this HDD to another Xbox. Please restore the kernel font first, by selecting the "Restore Generic Font" option. This is only necessary if you have used the "Install Kernel Font" option.</Item>
 					</List>
 					<Item>------------------------------------------</Item>
-					<List Text="Install Font" Sort="Off" Batch="True">
+					<List Text="Install Kernel Font" Sort="Off" Batch="True">
 						<Item Action="MessageBox" Arg1="Info">NKPatcher Settings will reload when the process is done. Changes will take effect on next reboot.</Item>
 						<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\savemeta.xbx" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\eeprom backuperer\Update_Font.enabled"/>
 						<Item Action="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\eeprom backuperer\default.xbe">Restart</Item>
 					</List>
-					<List Text="Restore Font" Sort="Off" Batch="True">
+					<List Text="Restore Generic Font" Sort="Off" Batch="True">
 						<Item Action="Copy" arg1="C:\NKPatcher\Configs\Fonts\generic.xtf" arg2="C:\xodash\xbox.xtf"/>
 						<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font"/>
 						<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font\generic.png""/>
@@ -233,7 +235,7 @@
 					</List>
 
 				</List>
-				<List Text="xtf Font delay" Sort="Off">
+				<List Text="XTF Font Delay Options" Sort="Off">
 					<List Text="Information" Sort="Off" Batch="True">
 						<Item Action="MessageBox" Arg1="Information">These are to be used if you are getting random crashes on boot. Start at Fix 1 &amp; then test to see if it's still crashing. If not, you're sorted.</Item>
 						<Item Action="MessageBox" Arg1="Information">If you are still getting crashing after applying Fix 1, then try Fix 2 and test again &amp; if for some strange reason you are still crashing after this, buy a new Xbox.</Item>
