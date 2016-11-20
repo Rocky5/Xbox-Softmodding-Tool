@@ -7,7 +7,7 @@ How to re-enable the softmod.
 --- Copy
 --- Copy
 --- New Soundtrack
---- Enter <<Eggsßox>> (with two '<' Symbols, capital 'E', beta Accent 'ß' and two '>' Symbols)
+--- Enter <<Eggsßox>> ( with two '<' Symbols, capital 'E', beta Accent 'ß' and two '>' Symbols )
 --- Done the MS logo will appear & the MSdash will reload.
 --- Select Music
 --- blank soundtrack

@@ -1,4 +1,4 @@
-# 2016-Softmodding-Tool (Current build RC3)
+# 2016-Softmodding-Tool (Current build v1 Pre Release)
 This is my latest softmod package, has a crap load of improvements since the 2014 version.
 
 \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
@@ -33,7 +33,9 @@ This is my latest softmod package, has a crap load of improvements since the 201
 		Change your fan speed **
 		Change your LED colour **
 		Kernel Fonts
-			> Xbox is Crashing, look here
+			> Advanced Features
+				> Kernel Font Options
+				> XTF Font Delay Options
 		Change partition variations
 		Change video modes
 		Enable/disable virtual EEPROM

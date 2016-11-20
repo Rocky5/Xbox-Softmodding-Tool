@@ -29,7 +29,9 @@
 		Change your fan speed **
 		Change your LED colour **
 		Kernel Fonts
-			> Xbox is Crashing, look here
+			> Advanced Features
+				> Kernel Font Options
+				> XTF Font Delay Options
 		Change partition variations
 		Change video modes
 		Enable/disable virtual EEPROM
@@ -89,7 +91,7 @@
 			FIFA 07 - real gameplay mod
 			Operation Flashpoint Elite - Addons
 			Richard Burns Rally - Textures & realistic damage & physics.
-			WWE Wrestlemania XXI - CrazyChris ModPack v1 Pre Release, crap-loads of changes.
+			WWE Wrestlemania XXI - CrazyChris ModPack v1, crap-loads of changes.
 			
 		*****
 			C:\XBMC\default.xbe
