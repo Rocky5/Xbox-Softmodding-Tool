@@ -41,7 +41,8 @@
 		30)	Added version number to the installer & rescudash skins.
 		31) Now you can resoftmod your Xbox from the Xbox, even if you have formatted the ShadowC & E partition.
 		32) Added background music.
-		33) Added new menu items to NKPatcher Settings for installing the Kernel font for your Xbox. ( I no longer do it when softmodding, check the github commit log for more info )
+		33) Added new menu items to NKPatcher Settings for installing the Kernel font for your Xbox.
+			( I no longer do it when softmodding, check the github commit log for more info )
 		**)	Other improvements to the backend of the softmod, as well as fixes & stuff I have probably forgot.
 
 	Extras Disc v1 Pre Release:
