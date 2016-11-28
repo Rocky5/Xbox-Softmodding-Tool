@@ -715,7 +715,7 @@
 					<Item>------------------------------------------</Item>
 
 					<List Text="E:\Applications\" Sort="Off" Batch="True">
-						<Item Action="AskUser" arg1="Continue" arg2="This will install Chimp 261812 to E:\Applications\Chimp\ if there is currently a application residing there it will be overwritten & linuxboot.cfg to E:\."/>
+						<Item Action="AskUser" arg1="Continue" arg2="This will install Chimp 261812 to E:\Applications\Chimp\ if there is currently a application residing there it will be overwritten."/>
 						<Item Action="Copy" arg1="dummy" arg2="E:\Applications\Chimp"/>
 						<Item Action="Delete" arg1="E:\Applications\Chimp">Remove old E:\Applications\Chimp\</Item>
 						<Item Action="Unzip" arg1="D:\Applications\Chimp261812.zip" arg2="E:\">Installing app to E:\Applications\Chimp\</Item>
