@@ -14,6 +14,7 @@ Call "Build XISO.bat"
 Copy "Changes.txt" "..\Release\"
 Copy "Read Me.txt" "..\Release\"
 Copy "UDDAE Instructions.txt" "..\Release\"
+Copy "Run XISO from HDD.txt" "..\Release\"
 Copy "Tools\thumb.jpg" "..\Release\"
 Move "*.iso" "..\Release\"
 Move "*.zip" "..\Release\"
@@ -29,4 +30,10 @@ RD /q /s "XBHDM Build\linux\E\Prep\Softmod Files"
 
 Move "*.zip" "..\..\Release\"
 
-Explorer "..\..\Release\"
+CD "Attacher, Detacher"
+"%Winrar%" a -x*.db -afzip "Extras Disc Attacher" "2016 Softmodding Tool Extras Disc"
+"%Winrar%" a -x*.db -afzip "Extras Disc Attacher" "Detacher"
+
+Move "*.zip" "..\..\..\Release\"
+
+Explorer "..\..\..\Release\"
