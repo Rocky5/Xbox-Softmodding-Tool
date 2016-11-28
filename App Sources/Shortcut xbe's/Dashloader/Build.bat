@@ -16,7 +16,7 @@ IF NOT EXIST %NET% (
 )
 
 SET XBE_PATCH="..\..\..\tools\xbepatch.exe"
-SET XBE=Default.xbe
+SET XBE=default.xbe
 SET DEST=Build
 RMDIR %DEST% /S /Q 2>NUL
 MKDIR %DEST%

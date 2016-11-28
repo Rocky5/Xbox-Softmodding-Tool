@@ -82,162 +82,113 @@ void debuglog(const char* format, ...)
 #endif
 }
 
-
 void ErrorHandler(char *xbepath)
 {
     if (xbepath && 0 != strcmpi("", xbepath))
     {
-      debuglog("Loading Prep Dashboard - E:\\Prep\\Default.xbe");
-      XLaunchXBE("E:\\Prep\\Default.xbe");
-      debuglog("Dashboard doesn't Exist");
-	  debuglog("");
-    }
-	
-	
-    if (xbepath && 0 != strcmpi("", xbepath))
-    {
-      debuglog("------------------------------------------------");
-      debuglog("ShadowC Partition Integrity Check");
-      debuglog("------------------------------------------------");
-      debuglog("Checking ShadowC image integrity");
-      XLaunchXBE("C:\\nkpatcher\\rescuedash\\default.xbe");
-      debuglog("ShadowC image is loaded");
-      debuglog("");
-    }
-	
-    if (xbepath && 0 != strcmpi("", xbepath))
-    {
-      debuglog("------------------------------------------------");
-      debuglog("Dashboard Locations");
-      debuglog("------------------------------------------------");
-      debuglog("");
-      debuglog("Loading C:\\XBMC\\Default.xbe");
-      XLaunchXBE("C:\\XBMC\\Default.xbe");
-      debuglog("Dashboard doesn't Exist");
-      debuglog("");
-    }
-	
-    if (xbepath && 0 != strcmpi("", xbepath))
-    {
-      debuglog("Loading E:\\XBMC\\Default.xbe");
-      XLaunchXBE("E:\\XBMC\\Default.xbe");
-      debuglog("Dashboard doesn't Exist");
-      debuglog("");
-    }
-	
-    if (xbepath && 0 != strcmpi("", xbepath))
-    {
-      debuglog("Loading C:\\Dashboard\\Default.xbe");
-      XLaunchXBE("C:\\Dashboard\\Default.xbe");
-      debuglog("Dashboard doesn't Exist");
-      debuglog("");
-    }
-	
-    if (xbepath && 0 != strcmpi("", xbepath))
-    {
-      debuglog("Loading E:\\Dashboard\\Default.xbe");
-      XLaunchXBE("E:\\Dashboard\\Default.xbe");
-      debuglog("Dashboard doesn't Exist");
-      debuglog("");
-    }
-	
-    if (xbepath && 0 != strcmpi("", xbepath))
-    {
-      debuglog("Loading C:\\Dash\\Default.xbe");
-      XLaunchXBE("C:\\Dash\\Default.xbe");
-      debuglog("Dashboard doesn't Exist");
-      debuglog("");
-    }
-	
-    if (xbepath && 0 != strcmpi("", xbepath))
-    {
-      debuglog("Loading E:\\Dash\\Default.xbe");
-      XLaunchXBE("E:\\Dash\\Default.xbe");
-      debuglog("Dashboard doesn't Exist");
-      debuglog("");
-    }
-	
-    if (xbepath && 0 != strcmpi("", xbepath))
-    {
-      debuglog("Loading E:\\Default.xbe");
-      XLaunchXBE("E:\\Default.xbe");
-      debuglog("Dashboard doesn't Exist");
-      debuglog("");
-    }
-	
-    if (xbepath && 0 != strcmpi("", xbepath))
-    {
-      debuglog("Loading E:\\Dashboard.xbe");
-      XLaunchXBE("E:\\Dashboard.xbe");
-      debuglog("Dashboard doesn't Exist");
-      debuglog("");
-    }
-	
-    if (xbepath && 0 != strcmpi("", xbepath))
-    {
-      debuglog("Loading C:\\Evoxdash.xbe");
-      XLaunchXBE("C:\\Evoxdash.xbe");
-      debuglog("Dashboard doesn't Exist");
-      debuglog("");
-    }
-	
-    if (xbepath && 0 != strcmpi("", xbepath))
-    {
-      debuglog("Loading E:\\Evoxdash.xbe");
-      XLaunchXBE("E:\\Evoxdash.xbe");
-      debuglog("Dashboard doesn't Exist");
-      debuglog("");
-    }
-	
-    if (xbepath && 0 != strcmpi("", xbepath))
-    {
-      debuglog("Loading C:\\XBMC.xbe");
-      XLaunchXBE("C:\\XBMC.xbe");
-      debuglog("Dashboard doesn't Exist");
-      debuglog("");
-    }
-	
-    if (xbepath && 0 != strcmpi("", xbepath))
-    {
-      debuglog("Loading E:\\XBMC.xbe");
-      XLaunchXBE("E:\\XBMC.xbe");
-      debuglog("Dashboard doesn't Exist");
-      debuglog("");
-    }
-	
-    if (xbepath && 0 != strcmpi("", xbepath))
-    {
-      debuglog("------------------------------------------------");
-      debuglog("Rescue Dashboard Locations");
-      debuglog("------------------------------------------------");
-      debuglog("");
-      debuglog("Loading Rescue Dashboard TDATA");
-      XLaunchXBE("E:\\TDATA\\Rescuedash\\Default.xbe");
-      debuglog("Rescue Dashboard doesn't Exist");
-      debuglog("");
-    }
-    
-    if (xbepath && 0 != strcmpi("", xbepath))
-    {
-      debuglog("Loading Rescue Dashboard UDATA");
-      XLaunchXBE("E:\\UDATA\\Rescuedash\\Default.xbe");
-      debuglog("RescueDashboard doesn't Exist");
-      debuglog("");
-    }
- 
-    if (xbepath && 0 != strcmpi("", xbepath))
-    {
-      debuglog("Loading Shadowc rescue Dashboard");
-      XLaunchXBE("R:\\NKPatcher\\Rescuedash\\Default.xbe");
-      debuglog("Rescue Dashboard doesn't Exist");
-      debuglog("");
-    }
-
-	debuglog("");
-    debuglog("------------------------------------------------");
-    debuglog("All failed :( - trying to reboot");
-    debuglog("------------------------------------------------");
-    XReboot();
+		debuglog("Loading Prep Dashboard - E:\\Prep\\Default.xbe");
+		XLaunchXBE("E:\\Prep\\Default.xbe");
+		debuglog("Dashboard doesn't Exist\n");
+		/*
+		*/
+		debuglog("------------------------------------------------");
+		debuglog("ShadowC Partition Integrity Check");
+		debuglog("------------------------------------------------");
+		debuglog("Checking ShadowC image integrity");
+		XLaunchXBE("C:\\nkpatcher\\rescuedash\\default.xbe");
+		debuglog("ShadowC image is loaded\n");
+		/*
+		*/
+		debuglog("------------------------------------------------");
+		debuglog("Dashboard Locations");
+		debuglog("------------------------------------------------\n");
+		/*
+		*/
+		debuglog("Loading C:\\XBMC\\Default.xbe");
+		XLaunchXBE("C:\\XBMC\\Default.xbe");
+		debuglog("Dashboard doesn't Exist\n");
+		/*
+		*/
+		debuglog("Loading E:\\XBMC\\Default.xbe");
+		XLaunchXBE("E:\\XBMC\\Default.xbe");
+		debuglog("Dashboard doesn't Exist\n");
+		/*
+		*/
+		debuglog("Loading C:\\Dashboard\\Default.xbe");
+		XLaunchXBE("C:\\Dashboard\\Default.xbe");
+		debuglog("Dashboard doesn't Exist\n");
+		/*
+		*/
+		debuglog("Loading E:\\Dashboard\\Default.xbe");
+		XLaunchXBE("E:\\Dashboard\\Default.xbe");
+		debuglog("Dashboard doesn't Exist\n");
+		/*
+		*/
+		debuglog("Loading C:\\Dash\\Default.xbe");
+		XLaunchXBE("C:\\Dash\\Default.xbe");
+		debuglog("Dashboard doesn't Exist\n");
+		/*
+		*/
+		debuglog("Loading E:\\Dash\\Default.xbe");
+		XLaunchXBE("E:\\Dash\\Default.xbe");
+		debuglog("Dashboard doesn't Exist\n");
+		/*
+		*/
+		debuglog("Loading E:\\Default.xbe");
+		XLaunchXBE("E:\\Default.xbe");
+		debuglog("Dashboard doesn't Exist\n");
+		/*
+		*/
+		debuglog("Loading E:\\Dashboard.xbe");
+		XLaunchXBE("E:\\Dashboard.xbe");
+		debuglog("Dashboard doesn't Exist\n");
+		/*
+		*/
+		debuglog("Loading C:\\Evoxdash.xbe");
+		XLaunchXBE("C:\\Evoxdash.xbe");
+		debuglog("Dashboard doesn't Exist\n");
+		/*
+		*/
+		debuglog("Loading E:\\Evoxdash.xbe");
+		XLaunchXBE("E:\\Evoxdash.xbe");
+		debuglog("Dashboard doesn't Exist\n");
+		/*
+		*/
+		debuglog("Loading C:\\XBMC.xbe");
+		XLaunchXBE("C:\\XBMC.xbe");
+		debuglog("Dashboard doesn't Exist\n");
+		/*
+		*/
+		debuglog("Loading E:\\XBMC.xbe");
+		XLaunchXBE("E:\\XBMC.xbe");
+		debuglog("Dashboard doesn't Exist\n");
+		/*
+		*/
+		debuglog("------------------------------------------------");
+		debuglog("Rescue Dashboard Locations");
+		debuglog("------------------------------------------------");
+		/*
+		*/
+		debuglog("Loading Rescue Dashboard TDATA");
+		XLaunchXBE("E:\\TDATA\\Rescuedash\\Default.xbe");
+		debuglog("Rescue Dashboard doesn't Exist\n");
+		/*
+		*/
+		debuglog("Loading Rescue Dashboard UDATA");
+		XLaunchXBE("E:\\UDATA\\Rescuedash\\Default.xbe");
+		debuglog("RescueDashboard doesn't Exist\n");
+		/*
+		*/
+		debuglog("Loading Shadowc rescue Dashboard");
+		XLaunchXBE("R:\\NKPatcher\\Rescuedash\\Default.xbe");
+		debuglog("Rescue Dashboard doesn't Exist\n");
+		/*
+		*/
+		debuglog("------------------------------------------------");
+		debuglog("All failed :( - trying to reboot");
+		debuglog("------------------------------------------------");
+		XReboot();
+	}
 }
 
 int LaunchShortcut(char* filename)
@@ -279,15 +230,12 @@ int LaunchShortcut(char* filename)
   target[length] = '\0';
 
   /* launching xbe */
-  debuglog("");
   debuglog("------------------------------------------------");
   debuglog("Other XBE's");
-  debuglog("------------------------------------------------");
-  debuglog("");
+  debuglog("------------------------------------------------\n");
   debuglog("Loading Custom Dashboard - %s", target);
   XLaunchXBE(target);
-  debuglog("Custom Dashboard doesn't exist");
-  debuglog("");
+  debuglog("Custom Dashboard doesn't exist\n");
 
   /* if we get here something went wrong */
   return -1;
@@ -342,7 +290,7 @@ void XBoxStartup()
   temp[2] = 'f';
   temp[3] = 'g';
 
-  debuglog("Dashloader Build 0.8");
+  debuglog("Dashloader Build 0.9");
   //debuglog("INFO - Mounting D: to %s", devicepath);
 
   /* make sure D: is mounted to the launch location */
