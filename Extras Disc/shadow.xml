@@ -393,65 +393,8 @@
 			<!-- ------------------------------------ -->
 
 			<List Text="Kernel Fonts" Sort="Off">
-				<List Text="Information" Sort="Off" Batch="True">
-					<Item Action="MessageBox" Arg1="Info">This menu displays what Xbox Kernel Font is enabled. This process is automated &amp; is done when the softmod is installed.</Item>
-				</List>
-				<Item>------------------------------------------</Item>
-				<List Text="Generic" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font\generic.png"/>
-				<List Text="K:1.0.3944.1" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font\K.1.0.3944.1.png"/>
-				<List Text="K:1.0.4034.1" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font\K.1.0.4034.1.png"/>
-				<List Text="K:1.0.4627.1" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font\K.1.0.4627.1.png"/>
-				<List Text="K:1.0.4817.1" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font\K.1.0.4817.1.png"/>
-				<List Text="K:1.0.5101.1" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font\K.1.0.5101.1.png"/>
-				<List Text="K:1.0.5530.1" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font\K.1.0.5530.1.png"/>
-				<List Text="K:1.0.5713.1" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font\K.1.0.5713.1.png"/>
-				<List Text="K:1.0.5838.1" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font\K.1.0.5838.1.png"/>
-				<Item>------------------------------------------</Item>
-				<List Text="Xbox is Crashing, look here." Sort="Off">
-					<List Text="Information" Sort="Off" Batch="True">
-						<Item Action="MessageBox" Arg1="Information">These are to be used if you are getting random crashes on boot. Start at Fix 1 &amp; then test to see if it's still crashing. If not, you're sorted.</Item>
-						<Item Action="MessageBox" Arg1="Information">If you are still getting crashing after applying Fix 1, then try Fix 2 and test again &amp; if for some strange reason you are still crashing, try Fix 3. If its still crashing after this, buy a new Xbox.</Item>
-					</List>
-					<Item>------------------------------------------</Item>
-					<List Text="Remove" Sort="Off" Batch="True">
-						<Item Action="Copy" arg1="dummy" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font-Sxtf"/>
-						<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font-Sxtf"/>
-						<Item Action="Copy" arg1="dummy" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font-Sxtf"/>
-						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\s.xtf"/>
-						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\s2.xtf"/>
-						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\s3.xtf"/>
-						<Item Action="Delete" arg1="C:\xodash\s.xtf"/>
-						<Item Action="Delete" arg1="C:\xodash\s2.xtf"/>
-						<Item Action="Delete" arg1="C:\xodash\s3.xtf"/>
-						<Item Action="MessageBox" Arg1="Complete">Setting saved. \nChanges will take affect on next boot.</Item>
-					</List>
-					<List Text="Fix 1" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font-Sxtf\Sxtf-1.png">
-						<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font-Sxtf"/>
-						<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font-Sxtf\Sxtf-1.png"/>
-						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\s.xtf"/>
-						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\s2.xtf"/>
-						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\s3.xtf"/>
-						<Item Action="Delete" arg1="C:\xodash\s2.xtf"/>
-						<Item Action="Delete" arg1="C:\xodash\s3.xtf"/>
-						<Item Action="MessageBox" Arg1="Complete">Setting saved. \nChanges will take affect on next boot.</Item>
-					</List>
-					<List Text="Fix 2" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font-Sxtf\Sxtf-2.png">
-						<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font-Sxtf"/>
-						<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font-Sxtf\Sxtf-2.png"/>
-						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\s.xtf"/>
-						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\s2.xtf"/>
-						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\s3.xtf"/>
-						<Item Action="Delete" arg1="C:\xodash\s3.xtf"/>
-						<Item Action="MessageBox" Arg1="Complete">Setting saved. \nChanges will take affect on next boot.</Item>
-					</List>
-					<List Text="Fix 3" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font-Sxtf\Sxtf-3.png">
-						<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font-Sxtf"/>
-						<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font-Sxtf\Sxtf-3.png"/>
-						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\s.xtf"/>
-						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\s2.xtf"/>
-						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\s3.xtf"/>
-						<Item Action="MessageBox" Arg1="Complete">Setting saved. \nChanges will take affect on next boot.</Item>
-					</List>
+				<List Text="Why Empty?" Sort="Off" Batch="True">
+					<Item Action="MessageBox" arg1="">These options must be used via the HDD version of NKPatcher Settings. Run NKPatcher Settings from your dashboard applications menu.</Item>
 				</List>
 			</List>
 
