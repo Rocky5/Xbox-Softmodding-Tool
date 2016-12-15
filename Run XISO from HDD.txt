@@ -2,7 +2,3 @@ OK if you don't want to burn a disc or you don't have any. You can run the "2016
 
 
 You will need to download the "Extras Disc Attacher.zip" and place the "2016 Softmodding Tool Extras Disc.iso" inside the "2016 Softmodding Tool Extras Disc" folder next to the default.xbe, there is also a detacher folder that is used to remove the image from the D drive after use, you just can stick both of these folders in you Applications or Apps folder. Alternatively you can do a full reboot of the Xbox.
-
-
-
-Please note the "Disable ShadowC" feature will not work when run from the HDD, it will take you to the recovery menu, if you do get to this menu please reboot your Xbox.

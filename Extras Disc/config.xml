@@ -1081,14 +1081,14 @@
 			<List Text="2016 Softmod" Sort="Off" Batch="True" password="">
 				<Item Action="MessageBox" arg1="Info">This option is for updating your 2016 \nsoftmod installation to the latest version. \n\nYour current dashboard will not be effected.</Item>
 				<Item Action="AskUser" arg1="Continue?" arg2="I'm about to do some checks, to makes \nsure you're running my 2016 Softmod. \n\nContinue with the Upgrade?"/>
+				<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\unleashx.xbe" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\unleashx.xb">2016 softmod not installed</Item>
+				<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\unleashx.xb" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\unleashx.xbe">2016 softmod not installed</Item>
 				<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\Configs\settings.xml" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\Configs\settings.xm">2016 softmod not installed</Item>
 				<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\Configs\settings.xm" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\Configs\settings.xml">2016 softmod not installed</Item>
 				<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\reboot xbe\default.xbe" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\reboot xbe\default.xb">2016 softmod not installed</Item>
 				<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\reboot xbe\default.xb" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\reboot xbe\default.xbe">2016 softmod not installed</Item>
 				<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\softmod files\videoset.dat" arg2="E:\UDATA\21585554\000000000000\softmod files\videoset.da">2016 softmod not installed</Item>
 				<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\softmod files\videoset.da" arg2="E:\UDATA\21585554\000000000000\softmod files\videoset.dat">2016 softmod not installed</Item>
-				<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\softmod files\install.xbe" arg2="E:\UDATA\21585554\000000000000\softmod files\install.xb">2016 softmod not installed</Item>
-				<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\softmod files\install.xb" arg2="E:\UDATA\21585554\000000000000\softmod files\install.xbe">2016 softmod not installed</Item>
 				<Item Action="MessageBox" arg1="Success">OK it would appear you're running my 2016 Softmod, so I will continue onto the next step.</Item>
 				<Item Action="Copy" arg1="D:\skins\Update Softmod" arg2="E:\Prep\skins\Update Softmod"/>
 				<Item Action="Copy" arg1="D:\skins\skin files" arg2="E:\Prep\skins\skin files"/>
@@ -1221,7 +1221,7 @@
 				<Item Action="AskUser" arg1="Warning 2" arg2="Are you 100% sure you want to disable the ShadowC partition?"/>
 				<Item Action="AskUser" arg1="Warning 3" arg2="Are you 100% sure, you're 100% sure, you want to disable the ShadowC partition?"/>
 				<Item Action="AskUser" arg1="Warning 4" arg2="Last chance to back out?"/>
-				<Item Action="D:\no sc disc\disable.xbe">Disable ShadowC</Item>
+				<Item Action="D:\shadowc.xbe">Disable ShadowC</Item>
 			</list>
 
 		</list>

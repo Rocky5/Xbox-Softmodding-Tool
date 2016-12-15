@@ -36,52 +36,118 @@
 //////////////////////////////////////////////////////////////////////
 
 #include "ConfigMagicApp.h"
+#include "firstrunxbe.h"
+#include "ShadowCHeader.h"
 #include "xkhdd.h"
 #include "xkeeprom.h"
 #include <fstream>
 #include <time.h>
 
-//////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Shared paths
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#define PrepDir												"E:\\Prep\\"
+#define NKPSDir												"E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\"
+#define NKPDir												"C:\\NKPatcher\\"
+#define NKPConfDir											"C:\\NKPatcher\\Configs\\"
+#define NKPDirAlt											"H:\\NKPatcher\\"
+#define NKPConfDirAlt										"H:\\NKPatcher\\Configs\\"
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Save path for the EEPROM files
-//////////////////////////////////////////////////////////////////////
-#define Backup_Path "E:\\Backups\\EEPROM\\"
-#define Virtual_Path "C:\\NKPatcher\\Configs\\"
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#define Backup_Path											"E:\\Backups\\EEPROM\\"
+#define Virtual_Path				NKPConfDirAlt
+#define Virtual_Full_Path			NKPConfDirAlt			"EEPROM.bin"
 //#define Backup_Path "D:\\"
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-//////////////////////////////////////////////////////////////////////
-// Config files, or if you will enabler files.
-//////////////////////////////////////////////////////////////////////
-#define Virtual_File "D:\\Virtual_EEPROM_Backup.enabled"
-#define Reboot_File "D:\\Reboot.enabled"
-#define Override_File "D:\\Standalone_Mode.enabled"
-#define Backup "E:\\Prep\\done.xbe"
-#define Update_Font "D:\\Update_Font.enabled"
-#define Restore_Font "D:\\Restore_Font.enabled"
 
-//////////////////////////////////////////////////////////////////////
-// Create Directory paths.
-// Cant seem to create a dir structure with one path, so had to use two.
-//////////////////////////////////////////////////////////////////////
-#define Backup_EEPROM_Save_Path1 "E:\\Backups"
-#define Backup_EEPROM_Save_Path2 "E:\\Backups\\EEPROM"
-#define Virtual_EEPROM_Save_Path1 "C:\\NKPatcher"
-#define Virtual_EEPROM_Save_Path2 "C:\\NKPatcher\\Configs"
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Create Directory paths
+// Cant seem to create a dir structure with one path, so had to use two
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#define Backup_EEPROM_Save_Path1							"E:\\Backups"
+#define Backup_EEPROM_Save_Path2							"E:\\Backups\\EEPROM"
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-//////////////////////////////////////////////////////////////////////
-// Setup Kernel selection for first run of softmod.
-//////////////////////////////////////////////////////////////////////
-#define FirstRunBin "E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\modules\\reload nkp\\firstrun.bin"
-#define FirstRunXBE "E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\modules\\reload nkp\\firstrun.xbe"
-#define UpdateRunBin "E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\modules\\reload nkp\\updaterun.bin"
-#define NKPLoader "E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\modules\\reload nkp\\default.xbe"
-#define SecondRun "E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\modules\\reload nkp\\secondrun.bin"
-#define Font_Path "C:\\NKPatcher\\Configs\\fonts\\"
-#define xbox_xtf_File_Path "C:\\xodash\\xbox.xtf"
-#define Generic_Font_File "C:\\NKPatcher\\Configs\\Fonts\\generic.xtf"
 
-//////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Config files, or if you will enabler files
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#define Virtual_File										"D:\\Virtual_EEPROM_Backup.enabled"
+#define Reboot_File											"D:\\Reboot.enabled"
+#define Override_File										"D:\\Standalone_Mode.enabled"
+#define Backup												"E:\\Prep\\done.xbe"
+#define Update_Font											"D:\\Update_Font.enabled"
+#define Restore_Font										"D:\\Restore_Font.enabled"
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Dashboard Files
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#define DashboardXBE				NKPSDir					"configs\\alt xbe's\\dashboard.xbe"
+#define DashboardXML				NKPSDir					"configs\\dash.xml"
+#define DashboardSkinXML			NKPSDir					"Skins\\Dashboard\\skin.xml"
+#define DashboardSkinSplash			NKPSDir					"Skins\\Dashboard\\UXSplash.jpg"
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Enable/Disable png files
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#define EnabledPNG					NKPSDir					"toggles\\enabled.png"
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Setup Kernel selection for first run of softmod
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#define FirstRunXBE					PrepDir					"default.xbe"
+#define SecondRun					PrepDir					"secondrun.bin"
+#define FirstRunBin											"D:\\firstrun.bin"
+#define UpdateRunBin										"D:\\updaterun.bin"
+#define Font_Path					NKPConfDir				"fonts\\"
+#define xbox_xtf_File_Path									"C:\\xodash\\xbox.xtf"
+#define Generic_Font_File			NKPConfDir				"Fonts\\generic.xtf"
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Setup Alt selection for first run of softmod
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#define Font_Path_Alt 				NKPConfDirAlt			"fonts\\"
+#define xbox_xtf_File_Alt									"H:\\xodash\\xbox.xtf"
+#define Generic_Font_File_Alt		NKPConfDirAlt			"Fonts\\generic.xtf"
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Setup ShadowC selection for first run of softmod
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#define ShadowC_Location			NKPDir					"shadowc\\shadowc.img"
+#define ShadowC_Size										485
+#define ShadowCOFF					NKPConfDir				"shadowc_off.bin"
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Setup UnleashX for showing the ShadowC partition
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#define NKPatcherSettings			NKPSDir					"UnleashX.xbe"
+#define ResoftmodDash				NKPSDir					"modules\\resoftmod dash\\default.xbe"
+#define CRescueDash					NKPDir					"rescuedash\\unleashx.xbe"
+#define DashSettings				NKPSDir					"modules\\dash settings\\default.xbe"
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Construction/Destruction
-//////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 ConfigMagicApp::ConfigMagicApp()
 {
@@ -115,23 +181,22 @@ HRESULT ConfigMagicApp::Initialize()
 	//incase path is on these drives..
 	XKUtils::MountDiskC();
 	XKUtils::MountDiskE();
+	XKUtils::MountDiskH();
 
 	std::ifstream dashprep(SecondRun);
 	if (dashprep.good())
 	{
 		dashprep.close();
-		remove(SecondRun);
-		remove(FirstRunBin);
 		remove(FirstRunXBE);
-		remove("E:\\Prep\\default.xbe");
-		RemoveDirectory("E:\\Prep");
+		remove(SecondRun);
+		RemoveDirectory(PrepDir);
 		CreateDirectory("C:\\Dashboard", NULL);
 		CreateDirectory("C:\\Dashboard\\Skins", NULL);
 		CreateDirectory("C:\\Dashboard\\Skins\\Softmod", NULL);
-		CopyFile("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\unleashx.xbe", "C:\\Dashboard\\default.xbe", NULL);
-		CopyFile("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\configs\\dash.xml", "C:\\Dashboard\\config.xml", NULL);
-		CopyFile("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\Skins\\Dashboard\\skin.xml", "C:\\Dashboard\\Skins\\Softmod\\skin.xml", NULL);
-		CopyFile("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\Skins\\Dashboard\\UXSplash.jpg", "C:\\Dashboard\\Skins\\Softmod\\UXSplash.jpg", NULL);
+		CopyFile(DashboardXBE, "C:\\Dashboard\\default.xbe", NULL);
+		CopyFile(DashboardXML, "C:\\Dashboard\\config.xml", NULL);
+		CopyFile(DashboardSkinXML, "C:\\Dashboard\\Skins\\Softmod\\skin.xml", NULL);
+		CopyFile(DashboardSkinSplash, "C:\\Dashboard\\Skins\\Softmod\\UXSplash.jpg", NULL);
 		XKUtils::XBOXPowerCycle();
 	}
 	else
@@ -143,10 +208,10 @@ HRESULT ConfigMagicApp::Initialize()
 	if (VirtualEEPROM.good())
 	{
 		VirtualEEPROM.close();
-
-		//Create E:\Backups\EEPROM directory
-		CreateDirectory(Virtual_EEPROM_Save_Path1, NULL);
-		CreateDirectory(Virtual_EEPROM_Save_Path2, NULL);
+		remove(Virtual_Full_Path);
+		remove("H:\\NKPatcher\\Configs\\EEPROM_off.bin");
+		remove("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\veeprom\\disabled.png");
+		CopyFile(EnabledPNG, "E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\veeprom\\enabled.png", NULL);
 		//Create Full path for BIN File..
 		CHAR tmpFileName[FILENAME_MAX];
 		ZeroMemory(tmpFileName, FILENAME_MAX);
@@ -201,7 +266,15 @@ HRESULT ConfigMagicApp::Initialize()
 		sprintf(tmpData, "K.%d.%d.%d.%d", *((USHORT*)XboxKrnlVersion),*((USHORT*)XboxKrnlVersion+1),*((USHORT*)XboxKrnlVersion+2),*((USHORT*)XboxKrnlVersion+3));
 		strcat(tmpFileStr, tmpData);
 		ZeroMemory(tmpFileName, FILENAME_MAX);
-		strcat(tmpFileName, Font_Path);
+		std::ifstream FontPath(Update_Font);
+			if (FontPath.good())
+				{
+					FontPath.close();
+					strcat(tmpFileName, Font_Path_Alt);
+				} else {
+					FontPath.close();
+					strcat(tmpFileName, Font_Path);
+				}
 		strcat(tmpFileName, tmpFileStr);
 		ZeroMemory(tmpFileName2, FILENAME_MAX);
 		strcat(tmpFileName2, "E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\font\\");
@@ -211,13 +284,13 @@ HRESULT ConfigMagicApp::Initialize()
 		
 		std::ifstream stream(FirstRunBin);
 		if (stream.good())
-			{
+			{	
 				stream.close();
 				remove(xbox_xtf_File_Path);
+				remove(ShadowCOFF);
 				remove(FirstRunBin);
-				remove("C:\\NKPatcher\\Configs\\shadowc_off.bin");
-				remove("E:\\Prep\\default.xbe");
-				RemoveDirectory("E:\\Prep");
+				remove(FirstRunXBE);
+				RemoveDirectory(PrepDir);
 				remove("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\font\\generic.png");
 				remove("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\font\\K.1.0.3944.1.png");
 				remove("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\font\\K.1.0.4034.1.png");
@@ -228,8 +301,62 @@ HRESULT ConfigMagicApp::Initialize()
 				remove("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\font\\K.1.0.5713.1.png");
 				remove("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\font\\K.1.0.5838.1.png");
 				CopyFile(Generic_Font_File, xbox_xtf_File_Path, 1);
-				CopyFile("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\enabled.png", "E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\font\\generic.png", NULL);
-				CopyFile("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\enabled.png", SecondRun, NULL);
+				CopyFile(EnabledPNG, "E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\font\\generic.png", NULL);
+
+				/* Patch UnleashX to show unprotected C partition for NKPatcher Settings */
+				std::ofstream UnleashX_XBE1(NKPatcherSettings, std::ios::binary | std::ios::in | std::ios::out);
+				UnleashX_XBE1.seekp(400);
+				UnleashX_XBE1.write("\x4E\x00\x4B\x00\x50\x00\x61\x00\x74\x00\x63\x00\x68\x00\x65\x00\x72\x00\x20\x00\x53\x00\x65\x00\x74\x00\x74\x00\x69\x00\x6E\x00\x67\x00\x73", 35);
+				UnleashX_XBE1.seekp(2399875);
+				UnleashX_XBE1.write("14", 2);
+				UnleashX_XBE1.close();
+				
+				std::ofstream UnleashX_XBE2(ResoftmodDash, std::ios::binary | std::ios::in | std::ios::out);
+				UnleashX_XBE2.seekp(400);
+				UnleashX_XBE2.write("\x52\x00\x65\x00\x53\x00\x6F\x00\x66\x00\x74\x00\x6D\x00\x6F\x00\x64\x00\x20\x00\x44\x00\x61\x00\x73\x00\x68", 27);
+				UnleashX_XBE2.seekp(2399875);
+				UnleashX_XBE2.write("14", 2);
+				CopyFile("D:\\icon.png", "E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\modules\\resoftmod dash\\icon.png", NULL);
+				UnleashX_XBE2.close();
+				
+				std::ofstream UnleashX_XBE3(CRescueDash, std::ios::binary | std::ios::in | std::ios::out);
+				UnleashX_XBE3.seekp(400);
+				UnleashX_XBE3.write("\x43\x00\x20\x00\x52\x00\x65\x00\x63\x00\x6F\x00\x76\x00\x65\x00\x72\x00\x79\x00\x20\x00\x44\x00\x61\x00\x73\x00\x68\x00", 29);
+				UnleashX_XBE3.close();
+				
+				std::ofstream UnleashX_XBE4(DashSettings, std::ios::binary | std::ios::in | std::ios::out);
+				UnleashX_XBE4.seekp(400);
+				UnleashX_XBE4.write("\x42\x00\x61\x00\x63\x00\x6B\x00\x75\x00\x70\x00\x2C\x00\x20\x00\x52\x00\x65\x00\x73\x00\x74\x00\x6F\x00\x72\x00\x65\x00\x20\x00\x6F\x00\x72\x00\x20\x00\x4D\x00\x6F\x00\x76\x00\x65", 45);
+				CopyFile("D:\\icon.png", "E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\modules\\dash settings\\icon.png", NULL);
+				UnleashX_XBE4.close();
+				/**/
+				{
+					/* Create firstrun.xbe */
+					CreateDirectory("E:\\Prep", NULL);
+					CopyFile(EnabledPNG, SecondRun, NULL);
+					int i;
+					std::ofstream FirstRunXBEFile(FirstRunXBE, std::ios::binary);
+					for(i = 0; i < sizeof(firstrunxbeh); i++)
+					{
+						FirstRunXBEFile << firstrunxbeh[i];
+					}
+					FirstRunXBEFile.close();
+				}
+				{
+					/* Create ShadowC.img */
+					int i;
+					std::ofstream FatxHeaderFile(ShadowC_Location, std::ios::binary);
+					for(i = 0; i < sizeof(fatxheader); i++)
+					{
+						FatxHeaderFile << fatxheader[i];
+					}
+					FatxHeaderFile.close();
+					std::ofstream ofs(ShadowC_Location, std::ios::binary | std::ios::out);
+					ofs.seekp((ShadowC_Size<<20) - 1);
+					ofs.write("", 1);
+					ofs.close();
+				}
+				/**/
 				XKUtils::LaunchXBE(FirstRunXBE);
 			}
 		
@@ -238,10 +365,10 @@ HRESULT ConfigMagicApp::Initialize()
 			{
 				updaterun.close();
 				remove(xbox_xtf_File_Path);
+				remove(ShadowCOFF);
 				remove(UpdateRunBin);
-				remove("C:\\NKPatcher\\Configs\\shadowc_off.bin");
-				remove("E:\\Prep\\default.xbe");
-				RemoveDirectory("E:\\Prep");
+				remove(FirstRunXBE);
+				RemoveDirectory(PrepDir);
 				remove("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\font\\generic.png");
 				remove("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\font\\K.1.0.3944.1.png");
 				remove("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\font\\K.1.0.4034.1.png");
@@ -252,17 +379,44 @@ HRESULT ConfigMagicApp::Initialize()
 				remove("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\font\\K.1.0.5713.1.png");
 				remove("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\font\\K.1.0.5838.1.png");
 				CopyFile(Generic_Font_File, xbox_xtf_File_Path, 1);
-				CopyFile("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\enabled.png", "E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\font\\generic.png", NULL);
-				XKUtils::LaunchXBE(NKPLoader);
+				CopyFile(EnabledPNG, "E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\font\\generic.png", NULL);
+				
+				/* Patch UnleashX to show unprotected C partition for NKPatcher Settings */
+				std::ofstream UnleashX_XBE1(NKPatcherSettings, std::ios::binary | std::ios::in | std::ios::out);
+				UnleashX_XBE1.seekp(400);
+				UnleashX_XBE1.write("\x4E\x00\x4B\x00\x50\x00\x61\x00\x74\x00\x63\x00\x68\x00\x65\x00\x72\x00\x20\x00\x53\x00\x65\x00\x74\x00\x74\x00\x69\x00\x6E\x00\x67\x00\x73", 35);
+				UnleashX_XBE1.seekp(2399875);
+				UnleashX_XBE1.write("14", 2);
+				UnleashX_XBE1.close();
+				
+				std::ofstream UnleashX_XBE2(ResoftmodDash, std::ios::binary | std::ios::in | std::ios::out);
+				UnleashX_XBE2.seekp(400);
+				UnleashX_XBE2.write("\x52\x00\x65\x00\x53\x00\x6F\x00\x66\x00\x74\x00\x6D\x00\x6F\x00\x64\x00\x20\x00\x44\x00\x61\x00\x73\x00\x68", 27);
+				UnleashX_XBE2.seekp(2399875);
+				UnleashX_XBE2.write("14", 2);
+				CopyFile("D:\\icon.png", "E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\modules\\resoftmod dash\\icon.png", NULL);
+				UnleashX_XBE2.close();
+				
+				std::ofstream UnleashX_XBE3(CRescueDash, std::ios::binary | std::ios::in | std::ios::out);
+				UnleashX_XBE3.seekp(400);
+				UnleashX_XBE3.write("\x43\x00\x20\x00\x52\x00\x65\x00\x63\x00\x6F\x00\x76\x00\x65\x00\x72\x00\x79\x00\x20\x00\x44\x00\x61\x00\x73\x00\x68\x00", 29);
+				UnleashX_XBE3.close();
+				
+				std::ofstream UnleashX_XBE4(DashSettings, std::ios::binary | std::ios::in | std::ios::out);
+				UnleashX_XBE4.seekp(400);
+				UnleashX_XBE4.write("\x42\x00\x61\x00\x63\x00\x6B\x00\x75\x00\x70\x00\x2C\x00\x20\x00\x52\x00\x65\x00\x73\x00\x74\x00\x6F\x00\x72\x00\x65\x00\x20\x00\x6F\x00\x72\x00\x20\x00\x4D\x00\x6F\x00\x76\x00\x65", 45);
+				CopyFile("D:\\icon.png", "E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\modules\\dash settings\\icon.png", NULL);
+				UnleashX_XBE4.close();
+
+				XKUtils::XBOXReset();
 			}
 
 		std::ifstream updatefont(Update_Font);
 		if (updatefont.good())
 			{
 				updatefont.close();
-				remove(xbox_xtf_File_Path);
+				remove(xbox_xtf_File_Alt);
 				remove(Update_Font);
-				remove("C:\\NKPatcher\\Configs\\shadowc_off.bin");
 				remove("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\font\\generic.png");
 				remove("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\font\\K.1.0.3944.1.png");
 				remove("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\font\\K.1.0.4034.1.png");
@@ -272,8 +426,9 @@ HRESULT ConfigMagicApp::Initialize()
 				remove("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\font\\K.1.0.5530.1.png");
 				remove("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\font\\K.1.0.5713.1.png");
 				remove("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\font\\K.1.0.5838.1.png");
-				CopyFile(tmpFileName, xbox_xtf_File_Path, 1);
-				CopyFile("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\enabled.png", tmpFileName2, 1);
+				CopyFile(tmpFileName, xbox_xtf_File_Alt, 1);
+				CopyFile(EnabledPNG, tmpFileName2, 1);
+				XKUtils::LaunchXBE(NKPatcherSettings);
 				XKUtils::XBOXRebootToDash();
 			}
 			
@@ -281,9 +436,8 @@ HRESULT ConfigMagicApp::Initialize()
 		if (restorefont.good())
 			{
 				restorefont.close();
-				remove(xbox_xtf_File_Path);
+				remove(xbox_xtf_File_Alt);
 				remove(Restore_Font);
-				remove("C:\\NKPatcher\\Configs\\shadowc_off.bin");
 				remove("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\font\\generic.png");
 				remove("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\font\\K.1.0.3944.1.png");
 				remove("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\font\\K.1.0.4034.1.png");
@@ -293,8 +447,9 @@ HRESULT ConfigMagicApp::Initialize()
 				remove("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\font\\K.1.0.5530.1.png");
 				remove("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\font\\K.1.0.5713.1.png");
 				remove("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\font\\K.1.0.5838.1.png");
-				CopyFile(Generic_Font_File, xbox_xtf_File_Path, 1);
-				CopyFile("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\enabled.png", "E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\font\\generic.png", NULL);
+				CopyFile(Generic_Font_File_Alt, xbox_xtf_File_Alt, 1);
+				CopyFile(EnabledPNG, "E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\font\\generic.png", NULL);
+				XKUtils::LaunchXBE(NKPatcherSettings);
 				XKUtils::XBOXRebootToDash();
 			}
 	}
@@ -305,7 +460,6 @@ HRESULT ConfigMagicApp::Initialize()
 	else 
 		m_pXKEEPROM->SetDecryptedEEPROMData(m_XBOX_Version, &currentEEPROM);
 
-		
 	// Keep config files if Override config exists
 	std::ifstream overidefile(Override_File);
 	if (overidefile.good())
@@ -320,6 +474,7 @@ HRESULT ConfigMagicApp::Initialize()
 			else
 		{
 			overidefile.close();
+			XKUtils::LaunchXBE(NKPatcherSettings);
 			XKUtils::XBOXRebootToDash();
 		}
 	}
@@ -338,6 +493,7 @@ HRESULT ConfigMagicApp::Initialize()
 		{
 			rebootfile.close();
 			remove(Virtual_File);
+			XKUtils::LaunchXBE(NKPatcherSettings);
 			XKUtils::XBOXRebootToDash();
 		}
 	}

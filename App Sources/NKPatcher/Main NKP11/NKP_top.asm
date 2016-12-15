@@ -1254,7 +1254,7 @@ read_FAN:	db	'\Device\Harddisk0\Partition2\nkpatcher\configs\FAN.bin',0,0
 
 read_LED:	db	'\Device\Harddisk0\Partition2\nkpatcher\configs\LED.bin',0,0 
 
-read_VIDEO:	db	'\Device\Harddisk0\Partition2\nkpatcher\configs\video files\VIDEO.bin',0,0
+read_VIDEO:	db	'\Device\Harddisk0\Partition2\nkpatcher\configs\VIDEO.bin',0,0
 
 ;;; --------------------------------------------------------------------------
 

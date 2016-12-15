@@ -56,7 +56,8 @@
 				Name="VCPreLinkEventTool"/>
 			<Tool
 				Name="XboxDeploymentTool"
-				ExcludedFromBuild="TRUE"/>
+				ExcludedFromBuild="TRUE"
+				AdditionalFiles=""/>
 			<Tool
 				Name="XboxImageTool"
 				FileName="$(TargetDir)default.xbe"
@@ -65,7 +66,7 @@
 				LimitAvailableMemoryTo64MB="TRUE"
 				SuppressStartupBanner="TRUE"
 				TitleID="0x21585554"
-				TitleName="EEPROM Backuperer"/>
+				TitleName="2016 Softmod Tool Kit"/>
 		</Configuration>
 		<Configuration
 			Name="Release|Xbox"

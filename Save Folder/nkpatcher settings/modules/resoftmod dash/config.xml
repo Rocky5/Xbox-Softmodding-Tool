@@ -55,7 +55,7 @@
 
 			<List Text="Yeah, load NKPatcher Settings." Sort="Off" Batch="True">
 				<list>
-					<Item Action="E:\UDATA\21585554\000000000000\softmod files\install.xbe"/>
+					<Item Action="E:\UDATA\21585554\000000000000\nkpatcher settings\unleashx.xbe"/>
 				</list>
 			</list>
 

@@ -60,8 +60,4 @@ public:
 	virtual HRESULT		Initialize();
 	ConfigMagicApp();
 	virtual ~ConfigMagicApp();
-
-
-
-
 };

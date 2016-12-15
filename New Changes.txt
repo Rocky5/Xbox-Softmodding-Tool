@@ -1,0 +1,17 @@
+
+Update: Dec 15 2016
+
+Some more backend changes, I modularized the 2016 Softmod Tool Kit a bit more and cleaned up its code.
+Updated the other parts of the softmod to reflect these changes.
+Improved the update softmod installer, now check for the presence of my softmod before running and also cleans up better.
+
+
+
+Changes from the stable versions:
+
+1)	Renamed EEPROM Backeruper to 2016 softmod tool kit as it does alot more than just backing up the eeprom.
+2)	Changed how the hole softmod is done, I no longer use NKPatcher for disabling the shadowc partition so now you can softreset out of NKPatcher Settings.
+	( I modify Unleashx during the softmod )
+3)	I also changed how the ShadowC partition is created, its now created on the fly using the new tool kit above.
+4)	Crap loads of edits, to many to remember :\ lets just say its almost a hole new softmod :D
+	( well the backend is )

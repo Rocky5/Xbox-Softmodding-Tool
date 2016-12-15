@@ -49,18 +49,6 @@ Reason: Prepared 0.2 for Public Release
 	//This complete file is only supported for XBOX..
 	#pragma message ("Compiling for XBOX: " __FILE__)
 
-
-
-#include <xtl.h>
-
-#ifdef _DEBUG
-    #define OUTPUT_DEBUG_STRING(s) OutputDebugStringA(s)
-#else
-    #define OUTPUT_DEBUG_STRING(s) (VOID)(s)
-#endif
-
-#define XB_SUCCESS(Status) ((LONG)(Status) >= 0)
-
 //Defines for Symbolic Links...
 #define DriveA "\\??\\A:"
 #define DriveC "\\??\\C:"
@@ -74,13 +62,24 @@ Reason: Prepared 0.2 for Public Release
 #define DriveG "\\??\\G:"
 #define DeviceG "\\Device\\Harddisk0\\Partition7"
 #define DriveH "\\??\\H:"
-#define DeviceH "\\Device\\Harddisk0\\Partition8"
+#define DeviceH "\\Device\\Harddisk0\\Partition14"
 #define DriveX "\\??\\X:"
 #define DeviceX "\\Device\\Harddisk0\\Partition3"
 #define DriveY "\\??\\Y:"
 #define DeviceY "\\Device\\Harddisk0\\Partition4"
 #define DriveZ "\\??\\Z:"
 #define DeviceZ "\\Device\\Harddisk0\\Partition5"
+
+#include <xtl.h>
+
+#ifdef _DEBUG
+    #define OUTPUT_DEBUG_STRING(s) OutputDebugStringA(s)
+#else
+    #define OUTPUT_DEBUG_STRING(s) (VOID)(s)
+#endif
+
+#define XB_SUCCESS(Status) ((LONG)(Status) >= 0)
+
 
 typedef CONST SHORT CSHORT;
 
