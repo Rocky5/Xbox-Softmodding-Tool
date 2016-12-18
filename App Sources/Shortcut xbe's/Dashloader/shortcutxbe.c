@@ -114,6 +114,11 @@ void ErrorHandler(char *xbepath)
 		debuglog("Dashboard doesn't Exist\n");
 		/*
 		*/
+		debuglog("Loading F:\\XBMC\\Default.xbe");
+		XLaunchXBE("F:\\XBMC\\Default.xbe");
+		debuglog("Dashboard doesn't Exist\n");
+		/*
+		*/
 		debuglog("Loading C:\\Dashboard\\Default.xbe");
 		XLaunchXBE("C:\\Dashboard\\Default.xbe");
 		debuglog("Dashboard doesn't Exist\n");
@@ -124,6 +129,11 @@ void ErrorHandler(char *xbepath)
 		debuglog("Dashboard doesn't Exist\n");
 		/*
 		*/
+		debuglog("Loading F:\\Dashboard\\Default.xbe");
+		XLaunchXBE("F:\\Dashboard\\Default.xbe");
+		debuglog("Dashboard doesn't Exist\n");
+		/*
+		*/
 		debuglog("Loading C:\\Dash\\Default.xbe");
 		XLaunchXBE("C:\\Dash\\Default.xbe");
 		debuglog("Dashboard doesn't Exist\n");
@@ -131,6 +141,11 @@ void ErrorHandler(char *xbepath)
 		*/
 		debuglog("Loading E:\\Dash\\Default.xbe");
 		XLaunchXBE("E:\\Dash\\Default.xbe");
+		debuglog("Dashboard doesn't Exist\n");
+		/*
+		*/
+		debuglog("Loading F:\\Dash\\Default.xbe");
+		XLaunchXBE("F:\\Dash\\Default.xbe");
 		debuglog("Dashboard doesn't Exist\n");
 		/*
 		*/

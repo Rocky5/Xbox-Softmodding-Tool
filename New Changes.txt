@@ -1,3 +1,27 @@
+Update: Dec 16 2016
+
+Fixed some spelling mistakes :\
+Added F dashboard paths:
+
+Total is now 15
+
+	C:\XBMC\default.xbe
+	E:\XBMC\default.xbe
+	F:\XBMC\default.xbe
+	C:\dashboard\default.xbe
+	E:\dashboard\default.xbe
+	F:\dashboard\default.xbe
+	C:\dash\default.xbe
+	E:\dash\default.xbe
+	F:\dash\default.xbe
+	E:\default.xbe
+	E:\dashboard.xbe
+	C:\evoxdash.xbe
+	E:\evoxdash.xbe
+	C:\XBMC.xbe
+	E:\XBMC.xbe
+
+
 
 Update: Dec 15 2016
 

@@ -96,10 +96,13 @@
 		*****
 			C:\XBMC\default.xbe
 			E:\XBMC\default.xbe
+			F:\XBMC\default.xbe
 			C:\dashboard\default.xbe
 			E:\dashboard\default.xbe
+			F:\dashboard\default.xbe
 			C:\dash\default.xbe
 			E:\dash\default.xbe
+			F:\dash\default.xbe
 			E:\default.xbe
 			E:\dashboard.xbe
 			C:\evoxdash.xbe
@@ -139,10 +142,6 @@
 			Xman954 & kingroach added some cracking features to NKPatcher.
 		PBLoader - Metoo Edition:
 			Team Phoenix, ldotsfan, & Rmenhal
-		Team-HQ & Team Phoenix:
-			For the original idea of using the BFM Bios to bypass the Shadow C Protection.
-		EvolutionX Team:
-			M8+ bios
 		UnleashX:
 			James for such an amazing dashboard, without his work on UnleashX there would be no Softmod installers as we know it.
 		The original XBMC team

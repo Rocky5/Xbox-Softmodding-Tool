@@ -3,7 +3,7 @@ This is my latest softmod package, has a crap load of improvements since the 201
 
 \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
-	Read Me - 2016 Softmodding Tool Created by Rocky5
+Read Me - 2016 Softmodding Tool v1 Pre Release Created by Rocky5
 
 
 	Main Features:
@@ -100,10 +100,13 @@ This is my latest softmod package, has a crap load of improvements since the 201
 		*****
 			C:\XBMC\default.xbe
 			E:\XBMC\default.xbe
+			F:\XBMC\default.xbe
 			C:\dashboard\default.xbe
 			E:\dashboard\default.xbe
+			F:\dashboard\default.xbe
 			C:\dash\default.xbe
 			E:\dash\default.xbe
+			F:\dash\default.xbe
 			E:\default.xbe
 			E:\dashboard.xbe
 			C:\evoxdash.xbe
@@ -131,3 +134,23 @@ This is my latest softmod package, has a crap load of improvements since the 201
 			All you need to do is burn the new ISO & select the "Upgrade Old Softmods" option, located in the "Advanced Features" menu, just follow the on-screen instructions.
 
 		The great thing about the above, is it requires no FTP access or knowledge on how to update/restore softmods, great for people who are new to the Xbox scene.
+
+
+	Credits:
+
+		I would like to thank the following, without there contributions to the Xbox scene we would not have what we have today.
+		
+		Original NKPatcher:
+			Rmenhal without this guy we wouldn't have NKP or the advanced fonts we use today.
+		NKPatcher Unofficial Edits:
+			Xman954 & kingroach added some cracking features to NKPatcher.
+		PBLoader - Metoo Edition:
+			Team Phoenix, ldotsfan, & Rmenhal
+		UnleashX:
+			James for such an amazing dashboard, without his work on UnleashX there would be no Softmod installers as we know it.
+		The original XBMC team
+			For XBMC Shortcut XBE Source
+		MS Source leak:
+			& without this person we wouldn't have the bios files or NKPatchers we have today.
+		Background Music
+			http://www.dl-sounds.com/royalty-free/house-loop-2016/
