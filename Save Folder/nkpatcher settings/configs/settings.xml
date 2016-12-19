@@ -452,7 +452,7 @@
 			</List>
 			<Item>------------------------------------------</Item>
 			<List Text="Backup EEPROM Tool" Sort="Off" Batch="True">
-				<Item Action="MessageBox" Arg1="Complete">The following: \n\nEEPROM.bin \nEEPROM.cfg \nXBOX INFO.txt \n\nwill be placed in "E:\Backups\EEPROM\",  I will need to exit nkpatcher settings.</Item>
+				<Item Action="MessageBox" Arg1="Complete">The following: \n\nEEPROM.bin \nEEPROM.cfg \nXBOX INFO.txt \n\nwill be placed in "E:\Backups\EEPROM\".</Item>
 				<Item Action="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\2016 softmod tool kit\default.xbe">Restart</Item>
 			</List>
 		</List>
