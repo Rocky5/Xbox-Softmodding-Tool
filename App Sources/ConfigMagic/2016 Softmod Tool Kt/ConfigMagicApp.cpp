@@ -258,8 +258,7 @@ HRESULT ConfigMagicApp::Initialize()
 		WriteTXTInfoFile(tmpFileName);
 		
 		//Write XBOX Kernel Information file...
-		CHAR tmpFontName[FILENAME_MAX];
-		CHAR tmpFontNameAlt[FILENAME_MAX];
+		CHAR tmpFileName2[FILENAME_MAX];
 		CHAR tmpData[256];
 		LPSTR tmpFileStr = new CHAR[2048];
 		DWORD tmpSize = 256;
@@ -268,22 +267,22 @@ HRESULT ConfigMagicApp::Initialize()
 		tmpSize = 256;ZeroMemory(tmpData, tmpSize);
 		sprintf(tmpData, "K.%d.%d.%d.%d", *((USHORT*)XboxKrnlVersion),*((USHORT*)XboxKrnlVersion+1),*((USHORT*)XboxKrnlVersion+2),*((USHORT*)XboxKrnlVersion+3));
 		strcat(tmpFileStr, tmpData);
-		ZeroMemory(tmpFontName, FILENAME_MAX);
+		ZeroMemory(tmpFileName, FILENAME_MAX);
 		std::ifstream FontPath(Update_Font);
 			if (FontPath.good())
 				{
 					FontPath.close();
-					strcat(tmpFontName, Font_Path_Alt);
+					strcat(tmpFileName, Font_Path_Alt);
 				} else {
 					FontPath.close();
-					strcat(tmpFontName, Font_Path);
+					strcat(tmpFileName, Font_Path);
 				}
-		strcat(tmpFontName, tmpFileStr);
-		ZeroMemory(tmpFontNameAlt, FILENAME_MAX);
-		strcat(tmpFontNameAlt, "E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\font\\");
-		strcat(tmpFontNameAlt, tmpFileStr);
-		strcat(tmpFontNameAlt, ".png");
-		//WriteKERNELInfoFile(tmpFontName);
+		strcat(tmpFileName, tmpFileStr);
+		ZeroMemory(tmpFileName2, FILENAME_MAX);
+		strcat(tmpFileName2, "E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\font\\");
+		strcat(tmpFileName2, tmpFileStr);
+		strcat(tmpFileName2, ".png");
+		//WriteKERNELInfoFile(tmpFileName);
 		/*
 			First run code, this will patch UnleashX, install a clean ShadowC/img and also install the generic font, though the font install isn't needed as the generic font is used by default.
 		*/
@@ -426,7 +425,7 @@ HRESULT ConfigMagicApp::Initialize()
 		if (updatefont.good())
 			{
 				updatefont.close();
-				std::ifstream updatefontcheck(tmpFontName);
+				std::ifstream updatefontcheck(tmpFileName);
 				if (updatefontcheck.good())
 					{
 						remove("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\font\\generic.png");
@@ -440,8 +439,8 @@ HRESULT ConfigMagicApp::Initialize()
 						remove("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\font\\K.1.0.5838.1.png");
 						remove(xbox_xtf_File_Alt);
 						remove(Update_Font);
-						CopyFile(tmpFontName, xbox_xtf_File_Alt, 1);
-						CopyFile(EnabledPNG, tmpFontNameAlt, 1);
+						CopyFile(tmpFileName, xbox_xtf_File_Alt, 1);
+						CopyFile(EnabledPNG, tmpFileName2, 1);
 					}
 				XKUtils::LaunchXBE(NKPatcherSettings);
 				XKUtils::XBOXRebootToDash();
@@ -670,8 +669,6 @@ void ConfigMagicApp::WriteTXTInfoFile(LPCSTR strFilename)
 		tmpSize = 256;ZeroMemory(tmpData, tmpSize);
 		XKHDD::GetIDEModel(cmdObj.DATA_BUFFER, (LPSTR)tmpData, &tmpSize);
 		strcat(tmpFileStr, tmpData);
-
-
 
 		strupr(tmpFileStr);
 		
