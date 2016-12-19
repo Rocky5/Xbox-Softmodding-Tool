@@ -1,10 +1,10 @@
 
-	Read Me - 2016 Softmodding Tool v1 Pre Release Created by Rocky5
+	Read Me - 2016 Softmodding Tool v1 Created by Rocky5
 
 
 	Changes from 2014 Softmod Kit:
 
-	Softmod v1 Pre Release:
+	Softmod v1:
 		1)	Now set the correct Kernel font for the Xbox during the softmod. Full proof now, its all automated.
 		2)	Changed the ShadowC partition to a partition number XBMC or other Dashboards cant see or access.
 		3)	Updated Dashloader to reflect the above changes.
@@ -45,10 +45,10 @@
 			( I no longer do it when softmodding, check the github commit log for more info )
 		**)	Other improvements to the backend of the softmod, as well as fixes & stuff I have probably forgot.
 
-	Extras Disc v1 Pre Release:
+	Extras Disc v1:
 		1)	Updated XBMC v3.5 to XBMC v3.5.3.
 		2)	NKPatcher settings menu rearranged & improved.
-		3)	Added the changed from Softmod v1 Pre Release, for the update/upgrade Softmod menu.
+		3)	Added the changed from Softmod v1, for the update/upgrade Softmod menu.
 		4)	Fixed Xored Mini not installing to the Xbox HDD.
 		5)	Changed how I install the MS Dashboards & made it so they appear in the Applications menu.
 		6)	Added my custom Configmagic EEPROM Backup Tool.

@@ -2,13 +2,16 @@
 Title Build Disc Save
 
 ::Build save files for Xbox.
-Set "Winrar=%CD%\Tools\Winrar\winrar.exe"
-
-CD "Files"
-"%Winrar%" a -x*.db "..\Files.rar" "*.rar"
-CD ..\
-RD /S /Q "tmp"
+If not exist "Files.rar" Call "Build Files.rar.bat" 2>NUL
+RD /S /Q "tmp" >NUL
 XCopy /s /y /e "Save Folder\*" "tmp\21585554\000000000000\"
+RD /Q /S "tmp\21585554\000000000000\nkpatcher settings\configs"
+RD /Q /S "tmp\21585554\000000000000\nkpatcher settings\modules"
+RD /Q /S "tmp\21585554\000000000000\nkpatcher settings\Skins\Dashboard"
+RD /Q /S "tmp\21585554\000000000000\nkpatcher settings\Skins\NKPatcher Settings"
+RD /Q /S "tmp\21585554\000000000000\nkpatcher settings\Skins\RescueDash_C"
+RD /Q /S "tmp\21585554\000000000000\nkpatcher settings\Skins\RescueDash_E"
+RD /Q /S "tmp\21585554\000000000000\nkpatcher settings\toggles"
 Move "Files.rar" "tmp\21585554\000000000000\softmod files\"
 XCopy /s /y "Game Saves\Softmod\*" "tmp\21585554\"
 

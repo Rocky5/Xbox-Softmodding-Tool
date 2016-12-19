@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Unleashx>
+	<Settings>
+		<Preference>
+			<AbortOnError>Yes</AbortOnError>
+			<ContextMenu AllowUninstall="No" AllowItemEdit="No" AllowRecentList="No" LinkToSave="No" LinkToGame="No"/>
+			<Skin Path="Skins\">RescueDash_C</Skin>
+			<VideoSettings Soften="No" Widescreen="No" UsePAL60="No" FastRefresh="Yes" EnableTextureCompression="No" Use720P="No" Use480P="Yes" FilterLevel="0"/>
+			<LiveUpdate AutoCheck="No"/>
+			<AutoVideoMode MultiRegion="Off" UsePAL60="No">no</AutoVideoMode>
+			<Games AutoLaunch="No"/>
+			<DVD AutoLaunch="No"/>
+			<AudioCD AutoLaunch="No"/>
+			<EnableDriveF>Yes</EnableDriveF>
+			<EnableDriveG>Yes</EnableDriveG>
+			<FanSpeed>1.00</FanSpeed>
+			<Use24HFormat>Yes</Use24HFormat>
+			<SNTP Synchronize="Yes" HTTP="Yes" Port="80">143.210.16.201</SNTP>
+			<AutoSetTime>Yes</AutoSetTime>
+			<ScreenSaver Wait="300">
+				<Text>2016 Softmodding Tool</Text>
+			</ScreenSaver>
+			<LanguageFile>C:\nkpatcher\rescuedash\skins\RescueDash_C\lang.xml</LanguageFile>
+		</Preference>
+		<Network Type="DHCP" Enable="Yes">
+			<AutoDetect>yes</AutoDetect>
+			<IP>192.168.1.6</IP>
+			<Subnet>255.255.255.255</Subnet>
+			<Gateway>192.168.1.1</Gateway>
+			<DNS1>192.168.1.1</DNS1>
+		</Network>
+		<FTP Enable="Yes">
+			<MaxUsers>10</MaxUsers>
+			<AllowAnon>No</AllowAnon>
+		</FTP>
+		<Audio>
+			<EnableSoundEffect>Yes</EnableSoundEffect>
+			<Ambient>C:\nkpatcher\rescuedash\skins\RescueDash_C\skin files\music\background.wav</Ambient>
+			<SoundVolume>80</SoundVolume>
+			<Scroll>dummy.wav</Scroll>
+			<Select>dummy.wav</Select>
+			<Action_Complete>dummy.wav</Action_Complete>
+			<Keyboard_Stroke>dummy.wav</Keyboard_Stroke>
+			<Back>dummy.wav</Back>
+			<Menu_Up>dummy.wav</Menu_Up>
+			<Menu_Down>dummy.wav</Menu_Down>
+			<Game_Save_Select>dummy.wav</Game_Save_Select>
+			<Memory_Slot>dummy.wav</Memory_Slot>
+		</Audio>
+		<LED>
+			<Default>Flashing Red</Default>
+		</LED>
+	</Settings>
+	<Menu>
+
+		<List Text="Fix my Softmod" Sort="Off">
+
+			<List Text="Yes please. I'm a numpty & need your help." Sort="Off" Batch="True">
+				<list>
+					<Item Action="MessageBox" arg1="Warning">To fix this issue I need do a file check. If it fails, don't worry. You can select "Resoftmod my Xbox" in the previous page.</Item>
+					<list>
+						<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000" arg2="E:\UDATA\21585554\00000000000">Softmod save is missing</Item>
+						<Item Action="Rename" arg1="E:\UDATA\21585554\00000000000" arg2="E:\UDATA\21585554\000000000000"/>
+						<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\softmod files\Files.rar" arg2="E:\UDATA\21585554\000000000000\softmod files\files.ra">Files.rar is missing from the save directory</Item>
+						<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\softmod files\files.ra" arg2="E:\UDATA\21585554\000000000000\softmod files\Files.rar"/>
+						<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\configs\alt xbe's\dashboard.xbe" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\configs\alt xbe's\dashboard.xb">dashboard.xbe is missing from the save directory</Item>
+						<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\configs\alt xbe's\dashboard.xb" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\configs\alt xbe's\dashboard.xbe"/>
+						<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\configs\recovery.xml" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\configs\recovery.xm">Recovery.xml is missing from the save directory</Item>
+						<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\configs\recovery.xm" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\configs\recovery.xml"/>
+						<Item Action="Rename" arg1="C:\nkpatcher\rescuedash\resoftmod files.zip" arg2="C:\nkpatcher\rescuedash\resoftmod files.zi">resoftmod files.zip is missing from C rescuedash directory</Item>
+						<Item Action="Rename" arg1="C:\nkpatcher\rescuedash\resoftmod files.zi" arg2="C:\nkpatcher\rescuedash\resoftmod files.zip"/>
+					</list>
+					<Item Action="MessageBox" arg1="hmm">Found the files I need :)</Item>
+					<Item Action="Format" arg1="Y"/>
+					<Item Action="Unrar" arg1="E:\UDATA\21585554\000000000000\softmod files\Files.rar" arg2="Y:\"/>
+					<Item Action="Unrar" arg1="Y:\xboxdash.rar" arg2="C:\"/>
+					<Item Action="Unrar" arg1="Y:\nkpatcher.rar" arg2="Y:\"/>
+					<Item Action="Delete" arg1="Y:\nkpatcher\configs\video files\video.bin"/>
+					<Item Action="Copy" arg1="Y:\nkpatcher\configs" arg2="C:\nkpatcher\configs"/>
+					<Item Action="Copy" arg1="Y:\nkpatcher\dashloader" arg2="C:\nkpatcher\dashloader"/>
+					<Item Action="Copy" arg1="Y:\nkpatcher\rescuedash" arg2="C:\nkpatcher\rescuedash"/>
+					<Item Action="Copy" arg1="Y:\nkpatcher\default.xbe" arg2="C:\nkpatcher\default.xbe"/>
+					<!-- Setting up rescue dashboards -->
+					<Item Action="Copy" arg1="dummy" arg2="E:\TDATA\rescuedash"/>
+					<Item Action="Delete" arg1="E:\TDATA\rescuedash"/>
+					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\configs\alt xbe's\dashboard.xbe" arg2="E:\TDATA\rescuedash\default.xbe"/>
+					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\configs\recovery.xml" arg2="E:\TDATA\rescuedash\Config.xml"/>
+					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\skins\Softmod\" arg2="E:\TDATA\rescuedash\skins\Softmod\"/>
+					<Item Action="Copy" arg1="dummy" arg2="E:\UDATA\rescuedash"/>
+					<Item Action="Delete" arg1="E:\UDATA\rescuedash"/>
+					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\configs\alt xbe's\dashboard.xbe" arg2="E:\UDATA\rescuedash\default.xbe"/>
+					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\configs\recovery.xml" arg2="E:\UDATA\rescuedash\Config.xml"/>
+					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\skins\Softmod\" arg2="E:\UDATA\rescuedash\skins\Softmod\"/>
+					<list>
+						<Item Action="AskUser" arg1="ShadowC" arg2="Have you remove the shadowc.img? \n\nThis is mandatory for the softmod to work. \n\nIf you select no and and the installer fails this means you did remove it, so slap yourself in the face for lying and reselect Fix Softmod."/>
+						<Item Action="Delete" arg1="C:\nkpatcher\shadowc"/>
+						<Item Action="Copy" arg1="dummy" arg2="C:\nkpatcher\shadowc"/>
+						<Item Action="Copy" arg1="C:\nkpatcher\rescuedash\Config.xml" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\2016 Softmod Tool Kit\firstrun.bin"/>
+						<Item Action="Format" arg1="X"/>
+						<Item Action="Format" arg1="Y"/>
+						<Item Action="Format" arg1="Z"/>
+						<Item Action="MessageBox" Arg1="Fixed">That's me done repairing the softmod, I will now restart the xbox to populate the new ShadowC image. Please be careful in the future.</Item>
+						<Item Action="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\2016 softmod tool kit\default.xbe"/>
+					</list>
+					<Item Action="Rename" arg1="C:\nkpatcher\shadowc\shadowc.img" arg2="C:\nkpatcher\shadowc\shadowc.im">The ShadowC.img had been removed</Item>
+					<Item Action="Rename" arg1="C:\nkpatcher\shadowc\shadowc.im" arg2="C:\nkpatcher\shadowc\shadowc.img"/>
+					<Item Action="Format" arg1="X"/>
+					<Item Action="Format" arg1="Y"/>
+					<Item Action="Format" arg1="Z"/>
+					<Item Action="MessageBox" Arg1="Fixed">That's me done repairing the softmod, I will now restart the xbox to finish the procedure. Please be careful in the future.</Item>
+					<Item Action="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\2016 softmod tool kit\default.xbe"/>
+				</list>
+			</list>
+
+			<Item>-</Item>
+
+			<Item>Press (B) to Exit this menu.</Item>
+		</list>
+
+		<Item>-</Item>
+
+		<List Text="Resoftmod my Xbox" Sort="Off">
+
+			<List Text="Yes, I really want to start fresh." Sort="Off" Batch="True">
+				<list>
+					<Item Action="MessageBox" arg1="Warning">I need to do a file check. If it fails, don't worry. You can insert the 2016 Softmodding Tool Extras Disc &amp; press the following (LT+RT+Black+Start) to load the disc &amp; then use the Upgrade Older Softmods option, located in the Advanced Features menu.</Item>
+					<list>
+						<Item Action="Rename" arg1="C:\nkpatcher\rescuedash\resoftmod files.zip" arg2="C:\nkpatcher\rescuedash\resoftmod files.zi">resoftmod files are missing</Item>
+						<Item Action="Rename" arg1="C:\nkpatcher\rescuedash\resoftmod files.zi" arg2="C:\nkpatcher\rescuedash\resoftmod files.zip"/>
+					</list>
+					<Item Action="MessageBox" arg1="hmm">Found the file I need :)</Item>
+					<Item Action="Copy" arg1="dummy" arg2="E:\UDATA\21585554"/>
+					<Item Action="Delete" arg1="E:\UDATA\21585554"/>
+					<Item Action="UnZip" arg1="C:\nkpatcher\rescuedash\resoftmod files.zip"  arg2="E:\UDATA\21585554\"/>
+					<Item Action="Copy" arg1="C:\nkpatcher\rescuedash\alt xbe\"  arg2="E:\UDATA\21585554\000000000000\"/>
+					<Item Action="E:\UDATA\21585554\000000000000\install.xbe"/>
+				</list>
+			</list>
+
+			<Item>-</Item>
+
+			<Item>Press (B) to Exit this menu.</Item>
+		</list>
+
+	</Menu>
+</UnleashX>

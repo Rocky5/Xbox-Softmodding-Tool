@@ -1,0 +1,121 @@
+<Skin name="Softmod">
+	<Information>
+		<Author>Rocky5</Author>
+		<Copyright>2016</Copyright>
+		<Version>1 Pre Release</Version>
+	</Information>
+	<IntroMovie/>
+	<FileManager SafeBorder="False" DrawBorder="False">
+		<BackGround/>
+	</FileManager>
+	<LoadingScreen ShowInfo="False">
+		<BackGround>..\skin files\images\loading.png</BackGround>
+	</LoadingScreen>
+	<Main Globe="False" Orb="False" Fog="False">
+		<BackGround EnableAudio="False">..\skin files\images\background.png</BackGround>
+		<Cellwall/>
+		<Orb/>
+		<Icon/>
+		<Menu Horizontal="False" Smooth="True" Align="Middle" ShowIcon="False" Rotate="False" ShowArrows="False" Scroll="1">
+			<Position Top="0" Left="0" Width="0" Height="0" Fixed="False" FixAt="0" MaxItem="12"/>
+			<Font>..\skin files\fonts\font1.xpr</font>
+			<itempos Top="299" Left="71" Width="499" Align="Middle">Label 1</itempos>
+			<itempos Top="319" Left="71" Width="499" Align="Middle">Label 2</itempos>
+			<itempos Top="339" Left="71" Width="499" Align="Middle">Label 3</itempos>
+			<itempos Top="359" Left="71" Width="499" Align="Middle">Label 4</itempos>
+			<itempos Top="379" Left="71" Width="499" Align="Middle">Label 5</itempos>
+			<itempos Top="399" Left="71" Width="499" Align="Middle">Label 6</itempos>
+			<Preview EnableAudio="False" Top="0" Left="0" Width="0" Height="0" />
+		</Menu>
+		<InfoFont>..\skin files\fonts\font1.xpr</InfoFont>
+		<!-- ------------------ -->
+		<!--    Colour Pallet   -->
+		<!-- ------------------ --
+		<Text zindex="9" Top="0" Left="9" Width="82" Align="Middle" ScaleX="75" ScaleY="75" Color="0xff000000" Source="Colour Pallet"/>
+		<Shape zindex="9" Type="Rectangle" Top="19" Left="9" Width="82" Height="12" BorderColor="" BackColor="0xff000000"/>
+		<Shape zindex="10" Type="Rectangle" Top="20" Left="10" Width="10" Height="10" BorderColor="" BackColor="0xff626473"/>
+		<Shape zindex="10" Type="Rectangle" Top="20" Left="20" Width="10" Height="10" BorderColor="" BackColor="0xff4c4d58"/>
+		<Shape zindex="10" Type="Rectangle" Top="20" Left="30" Width="10" Height="10" BorderColor="" BackColor="0xff3a3a46"/>
+		<Shape zindex="10" Type="Rectangle" Top="20" Left="40" Width="10" Height="10" BorderColor="" BackColor="0xffaee239"/>
+		<Shape zindex="10" Type="Rectangle" Top="20" Left="50" Width="10" Height="10" BorderColor="" BackColor="0xffafb2ce"/>
+		<Shape zindex="10" Type="Rectangle" Top="20" Left="60" Width="10" Height="10" BorderColor="" BackColor="0x00626473"/>
+		<Shape zindex="10" Type="Rectangle" Top="20" Left="70" Width="10" Height="10" BorderColor="" BackColor="0x00de8c86"/>
+		<Shape zindex="10" Type="Rectangle" Top="20" Left="80" Width="10" Height="10" BorderColor="" BackColor="0x0086d7de"/>
+		<!-- ------------------ -->
+		<!-- GUI Elements start -->
+		<!-- ------------------ -->
+		<!-- Logos at the top of the screen -->
+		<Image zindex="3" Top="28" Left="154" Width="334" Height="55">..\skin files\images\Xbox Logo.png</image>
+		<Image zindex="3" Top="89" Left="202" Width="239" Height="23">..\skin files\images\Softmodding Tool.png</image>
+		<!-- List Background -->
+		<Shape zindex="1" Type="Rectangle" Top="130" Left="71" Width="498" Height="298" BorderColor="0xff4c4d58" BackColor="0xbf626473"/>
+		<!--  -->
+		<Text zindex="3" Top="5" Left="5" Width="498" Align="Left" ScaleX="70" ScaleY="70" Color="0xffafb2ce" Source="Installer: v$SkinVersion$"/>
+		<Text zindex="3" Top="149" Left="71" Width="499" Align="Middle" ScaleX="100" ScaleY="100" Color="0xffaee239" Source="Quick Update Installer"/>
+		<Text zindex="3" Top="169" Left="71" Width="499" Align="Middle" ScaleX="100" ScaleY="100" Color="0xffaee239" Source="Thank you for choosing the 2016 Softmodding Tool."/>
+		<Text zindex="3" Top="189" Left="71" Width="499" Align="Middle" ScaleX="100" ScaleY="100" Color="0xffaee239" Source="If you have any feedback or bugs, please let me"/>
+		<Text zindex="3" Top="219" Left="71" Width="499" Align="Middle" ScaleX="100" ScaleY="100" Color="0xffaee239" Source="know via theisozone forums. Thank you."/>
+		<Text zindex="3" Top="239" Left="71" Width="499" Align="Middle" ScaleX="100" ScaleY="100" Color="0xffaee239" Source="With this softmod, the process is simple &amp; pain free."/>
+		<Image zindex="3" Top="10" Left="590" Width="42" Height="42" Source="GameIcon"/>
+		<!-- (A) Select (B) Back section -->
+		<Shape zindex="1" Type="Rectangle" Top="427" Left="71" Width="165" Height="25" BorderColor="0x00000000" BackColor="0xff3a3a46"/>
+		<Shape zindex="1" Type="Rectangle" Top="427" Left="71" Width="148" Height="45" BorderColor="0x00000000" BackColor="0xff3a3a46"/>
+		<Shape zindex="1" Type="triangle" Top="450" Left="201" Width="35" Height="21" BorderColor="0x00000000" BackColor="0xff3a3a46" Direction="down"/>
+		<Image zindex="3" Top="430" Left="95" Width="112" Height="38">..\skin files\images\buttons.png</image>		
+		<!-- ---------------- -->
+		<!-- GUI Elements End -->
+		<!-- ---------------- -->
+	</Main>
+	<ColorScheme>
+		<WINDOWBACKCOLOR>0xffaee239</WINDOWBACKCOLOR>
+		<WINDOWFORECOLOR>0xff000000</WINDOWFORECOLOR>
+		<!-- ------------------------------------------------------ -->
+		<AMBIENT_FOGCOLOR>0x00000000</AMBIENT_FOGCOLOR>
+		<AMBIENT_SKYCOLOR>0x00000000</AMBIENT_SKYCOLOR>
+		<AMBIENT_CELLCOLOR>0x00000000</AMBIENT_CELLCOLOR>
+		<!-- ------------------------------------------------------ -->
+		<CAPTION_TEXTCOLOR>0xffaee239</CAPTION_TEXTCOLOR>
+		<CAPTION_BACKCOLOR>0x00626473</CAPTION_BACKCOLOR>
+		<!-- ------------------------------------------------------ -->
+		<DIALOG_BORDERCOLOR>0xff3a3a46</DIALOG_BORDERCOLOR>
+		<DIALOG_BACKCOLOR>0xdd626473</DIALOG_BACKCOLOR>
+		<DIALOG_INNER_BORDERCOLOR>0xff3a3a46</DIALOG_INNER_BORDERCOLOR>
+		<DIALOG_INNER_BACKCOLOR>0xbb3a3a46</DIALOG_INNER_BACKCOLOR>
+		<DIALOG_TEXTCOLOR>0xffafb2ce</DIALOG_TEXTCOLOR>
+		<DIALOG_DISABLEDTEXT>0xff626473</DIALOG_DISABLEDTEXT>
+		<!-- ------------------------------------------------------ -->
+		<OPTION_TEXTCOLOR>0xffafb2ce</OPTION_TEXTCOLOR>
+		<OPTION_ACTIVETEXTCOLOR>0xffaee239</OPTION_ACTIVETEXTCOLOR>
+		<OPTION_ACTIVEBACKCOLOR>0xff3a3a46</OPTION_ACTIVEBACKCOLOR>
+		<!-- ------------------------------------------------------ -->
+		<BUTTON_BORDERCOLOR>0xff3a3a46</BUTTON_BORDERCOLOR>
+		<BUTTON_TEXTCOLOR>0xffafb2ce</BUTTON_TEXTCOLOR>
+		<BUTTON_BACKCOLOR>0xff626473</BUTTON_BACKCOLOR>
+		<BUTTON_ACTIVETEXTCOLOR>0xffaee239</BUTTON_ACTIVETEXTCOLOR>
+		<BUTTON_ACTIVEBACKCOLOR>0xff3a3a46</BUTTON_ACTIVEBACKCOLOR>
+		<!-- ------------------------------------------------------ -->
+		<KB_KEYBG_HIGHLIGHT>0xff626473</KB_KEYBG_HIGHLIGHT>
+		<KB_KEYBG_DISABLED>0xff3a3a46</KB_KEYBG_DISABLED>
+		<KB_KEY_PRESSED>0xff3a3a46</KB_KEY_PRESSED>
+		<KB_KEY_NORMAL>0xff3a3a46</KB_KEY_NORMAL>
+		<KB_KEY_DISABLED>0xffafb2ce</KB_KEY_DISABLED>
+		<KB_KEY_ACTIVEBORDER>0xffaee239</KB_KEY_ACTIVEBORDER>
+		<KB_KEY_TEXTCOLOR>0xff3a3a46</KB_KEY_TEXTCOLOR>
+		<KB_KEY_TEXTBACKCOLOR>0xffaee239</KB_KEY_TEXTBACKCOLOR>
+		<KB_KEY_TEXTBORDERCOLOR>0xffaee239</KB_KEY_TEXTBORDERCOLOR>
+		<!-- ------------------------------------------------------ -->
+		<MENU_TEXTCOLOR>0xffafb2ce</MENU_TEXTCOLOR>
+		<MENU_ACTIVETEXTCOLOR>0xffde8c86</MENU_ACTIVETEXTCOLOR>
+		<MENU_BORDERCOLOR>0x00000000</MENU_BORDERCOLOR>
+		<MENU_BACKCOLOR>0x00000000</MENU_BACKCOLOR>
+		<MENU_ACTIVEBACKCOLOR>0x00000000</MENU_ACTIVEBACKCOLOR>
+		<MENU_ACTIVEBORDERCOLOR>0x00000000</MENU_ACTIVEBORDERCOLOR>
+		<!-- ------------------------------------------------------ -->
+		<MMACTIVEFORECOLOR>0xffB0171F</MMACTIVEFORECOLOR>
+		<MMFORECOLOR>0xffB0171F</MMFORECOLOR>
+		<MMOFFFORECOLOR>0xffB0171F</MMOFFFORECOLOR>
+		<MMDARKBARCOLOR>0xffB0171F</MMDARKBARCOLOR>
+		<MMLIGHTBARCOLOR>0xffB0171F</MMLIGHTBARCOLOR>
+		<MMDARKBACKCOLOR>0xffafb2ce</MMDARKBACKCOLOR>
+	</ColorScheme>
+</Skin>

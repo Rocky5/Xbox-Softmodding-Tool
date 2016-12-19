@@ -1,1 +1,1 @@
-Version=1 Pre Release
+Version=1

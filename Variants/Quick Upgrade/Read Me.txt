@@ -19,45 +19,7 @@ If you are running my 2014 Softmod or my 2016 softmod please backup your dashboa
 You can restore your dashboard after the upgrade, using the same procedure. Unfortunately due to this being the upgrade & not the update installer I have to replace all the files in C, & as a result you would lose your dashboard if you did not back it up first.
 
 -- NKPatcher Settings Menu --
-Applications > NKPatcher Setting > Dashboards > Settings
+Applications > NKPatcher Setting > Dashboards > Backup, Restore and Move
 
 -- Dashboard Settings Menu --
 Backup & Restore > C Dashboard
-
-
-Change Log:
-
-Softmod v1.0:
-
-1)	Now set the correct Kernel font for the Xbox during the softmod. Full proof now, its all automated.
-2)	Changed the ShadowC partition to a partition number XBMC or other Dashboards cant see or access.
-3)	Updated Dashloader to reflect the above changes.
-4)	Fixed issues with UnleashX failing to allow FTP transfers.
-5)	NKPatcher settings menu & skin rearranged.
-6)	Added a custom splash for UnleashX.
-7)	Fixed an NKPatcher compile error "LDR1 space error on kernel 3499"
-8)	Streamlined the Softmod installation.
-9)	Now uses my custom skin after the Softmod is installed.
-10)	Updated Dashloader with better logging.
-11)	Added setting indicators for the NKPatcher settings.
-	(now you know what you have selected)
-12)	I now use my EEPROM Backuperer to do the eeprom backup/virtual eeprom installation.
-13)	Added the option to backup the eeprom via the NKPatcher Settings.
-14)	Advanced Users Only - Added support for a custom dashboard path.
-	(if you cannot find the default.cfg, this is not for you)
-15)	Added dualbooting support. Defaults to "E:\Alt Dashboard\"
-	(Custom batch script for windows, to build your own dualboot.settings file, FTP built in & simple to use)
-16)	New Dualbooting menu in NKPatcher Settings.
-17)	Updated the Skin fonts.
-18)	Added a Homebrew sub menu to all dashboards.
-19)	Updated the Ernie & NKPatcher Clock time to 01/01/2016 12:00
-20)	Folderized the softmod save directory, a hell of a lot cleaner looking.
-21)	Moved to NKPatcher 10 for the NoVC sections, allows a longer dashboard path. (NKPatcher 11 is limited to 80 characters)
-22)	Forgot to disable the EEPROM Protection when Virtual EEPROM was disabled :/
-23)	Moved the dashboard settings to its own tools folder, resides inside the nkpatcher settings & added more dashboard paths & enabled indicators.
-24)	Added a few more dashboard locations. C:\XBMC\, E:\XBMC\ & C:\XBMC.xbe
-25)	Now when you exit NKPatcher Settings, it doesn't require a restart :)
-26)	Added the Unleashx Settings to NKPatcher Settings.
-27)	Hex edited UnleashX to support 480p in the splash screen.
-28)	Modularized NKPatcher Settings.
-**)	Other improvements to the backend of the softmod, as well as fixes & stuff I have probably forgot.

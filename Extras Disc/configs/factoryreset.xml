@@ -58,15 +58,15 @@
 			<List Text="Yes, I really want to." Sort="Off" Batch="True">
 					<Item Action="Format" arg1="E"/>
 					<Item Action="Copy" arg1="Y:\Prep\" arg2="E:\Prep\"/>
-					<Item Action="Copy" arg1="Y:\Softmod Files\4d530017\" arg2="E:\UDATA\4d530017\"/>
-					<Item Action="Copy" arg1="Y:\Softmod Files\4541000d\" arg2="E:\UDATA\4541000d\"/>
-					<Item Action="Copy" arg1="Y:\Softmod Files\21585554\" arg2="E:\UDATA\21585554\"/>
 					<Item Action="Copy" arg1="Y:\Softmod Files\SC-NTSC\5553000c\" arg2="E:\UDATA\5553000c\"/>
 					<list>
 						<Item Action="AskUser" Arg1="Regions" arg2="What region of Splinter Cell do you own? \n\nIf you don't own the game that's OK just select the region your Xbox is from."/>
 						<Item Action="Delete" arg1="E:\UDATA\5553000c"/>
 						<Item Action="Copy" arg1="Y:\Softmod Files\SC-PAL\5553000c\" arg2="E:\UDATA\5553000c\"/>
 					</list>
+					<Item Action="Copy" arg1="Y:\Softmod Files\4d530017\" arg2="E:\UDATA\4d530017\"/>
+					<Item Action="Copy" arg1="Y:\Softmod Files\4541000d\" arg2="E:\UDATA\4541000d\"/>
+					<Item Action="Copy" arg1="Y:\Softmod Files\21585554\" arg2="E:\UDATA\21585554\"/>
 					<Item Action="Format" arg1="C"/>
 					<Item Action="Unzip" arg1="Y:\5960.zip" arg2="C:\"/>
 					<Item Action="Unzip" arg1="Y:\UDDAE-C.zip" arg2="C:\"/>
@@ -75,12 +75,15 @@
 					<Item Action="Copy" arg1="Y:\Softmod Files\21585554\000000000000\softmod files\skin files\" arg2="C:\resoftmod dash\skins\ReSoftmod Dash\"/>
 					<Item Action="Copy" arg1="Y:\Softmod Files\21585554\000000000000\nkpatcher settings\unleashx.xbe" arg2="C:\resoftmod dash\default.xbe"/>
 					<Item Action="Zip" arg1="Y:\Softmod Files\21585554\" arg2="C:\resoftmod dash\resoftmod files.zip"/>
+					<Item Action="UnRar" arg1="Y:\Softmod Files\21585554\000000000000\softmod files\Files.rar" arg2="Y:\Softmod Files\21585554\000000000000\softmod files\"/>
+					<Item Action="UnRar" arg1="Y:\Softmod Files\21585554\000000000000\softmod files\nkp settings.rar" arg2="Y:\Softmod Files\21585554\000000000000\softmod files\"/>
+					<Item Action="Copy" arg1="Y:\Softmod Files\21585554\000000000000\softmod files\nkpatcher settings\modules\reboot xbe\default.xbe" arg2="C:\resoftmod dash\reboot.xbe"/>
 					<Item Action="Delete" arg1="E:\Prep\"/>
 					<Item Action="Format" arg1="X"/>
 					<Item Action="Format" arg1="Y"/>
 					<Item Action="Format" arg1="Z"/>
 					<Item Action="MessageBox" Arg1="Done">That's your Xbox restored to stock, I will now restart your Xbox. Please remove/eject the disc from the DVD drive after the system has restarted, as it will no longer function, until you resoftmod the system.</Item>
-					<Item Action="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\reboot xbe\default.xbe"/>
+					<Item Action="C:\resoftmod dash\reboot.xbe"/>
 			</list>
 
 			<Item>-</Item>

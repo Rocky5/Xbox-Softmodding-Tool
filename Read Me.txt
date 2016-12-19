@@ -1,5 +1,5 @@
 
-	Read Me - 2016 Softmodding Tool v1 Pre Release Created by Rocky5
+	Read Me - 2016 Softmodding Tool v1 Created by Rocky5
 
 
 	Main Features:

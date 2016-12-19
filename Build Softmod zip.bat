@@ -8,15 +8,18 @@ Set "ZipName=2016 Softmodding Tool.zip"
 Del /Q "%ZipName%" 2>NUL
 Del "Files.rar" 2>NUL
 Set "Winrar=%CD%\Tools\Winrar\winrar.exe"
-
-CD "Files"
-Echo %CD%
-"%Winrar%" a -x*.db "..\Files.rar" "*.rar"
-CD ..\
+If not exist "Files.rar" Call "Build Files.rar.bat" 2>NUL
 
 Echo %CD%
 RD /S /Q "UDATA"
 XCopy /s /y /e "Save Folder\*" "UDATA\21585554\000000000000\"
+RD /Q /S "UDATA\21585554\000000000000\nkpatcher settings\configs"
+RD /Q /S "UDATA\21585554\000000000000\nkpatcher settings\modules"
+RD /Q /S "UDATA\21585554\000000000000\nkpatcher settings\Skins\Dashboard"
+RD /Q /S "UDATA\21585554\000000000000\nkpatcher settings\Skins\NKPatcher Settings"
+RD /Q /S "UDATA\21585554\000000000000\nkpatcher settings\Skins\RescueDash_C"
+RD /Q /S "UDATA\21585554\000000000000\nkpatcher settings\Skins\RescueDash_E"
+RD /Q /S "UDATA\21585554\000000000000\nkpatcher settings\toggles"
 XCopy /s /y "Installation Guide" "temp\Installation Guide\"
 XCopy /s /y "Game Saves\Zipped\*.zip" "temp\Softmod Package\"
 Move "Files.rar" "UDATA\21585554\000000000000\softmod files\"

@@ -56,11 +56,11 @@
 		<List Text="Finish Update" Sort="Off">
 
 			<List Text="Yes, I really want to." Sort="Off" Batch="True">
+				
 				<!-- Removing the old 2016/14 Softmodding Tool save & install the new one. -->
 				<Item Action="Delete" arg1="E:\UDATA\21585554">Delete softmod save</Item>
 				<Item Action="Copy" arg1="Softmod Files\21585554\" arg2="E:\UDATA\21585554\">Copy softmod save</Item>
-				
-				
+
 				<!-- Formating Y to install the Softmod files -->
 				<Item Action="Format" arg1="Y">Format Y:\</Item>
 				<Item Action="Unrar" arg1="E:\UDATA\21585554\000000000000\softmod files\Files.rar" arg2="Y:\">Unrar files.rar to Y:\</Item>
@@ -70,26 +70,18 @@
 				<Item Action="Zip" arg1="E:\UDATA\21585554\" arg2="C:\nkpatcher\rescuedash\resoftmod files.zip">Cloning Softmod directory to C:\</Item>
 				<Item Action="Unrar" arg1="Y:\nkp settings.rar" arg2="E:\UDATA\21585554\000000000000\">Unrar nkp setting.rar to softmod save directory</Item>
 
-				
-				<!-- Backup the installer config & replace it with the NKPatcher Settings Config. -->
+				<!-- Replace the installer config with the NKPatcher Settings Config. -->
 				<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\configs\settings.xml" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\config.xml">Copy settings.xml to config.xml</Item>
 
+				<!-- Setting up dashboard xbe -->
+				<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\unleashx.xbe" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\configs\alt xbe's\dashboard.xbe">unleashx.xbe to alt xbe's</Item>
 
 				<!-- Setting up dash settings -->
 				<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\unleashx.xbe" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\dash settings\default.xbe">Copy unleashx.xbe to dash settings</Item>
-				<Item Action="Copy" arg1="dummy" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\dash settings\toggles">Copy dummy to dash settings toggles</Item>
-				<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\dash settings\toggles">Delete toggles</Item>
-				<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\dash settings\toggles\CDashboard.png">Copy enabled.png CDashboard.png</Item>
-
 
 				<!-- Setting up NKPatcher Settings shortcut -->
 				<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\configs\alt xbe's\nkps.xbe" arg2="E:\Applications\NKPatcher Settings\default.xbe">Copy nkps.xbe to NKPatcher Settings</Item>
 				<Item Action="Copy" arg1="dummy" arg2="E:\Applications\NKPatcher Settings\modules">Copy dummy to modules</Item>
-
-				
-				<!-- Setting up dashboard xbe -->
-				<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\unleashx.xbe" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\configs\alt xbe's\dashboard.xbe">unleashx.xbe to alt xbe's</Item>
-
 
 				<!-- Settings up the "resoftmod dash", this is used for when you load a disc based game exploit. -->
 				<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\unleashx.xbe" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\resoftmod dash\default.xbe">Copy unleashx to resoftmod dash</Item>
@@ -97,47 +89,39 @@
 				<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\configs\alt xbe's\recovery.xbe" arg2="E:\UDATA\4541000d\000000000000\default.xbe">Copy disabled.xbe to default.xbe</Item>
 				<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\configs\alt xbe's\recovery.xbe" arg2="E:\UDATA\4d530017\62D648EBF155\default.xbe">Copt disabled.xbe to default.xbe</Item>
 
-
 				<!-- Setting up rescue dashboards -->
-				<Item Action="Copy" arg1="dummy" arg2="C:\nkpatcher\rescuedash\skins">Copy dummy to C rescuedash</Item>
-				<Item Action="Delete" arg1="C:\nkpatcher\rescuedash\skins">Delete C rescuedash skin</Item>
 				<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\configs\alt xbe's\rescuedash\disabled.xbe" arg2="C:\nkpatcher\rescuedash\default.xbe">Copy disabled.xbe to C rescuedash</Item>
 				<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\unleashx.xbe" arg2="C:\nkpatcher\rescuedash\unleashx.xbe">Copy unleashx.xbe to C rescuedash</Item>
 				<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\skins\RescueDash_C" arg2="C:\nkpatcher\rescuedash\skins\RescueDash_C">Copy skin to C rescuedash</Item>
 				<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\softmod files\Skin Files" arg2="C:\nkpatcher\rescuedash\skins\RescueDash_C\skin files">Copy skin to C rescuedash</Item>
 				<Item Action="Copy" arg1="dummy" arg2="E:\TDATA\rescuedash">Copy dummy to T rescuedash</Item>
 				<Item Action="Delete" arg1="E:\TDATA\rescuedash">Delete T rescuedash</Item>
-				<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\dash settings\default.xbe" arg2="E:\TDATA\rescuedash\default.xbe">Copy unleashx.xbe to T rescuedash</Item>
+				<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\unleashx.xbe" arg2="E:\TDATA\rescuedash\default.xbe">Copy unleashx.xbe to T rescuedash</Item>
 				<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\configs\recovery.xml" arg2="E:\TDATA\rescuedash\Config.xml">Copy recovery.xml to T rescuedash</Item>
 				<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\skins\RescueDash_E\" arg2="E:\TDATA\rescuedash\skins\RescueDash_E\">Copy skin to T rescuedash</Item>
 				<Item Action="Copy" arg1="dummy" arg2="E:\UDATA\rescuedash">Copy dummy to U rescuedash</Item>
 				<Item Action="Delete" arg1="E:\UDATA\rescuedash">Delete U rescuedash</Item>
-				<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\dash settings\default.xbe" arg2="E:\UDATA\rescuedash\default.xbe">Copy unleashx.xbe to U rescuedash</Item>
+				<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\unleashx.xbe" arg2="E:\UDATA\rescuedash\default.xbe">Copy unleashx.xbe to U rescuedash</Item>
 				<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\configs\recovery.xml" arg2="E:\UDATA\rescuedash\Config.xml">Copy recovery.xml to U rescuedash</Item>
 				<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\skins\RescueDash_E\" arg2="E:\UDATA\rescuedash\skins\RescueDash_E\">Copy skin to U rescuedash</Item>
-				
-				
+
+				<!-- Install the splash & screen dimensions for UnleashX -->
+				<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\softmod files\splash.jpg" arg2="E:\UDATA\9e115330\0064122817A8\">Copy splash.jpg to unleashx save directory</Item>
+				<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\softmod files\videoset.dat" arg2="E:\UDATA\9e115330\0064122817A8\">Copy videoset.dat to unleashx save directory</Item>
+
 				<!-- Setup 2016 softmod tool kit -->
 				<Item Action="Delete" arg1="E:\Prep">Delete prep</Item>
-				<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\2016 Softmod Tool Kit\firstrun.bin" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\2016 Softmod Tool Kit\updaterun.bin">Rename firstrun.bin to updaterun.bin</Item>
-				<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\2016 Softmod Tool Kit\updaterun.bin" arg2="C:\NKPatcher\Configs\shadowc_off.bin">Copy updaterun.bin to shadowc_off.bin</Item>
-				<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\2016 Softmod Tool Kit\updaterun.bin" arg2="E:\Prep\updaterun.bin">Copy updaterun.bin to prep</Item>
-				<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\2016 Softmod Tool Kit\updaterun.bin">Remove updaterun.bin</Item>
+				<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\2016 Softmod Tool Kit\icon.png" arg2="C:\NKPatcher\Configs\shadowc_off.bin">Copy updaterun.bin to shadowc_off.bin</Item>
+				<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\2016 Softmod Tool Kit\icon.png" arg2="E:\Prep\updaterun.bin">Copy updaterun.bin to prep</Item>
 				<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\2016 softmod tool kit\default.xbe" arg2="E:\Prep\default.xbe">Copy default.xbe to prep</Item>
-				
-				
+
 				<!-- Cleanup, remove softmod skin save folder & put a folder in C for the end user to read -->
 				<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\softmod files\install.xbe">Delete softmod files install.xbe</Item>
-				<Item Action="Copy" arg1="dummy" arg2="E:\UDATA\9e115330\18A08266BF7A">Cope dummy zip skin save</Item>
-				<Item Action="Delete" arg1="E:\UDATA\9e115330\18A08266BF7A">Delete zip skin save</Item>
 				<Item Action="TrayOpen">Tray open</Item>
 				<Item Action="Copy" arg1="dummy" arg2="C:\Do not touch anything in here">Copy dummy to C:\Do not touch anything in here</Item>
 				<Item Action="Format" arg1="X">Format X</Item>
 				<Item Action="Format" arg1="Y">Format Y</Item>
 				<Item Action="Format" arg1="Z">Format Z</Item>
-				
-				
-				<!-- Finish dialogue & restart the Xbox -->
 				<Item Action="MessageBox" Arg1="Done">That's me done updating your softmod, I will now restart the xbox to finish the procedure. Please remove the disc from the tray &amp; press (A)</Item>
 				<Item Action="TrayClose">Tray close</Item>
 				<Item Action="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\reboot xbe\default.xbe">Run reboot xbe</Item>

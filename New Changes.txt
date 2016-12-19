@@ -1,3 +1,15 @@
+Update: Dec 19 2016
+
+Updated the version to v1, as its basically done.
+Streamlined the softmod package, by zipping none critical files and also reducing the file size of the images used.
+Updated the rest of the config.xml files to use the new installation method.
+Renamed the source folder for the 2016 Softmod Tool Kit folder.
+Created a new batch files for building the variant zips and also updated the batch files, as I now rar the files I need, makes things easier to edit.
+Added a new variant Quick Update.
+Renaming and removal of some directories.
+Probably more.
+
+
 Update: Dec 16 2016
 
 Fixed some spelling mistakes :\

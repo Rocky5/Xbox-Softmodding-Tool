@@ -6,5 +6,5 @@ Set "Winrar=%CD%\Tools\Winrar\winrar.exe"
 
 Del "Installation Guide.rar"
 CD "Installation Guide"
-"%winrar%" a "..\Installation Guide.rar" "*"
-"%winrar%" a "..\Installation Guide.rar" "files\*"
+"%winrar%" a -x*.db -m5 "..\Installation Guide.rar" "*"
+"%winrar%" a -x*.db -m5 "..\Installation Guide.rar" "files\*"

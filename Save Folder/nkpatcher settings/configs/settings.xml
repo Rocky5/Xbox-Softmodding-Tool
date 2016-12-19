@@ -221,6 +221,13 @@
 						<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font\generic.png"/>
 						<Item Action="MessageBox" Arg1="Info">Changes will take effect on next reboot.</Item>
 					</List>
+<!-- 					
+					<List Text="Restore Generic Font" Sort="Off" Batch="True">
+						<Item Action="MessageBox" Arg1="Info">I will need to exit nkpatcher settings for the install to get done. Changes will take effect on next reboot.</Item>
+						<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\savemeta.xbx" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\2016 softmod tool kit\Restore_Font.enabled"/>
+						<Item Action="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\2016 softmod tool kit\default.xbe">Restart</Item>
+					</List>
+-->
 				</List>
 				<List Text="XTF Font Delay Options" Sort="Off">
 					<List Text="Information" Sort="Off" Batch="True">
