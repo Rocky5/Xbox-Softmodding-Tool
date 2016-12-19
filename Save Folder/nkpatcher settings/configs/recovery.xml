@@ -68,7 +68,10 @@
 		<List Text="Restore C Dashboard" Sort="Off">
 			<List Text="Yes please. I'm a numpty & need your help." Sort="Off" Batch="True">
 				<list>
-					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\Skins\Dashboard\" arg2="C:\Dashboard\Skins\Softmod\"/>
+					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\Skins\Dashboard\skin.xml" arg2="C:\Dashboard\Skins\Softmod\"/>
+					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\Skins\Dashboard\UXSplash.jpg" arg2="C:\Dashboard\Skins\Softmod\"/>
+					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\Skins\Dashboard\skinwide.xml" arg2="C:\Dashboard\Skins\Softmod Wide\skin.xml"/>
+					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\Skins\Dashboard\UXSplash.jpg" arg2="C:\Dashboard\Skins\Softmod Wide\"/>
 					<Item Action="Copy" Arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\configs\alt xbe's\dashboard.xbe" arg2="C:\Dashboard\default.xbe"/>
 					<Item Action="Copy" Arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\configs\dash.xml" arg2="C:\Dashboard\Config.xml"/>
 					<Item Action="Copy" arg1="dummy" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\dash settings\toggles"/>
@@ -86,7 +89,10 @@
 		<List Text="Restore E Dashboard" Sort="Off">
 			<List Text="Yes please. I'm a numpty & need your help." Sort="Off" Batch="True">
 				<list>
-					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\Skins\Dashboard\" arg2="E:\Dashboard\Skins\Softmod\"/>
+					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\Skins\Dashboard\skin.xml" arg2="E:\Dashboard\Skins\Softmod\"/>
+					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\Skins\Dashboard\UXSplash.jpg" arg2="E:\Dashboard\Skins\Softmod\"/>
+					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\Skins\Dashboard\skinwide.xml" arg2="E:\Dashboard\Skins\Softmod Wide\skin.xml"/>
+					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\Skins\Dashboard\UXSplash.jpg" arg2="E:\Dashboard\Skins\Softmod Wide\"/>
 					<Item Action="Copy" Arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\configs\alt xbe's\dashboard.xbe" arg2="E:\Dashboard\default.xbe"/>
 					<Item Action="Copy" Arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\configs\dash.xml" arg2="E:\Dashboard\Config.xml"/>
 					<Item Action="Copy" arg1="dummy" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\dash settings\toggles"/>

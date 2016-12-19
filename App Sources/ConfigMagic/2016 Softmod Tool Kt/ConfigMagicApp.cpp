@@ -93,6 +93,7 @@
 #define DashboardXBE				NKPSDir					"configs\\alt xbe's\\dashboard.xbe"
 #define DashboardXML				NKPSDir					"configs\\dash.xml"
 #define DashboardSkinXML			NKPSDir					"Skins\\Dashboard\\skin.xml"
+#define DashboardSkinwideXML		NKPSDir					"Skins\\Dashboard\\skinwide.xml"
 #define DashboardSkinSplash			NKPSDir					"Skins\\Dashboard\\UXSplash.jpg"
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -196,10 +197,13 @@ HRESULT ConfigMagicApp::Initialize()
 		CreateDirectory("C:\\Dashboard", NULL);
 		CreateDirectory("C:\\Dashboard\\Skins", NULL);
 		CreateDirectory("C:\\Dashboard\\Skins\\Softmod", NULL);
+		CreateDirectory("C:\\Dashboard\\Skins\\Softmod Wide", NULL);
 		CopyFile(DashboardXBE, "C:\\Dashboard\\default.xbe", NULL);
 		CopyFile(DashboardXML, "C:\\Dashboard\\config.xml", NULL);
 		CopyFile(DashboardSkinXML, "C:\\Dashboard\\Skins\\Softmod\\skin.xml", NULL);
+		CopyFile(DashboardSkinwideXML, "C:\\Dashboard\\Skins\\Softmod Wide\\skin.xml", NULL);
 		CopyFile(DashboardSkinSplash, "C:\\Dashboard\\Skins\\Softmod\\UXSplash.jpg", NULL);
+		CopyFile(DashboardSkinSplash, "C:\\Dashboard\\Skins\\Softmod Wide\\UXSplash.jpg", NULL);
 		XKUtils::XBOXPowerCycle();
 	}
 	else
