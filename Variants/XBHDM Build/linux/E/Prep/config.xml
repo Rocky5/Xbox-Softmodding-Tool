@@ -123,20 +123,18 @@
 			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\softmod files\videoset.dat" arg2="E:\UDATA\9e115330\0064122817A8\">Copy videoset.dat to unleashx save directory</Item>
 
 			<!-- Setup 2016 softmod tool kit -->
-			<Item Action="Delete" arg1="E:\Prep">Delete prep</Item>
-			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\2016 Softmod Tool Kit\icon.png" arg2="C:\NKPatcher\Configs\shadowc_off.bin">Copy firstrun.bin to shadowc_off.bin</Item>
-			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\2016 Softmod Tool Kit\icon.png" arg2="E:\Prep\firstrun.bin">Copy firstrun.bin to prep</Item>
-			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\2016 softmod tool kit\default.xbe" arg2="E:\Prep\default.xbe">Copy default.xbe to prep</Item>
+			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\2016 Softmod Tool Kit\icon.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\2016 Softmod Tool Kit\firstrun.bin">Copy updaterun.bin to prep</Item>
 
 			<!-- Cleanup, remove softmod skin save folder & put a folder in C for the end user to read -->
 			<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\softmod files\install.xbe">Delete softmod files install.xbe</Item>
 			<Item Action="Copy" arg1="dummy" arg2="C:\Do not touch anything in here">Copy dummy to C:\Do not touch anything in here</Item>
+			<Item Action="Delete" Arg="E:\Prep">Remove Prep</Item>
 			<Item Action="Format" arg1="X">Format X</Item>
 			<Item Action="Format" arg1="Y">Format Y</Item>
 			<Item Action="Format" arg1="Z">Format Z</Item>
 			<Item Action="MessageBox" Arg1="Important Info">Your EEPROM backup will be placed in \n\n"E:\Backups\EEPROM\" \n\nCopy the EEPROM folder to your PC once the dashboard has loaded and keep it safe.</Item>
 			<Item Action="MessageBox" Arg1="Done">So that's you all softmodded. See, I told you it was painless ;) but now I need to power cycle the Xbox, so take the disc out when the Xbox starts up again.</Item>
-			<Item Action="E:\Prep\default.xbe">Run 2016 softmod tool kit</Item>
+			<Item Action="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\2016 softmod tool kit\default.xbe">Run 2016 softmod tool kit</Item>
 		</list>
 
 	</list>
