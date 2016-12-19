@@ -129,7 +129,8 @@
 			<Item Action="Format" arg1="X">Format X</Item>
 			<Item Action="Format" arg1="Y">Format Y</Item>
 			<Item Action="Format" arg1="Z">Format Z</Item>
-			<Item Action="MessageBox" Arg1="Done">That's me done updating your softmod, I will now restart the xbox to finish the procedure. Please remove the disc from the tray &amp; press (A)</Item>
+			<Item Action="MessageBox" Arg1="Done">So that's you all updated. But now I need to restart the Xbox twice.</Item>
+			<Item Action="MessageBox" Arg1="Important Info">Your EEPROM backup will be placed in \n\n"E:\Backups\EEPROM\" \n\nCopy the EEPROM folder to your PC once the dashboard has loaded and keep it safe.</Item>
 			<Item Action="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\reboot xbe\default.xbe">Run reboot xbe</Item>
 		</list>
 
