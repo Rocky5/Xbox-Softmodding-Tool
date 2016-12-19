@@ -123,6 +123,7 @@
 			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\softmod files\videoset.dat" arg2="E:\UDATA\9e115330\0064122817A8\">Copy videoset.dat to unleashx save directory</Item>
 
 			<!-- Setup 2016 softmod tool kit -->
+			<Item Action="Delete" arg1="E:\Prep">Delete prep</Item>
 			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\2016 Softmod Tool Kit\icon.png" arg2="C:\NKPatcher\Configs\shadowc_off.bin">Copy firstrun.bin to shadowc_off.bin</Item>
 			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\2016 Softmod Tool Kit\icon.png" arg2="E:\Prep\firstrun.bin">Copy firstrun.bin to prep</Item>
 			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\2016 softmod tool kit\default.xbe" arg2="E:\Prep\default.xbe">Copy default.xbe to prep</Item>
