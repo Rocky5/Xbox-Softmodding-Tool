@@ -101,6 +101,7 @@
 // Enable/Disable png files
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #define EnabledPNG					NKPSDir					"toggles\\enabled.png"
+#define IconPNG					NKPSDir					"modules\\2016 softmod tool kit\\icon.png"
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
@@ -311,7 +312,7 @@ HRESULT ConfigMagicApp::Initialize()
 				UnleashX_XBE2.write("\x52\x00\x65\x00\x53\x00\x6F\x00\x66\x00\x74\x00\x6D\x00\x6F\x00\x64\x00\x20\x00\x44\x00\x61\x00\x73\x00\x68", 27);
 				UnleashX_XBE2.seekp(2399875);
 				UnleashX_XBE2.write("14", 2);
-				CopyFile("D:\\icon.png", "E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\modules\\resoftmod dash\\icon.png", NULL);
+				CopyFile(IconPNG, "E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\modules\\resoftmod dash\\icon.png", NULL);
 				UnleashX_XBE2.close();
 				
 				std::ofstream UnleashX_XBE3(CRescueDash, std::ios::binary | std::ios::in | std::ios::out);
@@ -332,7 +333,7 @@ HRESULT ConfigMagicApp::Initialize()
 				std::ofstream UnleashX_XBE6(DashSettings, std::ios::binary | std::ios::in | std::ios::out);
 				UnleashX_XBE6.seekp(400);
 				UnleashX_XBE6.write("\x42\x00\x61\x00\x63\x00\x6B\x00\x75\x00\x70\x00\x2C\x00\x20\x00\x52\x00\x65\x00\x73\x00\x74\x00\x6F\x00\x72\x00\x65\x00\x20\x00\x6F\x00\x72\x00\x20\x00\x4D\x00\x6F\x00\x76\x00\x65", 45);
-				CopyFile("D:\\icon.png", "E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\modules\\dash settings\\icon.png", NULL);
+				CopyFile(IconPNG, "E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\modules\\dash settings\\icon.png", NULL);
 				UnleashX_XBE6.close();
 				/**/
 				{
@@ -392,7 +393,7 @@ HRESULT ConfigMagicApp::Initialize()
 				UnleashX_XBE2.write("\x52\x00\x65\x00\x53\x00\x6F\x00\x66\x00\x74\x00\x6D\x00\x6F\x00\x64\x00\x20\x00\x44\x00\x61\x00\x73\x00\x68", 27);
 				UnleashX_XBE2.seekp(2399875);
 				UnleashX_XBE2.write("14", 2);
-				CopyFile("D:\\icon.png", "E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\modules\\resoftmod dash\\icon.png", NULL);
+				CopyFile(IconPNG, "E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\modules\\resoftmod dash\\icon.png", NULL);
 				UnleashX_XBE2.close();
 				
 				std::ofstream UnleashX_XBE3(CRescueDash, std::ios::binary | std::ios::in | std::ios::out);
@@ -413,7 +414,7 @@ HRESULT ConfigMagicApp::Initialize()
 				std::ofstream UnleashX_XBE6(DashSettings, std::ios::binary | std::ios::in | std::ios::out);
 				UnleashX_XBE6.seekp(400);
 				UnleashX_XBE6.write("\x42\x00\x61\x00\x63\x00\x6B\x00\x75\x00\x70\x00\x2C\x00\x20\x00\x52\x00\x65\x00\x73\x00\x74\x00\x6F\x00\x72\x00\x65\x00\x20\x00\x6F\x00\x72\x00\x20\x00\x4D\x00\x6F\x00\x76\x00\x65", 45);
-				CopyFile("D:\\icon.png", "E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\modules\\dash settings\\icon.png", NULL);
+				CopyFile(IconPNG, "E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\modules\\dash settings\\icon.png", NULL);
 				UnleashX_XBE6.close();
 				/**/
 				XKUtils::XBOXReset();
