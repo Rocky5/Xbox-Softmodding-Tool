@@ -57,7 +57,7 @@
 	<Menu>
 
 		<List Text="Disclaimer" Sort="Off" Batch="True">
-			<Item Action="MessageBox" arg1="Read this">This disc is to be used with Rocky5's 2016 Softmodding tool, not doing so could break your softmod or dashboards. You have been warned. I take no responsibility for your actions.</Item>
+			<Item Action="MessageBox" arg1="Read this">This disc is to be used with the 2016 Softmodding tool, not doing so could potentially break your softmod or dashboards. You have been warned. I take no responsibility for your actions.</Item>
 		</List>
 
 		<Item>------------------------------------------</Item>
@@ -442,7 +442,7 @@
 				<Item>XBMC4Kids Options</Item>
 				<List Text="Additional Information" Sort="Off" Batch="True">
 					<Item Action="MessageBox" arg1="">If you would like to find out what this is you can checkout my walk-through on Youtube.</Item>
-					<Item Action="MessageBox" arg1="">Youtube Username = JCRocky5 \n\nVideo = XBMC4Kids Walkthrough</Item>
+					<Item Action="MessageBox" arg1="">Youtube Username = JCRocky5</Item>
 				</List>
 
 				<Item>------------------------------------------</Item>
@@ -477,9 +477,27 @@
 
 				<Item>------------------------------------------</Item>
 
-				<List Text="Why no Applications?" Sort="Off" Batch="True">
-					<Item Action="MessageBox" arg1="">Due to the way this dashboard works, it must be installed as a Dashboard. It uses a custom Python script that allows multiple save directories for each profile &amp; installing this as an Applications can effect other things.</Item>
+				<List Text="Applications Read Me" Sort="Off" Batch="True">
+					<Item Action="MessageBox" arg1="">If you are going to use this as an application I would not advise enabling the "Individual Saves Script", doing so may cause issues with other dashboards.</Item>
 				</List>
+
+				<List Text="C:\Applications\" Sort="Off" Batch="True">
+					<Item Action="AskUser" arg1="Continue" arg2="This will install XBMC4Kids to C:\Applications\ if there is a previous installation residing there it will be overwritten."/>
+					<Item Action="Copy" arg1="dummy" arg2="C:\Applications\XBMC4Kids"/>
+					<Item Action="Delete" arg1="C:\Applications\XBMC4Kids">Remove old C:\Applications\XBMC4Kids\</Item>
+					<Item Action="Unzip" arg1="D:\Dashboards\XBMC4Kids.zip" arg2="C:\Applications\XBMC4Kids">Installing dash to C:\Applications\XBMC4Kids\</Item>
+					<Item Action="Format" arg1="Z"/>
+					<Item Action="MessageBox" arg1="Done">That's XBMC4Kids installed to "C:\Applications\XBMC4Kids\"</Item>
+				</list>
+
+				<List Text="E:\Applications\" Sort="Off" Batch="True">
+					<Item Action="AskUser" arg1="Continue" arg2="This will install XBMC4Kids to E:\Applications\ if there is a previous installation residing there it will be overwritten."/>
+					<Item Action="Copy" arg1="dummy" arg2="E:\Applications\XBMC4Kids"/>
+					<Item Action="Delete" arg1="E:\Applications\XBMC4Kids">Remove old E:\Applications\XBMC4Kids\</Item>
+					<Item Action="Unzip" arg1="D:\Dashboards\XBMC4Kids.zip" arg2="E:\Applications\XBMC4Kids">Installing dash to E:\Applications\XBMC4Kids\</Item>
+					<Item Action="Format" arg1="Z"/>
+					<Item Action="MessageBox" arg1="Done">That's XBMC4Kids installed to "E:\Applications\XBMC4Kids\"</Item>
+				</list>
 
 			</list>
 
@@ -1220,7 +1238,7 @@
 				<Item Action="AskUser" arg1="Warning 1" arg2="Are you sure you want to disable the ShadowC partition?"/>
 				<Item Action="AskUser" arg1="Warning 2" arg2="Are you 100% sure you want to disable the ShadowC partition?"/>
 				<Item Action="AskUser" arg1="Warning 3" arg2="Are you 100% sure, you're 100% sure, you want to disable the ShadowC partition?"/>
-				<Item Action="AskUser" arg1="Warning 4" arg2="Last chance to back out?"/>
+				<Item Action="AskUser" arg1="Warning 4" arg2="You are about to disabled the ShadowC protection, be warned I take no responsibility for the action you take hear on out. I also have the right to decline support."/>
 				<Item Action="D:\shadowc.xbe">Disable ShadowC</Item>
 			</list>
 

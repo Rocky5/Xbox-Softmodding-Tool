@@ -1,10 +1,88 @@
 
-	Read Me - 2016 Softmodding Tool v1 Created by Rocky5
+I was meant to keep this file updated with all the changes I made, but I got lazy and I also changed that much I forgot to update it lol
+But here is what I have changed, that I can remember.
 
 
+=========================================
+	Change Log
+	2016 Softmodding Tool v1.0
+	Created by Rocky5
+=========================================
+
+
+=========================================
+	Update: Dec 20 2016
+=========================================
+		Added more backup options ( XBMC, Dashboard & Dash ) and tided up the Backup Dashboard menu in the Backup Restore & Move module.
+		Redone the "Read Me.txt" and the "Changes.txt" alot cleaner looking.
+		Updated XBMC4Kids to the latest revision.
+		Updated some disclaimers and dialogues on the Extras Disc.
+		Updated the "Backup Xbox Partitions" tool. ( its in the tools folder )
+		Fixed a tab space in the "2016 Softmod Tool Kit" source.
+		Fixed the version number, should have been 1.0 not just 1.
+
+
+=========================================
+	Update: Dec 19 2016
+=========================================
+		Updated the version to v1, as its basically done.
+		Added a new variant of the default softmod skin, a wide version!
+		Streamlined the softmod package, by zipping none critical files and also reducing the file size of the images used.
+		Updated the rest of the config.xml files to use the new installation method.
+		Renamed the source folder for the 2016 Softmod Tool Kit folder.
+		Created a new batch files for building the variant zips and also updated the batch files, as I now rar the files I need, makes things easier to edit.
+		Added a new variant Quick Update.
+		Renaming and removal of some directories.
+		Probably more.
+
+
+=========================================
+	Update: Dec 16 2016
+=========================================
+		Fixed some spelling mistakes :\
+		Added F dashboard paths:
+
+		Total is now 15
+
+			C:\XBMC\default.xbe
+			E:\XBMC\default.xbe
+			F:\XBMC\default.xbe
+			C:\dashboard\default.xbe
+			E:\dashboard\default.xbe
+			F:\dashboard\default.xbe
+			C:\dash\default.xbe
+			E:\dash\default.xbe
+			F:\dash\default.xbe
+			E:\default.xbe
+			E:\dashboard.xbe
+			C:\evoxdash.xbe
+			E:\evoxdash.xbe
+			C:\XBMC.xbe
+			E:\XBMC.xbe
+
+
+=========================================
+	Update: Dec 15 2016
+=========================================
+		Some more backend changes, I modularized the 2016 Softmod Tool Kit a bit more and cleaned up its code.
+		Updated the other parts of the softmod to reflect these changes.
+		Improved the update softmod installer, now check for the presence of my softmod before running and also cleans up better.
+
+
+=========================================
+	Changes from the stable versions:
+=========================================
+		1)	Renamed EEPROM Backeruper to 2016 softmod tool kit as it does alot more than just backing up the eeprom.
+		2)	Changed how the hole softmod is done, I no longer use NKPatcher for disabling the shadowc partition so now you can softreset out of NKPatcher Settings.
+			( I modify Unleashx during the softmod )
+		3)	I also changed how the ShadowC partition is created, its now created on the fly using the new tool kit above.
+		4)	Crap loads of edits, to many to remember :\ lets just say its almost a hole new softmod :D
+			( well the backend is )
+
+=========================================
 	Changes from 2014 Softmod Kit:
-
-	Softmod v1:
+=========================================
+	Softmod v1.0:
 		1)	Now set the correct Kernel font for the Xbox during the softmod. Full proof now, its all automated.
 		2)	Changed the ShadowC partition to a partition number XBMC or other Dashboards cant see or access.
 		3)	Updated Dashloader to reflect the above changes.
@@ -44,11 +122,14 @@
 		33) Added new menu items to NKPatcher Settings for installing the Kernel font for your Xbox.
 			( I no longer do it when softmodding, check the github commit log for more info )
 		**)	Other improvements to the backend of the softmod, as well as fixes & stuff I have probably forgot.
-
-	Extras Disc v1:
+		
+		
+=========================================
+	Extras Disc v1.0:
+=========================================
 		1)	Updated XBMC v3.5 to XBMC v3.5.3.
 		2)	NKPatcher settings menu rearranged & improved.
-		3)	Added the changed from Softmod v1, for the update/upgrade Softmod menu.
+		3)	Added the changed from Softmod v1.0, for the update/upgrade Softmod menu.
 		4)	Fixed Xored Mini not installing to the Xbox HDD.
 		5)	Changed how I install the MS Dashboards & made it so they appear in the Applications menu.
 		6)	Added my custom Configmagic EEPROM Backup Tool.
@@ -62,3 +143,5 @@
 			(Clear Cache & MS Dashboards eg....)
 		12)	Updated XBMC4Kids to the latest version. (**/*/2016)
 		13)	Other improvements to the backend of the softmod, as well as fixes & stuff I have probably forgot.
+		
+		

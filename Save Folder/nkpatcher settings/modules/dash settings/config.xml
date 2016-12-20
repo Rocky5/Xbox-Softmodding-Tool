@@ -68,54 +68,297 @@
 			</List>
 			<Item>------------------------------------------</Item>
 			<Item>Backup</Item>
-			<List Text="C:\Dashboard\" Sort="Off" batch="true" Icon="E:\Backups\Dashboards\C Dashboard\backedup.png">
-				<Item Action="AskUser" Arg1="Question" arg2="Backup your C:\Dashboard. \n\nAre you sure you want this, if there is a previous backup it will be overwritten."/>
-				<Item Action="Rename" arg1="C:\Dashboard\default.xbe" arg2="C:\Dashboard\default.xb">C:\Dashboard\ not installed</Item>
-				<Item Action="Rename" arg1="C:\Dashboard\default.xb" arg2="C:\Dashboard\default.xbe"/>
-				<Item Action="Copy" arg1="dummy" arg2="E:\Backups\Dashboards\C Dashboard"/>
-				<Item Action="Delete" arg1="E:\Backups\Dashboards\C Dashboard\"/>
-				<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\Backups\Dashboards\C Dashboard\backedup.png"/>
-				<Item Action="Copy" arg1="C:\Dashboard\" arg2="E:\Backups\Dashboards\C Dashboard\"/>
-				<Item Action="MessageBox" Arg1="Done">Complete. \n\nDashboard backed up to. \n\nE:\Backups\Dashboards\C Dashboard\</Item>
+			<List Text="XBMC" Sort="Off">
+				<List Text="C:\XBMC\" Sort="Off" batch="true" Icon="E:\Backups\Dashboards\C XBMC\backedup.png">
+					<Item Action="AskUser" Arg1="Question" arg2="Backup your C:\XBMC. \n\nAre you sure you want this, if there is a previous backup it will be overwritten."/>
+					<!-- Check to see if the dash is installed -->
+					<Item Action="Rename" arg1="C:\XBMC\default.xbe" arg2="C:\XBMC\default.xb">C:\XBMC\ not installed</Item>
+					<Item Action="Rename" arg1="C:\XBMC\default.xb" arg2="C:\XBMC\default.xbe"/>
+					<!-- Remove old files -->
+					<Item Action="Copy" arg1="dummy" arg2="E:\Backups\Dashboards\C XBMC"/>
+					<Item Action="Delete" arg1="E:\Backups\Dashboards\C XBMC\"/>
+					<!-- Copy image and XBMC files -->
+					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\Backups\Dashboards\C XBMC\backedup.png"/>
+					<Item Action="Copy" arg1="C:\XBMC\" arg2="E:\Backups\Dashboards\C XBMC\"/>
+					<Item Action="MessageBox" Arg1="Done">Complete. \n\nDashboard backed up to. \n\nE:\Backups\Dashboards\C XBMC\</Item>
+				</List>
+				<List Text="E:\XBMC\" Sort="Off" batch="true" Icon="E:\Backups\Dashboards\E XBMC\backedup.png">
+					<Item Action="AskUser" Arg1="Question" arg2="Backup your E:\XBMC. \n\nAre you sure you want this, if there is a previous backup it will be overwritten."/>
+					<!-- Check to see if the dash is installed -->
+					<Item Action="Rename" arg1="E:\XBMC\default.xbe" arg2="E:\XBMC\default.xb">E:\XBMC\ not installed</Item>
+					<Item Action="Rename" arg1="E:\XBMC\default.xb" arg2="E:\XBMC\default.xbe"/>
+					<!-- Remove old files -->
+					<Item Action="Copy" arg1="dummy" arg2="E:\Backups\Dashboards\E XBMC"/>
+					<Item Action="Delete" arg1="E:\Backups\Dashboards\E XBMC\"/>
+					<!-- Copy image and XBMC files -->
+					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\Backups\Dashboards\E XBMC\backedup.png"/>
+					<Item Action="Copy" arg1="E:\XBMC\" arg2="E:\Backups\Dashboards\E XBMC\"/>
+					<Item Action="MessageBox" Arg1="Done">Complete. \n\nDashboard backed up to. \n\nE:\Backups\Dashboards\E XBMC\</Item>
+				</List>
+				<List Text="F:\XBMC\" Sort="Off" batch="true" Icon="E:\Backups\Dashboards\F XBMC\backedup.png">
+					<Item Action="AskUser" Arg1="Question" arg2="Backup your F:\XBMC. \n\nAre you sure you want this, if there is a previous backup it will be overwritten."/>
+					<!-- Check to see if the dash is installed -->
+					<Item Action="Rename" arg1="F:\XBMC\default.xbe" arg2="F:\XBMC\default.xb">F:\XBMC\ not installed</Item>
+					<Item Action="Rename" arg1="F:\XBMC\default.xb" arg2="F:\XBMC\default.xbe"/>
+					<!-- Remove old files -->
+					<Item Action="Copy" arg1="dummy" arg2="E:\Backups\Dashboards\F XBMC"/>
+					<Item Action="Delete" arg1="E:\Backups\Dashboards\F XBMC\"/>
+					<!-- Copy image and XBMC files -->
+					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\Backups\Dashboards\F XBMC\backedup.png"/>
+					<Item Action="Copy" arg1="F:\XBMC\" arg2="E:\Backups\Dashboards\F XBMC\"/>
+					<Item Action="MessageBox" Arg1="Done">Complete. \n\nDashboard backed up to. \n\nE:\Backups\Dashboards\F XBMC\</Item>
+				</List>
 			</List>
-			<List Text="E:\Dashboard\" Sort="Off" batch="true" Icon="E:\Backups\Dashboards\E Dashboard\backedup.png">
-				<Item Action="AskUser" Arg1="Question" arg2="Backup your E:\Dashboard. \n\nAre you sure you want this, if there is a previous backup it will be overwritten."/>
-				<Item Action="Rename" arg1="E:\Dashboard\default.xbe" arg2="E:\Dashboard\default.xb">E:\Dashboard\ not installed</Item>
-				<Item Action="Rename" arg1="E:\Dashboard\default.xb" arg2="E:\Dashboard\default.xbe"/>
-				<Item Action="Copy" arg1="dummy" arg2="E:\Backups\Dashboards\E Dashboard"/>
-				<Item Action="Delete" arg1="E:\Backups\Dashboards\E Dashboard\"/>
-				<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\Backups\Dashboards\E Dashboard\backedup.png"/>
-				<Item Action="Copy" arg1="E:\Dashboard\" arg2="E:\Backups\Dashboards\E Dashboard\"/>
-				<Item Action="MessageBox" Arg1="Done">Complete. \n\nDashboard backed up to. \n\nE:\Backups\Dashboards\E Dashboard\</Item>
+			<List Text="Dashboard" Sort="Off">
+				<List Text="C:\Dashboard\" Sort="Off" batch="true" Icon="E:\Backups\Dashboards\C Dashboard\backedup.png">
+					<Item Action="AskUser" Arg1="Question" arg2="Backup your C:\Dashboard. \n\nAre you sure you want this, if there is a previous backup it will be overwritten."/>
+					<!-- Check to see if the dash is installed -->
+					<Item Action="Rename" arg1="C:\Dashboard\default.xbe" arg2="C:\Dashboard\default.xb">C:\Dashboard\ not installed</Item>
+					<Item Action="Rename" arg1="C:\Dashboard\default.xb" arg2="C:\Dashboard\default.xbe"/>
+					<!-- Remove old files -->
+					<Item Action="Copy" arg1="dummy" arg2="E:\Backups\Dashboards\C Dashboard"/>
+					<Item Action="Delete" arg1="E:\Backups\Dashboards\C Dashboard\"/>
+					<!-- Copy image and dashboard files -->
+					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\Backups\Dashboards\C Dashboard\backedup.png"/>
+					<Item Action="Copy" arg1="C:\Dashboard\" arg2="E:\Backups\Dashboards\C Dashboard\"/>
+					<Item Action="MessageBox" Arg1="Done">Complete. \n\nDashboard backed up to. \n\nE:\Backups\Dashboards\C Dashboard\</Item>
+				</List>
+				<List Text="E:\Dashboard\" Sort="Off" batch="true" Icon="E:\Backups\Dashboards\E Dashboard\backedup.png">
+					<Item Action="AskUser" Arg1="Question" arg2="Backup your E:\Dashboard. \n\nAre you sure you want this, if there is a previous backup it will be overwritten."/>
+					<!-- Check to see if the dash is installed -->
+					<Item Action="Rename" arg1="E:\Dashboard\default.xbe" arg2="E:\Dashboard\default.xb">E:\Dashboard\ not installed</Item>
+					<Item Action="Rename" arg1="E:\Dashboard\default.xb" arg2="E:\Dashboard\default.xbe"/>
+					<!-- Remove old files -->
+					<Item Action="Copy" arg1="dummy" arg2="E:\Backups\Dashboards\E Dashboard"/>
+					<Item Action="Delete" arg1="E:\Backups\Dashboards\E Dashboard\"/>
+					<!-- Copy image and dashboard files -->
+					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\Backups\Dashboards\E Dashboard\backedup.png"/>
+					<Item Action="Copy" arg1="E:\Dashboard\" arg2="E:\Backups\Dashboards\E Dashboard\"/>
+					<Item Action="MessageBox" Arg1="Done">Complete. \n\nDashboard backed up to. \n\nE:\Backups\Dashboards\E Dashboard\</Item>
+				</List>
+				<List Text="F:\Dashboard\" Sort="Off" batch="true" Icon="E:\Backups\Dashboards\F Dashboard\backedup.png">
+					<Item Action="AskUser" Arg1="Question" arg2="Backup your F:\Dashboard. \n\nAre you sure you want this, if there is a previous backup it will be overwritten."/>
+					<!-- Check to see if the dash is installed -->
+					<Item Action="Rename" arg1="F:\Dashboard\default.xbe" arg2="F:\Dashboard\default.xb">F:\Dashboard\ not installed</Item>
+					<Item Action="Rename" arg1="F:\Dashboard\default.xb" arg2="F:\Dashboard\default.xbe"/>
+					<!-- Remove old files -->
+					<Item Action="Copy" arg1="dummy" arg2="E:\Backups\Dashboards\F Dashboard"/>
+					<Item Action="Delete" arg1="E:\Backups\Dashboards\F Dashboard\"/>
+					<!-- Copy image and dashboard files -->
+					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\Backups\Dashboards\F Dashboard\backedup.png"/>
+					<Item Action="Copy" arg1="F:\Dashboard\" arg2="E:\Backups\Dashboards\F Dashboard\"/>
+					<Item Action="MessageBox" Arg1="Done">Complete. \n\nDashboard backed up to. \n\nE:\Backups\Dashboards\F Dashboard\</Item>
+				</List>
+			</List>
+			<List Text="Dash" Sort="Off">
+				<List Text="C:\Dash\" Sort="Off" batch="true" Icon="E:\Backups\Dashboards\C Dash\backedup.png">
+					<Item Action="AskUser" Arg1="Question" arg2="Backup your C:\Dash. \n\nAre you sure you want this, if there is a previous backup it will be overwritten."/>
+					<!-- Check to see if the dash is installed -->
+					<Item Action="Rename" arg1="C:\Dash\default.xbe" arg2="C:\Dash\default.xb">C:\Dash\ not installed</Item>
+					<Item Action="Rename" arg1="C:\Dash\default.xb" arg2="C:\Dash\default.xbe"/>
+					<!-- Remove old files -->
+					<Item Action="Copy" arg1="dummy" arg2="E:\Backups\Dashboards\C Dash"/>
+					<Item Action="Delete" arg1="E:\Backups\Dashboards\C Dash\"/>
+					<!-- Copy image and dashboard files -->
+					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\Backups\Dashboards\C Dash\backedup.png"/>
+					<Item Action="Copy" arg1="C:\Dash\" arg2="E:\Backups\Dashboards\C Dash\"/>
+					<Item Action="MessageBox" Arg1="Done">Complete. \n\nDashboard backed up to. \n\nE:\Backups\Dashboards\C Dash\</Item>
+				</List>
+				<List Text="E:\Dash\" Sort="Off" batch="true" Icon="E:\Backups\Dashboards\E Dash\backedup.png">
+					<Item Action="AskUser" Arg1="Question" arg2="Backup your E:\Dash. \n\nAre you sure you want this, if there is a previous backup it will be overwritten."/>
+					<!-- Check to see if the dash is installed -->
+					<Item Action="Rename" arg1="E:\Dash\default.xbe" arg2="E:\Dash\default.xb">E:\Dash\ not installed</Item>
+					<Item Action="Rename" arg1="E:\Dash\default.xb" arg2="E:\Dash\default.xbe"/>
+					<!-- Remove old files -->
+					<Item Action="Copy" arg1="dummy" arg2="E:\Backups\Dashboards\E Dash"/>
+					<Item Action="Delete" arg1="E:\Backups\Dashboards\E Dash\"/>
+					<!-- Copy image and dashboard files -->
+					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\Backups\Dashboards\E Dash\backedup.png"/>
+					<Item Action="Copy" arg1="E:\Dash\" arg2="E:\Backups\Dashboards\E Dash\"/>
+					<Item Action="MessageBox" Arg1="Done">Complete. \n\nDashboard backed up to. \n\nE:\Backups\Dashboards\E Dash\</Item>
+				</List>
+				<List Text="F:\Dash\" Sort="Off" batch="true" Icon="E:\Backups\Dashboards\F Dash\backedup.png">
+					<Item Action="AskUser" Arg1="Question" arg2="Backup your F:\Dash. \n\nAre you sure you want this, if there is a previous backup it will be overwritten."/>
+					<!-- Check to see if the dash is installed -->
+					<Item Action="Rename" arg1="F:\Dash\default.xbe" arg2="F:\Dash\default.xb">F:\Dash\ not installed</Item>
+					<Item Action="Rename" arg1="F:\Dash\default.xb" arg2="F:\Dash\default.xbe"/>
+					<!-- Remove old files -->
+					<Item Action="Copy" arg1="dummy" arg2="E:\Backups\Dashboards\F Dash"/>
+					<Item Action="Delete" arg1="E:\Backups\Dashboards\F Dash\"/>
+					<!-- Copy image and dashboard files -->
+					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\Backups\Dashboards\F Dash\backedup.png"/>
+					<Item Action="Copy" arg1="F:\Dash\" arg2="E:\Backups\Dashboards\F Dash\"/>
+					<Item Action="MessageBox" Arg1="Done">Complete. \n\nDashboard backed up to. \n\nE:\Backups\Dashboards\F Dash\</Item>
+				</List>
 			</List>
 			<Item>Restore</Item>
-			<List Text="C:\Dashboard\" Sort="Off" batch="true" Icon="E:\Backups\Dashboards\C Dashboard\backedup.png">
-				<Item Action="AskUser" Arg1="Question" arg2="Restore your backup of C:\Dashboard. \n\nAre you sure you want this, if there is a dashboard in C:\Dashboard\ it will be overwritten."/>
-				<Item Action="Rename" arg1="E:\Backups\Dashboards\C Dashboard\default.xbe" arg2="E:\Backups\Dashboards\C Dashboard\default.xb">No backup found.</Item>
-				<Item Action="Rename" arg1="E:\Backups\Dashboards\C Dashboard\default.xb" arg2="E:\Backups\Dashboards\C Dashboard\default.xbe"/>
-				<Item Action="Copy" arg1="dummy" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\dash settings\toggles"/>
-				<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\dash settings\toggles"/>
-				<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\dash settings\toggles\CDashboard.png"/>
-				<Item Action="Copy" arg1="dummy" arg2="C:\Dashboard"/>
-				<Item Action="Delete" arg1="C:\Dashboard\"/>
-				<Item Action="Copy" arg1="E:\Backups\Dashboards\C Dashboard\" arg2="C:\Dashboard\"/>
-				<Item Action="Copy" arg1="dummy" arg2="C:\Dashboard\backedup.png"/>
-				<Item Action="Delete" arg1="C:\Dashboard\backedup.png"/>
-				<Item Action="MessageBox" Arg1="Done">Complete. \n\nDashboard restored to. \n\nC:\Dashboard\</Item>
+			<List Text="XBMC" Sort="Off">
+				<List Text="C:\XBMC\" Sort="Off" batch="true" Icon="E:\Backups\Dashboards\C XBMC\backedup.png">
+					<Item Action="AskUser" Arg1="Question" arg2="Restore your backup of C:\XBMC. \n\nAre you sure you want this, if there is a dashboard in C:\XBMC\ it will be overwritten."/>
+					<!-- Check for backup -->
+					<Item Action="Rename" arg1="E:\Backups\Dashboards\C XBMC\default.xbe" arg2="E:\Backups\Dashboards\C XBMC\default.xb">No backup found</Item>
+					<Item Action="Rename" arg1="E:\Backups\Dashboards\C XBMC\default.xb" arg2="E:\Backups\Dashboards\C XBMC\default.xbe"/>
+					<!-- Set current XBMC icon -->
+					<Item Action="Copy" arg1="dummy" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\dash settings\toggles"/>
+					<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\dash settings\toggles"/>
+					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\dash settings\toggles\CXBMC.png"/>
+					<!-- Remove old files -->
+					<Item Action="Copy" arg1="dummy" arg2="C:\XBMC"/>
+					<Item Action="Delete" arg1="C:\XBMC\"/>
+					<!-- Restore XBMC files -->
+					<Item Action="Copy" arg1="E:\Backups\Dashboards\C XBMC\" arg2="C:\XBMC\"/>
+					<Item Action="Copy" arg1="dummy" arg2="C:\XBMC\backedup.png"/>
+					<Item Action="Delete" arg1="C:\XBMC\backedup.png"/>
+					<Item Action="MessageBox" Arg1="Done">Complete. \n\nDashboard restored to. \n\nC:\XBMC\</Item>
+				</List>
+				<List Text="E:\XBMC\" Sort="Off" batch="true" Icon="E:\Backups\Dashboards\E XBMC\backedup.png">
+					<Item Action="AskUser" Arg1="Question" arg2="Restore your backup of E:\XBMC. \n\nAre you sure you want this, if there is a dashboard in E:\XBMC\ it will be overwritten."/>
+					<!-- Check for backup -->
+					<Item Action="Rename" arg1="E:\Backups\Dashboards\E XBMC\default.xbe" arg2="E:\Backups\Dashboards\E XBMC\default.xb">No backup found</Item>
+					<Item Action="Rename" arg1="E:\Backups\Dashboards\E XBMC\default.xb" arg2="E:\Backups\Dashboards\E XBMC\default.xbe"/>
+					<!-- Set current XBMC icon -->
+					<Item Action="Copy" arg1="dummy" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\dash settings\toggles"/>
+					<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\dash settings\toggles"/>
+					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\dash settings\toggles\EXBMC.png"/>
+					<!-- Remove old files -->
+					<Item Action="Copy" arg1="dummy" arg2="E:\XBMC"/>
+					<Item Action="Delete" arg1="E:\XBMC\"/>
+					<!-- Restore XBMC files -->
+					<Item Action="Copy" arg1="E:\Backups\Dashboards\E XBMC\" arg2="E:\XBMC\"/>
+					<Item Action="Copy" arg1="dummy" arg2="E:\XBMC\backedup.png"/>
+					<Item Action="Delete" arg1="E:\XBMC\backedup.png"/>
+					<Item Action="MessageBox" Arg1="Done">Complete. \n\nDashboard restored to. \n\nE:\XBMC\</Item>
+				</List>
+				<List Text="F:\XBMC\" Sort="Off" batch="true" Icon="E:\Backups\Dashboards\F XBMC\backedup.png">
+					<Item Action="AskUser" Arg1="Question" arg2="Restore your backup of F:\XBMC. \n\nAre you sure you want this, if there is a dashboard in F:\XBMC\ it will be overwritten."/>
+					<!-- Check for backup -->
+					<Item Action="Rename" arg1="E:\Backups\Dashboards\F XBMC\default.xbe" arg2="E:\Backups\Dashboards\F XBMC\default.xb">No backup found</Item>
+					<Item Action="Rename" arg1="E:\Backups\Dashboards\F XBMC\default.xb" arg2="E:\Backups\Dashboards\F XBMC\default.xbe"/>
+					<!-- Set current XBMC icon -->
+					<Item Action="Copy" arg1="dummy" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\dash settings\toggles"/>
+					<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\dash settings\toggles"/>
+					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\dash settings\toggles\FXBMC.png"/>
+					<!-- Remove old files -->
+					<Item Action="Copy" arg1="dummy" arg2="F:\XBMC"/>
+					<Item Action="Delete" arg1="F:\XBMC\"/>
+					<!-- Restore XBMC files -->
+					<Item Action="Copy" arg1="E:\Backups\Dashboards\F XBMC\" arg2="F:\XBMC\"/>
+					<Item Action="Copy" arg1="dummy" arg2="F:\XBMC\backedup.png"/>
+					<Item Action="Delete" arg1="F:\XBMC\backedup.png"/>
+					<Item Action="MessageBox" Arg1="Done">Complete. \n\nDashboard restored to. \n\nF:\XBMC\</Item>
+				</List>
 			</List>
-			<List Text="E:\Dashboard\" Sort="Off" batch="true" Icon="E:\Backups\Dashboards\E Dashboard\backedup.png">
-				<Item Action="AskUser" Arg1="Question" arg2="Restore your backup of E:\Dashboard. \n\nAre you sure you want this, if there is a dashboard in E:\Dashboard\ it will be overwritten."/>
-				<Item Action="Rename" arg1="E:\Backups\Dashboards\E Dashboard\default.xbe" arg2="E:\Backups\Dashboards\E Dashboard\default.xb">No backup found.</Item>
-				<Item Action="Rename" arg1="E:\Backups\Dashboards\E Dashboard\default.xb" arg2="E:\Backups\Dashboards\E Dashboard\default.xbe"/>
-				<Item Action="Copy" arg1="dummy" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\dash settings\toggles"/>
-				<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\dash settings\toggles"/>
-				<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\dash settings\toggles\EDashboard.png"/>
-				<Item Action="Copy" arg1="dummy" arg2="E:\Dashboard"/>
-				<Item Action="Delete" arg1="E:\Dashboard\"/>
-				<Item Action="Copy" arg1="E:\Backups\Dashboards\E Dashboard\" arg2="E:\Dashboard\"/>
-				<Item Action="Copy" arg1="dummy" arg2="E:\Dashboard\backedup.png"/>
-				<Item Action="Delete" arg1="E:\Dashboard\backedup.png"/>
-				<Item Action="MessageBox" Arg1="Done">Complete. \n\nDashboard restored to. \n\nE:\Dashboard\</Item>
+			<List Text="Dashboard" Sort="Off">
+				<List Text="C:\Dashboard\" Sort="Off" batch="true" Icon="E:\Backups\Dashboards\C Dashboard\backedup.png">
+					<Item Action="AskUser" Arg1="Question" arg2="Restore your backup of C:\Dashboard. \n\nAre you sure you want this, if there is a dashboard in C:\Dashboard\ it will be overwritten."/>
+					<!-- Check for backup -->
+					<Item Action="Rename" arg1="E:\Backups\Dashboards\C Dashboard\default.xbe" arg2="E:\Backups\Dashboards\C Dashboard\default.xb">No backup found</Item>
+					<Item Action="Rename" arg1="E:\Backups\Dashboards\C Dashboard\default.xb" arg2="E:\Backups\Dashboards\C Dashboard\default.xbe"/>
+					<!-- Set current dashboard icon -->
+					<Item Action="Copy" arg1="dummy" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\dash settings\toggles"/>
+					<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\dash settings\toggles"/>
+					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\dash settings\toggles\CDashboard.png"/>
+					<!-- Remove old files -->
+					<Item Action="Copy" arg1="dummy" arg2="C:\Dashboard"/>
+					<Item Action="Delete" arg1="C:\Dashboard\"/>
+					<!-- Restore dashboard files -->
+					<Item Action="Copy" arg1="E:\Backups\Dashboards\C Dashboard\" arg2="C:\Dashboard\"/>
+					<Item Action="Copy" arg1="dummy" arg2="C:\Dashboard\backedup.png"/>
+					<Item Action="Delete" arg1="C:\Dashboard\backedup.png"/>
+					<Item Action="MessageBox" Arg1="Done">Complete. \n\nDashboard restored to. \n\nC:\Dashboard\</Item>
+				</List>
+				<List Text="E:\Dashboard\" Sort="Off" batch="true" Icon="E:\Backups\Dashboards\E Dashboard\backedup.png">
+					<Item Action="AskUser" Arg1="Question" arg2="Restore your backup of E:\Dashboard. \n\nAre you sure you want this, if there is a dashboard in E:\Dashboard\ it will be overwritten."/>
+					<!-- Check for backup -->
+					<Item Action="Rename" arg1="E:\Backups\Dashboards\E Dashboard\default.xbe" arg2="E:\Backups\Dashboards\E Dashboard\default.xb">No backup found</Item>
+					<Item Action="Rename" arg1="E:\Backups\Dashboards\E Dashboard\default.xb" arg2="E:\Backups\Dashboards\E Dashboard\default.xbe"/>
+					<!-- Set current dashboard icon -->
+					<Item Action="Copy" arg1="dummy" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\dash settings\toggles"/>
+					<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\dash settings\toggles"/>
+					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\dash settings\toggles\EDashboard.png"/>
+					<!-- Remove old files -->
+					<Item Action="Copy" arg1="dummy" arg2="E:\Dashboard"/>
+					<Item Action="Delete" arg1="E:\Dashboard\"/>
+					<!-- Restore dashboard files -->
+					<Item Action="Copy" arg1="E:\Backups\Dashboards\E Dashboard\" arg2="E:\Dashboard\"/>
+					<Item Action="Copy" arg1="dummy" arg2="E:\Dashboard\backedup.png"/>
+					<Item Action="Delete" arg1="E:\Dashboard\backedup.png"/>
+					<Item Action="MessageBox" Arg1="Done">Complete. \n\nDashboard restored to. \n\nE:\Dashboard\</Item>
+				</List>
+				<List Text="F:\Dashboard\" Sort="Off" batch="true" Icon="E:\Backups\Dashboards\F Dashboard\backedup.png">
+					<Item Action="AskUser" Arg1="Question" arg2="Restore your backup of F:\Dashboard. \n\nAre you sure you want this, if there is a dashboard in F:\Dashboard\ it will be overwritten."/>
+					<!-- Check for backup -->
+					<Item Action="Rename" arg1="E:\Backups\Dashboards\F Dashboard\default.xbe" arg2="E:\Backups\Dashboards\F Dashboard\default.xb">No backup found</Item>
+					<Item Action="Rename" arg1="E:\Backups\Dashboards\F Dashboard\default.xb" arg2="E:\Backups\Dashboards\F Dashboard\default.xbe"/>
+					<!-- Set current dashboard icon -->
+					<Item Action="Copy" arg1="dummy" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\dash settings\toggles"/>
+					<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\dash settings\toggles"/>
+					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\dash settings\toggles\FDashboard.png"/>
+					<!-- Remove old files -->
+					<Item Action="Copy" arg1="dummy" arg2="F:\Dashboard"/>
+					<Item Action="Delete" arg1="F:\Dashboard\"/>
+					<!-- Restore dashboard files -->
+					<Item Action="Copy" arg1="E:\Backups\Dashboards\F Dashboard\" arg2="F:\Dashboard\"/>
+					<Item Action="Copy" arg1="dummy" arg2="F:\Dashboard\backedup.png"/>
+					<Item Action="Delete" arg1="F:\Dashboard\backedup.png"/>
+					<Item Action="MessageBox" Arg1="Done">Complete. \n\nDashboard restored to. \n\nF:\Dashboard\</Item>
+				</List>
+			</List>
+			<List Text="Dash" Sort="Off">
+				<List Text="C:\Dash\" Sort="Off" batch="true" Icon="E:\Backups\Dashboards\C Dash\backedup.png">
+					<Item Action="AskUser" Arg1="Question" arg2="Restore your backup of C:\Dash. \n\nAre you sure you want this, if there is a dashboard in C:\Dash\ it will be overwritten."/>
+					<!-- Check for backup -->
+					<Item Action="Rename" arg1="E:\Backups\Dashboards\C Dash\default.xbe" arg2="E:\Backups\Dashboards\C Dash\default.xb">No backup found</Item>
+					<Item Action="Rename" arg1="E:\Backups\Dashboards\C Dash\default.xb" arg2="E:\Backups\Dashboards\C Dash\default.xbe"/>
+					<!-- Set current dashboard icon -->
+					<Item Action="Copy" arg1="dummy" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\dash settings\toggles"/>
+					<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\dash settings\toggles"/>
+					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\dash settings\toggles\CDash.png"/>
+					<!-- Remove old files -->
+					<Item Action="Copy" arg1="dummy" arg2="C:\Dash"/>
+					<Item Action="Delete" arg1="C:\Dash\"/>
+					<!-- Restore dashboard files -->
+					<Item Action="Copy" arg1="E:\Backups\Dashboards\C Dash\" arg2="C:\Dash\"/>
+					<Item Action="Copy" arg1="dummy" arg2="C:\Dash\backedup.png"/>
+					<Item Action="Delete" arg1="C:\Dash\backedup.png"/>
+					<Item Action="MessageBox" Arg1="Done">Complete. \n\nDashboard restored to. \n\nC:\Dash\</Item>
+				</List>
+				<List Text="E:\Dash\" Sort="Off" batch="true" Icon="E:\Backups\Dashboards\E Dash\backedup.png">
+					<Item Action="AskUser" Arg1="Question" arg2="Restore your backup of E:\Dash. \n\nAre you sure you want this, if there is a dashboard in E:\Dash\ it will be overwritten."/>
+					<!-- Check for backup -->
+					<Item Action="Rename" arg1="E:\Backups\Dashboards\E Dash\default.xbe" arg2="E:\Backups\Dashboards\E Dash\default.xb">No backup found</Item>
+					<Item Action="Rename" arg1="E:\Backups\Dashboards\E Dash\default.xb" arg2="E:\Backups\Dashboards\E Dash\default.xbe"/>
+					<!-- Set current dashboard icon -->
+					<Item Action="Copy" arg1="dummy" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\dash settings\toggles"/>
+					<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\dash settings\toggles"/>
+					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\dash settings\toggles\EDash.png"/>
+					<!-- Remove old files -->
+					<Item Action="Copy" arg1="dummy" arg2="E:\Dash"/>
+					<Item Action="Delete" arg1="E:\Dash\"/>
+					<!-- Restore dashboard files -->
+					<Item Action="Copy" arg1="E:\Backups\Dashboards\E Dash\" arg2="E:\Dash\"/>
+					<Item Action="Copy" arg1="dummy" arg2="E:\Dash\backedup.png"/>
+					<Item Action="Delete" arg1="E:\Dash\backedup.png"/>
+					<Item Action="MessageBox" Arg1="Done">Complete. \n\nDashboard restored to. \n\nE:\Dash\</Item>
+				</List>
+				<List Text="F:\Dash\" Sort="Off" batch="true" Icon="E:\Backups\Dashboards\F Dash\backedup.png">
+					<Item Action="AskUser" Arg1="Question" arg2="Restore your backup of F:\Dash. \n\nAre you sure you want this, if there is a dashboard in F:\Dash\ it will be overwritten."/>
+					<!-- Check for backup -->
+					<Item Action="Rename" arg1="E:\Backups\Dashboards\F Dash\default.xbe" arg2="E:\Backups\Dashboards\F Dash\default.xb">No backup found</Item>
+					<Item Action="Rename" arg1="E:\Backups\Dashboards\F Dash\default.xb" arg2="E:\Backups\Dashboards\F Dash\default.xbe"/>
+					<!-- Set current dashboard icon -->
+					<Item Action="Copy" arg1="dummy" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\dash settings\toggles"/>
+					<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\dash settings\toggles"/>
+					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\dash settings\toggles\FDash.png"/>
+					<!-- Remove old files -->
+					<Item Action="Copy" arg1="dummy" arg2="F:\Dash"/>
+					<Item Action="Delete" arg1="F:\Dash\"/>
+					<!-- Restore dashboard files -->
+					<Item Action="Copy" arg1="E:\Backups\Dashboards\F Dash\" arg2="F:\Dash\"/>
+					<Item Action="Copy" arg1="dummy" arg2="F:\Dash\backedup.png"/>
+					<Item Action="Delete" arg1="F:\Dash\backedup.png"/>
+					<Item Action="MessageBox" Arg1="Done">Complete. \n\nDashboard restored to. \n\nF:\Dash\</Item>
+				</List>
 			</List>
 		</List>
 

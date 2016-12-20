@@ -191,34 +191,17 @@ if not "%Backup_E%"=="1" Call:reset
 :: Remove empty folders from TDAtA & UDATA
 CLS & Echo: & Echo: & Echo: & Echo:
 %GUI_Element_1%
-Echo  Removing unused directories from TDATA
+Echo  Removing unused directories from TDATA ^& UDATA
 Echo:
 %GUI_Element_1%
-CD "%var2%\E\TDATA\"
-for /f "delims=" %%d in ('dir /s /b /ad ^| sort /r') do rd /q "%%d" 2>NUL
-CD %~dp0 & CD "%var2%\E\"
-MD Check
-for /f "delims=" %%d in ('dir /b "UDATA\*"') do Echo F | xcopy /S /I /Y "UDATA\%%d" "Check\%%d" >NUL
-CLS & Echo: & Echo: & Echo: & Echo:
-%GUI_Element_1%
-Echo  Removing unused directories from UDATA
-Echo:
-%GUI_Element_1%
-CD %~dp0 & CD "%var2%\E\Check\"
-(
-del /q /s "*.xbx" >NUL
-for /f "delims=" %%d in ('dir /s /b /ad ^| sort /r') do rd /q "%%d"
-for /f "delims=" %%d in ('dir /b /ad "*"') do Echo %%d>>List.txt
-for /f "delims=" %%d in ('dir /b "*.profile"') do Echo %%d>>List.txt
-for /f "delims=" %%d in ('dir /b "*.XBN"') do Echo %%d>>List.txt
-)2>NUL
-CD %~dp0 & CD "%var2%\E\"
-md "Not Empty"
-for /f "delims=" %%d in (Check\list.txt) do move "UDATA\%%d" "Not Empty" >NUL
-rd /q /s "Check" 2>NUL
-rd /q /s "UDATA" 2>NUL
-ren "Not Empty" "UDATA" >NUL
-timeout /t 3 >NUL
+CD "%var2%\E\"
+for /f "tokens=*" %%a in ('dir /b /ad "TDATA\*"') do (
+	dir /b /ad "TDATA\%%a\*" | >NUL findstr "^" && ( echo Folders "%%a" is not empty. ) >NUL || ( RD /Q /S "TDATA\%%a" >NUL )
+)
+for /f "tokens=*" %%a in ('dir /b /ad "UDATA\*"') do (
+	dir /b /ad "UDATA\%%a\*" | >NUL findstr "^" && ( echo Folders "%%a" is not empty. ) >NUL || ( RD /Q /S "UDATA\%%a" >NUL )
+)
+timeout /t 2 >NUL
 
 :reset
 Goto reset_vars

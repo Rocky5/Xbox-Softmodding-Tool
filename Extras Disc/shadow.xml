@@ -56,8 +56,8 @@
 	<Menu>
 
 		<List Text="Disclaimer" Sort="Off" Batch="True">
-			<Item Action="MessageBox" arg1="Information">You have disabled the ShadowC protection, be warned I take no responsibility for the action you take hear on out.</Item>
-			<Item Action="MessageBox" arg1="Information">Note: this disc is for use with the "2016 Softmodding Tool v1.0 &amp; newer versions. If you haven't already you can use this disc to update/upgrade your softmod to the latest version.</Item>
+			<Item Action="MessageBox" arg1="Information">You have disabled the ShadowC protection, be warned I take no responsibility for the action you take hear on out. I also have the right to decline support.</Item>
+			<Item Action="MessageBox" arg1="Information">Note: this disc is for use with the "2016 Softmodding Tool" or newer versions. If you haven't already you can use this disc to upgrade your softmod to the "2016 Softmod".</Item>
 		</List>
 
 		<List Text="Re-enable ShadowC" Sort="Off" Batch="True">
@@ -137,9 +137,21 @@
 			<List Text="Install to" Sort="Off">
 
 				<Item>XBMC4Kids Options</Item>
-				<List Text="Why Empty?" Sort="Off" Batch="True">
-					<Item Action="MessageBox" arg1="">This must be installed in userland mode, ie, the ShadowC partition not disabled.</Item>
+
+				<Item>------------------------------------------</Item>
+				
+				<List Text="Applications Read Me" Sort="Off" Batch="True">
+					<Item Action="MessageBox" arg1="">If you are going to use this as an application I would not advise enabling the "Individual Saves Script", doing so may cause issues with other dashboards.</Item>
 				</List>
+				
+				<List Text="E:\Applications\" Sort="Off" Batch="True">
+					<Item Action="AskUser" arg1="Continue" arg2="This will install XBMC4Kids to E:\Applications\ if there is a previous installation residing there it will be overwritten."/>
+					<Item Action="Copy" arg1="dummy" arg2="E:\Applications\XBMC4Kids"/>
+					<Item Action="Delete" arg1="E:\Applications\XBMC4Kids">Remove old E:\Applications\XBMC4Kids\</Item>
+					<Item Action="Unzip" arg1="D:\Dashboards\XBMC4Kids.zip" arg2="E:\Applications\XBMC4Kids">Installing dash to E:\Applications\XBMC4Kids\</Item>
+					<Item Action="Format" arg1="Z"/>
+					<Item Action="MessageBox" arg1="Done">That's XBMC4Kids installed to "E:\Applications\XBMC4Kids\"</Item>
+				</list>
 
 			</list>
 
