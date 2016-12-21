@@ -9,7 +9,7 @@
 	Background:
 =========================================
 		I set out to try to make the softmodding process as pain free and user friendly as possible and to be honest I think I nailed it.
-		You don't need to have a specific MS dashboard version or faff about in menus trying to backup your EEPROM.bin or even working out what version to install.
+		You don't need to have a specific MS dashboard version or mess about in menus trying to backup your EEPROM.bin or even working out what version to install.
 		I take all that and do it for you, I backup the EEPROM.bin I give you an easy to use settings menu ( NKPatcher Settings ) that has all the info you need
 		to get the just of things. I have also made it as safe as I possibly can, by having recovery dashboards and fail safes in place in case you remove your
 		dashboard or you format your E partition eg... you can always recover.
@@ -61,72 +61,75 @@
 =========================================
 	NKPatcher Settings:
 =========================================
-	At the top of each menus there is an "Information" button, this will give you a description of the menu you are in.
+	NKPatcher, this is the second stage of the Softmod. This is what patches the kernel after the NDURE exploit is executed and gives you all the lovely unsigned code and fancy features.
+	NKPatcher Settings allows you to modify certain aspects of NKPatcher in a safe manor.
+		
+		At the top of each menus there is an "Information" button, this will give you a description of the menu you are in.
 
-		Dashboard Settings
-			> Backup, Restore or Move
-				This is used to move or restore a clean copy of UnleashX, as well as backup your dashboards.
-			> Dualbooting
+			Dashboard Settings
+				> Backup, Restore or Move
+					This is used to move or restore a clean copy of UnleashX, as well as backup your dashboards.
+				> Dualbooting
+					Enable:
+						This option is used to enabled dualbooting, you get asked if you would like a dashboard setup for you when you select this option.
+					Disable:
+						This option is used to disabled the dualbooting process. You are also asked if you would like the alt dashboard to be removed.
+					Update:
+						This option is to be used if you want to use your own custom dualbooting path, you can use the "OpenDash Dualboot.settings" tool to do this, it explains things.
+					Restore:
+						This option will restore the stock dualboot.settings file.
+			
+			Change your fan speed
+				Self explanatory.
+			
+			Change your LED colour
+				Self explanatory.
+			
+			Kernel Fonts
+				> Advanced Features
+					> Kernel Font Options
+						Install Kernel Font:
+							This option will install a kernel specific font. This isn't really needed but if there are boot issues this can fix the issue.	
+						Restore Generic Font:
+							This option will restore the generic font to the Xbox. This font works on all Xbox kernel versions and is the default font used.
+					> XTF Font Delay Options
+						Remove:
+							Removes these delay files.
+						Fix 1:
+							Installs 1 delay file, in hope it fixes your boot issue.
+						Fix 2:
+							Installs 2 delay files, in hope that fixes your boot issue.
+							
+			Change partition variations
+				Default:
+					This is the standard/default option, this allows Partition 6 ( F ) to use all available extra space.
+				Partition F & G:
+					This option allows a F and G partition. Where F takes upto 137GB and G takes the remaining space of the drive.
+				XBPartitioner:
+					This option is a placebo option, all above options will allow the partition table, I just added this for simplistic reasons.
+
+			Change video modes
+				Default:
+					This is the default mode, supports all video mode.
+				Force Progressive:
+					This option will force 480p video mode even if your game doest support it. Note: This will make the image distorted in PAL video mode.
+
+			Enable/disable virtual EEPROM
 				Enable:
-					This option is used to enabled dualbooting, you get asked if you would like a dashboard setup for you when you select this option.
+					This option will enable the virtual eeprom. This will install a copy of your Xbox eeprom.bin to the HDD and use it instead of the onboard one.
 				Disable:
-					This option is used to disabled the dualbooting process. You are also asked if you would like the alt dashboard to be removed.
-				Update:
-					This option is to be used if you want to use your own custom dualbooting path, you can use the "OpenDash Dualboot.settings" tool to do this, it explains things.
-				Restore:
-					This option will restore the stock dualboot.settings file.
-		
-		Change your fan speed
-			Self explanatory.
-		
-		Change your LED colour
-			Self explanatory.
-		
-		Kernel Fonts
-			> Advanced Features
-				> Kernel Font Options
-					Install Kernel Font:
-						This option will install a kernel specific font. This isn't really needed but if there are boot issues this can fix the issue.	
-					Restore Generic Font:
-						This option will restore the generic font to the Xbox. This font works on all Xbox kernel versions and is the default font used.
-				> XTF Font Delay Options
-					Remove:
-						Removes these delay files.
-					Fix 1:
-						Installs 1 delay file, in hope it fixes your boot issue.
-					Fix 2:
-						Installs 2 delay files, in hope that fixes your boot issue.
-						
-		Change partition variations
-			Default:
-				This is the standard/default option, this allows Partition 6 ( F ) to use all available extra space.
-			Partition F & G:
-				This option allows a F and G partition. Where F takes upto 137GB and G takes the remaining space of the drive.
-			XBPartitioner:
-				This option is a placebo option, all above options will allow the partition table, I just added this for simplistic reasons.
+					This option will disable the virtual eeprom. Allowing you to edit the onboard one. ( not recommended to go modifying the eeprom if you don't know what you're doing )
+				Backup EEPROM Tool:
+					This option will load my "2016 Softmod Tool Kit" and backup the eeprom. You will be taken back to the NKPatcher Settings when complete.
 
-		Change video modes
-			Default:
-				This is the default mode, supports all video mode.
-			Force Progressive:
-				This option will force 480p video mode even if your game doest support it. Note: This will make the image distorted in PAL video mode.
-
-		Enable/disable virtual EEPROM
-			Enable:
-				This option will enable the virtual eeprom. This will install a copy of your Xbox eeprom.bin to the HDD and use it instead of the onboard one.
-			Disable:
-				This option will disable the virtual eeprom. Allowing you to edit the onboard one. ( not recommended to go modifying the eeprom if you don't know what you're doing )
-			Backup EEPROM Tool:
-				This option will load my "2016 Softmod Tool Kit" and backup the eeprom. You will be taken back to the NKPatcher Settings when complete.
-
-		Modules & Settings
-			> Modules
-				> Built in Modules
-					These are what I use to do specific tasks.
-				> User Modules
-					If you make your own, you will see them here. ( you add your own to the modules folder inside the NKPatcher Settings App )
-			> UnleashX Settings
-				This is the settings menu for UnleashX, change network settings video settings eg...
+			Modules & Settings
+				> Modules
+					> Built in Modules
+						These are what I use to do specific tasks.
+					> User Modules
+						If you make your own, you will see them here. ( you add your own to the modules folder inside the NKPatcher Settings App )
+				> UnleashX Settings
+					This is the settings menu for UnleashX, change network settings video settings eg...
 
 
 =========================================

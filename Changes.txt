@@ -11,6 +11,13 @@ But here is what I have changed, that I can remember.
 
 
 =========================================
+	Update: Dec 21 2016
+=========================================
+		Reduced the file size a tad by moving a couple more files into the Files.rar
+		Updated the ReadMe.txt with some info about NKPatcher.
+		
+		
+=========================================
 	Update: Dec 20 2016
 =========================================
 		Added more backup options ( XBMC, Dashboard & Dash ) and tided up the Backup Dashboard menu in the Backup Restore & Move module.

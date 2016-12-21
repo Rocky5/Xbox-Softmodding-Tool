@@ -20,6 +20,8 @@ RD /Q /S "UDATA\21585554\000000000000\nkpatcher settings\Skins\NKPatcher Setting
 RD /Q /S "UDATA\21585554\000000000000\nkpatcher settings\Skins\RescueDash_C"
 RD /Q /S "UDATA\21585554\000000000000\nkpatcher settings\Skins\RescueDash_E"
 RD /Q /S "UDATA\21585554\000000000000\nkpatcher settings\toggles"
+Del /Q "UDATA\21585554\000000000000\softmod files\Splash.jpg"
+Del /Q "UDATA\21585554\000000000000\softmod files\videoset.dat"
 XCopy /s /y "Installation Guide" "temp\Installation Guide\"
 XCopy /s /y "Game Saves\Zipped\*.zip" "temp\Softmod Package\"
 Move "Files.rar" "UDATA\21585554\000000000000\softmod files\"
