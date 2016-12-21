@@ -19,6 +19,9 @@ Copy "%CD%\Save Folder\nkpatcher settings\unleashx.xbe" "%CD%\Variants\XBHDM Bui
 XCopy /S /Y "%CD%\Extras Disc\softmod files\Softmod Files" "%CD%\Variants\XBHDM Build\linux\E\Prep\Softmod Files\"
 
 CD "Variants"
+
+Del /Q /S "Splash.jpg"
+Del /Q /S "videoset.dat"
 "%Winrar%" a -x*.db -afzip "..\Quick Update" "Quick Update"
 "%Winrar%" a -x*.db -afzip "..\Quick Upgrade" "Quick Upgrade"
 "%Winrar%" a -x*.db -afzip "..\XBHDM Build" "XBHDM Build"
