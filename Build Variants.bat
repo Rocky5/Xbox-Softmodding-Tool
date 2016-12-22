@@ -5,21 +5,23 @@ Set "Winrar=%CD%\Tools\Winrar\winrar.exe"
 
 Call "Build Disc Save.bat"
 
-Copy "%CD%\Save Folder\nkpatcher settings\unleashx.xbe" "%CD%\Variants\Quick Update\Prep\unleashx.xbe"
+Copy "%CD%\Save Folder\softmod files\UX.xbe" "%CD%\Variants\Quick Update\Prep\unleashx.xbe"
 Copy "%CD%\Extras Disc\softmod files\boot.cfg" "%CD%\Variants\Quick Update\Prep\"
 Copy "%CD%\Extras Disc\softmod files\default.xbe" "%CD%\Variants\Quick Update\Prep\"
 Copy "%CD%\Extras Disc\softmod files\NoVC.bin" "%CD%\Variants\Quick Update\Prep\"
 XCopy /S /Y "%CD%\Extras Disc\softmod files\Softmod Files" "%CD%\Variants\Quick Update\Prep\Softmod Files\"
-XCopy /S /Y "%CD%\Extras Disc\softmod files\Softmod Files\skins\skin files" "%CD%\Variants\Quick Update\Prep\Softmod Files\skins\skin files\"
-Copy "%CD%\Save Folder\nkpatcher settings\unleashx.xbe" "%CD%\Variants\Quick Upgrade\Prep\unleashx.xbe"
+XCopy /S /Y "%CD%\Extras Disc\softmod files\Softmod Files\21585554\000000000000\softmod files\skin files" "%CD%\Variants\Quick Update\Prep\skins\skin files\"
+
+Copy "%CD%\Save Folder\softmod files\UX.xbe" "%CD%\Variants\Quick Upgrade\Prep\unleashx.xbe"
 Copy "%CD%\Extras Disc\softmod files\boot.cfg" "%CD%\Variants\Quick Upgrade\Prep\"
 Copy "%CD%\Extras Disc\softmod files\default.xbe" "%CD%\Variants\Quick Upgrade\Prep\"
 Copy "%CD%\Extras Disc\softmod files\NoVC.bin" "%CD%\Variants\Quick Upgrade\Prep\"
 XCopy /S /Y "%CD%\Extras Disc\softmod files\Softmod Files" "%CD%\Variants\Quick Upgrade\Prep\Softmod Files\"
-XCopy /S /Y "%CD%\Extras Disc\softmod files\Softmod Files\skins\skin files" "%CD%\Variants\Quick Upgrade\Prep\Softmod Files\skins\skin files\"
-Copy "%CD%\Save Folder\nkpatcher settings\unleashx.xbe" "%CD%\Variants\XBHDM Build\linux\E\Prep\default.xbe"
+XCopy /S /Y "%CD%\Extras Disc\softmod files\Softmod Files\21585554\000000000000\softmod files\skin files" "%CD%\Variants\Quick Upgrade\Prep\skins\skin files\"
+
+Copy "%CD%\Save Folder\softmod files\UX.xbe" "%CD%\Variants\XBHDM Build\linux\E\Prep\default.xbe"
 XCopy /S /Y "%CD%\Extras Disc\softmod files\Softmod Files" "%CD%\Variants\XBHDM Build\linux\E\Prep\Softmod Files\"
-XCopy /S /Y "%CD%\Extras Disc\softmod files\Softmod Files\skins\skin files" "%CD%\Variants\XBHDM Build\linux\E\Prep\Softmod Files\skins\skin files"
+XCopy /S /Y "%CD%\Extras Disc\softmod files\Softmod Files\21585554\000000000000\softmod files\skin files" "%CD%\Variants\XBHDM Build\linux\E\Prep\skins\skin files\"
 
 CD "Variants"
 
