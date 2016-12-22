@@ -14,7 +14,6 @@ Echo %CD%
 RD /S /Q "UDATA"
 XCopy /s /y /e "Save Folder\*" "UDATA\21585554\000000000000\"
 RD /Q /S "UDATA\21585554\000000000000\nkpatcher settings"
-Del /Q "UDATA\21585554\000000000000\softmod files\Splash.jpg"
 Del /Q "UDATA\21585554\000000000000\softmod files\videoset.dat"
 XCopy /s /y "Installation Guide" "temp\Installation Guide\"
 XCopy /s /y "Game Saves\Zipped\*.zip" "temp\Softmod Package\"

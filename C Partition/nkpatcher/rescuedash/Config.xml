@@ -75,7 +75,6 @@
 					<Item Action="Unrar" arg1="E:\UDATA\21585554\000000000000\softmod files\Files.rar" arg2="Y:\"/>
 					<Item Action="Unrar" arg1="Y:\xboxdash.rar" arg2="C:\"/>
 					<Item Action="Unrar" arg1="Y:\nkpatcher.rar" arg2="Y:\"/>
-					<Item Action="Delete" arg1="Y:\nkpatcher\configs\video files\video.bin"/>
 					<Item Action="Copy" arg1="Y:\nkpatcher\configs" arg2="C:\nkpatcher\configs"/>
 					<Item Action="Copy" arg1="Y:\nkpatcher\dashloader" arg2="C:\nkpatcher\dashloader"/>
 					<Item Action="Copy" arg1="Y:\nkpatcher\rescuedash" arg2="C:\nkpatcher\rescuedash"/>
