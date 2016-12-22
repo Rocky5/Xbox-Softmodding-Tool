@@ -62,9 +62,7 @@
 			<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\Configs\settings.xm" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\Configs\settings.xml">2016 softmod not installed</Item>
 			<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\reboot xbe\default.xbe" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\reboot xbe\default.xb">2016 softmod not installed</Item>
 			<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\reboot xbe\default.xb" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\reboot xbe\default.xbe">2016 softmod not installed</Item>
-			<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\softmod files\videoset.dat" arg2="E:\UDATA\21585554\000000000000\softmod files\videoset.da">2016 softmod not installed</Item>
-			<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\softmod files\videoset.da" arg2="E:\UDATA\21585554\000000000000\softmod files\videoset.dat">2016 softmod not installed</Item>
-
+			
 			<!-- Removing the old 2016/14 Softmodding Tool save & install the new one. -->
 			<Item Action="Delete" arg1="E:\UDATA\21585554">Delete softmod save</Item>
 			<Item Action="Copy" arg1="Softmod Files\21585554\" arg2="E:\UDATA\21585554\">Copy softmod save</Item>
@@ -116,10 +114,9 @@
 			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\configs\recovery.xml" arg2="E:\UDATA\rescuedash\Config.xml">Copy recovery.xml to U rescuedash</Item>
 			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\skins\RescueDash_E\" arg2="E:\UDATA\rescuedash\skins\RescueDash_E\">Copy skin to U rescuedash</Item>
 
-			<!-- Install the splash & screen dimensions for UnleashX -->
-			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\softmod files\skin files\uxsplash.jpg" arg2="E:\UDATA\9e115330\0064122817A8\">Copy splash.jpg to unleashx save directory</Item>
-			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\softmod files\videoset.dat" arg2="E:\UDATA\9e115330\0064122817A8\">Copy videoset.dat to unleashx save directory</Item>
-
+			<!-- Install the splash for UnleashX -->
+			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\softmod files\skin files\uxsplash.jpg" arg2="E:\UDATA\9e115330\0064122817A8\Splash.jpg">Copy splash.jpg to unleashx save directory</Item>
+			
 			<!-- Setup 2016 softmod tool kit -->
 			<Item Action="Delete" arg1="E:\Prep">Delete prep</Item>
 			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\2016 Softmod Tool Kit\icon.png" arg2="C:\NKPatcher\Configs\shadowc_off.bin">Copy updaterun.bin to shadowc_off.bin</Item>

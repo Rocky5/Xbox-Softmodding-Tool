@@ -101,10 +101,9 @@
 			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\configs\recovery.xml" arg2="E:\UDATA\rescuedash\Config.xml">Copy recovery.xml to U rescuedash</Item>
 			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\skins\RescueDash_E\" arg2="E:\UDATA\rescuedash\skins\RescueDash_E\">Copy skin to U rescuedash</Item>
 
-			<!-- Install the splash & screen dimensions for UnleashX -->
-			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\softmod files\skin files\uxsplash.jpg" arg2="E:\UDATA\9e115330\0064122817A8\">Copy splash.jpg to unleashx save directory</Item>
-			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\softmod files\videoset.dat" arg2="E:\UDATA\9e115330\0064122817A8\">Copy videoset.dat to unleashx save directory</Item>
-
+			<!-- Install the splash for UnleashX -->
+			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\softmod files\skin files\uxsplash.jpg" arg2="E:\UDATA\9e115330\0064122817A8\Splash.jpg">Copy splash.jpg to unleashx save directory</Item>
+			
 			<!-- Setup 2016 softmod tool kit -->
 			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\2016 Softmod Tool Kit\icon.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\2016 Softmod Tool Kit\firstrun.bin">Copy updaterun.bin to prep</Item>
 

@@ -209,7 +209,7 @@
 			You can use the "2016 Softmodding Tool Extras Disc" to update older Softmods to my new softmod.
 			All you need to do is burn the new ISO & select the "Upgrade Old Softmods" option, located in the "Advanced Features" menu, just follow the on-screen instructions.
 
-		4. Restoring to a clean install of my 2016 Softmod:"
+		4. Restoring to a clean install of my 2016 Softmod:
 			You can use the "2016 Softmodding Tool Extras Disc" to install a clean install of my 2016 softmod.
 			All you need to do is burn the new ISO & select the "Upgrade Old Softmods" option, located in the "Advanced Features" menu, just follow the on-screen instructions.
 
@@ -226,7 +226,14 @@
 		
 		GitHub = https://github.com/Rocky5/2016-Softmodding-Tool
 
-
+		
+=========================================
+	Youtube Channel:
+=========================================
+	Here is my Youtube Channel = https://www.youtube.com/JCRocky5
+	There you can find videos on "How to setup your USB Pen and install a Softmod", "How to clone your Hard drive using Chimp 261812 from start to finish." and many other crappy videos I make for the Xbox.
+	
+		
 =========================================
 	Credits:
 =========================================

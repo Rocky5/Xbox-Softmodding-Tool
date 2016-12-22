@@ -25,5 +25,4 @@ XCopy /s /y "Game Saves\Extracted\SC-NTSC\UDATA\5553000c" "Extras Disc\softmod f
 XCopy /s /y "Game Saves\Extracted\SC-PAL\UDATA\5553000c" "Extras Disc\softmod files\Softmod Files\SC-PAL\5553000c\"
 XCopy /s /y /e "tmp\21585554" "Extras Disc\softmod files\Softmod Files\21585554\"
 
-Del /Q /S "Extras Disc\softmod files\Softmod Files\21585554\videoset.dat"
 RD /q /s "tmp"
