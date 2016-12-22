@@ -5,7 +5,7 @@
 			<AbortOnError>Yes</AbortOnError>
 			<ContextMenu AllowUninstall="No" AllowItemEdit="No" AllowRecentList="No" LinkToSave="No" LinkToGame="No"/>
 			<Skin Path="Skins\">Factory Reset</Skin>
-			<VideoSettings Soften="No" Widescreen="No" UsePAL60="No" FastRefresh="Yes" EnableTextureCompression="No" Use720P="No" Use480P="Yes" FilterLevel="0"/>
+			<VideoSettings Soften="No" Widescreen="No" UsePAL60="No" FastRefresh="No" EnableTextureCompression="No" Use720P="No" Use480P="Yes" FilterLevel="0"/>
 			<LiveUpdate AutoCheck="No"/>
 			<AutoVideoMode MultiRegion="Off" UsePAL60="No">no</AutoVideoMode>
 			<Games AutoLaunch="No"/>

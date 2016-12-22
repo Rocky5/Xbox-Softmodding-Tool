@@ -5,7 +5,7 @@
 			<AbortOnError>Yes</AbortOnError>
 			<ContextMenu AllowUninstall="No" AllowItemEdit="No" AllowRecentList="No" LinkToSave="No" LinkToGame="No"/>
 			<Skin Path="E:\UDATA\21585554\000000000000\softmod files\Skins\">Softmod</Skin>
-			<VideoSettings Soften="No" Widescreen="No" UsePAL60="No" FastRefresh="Yes" EnableTextureCompression="No" Use720P="No" Use480P="Yes" FilterLevel="0"/>
+			<VideoSettings Soften="No" Widescreen="No" UsePAL60="No" FastRefresh="No" EnableTextureCompression="No" Use720P="No" Use480P="Yes" FilterLevel="0"/>
 			<LiveUpdate AutoCheck="No"/>
 			<AutoVideoMode MultiRegion="Off" UsePAL60="No">no</AutoVideoMode>
 			<Games AutoLaunch="No"/>
@@ -65,10 +65,10 @@
 
 			<!-- Setting up NKPatcher Setting xbe. -->
 			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\softmod files\ux.xbe" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\unleashx.xbe">ux.xbe to nkpatcher settings</Item>
-			
+
 			<!-- Replace the installer config with the NKPatcher Settings Config. -->
 			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\configs\settings.xml" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\config.xml">Copy settings.xml to config.xml</Item>
-			
+
 			<!-- Setting up dashboard xbe -->
 			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\unleashx.xbe" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\configs\alt xbe's\dashboard.xbe">unleashx.xbe to alt xbe's</Item>
 
@@ -104,7 +104,7 @@
 			<!-- Install the splash & screen dimensions for UnleashX -->
 			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\softmod files\skin files\uxsplash.jpg" arg2="E:\UDATA\9e115330\0064122817A8\">Copy splash.jpg to unleashx save directory</Item>
 			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\softmod files\videoset.dat" arg2="E:\UDATA\9e115330\0064122817A8\">Copy videoset.dat to unleashx save directory</Item>
-			
+
 			<!-- Setup 2016 softmod tool kit -->
 			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\2016 Softmod Tool Kit\icon.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\2016 Softmod Tool Kit\firstrun.bin">Copy updaterun.bin to prep</Item>
 
@@ -116,8 +116,9 @@
 			<Item Action="Format" arg1="X">Format X</Item>
 			<Item Action="Format" arg1="Y">Format Y</Item>
 			<Item Action="Format" arg1="Z">Format Z</Item>
-			<Item Action="MessageBox" Arg1="Important Info">Your EEPROM backup will be placed in \n\n"E:\Backups\EEPROM\" \n\nCopy the EEPROM folder to your PC once the dashboard has loaded and keep it safe.</Item>
-			<Item Action="MessageBox" Arg1="Done">So that's you all softmodded. See, I told you it was painless ;) but now I need to power cycle the Xbox, so take the disc out when the Xbox starts up again.</Item>
+			<Item Action="MessageBox" Arg1="Important Info">Your EEPROM backup will be placed in "E:\Backups\EEPROM\" copy the "EEPROM" folder to your PC once the dashboard has loaded and keep it safe.</Item>
+			<Item Action="MessageBox" Arg1="Please Read">The EEPROM.bin is required to create a new HDD for this system. So in the case of your current Xbox HDD dying you would need the EEPROM.bin to create a new one. This is why its important to back it up and keep it safe.</Item>
+			<Item Action="MessageBox" Arg1="Done">Well that's you all softmodded. See, I told you it was a painless process. But now I need to restart the Xbox, so take the disc out when the Xbox starts up again.</Item>
 			<Item Action="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\2016 softmod tool kit\default.xbe">Run 2016 softmod tool kit</Item>
 		</list>
 	</List>
