@@ -48,6 +48,7 @@
 		</Audio>
 		<Shortcut>
 			<GP_BLACK>D:\Applications\Enigmah-X\default.xbe</GP_BLACK>
+			<GP_WHITE>D:\default.xbe</GP_WHITE>
 		</Shortcut>
 		<LED>
 			<Default>Red</Default>

@@ -18,6 +18,8 @@ But here is what I have changed, that I can remember.
 		Updated some of the batch files to use the new softmod layout.
 		Updated all of the images for the skins, now smaller and look the same.
 		Removed the 480p patch I had applied to UnleashX, wasn't working the way it should due to the TV switching to progressive.
+		Added to the information button at the top NKPatcher Settings menu how to Exit NKPatcher Settings.
+		Other minor things, getting ready for release! ( Thank god! )
 
 		
 =========================================
