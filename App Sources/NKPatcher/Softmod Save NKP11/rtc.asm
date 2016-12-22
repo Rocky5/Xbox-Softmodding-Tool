@@ -10,6 +10,7 @@
 %define	TV5	0
 %define	TV6	0
 %define	TV7	0
+%define	TV8	0
 %define	VFR	0
 %define	VFP	0
 %define VFF	0
@@ -43,6 +44,9 @@
 %ifdef	BOOT_DASH_ONLY
 %define TV7	128
 %endif
+%ifdef	DISABLE_VIRTUAL_EEPROM_TRAY_OPEN
+%define TV8 256
+%endif 
 ;------------------------------
 %ifdef 	VIDEO_FORCE_PROGRESSIVE
 %define	VFP	1
@@ -58,7 +62,7 @@
 %endif
 ;------------------------------
 %define	VID_SET 	VFR+VFP+VFF
-%define TRAY_VAL        TV0+TV1+TV2+TV3+TV4+TV5+TV6+TV7
+%define TRAY_VAL        TV0+TV1+TV2+TV3+TV4+TV5+TV6+TV7+TV8
 ;------------------------------
 fstart: dd	FAN_SPEED, TRAY_VAL, NKP_LED_COLOR, ALTDASH_LED_COLOR
 	dd	PATCHBACK_LED_COLOR, VID_SET, FF_VAL, TRIBOOT_LED_COLOR

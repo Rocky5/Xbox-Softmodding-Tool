@@ -6,9 +6,9 @@
 ;;; --------------------------------
 ;;;---------------------------------------------------------------------------
 
-;;; file name for NKPatcher11 to use at runtime  (C:\nkpatcher\configs\config.bin)
-%define CFG_FILE      '\Device\Harddisk0\Partition0'  
-%define CFG_FILE_OPEN '\Device\Harddisk0\Partition0' 
+;;; file name for NKPatcher11 to use at runtime  (C:\NKPatcher\Configs\Dualboot.settings)
+%define CFG_FILE      '\Device\Harddisk0\'  
+%define CFG_FILE_OPEN '\Device\Harddisk0\' 
 
 
 
@@ -36,9 +36,9 @@
 
 ;;;---------------------------------------------------------------------------
 
-%define NKP_LED_COLOR			RED				; < CHANGE IT HERE
-%define ALTDASH_LED_COLOR		ORANGE_BLIP		; < CHANGE IT HERE
-%define PATCHBACK_LED_COLOR		GREEN_BLINK		; < CHANGE IT HERE
+%define NKP_LED_COLOR			RED			; < CHANGE IT HERE
+%define ALTDASH_LED_COLOR		ORANGE			; < CHANGE IT HERE
+%define PATCHBACK_LED_COLOR		GREEN			; < CHANGE IT HERE
 %define TRIBOOT_LED_COLOR		CYCLE_BLINK		; < CHANGE IT HERE
 
 
@@ -65,7 +65,7 @@
 ;;;   default Dashboard path (and tray boot closed) 2=C 1=E 6=F 7=G
 ;;;---------------------------------------------------------------------------
 
-%define DASHBOARD_PATH	'\Device\Harddisk0\Partition1\UDATA\21585554\000000000000\default.xbe'
+%define DASHBOARD_PATH	'\Device\Harddisk0\Partition1\UDATA\21585554\000000000000\Softmod Files\UX.xbe'
 %define DB_PATH2	''
 %define DB_PATH3	''
 
@@ -178,9 +178,9 @@
 ;;; 2 = Japan
 ;;; 4 = Rest of world
 
-;%define GAME_REGION_PRIMARY	1
-;%define GAME_REGION_SECONDARY	4
-;%define GAME_REGION_TERTIARY	2
+%define GAME_REGION_PRIMARY	1
+%define GAME_REGION_SECONDARY	4
+%define GAME_REGION_TERTIARY	2
 
 %endif	; GAME_REGION_AUTO
 
@@ -214,8 +214,8 @@
 
 %define IGR
 %define IGR_TO_DASHBOARD
-;%define IGR_FULL_REBOOT
-;%define IGR_MASTER_PORT 0
+; %define IGR_FULL_REBOOT
+; %define IGR_MASTER_PORT 0
 
 
 
@@ -226,7 +226,7 @@
 ;;;
 ;;; Blocking not enabled by default.
 
-;%define XBL_BLOCK
+%define XBL_BLOCK
 
 
 
@@ -249,8 +249,8 @@
 
 
 ;%define VIRTUAL_C_DRIVE 2
-;%define ACTUAL_C_DRIVE 8
-;%define VIRTUAL_C_PATH '\Device\Harddisk0\Partition0'
+;%define ACTUAL_C_DRIVE 14
+;%define VIRTUAL_C_PATH ''
 
 
 
@@ -288,9 +288,9 @@
 ;;;
 ;;; LBA48 and partition table not enabled by default.
 
-;%define LBA48
+%define LBA48
 
-;%define PARTITION_METHOD 0
+%define PARTITION_METHOD 0
 ;%define PARTITION_METHOD 1
 ;%define PARTITION_METHOD 2
 ;%define PARTITION_METHOD 3
@@ -320,8 +320,9 @@
 ;;; define ENABLE_REAL_EEPROM_WRITE.
 
 ;%define VIRTUAL_EEPROM
-;%define VIRTUAL_EEPROM_PATH '\Device\Harddisk0\Partition0'
+;%define VIRTUAL_EEPROM_PATH ''
 ;%define DISABLE_VIRTUAL_EEPROM_WRITE
+;%define DISABLE_VIRTUAL_EEPROM_TRAY_OPEN
 ;%define ENABLE_REAL_EEPROM_WRITE
 
 
@@ -344,4 +345,3 @@
 ;;; --------------------------------------------------------------------------
 
 %endif ; CONFIG_INC
-

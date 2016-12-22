@@ -45,7 +45,7 @@
 ;;;   Tray closed Dashboard path, NKP will boot  2=C 1=E 6=F 7=G
 ;;;---------------------------------------------------------------------------
 ;;;                                
-%define DASHBOARD_PATH '\Device\Harddisk0\Partition1\UDATA\21585554\000000000000\nkpatcher settings\unleashx.xbe'
+%define DASHBOARD_PATH '\Device\Harddisk0\Partition1\UDATA\21585554\000000000000\Softmod Files\UX.xbe'
 ;;;---------------------------------------------------------------------------
 ;;; VIDEO patches:
 ;;; 
@@ -95,8 +95,8 @@
 ;;; Default is to use only the game region stored in the EEPROM and not
 ;;; change it.
 
-%define GAME_REGION_AUTO
-; %define GAME_REGION_IGNORE_REAL
+;%define GAME_REGION_AUTO
+;%define GAME_REGION_IGNORE_REAL
 	
 %ifdef GAME_REGION_AUTO
 
@@ -168,7 +168,7 @@
 
 ;%define VIRTUAL_C_DRIVE 2
 ;%define ACTUAL_C_DRIVE 14
-;%define VIRTUAL_C_PATH ''
+;%define VIRTUAL_C_PATH '\Device\Harddisk0\Partition0'
 
 
 
@@ -205,12 +205,12 @@
 
 %define LBA48
 
-;%define PARTITION_METHOD 0
-%define PARTITION_METHOD 1
+%define PARTITION_METHOD 0
+;%define PARTITION_METHOD 1
 ;%define PARTITION_METHOD 2
 ;%define PARTITION_METHOD 3
 
-; %define IGNORE_HD_PARTITION_TABLE
+;%define IGNORE_HD_PARTITION_TABLE
 
 
 ;;; Virtual EEPROM settings:
@@ -246,7 +246,7 @@
 ;;; default is to boot DVD first, unless doing IGR to dash.
 
 %define BOOT_DASH_ONLY
-; %define NORMAL_BOOT_ALWAYS
+;%define NORMAL_BOOT_ALWAYS
 
 
 ;;; Patches inside INIT section (boot unlocked HDs etc.)
@@ -256,7 +256,7 @@
 ;;; Do NOT enable these for nkpatcher.xbe executed on the Xbox (will crash
 ;;; and/or weird behaviour.)
 
-; %define INIT_SEC_PATCHES
+;%define INIT_SEC_PATCHES
 
 
 ;;; --------------------------------------------------------------------------

@@ -87,8 +87,8 @@ void ErrorHandler(char *xbepath)
 {
      if (xbepath && 0 != strcmpi("", xbepath))
 	{
-		XLaunchXBE("E:\\UDATA\\21585554\\000000000000\\softmod files\\install.xbe");
 		XLaunchXBE("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\unleashx.xbe");
+		XLaunchXBE("E:\\UDATA\\21585554\\000000000000\\install.xbe");
 		XLaunchXBE("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\modules\\resoftmod dash\\default.xbe");
 		XReboot();
 	}

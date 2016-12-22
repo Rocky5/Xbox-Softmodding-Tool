@@ -1549,11 +1549,7 @@ patchflickerfilter:
 ;;; Compile-time check that used space actually fits into the available space
 ;;; --------------------------------------------------------------------------
 
-;;; --------------------------------------------------------------------------
-;;; Removing " + FLICKER_FILTER_SIZE" fixes the error about LDR1 space on kernel 3499
-;;; --------------------------------------------------------------------------
-;;;%define USEDSPACE_LDR1_USUAL	(MEDIA_SIZE + FLICKER_FILTER_SIZE)
-%define USEDSPACE_LDR1_USUAL	(MEDIA_SIZE)
+%define USEDSPACE_LDR1_USUAL	(MEDIA_SIZE + FLICKER_FILTER_SIZE)
 %define USEDSPACE_LDR1_3944	USEDSPACE_LDR1_USUAL
 %define USEDSPACE_LDR1_4034	USEDSPACE_LDR1_USUAL
 %define USEDSPACE_LDR1_4817	USEDSPACE_LDR1_USUAL

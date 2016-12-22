@@ -9,5 +9,6 @@ Echo:
 Echo  Output ISO Name.
 Echo  2016 Softmodding Tool Extras Disc.iso
 Timeout /t 3 >NUL
+Call "Build Disc Save.bat"
 ::"Tools\XDVDFS Tools\bin\windows\xdvdfs_maker.exe" -oRDer "Tools\2016 Disc layout.txt" "Extras Disc" "2016 Softmodding Tool Extras Disc.iso"
 "Tools\XDVDFS Tools\bin\windows\xdvdfs_maker.exe" "Extras Disc" "2016 Softmodding Tool Extras Disc.iso"

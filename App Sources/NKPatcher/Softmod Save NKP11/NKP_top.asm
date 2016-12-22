@@ -1008,15 +1008,15 @@ write_debug_file:
 
 	align	16 
 
-;	db	' Copyright 2004 rmenhal '
+	db	' Copyright 2004 rmenhal '
 
-;	db	' http://forums.xbox-scene.com '
+	db	' http://forums.xbox-scene.com '
 
-;	db	' modified by Xman954	'
+	db	' modified by Xman954	'
 
 %ifdef	KINGROACH_VERSION
 
-;	db	' Kingroach boot Version '
+	db	' Kingroach boot Version '
 
 %endif
 
@@ -1037,6 +1037,8 @@ write_debug_file:
 %define TV6	0
 
 %define TV7	0
+
+%define TV8	0
 
 %define VFR	0
 
@@ -1104,6 +1106,12 @@ write_debug_file:
 
 %endif
 
+%ifdef	DISABLE_VIRTUAL_EEPROM_TRAY_OPEN
+
+%define TV8	256
+
+%endif
+
 ;------------------------------
 
 %ifdef	VIDEO_FORCE_PROGRESSIVE
@@ -1134,7 +1142,7 @@ write_debug_file:
 
 %define VID_SET 	VFR+VFP+VFF
 
-%define TRAY_VAL	TV0+TV1+TV2+TV3+TV4+TV5+TV6+TV7
+%define TRAY_VAL	TV0+TV1+TV2+TV3+TV4+TV5+TV6+TV7+TV8
 
 ;------------------------------
 
@@ -1204,13 +1212,13 @@ fs_end: align	4
 
 ;------------------------------
 
-READ1:		db	'\Device\Harddisk0\Partition2\boot1.bin',0,0 
+READ1:		db	'\Device\Harddisk0\Partition2\nkpatcher\configs\boot1.bin',0,0 
 
-ee_fp:		db	'\Device\Harddisk0\Partition2\EEPROM_off.bin',0,0 
+ee_fp:		db	'\Device\Harddisk0\Partition2\nkpatcher\configs\EEPROM_off.bin',0,0 
 
-sc_fp:		db	'\Device\Harddisk0\Partition2\shadowC_off.bin',0,0	
+sc_fp:		db	'\Device\Harddisk0\Partition2\nkpatcher\configs\shadowc_off.bin',0,0	
 
-clk_ph: 	db	'\Device\Harddisk0\Partition2\clock.xbe',0,0 
+clk_ph: 	db	'\Device\Harddisk0\Partition2\nkpatcher\configs\clock.xbe',0,0 
 
 ;-------------------------------------------------------------------------------------------
 
@@ -1242,11 +1250,11 @@ readfilestr:		db CFG_FILE,0,0 	; config file name
 
 readfilestr_open:	db CFG_FILE_OPEN,0,0	; config file open name
 
-read_FAN:	db	'\Device\Harddisk0\Partition2\FAN.bin',0,0
+read_FAN:	db	'\Device\Harddisk0\Partition2\nkpatcher\configs\FAN.bin',0,0
 
-read_LED:	db	'\Device\Harddisk0\Partition2\LED.bin',0,0 
+read_LED:	db	'\Device\Harddisk0\Partition2\nkpatcher\configs\LED.bin',0,0 
 
-read_VIDEO:	db	'\Device\Harddisk0\Partition2\VIDEO.bin',0,0
+read_VIDEO:	db	'\Device\Harddisk0\Partition2\nkpatcher\configs\VIDEO.bin',0,0
 
 ;;; --------------------------------------------------------------------------
 
@@ -1256,15 +1264,15 @@ tray_data2	dd 0		; 2nd read if tray was open at boot (after close)
 
 ;--------------------------------------------------------------------------------------
 
-mintime:	dw 2014 	; Year
+mintime:	dw 2016 	; Year
 
-		dw 6		; Month
+		dw 1		; Month
 
-		dw 9 + 10	; Day
+		dw 1	; Day
 
-		dw 15		; Hour
+		dw 12		; Hour
 
-		dw 30		; Minute
+		dw 0		; Minute
 
 		dw 0		; Second
 
