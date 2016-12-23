@@ -73,7 +73,7 @@
 					<Item Action="Unzip" arg1="Y:\UDDAE-E.zip" arg2="E:\"/>
 					<Item Action="Unzip" arg1="Y:\Audio.zip" arg2="C:\"/>
 					<Item Action="Copy" arg1="Y:\Softmod Files\21585554\000000000000\softmod files\skin files\" arg2="C:\resoftmod dash\skins\ReSoftmod Dash\"/>
-					<Item Action="Copy" arg1="Y:\Softmod Files\21585554\000000000000\nkpatcher settings\unleashx.xbe" arg2="C:\resoftmod dash\default.xbe"/>
+					<Item Action="Copy" arg1="Y:\Softmod Files\21585554\000000000000\softmod files\ux.xbe" arg2="C:\resoftmod dash\default.xbe"/>
 					<Item Action="Zip" arg1="Y:\Softmod Files\21585554\" arg2="C:\resoftmod dash\resoftmod files.zip"/>
 					<Item Action="UnRar" arg1="Y:\Softmod Files\21585554\000000000000\softmod files\Files.rar" arg2="Y:\Softmod Files\21585554\000000000000\softmod files\"/>
 					<Item Action="UnRar" arg1="Y:\Softmod Files\21585554\000000000000\softmod files\nkp settings.rar" arg2="Y:\Softmod Files\21585554\000000000000\softmod files\"/>

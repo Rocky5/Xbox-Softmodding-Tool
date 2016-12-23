@@ -15,12 +15,13 @@ But here is what I have changed, that I can remember.
 =========================================
 		Fixed the list high for all the skins.
 		Fixed the main skin files (A) Select background being off a little.
-		Updated to the "2016 Softmod Tool Kit" tool. Now when the Virtual EEPROM is enabled it will now display "V-EEPROM ENB" as the systems serial number.
+		Update to the "2016 Softmod Tool Kit" tool. Now when the Virtual EEPROM is enabled it will now display "V-EEPROM ENB" as the systems serial number.
 		Updated the Virtual EEPROM settings menu:
 			> You now cannot run the "Enable" option more than once, as the Virtual EEPROM is write protected until disabled and the system had restarted.
 			> Disable now has a mandatory restart.
 			> You cannot run the "Disable" option if the Virtual EEPROM isn't enabled and visa versa for "Enable".
 			> You cannot backup the EEPROM when the Virtual EEPROM is enabled. ( reason: it will read the virtual one instead of the onboard one )
+		Forgot to change the "Restore System to Stock" to match the new softmod layout :\
 		
 
 =========================================
