@@ -225,6 +225,11 @@ HRESULT ConfigMagicApp::Initialize()
 		strcat(tmpFileName, Virtual_Path);
 		strcat(tmpFileName, "EEPROM.bin");
 		m_pXKEEPROM->WriteToBINFile((LPCSTR)tmpFileName);
+		/* Change the serial number to V-EEPROM ENB */
+		std::ofstream V_EEPROM(Virtual_Full_Path, std::ios::binary | std::ios::in | std::ios::out);
+		V_EEPROM.seekp(52);
+		V_EEPROM.write("\x56\x2D\x45\x45\x50\x52\x4F\x4D\x20\x45\x4E\x42", 12);
+		V_EEPROM.close();
 	}
 		else
 	{

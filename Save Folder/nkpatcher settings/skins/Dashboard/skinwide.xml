@@ -17,7 +17,7 @@
 		<Orb/>
 		<Icon/>
 		<Menu Horizontal="False" Smooth="True" Align="Middle" ShowIcon="False" Rotate="False" ShowArrows="False" Scroll="1">
-			<Position Top="133" Left="72" Width="286" Height="310" Fixed="False" FixAt="0" MaxItem="12"/>
+			<Position Top="133" Left="72" Width="286" Height="300" Fixed="False" FixAt="0" MaxItem="12"/>
 			<Font>E:\UDATA\21585554\000000000000\softmod files\skin files\fonts\font1.xpr</font>
 			<Preview EnableAudio="False" Top="0" Left="0" Width="0" Height="0" />
 		</Menu>
@@ -65,7 +65,7 @@
 		<!-- (A) Select (B) Back section -->
 		<Shape zindex="1" Type="Rectangle" Top="427" Left="71" Width="165" Height="25" BorderColor="0x00000000" BackColor="0xff3b3c47"/>
 		<Shape zindex="1" Type="Rectangle" Top="427" Left="71" Width="148" Height="45" BorderColor="0x00000000" BackColor="0xff3b3c47"/>
-		<Shape zindex="1" Type="triangle" Top="450" Left="201" Width="37" Height="21" BorderColor="0x00000000" BackColor="0xff3b3c47" Direction="down"/>
+		<Shape zindex="1" Type="triangle" Top="450" Left="201" Width="35" Height="21" BorderColor="0x00000000" BackColor="0xff3b3c47" Direction="down"/>
 		<Shape zindex="1" Type="Rectangle" Top="427" Left="71" Width="499" Height="4" BorderColor="0x00000000" BackColor="0xff3b3c47"/>
 		<Shape zindex="1" Type="Rectangle" Top="450" Left="71" Width="475" Height="4" BorderColor="0x00000000" BackColor="0xff3b3c47"/>
 		<Image zindex="3" Top="430" Left="95" Width="112" Height="38">E:\UDATA\21585554\000000000000\softmod files\skin files\images\buttons.png</image>

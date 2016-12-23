@@ -11,6 +11,17 @@ But here is what I have changed, that I can remember.
 
 
 =========================================
+	Update: Dec 23 2016
+=========================================
+		Fixed the list high for all the skins.
+		Fixed the main skin files (A) Select background being off a little.
+		Updated to the "2016 Softmod Tool Kit" tool. Now when Virtual EEPROM is enabled it will now display "V-EEPROM ENB" as the systems serial number.
+		Updated the Virtual EEPROM settings menu:
+			> You now cannot run the "Enable" option more than once, as the virtual eeprom is write protected until disabled and the system had restarted.
+			> Disable now has a mandatory restart.
+		
+
+=========================================
 	Update: Dec 22 2016
 =========================================
 		Moved to NKPatcher 11.UO5 ( My edit ) for the initial softmod.

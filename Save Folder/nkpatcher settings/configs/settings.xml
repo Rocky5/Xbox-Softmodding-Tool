@@ -440,17 +440,23 @@
 			</List>
 			<Item>------------------------------------------</Item>
 			<List Text="Enable" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\enabled.png">
+				<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.pn">Please disable the virtual eeprom. The "Virtual EEPROM" is write protected until it's disable and the system has restarted</Item>
+				<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.pn" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.png"/>
 				<Item Action="MessageBox" Arg1="Complete">To install the Virtual EEPROM. \nI will need to exit nkpatcher settings. \nNote: Changes will take affect on next boot.</Item>
 				<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\savemeta.xbx" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\2016 softmod tool kit\Virtual_EEPROM_Backup.enabled"/>
 				<Item Action="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\2016 softmod tool kit\default.xbe"/>
 			</List>
+			<Item>------------------------------------------</Item>
+			<Item>This Option</Item>
 			<List Text="Disable" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.png">
 				<Item Action="Copy" arg1="C:\nkpatcher\configs\fan files\fan1.bin" arg2="C:\nkpatcher\configs\EEPROM_off.bin"/>
 				<Item Action="Copy" arg1="dummy" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom"/>
 				<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom"/>
 				<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.png"/>
-				<Item Action="MessageBox" Arg1="Complete">Setting saved. \nNote: Changes will take affect on next boot.</Item>
+				<Item Action="MessageBox" Arg1="Complete">Setting saved. \nThe Xbox will now restart.</Item>
+				<Item Action="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\reboot xbe\default.xbe"/>
 			</List>
+			<Item>Has A Mandatory Restart</Item>
 			<Item>------------------------------------------</Item>
 			<List Text="Backup EEPROM Tool" Sort="Off" Batch="True">
 				<Item Action="MessageBox" Arg1="Complete">The following: \n\nEEPROM.bin \nEEPROM.cfg \nXBOX INFO.txt \n\nwill be placed in "E:\Backups\EEPROM\".</Item>
