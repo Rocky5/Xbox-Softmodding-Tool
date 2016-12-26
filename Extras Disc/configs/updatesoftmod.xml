@@ -123,12 +123,12 @@
 				<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\softmod files\skins">Delete softmod files skins</Item>
 				<Item Action="Copy" arg1="C:\nkpatcher\configs\video files\VIDEO1.bin" arg2="C:\nkpatcher\configs\VIDEO.bin">Copy video1.bin</Item>
 				<Item Action="Delete" arg1="C:\nkpatcher\configs\video.bin">Delete video.bin</Item>
-				<Item Action="TrayOpen">Tray open</Item>
 				<Item Action="Copy" arg1="dummy" arg2="C:\Do not touch anything in here">Copy dummy to C:\Do not touch anything in here</Item>
 				<Item Action="Format" arg1="X">Format X</Item>
 				<Item Action="Format" arg1="Y">Format Y</Item>
 				<Item Action="Format" arg1="Z">Format Z</Item>
-				<Item Action="MessageBox" Arg1="Done">That's me done updating your softmod, I will now restart the xbox to finish the procedure. Please remove the disc from the tray &amp; press (A)</Item>
+				<Item Action="TrayOpen">Tray open</Item>
+				<Item Action="MessageBox" Arg1="Done">That's the update process complete, the Xbox will now restart twice. Please remove the disc from the tray &amp; press (A)</Item>
 				<Item Action="TrayClose">Tray close</Item>
 				<Item Action="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\reboot xbe\default.xbe">Run reboot xbe</Item>
 			</list>
