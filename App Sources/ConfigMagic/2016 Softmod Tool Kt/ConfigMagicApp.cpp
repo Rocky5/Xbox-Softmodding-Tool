@@ -204,7 +204,7 @@ HRESULT ConfigMagicApp::Initialize()
 		CopyFile(DashboardSkinwideXML, "C:\\Dashboard\\Skins\\Softmod Wide\\skin.xml", NULL);
 		CopyFile(DashboardSkinSplash, "C:\\Dashboard\\Skins\\Softmod\\UXSplash.jpg", NULL);
 		CopyFile(DashboardSkinSplash, "C:\\Dashboard\\Skins\\Softmod Wide\\UXSplash.jpg", NULL);
-		XKUtils::XBOXPowerCycle();
+		XKUtils::XBOXReset();
 	}
 	else
 	{

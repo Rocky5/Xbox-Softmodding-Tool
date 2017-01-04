@@ -24,10 +24,10 @@
 		</Preference>
 		<Network Type="DHCP" Enable="Yes">
 			<AutoDetect>yes</AutoDetect>
-			<IP>192.168.1.6</IP>
+			<IP>192.168.0.6</IP>
 			<Subnet>255.255.255.255</Subnet>
-			<Gateway>192.168.1.1</Gateway>
-			<DNS1>192.168.1.1</DNS1>
+			<Gateway>192.168.0.1</Gateway>
+			<DNS1>192.168.0.1</DNS1>
 		</Network>
 		<FTP Enable="Yes">
 			<MaxUsers>10</MaxUsers>

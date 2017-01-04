@@ -11,6 +11,22 @@ But here is what I have changed, that I can remember.
 
 
 =========================================
+	Update: Jan 4 2017
+=========================================
+		Updated the installation process, I now put the "2016 Softmod Tool Kit" into the Prep folder and reboot after the softmod is installed.
+		( This fixes any issues if someone ejects the disc at the end of the softmod installation. Would have require reinstalling from the recover menu to fix )
+		Fixed UnleashX's header, so now its a valid xbe ( this has never been fixed in all releases of UX, though it should have been )
+		Added "Build 570" directory into UnleashX when installed from the disc, this is so folk dont need to go looking for it when they have Filezilla issues.
+		Changed all the static IP's to 192.168.0.*
+
+
+=========================================
+	Update: Dec 31 2016
+=========================================
+		Updated Chimp261812, nothing major it wont effect 99% of folk.
+
+		
+=========================================
 	Update: Dec 23 2016
 =========================================
 		Fixed the list high for all the skins.
