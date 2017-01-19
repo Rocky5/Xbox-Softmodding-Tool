@@ -321,7 +321,7 @@
 
 %define VIRTUAL_EEPROM
 %define VIRTUAL_EEPROM_PATH '\Device\Harddisk0\Partition14\nkpatcher\configs\eeprom.bin'
-%define DISABLE_VIRTUAL_EEPROM_WRITE
+;%define DISABLE_VIRTUAL_EEPROM_WRITE
 ;%define DISABLE_VIRTUAL_EEPROM_TRAY_OPEN
 %define ENABLE_REAL_EEPROM_WRITE
 
