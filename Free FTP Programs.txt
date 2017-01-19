@@ -1,0 +1,9 @@
+Free FTP Programs
+
+All work on Windows 10
+
+Core FTP LE 2.2 : free version - ( functions like Filezilla but without any issues )
+http://www.coreftp.com/download.html
+
+Filezilla - ( has root directory issues with newer versions of UnleashX )
+https://filezilla-project.org/

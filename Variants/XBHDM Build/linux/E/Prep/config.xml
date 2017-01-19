@@ -99,14 +99,8 @@
 			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\configs\alt xbe's\nkps.xbe" arg2="E:\Applications\NKPatcher Settings\default.xbe">Copy nkps.xbe to NKPatcher Settings</Item>
 			<Item Action="Copy" arg1="dummy" arg2="E:\Applications\NKPatcher Settings\modules">Copy dummy to modules</Item>
 
-			<!-- Settings up the "resoftmod dash", this is used for when you load a disc based game exploit. -->
-			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\unleashx.xbe" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\resoftmod dash\default.xbe">Copy unleashx to resoftmod dash</Item>
-			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\configs\alt xbe's\recovery.xbe" arg2="E:\UDATA\21585554\000000000000\install.xbe">Copy disabled.xbe to install.xbe</Item>
-			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\configs\alt xbe's\recovery.xbe" arg2="E:\UDATA\4541000d\000000000000\default.xbe">Copy disabled.xbe to default.xbe</Item>
-			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\configs\alt xbe's\recovery.xbe" arg2="E:\UDATA\4d530017\62D648EBF155\default.xbe">Copt disabled.xbe to default.xbe</Item>
-
 			<!-- Setting up rescue dashboards -->
-			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\configs\alt xbe's\rescuedash\disabled.xbe" arg2="C:\nkpatcher\rescuedash\default.xbe">Copy disabled.xbe to C rescuedash</Item>
+			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\softmod files\pbl" arg2="C:\nkpatcher\rescuedash\pbl">Copy pbl to C rescuedash</Item>
 			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\unleashx.xbe" arg2="C:\nkpatcher\rescuedash\unleashx.xbe">Copy unleashx.xbe to C rescuedash</Item>
 			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\skins\RescueDash_C" arg2="C:\nkpatcher\rescuedash\skins\RescueDash_C">Copy skin to C rescuedash</Item>
 			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\softmod files\Skin Files" arg2="C:\nkpatcher\rescuedash\skins\RescueDash_C\skin files">Copy skin to C rescuedash</Item>
@@ -121,26 +115,34 @@
 			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\configs\recovery.xml" arg2="E:\UDATA\rescuedash\Config.xml">Copy recovery.xml to U rescuedash</Item>
 			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\skins\RescueDash_E\" arg2="E:\UDATA\rescuedash\skins\RescueDash_E\">Copy skin to U rescuedash</Item>
 
+			<!-- Settings up the "resoftmod dash", this is used for when you load a disc based game exploit. -->
+			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\unleashx.xbe" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\resoftmod dash\default.xbe">Copy unleashx to resoftmod dash</Item>
+			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\configs\alt xbe's\recovery.xbe" arg2="E:\UDATA\21585554\000000000000\install.xbe">Copy recovery.xbe to install.xbe</Item>
+			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\configs\alt xbe's\recovery.xbe" arg2="E:\UDATA\4541000d\000000000000\default.xbe">Copy recovery.xbe to default.xbe</Item>
+			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\configs\alt xbe's\recovery.xbe" arg2="E:\UDATA\4d530017\62D648EBF155\default.xbe">Copt recovery.xbe to default.xbe</Item>
+			
 			<!-- Install the splash for UnleashX -->
 			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\softmod files\skin files\uxsplash.jpg" arg2="E:\UDATA\9e115330\0064122817A8\Splash.jpg">Copy splash.jpg to unleashx save directory</Item>
 			
 			<!-- Setup 2016 softmod tool kit -->
-			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\2016 Softmod Tool Kit\icon.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\2016 Softmod Tool Kit\firstrun.bin">Copy updaterun.bin to prep</Item>
+			<Item Action="Delete" Arg="E:\Prep">Remove Prep</Item>
+			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\2016 Softmod Tool Kit\icon.png" arg2="E:\Prep\firstrun.bin">Copy firstrun.bin to prep</Item>
+			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\2016 softmod tool kit\default.xbe" arg2="E:\Prep\default.xbe">Copy default.xbe to prep</Item>
 
-			<!-- Cleanup, remove softmod skin save folder & put a folder in C for the end user to read -->
+			<!-- Cleanup & put a folder in C for the end user to read -->
+			<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\softmod files\PBL">Delete softmod files pbl</Item>
 			<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\softmod files\config.xml">Delete softmod files config.xml</Item>
 			<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\softmod files\ux.xbe">Delete softmod files ux.xbe</Item>
 			<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\softmod files\skins">Delete softmod files skins</Item>
 			<Item Action="Copy" arg1="dummy" arg2="C:\Do not touch anything in here">Copy dummy to C:\Do not touch anything in here</Item>
-			<Item Action="Delete" Arg="E:\Prep">Remove Prep</Item>
 			<Item Action="Format" arg1="X">Format X</Item>
 			<Item Action="Format" arg1="Y">Format Y</Item>
 			<Item Action="Format" arg1="Z">Format Z</Item>
-			<Item Action="MessageBox" Arg1="Important Info">Your EEPROM backup will be placed in \n\n"E:\Backups\EEPROM\" \n\nCopy the EEPROM folder to your PC once the dashboard has loaded and keep it safe.</Item>
-			<Item Action="MessageBox" Arg1="Done">So that's you all softmodded. See, I told you it was painless ;) but now I need to power cycle the Xbox, so take the disc out when the Xbox starts up again.</Item>
-			<Item Action="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\2016 softmod tool kit\default.xbe">Run 2016 softmod tool kit</Item>
+			<Item Action="MessageBox" Arg1="Important Info">Your EEPROM backup will be placed in "E:\Backups\EEPROM\" copy the "EEPROM" folder to your PC once the dashboard has loaded and keep it safe.</Item>
+			<Item Action="MessageBox" Arg1="Please Read">The EEPROM.bin is required to create a new HDD for this system. In the case your Xbox HDD dies, you need the EEPROM.bin file to create a new locked drive. This is why it's important to back it up and keep it safe.</Item>
+			<Item Action="MessageBox" Arg1="Done">Well that's you all softmodded. See, I told you it was a painless process. But now I need to restart the Xbox. So when you see the "Green Flubber Animation" take the disc out.</Item>
+			<Item Action="PowerCycle">Full Restart</Item>
 		</list>
-
-	</list>
+	</List>
 </Menu>
 </Unleashx>

@@ -79,14 +79,8 @@
 			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\configs\alt xbe's\nkps.xbe" arg2="E:\Applications\NKPatcher Settings\default.xbe">Copy nkps.xbe to NKPatcher Settings</Item>
 			<Item Action="Copy" arg1="dummy" arg2="E:\Applications\NKPatcher Settings\modules">Copy dummy to modules</Item>
 
-			<!-- Settings up the "resoftmod dash", this is used for when you load a disc based game exploit. -->
-			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\unleashx.xbe" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\resoftmod dash\default.xbe">Copy unleashx to resoftmod dash</Item>
-			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\configs\alt xbe's\recovery.xbe" arg2="E:\UDATA\21585554\000000000000\install.xbe">Copy disabled.xbe to install.xbe</Item>
-			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\configs\alt xbe's\recovery.xbe" arg2="E:\UDATA\4541000d\000000000000\default.xbe">Copy disabled.xbe to default.xbe</Item>
-			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\configs\alt xbe's\recovery.xbe" arg2="E:\UDATA\4d530017\62D648EBF155\default.xbe">Copt disabled.xbe to default.xbe</Item>
-
 			<!-- Setting up rescue dashboards -->
-			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\configs\alt xbe's\rescuedash\disabled.xbe" arg2="C:\nkpatcher\rescuedash\default.xbe">Copy disabled.xbe to C rescuedash</Item>
+			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\softmod files\pbl" arg2="C:\nkpatcher\rescuedash\pbl">Copy pbl to C rescuedash</Item>
 			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\unleashx.xbe" arg2="C:\nkpatcher\rescuedash\unleashx.xbe">Copy unleashx.xbe to C rescuedash</Item>
 			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\skins\RescueDash_C" arg2="C:\nkpatcher\rescuedash\skins\RescueDash_C">Copy skin to C rescuedash</Item>
 			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\softmod files\Skin Files" arg2="C:\nkpatcher\rescuedash\skins\RescueDash_C\skin files">Copy skin to C rescuedash</Item>
@@ -101,6 +95,12 @@
 			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\configs\recovery.xml" arg2="E:\UDATA\rescuedash\Config.xml">Copy recovery.xml to U rescuedash</Item>
 			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\skins\RescueDash_E\" arg2="E:\UDATA\rescuedash\skins\RescueDash_E\">Copy skin to U rescuedash</Item>
 
+			<!-- Settings up the "resoftmod dash", this is used for when you load a disc based game exploit. -->
+			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\unleashx.xbe" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\resoftmod dash\default.xbe">Copy unleashx to resoftmod dash</Item>
+			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\configs\alt xbe's\recovery.xbe" arg2="E:\UDATA\21585554\000000000000\install.xbe">Copy recovery.xbe to install.xbe</Item>
+			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\configs\alt xbe's\recovery.xbe" arg2="E:\UDATA\4541000d\000000000000\default.xbe">Copy recovery.xbe to default.xbe</Item>
+			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\configs\alt xbe's\recovery.xbe" arg2="E:\UDATA\4d530017\62D648EBF155\default.xbe">Copt recovery.xbe to default.xbe</Item>
+			
 			<!-- Install the splash for UnleashX -->
 			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\softmod files\skin files\uxsplash.jpg" arg2="E:\UDATA\9e115330\0064122817A8\Splash.jpg">Copy splash.jpg to unleashx save directory</Item>
 
@@ -109,6 +109,7 @@
 			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\2016 softmod tool kit\default.xbe" arg2="E:\Prep\default.xbe">Copy default.xbe to prep</Item>
 
 			<!-- Cleanup & put a folder in C for the end user to read -->
+			<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\softmod files\PBL">Delete softmod files pbl</Item>
 			<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\softmod files\config.xml">Delete softmod files config.xml</Item>
 			<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\softmod files\ux.xbe">Delete softmod files ux.xbe</Item>
 			<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\softmod files\skins">Delete softmod files skins</Item>

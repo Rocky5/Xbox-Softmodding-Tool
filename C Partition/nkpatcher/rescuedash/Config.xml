@@ -84,22 +84,23 @@
 					<Item Action="Delete" arg1="E:\TDATA\rescuedash"/>
 					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\configs\alt xbe's\dashboard.xbe" arg2="E:\TDATA\rescuedash\default.xbe"/>
 					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\configs\recovery.xml" arg2="E:\TDATA\rescuedash\Config.xml"/>
-					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\skins\Softmod\" arg2="E:\TDATA\rescuedash\skins\Softmod\"/>
+					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\skins\RescueDash_E\" arg2="E:\TDATA\rescuedash\skins\RescueDash_E\"/>
 					<Item Action="Copy" arg1="dummy" arg2="E:\UDATA\rescuedash"/>
 					<Item Action="Delete" arg1="E:\UDATA\rescuedash"/>
 					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\configs\alt xbe's\dashboard.xbe" arg2="E:\UDATA\rescuedash\default.xbe"/>
 					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\configs\recovery.xml" arg2="E:\UDATA\rescuedash\Config.xml"/>
-					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\skins\Softmod\" arg2="E:\UDATA\rescuedash\skins\Softmod\"/>
+					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\skins\RescueDash_E\" arg2="E:\UDATA\rescuedash\skins\RescueDash_E\"/>
 					<list>
 						<Item Action="AskUser" arg1="ShadowC" arg2="Have you remove the shadowc.img? \n\nThis is mandatory for the softmod to work. \n\nIf you select no and and the installer fails this means you did remove it, so slap yourself in the face for lying and reselect Fix Softmod."/>
 						<Item Action="Delete" arg1="C:\nkpatcher\shadowc"/>
 						<Item Action="Copy" arg1="dummy" arg2="C:\nkpatcher\shadowc"/>
-						<Item Action="Copy" arg1="C:\nkpatcher\rescuedash\Config.xml" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\2016 Softmod Tool Kit\firstrun.bin"/>
+						<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\2016 Softmod Tool Kit\icon.png" arg2="E:\Prep\firstrun.bin"/>
+						<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\2016 softmod tool kit\default.xbe" arg2="E:\Prep\default.xbe"/>
 						<Item Action="Format" arg1="X"/>
 						<Item Action="Format" arg1="Y"/>
 						<Item Action="Format" arg1="Z"/>
-						<Item Action="MessageBox" Arg1="Fixed">That's me done repairing the softmod, I will now restart the xbox to populate the new ShadowC image. Please be careful in the future.</Item>
-						<Item Action="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\2016 softmod tool kit\default.xbe"/>
+						<Item Action="MessageBox" Arg1="Fixed">That's me done repairing the softmod, I will now restart the xbox to populate the new ShadowC image. Please be careful in the future</Item>
+						<Item Action="PowerCycle">Full Restart</Item>
 					</list>
 					<Item Action="Rename" arg1="C:\nkpatcher\shadowc\shadowc.img" arg2="C:\nkpatcher\shadowc\shadowc.im">The ShadowC.img had been removed</Item>
 					<Item Action="Rename" arg1="C:\nkpatcher\shadowc\shadowc.im" arg2="C:\nkpatcher\shadowc\shadowc.img"/>
@@ -107,7 +108,7 @@
 					<Item Action="Format" arg1="Y"/>
 					<Item Action="Format" arg1="Z"/>
 					<Item Action="MessageBox" Arg1="Fixed">That's me done repairing the softmod, I will now restart the xbox to finish the procedure. Please be careful in the future.</Item>
-					<Item Action="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\2016 softmod tool kit\default.xbe"/>
+					<Item Action="PowerCycle">Full Restart</Item>
 				</list>
 			</list>
 
@@ -122,17 +123,17 @@
 
 			<List Text="Yes, I really want to start fresh." Sort="Off" Batch="True">
 				<list>
-					<Item Action="MessageBox" arg1="Warning">I need to do a file check. If it fails, don't worry. You can insert the 2016 Softmodding Tool Extras Disc &amp; press the following (LT+RT+Black+Start) to load the disc &amp; then use the Upgrade Older Softmods option, located in the Advanced Features menu.</Item>
+					<Item Action="MessageBox" arg1="Warning">I need to do a file check. If it fails, don't worry. You can insert the 2016 Softmodding Tool Extras Disc &amp; then reboot the Xbox. Followed by the "Upgrade Older Softmods option", located in the Advanced Features menu.</Item>
 					<list>
 						<Item Action="Rename" arg1="C:\nkpatcher\rescuedash\resoftmod files.zip" arg2="C:\nkpatcher\rescuedash\resoftmod files.zi">resoftmod files are missing</Item>
 						<Item Action="Rename" arg1="C:\nkpatcher\rescuedash\resoftmod files.zi" arg2="C:\nkpatcher\rescuedash\resoftmod files.zip"/>
 					</list>
 					<Item Action="MessageBox" arg1="hmm">Found the file I need :)</Item>
-					<Item Action="Copy" arg1="dummy" arg2="E:\UDATA\21585554"/>
-					<Item Action="Delete" arg1="E:\UDATA\21585554"/>
-					<Item Action="UnZip" arg1="C:\nkpatcher\rescuedash\resoftmod files.zip"  arg2="E:\UDATA\21585554\"/>
+					<Item Action="Copy" arg1="dummy" arg2="E:\UDATA\21585554">Removing Old Softmod save directory</Item>
+					<Item Action="Delete" arg1="E:\UDATA\21585554">Removing Old Softmod save directory</Item>
+					<Item Action="UnZip" arg1="C:\nkpatcher\rescuedash\resoftmod files.zip"  arg2="E:\UDATA\21585554\">Extracting Softmod files to the HDD</Item>
 					<Item Action="Copy" arg1="C:\nkpatcher\rescuedash\alt xbe\"  arg2="E:\UDATA\21585554\000000000000\"/>
-					<Item Action="E:\UDATA\21585554\000000000000\install.xbe"/>
+					<Item Action="E:\UDATA\21585554\000000000000\install.xbe">Loading install.xbe</Item>
 				</list>
 			</list>
 

@@ -11,6 +11,29 @@ But here is what I have changed, that I can remember.
 
 
 =========================================
+	Update: Jan 18 2017
+=========================================
+		Updated the configs and instructions for the variant builds of the softmod.
+		Cleaned up the 2016 Softmod Tool Kit source. ( due to changes made prior )
+		Added new txt files, Free FTP Programs.txt and How to run the exploit save.txt.
+		Fixed/cleaned up some of the batch files.
+		
+
+=========================================
+	Update: Jan 14 2017
+=========================================
+		Had to revert to using BFM bios for the softmod install due to v1.0 Xbox being finicky as hell with NKPatcher 11.
+		Changed all configs to match the above changes.
+		Updated Chimp 261812 to the latest version.
+		Updated the UDDAE exploit the use BFM bios as well. ( added CDRom0 ( hex edit ) as a boot path so disc can be launched if inserted )
+		I patch NKPatcher Settings unleashx.xbe during the softmod install, to stop it extracting and using titleimage.xbx files.
+		( this means you/I don't need transparent icon.png files to hide the titleimage.xbx file from showing in the top right )
+		Added the habibi signatures for the edited xbe files when patching them during the softmod.
+		( you would get error 21 if they aren't habibi signed, so loading the save file would error 21 )
+		Updated dashloader.
+
+
+=========================================
 	Update: Jan 4 2017
 =========================================
 		Updated the installation process, I now put the "2016 Softmod Tool Kit" into the Prep folder and reboot after the softmod is installed.

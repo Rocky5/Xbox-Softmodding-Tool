@@ -51,28 +51,13 @@
 		</LED>
 	</Settings>
 	<Menu>
-		<List Text="NKPatcher Settings" Sort="Off">
-
-			<List Text="Yeah, load NKPatcher Settings." Sort="Off" Batch="True">
-				<list>
-					<Item Action="E:\UDATA\21585554\000000000000\nkpatcher settings\unleashx.xbe"/>
-				</list>
-			</list>
-
-			<Item>-</Item>
-
-			<Item>Press (B) to Exit this menu.</Item>
-		</list>
-
-		<Item>-</Item>
-
 		<List Text="Resoftmod my Xbox" Sort="Off">
 
 			<List Text="Yes, I really want to start fresh." Sort="Off" Batch="True">
 				<list>
-					<Item Action="MessageBox" arg1="Warning">I need to do a file check. If it fails, don't worry. You can insert the 2016 Softmodding Tool Extras Disc &amp; press the following (LT+RT+Black+Start) to load the disc &amp; then use the Upgrade Older Softmods option, located in the Advanced Features menu.</Item>
+					<Item Action="MessageBox" arg1="Warning">I need to do a file check. If it fails, don't worry. You can insert the 2016 Softmodding Tool Extras Disc &amp; then reboot the Xbox. Followed by the "Upgrade Older Softmods option", located in the Advanced Features menu.</Item>
 					<list>
-						<Item Action="Rename" arg1="C:\nkpatcher\rescuedash\resoftmod files.zip" arg2="C:\nkpatcher\rescuedash\resoftmod files.zi">resoftmod files are missing</Item>
+						<Item Action="Rename" arg1="C:\nkpatcher\rescuedash\resoftmod files.zip" arg2="C:\nkpatcher\rescuedash\resoftmod files.zi">The "resoftmod files.zip" is missing or you have loaded this module from within "NKPatcher Settings"</Item>
 						<Item Action="Rename" arg1="C:\nkpatcher\rescuedash\resoftmod files.zi" arg2="C:\nkpatcher\rescuedash\resoftmod files.zip"/>
 					</list>
 					<Item Action="MessageBox" arg1="hmm">Found the file I need :)</Item>

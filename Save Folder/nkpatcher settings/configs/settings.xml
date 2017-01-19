@@ -77,7 +77,7 @@
 					<Item Action="Copy" arg1="C:\nkpatcher\configs\dualboot\dualboot.settings" arg2="C:\nkpatcher\configs\dualboot.settings"/>
 					<List>
 						<Item Action="AskUser" Arg1="Install?">Would you like me to install UnleashX to the Alt Dashboard location? Note: If you are using a custom "dualboot.settings" file, please select no.</Item>
-						<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\unleashx.xbe" arg2="E:\Alt Dashboard\default.xbe"/>
+						<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\configs\alt xbe's\dashboard.xbe" arg2="E:\Alt Dashboard\default.xbe"/>
 						<Item Action="MessageBox" Arg1="Installed">UnleashX installed to \n"E:\Alt Dashboard"</Item>
 					</List>
 					<Item Action="MessageBox" Arg1="Complete">Setting saved. \nNote: Changes will take affect on next boot.</Item>
@@ -409,8 +409,6 @@
 				<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\video"/>
 				<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\video\default-video.png"/>
 				<Item Action="Copy" arg1="C:\nkpatcher\configs\video files\VIDEO1.bin" arg2="C:\nkpatcher\configs\VIDEO.bin"/>
-				<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\configs\alt xbe's\rescuedash\disabled.xbe" arg2="C:\nkpatcher\rescuedash\default.xbe"/>
-				<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\configs\alt xbe's\install\disabled.xbe" arg2="C:\nkpatcher\rescuedash\alt xbe\install.xbe"/>
 				<Item Action="Delete" arg1="C:\nkpatcher\configs\video.bin"/>
 				<Item Action="MessageBox" Arg1="Complete">Setting saved. \nNote: Changes will take affect on next boot.</Item>
 			</List>
@@ -418,8 +416,6 @@
 				<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\video"/>
 				<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\video\video-prog.png"/>
 				<Item Action="Copy" arg1="C:\nkpatcher\configs\video files\VIDEO1.bin" arg2="C:\nkpatcher\configs\VIDEO.bin"/>
-				<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\configs\alt xbe's\rescuedash\enabled.xbe" arg2="C:\nkpatcher\rescuedash\default.xbe"/>
-				<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\configs\alt xbe's\install\enabled.xbe" arg2="C:\nkpatcher\rescuedash\alt xbe\install.xbe"/>
 				<Item Action="MessageBox" Arg1="Complete">Setting saved. \nNote: Changes will take affect on next boot.</Item>
 			</List>	
 <!--

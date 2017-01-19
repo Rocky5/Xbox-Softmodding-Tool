@@ -95,7 +95,7 @@ void ErrorHandler(char *xbepath)
 		debuglog("ShadowC Partition Integrity Check");
 		debuglog("------------------------------------------------");
 		debuglog("Checking ShadowC image integrity");
-		XLaunchXBE("C:\\nkpatcher\\rescuedash\\default.xbe");
+		XLaunchXBE("C:\\nkpatcher\\rescuedash\\pbl\\loader.xbe");
 		debuglog("ShadowC image is loaded\n");
 		/*
 		*/
@@ -195,7 +195,7 @@ void ErrorHandler(char *xbepath)
 		/*
 		*/
 		debuglog("Loading Shadowc rescue Dashboard");
-		XLaunchXBE("R:\\NKPatcher\\Rescuedash\\Default.xbe");
+		XLaunchXBE("R:\\NKPatcher\\Rescuedash\\pbl\\loader.xbe");
 		debuglog("Rescue Dashboard doesn't Exist\n");
 		/*
 		*/

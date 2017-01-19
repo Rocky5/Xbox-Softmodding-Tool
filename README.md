@@ -253,3 +253,5 @@
 			& without this person we wouldn't have the bios files or NKPatchers we have today.
 		Background Music
 			http://www.dl-sounds.com/royalty-free/house-loop-2016/
+		To all the tester that helped me squash bugs and improve features.
+		& to anyone else I may have forgot.

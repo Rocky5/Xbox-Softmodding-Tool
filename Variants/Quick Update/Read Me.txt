@@ -1,5 +1,5 @@
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// If you do not know how to FTP to the Xbox just burn the "2016 Softmodding Tool Extra Disc.iso" & use that to upgrade. //
+// If you do not know how to FTP to the Xbox just burn the "2016 Softmodding Tool Extra Disc.iso" & use that to update. //
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 This is the quick update option, you must know how to FTP.
@@ -8,5 +8,5 @@ Installation....
 
 1) Transfer the Prep folder to "E:\"
 2) So should look like "E:\Prep\default.xbe + folders & other files."
-3) Run the default.xbe located in the "E:\Prep\" folder.
+3) Push the following button at the same time. ( LT+RT+Black+Back )
 4) Follow the on screen instructions.
