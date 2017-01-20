@@ -312,9 +312,9 @@ HRESULT ConfigMagicApp::Initialize()
 					//remove(FirstRunCFG);
 					//remove(FirstinstallCFG);
 					//CopyFile(NKP_XBE, FirstRunXBE, NULL);
+				//remove(xbox_xtf_File_Path);
+				//CopyFile(Generic_Font_File, xbox_xtf_File_Path, 1);
 				CopyFile(EnabledPNG, SecondRun, NULL);
-				remove(xbox_xtf_File_Path);
-				CopyFile(Generic_Font_File, xbox_xtf_File_Path, 1);
 				CopyFile(EnabledPNG, "E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\font\\generic.png", NULL);
 
 				/* Patch UnleashX to show unprotected C partition for NKPatcher Settings */
@@ -405,8 +405,8 @@ HRESULT ConfigMagicApp::Initialize()
 				remove(UpdateRunBin);
 				remove(PrepXBE);
 				RemoveDirectory(PrepDir);
-				remove(xbox_xtf_File_Path);
-				CopyFile(Generic_Font_File, xbox_xtf_File_Path, 1);
+				//remove(xbox_xtf_File_Path);
+				//CopyFile(Generic_Font_File, xbox_xtf_File_Path, 1);
 				CopyFile(EnabledPNG, "E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\font\\generic.png", NULL);
 				
 				/* Patch UnleashX to show unprotected C partition for NKPatcher Settings */
