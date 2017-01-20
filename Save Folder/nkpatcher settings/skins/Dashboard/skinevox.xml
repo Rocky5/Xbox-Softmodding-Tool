@@ -1,4 +1,4 @@
-<Skin name="Softmod Wide">
+<Skin name="Softmod Evox">
 	<Information>
 		<Author>Rocky5</Author>
 		<Copyright>2016</Copyright>
@@ -16,10 +16,10 @@
 		<Cellwall/>
 		<Orb/>
 		<Icon/>
-		<Menu Horizontal="False" Smooth="True" Align="Middle" ShowIcon="False" Rotate="False" ShowArrows="False" Scroll="1">
-			<Position Top="133" Left="72" Width="286" Height="300" Fixed="False" FixAt="0" MaxItem="12"/>
+		<Menu Horizontal="False" Smooth="False" Align="Middle" ShowIcon="False" Rotate="False" ShowArrows="False" Scroll="1">
 			<Font>E:\UDATA\21585554\000000000000\softmod files\skin files\fonts\font1.xpr</font>
 			<Preview EnableAudio="False" Top="0" Left="0" Width="0" Height="0" />
+			<Position Top="291" Left="99" Width="441" Height="152" Fixed="True" FixAt="3" MaxItem="7"/>
 		</Menu>
 		<InfoFont>E:\UDATA\21585554\000000000000\softmod files\skin files\fonts\font2.xpr</InfoFont>
 		<!-- ------------------ -->
@@ -31,7 +31,7 @@
 		<Shape zindex="10" Type="Rectangle" Top="20" Left="20" Width="10" Height="10" BorderColor="" BackColor="0xff4c4d58"/>
 		<Shape zindex="10" Type="Rectangle" Top="20" Left="30" Width="10" Height="10" BorderColor="" BackColor="0xff3a3a46"/>
 		<Shape zindex="10" Type="Rectangle" Top="20" Left="40" Width="10" Height="10" BorderColor="" BackColor="0xffaee239"/>
-		<Shape zindex="10" Type="Rectangle" Top="20" Left="50" Width="10" Height="10" BorderColor="" BackColor="0xffafb2ce"/>
+		<Shape zindex="10" Type="Rectangle" Top="20" Left="50" Width="10" Height="10" BorderColor="" BackColor="0xff4a4a56"/>
 		<Shape zindex="10" Type="Rectangle" Top="20" Left="60" Width="10" Height="10" BorderColor="" BackColor="0x00626473"/>
 		<Shape zindex="10" Type="Rectangle" Top="20" Left="70" Width="10" Height="10" BorderColor="" BackColor="0x00de8c86"/>
 		<Shape zindex="10" Type="Rectangle" Top="20" Left="80" Width="10" Height="10" BorderColor="" BackColor="0x0086d7de"/>
@@ -39,36 +39,37 @@
 		<!-- GUI Elements start -->
 		<!-- ------------------ -->
 		<!-- Logos at the top of the screen -->
-		<Image zindex="3" Top="28" Left="154" Width="334" Height="55">E:\UDATA\21585554\000000000000\softmod files\skin files\images\Xbox Logo.png</image>
+		<Image zindex="3" Top="135" Left="154" Width="334" Height="55">E:\UDATA\21585554\000000000000\softmod files\skin files\images\Xbox Logo.png</image>
 		<!-- <Image zindex="3" Top="89" Left="202" Width="239" Height="23">E:\UDATA\21585554\000000000000\softmod files\skin files\images\Softmodding Tool.png</image> -->
-		<!-- List Background -->
-		<Shape zindex="1" Type="Rectangle" Top="130" Left="71" Width="288" Height="298" BorderColor="0xff4c4d58" BackColor="0xbf626473"/>
-		<!-- Extra Info Background & TXT -->
-		<Shape zindex="2" Type="Rectangle" Top="130" Left="407" Width="162" Height="183" BorderColor="0xff4c4d58" BackColor="0xbf626473"/>
-		<!--  -->
-		<Text zindex="3" Top="133" Left="407" Width="162" Align="Middle" ScaleX="100" ScaleY="100" Color="0xffaee239" Source="System Info"/>
-		<Text zindex="3" Top="149" Left="412" Width="150" Align="Left" ScaleX="100" ScaleY="100" Color="0xffafb2ce" Source="Time"/>
-		<Text zindex="3" Top="165" Left="412" Width="150" Align="Left" ScaleX="100" ScaleY="100" Color="0xffafb2ce" Source="Xbox Region: $VideoMode$"/>
-		<Text zindex="3" Top="181" Left="412" Width="150" Align="Left" ScaleX="100" ScaleY="100" Color="0xffafb2ce" Source="Version"/>
-		<!--  -->
-		<Text zindex="3" Top="201" Left="407" Width="162" Align="Middle" ScaleX="100" ScaleY="100" Color="0xffaee239" Source="Network Info"/>
-		<Text zindex="3" Top="217" Left="412" Width="150" Align="Left" ScaleX="100" ScaleY="100" Color="0xffafb2ce" Source="IP"/>
-		<Text zindex="3" Top="233" Left="412" Width="150" Align="Left" ScaleX="100" ScaleY="100" Color="0xffafb2ce" Source="Active Users: $NumClient$"/>
-		<!--  -->
-		<Text zindex="3" Top="253" Left="407" Width="162" Align="Middle" ScaleX="100" ScaleY="100" Color="0xffaee239" Source="2016 Softmod Info"/>
-		<Text zindex="3" Top="269" Left="412" Width="150" Align="Left" ScaleX="100" ScaleY="100" Color="0xffafb2ce" Source="Running: v$SkinVersion$"/>
-		<Text zindex="3" Top="285" Left="412" Width="150" Align="Left" ScaleX="100" ScaleY="100" Color="0xffafb2ce" Source="Creator: $SkinAuthor$"/>
-		<!--  -->
-		<Text zindex="3" Top="430" Left="240" Width="100" Align="Left" ScaleX="100" ScaleY="100" Color="0xff3a3a46" Source="Tray:"/>
-		<Text zindex="3" Top="430" Left="272" Width="340" Align="Left" ScaleX="100" ScaleY="100" Color="0xff3a3a46" Source="DVDTitle"/>
+		<!-- Top Bar -->
+		<Shape zindex="2" Type="Rectangle" Top="4" Left="5" Width="630" Height="16" BorderColor="0xff4c4d58" BackColor="0xbf626473"/>
+		<!-- Top left -->
+		<Shape zindex="1" Type="Rectangle" Top="4" Left="5" Width="150" Height="16" BorderColor="0xff4c4d58" BackColor="0xbf626473"/>
+		<Text zindex="3" Top="0" Left="5" Width="150" Align="Middle" ScaleX="100" ScaleY="100" Color="0xffaee239" Source="System Info"/>
+		<Text zindex="3" Top="20" Left="5" Width="150" Align="Left" ScaleX="100" ScaleY="100" Color="0xff4a4a56" Source="Time"/>
+		<Text zindex="3" Top="35" Left="5" Width="150" Align="Left" ScaleX="100" ScaleY="100" Color="0xff4a4a56" Source="Xbox Region: $VideoMode$"/>
+		<Text zindex="3" Top="50" Left="5" Width="150" Align="Left" ScaleX="100" ScaleY="100" Color="0xff4a4a56" Source="Version"/>
+		<!-- Top right -->
+		<Shape zindex="1" Type="Rectangle" Top="4" Left="485" Width="150" Height="16" BorderColor="0xff4c4d58" BackColor="0xbf626473"/>
+		<Text zindex="3" Top="0" Left="485" Width="150" Align="Middle" ScaleX="100" ScaleY="100" Color="0xffaee239" Source="Network Info"/>
+		<Text zindex="3" Top="20" Left="485" Width="150" Align="Right" ScaleX="100" ScaleY="100" Color="0xff4a4a56" Source="IP"/>
+		<Text zindex="3" Top="35" Left="485" Width="150" Align="Right" ScaleX="100" ScaleY="100" Color="0xff4a4a56" Source="Active Users: $NumClient$"/>
+		<!-- Top middle -->
+		<Shape zindex="1" Type="Rectangle" Top="4" Left="245" Width="150" Height="16" BorderColor="0xff4c4d58" BackColor="0xbf626473"/>
+		<Text zindex="3" Top="0" Left="245" Width="150" Align="Middle" ScaleX="100" ScaleY="100" Color="0xffaee239" Source="2016 Softmod Info"/>
+		<Text zindex="3" Top="20" Left="245" Width="150" Align="Middle" ScaleX="100" ScaleY="100" Color="0xff4a4a56" Source="Running: v$SkinVersion$"/>
+		<Text zindex="3" Top="35" Left="245" Width="150" Align="Middle" ScaleX="100" ScaleY="100" Color="0xff4a4a56" Source="Creator: $SkinAuthor$"/>
+		<!-- Bottom left -->
+		<Text zindex="3" Top="460" Left="5" Width="100" Align="Left" ScaleX="100" ScaleY="100" Color="0xff3a3a46" Source="Tray:"/>
+		<Text zindex="3" Top="460" Left="35" Width="340" Align="Left" ScaleX="100" ScaleY="100" Color="0xff3a3a46" Source="DVDTitle"/>
 		<!-- <Image zindex="3" Top="10" Left="590" Width="42" Height="42" Source="GameIcon"/> -->
 		<!-- (A) Select (B) Back section -->
-		<Shape zindex="1" Type="Rectangle" Top="427" Left="71" Width="165" Height="25" BorderColor="0x00000000" BackColor="0xff3b3c47"/>
-		<Shape zindex="1" Type="Rectangle" Top="427" Left="71" Width="148" Height="45" BorderColor="0x00000000" BackColor="0xff3b3c47"/>
-		<Shape zindex="1" Type="triangle" Top="450" Left="201" Width="35" Height="21" BorderColor="0x00000000" BackColor="0xff3b3c47" Direction="down"/>
-		<Shape zindex="1" Type="Rectangle" Top="427" Left="71" Width="499" Height="4" BorderColor="0x00000000" BackColor="0xff3b3c47"/>
-		<Shape zindex="1" Type="Rectangle" Top="450" Left="71" Width="475" Height="4" BorderColor="0x00000000" BackColor="0xff3b3c47"/>
-		<Image zindex="3" Top="430" Left="95" Width="112" Height="38">E:\UDATA\21585554\000000000000\softmod files\skin files\images\buttons.png</image>
+		<Shape zindex="1" Type="Rectangle" Top="339" Left="0" Width="165" Height="25" BorderColor="0x00000000" BackColor="0xff3b3c47"/>
+		<Shape zindex="1" Type="Rectangle" Top="339" Left="0" Width="148" Height="45" BorderColor="0x00000000" BackColor="0xff3b3c47"/>
+		<Shape zindex="1" Type="triangle" Top="362" Left="131" Width="35" Height="21" BorderColor="0x00000000" BackColor="0xff3b3c47" Direction="down"/>
+		<Shape zindex="1" Type="Rectangle" Top="339" Left="0" Width="499" Height="4" BorderColor="0x00000000" BackColor="0xff3b3c47"/>
+		<Shape zindex="1" Type="Rectangle" Top="362" Left="0" Width="475" Height="4" BorderColor="0x00000000" BackColor="0xff3b3c47"/>
+		<Image zindex="3" Top="342" Left="24" Width="112" Height="38">E:\UDATA\21585554\000000000000\softmod files\skin files\images\buttons.png</image>
 		
 	<!-- 	
 		<Shape zindex="1" Type="Rectangle" Top="160" Left="300" Width="110" Height="4" BorderColor="0x00000000" BackColor="0xff3b3c47"/>
@@ -117,8 +118,8 @@
 		<KB_KEY_TEXTBACKCOLOR>0xffaee239</KB_KEY_TEXTBACKCOLOR>
 		<KB_KEY_TEXTBORDERCOLOR>0xffaee239</KB_KEY_TEXTBORDERCOLOR>
 		<!-- ------------------------------------------------------ -->
-		<MENU_TEXTCOLOR>0xffafb2ce</MENU_TEXTCOLOR>
-		<MENU_ACTIVETEXTCOLOR>0xffaee239</MENU_ACTIVETEXTCOLOR>
+		<MENU_TEXTCOLOR>0xff8b8ba1</MENU_TEXTCOLOR>
+		<MENU_ACTIVETEXTCOLOR>0xff4a4a56</MENU_ACTIVETEXTCOLOR>
 		<MENU_BORDERCOLOR>0x00000000</MENU_BORDERCOLOR>
 		<MENU_BACKCOLOR>0x00000000</MENU_BACKCOLOR>
 		<MENU_ACTIVEBACKCOLOR>0x00000000</MENU_ACTIVEBACKCOLOR>

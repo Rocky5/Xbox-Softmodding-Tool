@@ -11,6 +11,12 @@ But here is what I have changed, that I can remember.
 
 
 =========================================
+	Update: Jan 20 2017
+=========================================
+		Added a new skin. "Softmod Evox" it matches the evox dash layout.
+
+
+=========================================
 	Update: Jan 19 2017
 =========================================
 		Reverted back to stock NKPatcher 11 U04. ( I removed my edits for no virtual eeprom on eject )

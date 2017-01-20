@@ -31,6 +31,7 @@ Call Tools\repl.bat "%old_version%" "%replace%" L < "%CD%\Build Version.txt" >"%
 
 Call Tools\repl.bat "<Version>%old_version%</Version>" "<Version>%replace%</Version>" L < "%Skin1%\skin.xml" >"%Skin1%\tmp.xml" & Del "%Skin1%\skin.xml" & rename "%Skin1%\tmp.xml" "skin.xml"
 Call Tools\repl.bat "<Version>%old_version%</Version>" "<Version>%replace%</Version>" L < "%Skin1%\skinwide.xml" >"%Skin1%\tmp.xml" & Del "%Skin1%\skinwide.xml" & rename "%Skin1%\tmp.xml" "skinwide.xml"
+Call Tools\repl.bat "<Version>%old_version%</Version>" "<Version>%replace%</Version>" L < "%Skin1%\skinevox.xml" >"%Skin1%\tmp.xml" & Del "%Skin1%\skinevox.xml" & rename "%Skin1%\tmp.xml" "skinevox.xml"
 Call Tools\repl.bat "<Version>%old_version%</Version>" "<Version>%replace%</Version>" L < "%Skin2%\skin.xml" >"%Skin2%\tmp.xml" & Del "%Skin2%\skin.xml" & rename "%Skin2%\tmp.xml" "skin.xml"
 Call Tools\repl.bat "<Version>%old_version%</Version>" "<Version>%replace%</Version>" L < "%Skin3%\skin.xml" >"%Skin3%\tmp.xml" & Del "%Skin3%\skin.xml" & rename "%Skin3%\tmp.xml" "skin.xml"
 Call Tools\repl.bat "<Version>%old_version%</Version>" "<Version>%replace%</Version>" L < "%Skin4%\skin.xml" >"%Skin4%\tmp.xml" & Del "%Skin4%\skin.xml" & rename "%Skin4%\tmp.xml" "skin.xml"
