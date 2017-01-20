@@ -73,7 +73,7 @@ dd	0x1dc		; Size of Certification
 dd	0x3f16d3ce	; Date Stamp
 dd	0x0		; Title ID
 title_xbe: 
-      dw  'N','K','P','-','V','1','1','_','U','0','5'
+      dw  'N','K','P','-','V','1','1','_','U','0','4'
 times	0x50-$+title_xbe db 0	; Title name null terminated string
 times	0x40 db 0	; Alt Title
 dd	0x800000FF	; Allowed Media

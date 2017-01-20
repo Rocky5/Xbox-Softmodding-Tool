@@ -1038,8 +1038,6 @@ write_debug_file:
 
 %define TV7	0
 
-%define TV8	0
-
 %define VFR	0
 
 %define VFP	0
@@ -1106,12 +1104,6 @@ write_debug_file:
 
 %endif
 
-%ifdef	DISABLE_VIRTUAL_EEPROM_TRAY_OPEN
-
-%define TV8	256
-
-%endif
-
 ;------------------------------
 
 %ifdef	VIDEO_FORCE_PROGRESSIVE
@@ -1142,7 +1134,7 @@ write_debug_file:
 
 %define VID_SET 	VFR+VFP+VFF
 
-%define TRAY_VAL	TV0+TV1+TV2+TV3+TV4+TV5+TV6+TV7+TV8
+%define TRAY_VAL	TV0+TV1+TV2+TV3+TV4+TV5+TV6+TV7
 
 ;------------------------------
 
@@ -1234,9 +1226,9 @@ clk_ph: 	db	'\Device\Harddisk0\Partition2\nkpatcher\configs\clock.xbe',0,0
 
 ;-----------
 
-rescuedash1:	db	'\Device\Harddisk0\Partition',ACD+030h,'\nkpatcher\rescuedash\default.xbe',0,0
+rescuedash1:	db	'\Device\Harddisk0\Partition14\nkpatcher\rescuedash\pbl\loader.xbe',0,0
 
-rescuedash2:	db	'\Device\Harddisk0\Partition2\nkpatcher\rescuedash\default.xbe',0,0
+rescuedash2:	db	'\Device\Harddisk0\Partition2\nkpatcher\rescuedash\pbl\loader.xbe',0,0
 
 ;--------------------------------------------------------------------------------------------
 
@@ -1264,11 +1256,12 @@ tray_data2	dd 0		; 2nd read if tray was open at boot (after close)
 
 ;--------------------------------------------------------------------------------------
 
-mintime:	dw 2016 	; Year
+mintime:
+		dw 2017 	; Year
 
 		dw 1		; Month
 
-		dw 1	; Day
+		dw 1		; Day
 
 		dw 12		; Hour
 

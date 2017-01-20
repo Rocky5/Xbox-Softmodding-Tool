@@ -67,7 +67,7 @@
 
 %define DASHBOARD_PATH	'\Device\Harddisk0\Partition14\nkpatcher\dashloader\default.xbe'
 %define DB_PATH2	'\Device\Harddisk0\Partition1\Prep\default.xbe'
-%define DB_PATH3	'\Device\Harddisk0\Partition14\nkpatcher\rescuedash\default.xbe'
+%define DB_PATH3	'\Device\Harddisk0\Partition14\dashboard\default.xbe'
 
 
 
@@ -322,7 +322,6 @@
 %define VIRTUAL_EEPROM
 %define VIRTUAL_EEPROM_PATH '\Device\Harddisk0\Partition14\nkpatcher\configs\eeprom.bin'
 ;%define DISABLE_VIRTUAL_EEPROM_WRITE
-;%define DISABLE_VIRTUAL_EEPROM_TRAY_OPEN
 %define ENABLE_REAL_EEPROM_WRITE
 
 

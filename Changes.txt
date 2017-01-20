@@ -11,6 +11,12 @@ But here is what I have changed, that I can remember.
 
 
 =========================================
+	Update: Jan 19 2017
+=========================================
+		Reverted back to stock NKPatcher 11 U04. ( I removed my edits for no virtual eeprom on eject )
+
+
+=========================================
 	Update: Jan 18 2017
 =========================================
 		Updated the configs and instructions for the variant builds of the softmod.
