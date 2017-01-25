@@ -17,9 +17,9 @@
 		<Orb/>
 		<Icon/>
 		<Menu Horizontal="False" Smooth="False" Align="Middle" ShowIcon="False" Rotate="False" ShowArrows="False" Scroll="1">
-			<Font>E:\UDATA\21585554\000000000000\softmod files\skin files\fonts\font1.xpr</font>
+			<Font>E:\UDATA\21585554\000000000000\softmod files\skin files\fonts\font3.xpr</font>
 			<Preview EnableAudio="False" Top="0" Left="0" Width="0" Height="0" />
-			<Position Top="291" Left="99" Width="441" Height="152" Fixed="True" FixAt="3" MaxItem="7"/>
+			<Position Top="257" Left="99" Width="441" Height="195" Fixed="True" FixAt="4" MaxItem="0"/>
 		</Menu>
 		<InfoFont>E:\UDATA\21585554\000000000000\softmod files\skin files\fonts\font2.xpr</InfoFont>
 		<!-- ------------------ -->

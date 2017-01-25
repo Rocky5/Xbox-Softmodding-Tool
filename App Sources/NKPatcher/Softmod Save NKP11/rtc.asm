@@ -1,6 +1,4 @@
-
 %include "config_runtime.inc"
-
 ;-----------------------------------------
 %define	TV0	0
 %define	TV1	0
@@ -85,7 +83,3 @@ DB5:	db	PB_OPEN_PATH
 	times   80-$+DB5 db 0
 ;------------------------------
 ;;; END OF FILE
-
-
-
-

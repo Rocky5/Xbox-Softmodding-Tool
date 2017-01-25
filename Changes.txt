@@ -11,6 +11,15 @@ But here is what I have changed, that I can remember.
 
 
 =========================================
+	Update: Jan 25 2017
+=========================================
+		Updated the "Softmod Evox" skin
+		Added a new font ( font3.xpr ) and updated the other two fonts
+		Updated the "Build Files.rar.bat", just a cleanup
+		Updated all the NKpatcher sources and changed the starting date to 1/1/2017 12:00
+
+
+=========================================
 	Update: Jan 20 2017
 =========================================
 		Added a new skin. "Softmod Evox" it matches the evox dash layout.

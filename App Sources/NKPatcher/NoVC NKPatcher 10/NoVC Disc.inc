@@ -1,6 +1,5 @@
 %ifndef CONFIG_INC
 %define CONFIG_INC
-
 ;;; --------------------------------------------------------------------------
 ;;; Configuration for tray state and fan speed (tray_state/fan on top of NKpatcher)
 ;;; --------------------------------------------------------------------------
@@ -12,23 +11,17 @@
 %define GREEN_BLINK  0007h      ; (IF YOU KNOW 
 %define CYCLE        00EBh      ;      HOW TO)
 %define LED_OFF      0000h      ; ----------------
-
 %define NKP_LED_COLOR          RED      ; < CHANGE IT HERE, from table or it's hex value !!!!!!
 %define ALTDASH_LED_COLOR      RED   ; < CHANGE IT HERE, from table or it's hex value !!!!!!
 %define PATCHBACK_LED_COLOR    RED ; < CHANGE IT HERE, from table or it's hex value !!!!!!
-
 ;;; set fan speed (if omitted then no fan speed change)
 ;%define FAN_SPEED    0009h      ; < CHANGE IT HERE speed 10-50 * 2 = % (000Ah-0032h)
-
 ;;; tray dual/tri-boot enable
 ;%define TRAY_BOOT 
-
 ;;; tri-boot enable < dual is default, with tray_boot enabled
 ;%define TRI_BOOT
-
 ;;; tray open > patch back MS key or not, then run tray open dash 
 ;%define PATCH_BACK_MS_KEY
-
 ;;;---------------------------------------------------------------------------
 ;;;   Dashboard path's for tray OPEN dash when using dual/tri-boot
 ;;;---------------------------------------------------------------------------
@@ -61,10 +54,8 @@
 ;;;           video support is disabled in msdash.
 ;;; 
 ;;; Not enabled by default.
-
 ;%define VIDEO_FORCE_RGB
 %define VIDEO_FORCE_PROGRESSIVE
-
 ;;; --------------------------------------------------------------------------
 ;;; Configuration for nkpatcher
 ;;; --------------------------------------------------------------------------
@@ -77,11 +68,8 @@
 ;;;
 ;;; Default is to never reset on eject for hard disk loaded XBEs, but reset
 ;;; on eject CD/DVD loaded XBEs based on the ROE flag in the XBE header.
-
 ; %define EJECT_FIX
 %define CD_DVD_ALWAYS_ROE
-
-	
 ;;; Automatic game region settings:
 ;;;
 ;;; GAME_REGION_AUTO = Set game region automatically based on the game region
@@ -94,24 +82,18 @@
 ;;;
 ;;; Default is to use only the game region stored in the EEPROM and not
 ;;; change it.
-
 %define GAME_REGION_AUTO
 ; %define GAME_REGION_IGNORE_REAL
-	
 %ifdef GAME_REGION_AUTO
-
 ;;; Game regions:
 ;;; 
 ;;; 1 = North America
 ;;; 2 = Japan
 ;;; 4 = Rest of world
-
 %define GAME_REGION_PRIMARY	4
 %define GAME_REGION_SECONDARY	1
 %define GAME_REGION_TERTIARY	2
-
 %endif	; GAME_REGION_AUTO
-
 ;;; In-Game Reset settings:	
 ;;;
 ;;; IGR = Enable IGR code
@@ -135,21 +117,16 @@
 ;;;                                port, 3 the right-most.)
 ;;;
 ;;; IGR is not enabled by default.
-
 %define IGR
 %define IGR_TO_DASHBOARD
 ; %define IGR_FULL_REBOOT
 ; %define IGR_MASTER_PORT 0
-
 ;;; Xbox Live blocking:
 ;;;
 ;;; XBL_BLOCK = Enable blocking
 ;;;
 ;;; Blocking not enabled by default.
-
 %define XBL_BLOCK
-
-
 ;;; Virtual/Shadow C drive:
 ;;;
 ;;; VIRTUAL_C_DRIVE #part_num = Enable virtual C drive. Access to the partition
@@ -165,13 +142,9 @@
 ;;;                            enabled.
 ;;;
 ;;; Not enabled by default.
-
 %define VIRTUAL_C_DRIVE 2
 %define ACTUAL_C_DRIVE 14
 %define VIRTUAL_C_PATH '\Device\Harddisk0\Partition1\nosuchfilehahahaha.img'
-
-
-
 ;;; Virtual CD/DVD drive:
 ;;;
 ;;; VIRTUAL_CDROM_DRIVE = Enable virtual C drive. This will create a virtual
@@ -180,10 +153,7 @@
 ;;;			call.)
 ;;;
 ;;; Not enabled by default.
-
 ;%define VIRTUAL_CDROM_DRIVE
-
-
 ;;; 48-bit Logical Block Addressing and partition table settings:
 ;;;
 ;;; LBA48 = Enable. Allows use of disk space beyond 137 GB. Only 32 bits are
@@ -202,17 +172,12 @@
 ;;;                             exists (on the first sector of the drive).
 ;;;
 ;;; LBA48 and partition table not enabled by default.
-
 %define LBA48
-
 ; %define PARTITION_METHOD 0
 ; %define PARTITION_METHOD 1
 %define PARTITION_METHOD 2
 ; %define PARTITION_METHOD 3
-
 ; %define IGNORE_HD_PARTITION_TABLE
-
-
 ;;; Virtual EEPROM settings:
 ;;;
 ;;; VIRTUAL_EEPROM = Enable. Access to the EEPROM through the kernel will be
@@ -231,36 +196,26 @@
 ;;;
 ;;; Virtual EEPROM is disabled by default. Also note that normally you shouldn't
 ;;; define ENABLE_REAL_EEPROM_WRITE.
-
 %define VIRTUAL_EEPROM
 %define VIRTUAL_EEPROM_PATH '\Device\Harddisk0\Partition14\nkpatcher\configs\eeprom.bin'
 %define DISABLE_VIRTUAL_EEPROM_WRITE
 %define ENABLE_REAL_EEPROM_WRITE
-
-
 ;;; nkpatcher Xbox application reboot behaviour after patching has been done:
 ;;; 
 ;;; BOOT_DASH_ONLY = Don't boot DVD.
 ;;; NORMAL_BOOT_ALWAYS = Always boot first DVD then dashboard.
 ;;; 
 ;;; default is to boot DVD first, unless doing IGR to dash.
-
 %define BOOT_DASH_ONLY
 ; %define NORMAL_BOOT_ALWAYS
-
-
 ;;; Patches inside INIT section (boot unlocked HDs etc.)
 ;;;
 ;;; INIT_SEC_PATCHES = enable
 ;;;
 ;;; Do NOT enable these for nkpatcher.xbe executed on the Xbox (will crash
 ;;; and/or weird behaviour.)
-
 ; %define INIT_SEC_PATCHES
-
-
 ;;; --------------------------------------------------------------------------
 ;;; Configuration end
 ;;; --------------------------------------------------------------------------
-
 %endif ; CONFIG_INC

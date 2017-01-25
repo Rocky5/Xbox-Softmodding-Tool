@@ -1,7 +1,5 @@
 %ifndef KEXPORTS_INC
 %define KEXPORTS_INC
-
-
 struc					KERNEL_EXPORTS
 .AvGetSavedDataAddress:			resd 1
 .AvSendTVEncoderOption:			resd 1
@@ -370,7 +368,4 @@ struc					KERNEL_EXPORTS
 .HalEnableSecureTrayEject:		resd 1
 .HalWriteSMCScratchRegister:		resd 1
 endstruc
-
-
-
 %endif ; KEXPORTS_INC
