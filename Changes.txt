@@ -9,6 +9,21 @@ But here is what I have changed, that I can remember.
 	Created by Rocky5
 =========================================
 
+=========================================
+	Update: Jan 30 2017
+=========================================
+		New "Troubleshooting.txt"
+		Updated "UDDAE Instructions.txt"
+		Updated "Build Softmod zip.bat" to include the "Troubleshooting.txt"
+		Updated "Build Release.bat" now outputs the files to a new directory layout
+		Updated NKPatcher Settings s.txt delay font option
+		Cleaned up ernie.asm source
+		Removed the creation of items.xml from the NKPatcher Settings xbe
+		( Updated Habibi signature to match changes )
+		Updated "2016 Softmod Tool Kit" source
+		Updated the "Backup Xbox Partitions" batch, this is located in the tools folder
+		( It's a batch file that can mirror your Xbox partitions, a backup )
+
 
 =========================================
 	Update: Jan 25 2017

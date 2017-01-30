@@ -1,3 +1,5 @@
+These instructions are for use, only if you used "Factory Reset" option on the "2016 Softmodding Tool Extras Disc".
+
 How to re-enable the softmod.
 
 1. Power on the system.

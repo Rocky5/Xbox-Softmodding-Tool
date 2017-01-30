@@ -52,7 +52,7 @@
 	</Settings>
 	<Menu>
 		<List Text="Information" Sort="Off" Batch="True">
-			<Item Action="MessageBox" Arg1="Information">Welcome to the NKPatcher Settings. \n\nHere you will be able to change a few of the NKPatcher functions, the LED colour of your Xbox &amp; the backing up or moving of your dashboard.</Item>
+			<Item Action="MessageBox" Arg1="Information">Welcome to the NKPatcher Settings. \n\nHere you will be able to change a few of the NKPatcher functions, the LED colour of your Xbox and the backing up or moving of your dashboard.</Item>
 			<Item Action="MessageBox" Arg1="Information">To exit "NKPatcher Settings" you can turn the Xbox off and on or press on the control pad.    LT+RT+(BLACK)+(BACK)</Item>
 		</List>
 		<Item>------------------------------------------</Item>
@@ -68,7 +68,7 @@
 				</List>
 				<List Text="Advanced Info" Sort="Off" Batch="True">
 					<Item Action="MessageBox" Arg1="Info">I'm going to tell you how to setup your own dualboot path, so you can have your own custom "Alt Dashboard" location.</Item>
-					<Item Action="MessageBox" Arg1="Info">With this softmod there will be a folder called "OpenDash Dualboot.settings". Inside this this folder there is a file called "Build Dualboot.settings.bat" double click this &amp; follow the on screen instructions. Yes its that simple.</Item>
+					<Item Action="MessageBox" Arg1="Info">With this softmod there will be a folder called "OpenDash Dualboot.settings". Inside this this folder there is a file called "Build Dualboot.settings.bat" double click this and follow the on screen instructions. Yes its that simple.</Item>
 				</List>
 				<Item>------------------------------------------</Item>
 				<List Text="Enable" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\dualboot\enabled.png">
@@ -98,7 +98,7 @@
 				<Item>------------------------------------------</Item>
 				<Item>Update</Item>
 				<List Text="Dualboot.settings" Sort="Off" Batch="True">
-					<Item Action="MessageBox" Arg1="Info">This option is for updating the dualboot.settings file, why would I need that I hear you say. Well if you change the dashboard path &amp; you disable the dualboot, when you enable the dualboot again your custom dashboard path will be lost. Using this option will allow you to disable &amp; enable the dualboot without losing your custom dashboard path.</Item>
+					<Item Action="MessageBox" Arg1="Info">This option is for updating the dualboot.settings file, why would I need that I hear you say. Well if you change the dashboard path and you disable the dualboot, when you enable the dualboot again your custom dashboard path will be lost. Using this option will allow you to disable and enable the dualboot without losing your custom dashboard path.</Item>
 					<Item Action="MessageBox" Arg1="Info">Please make sure you have FTP'ed over the new "dualboot.settings" file to "E", if you haven't, do so now. Because if it's not found this process will fail. Note: You will need to select the "Enable" option again to use these new settings.</Item>
 					<Item Action="Rename" arg1="E:\dualboot.settings" arg2="E:\dualboot.setting">E:\dualboot.settings not found</Item>
 					<Item Action="Rename" arg1="E:\dualboot.setting" arg2="E:\dualboot.settings">E:\dualboot.settings not found</Item>
@@ -184,7 +184,7 @@
 		</List>
 		<List Text="Kernel Fonts" Sort="Off">
 			<List Text="Information" Sort="Off" Batch="True">
-				<Item Action="MessageBox" Arg1="Info">This menu displays what Xbox Kernel Font is enabled. This process is automated &amp; is done when the softmod is installed. You can also find "Advanced Features" at the bottom of the list.</Item>
+				<Item Action="MessageBox" Arg1="Info">This menu displays what Xbox Kernel Font is enabled. This process is automated and is done when the softmod is installed. You can also find "Advanced Features" at the bottom of the list.</Item>
 			</List>
 			<Item>------------------------------------------</Item>
 			<List Text="Generic" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font\generic.png"/>
@@ -232,33 +232,107 @@
 				</List>
 				<List Text="XTF Font Delay Options" Sort="Off">
 					<List Text="Information" Sort="Off" Batch="True">
-						<Item Action="MessageBox" Arg1="Information">These are to be used if you are getting random crashes on boot. Start at Fix 1 &amp; then test to see if it's still crashing. If not, you're sorted.</Item>
-						<Item Action="MessageBox" Arg1="Information">If you are still getting crashing after applying Fix 1, then try Fix 2 and test again &amp; if for some strange reason you are still crashing after this, buy a new Xbox.</Item>
+						<Item Action="MessageBox" Arg1="Information">These are to be used if you are still getting random crashes at the "xlogo screen", only apply these if you have already tried the "Install Kernel Font" option.</Item>
+						<Item Action="MessageBox" Arg1="Information">Start at "1 s.xtf file" and then test to see if it's still crashing. If you're still getting crashing after applying "1 s.xtf file", then try "2 s.xtf files" and if you're still getting crashing :/ try "3 s.xtf files" and so on. If for some strange reason you are still crashing after all this, buy a new Xbox.</Item>
 					</List>
 					<Item>------------------------------------------</Item>
-					<List Text="Remove" Sort="Off" Batch="True">
+					<List Text="Remove all" Sort="Off" Batch="True">
 						<Item Action="Copy" arg1="dummy" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font-Sxtf"/>
 						<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font-Sxtf"/>
 						<Item Action="Copy" arg1="dummy" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font-Sxtf"/>
 						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\s.xtf"/>
-						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\s2.xtf"/>
+						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\2s.xtf"/>
+						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\3s.xtf"/>
+						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\4s.xtf"/>
+						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\5s.xtf"/>
+						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\6s.xtf"/>
 						<Item Action="Delete" arg1="C:\xodash\s.xtf"/>
-						<Item Action="Delete" arg1="C:\xodash\s2.xtf"/>
+						<Item Action="Delete" arg1="C:\xodash\2s.xtf"/>
+						<Item Action="Delete" arg1="C:\xodash\3s.xtf"/>
+						<Item Action="Delete" arg1="C:\xodash\4s.xtf"/>
+						<Item Action="Delete" arg1="C:\xodash\5s.xtf"/>
+						<Item Action="Delete" arg1="C:\xodash\6s.xtf"/>
 						<Item Action="MessageBox" Arg1="Complete">Setting saved. \nNote: Changes will take affect on next boot.</Item>
 					</List>
-					<List Text="Fix 1" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font-Sxtf\Sxtf-1.png">
+					<List Text="1 s.xtf file" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font-Sxtf\Sxtf-1.png">
 						<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font-Sxtf"/>
 						<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font-Sxtf\Sxtf-1.png"/>
 						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\s.xtf"/>
-						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\s2.xtf"/>
-						<Item Action="Delete" arg1="C:\xodash\s2.xtf"/>
+						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\2s.xtf"/>
+						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\3s.xtf"/>
+						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\4s.xtf"/>
+						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\5s.xtf"/>
+						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\6s.xtf"/>
+						<Item Action="Delete" arg1="C:\xodash\2s.xtf"/>
+						<Item Action="Delete" arg1="C:\xodash\3s.xtf"/>
+						<Item Action="Delete" arg1="C:\xodash\4s.xtf"/>
+						<Item Action="Delete" arg1="C:\xodash\5s.xtf"/>
+						<Item Action="Delete" arg1="C:\xodash\6s.xtf"/>
 						<Item Action="MessageBox" Arg1="Complete">Setting saved. \nNote: Changes will take affect on next boot.</Item>
 					</List>
-					<List Text="Fix 2" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font-Sxtf\Sxtf-2.png">
+					<List Text="2 s.xtf files" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font-Sxtf\Sxtf-2.png">
 						<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font-Sxtf"/>
 						<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font-Sxtf\Sxtf-2.png"/>
 						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\s.xtf"/>
-						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\s2.xtf"/>
+						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\2s.xtf"/>
+						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\3s.xtf"/>
+						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\4s.xtf"/>
+						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\5s.xtf"/>
+						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\6s.xtf"/>
+						<Item Action="Delete" arg1="C:\xodash\3s.xtf"/>
+						<Item Action="Delete" arg1="C:\xodash\4s.xtf"/>
+						<Item Action="Delete" arg1="C:\xodash\5s.xtf"/>
+						<Item Action="Delete" arg1="C:\xodash\6s.xtf"/>
+						<Item Action="MessageBox" Arg1="Complete">Setting saved. \nNote: Changes will take affect on next boot.</Item>
+					</List>
+					<List Text="3 s.xtf files" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font-Sxtf\Sxtf-3.png">
+						<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font-Sxtf"/>
+						<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font-Sxtf\Sxtf-3.png"/>
+						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\s.xtf"/>
+						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\2s.xtf"/>
+						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\3s.xtf"/>
+						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\4s.xtf"/>
+						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\5s.xtf"/>
+						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\6s.xtf"/>
+						<Item Action="Delete" arg1="C:\xodash\4s.xtf"/>
+						<Item Action="Delete" arg1="C:\xodash\5s.xtf"/>
+						<Item Action="Delete" arg1="C:\xodash\6s.xtf"/>
+						<Item Action="MessageBox" Arg1="Complete">Setting saved. \nNote: Changes will take affect on next boot.</Item>
+					</List>
+					<List Text="4 s.xtf files" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font-Sxtf\Sxtf-4.png">
+						<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font-Sxtf"/>
+						<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font-Sxtf\Sxtf-4.png"/>
+						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\s.xtf"/>
+						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\2s.xtf"/>
+						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\3s.xtf"/>
+						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\4s.xtf"/>
+						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\5s.xtf"/>
+						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\6s.xtf"/>
+						<Item Action="Delete" arg1="C:\xodash\5s.xtf"/>
+						<Item Action="Delete" arg1="C:\xodash\6s.xtf"/>
+						<Item Action="MessageBox" Arg1="Complete">Setting saved. \nNote: Changes will take affect on next boot.</Item>
+					</List>
+					<List Text="5 s.xtf files" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font-Sxtf\Sxtf-5.png">
+						<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font-Sxtf"/>
+						<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font-Sxtf\Sxtf-5.png"/>
+						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\s.xtf"/>
+						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\2s.xtf"/>
+						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\3s.xtf"/>
+						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\4s.xtf"/>
+						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\5s.xtf"/>
+						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\6s.xtf"/>
+						<Item Action="Delete" arg1="C:\xodash\6s.xtf"/>
+						<Item Action="MessageBox" Arg1="Complete">Setting saved. \nNote: Changes will take affect on next boot.</Item>
+					</List>
+					<List Text="6 s.xtf files" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font-Sxtf\Sxtf-6.png">
+						<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font-Sxtf"/>
+						<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font-Sxtf\Sxtf-6.png"/>
+						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\s.xtf"/>
+						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\2s.xtf"/>
+						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\3s.xtf"/>
+						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\4s.xtf"/>
+						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\5s.xtf"/>
+						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\6s.xtf"/>
 						<Item Action="MessageBox" Arg1="Complete">Setting saved. \nNote: Changes will take affect on next boot.</Item>
 					</List>
 				</List>
@@ -375,7 +449,7 @@
 		</List>
 		<List Text="Partition Types" Sort="Off">
 			<List Text="Information" Sort="Off" Batch="True">
-				<Item Action="MessageBox" Arg1="Information">Default:\nF takes all the space.\n\nPatition F &amp; G:\nF - 137GB / G - takes the rest.\n\nXBPartitioner:\nCustom partition table.</Item>
+				<Item Action="MessageBox" Arg1="Information">Default:\nF takes all the space.\n\nPatition F and G:\nF - 137GB / G - takes the rest.\n\nXBPartitioner:\nCustom partition table.</Item>
 			</List>
 			<Item>------------------------------------------</Item>
 			<List Text="Default" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\part\default-part.png">
@@ -384,7 +458,7 @@
 				<Item Action="Copy" arg1="C:\nkpatcher\configs\nkpatcher\6.xbe" arg2="C:\nkpatcher\default.xbe"/>
 				<Item Action="MessageBox" Arg1="Complete">Setting saved. \nNote: Changes will take affect on next boot.</Item>
 			</List>
-			<List Text="Partition F &amp; G" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\part\default-FG.png">
+			<List Text="Partition F and G" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\part\default-FG.png">
 				<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\part"/>
 				<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\part\default-FG.png"/>
 				<Item Action="Copy" arg1="C:\nkpatcher\configs\nkpatcher\67.xbe" arg2="C:\nkpatcher\default.xbe"/>
@@ -464,7 +538,7 @@
 			</List>
 		</List>
 		<Item>------------------------------------------</Item>
-		<List Text="Modules &amp; Settings" Sort="Off" Batch="False">
+		<List Text="Modules and Settings" Sort="Off" Batch="False">
 			<List Text="Information" Sort="Off" Batch="True">
 				<Item Action="MessageBox" Arg1="Information">Modules:\nThese are independent apps that do specific tasks.\n\nYou can add your own by placing a module (App) in "E:\NKPatcher Settings\modules\"</Item>
 			</List>

@@ -35,6 +35,7 @@ Echo %CD%
 "%Winrar%" a -x*.db -afzip "%ZipName%" "Read Me.txt"
 "%Winrar%" a -x*.db -afzip "%ZipName%" "Changes.txt"
 "%Winrar%" a -x*.db -afzip "%ZipName%" "Free FTP Programs.txt"
+"%Winrar%" a -x*.db -afzip "%ZipName%" "Troubleshooting.txt"
 "%Winrar%" a -x*.db -afzip "%ZipName%" "How to run the exploit save.txt"
 "%Winrar%" a -x*.db -afzip "%ZipName%" "Tools\OpenDash Dualboot.Settings"
 ::"%Winrar%" a -x*.db -afzip "%ZipName%" "Tools\Backup Xbox Partitions"

@@ -39,14 +39,14 @@ Set "GUI_Element_4=Echo 컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴 Error"
 
 
 if "%Mirror%"=="Yes" (
-set "vars=-c -v -e"
+set "vars=-c -p -n -e --delete -P 4 -v --verbose=2"
 set "var2=Mirror"
 set "var3=Mirroring"
 set "var4=Checking for changes, please wait..."
 Goto Splash :D
 )
 
-set "vars=-c -v"
+set "vars=--c -p -P 4 -v --verbose=2"
 set "var2=Backup"
 set "var3=Backing up"
 set "var4=This may take some time."
@@ -97,6 +97,7 @@ if "%pick%"=="s" goto start
 if "%pick%"=="S" goto start
 
 :reset_vars
+Set "pick="
 Set "Backup_All="
 Set "Backup_C="
 Set "Backup_E="
@@ -132,7 +133,7 @@ Echo  %var4%
 Echo:
 (
 Echo open -u xbox,xbox -p 21 %IP%
-Echo mirror %vars% "/%Output_Folder1%" "/%var2%/%Output_Folder1%"
+Echo mirror %vars% --log=Tools\%Output_Folder1%-log.txt "/%Output_Folder1%" "/%var2%/%Output_Folder1%"
 Echo exit
 )>Tools\tmp
 %lftp% -f Tools/tmp
@@ -148,7 +149,7 @@ Echo  %var4%
 Echo:
 (
 Echo open -u xbox,xbox -p 21 %IP%
-Echo mirror %vars% "/%Output_Folder2%" "/%var2%/%Output_Folder2%"
+Echo mirror %vars% --log=Tools\%Output_Folder2%-log.txt "/%Output_Folder2%" "/%var2%/%Output_Folder2%"
 Echo exit
 )>Tools\tmp
 %lftp% -f Tools/tmp
@@ -164,7 +165,7 @@ Echo  %var4%
 Echo:
 (
 Echo open -u xbox,xbox -p 21 %IP%
-Echo mirror %vars% "/%Output_Folder3%" "/%var2%/%Output_Folder3%"
+Echo mirror %vars% --log=Tools\%Output_Folder3%-log.txt "/%Output_Folder3%" "/%var2%/%Output_Folder3%"
 Echo exit
 )>Tools\tmp
 %lftp% -f Tools/tmp
@@ -180,7 +181,7 @@ Echo  %var4%
 Echo:
 (
 Echo open -u xbox,xbox -p 21 %IP%
-Echo mirror %vars% "/%Output_Folder4%" "/%var2%/%Output_Folder4%"
+Echo mirror %vars% --log=Tools\%Output_Folder4%-log.txt "/%Output_Folder4%" "/%var2%/%Output_Folder4%"
 Echo exit
 )>Tools\tmp
 %lftp% -f Tools/tmp
