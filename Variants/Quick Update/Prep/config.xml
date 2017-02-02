@@ -53,7 +53,7 @@
 	</Settings>
 	<Menu>
 
-		<List Text="Press (A) to install the 2016 Softmod" Sort="Off" Batch="True">
+		<List Text="Press (A) to update your 2016 Softmod installation" Sort="Off" Batch="True">
 
 			<!-- Check to make sure you are running my softmod -->
 			<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\unleashx.xbe" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\unleashx.xb">2016 softmod not installed</Item>
@@ -71,6 +71,7 @@
 			<Item Action="Format" arg1="Y">Format Y:\</Item>
 			<Item Action="Unrar" arg1="E:\UDATA\21585554\000000000000\softmod files\Files.rar" arg2="Y:\">Unrar files.rar to Y:\</Item>
 			<Item Action="Unrar" arg1="Y:\xboxdash.rar" arg2="C:\">Unrar xboxdash.rar to C:\</Item>
+			<Item Action="Delete" arg1="C:\nkpatcher\configs">Remove the C:\ configs</Item>
 			<Item Action="Delete" arg1="C:\nkpatcher\rescuedash">Remove the C:\ rescuedash</Item>
 			<Item Action="Unrar" arg1="Y:\nkpatcher.rar" arg2="C:\">Unrar nkpatcher.rar to C:\</Item>
 			<Item Action="Zip" arg1="E:\UDATA\21585554\" arg2="C:\nkpatcher\rescuedash\resoftmod files.zip">Cloning Softmod directory to C:\</Item>

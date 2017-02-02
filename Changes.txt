@@ -9,6 +9,23 @@ But here is what I have changed, that I can remember.
 	Created by Rocky5
 =========================================
 
+
+=========================================
+	Update: Feb 02 2017
+=========================================
+		Added new batch files and inc/asm files for singleboot.settings, flicker filter signleboot.settings and dualtboot.settings files
+		( disabled inside the config.inc and config2.inc files, as I only use this for flicker filter changes now )
+		Updated NKPatcher to look for flickerfilter.settings
+		Updated "OpenDash Dualboot.settings" to use the same boot paths as the default nkpatcher
+		Added "Flicker Filter" options to NKPatcher Settings.
+		( Video Modes > Flicker Filter )
+		Updated the "Build Variants.bat"
+		Updated the "Build XISO.bat" and "Build XISO Test.bat"
+		Added a check to make sure you installed the "Quick Upgrade" Prep folder in the right place
+		Updated the "Quick Update" config.xml
+		Dashloaders log cleanup.
+
+
 =========================================
 	Update: Jan 30 2017
 =========================================

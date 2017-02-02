@@ -1,4 +1,4 @@
-%include "config_runtime.inc"
+%include "config_dualboot.settings.inc"
 ;-----------------------------------------
 %define	TV0	0
 %define	TV1	0

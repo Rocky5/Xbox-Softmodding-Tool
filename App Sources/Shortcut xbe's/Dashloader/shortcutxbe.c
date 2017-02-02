@@ -85,7 +85,10 @@ void debuglog(const char* format, ...)
 void ErrorHandler(char *xbepath)
 {
     if (xbepath && 0 != strcmpi("", xbepath))
-    {
+    {  
+		debuglog("\n------------------------------------------------");
+		debuglog("Prep Dashboard");
+		debuglog("------------------------------------------------\n");
 		debuglog("Loading Prep Dashboard - E:\\Prep\\Default.xbe");
 		XLaunchXBE("E:\\Prep\\Default.xbe");
 		debuglog("Dashboard doesn't Exist\n");
@@ -93,7 +96,7 @@ void ErrorHandler(char *xbepath)
 		*/
 		debuglog("------------------------------------------------");
 		debuglog("ShadowC Partition Integrity Check");
-		debuglog("------------------------------------------------");
+		debuglog("------------------------------------------------\n");
 		debuglog("Checking ShadowC image integrity");
 		XLaunchXBE("C:\\nkpatcher\\rescuedash\\pbl\\loader.xbe");
 		debuglog("ShadowC image is loaded\n");
@@ -181,7 +184,7 @@ void ErrorHandler(char *xbepath)
 		*/
 		debuglog("------------------------------------------------");
 		debuglog("Rescue Dashboard Locations");
-		debuglog("------------------------------------------------");
+		debuglog("------------------------------------------------\n");
 		/*
 		*/
 		debuglog("Loading Rescue Dashboard TDATA");
@@ -245,12 +248,7 @@ int LaunchShortcut(char* filename)
   target[length] = '\0';
 
   /* launching xbe */
-  debuglog("------------------------------------------------");
-  debuglog("Other XBE's");
-  debuglog("------------------------------------------------\n");
-  debuglog("Loading Custom Dashboard - %s", target);
   XLaunchXBE(target);
-  debuglog("Custom Dashboard doesn't exist\n");
 
   /* if we get here something went wrong */
   return -1;

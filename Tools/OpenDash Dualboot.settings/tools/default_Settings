@@ -44,13 +44,13 @@ fstart: dd	FAN_SPEED, TRAY_VAL, LED_COLOR1, LED_COLOR1
 	dd	0,0,0,0
 	times   64-$+fstart db 0
 ;------------------------------
-DB1:	db	'\Device\Harddisk0\Partition1\Prep\default.xbe'
+DB1:	db	'\Device\Harddisk0\Partition14\nkpatcher\dashloader\default.xbe'
 	times   80-$+DB1 db 0
 ;------------------------------
-DB2:	db	'\Device\Harddisk0\Partition14\nkpatcher\dashloader\default.xbe'
+DB2:	db	'\Device\Harddisk0\Partition1\Prep\default.xbe'
 	times   80-$+DB2 db 0
 ;------------------------------
-DB3:	db	'\Device\Harddisk0\Partition14\nkpatcher\rescuedash\default.xbe'
+DB3:	db	'\Device\Harddisk0\Partition14\dashboard\default.xbe'
 	times   80-$+DB3 db 0
 ;------------------------------
 DB4:	db	'\Device\Harddisk0', '\', Partition, '\', Dash_Folder, '\', XBE_Name

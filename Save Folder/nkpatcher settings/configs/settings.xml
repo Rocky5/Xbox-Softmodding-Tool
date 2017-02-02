@@ -80,7 +80,7 @@
 						<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\configs\alt xbe's\dashboard.xbe" arg2="E:\Alt Dashboard\default.xbe"/>
 						<Item Action="MessageBox" Arg1="Installed">UnleashX installed to \n"E:\Alt Dashboard"</Item>
 					</List>
-					<Item Action="MessageBox" Arg1="Complete">Setting saved. \nNote: Changes will take affect on next boot.</Item>
+					<Item Action="MessageBox" Arg1="Complete">Setting saved. Changes will take affect on next boot.</Item>
 				</List>
 				<List Text="Disable" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\dualboot\disabled.png">
 					<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\dualboot"/>
@@ -93,7 +93,7 @@
 						<Item Action="Delete" arg1="E:\Alt Dashboard"/>
 						<Item Action="MessageBox" Arg1="YEAH">Alt Dashboard Removed successfully.</Item>
 					</List>
-					<Item Action="MessageBox" Arg1="Complete">Setting saved. \nNote: Changes will take affect on next boot.</Item>
+					<Item Action="MessageBox" Arg1="Complete">Setting saved. Changes will take affect on next boot.</Item>
 				</List>
 				<Item>------------------------------------------</Item>
 				<Item>Update</Item>
@@ -128,55 +128,55 @@
 				<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\fan\default-fan.png"/>
 				<Item Action="Copy" arg1="C:\nkpatcher\configs\fan files\FAN1.bin" arg2="C:\nkpatcher\configs\FAN.bin"/>
 				<Item Action="Delete" arg1="C:\nkpatcher\configs\FAN.bin"/>
-				<Item Action="MessageBox" Arg1="Complete">Setting saved. \nNote: Changes will take affect on next boot.</Item>
+				<Item Action="MessageBox" Arg1="Complete">Setting saved. Changes will take affect on next boot.</Item>
 			</List>
 			<List Text="30%" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\fan\fan-30.png">
 				<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\fan"/>
 				<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\fan\fan-30.png"/>
 				<Item Action="Copy" arg1="C:\nkpatcher\configs\fan files\FAN1.bin" arg2="C:\nkpatcher\configs\FAN.bin"/>
-				<Item Action="MessageBox" Arg1="Complete">Setting saved. \nNote: Changes will take affect on next boot.</Item>
+				<Item Action="MessageBox" Arg1="Complete">Setting saved. Changes will take affect on next boot.</Item>
 			</List>
 			<List Text="40%" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\fan\fan-40.png">
 				<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\fan"/>
 				<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\fan\fan-40.png"/>
 				<Item Action="Copy" arg1="C:\nkpatcher\configs\fan files\FAN2.bin" arg2="C:\nkpatcher\configs\FAN.bin"/>
-				<Item Action="MessageBox" Arg1="Complete">Setting saved. \nNote: Changes will take affect on next boot.</Item>
+				<Item Action="MessageBox" Arg1="Complete">Setting saved. Changes will take affect on next boot.</Item>
 			</List>
 			<List Text="50%" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\fan\fan-50.png">
 				<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\fan"/>
 				<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\fan\fan-50.png"/>
 				<Item Action="Copy" arg1="C:\nkpatcher\configs\fan files\FAN3.bin" arg2="C:\nkpatcher\configs\FAN.bin"/>
-				<Item Action="MessageBox" Arg1="Complete">Setting saved. \nNote: Changes will take affect on next boot.</Item>
+				<Item Action="MessageBox" Arg1="Complete">Setting saved. Changes will take affect on next boot.</Item>
 			</List>
 			<List Text="60%" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\fan\fan-60.png">
 				<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\fan"/>
 				<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\fan\fan-60.png"/>
 				<Item Action="Copy" arg1="C:\nkpatcher\configs\fan files\FAN4.bin" arg2="C:\nkpatcher\configs\FAN.bin"/>
-				<Item Action="MessageBox" Arg1="Complete">Setting saved. \nNote: Changes will take affect on next boot.</Item>
+				<Item Action="MessageBox" Arg1="Complete">Setting saved. Changes will take affect on next boot.</Item>
 			</List>
 			<List Text="70%" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\fan\fan-70.png">
 				<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\fan"/>
 				<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\fan\fan-70.png"/>
 				<Item Action="Copy" arg1="C:\nkpatcher\configs\fan files\FAN5.bin" arg2="C:\nkpatcher\configs\FAN.bin"/>
-				<Item Action="MessageBox" Arg1="Complete">Setting saved. \nNote: Changes will take affect on next boot.</Item>
+				<Item Action="MessageBox" Arg1="Complete">Setting saved. Changes will take affect on next boot.</Item>
 			</List>
 			<List Text="80%" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\fan\fan-80.png">
 				<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\fan"/>
 				<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\fan\fan-80.png"/>
 				<Item Action="Copy" arg1="C:\nkpatcher\configs\fan files\FAN6.bin" arg2="C:\nkpatcher\configs\FAN.bin"/>
-				<Item Action="MessageBox" Arg1="Complete">Setting saved. \nNote: Changes will take affect on next boot.</Item>
+				<Item Action="MessageBox" Arg1="Complete">Setting saved. Changes will take affect on next boot.</Item>
 			</List>
 			<List Text="90%" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\fan\fan-90.png">
 				<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\fan"/>
 				<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\fan\fan-90.png"/>
 				<Item Action="Copy" arg1="C:\nkpatcher\configs\fan files\FAN7.bin" arg2="C:\nkpatcher\configs\FAN.bin"/>
-				<Item Action="MessageBox" Arg1="Complete">Setting saved. \nNote: Changes will take affect on next boot.</Item>
+				<Item Action="MessageBox" Arg1="Complete">Setting saved. Changes will take affect on next boot.</Item>
 			</List>
 			<List Text="100%" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\fan\fan-100.png">
 				<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\fan"/>
 				<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\fan\fan-100.png"/>
 				<Item Action="Copy" arg1="C:\nkpatcher\configs\fan files\FAN8.bin" arg2="C:\nkpatcher\configs\FAN.bin"/>
-				<Item Action="MessageBox" Arg1="Complete">Setting saved. \nNote: Changes will take affect on next boot.</Item>
+				<Item Action="MessageBox" Arg1="Complete">Setting saved. Changes will take affect on next boot.</Item>
 			</List>
 			<Item>------------------------------------------</Item>
 			<Item>These Options</Item>
@@ -252,7 +252,7 @@
 						<Item Action="Delete" arg1="C:\xodash\4s.xtf"/>
 						<Item Action="Delete" arg1="C:\xodash\5s.xtf"/>
 						<Item Action="Delete" arg1="C:\xodash\6s.xtf"/>
-						<Item Action="MessageBox" Arg1="Complete">Setting saved. \nNote: Changes will take affect on next boot.</Item>
+						<Item Action="MessageBox" Arg1="Complete">Setting saved. Changes will take affect on next boot.</Item>
 					</List>
 					<List Text="1 s.xtf file" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font-Sxtf\Sxtf-1.png">
 						<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font-Sxtf"/>
@@ -268,7 +268,7 @@
 						<Item Action="Delete" arg1="C:\xodash\4s.xtf"/>
 						<Item Action="Delete" arg1="C:\xodash\5s.xtf"/>
 						<Item Action="Delete" arg1="C:\xodash\6s.xtf"/>
-						<Item Action="MessageBox" Arg1="Complete">Setting saved. \nNote: Changes will take affect on next boot.</Item>
+						<Item Action="MessageBox" Arg1="Complete">Setting saved. Changes will take affect on next boot.</Item>
 					</List>
 					<List Text="2 s.xtf files" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font-Sxtf\Sxtf-2.png">
 						<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font-Sxtf"/>
@@ -283,7 +283,7 @@
 						<Item Action="Delete" arg1="C:\xodash\4s.xtf"/>
 						<Item Action="Delete" arg1="C:\xodash\5s.xtf"/>
 						<Item Action="Delete" arg1="C:\xodash\6s.xtf"/>
-						<Item Action="MessageBox" Arg1="Complete">Setting saved. \nNote: Changes will take affect on next boot.</Item>
+						<Item Action="MessageBox" Arg1="Complete">Setting saved. Changes will take affect on next boot.</Item>
 					</List>
 					<List Text="3 s.xtf files" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font-Sxtf\Sxtf-3.png">
 						<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font-Sxtf"/>
@@ -297,7 +297,7 @@
 						<Item Action="Delete" arg1="C:\xodash\4s.xtf"/>
 						<Item Action="Delete" arg1="C:\xodash\5s.xtf"/>
 						<Item Action="Delete" arg1="C:\xodash\6s.xtf"/>
-						<Item Action="MessageBox" Arg1="Complete">Setting saved. \nNote: Changes will take affect on next boot.</Item>
+						<Item Action="MessageBox" Arg1="Complete">Setting saved. Changes will take affect on next boot.</Item>
 					</List>
 					<List Text="4 s.xtf files" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font-Sxtf\Sxtf-4.png">
 						<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font-Sxtf"/>
@@ -310,7 +310,7 @@
 						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\6s.xtf"/>
 						<Item Action="Delete" arg1="C:\xodash\5s.xtf"/>
 						<Item Action="Delete" arg1="C:\xodash\6s.xtf"/>
-						<Item Action="MessageBox" Arg1="Complete">Setting saved. \nNote: Changes will take affect on next boot.</Item>
+						<Item Action="MessageBox" Arg1="Complete">Setting saved. Changes will take affect on next boot.</Item>
 					</List>
 					<List Text="5 s.xtf files" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font-Sxtf\Sxtf-5.png">
 						<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font-Sxtf"/>
@@ -322,7 +322,7 @@
 						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\5s.xtf"/>
 						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\6s.xtf"/>
 						<Item Action="Delete" arg1="C:\xodash\6s.xtf"/>
-						<Item Action="MessageBox" Arg1="Complete">Setting saved. \nNote: Changes will take affect on next boot.</Item>
+						<Item Action="MessageBox" Arg1="Complete">Setting saved. Changes will take affect on next boot.</Item>
 					</List>
 					<List Text="6 s.xtf files" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font-Sxtf\Sxtf-6.png">
 						<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font-Sxtf"/>
@@ -333,7 +333,7 @@
 						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\4s.xtf"/>
 						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\5s.xtf"/>
 						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\6s.xtf"/>
-						<Item Action="MessageBox" Arg1="Complete">Setting saved. \nNote: Changes will take affect on next boot.</Item>
+						<Item Action="MessageBox" Arg1="Complete">Setting saved. Changes will take affect on next boot.</Item>
 					</List>
 				</List>
 			</List>
@@ -352,21 +352,21 @@
 					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led\default-led.png"/>
 					<Item Action="Copy" arg1="C:\nkpatcher\configs\led files\led1.bin" arg2="C:\nkpatcher\configs\LED.bin"/>
 					<Item Action="Delete" arg1="C:\nkpatcher\configs\LED.bin"/>
-					<Item Action="MessageBox" Arg1="Complete">Setting saved. \nNote: Changes will take affect on next boot.</Item>
+					<Item Action="MessageBox" Arg1="Complete">Setting saved. Changes will take affect on next boot.</Item>
 				</List>
 				<List Text="Flash Slow" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led\led-3.png">
 					<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led"/>
 					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led\orange.png"/>
 					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led\led-3.png"/>
 					<Item Action="Copy" arg1="C:\nkpatcher\configs\led files\led2.bin" arg2="C:\nkpatcher\configs\LED.bin"/>
-					<Item Action="MessageBox" Arg1="Complete">Setting saved. \nNote: Changes will take affect on next boot.</Item>
+					<Item Action="MessageBox" Arg1="Complete">Setting saved. Changes will take affect on next boot.</Item>
 				</List>
 				<List Text="Flash Fast" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led\led-2.png">
 					<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led"/>
 					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led\orange.png"/>
 					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led\led-2.png"/>
 					<Item Action="Copy" arg1="C:\nkpatcher\configs\led files\led1.bin" arg2="C:\nkpatcher\configs\LED.bin"/>
-					<Item Action="MessageBox" Arg1="Complete">Setting saved. \nNote: Changes will take affect on next boot.</Item>
+					<Item Action="MessageBox" Arg1="Complete">Setting saved. Changes will take affect on next boot.</Item>
 				</List>
 			</List>
 			<List Text="Red" Sort="Off" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led\red.png">
@@ -377,21 +377,21 @@
 					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led\red.png"/>
 					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led\led-4.png"/>
 					<Item Action="Copy" arg1="C:\nkpatcher\configs\led files\led3.bin" arg2="C:\nkpatcher\configs\LED.bin"/>
-					<Item Action="MessageBox" Arg1="Complete">Setting saved. \nNote: Changes will take affect on next boot.</Item>
+					<Item Action="MessageBox" Arg1="Complete">Setting saved. Changes will take affect on next boot.</Item>
 				</List>
 				<List Text="Flash Slow" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led\led-6.png">
 					<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led"/>
 					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led\red.png"/>
 					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led\led-6.png"/>
 					<Item Action="Copy" arg1="C:\nkpatcher\configs\led files\led5.bin" arg2="C:\nkpatcher\configs\LED.bin"/>
-					<Item Action="MessageBox" Arg1="Complete">Setting saved. \nNote: Changes will take affect on next boot.</Item>
+					<Item Action="MessageBox" Arg1="Complete">Setting saved. Changes will take affect on next boot.</Item>
 				</List>
 				<List Text="Flash Fast" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led\led-5.png">
 					<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led"/>
 					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led\red.png"/>
 					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led\led-5.png"/>
 					<Item Action="Copy" arg1="C:\nkpatcher\configs\led files\led4.bin" arg2="C:\nkpatcher\configs\LED.bin"/>
-					<Item Action="MessageBox" Arg1="Complete">Setting saved. \nNote: Changes will take affect on next boot.</Item>
+					<Item Action="MessageBox" Arg1="Complete">Setting saved. Changes will take affect on next boot.</Item>
 				</List>
 			</List>
 			<List Text="Green" Sort="Off" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led\green.png">
@@ -402,21 +402,21 @@
 					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led\green.png"/>
 					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led\led-7.png"/>
 					<Item Action="Copy" arg1="C:\nkpatcher\configs\led files\led6.bin" arg2="C:\nkpatcher\configs\LED.bin"/>
-					<Item Action="MessageBox" Arg1="Complete">Setting saved. \nNote: Changes will take affect on next boot.</Item>
+					<Item Action="MessageBox" Arg1="Complete">Setting saved. Changes will take affect on next boot.</Item>
 				</List>
 				<List Text="Flash Slow" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led\led-9.png">
 					<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led"/>
 					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led\green.png"/>
 					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led\led-9.png"/>
 					<Item Action="Copy" arg1="C:\nkpatcher\configs\led files\led8.bin" arg2="C:\nkpatcher\configs\LED.bin"/>
-					<Item Action="MessageBox" Arg1="Complete">Setting saved. \nNote: Changes will take affect on next boot.</Item>
+					<Item Action="MessageBox" Arg1="Complete">Setting saved. Changes will take affect on next boot.</Item>
 				</List>
 				<List Text="Flash Fast" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led\led-8.png">
 					<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led"/>
 					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led\green.png"/>
 					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led\led-8.png"/>
 					<Item Action="Copy" arg1="C:\nkpatcher\configs\led files\led7.bin" arg2="C:\nkpatcher\configs\LED.bin"/>
-					<Item Action="MessageBox" Arg1="Complete">Setting saved. \nNote: Changes will take affect on next boot.</Item>
+					<Item Action="MessageBox" Arg1="Complete">Setting saved. Changes will take affect on next boot.</Item>
 				</List>
 			</List>
 			<List Text="Cycling" Sort="Off" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led\cycle.png">
@@ -427,21 +427,21 @@
 					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led\cycle.png"/>
 					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led\led-10.png"/>
 					<Item Action="Copy" arg1="C:\nkpatcher\configs\led files\led9.bin" arg2="C:\nkpatcher\configs\LED.bin"/>
-					<Item Action="MessageBox" Arg1="Complete">Setting saved. \nNote: Changes will take affect on next boot.</Item>
+					<Item Action="MessageBox" Arg1="Complete">Setting saved. Changes will take affect on next boot.</Item>
 				</List>
 				<List Text="Version 2" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led\led-11.png">
 					<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led"/>
 					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led\cycle.png"/>
 					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led\led-11.png"/>
 					<Item Action="Copy" arg1="C:\nkpatcher\configs\led files\led10.bin" arg2="C:\nkpatcher\configs\LED.bin"/>
-					<Item Action="MessageBox" Arg1="Complete">Setting saved. \nNote: Changes will take affect on next boot.</Item>
+					<Item Action="MessageBox" Arg1="Complete">Setting saved. Changes will take affect on next boot.</Item>
 				</List>
 			</List>
 			<List Text="Turn Off" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led\led-12.png">
 				<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led"/>
 				<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led\led-12.png"/>
 				<Item Action="Copy" arg1="C:\nkpatcher\configs\led files\led11.bin" arg2="C:\nkpatcher\configs\LED.bin"/>
-				<Item Action="MessageBox" Arg1="Complete">Setting saved. \nNote: Changes will take affect on next boot.</Item>
+				<Item Action="MessageBox" Arg1="Complete">Setting saved. Changes will take affect on next boot.</Item>
 			</List>
 			<Item>------------------------------------------</Item>
 			<Item>These Options</Item>
@@ -456,19 +456,19 @@
 				<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\part"/>
 				<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\part\default-part.png"/>
 				<Item Action="Copy" arg1="C:\nkpatcher\configs\nkpatcher\6.xbe" arg2="C:\nkpatcher\default.xbe"/>
-				<Item Action="MessageBox" Arg1="Complete">Setting saved. \nNote: Changes will take affect on next boot.</Item>
+				<Item Action="MessageBox" Arg1="Complete">Setting saved. Changes will take affect on next boot.</Item>
 			</List>
 			<List Text="Partition F and G" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\part\default-FG.png">
 				<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\part"/>
 				<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\part\default-FG.png"/>
 				<Item Action="Copy" arg1="C:\nkpatcher\configs\nkpatcher\67.xbe" arg2="C:\nkpatcher\default.xbe"/>
-				<Item Action="MessageBox" Arg1="Complete">Setting saved. \nNote: Changes will take affect on next boot.</Item>
+				<Item Action="MessageBox" Arg1="Complete">Setting saved. Changes will take affect on next boot.</Item>
 			</List>
 			<List Text="XBPartitioner" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\part\XBP-part.png">
 				<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\part"/>
 				<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\part\XBP-part.png"/>
 				<Item Action="Copy" arg1="C:\nkpatcher\configs\nkpatcher\6.xbe" arg2="C:\nkpatcher\default.xbe"/>
-				<Item Action="MessageBox" Arg1="Complete">Setting saved. \nNote: Changes will take affect on next boot.</Item>
+				<Item Action="MessageBox" Arg1="Complete">Setting saved. Changes will take affect on next boot.</Item>
 			</List>
 			<Item>------------------------------------------</Item>
 			<Item>These Options</Item>
@@ -484,22 +484,75 @@
 				<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\video\default-video.png"/>
 				<Item Action="Copy" arg1="C:\nkpatcher\configs\video files\VIDEO1.bin" arg2="C:\nkpatcher\configs\VIDEO.bin"/>
 				<Item Action="Delete" arg1="C:\nkpatcher\configs\video.bin"/>
-				<Item Action="MessageBox" Arg1="Complete">Setting saved. \nNote: Changes will take affect on next boot.</Item>
+				<Item Action="MessageBox" Arg1="Complete">Setting saved. Changes will take affect on next boot.</Item>
 			</List>
 			<List Text="Force Progressive" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\video\video-prog.png">
 				<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\video"/>
 				<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\video\video-prog.png"/>
 				<Item Action="Copy" arg1="C:\nkpatcher\configs\video files\VIDEO1.bin" arg2="C:\nkpatcher\configs\VIDEO.bin"/>
-				<Item Action="MessageBox" Arg1="Complete">Setting saved. \nNote: Changes will take affect on next boot.</Item>
-			</List>	
+				<Item Action="MessageBox" Arg1="Complete">Setting saved. Changes will take affect on next boot.</Item>
+			</List>
 <!--
 			<List Text="Force VGA" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\video\video-vga.png">
 				<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\video"/>
 				<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\video\video-vga.png"/>
 				<Item Action="Copy" arg1="C:\nkpatcher\configs\video files\VIDEO2.bin" arg2="C:\nkpatcher\configs\VIDEO.bin"/>
-				<Item Action="MessageBox" Arg1="Complete">Setting saved. \nNote: Changes will take affect on next boot.</Item>
+				<Item Action="MessageBox" Arg1="Complete">Setting saved. Changes will take affect on next boot.</Item>
 			</List>
 -->
+			<Item>------------------------------------------</Item>
+			<List Text="Flicker Filter" Sort="Off">
+				<List Text="Information" Sort="Off" Batch="True">
+					<Item Action="MessageBox" Arg1="Information">These options will change the flicker filter values for 480i and 576i video modes. Basically it reduce the flickering you see when using crt screens and reduces the soft picture on LCD screens.</Item>
+				</List>
+				<Item>------------------------------------------</Item>
+				<List Text="Disable" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\ff\default-ff.png">
+					<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\ff"/>
+					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\ff\default-ff.png"/>
+					<Item Action="Copy" arg1="C:\nkpatcher\configs\flicker filter\flickerfilter0.bin" arg2="C:\nkpatcher\configs\flickerfilter.settings"/>
+					<Item Action="Delete" arg1="C:\nkpatcher\configs\flickerfilter.settings"/>
+					<Item Action="MessageBox" Arg1="Complete">Setting saved. Changes will take affect on next boot.</Item>
+				</List>
+				<List Text="Off" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\ff\ff-off.png">
+					<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\ff"/>
+					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\ff\ff-off.png"/>
+					<Item Action="Copy" arg1="C:\nkpatcher\configs\flicker filter\flickerfilter0.bin" arg2="C:\nkpatcher\configs\flickerfilter.settings"/>
+					<Item Action="MessageBox" Arg1="Complete">Setting saved. Changes will take affect on next boot.</Item>
+				</List>
+				<List Text="Low" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\ff\ff-1.png">
+					<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\ff"/>
+					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\ff\ff-1.png"/>
+					<Item Action="Copy" arg1="C:\nkpatcher\configs\flicker filter\flickerfilter1.bin" arg2="C:\nkpatcher\configs\flickerfilter.settings"/>
+					<Item Action="MessageBox" Arg1="Complete">Setting saved. Changes will take affect on next boot.</Item>
+				</List>
+				<List Text="Semi Medium" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\ff\ff-2.png">
+					<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\ff"/>
+					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\ff\ff-2.png"/>
+					<Item Action="Copy" arg1="C:\nkpatcher\configs\flicker filter\flickerfilter2.bin" arg2="C:\nkpatcher\configs\flickerfilter.settings"/>
+					<Item Action="MessageBox" Arg1="Complete">Setting saved. Changes will take affect on next boot.</Item>
+				</List>
+				<List Text="Medium" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\ff\ff-3.png">
+					<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\ff"/>
+					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\ff\ff-3.png"/>
+					<Item Action="Copy" arg1="C:\nkpatcher\configs\flicker filter\flickerfilter3.bin" arg2="C:\nkpatcher\configs\flickerfilter.settings"/>
+					<Item Action="MessageBox" Arg1="Complete">Setting saved. Changes will take affect on next boot.</Item>
+				</List>
+				<List Text="Semi High" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\ff\ff-4.png">
+					<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\ff"/>
+					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\ff\ff-4.png"/>
+					<Item Action="Copy" arg1="C:\nkpatcher\configs\flicker filter\flickerfilter4.bin" arg2="C:\nkpatcher\configs\flickerfilter.settings"/>
+					<Item Action="MessageBox" Arg1="Complete">Setting saved. Changes will take affect on next boot.</Item>
+				</List>
+				<List Text="High" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\ff\ff-5.png">
+					<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\ff"/>
+					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\ff\ff-5.png"/>
+					<Item Action="Copy" arg1="C:\nkpatcher\configs\flicker filter\flickerfilter5.bin" arg2="C:\nkpatcher\configs\flickerfilter.settings"/>
+					<Item Action="MessageBox" Arg1="Complete">Setting saved. Changes will take affect on next boot.</Item>
+				</List>
+				<Item>------------------------------------------</Item>
+				<Item>These Options</Item>
+				<Item>Require A Restart</Item>
+			</List>
 			<Item>------------------------------------------</Item>
 			<Item>These Options</Item>
 			<Item>Require A Restart</Item>

@@ -5,8 +5,8 @@
 ;;; --------------------------------
 ;;;---------------------------------------------------------------------------
 ;;; file name for NKPatcher11 to use at runtime  (C:\NKPatcher\Configs\Dualboot.settings)
-%define CFG_FILE      ''  
-%define CFG_FILE_OPEN '\Device\Harddisk0\Partition2\nkpatcher\configs\Dualboot.settings' 
+%define CFG_FILE      '\Device\Harddisk0\Partition2\nkpatcher\configs\flickerfilter.settings'  
+%define CFG_FILE_OPEN '\Device\Harddisk0\Partition2\nkpatcher\configs\dualboot.settings' 
 ;;;---------------------------------------------------------------------------
 ;%define KINGROACH_VERSION   ; NDURE 3.X <<<<<<<<<<<<<<<<<<<<<<<<<
 ;;;---------------------------------------------------------------------------

@@ -11,6 +11,10 @@ Copy "%CD%\Extras Disc\softmod files\default.xbe" "%CD%\Variants\Quick Update\Pr
 Copy "%CD%\Extras Disc\softmod files\NoVC.bin" "%CD%\Variants\Quick Update\Prep\"
 XCopy /S /Y "%CD%\Extras Disc\softmod files\Softmod Files" "%CD%\Variants\Quick Update\Prep\Softmod Files\"
 XCopy /S /Y "%CD%\Extras Disc\softmod files\Softmod Files\21585554\000000000000\softmod files\skin files" "%CD%\Variants\Quick Update\Prep\skins\skin files\"
+RD /q /s "%CD%\Variants\Quick Update\Prep\Softmod Files\4d530017"
+RD /q /s "%CD%\Variants\Quick Update\Prep\Softmod Files\4541000d"
+RD /q /s "%CD%\Variants\Quick Update\Prep\Softmod Files\SC-NTSC"
+RD /q /s "%CD%\Variants\Quick Update\Prep\Softmod Files\SC-PAL"
 
 Copy "%CD%\Save Folder\softmod files\UX.xbe" "%CD%\Variants\Quick Upgrade\Prep\unleashx.xbe"
 Copy "%CD%\Extras Disc\softmod files\boot.cfg" "%CD%\Variants\Quick Upgrade\Prep\"
@@ -49,3 +53,5 @@ CD "Attacher, Detacher"
 "%Winrar%" a -x*.db -afzip "..\Extras Disc Attacher" "2016 Softmodding Tool Extras Disc"
 "%Winrar%" a -x*.db -afzip "..\Extras Disc Attacher" "Detacher"
 )
+
+RD /Q /S "..\Extras Disc\softmod files\Softmod Files"

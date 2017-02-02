@@ -214,7 +214,7 @@ Echo %%define Partition '%Partition%'
 Echo %%define XBE_Name '%XBE%'
 Echo %%define Dash_Folder '%Folder%'
 )>tools\tmp
-Tools\nasm -o "tools\Dualboot.settings" "Tools\default_Settings"
+Tools\nasm -o "tools\dualboot.settings" "Tools\default_Settings"
 del /Q "tools\tmp"
 if "%FTP%"=="y" Goto buildFTP
 if "%FTP%"=="Y" Goto buildFTP
