@@ -34,8 +34,8 @@
 		</FTP>
 		<Audio>
 			<EnableSoundEffect>Yes</EnableSoundEffect>
-			<Ambient>D:\skins\skin files\music\background.wav</Ambient>
-			<SoundVolume>80</SoundVolume>
+			<Ambient>D:\skins\skin files\music\ambient.wav</Ambient>
+			<SoundVolume>50</SoundVolume>
 			<Scroll>dummy.wav</Scroll>
 			<Select>dummy.wav</Select>
 			<Action_Complete>dummy.wav</Action_Complete>
@@ -140,11 +140,11 @@
 				<Item>XBMC4Kids Options</Item>
 
 				<Item>------------------------------------------</Item>
-				
+
 				<List Text="Applications Read Me" Sort="Off" Batch="True">
 					<Item Action="MessageBox" arg1="">If you are going to use this as an application I would not advise enabling the "Individual Saves Script", doing so may cause issues with other dashboards.</Item>
 				</List>
-				
+
 				<List Text="E:\Applications\" Sort="Off" Batch="True">
 					<Item Action="AskUser" arg1="Continue" arg2="This will install XBMC4Kids to E:\Applications\ if there is a previous installation residing there it will be overwritten."/>
 					<Item Action="Copy" arg1="dummy" arg2="E:\Applications\XBMC4Kids"/>
@@ -401,6 +401,73 @@
 				</List>
 			</List>
 
+			<List Text="Hard Drive" Sort="Off">
+				<List Text="Information" Sort="Off" batch="true">
+					<Item Action="MessageBox" Arg1="Information">You can change the partition types NKPatcher will use or populate a new F or G partition with all the appropriate folders.</Item>
+				</List>
+				<Item>------------------------------------------</Item>
+				<List Text="Partition Types" Sort="Off">
+					<List Text="Information" Sort="Off" Batch="True">
+						<Item Action="MessageBox" Arg1="Information">Default:\nF takes all the space.\n\nPatition F and G:\nF - 137GB / G - takes the rest.\n\nXBPartitioner:\nCustom partition table.</Item>
+					</List>
+					<Item>------------------------------------------</Item>
+					<List Text="Default" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\part\default-part.png">
+						<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\part"/>
+						<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\part\default-part.png"/>
+						<Item Action="Copy" arg1="C:\nkpatcher\configs\nkpatcher\6.xbe" arg2="C:\nkpatcher\default.xbe"/>
+						<Item Action="MessageBox" Arg1="Complete">Setting saved. Changes will take affect on next boot.</Item>
+					</List>
+					<List Text="Partition F and G" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\part\default-FG.png">
+						<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\part"/>
+						<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\part\default-FG.png"/>
+						<Item Action="Copy" arg1="C:\nkpatcher\configs\nkpatcher\67.xbe" arg2="C:\nkpatcher\default.xbe"/>
+						<Item Action="MessageBox" Arg1="Complete">Setting saved. Changes will take affect on next boot.</Item>
+					</List>
+					<List Text="XBPartitioner" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\part\XBP-part.png">
+						<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\part"/>
+						<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\part\XBP-part.png"/>
+						<Item Action="Copy" arg1="C:\nkpatcher\configs\nkpatcher\6.xbe" arg2="C:\nkpatcher\default.xbe"/>
+						<Item Action="MessageBox" Arg1="Complete">Setting saved. Changes will take affect on next boot.</Item>
+					</List>
+					<Item>------------------------------------------</Item>
+					<Item>These Options</Item>
+					<Item>Require A Restart</Item>
+				</List>
+				<List Text="Populate Partitions" Sort="Off">
+					<List Text="Information" Sort="Off" Batch="True">
+						<Item Action="MessageBox" Arg1="Information">Well these options will create all the folder structures you need for "Applications, Emulators, Games and Homebrew".</Item>
+					</List>
+					<Item>------------------------------------------</Item>
+					<List Text="E Partition" Sort="Off" Batch="True">
+						<Item Action="Copy" arg1="dummy" arg2="E:\Applications\"/>
+						<Item Action="Copy" arg1="dummy" arg2="E:\Emulators\"/>
+						<Item Action="Copy" arg1="dummy" arg2="E:\Games\"/>
+						<Item Action="Copy" arg1="dummy" arg2="E:\Homebrew\"/>
+						<Item Action="MessageBox" Arg1="Complete">Folder structure created.</Item>
+					</List>
+					<List Text="F Partition" Sort="Off" Batch="True">
+						<Item Action="Copy" arg1="config.xml" arg2="F:\config.xml"/>
+						<Item Action="Rename" arg1="F:\config.xml" arg2="F:\config.xm">No F Partition found</Item>
+						<Item Action="Delete" arg="F:\config.xm"/>
+						<Item Action="Copy" arg1="dummy" arg2="F:\Applications\"/>
+						<Item Action="Copy" arg1="dummy" arg2="F:\Emulators\"/>
+						<Item Action="Copy" arg1="dummy" arg2="F:\Games\"/>
+						<Item Action="Copy" arg1="dummy" arg2="F:\Homebrew\"/>
+						<Item Action="MessageBox" Arg1="Complete">Folder structure created.</Item>
+					</List>
+					<List Text="G Partition" Sort="Off" Batch="True">
+						<Item Action="Copy" arg1="config.xml" arg2="G:\config.xml"/>
+						<Item Action="Rename" arg1="G:\config.xml" arg2="G:\config.xm">No G Partition found</Item>
+						<Item Action="Delete" arg="G:\config.xm"/>
+						<Item Action="Copy" arg1="dummy" arg2="G:\Applications\"/>
+						<Item Action="Copy" arg1="dummy" arg2="G:\Emulators\"/>
+						<Item Action="Copy" arg1="dummy" arg2="G:\Games\"/>
+						<Item Action="Copy" arg1="dummy" arg2="G:\Homebrew\"/>
+						<Item Action="MessageBox" Arg1="Complete">Folder structure created.</Item>
+					</List>
+				</List>
+			</List>
+
 			<!-- ------------------------------------ -->
 			<!-- ------- Kernel Fonts Section ------- -->
 			<!-- ------------------------------------ -->
@@ -518,35 +585,6 @@
 					<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led"/>
 					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led\led-12.png"/>
 					<Item Action="Copy" arg1="C:\nkpatcher\configs\led files\led11.bin" arg2="C:\nkpatcher\configs\LED.bin"/>
-					<Item Action="MessageBox" Arg1="Complete">Setting saved. \nChanges will take affect on next boot.</Item>
-				</List>
-			</List>
-
-			<!-- -------------------------------------- -->
-			<!-- ------- Partition Type Section ------- -->
-			<!-- -------------------------------------- -->
-
-			<List Text="Partition Types" Sort="Off">
-				<List Text="Information" Sort="Off" Batch="True">
-					<Item Action="MessageBox" Arg1="Information">Default:\nF takes all the space.\n\nPatition F &amp; G:\nF - 137GB / G - takes the rest.\n\nXBPartitioner:\nCustom partition table.</Item>
-				</List>
-				<Item>------------------------------------------</Item>
-				<List Text="Default" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\part\default-part.png">
-					<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\part"/>
-					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\part\default-part.png"/>
-					<Item Action="Copy" arg1="C:\nkpatcher\configs\nkpatcher\6.xbe" arg2="C:\nkpatcher\default.xbe"/>
-					<Item Action="MessageBox" Arg1="Complete">Setting saved. \nChanges will take affect on next boot.</Item>
-				</List>
-				<List Text="Partition F &amp; G" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\part\default-FG.png">
-					<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\part"/>
-					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\part\default-FG.png"/>
-					<Item Action="Copy" arg1="C:\nkpatcher\configs\nkpatcher\67.xbe" arg2="C:\nkpatcher\default.xbe"/>
-					<Item Action="MessageBox" Arg1="Complete">Setting saved. \nChanges will take affect on next boot.</Item>
-				</List>
-				<List Text="XBPartitioner" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\part\XBP-part.png">
-					<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\part"/>
-					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\part\XBP-part.png"/>
-					<Item Action="Copy" arg1="C:\nkpatcher\configs\nkpatcher\6.xbe" arg2="C:\nkpatcher\default.xbe"/>
 					<Item Action="MessageBox" Arg1="Complete">Setting saved. \nChanges will take affect on next boot.</Item>
 				</List>
 			</List>

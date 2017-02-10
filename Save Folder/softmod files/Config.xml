@@ -35,8 +35,8 @@
 		</FTP>
 		<Audio>
 			<EnableSoundEffect>Yes</EnableSoundEffect>
-			<Ambient>E:\UDATA\21585554\000000000000\softmod files\skin files\music\background.wav</Ambient>
-			<SoundVolume>80</SoundVolume>
+			<Ambient>E:\UDATA\21585554\000000000000\softmod files\skin files\music\ambient.wav</Ambient>
+			<SoundVolume>50</SoundVolume>
 			<Scroll>dummy.wav</Scroll>
 			<Select>dummy.wav</Select>
 			<Action_Complete>dummy.wav</Action_Complete>

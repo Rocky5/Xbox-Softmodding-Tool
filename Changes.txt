@@ -11,6 +11,20 @@ But here is what I have changed, that I can remember.
 
 
 =========================================
+	Update: Feb 08 2017
+=========================================
+		Updated/cleaned up the skin.xml files
+		Skinned the media player UI in all skin variants
+		Added a new menu "Hard Drive" in NKPatcher Settings
+		( This is where the partition types and populate partitions options are found )
+		Updated Chimp 261812 to the latest build
+		( Fixed the master HDD not displaying as locked if it's security level was maximum )
+		Updated xbedump to the patched version by TheFallen93 ( fixed the xbe header check )
+		New ambient track for NKPatcher Settings and installers.
+		( http://www.looperman.com/users/profile/1795296 - vibes piano 3 )
+
+
+=========================================
 	Update: Feb 02 2017
 =========================================
 		Added new batch files and inc/asm files for singleboot.settings, flicker filter signleboot.settings and dualtboot.settings files

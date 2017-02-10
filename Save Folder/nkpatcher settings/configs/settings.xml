@@ -34,8 +34,8 @@
 		</FTP>
 		<Audio>
 			<EnableSoundEffect>Yes</EnableSoundEffect>
-			<Ambient>E:\UDATA\21585554\000000000000\softmod files\skin files\music\background.wav</Ambient>
-			<SoundVolume>80</SoundVolume>
+			<Ambient>E:\UDATA\21585554\000000000000\softmod files\skin files\music\ambient.wav</Ambient>
+			<SoundVolume>50</SoundVolume>
 			<Scroll>dummy.wav</Scroll>
 			<Select>dummy.wav</Select>
 			<Action_Complete>dummy.wav</Action_Complete>
@@ -182,6 +182,72 @@
 			<Item>These Options</Item>
 			<Item>Require A Restart</Item>
 		</List>
+		<List Text="Hard Drive" Sort="Off">
+			<List Text="Information" Sort="Off" batch="true">
+				<Item Action="MessageBox" Arg1="Information">You can change the partition types NKPatcher will use or populate a new F or G partition with all the appropriate folders.</Item>
+			</List>
+			<Item>------------------------------------------</Item>
+			<List Text="Partition Types" Sort="Off">
+				<List Text="Information" Sort="Off" Batch="True">
+					<Item Action="MessageBox" Arg1="Information">Default:\nF takes all the space.\n\nPatition F and G:\nF - 137GB / G - takes the rest.\n\nXBPartitioner:\nCustom partition table.</Item>
+				</List>
+				<Item>------------------------------------------</Item>
+				<List Text="Default" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\part\default-part.png">
+					<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\part"/>
+					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\part\default-part.png"/>
+					<Item Action="Copy" arg1="C:\nkpatcher\configs\nkpatcher\6.xbe" arg2="C:\nkpatcher\default.xbe"/>
+					<Item Action="MessageBox" Arg1="Complete">Setting saved. Changes will take affect on next boot.</Item>
+				</List>
+				<List Text="Partition F and G" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\part\default-FG.png">
+					<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\part"/>
+					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\part\default-FG.png"/>
+					<Item Action="Copy" arg1="C:\nkpatcher\configs\nkpatcher\67.xbe" arg2="C:\nkpatcher\default.xbe"/>
+					<Item Action="MessageBox" Arg1="Complete">Setting saved. Changes will take affect on next boot.</Item>
+				</List>
+				<List Text="XBPartitioner" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\part\XBP-part.png">
+					<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\part"/>
+					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\part\XBP-part.png"/>
+					<Item Action="Copy" arg1="C:\nkpatcher\configs\nkpatcher\6.xbe" arg2="C:\nkpatcher\default.xbe"/>
+					<Item Action="MessageBox" Arg1="Complete">Setting saved. Changes will take affect on next boot.</Item>
+				</List>
+				<Item>------------------------------------------</Item>
+				<Item>These Options</Item>
+				<Item>Require A Restart</Item>
+			</List>
+			<List Text="Populate Partitions" Sort="Off">
+				<List Text="Information" Sort="Off" Batch="True">
+					<Item Action="MessageBox" Arg1="Information">Well these options will create all the folder structures you need for "Applications, Emulators, Games and Homebrew".</Item>
+				</List>
+				<Item>------------------------------------------</Item>
+				<List Text="E Partition" Sort="Off" Batch="True">
+					<Item Action="Copy" arg1="dummy" arg2="E:\Applications\"/>
+					<Item Action="Copy" arg1="dummy" arg2="E:\Emulators\"/>
+					<Item Action="Copy" arg1="dummy" arg2="E:\Games\"/>
+					<Item Action="Copy" arg1="dummy" arg2="E:\Homebrew\"/>
+					<Item Action="MessageBox" Arg1="Complete">Folder structure created.</Item>
+				</List>
+				<List Text="F Partition" Sort="Off" Batch="True">
+					<Item Action="Copy" arg1="config.xml" arg2="F:\config.xml"/>
+					<Item Action="Rename" arg1="F:\config.xml" arg2="F:\config.xm">No F Partition found</Item>
+					<Item Action="Delete" arg="F:\config.xm"/>
+					<Item Action="Copy" arg1="dummy" arg2="F:\Applications\"/>
+					<Item Action="Copy" arg1="dummy" arg2="F:\Emulators\"/>
+					<Item Action="Copy" arg1="dummy" arg2="F:\Games\"/>
+					<Item Action="Copy" arg1="dummy" arg2="F:\Homebrew\"/>
+					<Item Action="MessageBox" Arg1="Complete">Folder structure created.</Item>
+				</List>
+				<List Text="G Partition" Sort="Off" Batch="True">
+					<Item Action="Copy" arg1="config.xml" arg2="G:\config.xml"/>
+					<Item Action="Rename" arg1="G:\config.xml" arg2="G:\config.xm">No G Partition found</Item>
+					<Item Action="Delete" arg="G:\config.xm"/>
+					<Item Action="Copy" arg1="dummy" arg2="G:\Applications\"/>
+					<Item Action="Copy" arg1="dummy" arg2="G:\Emulators\"/>
+					<Item Action="Copy" arg1="dummy" arg2="G:\Games\"/>
+					<Item Action="Copy" arg1="dummy" arg2="G:\Homebrew\"/>
+					<Item Action="MessageBox" Arg1="Complete">Folder structure created.</Item>
+				</List>
+			</List>
+		</List>
 		<List Text="Kernel Fonts" Sort="Off">
 			<List Text="Information" Sort="Off" Batch="True">
 				<Item Action="MessageBox" Arg1="Info">This menu displays what Xbox Kernel Font is enabled. This process is automated and is done when the softmod is installed. You can also find "Advanced Features" at the bottom of the list.</Item>
@@ -222,7 +288,7 @@
 						<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font\generic.png"/>
 						<Item Action="MessageBox" Arg1="Info">Changes will take effect on next reboot.</Item>
 					</List>
-<!-- 					
+					<!-- 					
 					<List Text="Restore Generic Font" Sort="Off" Batch="True">
 						<Item Action="MessageBox" Arg1="Info">I will need to exit nkpatcher settings for the install to get done. Changes will take effect on next reboot.</Item>
 						<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\savemeta.xbx" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\2016 softmod tool kit\Restore_Font.enabled"/>
@@ -447,33 +513,6 @@
 			<Item>These Options</Item>
 			<Item>Require A Restart</Item>
 		</List>
-		<List Text="Partition Types" Sort="Off">
-			<List Text="Information" Sort="Off" Batch="True">
-				<Item Action="MessageBox" Arg1="Information">Default:\nF takes all the space.\n\nPatition F and G:\nF - 137GB / G - takes the rest.\n\nXBPartitioner:\nCustom partition table.</Item>
-			</List>
-			<Item>------------------------------------------</Item>
-			<List Text="Default" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\part\default-part.png">
-				<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\part"/>
-				<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\part\default-part.png"/>
-				<Item Action="Copy" arg1="C:\nkpatcher\configs\nkpatcher\6.xbe" arg2="C:\nkpatcher\default.xbe"/>
-				<Item Action="MessageBox" Arg1="Complete">Setting saved. Changes will take affect on next boot.</Item>
-			</List>
-			<List Text="Partition F and G" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\part\default-FG.png">
-				<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\part"/>
-				<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\part\default-FG.png"/>
-				<Item Action="Copy" arg1="C:\nkpatcher\configs\nkpatcher\67.xbe" arg2="C:\nkpatcher\default.xbe"/>
-				<Item Action="MessageBox" Arg1="Complete">Setting saved. Changes will take affect on next boot.</Item>
-			</List>
-			<List Text="XBPartitioner" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\part\XBP-part.png">
-				<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\part"/>
-				<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\part\XBP-part.png"/>
-				<Item Action="Copy" arg1="C:\nkpatcher\configs\nkpatcher\6.xbe" arg2="C:\nkpatcher\default.xbe"/>
-				<Item Action="MessageBox" Arg1="Complete">Setting saved. Changes will take affect on next boot.</Item>
-			</List>
-			<Item>------------------------------------------</Item>
-			<Item>These Options</Item>
-			<Item>Require A Restart</Item>
-		</List>
 		<List Text="Video Modes" Sort="Off">
 			<List Text="Information" Sort="Off" Batch="True">
 				<Item Action="MessageBox" Arg1="Information">These will force certain video modes.\n\nDefault:\nStock video mode.\n\nForce Progressive:\n480p native support.</Item>
@@ -492,7 +531,7 @@
 				<Item Action="Copy" arg1="C:\nkpatcher\configs\video files\VIDEO1.bin" arg2="C:\nkpatcher\configs\VIDEO.bin"/>
 				<Item Action="MessageBox" Arg1="Complete">Setting saved. Changes will take affect on next boot.</Item>
 			</List>
-<!--
+			<!--
 			<List Text="Force VGA" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\video\video-vga.png">
 				<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\video"/>
 				<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\video\video-vga.png"/>
@@ -503,7 +542,7 @@
 			<Item>------------------------------------------</Item>
 			<List Text="Flicker Filter" Sort="Off">
 				<List Text="Information" Sort="Off" Batch="True">
-					<Item Action="MessageBox" Arg1="Information">These options will change the flicker filter values for 480i and 576i video modes. Basically it reduce the flickering you see when using crt screens and reduces the soft picture on LCD screens.</Item>
+					<Item Action="MessageBox" Arg1="Information">These options will change the flicker filter values for 480i and 576i video modes. Basically it reduces the flickering you see when using crt screens and reduces the soft picture on LCD screens.</Item>
 				</List>
 				<Item>------------------------------------------</Item>
 				<List Text="Disable" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\ff\default-ff.png">

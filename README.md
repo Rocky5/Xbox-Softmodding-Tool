@@ -82,6 +82,22 @@
 			Change your fan speed
 				Self explanatory.
 			
+			Hard Drive
+				> Partition Types
+					Default:
+						This is the standard/default option, this allows Partition 6 ( F ) to use all available extra space.
+					Partition F & G:
+						This option allows a F and G partition. Where F takes upto 137GB and G takes the remaining space of the drive.
+					XBPartitioner:
+						This option is a placebo option, all above options will allow the partition table, I just added this for simplistic reasons.
+				> Populate partitions
+					E Partition:
+						Creates "Applications, Emulators, Games and Homebrew" folders.
+					F Partition:
+						Creates "Applications, Emulators, Games and Homebrew" folders.
+					G Partition:
+						Creates "Applications, Emulators, Games and Homebrew" folders.
+			
 			Change your LED colour
 				Self explanatory.
 			
@@ -100,19 +116,13 @@
 						Fix 2:
 							Installs 2 delay files, in hope that fixes your boot issue.
 							
-			Change partition variations
-				Default:
-					This is the standard/default option, this allows Partition 6 ( F ) to use all available extra space.
-				Partition F & G:
-					This option allows a F and G partition. Where F takes upto 137GB and G takes the remaining space of the drive.
-				XBPartitioner:
-					This option is a placebo option, all above options will allow the partition table, I just added this for simplistic reasons.
-
 			Change video modes
 				Default:
 					This is the default mode, supports all video mode.
 				Force Progressive:
 					This option will force 480p video mode even if your game doest support it. Note: This will make the image distorted in PAL video mode.
+				Flicker Filter
+					Used to change the blur amount when using 480i and 576i video signals.
 
 			Enable/disable virtual EEPROM
 				Enable:
@@ -252,6 +262,6 @@
 		MS Source leak:
 			& without this person we wouldn't have the bios files or NKPatchers we have today.
 		Background Music
-			http://www.dl-sounds.com/royalty-free/house-loop-2016/
+			http://www.looperman.com/users/profile/1795296 - vibes piano 3
 		To all the tester that helped me squash bugs and improve features.
 		& to anyone else I may have forgot.
