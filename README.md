@@ -121,7 +121,7 @@
 					This is the default mode, supports all video mode.
 				Force Progressive:
 					This option will force 480p video mode even if your game doest support it. Note: This will make the image distorted in PAL video mode.
-				Flicker Filter
+				Flicker Filter:
 					Used to change the blur amount when using 480i and 576i video signals.
 
 			Enable/disable virtual EEPROM
