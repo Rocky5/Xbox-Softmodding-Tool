@@ -7,3 +7,12 @@ http://www.coreftp.com/download.html
 
 Filezilla - ( has root directory issues with newer versions of UnleashX )
 https://filezilla-project.org/
+
+
+Note:
+CoreFTP on Windows 10 will crash when drag and dropping directories onto the transfer window, To fix do the following.
+
+1) Don't drag and drop ( :P ) kidding, but if you select the files/folders on the left window pane and right click and pick transfer it works fine.
+
+2) Right click the "Core FTP LE" shortcut in the start menu or desktop if you have one there and pick:
+   Properties > Compatibility > tick the box for "Run this program in compatibility mode for:" select Window 8 > select OK and your done.
