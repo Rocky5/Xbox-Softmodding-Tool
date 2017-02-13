@@ -1,0 +1,24 @@
+Skin zip offset
+00602E00 entry in xbe file 076C - size C52C
+
+Old
+002E6000	00002CC5
+New
+002DFC1C	00002CC5
+
+Assets offset
+00A02600 entry in xbe file 06FC - size 1FA20500
+
+Old
+0026A000	0005A21F
+New
+0028B000	00053E02
+			
+
+Icon offset
+00502C00 entry in xbe file 0734 - size 00100200
+
+Old
+002C5000	00021000
+New
+0026A000	00021000

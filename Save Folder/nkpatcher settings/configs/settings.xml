@@ -539,7 +539,6 @@
 				<Item Action="MessageBox" Arg1="Complete">Setting saved. Changes will take affect on next boot.</Item>
 			</List>
 -->
-			<Item>------------------------------------------</Item>
 			<List Text="Flicker Filter" Sort="Off">
 				<List Text="Information" Sort="Off" Batch="True">
 					<Item Action="MessageBox" Arg1="Information">These options will change the flicker filter values for 480i and 576i video modes. Basically it reduces the flickering you see when using crt screens and reduces the soft picture on LCD screens.</Item>

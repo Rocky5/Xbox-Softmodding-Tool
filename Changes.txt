@@ -11,6 +11,19 @@ But here is what I have changed, that I can remember.
 
 
 =========================================
+	Update: Feb 13 2017
+=========================================
+		Rearranged the internals of the UnleashX Build 584 xbe file
+		( I moved the internals about to accommodate some changes I made )
+		Updated the "2016 Softmod Tool Kit" to resign the above edit and resign all edited xbe files now.
+		New default splash for unleashx
+		( this isn't skin related its built into unleashx )
+		Updated all variants of UX uses in the softmod to the new modded version.
+		Slight edit of the NKPatcher Settings config
+		Updated the "Free FTP Programs.txt" added a fix for Core FTP on Windows 10 ( drag and drop issue ) and also added code for you to make a batch file to allow FTPing to the Xbox within windows explorer.
+
+
+=========================================
 	Update: Feb 08 2017
 =========================================
 		Updated/cleaned up the skin.xml files
