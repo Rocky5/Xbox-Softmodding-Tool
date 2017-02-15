@@ -52,7 +52,7 @@
 	</Settings>
 	<Menu>
 		<List Text="Information" Sort="Off" Batch="True">
-			<Item Action="MessageBox" Arg1="Information">Welcome to the NKPatcher Settings. \n\nHere you will be able to change a few of the NKPatcher functions, the LED colour of your Xbox and the backing up or moving of your dashboard.</Item>
+			<Item Action="MessageBox" Arg1="Information">Welcome to the NKPatcher Settings. Here you will be able to change a few of the NKPatcher functions, the LED colour of your Xbox and the backing up or moving of your dashboard.</Item>
 			<Item Action="MessageBox" Arg1="Information">To exit "NKPatcher Settings" you can turn the Xbox off and on or press on the control pad.    LT+RT+(BLACK)+(BACK)</Item>
 		</List>
 		<Item>------------------------------------------</Item>
