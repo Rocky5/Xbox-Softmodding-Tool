@@ -18,7 +18,7 @@
 			<SNTP Synchronize="Yes" HTTP="Yes" Port="80">143.210.16.201</SNTP>
 			<AutoSetTime>Yes</AutoSetTime>
 			<ScreenSaver Wait="300">
-				<Text>2016 Softmodding Tool</Text>
+				<Text>Xbox Softmodding Tool</Text>
 			</ScreenSaver>
 		</Preference>
 		<Network Type="DHCP" Enable="Yes">
@@ -55,7 +55,7 @@
 
 			<List Text="Yes, I really want to start fresh." Sort="Off" Batch="True">
 				<list>
-					<Item Action="MessageBox" arg1="Warning">I need to do a file check. If it fails, don't worry. You can insert the 2016 Softmodding Tool Extras Disc &amp; then reboot the Xbox. Followed by the "Upgrade Older Softmods option", located in the Advanced Features menu.</Item>
+					<Item Action="MessageBox" arg1="Warning">I need to do a file check. If it fails, don't worry. You can insert the Xbox Softmodding Tool Extras Disc &amp; then reboot the Xbox. Followed by the "Upgrade Older Softmods option", located in the Advanced Features menu.</Item>
 					<list>
 						<Item Action="Rename" arg1="C:\nkpatcher\rescuedash\resoftmod files.zip" arg2="C:\nkpatcher\rescuedash\resoftmod files.zi">The "resoftmod files.zip" is missing or you have loaded this module from within "NKPatcher Settings"</Item>
 						<Item Action="Rename" arg1="C:\nkpatcher\rescuedash\resoftmod files.zi" arg2="C:\nkpatcher\rescuedash\resoftmod files.zip"/>

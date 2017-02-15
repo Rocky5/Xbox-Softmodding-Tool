@@ -18,7 +18,7 @@
 			<SNTP Synchronize="Yes" HTTP="Yes" Port="80">143.210.16.201</SNTP>
 			<AutoSetTime>Yes</AutoSetTime>
 			<ScreenSaver Wait="300">
-				<Text>2016 Softmodding Tool</Text>
+				<Text>Xbox Softmodding Tool</Text>
 			</ScreenSaver>
 		</Preference>
 		<Network Type="DHCP" Enable="Yes">
@@ -278,8 +278,8 @@
 					<Item>------------------------------------------</Item>
 					<List Text="Install Kernel Font" Sort="Off" Batch="True">
 						<Item Action="MessageBox" Arg1="Info">I will need to exit nkpatcher settings for the install to get done. Changes will take effect on next reboot.</Item>
-						<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\savemeta.xbx" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\2016 softmod tool kit\Update_Font.enabled"/>
-						<Item Action="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\2016 softmod tool kit\default.xbe">Restart</Item>
+						<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\savemeta.xbx" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox softmod tool kit\Update_Font.enabled"/>
+						<Item Action="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox softmod tool kit\default.xbe">Restart</Item>
 					</List>
 					<List Text="Restore Generic Font" Sort="Off" Batch="True">
 						<Item Action="Copy" arg1="C:\NKPatcher\Configs\Fonts\generic.xtf" arg2="C:\xodash\xbox.xtf"/>
@@ -291,8 +291,8 @@
 					<!-- 					
 					<List Text="Restore Generic Font" Sort="Off" Batch="True">
 						<Item Action="MessageBox" Arg1="Info">I will need to exit nkpatcher settings for the install to get done. Changes will take effect on next reboot.</Item>
-						<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\savemeta.xbx" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\2016 softmod tool kit\Restore_Font.enabled"/>
-						<Item Action="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\2016 softmod tool kit\default.xbe">Restart</Item>
+						<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\savemeta.xbx" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox softmod tool kit\Restore_Font.enabled"/>
+						<Item Action="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox softmod tool kit\default.xbe">Restart</Item>
 					</List>
 -->
 				</List>
@@ -604,8 +604,8 @@
 				<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.pn">Please disable the virtual eeprom. The "Virtual EEPROM" is write protected until it's disable and the system has restarted</Item>
 				<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.pn" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.png"/>
 				<Item Action="MessageBox" Arg1="Complete">To install the Virtual EEPROM. \nI will need to exit nkpatcher settings. \nNote: Changes will take affect on next boot.</Item>
-				<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\savemeta.xbx" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\2016 softmod tool kit\Virtual_EEPROM_Backup.enabled"/>
-				<Item Action="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\2016 softmod tool kit\default.xbe"/>
+				<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\savemeta.xbx" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox softmod tool kit\Virtual_EEPROM_Backup.enabled"/>
+				<Item Action="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox softmod tool kit\default.xbe"/>
 			</List>
 			<List Text="Disable" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.png">
 				<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\enabled.pn">Please enable the virtual eeprom</Item>
@@ -625,7 +625,7 @@
 				<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.pn">Please disable the virtual eeprom</Item>
 				<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.pn" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.png"/>
 				<Item Action="MessageBox" Arg1="Complete">The following: \n\nEEPROM.bin \nEEPROM.cfg \nXBOX INFO.txt \n\nwill be placed in "E:\Backups\EEPROM\".</Item>
-				<Item Action="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\2016 softmod tool kit\default.xbe">Restart</Item>
+				<Item Action="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox softmod tool kit\default.xbe">Restart</Item>
 			</List>
 		</List>
 		<Item>------------------------------------------</Item>

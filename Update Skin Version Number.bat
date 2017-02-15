@@ -47,6 +47,5 @@ Call Tools\repl.bat "<Version>%old_version%</Version>" "<Version>%replace%</Vers
 Call Tools\repl.bat "<Version>%old_version%</Version>" "<Version>%replace%</Version>" L < "%Skin14%\skin.xml" >"%Skin14%\tmp.xml" & Del "%Skin14%\skin.xml" & rename "%Skin14%\tmp.xml" "skin.xml"
 
 Call Tools\repl.bat "v%old_version%" "v%replace%" L < "Read Me.txt" >"tmp.txt" & Del "Read Me.txt" & rename "tmp.txt" "Read Me.txt"
+Copy /y "Read Me.txt" "README.md" >NUL
 Call Tools\repl.bat "v%old_version%" "v%replace%" L < "Changes.txt" >"tmp.txt" & Del "Changes.txt" & rename "tmp.txt" "Changes.txt"
-
-Call "Build Disc Save.bat"

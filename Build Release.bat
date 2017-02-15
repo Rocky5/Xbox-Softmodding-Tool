@@ -12,8 +12,8 @@ Call "ReMove All Thumb.db.bat"
 Call "Build Softmod zip.bat"
 Call "Build Variants.bat"
 Call "Build XISO.bat"
-:: 2016 Softmodding Tool
-Move "2016 Softmodding Tool.zip" "..\Release"
+:: Xbox Softmodding Tool
+Move "Xbox Softmodding Tool.zip" "..\Release"
 Copy "Changes.txt" "..\Release\"
 Copy "Read Me.txt" "..\Release\"
 Copy "Free FTP Programs.txt" "..\Release\"

@@ -1,0 +1,61 @@
+@Echo off & COLOR 1B & TITLE EEPROM Backeruper Build Batch
+goto getadminwrites >NUL
+
+:start
+CD "%~dp0"
+
+IF "%VS71COMNTOOLS%"=="" (
+  SET NET="%ProgramFiles%\Microsoft Visual Studio .NET 2003\Common7\IDE\devenv.com"
+) ELSE (
+  SET NET="%VS71COMNTOOLS%\..\IDE\devenv.com"
+)
+
+IF NOT EXIST %NET% (
+  CALL:ERROR "Visual Studio .NET 2003 was not found."
+  GOTO:EOF
+)
+
+SET XBE_PATCH="..\..\..\tools\xbepatch.exe"
+SET XBE=default.xbe
+SET DEST=Build
+RMDIR %DEST% /S /Q 2>NUL
+MKDIR %DEST%
+
+ECHO Wait while preparing the build.
+ECHO ------------------------------------------------------------
+ECHO %NET% "ConfigMagic.sln" /build Debug
+%NET% "ConfigMagic.sln" /build Debug
+
+copy "Debug\%XBE%" "%DEST%\%XBE%"
+rmdir /S /Q "Debug"
+echo:
+ECHO - XBE Patching %DEST%\%XBE%
+%XBE_PATCH% "%DEST%\%XBE%"
+ECHO - Patching Done!
+Echo:
+timeout /t 10
+exit
+
+:getadminwrites
+REM  --> Check for permissions
+    IF "%PROCESSOR_ARCHITECTURE%" EQU "amd64" (
+>nul 2>&1 "%SYSTEMROOT%\SysWOW64\cacls.exe" "%SYSTEMROOT%\SysWOW64\config\system"
+) ELSE (
+>nul 2>&1 "%SYSTEMROOT%\system32\cacls.exe" "%SYSTEMROOT%\system32\config\system"
+)
+REM --> If error flag set, we do not have admin.
+if '%errorlevel%' NEQ '0' (
+    echo Requesting administrative privileges...
+    goto UACPrompt
+) else ( goto gotAdmin )
+:UACPrompt
+    echo Set UAC = CreateObject^("Shell.Application"^) > "%temp%\getadmin.vbs"
+    set params = %*:"=""
+    echo UAC.ShellExecute "cmd.exe", "/c ""%~s0"" %params%", "", "runas", 1 >> "%temp%\getadmin.vbs"
+    "%temp%\getadmin.vbs"
+    del "%temp%\getadmin.vbs"
+    exit /B
+:gotAdmin
+    pushd "%CD%"
+    CD /D "%~dp0"
+   goto start

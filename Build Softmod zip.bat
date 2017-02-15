@@ -3,7 +3,7 @@ Title Build Softmod zip
 
 ::Build Release build.
 
-Set "ZipName=2016 Softmodding Tool.zip"
+Set "ZipName=Xbox Softmodding Tool.zip"
 
 Del /Q "%ZipName%" 2>NUL
 Del "Files.rar" 2>NUL
@@ -37,6 +37,7 @@ Echo %CD%
 "%Winrar%" a -x*.db -afzip "%ZipName%" "Free FTP Programs.txt"
 "%Winrar%" a -x*.db -afzip "%ZipName%" "Troubleshooting.txt"
 "%Winrar%" a -x*.db -afzip "%ZipName%" "How to run the exploit save.txt"
+"%Winrar%" a -x*.db -afzip "%ZipName%" "Tools\Open FTP Window.bat"
 "%Winrar%" a -x*.db -afzip "%ZipName%" "Tools\OpenDash Dualboot.Settings"
 ::"%Winrar%" a -x*.db -afzip "%ZipName%" "Tools\Backup Xbox Partitions"
 

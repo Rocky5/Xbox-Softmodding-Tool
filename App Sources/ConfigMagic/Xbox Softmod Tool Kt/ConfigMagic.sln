@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ConfigMagic", "ConfigMagic.vcproj", "{55596811-2482-4902-950A-B8D79A8DF076}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{55596811-2482-4902-950A-B8D79A8DF076}.Debug.ActiveCfg = Debug|Xbox
+		{55596811-2482-4902-950A-B8D79A8DF076}.Debug.Build.0 = Debug|Xbox
+		{55596811-2482-4902-950A-B8D79A8DF076}.Release.ActiveCfg = Release|Xbox
+		{55596811-2482-4902-950A-B8D79A8DF076}.Release.Build.0 = Release|Xbox
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

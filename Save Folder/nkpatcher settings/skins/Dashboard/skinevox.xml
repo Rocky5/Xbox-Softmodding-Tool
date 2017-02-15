@@ -1,8 +1,8 @@
 <Skin name="Softmod Evox">
 	<Information>
 		<Author>Rocky5</Author>
-		<Copyright>2016</Copyright>
-		<Version>1.0</Version>
+		<Copyright>Xbox</Copyright>
+		<Version>1.1</Version>
 	</Information>
 	<Fonts>
 		<Font Name="font1">E:\UDATA\21585554\000000000000\softmod files\skin files\fonts\font1.xpr</Font>
@@ -61,7 +61,7 @@
 		<Text zindex="3" Top="35" Left="485" Width="150" Align="Right" ScaleX="100" ScaleY="100" Color="0xff4a4a56" Source="Active Users: $NumClient$"/>
 		<!-- Top middle -->
 		<Shape zindex="1" Type="Rectangle" Top="4" Left="245" Width="150" Height="16" BorderColor="0xff4c4d58" BackColor="0xbf626473"/>
-		<Text zindex="3" Top="0" Left="245" Width="150" Align="Middle" ScaleX="100" ScaleY="100" Color="0xffaee239" Source="2016 Softmod Info"/>
+		<Text zindex="3" Top="0" Left="245" Width="150" Align="Middle" ScaleX="100" ScaleY="100" Color="0xffaee239" Source="Xbox Softmod Info"/>
 		<Text zindex="3" Top="20" Left="245" Width="150" Align="Middle" ScaleX="100" ScaleY="100" Color="0xff4a4a56" Source="Running: v$SkinVersion$"/>
 		<Text zindex="3" Top="35" Left="245" Width="150" Align="Middle" ScaleX="100" ScaleY="100" Color="0xff4a4a56" Source="Creator: $SkinAuthor$"/>
 		<!-- Bottom left -->

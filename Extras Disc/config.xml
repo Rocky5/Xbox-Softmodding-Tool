@@ -18,7 +18,7 @@
 			<SNTP Synchronize="Yes" HTTP="Yes" Port="80">143.210.16.201</SNTP>
 			<AutoSetTime>Yes</AutoSetTime>
 			<ScreenSaver Wait="300">
-				<Text>2016 Softmodding Tool</Text>
+				<Text>Xbox Softmodding Tool</Text>
 			</ScreenSaver>
 		</Preference>
 		<Network Type="DHCP" Enable="Yes">
@@ -57,7 +57,7 @@
 	<Menu>
 
 		<List Text="Disclaimer" Sort="Off" Batch="True">
-			<Item Action="MessageBox" arg1="Read this">This disc is to be used with the 2016 Softmodding tool, not doing so could potentially break your softmod or dashboards. You have been warned. I take no responsibility for your actions.</Item>
+			<Item Action="MessageBox" arg1="Read this">This disc is to be used with the Xbox Softmodding Tool, not doing so could potentially break your softmod or dashboards. You have been warned. I take no responsibility for your actions.</Item>
 		</List>
 
 		<Item>------------------------------------------</Item>
@@ -1069,7 +1069,7 @@
 		<List Text="Enter Menu" Sort="Off">
 
 			<List Text="Information" Sort="Off" Batch="True" password="">
-				<Item Action="MessageBox" arg1="Information">In this menu you can update your 2016 Softmod to the latest version, or upgrade older softmods as well as revert to a stock Xbox.</Item>
+				<Item Action="MessageBox" arg1="Information">In this menu you can update your "Xbox Softmodding Tool" to the latest version, or upgrade older softmods as well as revert to a stock Xbox.</Item>
 				<Item Action="MessageBox" arg1="Disclaimer!">If you don't know what these do, or you don't know how they work, do not use them. I take no responsibility for you mucking about with things you don't understand.</Item>
 			</list>
 
@@ -1078,8 +1078,8 @@
 			<Item>Update</Item>
 
 			<List Text="2014 Softmod" Sort="Off" Batch="True" password="">
-				<Item Action="MessageBox" arg1="Info">This option is for upgrading your 2014 \nsoftmod installation to the 2016 version. \n\nYour current dashboard will not be effected.</Item>
-				<Item Action="AskUser" arg1="Continue?" arg2="I'm about to do some checks, to makes \nsure you're running my 2014 Softmod kit. \n\nContinue with the Upgrade?"/>
+				<Item Action="MessageBox" arg1="Info">This option is for upgrading your 2014 softmod installation to the new version. Your current dashboard will not be effected.</Item>
+				<Item Action="AskUser" arg1="Continue?" arg2="I'm about to do some checks, to makes sure you're running my 2014 Softmod kit. Continue with the Upgrade?"/>
 				<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\Configs\settings.xml" arg2="E:\UDATA\21585554\000000000000\Configs\settings.xm">2014 softmod not installed</Item>
 				<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\Configs\settings.xm" arg2="E:\UDATA\21585554\000000000000\Configs\settings.xml">2014 softmod not installed</Item>
 				<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\NoVC.bin" arg2="E:\UDATA\21585554\000000000000\NoVC.bi">2014 softmod not installed</Item>
@@ -1096,16 +1096,16 @@
 				<Item Action="E:\Prep\default.xbe"/>
 			</list>
 
-			<List Text="2016 Softmod" Sort="Off" Batch="True" password="">
-				<Item Action="MessageBox" arg1="Info">This option is for updating your 2016 \nsoftmod installation to the latest version. \n\nYour current dashboard will not be effected.</Item>
-				<Item Action="AskUser" arg1="Continue?" arg2="I'm about to do some checks, to makes \nsure you're running my 2016 Softmod. \n\nContinue with the Upgrade?"/>
-				<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\unleashx.xbe" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\unleashx.xb">2016 softmod not installed</Item>
-				<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\unleashx.xb" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\unleashx.xbe">2016 softmod not installed</Item>
-				<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\Configs\settings.xml" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\Configs\settings.xm">2016 softmod not installed</Item>
-				<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\Configs\settings.xm" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\Configs\settings.xml">2016 softmod not installed</Item>
-				<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\reboot xbe\default.xbe" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\reboot xbe\default.xb">2016 softmod not installed</Item>
-				<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\reboot xbe\default.xb" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\reboot xbe\default.xbe">2016 softmod not installed</Item>
-				<Item Action="MessageBox" arg1="Success">OK it would appear you're running my 2016 Softmod, so I will continue onto the next step.</Item>
+			<List Text="Xbox Softmodding Tool" Sort="Off" Batch="True" password="">
+				<Item Action="MessageBox" arg1="Info">This option is for updating your "Xbox Softmodding Tool" installation to the latest version. Your current dashboard will not be effected.</Item>
+				<Item Action="AskUser" arg1="Continue?" arg2="I'm about to do some checks, to makes sure you're running my Xbox Softmodding Tool. Continue with the Upgrade?"/>
+				<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\unleashx.xbe" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\unleashx.xb">Xbox softmoddong tool not installed</Item>
+				<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\unleashx.xb" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\unleashx.xbe">Xbox softmoddong tool not installed</Item>
+				<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\Configs\settings.xml" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\Configs\settings.xm">Xbox softmoddong tool not installed</Item>
+				<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\Configs\settings.xm" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\Configs\settings.xml">Xbox softmoddong tool not installed</Item>
+				<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\reboot xbe\default.xbe" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\reboot xbe\default.xb">Xbox softmoddong tool not installed</Item>
+				<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\reboot xbe\default.xb" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\reboot xbe\default.xbe">Xbox softmoddong tool not installed</Item>
+				<Item Action="MessageBox" arg1="Success">OK it would appear you're running my Xbox Softmod, so I will continue onto the next step.</Item>
 				<Item Action="Copy" arg1="D:\skins\Update Softmod" arg2="E:\Prep\skins\Update Softmod"/>
 				<Item Action="Copy" arg1="D:\skins\skin files" arg2="E:\Prep\skins\skin files"/>
 				<Item Action="Copy" arg1="D:\configs\updatesoftmod.xml" arg2="E:\Prep\Config.xml"/>
@@ -1116,7 +1116,7 @@
 			<Item>Upgrade</Item>
 
 			<List Text="Older Softmods" Sort="Off" Batch="True" password="">
-				<Item Action="AskUser" arg1="Upgrade?" arg2="This option is for upgrading your old non \n2016 softmod or it can be used to install \na clean installation of the 2016 Softmod. \n\nAre you sure you want to do this?"/>
+				<Item Action="AskUser" arg1="Upgrade?">"This option is for upgrading your old softmod to my "Xbox Softmodding Tool" or it can be used to install a clean installation of the "Xbox Softmodding Tool". Are you sure you want to do this?"</Item>
 				<Item Action="Copy" arg1="D:\skins\Upgrade Softmod" arg2="E:\Prep\skins\Upgrade Softmod"/>
 				<Item Action="Copy" arg1="D:\skins\skin files" arg2="E:\Prep\skins\skin files"/>
 				<Item Action="Copy" arg1="D:\configs\upgradesoftmod.xml" arg2="E:\Prep\Config.xml"/>
@@ -1127,7 +1127,7 @@
 			<Item>Restore Xbox</Item>
 
 			<List Text="Factory Reset" Sort="Off" Batch="True" password="">
-				<Item Action="MessageBox" arg1="Warning!">Please note, this option will revert your Xbox to the state it was in when originally purchased. ie, all content from the E partition will be removed, this includes Applications, Saves, DLC &amp; any other content residing on the E partition.</Item>
+				<Item Action="MessageBox" arg1="Warning!">Please note, this option will revert your Xbox to the state it was in when originally purchased. ie, all content from the E partition will be removed, this includes Applications, Saves, DLC &amp; any other content residing on the E partition. This will not revert any changes you have made to the Xbox eeprom.</Item>
 				<Item Action="MessageBox" arg1="Note!">I will also install all the exploitable saves so you can resoftmod the system at a later date. I also include the UDDAE exploit so you can resoftmod the system without needing one of the exploitable games.</Item>
 				<Item Action="AskUser" arg1="Restore?" arg2="Are you sure you want to continue?"/>
 				<Item Action="Copy" arg1="D:\skins\Factory Reset" arg2="E:\Prep\skins\Factory Reset"/>
@@ -1171,27 +1171,35 @@
 					<Item Action="MessageBox" arg1="Information">This is the latest version of Chimp &amp; it supports all Xbox versions. You use Chimp to install larger HDD's for Softmodded Xbox's, please search Youtube for "Chimp 261812"</Item>
 				</List>
 
-				<List Text="Install to" Sort="Off">
+				<List Text="Install Chimp 261812" Sort="Off" Batch="True">
+					<Item Action="AskUser" arg1="Continue" arg2="This will install Chimp 261812 to E:\Applications\Chimp\ if there is currently a application residing there it will be overwritten."/>
+					<Item Action="Copy" arg1="dummy" arg2="E:\Applications\Chimp"/>
+					<Item Action="Delete" arg1="E:\Applications\Chimp">Remove old E:\Applications\Chimp\</Item>
+					<Item Action="Unzip" arg1="D:\Applications\Chimp261812.zip" arg2="E:\Applications\Chimp">Installing app to E:\Applications\Chimp\</Item>
+					<Item Action="Format" arg1="Z"/>
+					<Item Action="MessageBox" arg1="Done">That's Chimp 261812 installed to "E:\Applications\Chimp\"</Item>
+				</list>
 
-					<Item>Chimp 261812 Options</Item>
+				<Item>XBP Table Writer</Item>
 
-					<Item>------------------------------------------</Item>
+				<List Text="Information" Sort="Off" Batch="True">
+					<Item Action="MessageBox" arg1="Information">This is only to be used on a HDD that has been formatted with UnleashX ( Hexen disc eg... ) EvolutionX Dash or older versions of Chimp. ( 2618 or lower ).</Item>
+					<Item Action="MessageBox" arg1="Information">This is used to write a partition table to the HDD so you can use the "C, E, F &amp; G takes remaining space" option in Chimp 261812.</Item>
+				</List>
 
-					<List Text="E:\Applications\" Sort="Off" Batch="True">
-						<Item Action="AskUser" arg1="Continue" arg2="This will install Chimp 261812 to E:\Applications\Chimp\ if there is currently a application residing there it will be overwritten."/>
-						<Item Action="Copy" arg1="dummy" arg2="E:\Applications\Chimp"/>
-						<Item Action="Delete" arg1="E:\Applications\Chimp">Remove old E:\Applications\Chimp\</Item>
-						<Item Action="Unzip" arg1="D:\Applications\Chimp261812.zip" arg2="E:\Applications\Chimp">Installing app to E:\Applications\Chimp\</Item>
-						<Item Action="Format" arg1="Z"/>
-						<Item Action="MessageBox" arg1="Done">That's Chimp 261812 installed to "E:\Applications\Chimp\"</Item>
-					</list>
-
+				<List Text="Install XBP Table Writer" Sort="Off" Batch="True">
+					<Item Action="AskUser" arg1="Continue" arg2="This will install XBP Table Writer to E:\Applications\XBP Table Writer\ if there is currently a application residing there it will be overwritten."/>
+					<Item Action="Copy" arg1="dummy" arg2="E:\Applications\XBP Table Writer"/>
+					<Item Action="Delete" arg1="E:\Applications\XBP Table Writer">Remove old E:\Applications\XBP Table Writer\</Item>
+					<Item Action="Unzip" arg1="D:\Applications\XBPTableWriter.zip" arg2="E:\Applications\XBP Table Writer">Installing app to E:\Applications\XBP Table Writer\</Item>
+					<Item Action="Format" arg1="Z"/>
+					<Item Action="MessageBox" arg1="Done">That's XBP Table Writer installed to "E:\Applications\XBP Table Writer\"</Item>
 				</list>
 
 				<Item>XBPartitioner</Item>
 
 				<List Text="Information" Sort="Off" Batch="True">
-					<Item Action="MessageBox" arg1="Information">XBpartitioner is used to Format large HDD's, mainly the Extra Partitions (F &amp; G) after cloning with Chimp. So please be careful with this applications. It's other use, is custom partitions.</Item>
+					<Item Action="MessageBox" arg1="Information">XBpartitioner is used to Format large HDD's, mainly the Extra Partitions (F &amp; G) after cloning with older versions of Chimp. So please be careful with this applications. It's other use, is custom partitions.</Item>
 				</List>
 
 				<List Text="Install to" Sort="Off">

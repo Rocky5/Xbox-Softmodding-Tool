@@ -5,9 +5,23 @@ But here is what I have changed, that I can remember.
 
 =========================================
 	Change Log
-	2016 Softmodding Tool v1.0
+	Xbox Softmodding Tool v1.1
 	Created by Rocky5
 =========================================
+
+
+=========================================
+	Update: Feb 15 2017
+=========================================
+		Re-branded the softmod from 2016 Softmodding Tool to Xbox Softmodding Tool, as I'm still working on it in 2017 :/
+		Changed version number to v1.1, since there have been a lot of changes since the v1.0 release and also the re-branding.
+		Rearranged the System menu in UnleashX
+		Updated Chimp 261812, this should be it done and dusted
+		( check my github for the changes )
+		Added XBP Table Writer to the "Advanced Apps" menu
+		Updated the "Free FTP Programs.txt"
+		Added a new batch file to the softmod zip when compiling and the tools folder.
+		( its used to allow FTPing to the Xbox via Windows Explorer )
 
 
 =========================================

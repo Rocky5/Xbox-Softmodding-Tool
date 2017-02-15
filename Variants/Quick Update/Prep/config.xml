@@ -18,7 +18,7 @@
 			<SNTP Synchronize="Yes" HTTP="Yes" Port="80">143.210.16.201</SNTP>
 			<AutoSetTime>Yes</AutoSetTime>
 			<ScreenSaver Wait="300">
-				<Text>2016 Softmodding Tool</Text>
+				<Text>Xbox Softmodding Tool</Text>
 			</ScreenSaver>
 			<LanguageFile>E:\Prep\skins\Softmod\lang.xml</LanguageFile>
 		</Preference>
@@ -53,17 +53,17 @@
 	</Settings>
 	<Menu>
 
-		<List Text="Press (A) to update your 2016 Softmod installation" Sort="Off" Batch="True">
+		<List Text="Press (A) to update your Xbox Softmodding Tool installation" Sort="Off" Batch="True">
 
 			<!-- Check to make sure you are running my softmod -->
-			<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\unleashx.xbe" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\unleashx.xb">2016 softmod not installed</Item>
-			<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\unleashx.xb" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\unleashx.xbe">2016 softmod not installed</Item>
-			<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\Configs\settings.xml" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\Configs\settings.xm">2016 softmod not installed</Item>
-			<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\Configs\settings.xm" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\Configs\settings.xml">2016 softmod not installed</Item>
-			<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\reboot xbe\default.xbe" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\reboot xbe\default.xb">2016 softmod not installed</Item>
-			<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\reboot xbe\default.xb" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\reboot xbe\default.xbe">2016 softmod not installed</Item>
+			<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\unleashx.xbe" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\unleashx.xb">Xbox softmoddong tool not installed</Item>
+			<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\unleashx.xb" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\unleashx.xbe">Xbox softmoddong tool not installed</Item>
+			<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\Configs\settings.xml" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\Configs\settings.xm">Xbox softmoddong tool not installed</Item>
+			<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\Configs\settings.xm" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\Configs\settings.xml">Xbox softmoddong tool not installed</Item>
+			<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\reboot xbe\default.xbe" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\reboot xbe\default.xb">Xbox softmoddong tool not installed</Item>
+			<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\reboot xbe\default.xb" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\reboot xbe\default.xbe">Xbox softmoddong tool not installed</Item>
 			
-			<!-- Removing the old 2016/14 Softmodding Tool save & install the new one. -->
+			<!-- Removing the old Xbox/14 Softmodding Tool save & install the new one. -->
 			<Item Action="Delete" arg1="E:\UDATA\21585554">Delete softmod save</Item>
 			<Item Action="Copy" arg1="Softmod Files\21585554\" arg2="E:\UDATA\21585554\">Copy softmod save</Item>
 
@@ -118,11 +118,11 @@
 			<!-- Install the splash for UnleashX -->
 			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\softmod files\skin files\uxsplash.jpg" arg2="E:\UDATA\9e115330\0064122817A8\Splash.jpg">Copy splash.jpg to unleashx save directory</Item>
 			
-			<!-- Setup 2016 softmod tool kit -->
+			<!-- Setup Xbox softmod tool kit -->
 			<Item Action="Delete" arg1="E:\Prep">Delete prep</Item>
-			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\2016 Softmod Tool Kit\icon.png" arg2="C:\NKPatcher\Configs\shadowc_off.bin">Copy updaterun.bin to shadowc_off.bin</Item>
-			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\2016 Softmod Tool Kit\icon.png" arg2="E:\Prep\updaterun.bin">Copy updaterun.bin to prep</Item>
-			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\2016 softmod tool kit\default.xbe" arg2="E:\Prep\default.xbe">Copy default.xbe to prep</Item>
+			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox Softmod Tool Kit\icon.png" arg2="C:\NKPatcher\Configs\shadowc_off.bin">Copy updaterun.bin to shadowc_off.bin</Item>
+			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox Softmod Tool Kit\icon.png" arg2="E:\Prep\updaterun.bin">Copy updaterun.bin to prep</Item>
+			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox softmod tool kit\default.xbe" arg2="E:\Prep\default.xbe">Copy default.xbe to prep</Item>
 
 			<!-- Cleanup & put a folder in C for the end user to read -->
 			<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\softmod files\PBL">Delete softmod files PBL</Item>
@@ -137,7 +137,7 @@
 			<Item Action="Format" arg1="Z">Format Z</Item>
 			<Item Action="MessageBox" Arg1="Important Info">Your EEPROM backup will be placed in "E:\Backups\EEPROM\" copy the "EEPROM" folder to your PC once the dashboard has loaded and keep it safe.</Item>
 			<Item Action="MessageBox" Arg1="Please Read">The EEPROM.bin is required to create a new HDD for this system. In the case your Xbox HDD dies, you need the EEPROM.bin file to create a new locked drive. This is why it's important to back it up and keep it safe.</Item>
-			<Item Action="MessageBox" Arg1="Done">Well that's the softmod is upto date. See, I told you it was a painless process. But now I need to restart the Xbox.</Item>
+			<Item Action="MessageBox" Arg1="Done">Well that's the "Xbox Softmodding Tool" upto date. See, I told you it was a painless process. But now I need to restart the Xbox.</Item>
 			<Item Action="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\reboot xbe\default.xbe">Run reboot xbe</Item>
 		</list>
 

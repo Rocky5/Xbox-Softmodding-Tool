@@ -1,6 +1,6 @@
 =========================================
 	Read Me
-	2016 Softmodding Tool v1.0
+	Xbox Softmodding Tool v1.1
 	Created by Rocky5
 =========================================
 
@@ -39,7 +39,7 @@
 		Extremely simple to install
 		Extremely difficult to break the softmod
 		Supports the Xbox HDD partition table
-		Clock auto set to 01/01/2016 (No more clock loops)
+		Clock auto set to 01/01/2017 (No more clock loops)
 		Multiple dashboard locations built in
 			> C:\XBMC\default.xbe
 			> E:\XBMC\default.xbe
@@ -79,7 +79,7 @@
 					Restore:
 						This option will restore the stock dualboot.settings file.
 			
-			Change your fan speed
+			Fan speed
 				Self explanatory.
 			
 			Hard Drive
@@ -98,9 +98,6 @@
 					G Partition:
 						Creates "Applications, Emulators, Games and Homebrew" folders.
 			
-			Change your LED colour
-				Self explanatory.
-			
 			Kernel Fonts
 				> Advanced Features
 					> Kernel Font Options
@@ -115,8 +112,11 @@
 							Installs 1 delay file, in hope it fixes your boot issue.
 						Fix 2:
 							Installs 2 delay files, in hope that fixes your boot issue.
-							
-			Change video modes
+			
+			LED colour
+				Self explanatory.
+				
+			Video modes
 				Default:
 					This is the default mode, supports all video mode.
 				Force Progressive:
@@ -124,13 +124,13 @@
 				Flicker Filter:
 					Used to change the blur amount when using 480i and 576i video signals.
 
-			Enable/disable virtual EEPROM
+			Virtual EEPROM
 				Enable:
 					This option will enable the virtual eeprom. This will install a copy of your Xbox eeprom.bin to the HDD and use it instead of the onboard one.
 				Disable:
 					This option will disable the virtual eeprom. Allowing you to edit the onboard one. ( not recommended to go modifying the eeprom if you don't know what you're doing )
 				Backup EEPROM Tool:
-					This option will load my "2016 Softmod Tool Kit" and backup the eeprom. You will be taken back to the NKPatcher Settings when complete.
+					This option will load my "Xbox Softmod Tool Kit" and backup the eeprom. You will be taken back to the NKPatcher Settings when complete.
 
 			Modules & Settings
 				> Modules
@@ -143,7 +143,7 @@
 
 
 =========================================
-	2016 Softmodding Tool Extras Disc:
+	Xbox Softmodding Tool Extras Disc:
 =========================================
 		
 		Install alternative dashboards
@@ -182,13 +182,13 @@
 		Clear the Xbox Cache
 			This will clear the E:\Cache folder and the X, Y & Z partitions.
 		
-		Upgrade the 2014 Softmod to my 2016 Softmod
+		Upgrade the 2014 Softmod to my Xbox Softmodding Tool
 			Used to upgrade from my 2014 Softmod.
 			
-		Update the 2016 Softmod
+		Update the Xbox Softmodding Tool
 			This is used to update to a newer version of the softmod. Your dashboards are not touched, I only update the backend.
 		
-		Upgrade Older Softmods to my 2016 Softmod Kit	
+		Upgrade Older Softmods to my Xbox Softmodding Tool	
 			Used to upgrade from any other softmod to mine, or install a clean softmod.
 		
 		Restore your Xbox to an un-softmodded state
@@ -207,20 +207,20 @@
 =========================================
 	Update, Upgrade & Restore info:
 =========================================
-		1. Updating the 2016 Softmod to the latest version:
-			You can use the "2016 Softmodding Tool Extras Disc" to update the Softmod.
-			All you need to do is burn the new ISO & select the "Update 2016 Softmod" option, located in the "Advanced Features" menu, just follow the on-screen instructions.
+		1. Updating the Xbox Softmodding Tool to the latest version:
+			You can use the "Xbox Softmodding Tool Extras Disc" to update the Softmod.
+			All you need to do is burn the new ISO & select the "Update Xbox Softmodding Tool" option, located in the "Advanced Features" menu, just follow the on-screen instructions.
 
-		2. Updating the 2014 Softmod to the 2016 version:
-			You can use the "2016 Softmodding Tool Extras Disc" to update the Softmod.
+		2. Updating the 2014 Softmod to the Xbox Softmodding Tool:
+			You can use the "Xbox Softmodding Tool Extras Disc" to update the Softmod.
 			All you need to do is burn the new ISO & select the "Update 2014 Softmod" option, located in the "Advanced Features" menu, just follow the on-screen instructions.
 
 		3. Upgrade Older Softmods:
-			You can use the "2016 Softmodding Tool Extras Disc" to update older Softmods to my new softmod.
+			You can use the "Xbox Softmodding Tool Extras Disc" to update older Softmods to my new softmod.
 			All you need to do is burn the new ISO & select the "Upgrade Old Softmods" option, located in the "Advanced Features" menu, just follow the on-screen instructions.
 
-		4. Restoring to a clean install of my 2016 Softmod:
-			You can use the "2016 Softmodding Tool Extras Disc" to install a clean install of my 2016 softmod.
+		4. Restoring to a clean install of my Xbox Softmodding Tool:
+			You can use the "Xbox Softmodding Tool Extras Disc" to install a clean install of my Xbox Softmodding Tool.
 			All you need to do is burn the new ISO & select the "Upgrade Old Softmods" option, located in the "Advanced Features" menu, just follow the on-screen instructions.
 
 		The great thing about the above, is it requires no FTP access or knowledge on how to update/restore softmods, great for people who are new to the Xbox scene.

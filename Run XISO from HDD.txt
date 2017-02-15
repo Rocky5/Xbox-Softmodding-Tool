@@ -1,7 +1,7 @@
-If you don't want to burn a disc or you don't have any. You can run the "2016 Softmodding Tool Extras Disc.iso" from the Xbox HDD.
+If you don't want to burn a disc or you don't have any. You can run the "Xbox Softmodding Tool Extras Disc.iso" from the Xbox HDD.
 
 
-You will need to download the "Extras Disc Attacher.zip" and place the "2016 Softmodding Tool Extras Disc.iso" inside the
-"2016 Softmodding Tool Extras Disc" folder next to the default.xbe, there is also a detacher folder that is used to remove
+You will need to download the "Extras Disc Attacher.zip" and place the "Xbox Softmodding Tool Extras Disc.iso" inside the
+"Xbox Softmodding Tool Extras Disc" folder next to the default.xbe, there is also a detacher folder that is used to remove
 the image from the D drive after use, you just can stick both of these folders in you Applications or Apps folder.
 Alternatively you can do a full reboot of the Xbox.

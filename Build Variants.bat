@@ -50,7 +50,7 @@ Del /q /s "XBHDM Build\linux\E\Prep\default.xbe"
 
 If not exist "Extras Disc Attacher.zip" (
 CD "Attacher, Detacher"
-"%Winrar%" a -x*.db -afzip "..\Extras Disc Attacher" "2016 Softmodding Tool Extras Disc"
+"%Winrar%" a -x*.db -afzip "..\Extras Disc Attacher" "Xbox Softmodding Tool Extras Disc"
 "%Winrar%" a -x*.db -afzip "..\Extras Disc Attacher" "Detacher"
 )
 

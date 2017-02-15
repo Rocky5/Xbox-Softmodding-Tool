@@ -18,7 +18,7 @@
 			<SNTP Synchronize="Yes" HTTP="Yes" Port="80">143.210.16.201</SNTP>
 			<AutoSetTime>Yes</AutoSetTime>
 			<ScreenSaver Wait="300">
-				<Text>2016 Softmodding Tool</Text>
+				<Text>Xbox Softmodding Tool</Text>
 			</ScreenSaver>
 			<LanguageFile>E:\Prep\skins\Update Softmod\lang.xml</LanguageFile>
 		</Preference>
@@ -57,7 +57,7 @@
 
 			<List Text="Yes, I really want to." Sort="Off" Batch="True">
 
-				<!-- Removing the old 2016/14 Softmodding Tool save & install the new one. -->
+				<!-- Removing the old Xbox/14 Softmodding Tool save & install the new one. -->
 				<Item Action="Delete" arg1="E:\UDATA\21585554">Delete softmod save</Item>
 				<Item Action="Copy" arg1="Softmod Files\21585554\" arg2="E:\UDATA\21585554\">Copy softmod save</Item>
 
@@ -111,11 +111,11 @@
 				<!-- Install the splash for UnleashX -->
 				<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\softmod files\skin files\uxsplash.jpg" arg2="E:\UDATA\9e115330\0064122817A8\Splash.jpg">Copy splash.jpg to unleashx save directory</Item>
 
-				<!-- Setup 2016 softmod tool kit -->
+				<!-- Setup Xbox softmod tool kit -->
 				<Item Action="Delete" arg1="E:\Prep">Delete prep</Item>
-				<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\2016 Softmod Tool Kit\icon.png" arg2="C:\NKPatcher\Configs\shadowc_off.bin">Copy updaterun.bin to shadowc_off.bin</Item>
-				<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\2016 Softmod Tool Kit\icon.png" arg2="E:\Prep\updaterun.bin">Copy updaterun.bin to prep</Item>
-				<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\2016 softmod tool kit\default.xbe" arg2="E:\Prep\default.xbe">Copy default.xbe to prep</Item>
+				<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox Softmod Tool Kit\icon.png" arg2="C:\NKPatcher\Configs\shadowc_off.bin">Copy updaterun.bin to shadowc_off.bin</Item>
+				<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox Softmod Tool Kit\icon.png" arg2="E:\Prep\updaterun.bin">Copy updaterun.bin to prep</Item>
+				<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox softmod tool kit\default.xbe" arg2="E:\Prep\default.xbe">Copy default.xbe to prep</Item>
 
 				<!-- Cleanup & put a folder in C for the end user to read -->
 				<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\softmod files\PBL">Delete softmod files PBL</Item>

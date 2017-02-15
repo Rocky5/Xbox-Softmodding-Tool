@@ -18,7 +18,7 @@
 			<SNTP Synchronize="Yes" HTTP="Yes" Port="80">143.210.16.201</SNTP>
 			<AutoSetTime>Yes</AutoSetTime>
 			<ScreenSaver Wait="300">
-				<Text>2016 Softmodding Tool</Text>
+				<Text>Xbox Softmodding Tool</Text>
 			</ScreenSaver>
 			<DVDMediaCheck>Extended</DVDMediaCheck>
 		</Preference>
@@ -42,7 +42,7 @@
 	</Settings>
 	<Menu>
 		<Item Action="LaunchDVD">Launch Disc</Item>
-		<List Text="Applications" Sort="On" Auto="On" DelayLoad="True">
+		<List Text="Applications" Sort="On" DelayLoad="True">
 			<Path>C:\Applications</Path>
 			<Path>E:\Applications</Path>
 			<Path>F:\Applications</Path>
@@ -52,7 +52,7 @@
 			<Path>F:\Apps</Path>
 			<Path>G:\Apps</Path>
 		</List>
-		<List Text="Emulators" Sort="On" Auto="On" DelayLoad="True">
+		<List Text="Emulators" Sort="On" DelayLoad="True">
 			<Path>E:\Emulators</Path>
 			<Path>F:\Emulators</Path>
 			<Path>G:\Emulators</Path>
@@ -60,46 +60,48 @@
 			<Path>F:\Emus</Path>
 			<Path>G:\Emus</Path>
 		</List>
-		<List Text="Games" Sort="On" Auto="On" DelayLoad="True">
+		<List Text="Games" Sort="On" DelayLoad="True">
 			<Path>E:\Games</Path>
 			<Path>F:\Games</Path>
 			<Path>G:\Games</Path>
 		</List>
-		<List Text="Homebrew" Sort="On" Auto="On" DelayLoad="True">
+		<List Text="Homebrew" Sort="On" DelayLoad="True">
 			<Path>E:\Homebrew</Path>
 			<Path>F:\Homebrew</Path>
 			<Path>G:\Homebrew</Path>
 		</List>
-		<List Text="System" Sort="On" Auto="On">
-			<Item Action="CopyDVD">Copy DVD</Item>
-			<Item Action="Filemanager">File Explorer</Item>
-			<List Text="Miscellaneous" Sort="on" Auto="On">
-				<List Text="Clear Xbox Cache" Sort="Off" Batch="True">
-					<Item Action="AskUser" arg1="Clear CACHE?">Doing this can help with some games or applications that are crashing or refusing to boot.</Item>
-					<Item Action="Copy" Arg1="Dummy" Arg2="E:\CACHE"/>
-					<Item Action="Delete" Arg1="E:\CACHE"/>
-					<Item Action="Copy" Arg1="Dummy" Arg2="E:\CACHE"/>
-					<Item Action="Format" Arg1="X"/>
-					<Item Action="Format" Arg1="Y"/>
-					<Item Action="Format" Arg1="Z"/>
-					<Item Action="MessageBox" Arg1="Complete">The CACHE has been cleared!</Item>
+		<List Text="System" Sort="On">
+			<List Text="Clear Cache" Sort="Off" Batch="True">
+				<Item Action="AskUser" arg1="Clear CACHE?">Doing this can help with applications or games that crash or refusing to boot.</Item>
+				<Item Action="Copy" Arg1="Dummy" Arg2="E:\CACHE"/>
+				<Item Action="Delete" Arg1="E:\CACHE"/>
+				<Item Action="Copy" Arg1="Dummy" Arg2="E:\CACHE"/>
+				<Item Action="Format" Arg1="X"/>
+				<Item Action="Format" Arg1="Y"/>
+				<Item Action="Format" Arg1="Z"/>
+				<Item Action="MessageBox" Arg1="Complete">The CACHE has been cleared!</Item>
+			</List>
+			<List Text="Copy Disc to HDD" Sort="Off" Batch="True">
+					<Item Action="AskUser" arg1="You sure??">Proceed with copying the disc to the HDD? If there is not enough space on the E partition, the F partition will be used instead. If not enough space is found there the G partition will be used, if it exists.</Item>
+					<Item Action="CopyDVD">No disc found</Item>
 				</List>
-				<List Text="Network" Sort="Off">
+			<Item Action="Filemanager">File Explorer</Item>
+			<List Text="Miscellaneous" Sort="on">
+				<List Text="Advanced Network Options" Sort="Off">
 					<Item Action="FTPStop">Stop FTP Server</Item>
 					<Item Action="FTPStart">Start FTP Server</Item>
 					<Item Action="FTPReset">Reset FTP Server</Item>
 					<Item Action="NETReset">Restart Network</Item>
 				</List>
-				<List Text="Restart/Shutdown" Sort="Off" Auto="On">
-					<Item Action="Restart">Soft Restart</Item>
-					<Item Action="PowerCycle">Full Restart</Item>
-					<Item Action="Shutdown">Shutdown</Item>
-				</List>
-				<Item Action="SetClock">Set Time/Date</Item>
-				<List Text="Tray Open/Close" Sort="off" Batch="True">
+				<List Text="Tray Open or Close" Sort="off" Batch="True">
 					<Item Action="TrayOpen">Tray Open</Item>
 					<Item Action="TrayClose">Tray Close</Item>
 				</List>
+			</List>
+			<List Text="Restart or Shut down" Sort="Off">
+				<Item Action="Restart">Soft Restart</Item>
+				<Item Action="PowerCycle">Full Restart</Item>
+				<Item Action="Shutdown">Shutdown</Item>
 			</List>
 			<Item Action="SavesManager">Saves Manager</Item>
 			<Item Action="Settings">Settings</Item>

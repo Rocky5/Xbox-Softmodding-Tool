@@ -1,8 +1,8 @@
 <Skin name="Softmod">
 	<Information>
 		<Author>Rocky5</Author>
-		<Copyright>2016</Copyright>
-		<Version>1.0</Version>
+		<Copyright>Xbox</Copyright>
+		<Version>1.1</Version>
 	</Information>
 	<Fonts>
 		<Font Name="font1">..\skin files\fonts\font1.xpr</Font>
@@ -55,9 +55,9 @@
 		<!-- List Background -->
 		<Shape zindex="1" Type="Rectangle" Top="130" Left="71" Width="498" Height="298" BorderColor="0xff4c4d58" BackColor="0xbf626473"/>
 		<!--  -->
-		<Text zindex="3" Top="5" Left="5" Width="498" Align="Left" ScaleX="70" ScaleY="70" Color="0xffafb2ce" Source="Installer: v$SkinVersion$"/>
+		<Text zindex="3" Top="5" Left="5" Width="498" Align="Left" ScaleX="70" ScaleY="70" Color="0xff626473" Font="font2" Source="Installer: v$SkinVersion$"/>
 		<Text zindex="3" Top="149" Left="71" Width="499" Align="Middle" ScaleX="100" ScaleY="100" Color="0xffaee239" Source="XBHDM Installer"/>
-		<Text zindex="3" Top="169" Left="71" Width="499" Align="Middle" ScaleX="100" ScaleY="100" Color="0xffaee239" Source="Thank you for choosing the 2016 Softmodding Tool."/>
+		<Text zindex="3" Top="169" Left="71" Width="499" Align="Middle" ScaleX="100" ScaleY="100" Color="0xffaee239" Source="Thank you for choosing the Xbox Softmodding Tool."/>
 		<Text zindex="3" Top="189" Left="71" Width="499" Align="Middle" ScaleX="100" ScaleY="100" Color="0xffaee239" Source="If you have any feedback or bugs, please let me"/>
 		<Text zindex="3" Top="219" Left="71" Width="499" Align="Middle" ScaleX="100" ScaleY="100" Color="0xffaee239" Source="know via theisozone forums. Thank you."/>
 		<Text zindex="3" Top="239" Left="71" Width="499" Align="Middle" ScaleX="100" ScaleY="100" Color="0xffaee239" Source="With this softmod, the process is simple &amp; pain free."/>

@@ -1,8 +1,8 @@
 <Skin name="Softmod">
 	<Information>
 		<Author>Rocky5</Author>
-		<Copyright>2016</Copyright>
-		<Version>1.0</Version>
+		<Copyright>Xbox</Copyright>
+		<Version>1.1</Version>
 	</Information>
 	<Fonts>
 		<Font Name="font1">E:\UDATA\21585554\000000000000\softmod files\skin files\fonts\font1.xpr</Font>
@@ -56,7 +56,7 @@
 		<Shape zindex="1" Type="Rectangle" Top="130" Left="71" Width="498" Height="298" BorderColor="0xff4c4d58" BackColor="0xbf626473"/>
 		<Shape zindex="10" Type="Rectangle" Top="288" Left="72" Width="496" Height="1" BorderColor="" BackColor="0xffaee239"/>
 		<!--  -->
-		<Text zindex="3" Top="5" Left="5" Width="498" Align="Left" ScaleX="70" ScaleY="70" Color="0xffafb2ce" Source="Running: v$SkinVersion$"/>
+		<Text zindex="3" Top="5" Left="5" Width="498" Align="Left" ScaleX="70" ScaleY="70" Color="0xff626473" Font="font2" Source="Running: v$SkinVersion$"/>
 		<Text zindex="3" Top="149" Left="71" Width="499" Align="Middle" ScaleX="100" ScaleY="100" Color="0xffaee239" Source=""/>
 		<Text zindex="3" Top="169" Left="71" Width="499" Align="Middle" ScaleX="100" ScaleY="100" Color="0xffaee239" Source="You're here because you loaded one of the gamesave exploits."/>
 		<Text zindex="3" Top="189" Left="71" Width="499" Align="Middle" ScaleX="100" ScaleY="100" Color="0xffaee239" Source=""/>

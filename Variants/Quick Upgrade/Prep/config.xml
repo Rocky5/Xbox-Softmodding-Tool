@@ -18,7 +18,7 @@
 			<SNTP Synchronize="Yes" HTTP="Yes" Port="80">143.210.16.201</SNTP>
 			<AutoSetTime>Yes</AutoSetTime>
 			<ScreenSaver Wait="300">
-				<Text>2016 Softmodding Tool</Text>
+				<Text>Xbox Softmodding Tool</Text>
 			</ScreenSaver>
 			<LanguageFile>E:\Prep\skins\Softmod\lang.xml</LanguageFile>
 		</Preference>
@@ -53,31 +53,31 @@
 	</Settings>
 	<Menu>
 
-		<List Text="Press (A) to upgrade to the 2016 Softmod" Sort="Off" Batch="True">
-			
+		<List Text="Press (A) to upgrade to the Xbox Softmodding Tool" Sort="Off" Batch="True">
+
 			<!-- Check to make sure you its installed in the right place -->
 			<Item Action="Rename" arg1="E:\Prep\default.xbe" arg2="E:\Prep\default.xb">You installed Prep to the wrong location</Item>
-			<Item Action="Rename" arg1="E:\Prep\default.xb" arg2="E:\Prep\default.xbe"></Item>
+			<Item Action="Rename" arg1="E:\Prep\default.xb" arg2="E:\Prep\default.xbe"/>
 			<Item Action="Rename" arg1="E:\Prep\boot.cfg" arg2="E:\Prep\boot.cf">You installed Prep to the wrong location</Item>
-			<Item Action="Rename" arg1="E:\Prep\boot.cf" arg2="E:\Prep\boot.cfg"></Item>
+			<Item Action="Rename" arg1="E:\Prep\boot.cf" arg2="E:\Prep\boot.cfg"/>
 			<Item Action="Rename" arg1="E:\Prep\NoVC.bin" arg2="E:\Prep\NoVC.bi">You installed Prep to the wrong location</Item>
-			<Item Action="Rename" arg1="E:\Prep\NoVC.bi" arg2="E:\Prep\NoVC.bin"></Item>
+			<Item Action="Rename" arg1="E:\Prep\NoVC.bi" arg2="E:\Prep\NoVC.bin"/>
 			<Item Action="Rename" arg1="E:\Prep\unleashx.xbe" arg2="E:\Prep\unleashx.xb">You installed Prep to the wrong location</Item>
-			<Item Action="Rename" arg1="E:\Prep\unleashx.xb" arg2="E:\Prep\unleashx.xbe"></Item>
+			<Item Action="Rename" arg1="E:\Prep\unleashx.xb" arg2="E:\Prep\unleashx.xbe"/>
 			<Item Action="Rename" arg1="E:\Prep\Softmod Files" arg2="E:\Prep\Softmod File">You installed Prep to the wrong location</Item>
-			<Item Action="Rename" arg1="E:\Prep\Softmod File" arg2="E:\Prep\Softmod Files"></Item>
-			
+			<Item Action="Rename" arg1="E:\Prep\Softmod File" arg2="E:\Prep\Softmod Files"/>
+
 			<!-- Removing the old saves & installing the new ones. -->
-			<Item Action="Copy" arg1="dummy"  arg2="E:\UDATA\5553000c\8D5BCE250B35">Copy dummy SC</Item>
-			<Item Action="Delete" arg1="E:\UDATA\5553000c\8D5BCE250B35">Delete SC</Item>
-			<Item Action="Copy" arg1="Softmod Files\SC-NTSC\5553000c\" arg2="E:\UDATA\5553000c\">Copy SC save NTSC</Item>
+			<Item Action="Copy" arg1="dummy"  arg2="E:\UDATA\5553000c">Copy dummy SC</Item>
+			<Item Action="Delete" arg1="E:\UDATA\5553000c">Delete SC</Item>
+			<Item Action="Copy" arg1="Softmod Files\SC-PAL\5553000c\" arg2="E:\UDATA\5553000c\">Copy SC save NTSC</Item>
 			<list>
 				<Item Action="AskUser" Arg1="Regions" arg2="What region of Splinter Cell do you own? \n\nIf you don't own the game that's OK just select the region your Xbox is from."/>
 				<Item Action="Delete" arg1="E:\UDATA\5553000c">Delete SC</Item>
 				<Item Action="Copy" arg1="Softmod Files\SC-PAL\5553000c\" arg2="E:\UDATA\5553000c\">Copy SC save PAL</Item>
 			</list>
-			<Item Action="Copy" arg1="dummy"  arg2="E:\UDATA\4d530017\62D648EBF155">Copy dummy MC</Item>
-			<Item Action="Delete" arg1="E:\UDATA\4d530017\62D648EBF155">Delete MC</Item>
+			<Item Action="Copy" arg1="dummy"  arg2="E:\UDATA\4d530017">Copy dummy MC</Item>
+			<Item Action="Delete" arg1="E:\UDATA\4d530017">Delete MC</Item>
 			<Item Action="Copy" arg1="Softmod Files\4d530017\" arg2="E:\UDATA\4d530017\">Copy MC save</Item>
 			<Item Action="Copy" arg1="dummy"  arg2="E:\UDATA\4541000d\000000000000">Copy dummy 007</Item>
 			<Item Action="Delete" arg1="E:\UDATA\4541000d\000000000000">Delete 007</Item>
@@ -136,11 +136,11 @@
 			<!-- Install the splash for UnleashX -->
 			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\softmod files\skin files\uxsplash.jpg" arg2="E:\UDATA\9e115330\0064122817A8\Splash.jpg">Copy splash.jpg to unleashx save directory</Item>
 
-			<!-- Setup 2016 softmod tool kit -->
+			<!-- Setup Xbox softmod tool kit -->
 			<Item Action="Delete" arg1="E:\Prep">Delete prep</Item>
-			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\2016 Softmod Tool Kit\icon.png" arg2="C:\NKPatcher\Configs\shadowc_off.bin">Copy firstrun.bin to shadowc_off.bin</Item>
-			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\2016 Softmod Tool Kit\icon.png" arg2="E:\Prep\firstrun.bin">Copy firstrun.bin to prep</Item>
-			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\2016 softmod tool kit\default.xbe" arg2="E:\Prep\default.xbe">Copy default.xbe to prep</Item>
+			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox Softmod Tool Kit\icon.png" arg2="C:\NKPatcher\Configs\shadowc_off.bin">Copy firstrun.bin to shadowc_off.bin</Item>
+			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox Softmod Tool Kit\icon.png" arg2="E:\Prep\firstrun.bin">Copy firstrun.bin to prep</Item>
+			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox softmod tool kit\default.xbe" arg2="E:\Prep\default.xbe">Copy default.xbe to prep</Item>
 
 			<!-- Cleanup & put a folder in C for the end user to read -->
 			<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\softmod files\PBL">Delete softmod files PBL</Item>
@@ -153,7 +153,7 @@
 			<Item Action="Format" arg1="Z">Format Z</Item>
 			<Item Action="MessageBox" Arg1="Important Info">Your EEPROM backup will be placed in "E:\Backups\EEPROM\" copy the "EEPROM" folder to your PC once the dashboard has loaded and keep it safe.</Item>
 			<Item Action="MessageBox" Arg1="Please Read">The EEPROM.bin is required to create a new HDD for this system. In the case your Xbox HDD dies, you need the EEPROM.bin file to create a new locked drive. This is why it's important to back it up and keep it safe.</Item>
-			<Item Action="MessageBox" Arg1="Done">Well that's you upgraded to the 2016 Softmod. See, I told you it was a painless process. But now I need to restart the Xbox.</Item>
+			<Item Action="MessageBox" Arg1="Done">Well that's you upgraded to the "Xbox Softmodding Tool". See, I told you it was a painless process. But now I need to restart the Xbox.</Item>
 			<Item Action="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\reboot xbe\default.xbe">Run reboot xbe</Item>
 		</list>
 

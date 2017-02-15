@@ -18,7 +18,7 @@
 			<SNTP Synchronize="Yes" HTTP="Yes" Port="80">143.210.16.201</SNTP>
 			<AutoSetTime>Yes</AutoSetTime>
 			<ScreenSaver Wait="300">
-				<Text>2016 Softmodding Tool</Text>
+				<Text>Xbox Softmodding Tool</Text>
 			</ScreenSaver>
 			<LanguageFile>C:\nkpatcher\rescuedash\skins\RescueDash_C\lang.xml</LanguageFile>
 		</Preference>
@@ -94,8 +94,8 @@
 						<Item Action="AskUser" arg1="ShadowC" arg2="Have you remove the shadowc.img? \n\nThis is mandatory for the softmod to work. \n\nIf you select no and and the installer fails this means you did remove it, so slap yourself in the face for lying and reselect Fix Softmod."/>
 						<Item Action="Delete" arg1="C:\nkpatcher\shadowc"/>
 						<Item Action="Copy" arg1="dummy" arg2="C:\nkpatcher\shadowc"/>
-						<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\2016 Softmod Tool Kit\icon.png" arg2="E:\Prep\firstrun.bin"/>
-						<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\2016 softmod tool kit\default.xbe" arg2="E:\Prep\default.xbe"/>
+						<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox Softmod Tool Kit\icon.png" arg2="E:\Prep\firstrun.bin"/>
+						<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox softmod tool kit\default.xbe" arg2="E:\Prep\default.xbe"/>
 						<Item Action="Format" arg1="X"/>
 						<Item Action="Format" arg1="Y"/>
 						<Item Action="Format" arg1="Z"/>
@@ -123,7 +123,7 @@
 
 			<List Text="Yes, I really want to start fresh." Sort="Off" Batch="True">
 				<list>
-					<Item Action="MessageBox" arg1="Warning">I need to do a file check. If it fails, don't worry. You can insert the 2016 Softmodding Tool Extras Disc &amp; then reboot the Xbox. Followed by the "Upgrade Older Softmods option", located in the Advanced Features menu.</Item>
+					<Item Action="MessageBox" arg1="Warning">I need to do a file check. If it fails, don't worry. You can insert the Xbox Softmodding Tool Extras Disc &amp; then reboot the Xbox. Followed by the "Upgrade Older Softmods option", located in the Advanced Features menu.</Item>
 					<list>
 						<Item Action="Rename" arg1="C:\nkpatcher\rescuedash\resoftmod files.zip" arg2="C:\nkpatcher\rescuedash\resoftmod files.zi">resoftmod files are missing</Item>
 						<Item Action="Rename" arg1="C:\nkpatcher\rescuedash\resoftmod files.zi" arg2="C:\nkpatcher\rescuedash\resoftmod files.zip"/>

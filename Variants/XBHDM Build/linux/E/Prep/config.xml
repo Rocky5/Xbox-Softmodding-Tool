@@ -18,7 +18,7 @@
 			<SNTP Synchronize="Yes" HTTP="Yes" Port="80">143.210.16.201</SNTP>
 			<AutoSetTime>Yes</AutoSetTime>
 			<ScreenSaver Wait="300">
-				<Text>2016 Softmodding Tool</Text>
+				<Text>Xbox Softmodding Tool</Text>
 			</ScreenSaver>
 			<LanguageFile>E:\Prep\skins\Softmod\lang.xml</LanguageFile>
 		</Preference>
@@ -53,19 +53,19 @@
 	</Settings>
 	<Menu>
 
-		<List Text="Press (A) to install the 2016 Softmod" Sort="Off" Batch="True">
+		<List Text="Press (A) to install the Xbox Softmodding Tool" Sort="Off" Batch="True">
 
 			<!-- Removing the old saves & installing the new ones. -->
-			<Item Action="Copy" arg1="dummy"  arg2="E:\UDATA\5553000c\8D5BCE250B35">Copy dummy SC</Item>
-			<Item Action="Delete" arg1="E:\UDATA\5553000c\8D5BCE250B35">Delete SC</Item>
-			<Item Action="Copy" arg1="Softmod Files\SC-NTSC\5553000c\" arg2="E:\UDATA\5553000c\">Copy SC save NTSC</Item>
+			<Item Action="Copy" arg1="dummy"  arg2="E:\UDATA\5553000c">Copy dummy SC</Item>
+			<Item Action="Delete" arg1="E:\UDATA\5553000c">Delete SC</Item>
+			<Item Action="Copy" arg1="Softmod Files\SC-PAL\5553000c\" arg2="E:\UDATA\5553000c\">Copy SC save NTSC</Item>
 			<list>
 				<Item Action="AskUser" Arg1="Regions" arg2="What region of Splinter Cell do you own? \n\nIf you don't own the game that's OK just select the region your Xbox is from."/>
 				<Item Action="Delete" arg1="E:\UDATA\5553000c">Delete SC</Item>
 				<Item Action="Copy" arg1="Softmod Files\SC-PAL\5553000c\" arg2="E:\UDATA\5553000c\">Copy SC save PAL</Item>
 			</list>
-			<Item Action="Copy" arg1="dummy"  arg2="E:\UDATA\4d530017\62D648EBF155">Copy dummy MC</Item>
-			<Item Action="Delete" arg1="E:\UDATA\4d530017\62D648EBF155">Delete MC</Item>
+			<Item Action="Copy" arg1="dummy"  arg2="E:\UDATA\4d530017">Copy dummy MC</Item>
+			<Item Action="Delete" arg1="E:\UDATA\4d530017">Delete MC</Item>
 			<Item Action="Copy" arg1="Softmod Files\4d530017\" arg2="E:\UDATA\4d530017\">Copy MC save</Item>
 			<Item Action="Copy" arg1="dummy"  arg2="E:\UDATA\4541000d\000000000000">Copy dummy 007</Item>
 			<Item Action="Delete" arg1="E:\UDATA\4541000d\000000000000">Delete 007</Item>
@@ -120,14 +120,14 @@
 			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\configs\alt xbe's\recovery.xbe" arg2="E:\UDATA\21585554\000000000000\install.xbe">Copy recovery.xbe to install.xbe</Item>
 			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\configs\alt xbe's\recovery.xbe" arg2="E:\UDATA\4541000d\000000000000\default.xbe">Copy recovery.xbe to default.xbe</Item>
 			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\configs\alt xbe's\recovery.xbe" arg2="E:\UDATA\4d530017\62D648EBF155\default.xbe">Copt recovery.xbe to default.xbe</Item>
-			
+
 			<!-- Install the splash for UnleashX -->
 			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\softmod files\skin files\uxsplash.jpg" arg2="E:\UDATA\9e115330\0064122817A8\Splash.jpg">Copy splash.jpg to unleashx save directory</Item>
-			
-			<!-- Setup 2016 softmod tool kit -->
+
+			<!-- Setup Xbox softmod tool kit -->
 			<Item Action="Delete" Arg="E:\Prep">Remove Prep</Item>
-			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\2016 Softmod Tool Kit\icon.png" arg2="E:\Prep\firstrun.bin">Copy firstrun.bin to prep</Item>
-			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\2016 softmod tool kit\default.xbe" arg2="E:\Prep\default.xbe">Copy default.xbe to prep</Item>
+			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox Softmod Tool Kit\icon.png" arg2="E:\Prep\firstrun.bin">Copy firstrun.bin to prep</Item>
+			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox softmod tool kit\default.xbe" arg2="E:\Prep\default.xbe">Copy default.xbe to prep</Item>
 
 			<!-- Cleanup & put a folder in C for the end user to read -->
 			<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\softmod files\PBL">Delete softmod files pbl</Item>

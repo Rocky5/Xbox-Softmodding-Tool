@@ -1,8 +1,8 @@
 <Skin name="Softmod Wide">
 	<Information>
 		<Author>Rocky5</Author>
-		<Copyright>2016</Copyright>
-		<Version>1.0</Version>
+		<Copyright>Xbox</Copyright>
+		<Version>1.1</Version>
 	</Information>
 	<Fonts>
 		<Font Name="font1">E:\UDATA\21585554\000000000000\softmod files\skin files\fonts\font1.xpr</Font>
@@ -60,7 +60,7 @@
 		<Text zindex="3" Top="217" Left="412" Width="150" Align="Left" ScaleX="100" ScaleY="100" Color="0xffafb2ce" Source="IP"/>
 		<Text zindex="3" Top="233" Left="412" Width="150" Align="Left" ScaleX="100" ScaleY="100" Color="0xffafb2ce" Source="Active Users: $NumClient$"/>
 		<!--  -->
-		<Text zindex="3" Top="253" Left="407" Width="162" Align="Middle" ScaleX="100" ScaleY="100" Color="0xffaee239" Source="2016 Softmod Info"/>
+		<Text zindex="3" Top="253" Left="407" Width="162" Align="Middle" ScaleX="100" ScaleY="100" Color="0xffaee239" Source="Xbox Softmod Info"/>
 		<Text zindex="3" Top="269" Left="412" Width="150" Align="Left" ScaleX="100" ScaleY="100" Color="0xffafb2ce" Source="Running: v$SkinVersion$"/>
 		<Text zindex="3" Top="285" Left="412" Width="150" Align="Left" ScaleX="100" ScaleY="100" Color="0xffafb2ce" Source="Creator: $SkinAuthor$"/>
 		<!--  -->

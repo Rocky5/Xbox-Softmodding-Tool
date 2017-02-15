@@ -18,7 +18,7 @@
 			<SNTP Synchronize="Yes" HTTP="Yes" Port="80">143.210.16.201</SNTP>
 			<AutoSetTime>Yes</AutoSetTime>
 			<ScreenSaver Wait="300">
-				<Text>2016 Softmodding Tool</Text>
+				<Text>Xbox Softmodding Tool</Text>
 			</ScreenSaver>
 			<LanguageFile>E:\UDATA\21585554\000000000000\softmod files\Skins\Softmod\lang.xml</LanguageFile>
 		</Preference>
@@ -104,9 +104,9 @@
 			<!-- Install the splash for UnleashX -->
 			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\softmod files\skin files\uxsplash.jpg" arg2="E:\UDATA\9e115330\0064122817A8\Splash.jpg">Copy splash.jpg to unleashx save directory</Item>
 
-			<!-- Setup 2016 softmod tool kit -->
-			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\2016 Softmod Tool Kit\icon.png" arg2="E:\Prep\firstrun.bin">Copy firstrun.bin to prep</Item>
-			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\2016 softmod tool kit\default.xbe" arg2="E:\Prep\default.xbe">Copy default.xbe to prep</Item>
+			<!-- Setup Xbox softmod tool kit -->
+			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox Softmod Tool Kit\icon.png" arg2="E:\Prep\firstrun.bin">Copy firstrun.bin to prep</Item>
+			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox softmod tool kit\default.xbe" arg2="E:\Prep\default.xbe">Copy default.xbe to prep</Item>
 
 			<!-- Cleanup & put a folder in C for the end user to read -->
 			<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\softmod files\PBL">Delete softmod files pbl</Item>
