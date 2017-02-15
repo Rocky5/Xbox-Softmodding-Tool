@@ -101,7 +101,7 @@
 			<List Text="Restart or Shut down" Sort="Off">
 				<Item Action="Restart">Soft Restart</Item>
 				<Item Action="PowerCycle">Full Restart</Item>
-				<Item Action="Shutdown">Shutdown</Item>
+				<Item Action="Shut down">Shutdown</Item>
 			</List>
 			<Item Action="SavesManager">Saves Manager</Item>
 			<Item Action="Settings">Settings</Item>
