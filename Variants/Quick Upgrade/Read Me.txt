@@ -1,5 +1,5 @@
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// If you do not know how to FTP to the Xbox just burn the "2016 Softmodding Tool Extra Disc.iso" & use that to upgrade. //
+// If you do not know how to FTP to the Xbox just burn the "Xbox Softmodding Tool Extra Disc.iso" & use that to upgrade. //
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 This is the quick upgrade option, you must know how to FTP.
@@ -14,7 +14,7 @@ Installation....
 
 Note:
 
-If you are running my 2014 Softmod or my 2016 softmod please backup your dashboard from C.
+If you are running my 2014 Softmod or my Xbox softmod please backup your dashboard from C.
 
 You can restore your dashboard after the upgrade, using the same procedure. Unfortunately due to this being the upgrade & not the update installer I have to replace all the files in C, & as a result you would lose your dashboard if you did not back it up first.
 
