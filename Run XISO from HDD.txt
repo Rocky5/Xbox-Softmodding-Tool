@@ -3,5 +3,6 @@ If you don't want to burn a disc or you don't have any. You can run the "Xbox So
 
 You will need to download the "Extras Disc Attacher.zip" and place the "Xbox Softmodding Tool Extras Disc.iso" inside the
 "Xbox Softmodding Tool Extras Disc" folder next to the default.xbe, there is also a detacher folder that is used to remove
-the image from the D drive after use, you just can stick both of these folders in you Applications or Apps folder.
+the virtual image from the D drive after use, you can stick both of these folders in you Applications or Apps folder.
+
 Alternatively you can do a full reboot of the Xbox.

@@ -11,6 +11,15 @@ But here is what I have changed, that I can remember.
 
 
 =========================================
+	Update: Feb 16 2017
+=========================================
+		Updated the UX internal splash screen, ie, fixed the spacing of the letters
+		( would seem the font likes to have inconsistent letter spacing :/ )
+		Had to update all the xbe signatures in "Xbox Softmod Tool Kit"
+		Fixed some grammar and spelling
+
+
+=========================================
 	Update: Feb 15 2017
 =========================================
 		Re-branded the softmod from 2016 Softmodding Tool to Xbox Softmodding Tool, as I'm still working on it in 2017 :/

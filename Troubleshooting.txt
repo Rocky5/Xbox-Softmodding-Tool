@@ -10,12 +10,13 @@ Troubleshooting:
 		Use "Core FTP LE 2.2 : free version", this FTP program has no issues and functions the same as Filezilla. Alternatively, use another dashboard.
 		( you can use any other FTP program, but that's the best free alternative )
 		
-	Reason for using the latest UnleashX build:
-		It fixed a lot of skinning issues and also added new skinning features that I use in my skins.
-		( there are also other fixes but those are the main ones )
-		
-	Why don't I use build 570:
-		I don't use Filezilla and I require the fixes of build 584.
+		Note:
+			CoreFTP on Windows 10 will crash when drag and dropping directories onto the transfer window, To fix do the following.
+
+				1) Don't drag and drop ( :P ) kidding, but if you select the files/folders on the left window pane and right click and pick transfer it works fine.
+
+				2) Right click the "Core FTP LE" shortcut in the start menu or desktop if you have one there and pick:
+				   Properties > Compatibility > tick the box for "Run this program in compatibility mode for:" select Window 8 > select OK and your done.
 
 
 
@@ -26,7 +27,7 @@ Troubleshooting:
 		( HDD was formatted with EvolutoinX, UnleashX or Chimp 2618 or lower )
 		
 	Fix:
-		Load "NKPatcher Settings" and select "Partition Types > Partition F and G"
+		Load "NKPatcher Settings" and select "Hard Drive > Partition Types > Partition F and G"
 
 
 

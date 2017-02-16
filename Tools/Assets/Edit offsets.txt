@@ -12,7 +12,7 @@ Assets offset
 Old
 0026A000	0005A21F
 New
-0028B000	00053E02
+0028B000	00053D9C
 			
 
 Icon offset
