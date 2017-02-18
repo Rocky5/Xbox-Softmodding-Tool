@@ -18,6 +18,8 @@ But here is what I have changed, that I can remember.
 		Updated the dashboard xml to have the recent menu enabled by default
 		( you press the (X) button )
 		Added a Clear recent list button to the settings menu.
+		Another Hex edit for NKPatcher and a few other XBE files, now they wont add to the resents database.
+		Due to the above change had to redo all the signatures and hashes :\
 
 
 =========================================
