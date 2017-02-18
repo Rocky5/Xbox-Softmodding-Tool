@@ -3,7 +3,7 @@
 	<Settings>
 		<Preference>
 			<AbortOnError>Yes</AbortOnError>
-			<ContextMenu AllowUninstall="No" AllowItemEdit="No" AllowRecentList="No" LinkToSave="No" LinkToGame="No"/>
+			<ContextMenu AllowUninstall="No" AllowItemEdit="No" AllowRecentList="Yes" LinkToSave="No" LinkToGame="No"/>
 			<Skin Path="Skins\">Softmod</Skin>
 			<VideoSettings Soften="No" Widescreen="No" UsePAL60="No" FastRefresh="No" EnableTextureCompression="No" Use720P="No" Use480P="Yes" FilterLevel="0"/>
 			<LiveUpdate AutoCheck="No"/>
@@ -82,9 +82,9 @@
 				<Item Action="MessageBox" Arg1="Complete">The CACHE has been cleared!</Item>
 			</List>
 			<List Text="Copy Disc to HDD" Sort="Off" Batch="True">
-					<Item Action="AskUser" arg1="You sure??">Proceed with copying the disc to the HDD? If there is not enough space on the E partition, the F partition will be used instead. If not enough space is found there the G partition will be used, if it exists.</Item>
-					<Item Action="CopyDVD">No disc found</Item>
-				</List>
+				<Item Action="AskUser" arg1="You sure??">Proceed with copying the disc to the HDD? If there is not enough space on the E partition, the F partition will be used instead. If not enough space is found there the G partition will be used, if it exists.</Item>
+				<Item Action="CopyDVD">No disc found</Item>
+			</List>
 			<Item Action="Filemanager">File Explorer</Item>
 			<List Text="Miscellaneous" Sort="on">
 				<List Text="Advanced Network Options" Sort="Off">
