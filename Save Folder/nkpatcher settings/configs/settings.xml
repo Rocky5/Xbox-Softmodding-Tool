@@ -311,13 +311,11 @@
 						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\3s.xtf"/>
 						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\4s.xtf"/>
 						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\5s.xtf"/>
-						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\6s.xtf"/>
 						<Item Action="Delete" arg1="C:\xodash\s.xtf"/>
 						<Item Action="Delete" arg1="C:\xodash\2s.xtf"/>
 						<Item Action="Delete" arg1="C:\xodash\3s.xtf"/>
 						<Item Action="Delete" arg1="C:\xodash\4s.xtf"/>
 						<Item Action="Delete" arg1="C:\xodash\5s.xtf"/>
-						<Item Action="Delete" arg1="C:\xodash\6s.xtf"/>
 						<Item Action="MessageBox" Arg1="Complete">Setting saved. Changes will take affect on next boot.</Item>
 					</List>
 					<List Text="1 s.xtf file" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font-Sxtf\Sxtf-1.png">
@@ -328,12 +326,10 @@
 						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\3s.xtf"/>
 						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\4s.xtf"/>
 						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\5s.xtf"/>
-						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\6s.xtf"/>
 						<Item Action="Delete" arg1="C:\xodash\2s.xtf"/>
 						<Item Action="Delete" arg1="C:\xodash\3s.xtf"/>
 						<Item Action="Delete" arg1="C:\xodash\4s.xtf"/>
 						<Item Action="Delete" arg1="C:\xodash\5s.xtf"/>
-						<Item Action="Delete" arg1="C:\xodash\6s.xtf"/>
 						<Item Action="MessageBox" Arg1="Complete">Setting saved. Changes will take affect on next boot.</Item>
 					</List>
 					<List Text="2 s.xtf files" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font-Sxtf\Sxtf-2.png">
@@ -344,11 +340,9 @@
 						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\3s.xtf"/>
 						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\4s.xtf"/>
 						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\5s.xtf"/>
-						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\6s.xtf"/>
 						<Item Action="Delete" arg1="C:\xodash\3s.xtf"/>
 						<Item Action="Delete" arg1="C:\xodash\4s.xtf"/>
 						<Item Action="Delete" arg1="C:\xodash\5s.xtf"/>
-						<Item Action="Delete" arg1="C:\xodash\6s.xtf"/>
 						<Item Action="MessageBox" Arg1="Complete">Setting saved. Changes will take affect on next boot.</Item>
 					</List>
 					<List Text="3 s.xtf files" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font-Sxtf\Sxtf-3.png">
@@ -359,10 +353,8 @@
 						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\3s.xtf"/>
 						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\4s.xtf"/>
 						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\5s.xtf"/>
-						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\6s.xtf"/>
 						<Item Action="Delete" arg1="C:\xodash\4s.xtf"/>
 						<Item Action="Delete" arg1="C:\xodash\5s.xtf"/>
-						<Item Action="Delete" arg1="C:\xodash\6s.xtf"/>
 						<Item Action="MessageBox" Arg1="Complete">Setting saved. Changes will take affect on next boot.</Item>
 					</List>
 					<List Text="4 s.xtf files" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font-Sxtf\Sxtf-4.png">
@@ -373,9 +365,7 @@
 						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\3s.xtf"/>
 						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\4s.xtf"/>
 						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\5s.xtf"/>
-						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\6s.xtf"/>
 						<Item Action="Delete" arg1="C:\xodash\5s.xtf"/>
-						<Item Action="Delete" arg1="C:\xodash\6s.xtf"/>
 						<Item Action="MessageBox" Arg1="Complete">Setting saved. Changes will take affect on next boot.</Item>
 					</List>
 					<List Text="5 s.xtf files" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font-Sxtf\Sxtf-5.png">
@@ -386,19 +376,6 @@
 						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\3s.xtf"/>
 						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\4s.xtf"/>
 						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\5s.xtf"/>
-						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\6s.xtf"/>
-						<Item Action="Delete" arg1="C:\xodash\6s.xtf"/>
-						<Item Action="MessageBox" Arg1="Complete">Setting saved. Changes will take affect on next boot.</Item>
-					</List>
-					<List Text="6 s.xtf files" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font-Sxtf\Sxtf-6.png">
-						<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font-Sxtf"/>
-						<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font-Sxtf\Sxtf-6.png"/>
-						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\s.xtf"/>
-						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\2s.xtf"/>
-						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\3s.xtf"/>
-						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\4s.xtf"/>
-						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\5s.xtf"/>
-						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\6s.xtf"/>
 						<Item Action="MessageBox" Arg1="Complete">Setting saved. Changes will take affect on next boot.</Item>
 					</List>
 				</List>

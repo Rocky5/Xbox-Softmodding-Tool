@@ -11,6 +11,15 @@ But here is what I have changed, that I can remember.
 
 
 =========================================
+	Update: Feb 18 2017
+=========================================
+		Removed the 6th s.xtf as it would stop the exploit from loading on my v1.6
+		( 5 files work fine, so im not taking ay chances, so the 6th s gone )
+		Updated the dashboard xml to have the recent menu enabled by default
+		( you press the (X) button )
+
+
+=========================================
 	Update: Feb 16 2017
 =========================================
 		Updated the UX internal splash screen, ie, fixed the spacing of the letters
