@@ -81,6 +81,11 @@
 				<Item Action="Format" Arg1="Z"/>
 				<Item Action="MessageBox" Arg1="Complete">The CACHE has been cleared!</Item>
 			</List>
+			<List Text="Clear Recent list" Sort="Off" Batch="True">
+				<Item Action="Copy" Arg1="config.xml" Arg2="E:\UDATA\9e115330\0064122817A8\recent.dat"/>
+				<Item Action="Delete" Arg1="config.xml"/>
+				<Item Action="Delete" arg="E:\UDATA\9e115330\0064122817A8\recent.dat">Error deleting recent.dat</Item>
+			</List>
 			<List Text="Copy Disc to HDD" Sort="Off" Batch="True">
 				<Item Action="AskUser" arg1="You sure??">Proceed with copying the disc to the HDD? If there is not enough space on the E partition, the F partition will be used instead. If not enough space is found there the G partition will be used, if it exists.</Item>
 				<Item Action="CopyDVD">No disc found</Item>
