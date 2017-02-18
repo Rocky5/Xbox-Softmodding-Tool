@@ -72,7 +72,7 @@
 		</List>
 		<List Text="System" Sort="On">
 			<List Text="Clear Cache" Sort="Off" Batch="True">
-				<Item Action="AskUser" arg1="Clear CACHE?">Doing this can help with applications or games that crash or refusing to boot.</Item>
+				<Item Action="AskUser" Arg1="Clear CACHE?">Doing this can help with applications or games that crash or refusing to boot.</Item>
 				<Item Action="Copy" Arg1="Dummy" Arg2="E:\CACHE"/>
 				<Item Action="Delete" Arg1="E:\CACHE"/>
 				<Item Action="Copy" Arg1="Dummy" Arg2="E:\CACHE"/>
@@ -83,11 +83,10 @@
 			</List>
 			<List Text="Clear Recent list" Sort="Off" Batch="True">
 				<Item Action="Copy" Arg1="config.xml" Arg2="E:\UDATA\9e115330\0064122817A8\recent.dat"/>
-				<Item Action="Delete" Arg1="config.xml"/>
-				<Item Action="Delete" arg="E:\UDATA\9e115330\0064122817A8\recent.dat">Error deleting recent.dat</Item>
+				<Item Action="Delete" Arg="E:\UDATA\9e115330\0064122817A8\recent.dat">Error deleting recent.dat</Item>
 			</List>
 			<List Text="Copy Disc to HDD" Sort="Off" Batch="True">
-				<Item Action="AskUser" arg1="You sure??">Proceed with copying the disc to the HDD? If there is not enough space on the E partition, the F partition will be used instead. If not enough space is found there the G partition will be used, if it exists.</Item>
+				<Item Action="AskUser" Arg1="You sure??">Proceed with copying the disc to the HDD? If there is not enough space on the E partition, the F partition will be used instead. If not enough space is found there the G partition will be used, if it exists.</Item>
 				<Item Action="CopyDVD">No disc found</Item>
 			</List>
 			<Item Action="Filemanager">File Explorer</Item>
