@@ -102,10 +102,10 @@
 					<Item Action="TrayClose">Tray Close</Item>
 				</List>
 			</List>
-			<List Text="Restart or Shut down" Sort="Off">
+			<List Text="Restart or Shutdown" Sort="Off">
 				<Item Action="Restart">Soft Restart</Item>
 				<Item Action="PowerCycle">Full Restart</Item>
-				<Item Action="Shutdown">Shut down</Item>
+				<Item Action="Shutdown">Shutdown</Item>
 			</List>
 			<Item Action="SavesManager">Saves Manager</Item>
 			<Item Action="Settings">Settings</Item>
