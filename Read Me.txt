@@ -24,7 +24,7 @@
 	Main Features:
 =========================================
 		Supports all Xbox versions
-		Supports all currently exploitable games
+		Supports all currently exploitable games + Tony Hawks Pro Skater 4
 		Obviously runs unsigned code
 		Doesn't require a certain Microsoft Dashboard version
 		User friendly interface
@@ -263,5 +263,7 @@
 			& without this person we wouldn't have the bios files or NKPatchers we have today.
 		Background Music
 			http://www.looperman.com/users/profile/1795296 - vibes piano 3
+		New save game exploit:
+			Grimdoomer
 		To all the tester that helped me squash bugs and improve features.
 		& to anyone else I may have forgot.

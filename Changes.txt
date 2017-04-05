@@ -11,6 +11,15 @@ But here is what I have changed, that I can remember.
 
 
 =========================================
+	Update: Apr 04 2017
+=========================================
+		Updated Chimp 261812 to the latest build.
+		( should be final now )
+		Added a new save game exploit by "Grimdoomer" for "Tony Hawk Pro Skater 4" its not part of the installer yet, so its for manual use only right now.
+		( instructions are in the "How to run the exploit save.txt" )
+
+
+=========================================
 	Update: Feb 18 2017
 =========================================
 		Removed the 6th s.xtf as it would stop the exploit from loading on my v1.6
