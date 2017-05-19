@@ -17,6 +17,8 @@ XCopy /s /y "Game Saves\Extracted\MA\Udata\4d530017" "Extras Disc\softmod files\
 XCopy /s /y "Game Saves\Extracted\007\Udata\4541000d" "Extras Disc\softmod files\Softmod Files\4541000d\"
 XCopy /s /y "Game Saves\Extracted\SC-NTSC\UDATA\5553000c" "Extras Disc\softmod files\Softmod Files\SC-NTSC\5553000c\"
 XCopy /s /y "Game Saves\Extracted\SC-PAL\UDATA\5553000c" "Extras Disc\softmod files\Softmod Files\SC-PAL\5553000c\"
+XCopy /s /y "Game Saves\Extracted\TH4-NTSC\UDATA\41560017" "Extras Disc\softmod files\Softmod Files\TH4-NTSC\41560017\"
+XCopy /s /y "Game Saves\Extracted\TH4-PAL\UDATA\41560017" "Extras Disc\softmod files\Softmod Files\TH4-PAL\41560017\"
 XCopy /s /y /e "tmp\21585554" "Extras Disc\softmod files\Softmod Files\21585554\"
 
 RD /q /s "tmp"

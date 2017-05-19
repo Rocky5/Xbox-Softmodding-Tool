@@ -106,12 +106,18 @@
 						Restore Generic Font:
 							This option will restore the generic font to the Xbox. This font works on all Xbox kernel versions and is the default font used.
 					> XTF Font Delay Options
-						Remove:
+						Remove all:
 							Removes these delay files.
-						Fix 1:
+						1 s.xtf file:
 							Installs 1 delay file, in hope it fixes your boot issue.
-						Fix 2:
-							Installs 2 delay files, in hope that fixes your boot issue.
+						2 s.xtf files:
+							Installs 2 delay file, in hope it fixes your boot issue.
+						3 s.xtf files:
+							Installs 3 delay file, in hope it fixes your boot issue.
+						4 s.xtf files:
+							Installs 4 delay file, in hope it fixes your boot issue.
+						5 s.xtf files:
+							Installs 5 delay file, in hope it fixes your boot issue.
 			
 			LED colour
 				Self explanatory.

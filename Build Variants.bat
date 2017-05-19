@@ -15,6 +15,8 @@ RD /q /s "%CD%\Variants\Quick Update\Prep\Softmod Files\4d530017"
 RD /q /s "%CD%\Variants\Quick Update\Prep\Softmod Files\4541000d"
 RD /q /s "%CD%\Variants\Quick Update\Prep\Softmod Files\SC-NTSC"
 RD /q /s "%CD%\Variants\Quick Update\Prep\Softmod Files\SC-PAL"
+RD /q /s "%CD%\Variants\Quick Update\Prep\Softmod Files\TH4-NTSC"
+RD /q /s "%CD%\Variants\Quick Update\Prep\Softmod Files\TH4-PAL"
 
 Copy "%CD%\Save Folder\softmod files\UX.xbe" "%CD%\Variants\Quick Upgrade\Prep\unleashx.xbe"
 Copy "%CD%\Extras Disc\softmod files\boot.cfg" "%CD%\Variants\Quick Upgrade\Prep\"

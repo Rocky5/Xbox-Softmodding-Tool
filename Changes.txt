@@ -11,6 +11,16 @@ But here is what I have changed, that I can remember.
 
 
 =========================================
+	Update: May 19 2017
+=========================================
+		Added the Tony Hawks 4 save to all installer configs.
+		( Its now installed when doing an upgrade or factory reset eg.... )
+		Streamlined the "Xbox Softmod Tool Kit" source and updated the xbe file also.
+		Added the new Chimp Loader xbe
+		( old one is still there also )
+
+
+=========================================
 	Update: Apr 04 2017
 =========================================
 		Updated Chimp 261812 to the latest build.

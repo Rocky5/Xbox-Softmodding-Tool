@@ -58,11 +58,13 @@
 			<!-- Removing the old saves & installing the new ones. -->
 			<Item Action="Copy" arg1="dummy"  arg2="E:\UDATA\5553000c">Copy dummy SC</Item>
 			<Item Action="Delete" arg1="E:\UDATA\5553000c">Delete SC</Item>
-			<Item Action="Copy" arg1="Softmod Files\SC-PAL\5553000c\" arg2="E:\UDATA\5553000c\">Copy SC save NTSC</Item>
+			<Item Action="Copy" arg1="Softmod Files\SC-NTSC\5553000c\" arg2="E:\UDATA\5553000c\">Copy SC save NTSC</Item>
+			<Item Action="Copy" arg1="Softmod Files\TH4-NTSC\41560017\" arg2="E:\UDATA\41560017\">Copy TH4 save NTSC</Item>
 			<list>
-				<Item Action="AskUser" Arg1="Regions" arg2="What region of Splinter Cell do you own? \n\nIf you don't own the game that's OK just select the region your Xbox is from."/>
+				<Item Action="AskUser" Arg1="Regions" arg2="What region of Splinter Cell or Tony Hawks 4 do you own? If you don't own these games that's OK just select the region your Xbox is from."/>
 				<Item Action="Delete" arg1="E:\UDATA\5553000c">Delete SC</Item>
 				<Item Action="Copy" arg1="Softmod Files\SC-PAL\5553000c\" arg2="E:\UDATA\5553000c\">Copy SC save PAL</Item>
+				<Item Action="Copy" arg1="Softmod Files\TH4-PAL\41560017\" arg2="E:\UDATA\41560017\">Copy TH4 save PAL</Item>
 			</list>
 			<Item Action="Copy" arg1="dummy"  arg2="E:\UDATA\4d530017">Copy dummy MC</Item>
 			<Item Action="Delete" arg1="E:\UDATA\4d530017">Delete MC</Item>
@@ -119,7 +121,8 @@
 			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\unleashx.xbe" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\resoftmod dash\default.xbe">Copy unleashx to resoftmod dash</Item>
 			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\configs\alt xbe's\recovery.xbe" arg2="E:\UDATA\21585554\000000000000\install.xbe">Copy recovery.xbe to install.xbe</Item>
 			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\configs\alt xbe's\recovery.xbe" arg2="E:\UDATA\4541000d\000000000000\default.xbe">Copy recovery.xbe to default.xbe</Item>
-			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\configs\alt xbe's\recovery.xbe" arg2="E:\UDATA\4d530017\62D648EBF155\default.xbe">Copt recovery.xbe to default.xbe</Item>
+			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\configs\alt xbe's\recovery.xbe" arg2="E:\UDATA\4d530017\62D648EBF155\default.xbe">Copy disabled.xbe to default.xbe</Item>
+			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\configs\alt xbe's\recovery.xbe" arg2="E:\UDATA\41560017\3DDF5FA578FC\default.xbe">Copy recovery.xbe to default.xbe</Item>
 
 			<!-- Install the splash for UnleashX -->
 			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\softmod files\skin files\uxsplash.jpg" arg2="E:\UDATA\9e115330\0064122817A8\Splash.jpg">Copy splash.jpg to unleashx save directory</Item>

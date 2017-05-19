@@ -44,7 +44,7 @@ class ConfigMagicApp : public XKBaseApp
 private:
 	
 	void	WriteTXTInfoFile(LPCSTR strFilename);
-	void	WriteKERNELInfoFile(LPCSTR strFilename);
+	void	XBEFiles();
 	void	LoadSettingsFromINI();
 	
 	UCHAR				m_Reboot[FILENAME_MAX];
