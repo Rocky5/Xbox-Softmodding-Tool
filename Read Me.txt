@@ -1,6 +1,6 @@
 =========================================
 	Read Me
-	Xbox Softmodding Tool v1.1
+	Xbox Softmodding Tool v1.1.1
 	Created by Rocky5
 =========================================
 
@@ -66,7 +66,7 @@
 		
 		At the top of each menus there is an "Information" button, this will give you a description of the menu you are in.
 
-			Dashboard Settings
+			1. Dashboard Settings
 				> Backup, Restore or Move
 					This is used to move or restore a clean copy of UnleashX, as well as backup your dashboards.
 				> Dualbooting
@@ -79,10 +79,18 @@
 					Restore:
 						This option will restore the stock dualboot.settings file.
 			
-			Fan speed
+			2. EEPROM
+				Enable:
+					This option will enable the virtual eeprom. This will install a copy of your Xbox eeprom.bin to the HDD and use it instead of the onboard one.
+				Disable:
+					This option will disable the virtual eeprom. Allowing you to edit the onboard one. ( not recommended to go modifying the eeprom if you don't know what you're doing )
+				Backup EEPROM Tool:
+					This option will load my "Xbox Softmod Tool Kit" and backup the eeprom. You will be taken back to the NKPatcher Settings when complete.
+
+			3. Fan speed
 				Self explanatory.
 			
-			Hard Drive
+			4. Hard Drive
 				> Partition Types
 					Default:
 						This is the standard/default option, this allows Partition 6 ( F ) to use all available extra space.
@@ -98,7 +106,7 @@
 					G Partition:
 						Creates "Applications, Emulators, Games and Homebrew" folders.
 			
-			Kernel Fonts
+			5. Kernel Fonts
 				> Advanced Features
 					> Kernel Font Options
 						Install Kernel Font:
@@ -108,21 +116,21 @@
 					> XTF Font Delay Options
 						Remove all:
 							Removes these delay files.
-						1 s.xtf file:
+						Install 1 Delay file:
 							Installs 1 delay file, in hope it fixes your boot issue.
-						2 s.xtf files:
+						Install 2 Delay files:
 							Installs 2 delay file, in hope it fixes your boot issue.
-						3 s.xtf files:
+						Install 3 Delay files:
 							Installs 3 delay file, in hope it fixes your boot issue.
-						4 s.xtf files:
+						Install 4 Delay files:
 							Installs 4 delay file, in hope it fixes your boot issue.
-						5 s.xtf files:
+						Install 5 Delay files:
 							Installs 5 delay file, in hope it fixes your boot issue.
 			
-			LED colour
+			6. LED colour
 				Self explanatory.
 				
-			Video modes
+			7. Video modes
 				Default:
 					This is the default mode, supports all video mode.
 				Force Progressive:
@@ -130,15 +138,7 @@
 				Flicker Filter:
 					Used to change the blur amount when using 480i and 576i video signals.
 
-			Virtual EEPROM
-				Enable:
-					This option will enable the virtual eeprom. This will install a copy of your Xbox eeprom.bin to the HDD and use it instead of the onboard one.
-				Disable:
-					This option will disable the virtual eeprom. Allowing you to edit the onboard one. ( not recommended to go modifying the eeprom if you don't know what you're doing )
-				Backup EEPROM Tool:
-					This option will load my "Xbox Softmod Tool Kit" and backup the eeprom. You will be taken back to the NKPatcher Settings when complete.
-
-			Modules & Settings
+			8. Modules & Settings
 				> Modules
 					> Built in Modules
 						These are what I use to do specific tasks.

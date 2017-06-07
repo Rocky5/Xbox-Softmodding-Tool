@@ -5,9 +5,33 @@ But here is what I have changed, that I can remember.
 
 =========================================
 	Change Log
-	Xbox Softmodding Tool v1.1
+	Xbox Softmodding Tool v1.1.1
 	Created by Rocky5
 =========================================
+
+
+=========================================
+	Update: June 07 2017
+=========================================
+		Changed the version to 1.1.1, since there have been a lot of changes since the v1.1 release.
+		Updated the fonts for all skins, now instead of - as a separator its now just a blank line.
+		( all configs that use this have been updated. You would get [] without the new fonts )
+		Updated the dashboard config.xml
+		Updated the Factory Reset information message on the Extras Disc.
+		Updated the config.xml for dashboard version of UnleashX on the Extras Disc and also removed my skin from its skin directory.
+		Updated the installation guide to have the TH4 save info.
+		Updated XBMC4Kids on the Extras Disc to the latest GitHub Build.
+		Updated NKPatcher Settings look, its should be clearer and simpler looking.
+		Updated the Extras Disc skin to match that of the new NKPatcher Settings.
+		Rea-ranged the Extras Disc menu system and added installation of Applications and Dashboards to F and G partitions, as well as a few more new features.
+		Fixed "Xbox Softmod Tool Kit" virtual eeprom enable code.
+		Added the option to keep your saves when using the "Restore Xbox" option on the Extras Disc.
+		( DLC, Applications eg... are still removed, as the Cache partitions aren't big enough )
+		Added support for the "Xbox Softmod Tool Kit" to lock a HDD if used to build a new HDD using the Extras Disc.
+		( Its not enabled, I don't want to add it just yet )
+		Added support for the "Xbox Softmod Tool Kit" to load NKPatcher Settings.
+		( Its not enabled, it was going to be used for the "Backup, Restore or Move" system, so you can softreset back to NKPatcher Settings )
+		There are other changes, see if you can find them.
 
 
 =========================================
@@ -33,7 +57,7 @@ But here is what I have changed, that I can remember.
 	Update: Feb 18 2017
 =========================================
 		Removed the 6th s.xtf as it would stop the exploit from loading on my v1.6
-		( 5 files work fine, so im not taking ay chances, so the 6th s gone )
+		( 5 files work fine, so I'm not taking any chances, so the 6th s gone )
 		Updated the dashboard xml to have the recent menu enabled by default
 		( you press the (X) button )
 		Added a Clear recent list button to the settings menu.
@@ -57,7 +81,7 @@ But here is what I have changed, that I can remember.
 		Changed version number to v1.1, since there have been a lot of changes since the v1.0 release and also the re-branding.
 		Rearranged the System menu in UnleashX
 		Updated Chimp 261812, this should be it done and dusted
-		( check my github for the changes )
+		( check my GitHub for the changes )
 		Added XBP Table Writer to the "Advanced Apps" menu
 		Updated the "Free FTP Programs.txt"
 		Added a new batch file to the softmod zip when compiling and the tools folder.
@@ -172,7 +196,7 @@ But here is what I have changed, that I can remember.
 =========================================
 		Updated the installation process, I now put the "2016 Softmod Tool Kit" into the Prep folder and reboot after the softmod is installed.
 		( This fixes any issues if someone ejects the disc at the end of the softmod installation. Would have require reinstalling from the recover menu to fix )
-		Added "Build 570" directory into UnleashX when installed from the disc, this is so folk dont need to go looking for it when they have Filezilla issues.
+		Added "Build 570" directory into UnleashX when installed from the disc, this is so folk don't need to go looking for it when they have Filezilla issues.
 		Changed all the static IP's to 192.168.0.*
 
 

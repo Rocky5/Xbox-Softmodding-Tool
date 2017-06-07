@@ -30,6 +30,8 @@
 
 #include <xtl.h>
 #include "XKBaseApp.h"
+#include "XKUtils.h"
+#include "XKGeneral.h"
 #include "XKEEPROM.h"
 #include "XKHDD.h"
 #include "XKCRC.h"
@@ -46,12 +48,13 @@ private:
 	void	WriteTXTInfoFile(LPCSTR strFilename);
 	void	XBEFiles();
 	void	LoadSettingsFromINI();
+	void	LockNewHDD();
 	
 	UCHAR				m_Reboot[FILENAME_MAX];
 	
 	BOOL				m_EnryptedRegionValid;
 	BOOL				m_XBOX_EEPROM_Current;
-	
+
 	long				XConfSections;
 	XKEEPROM*			m_pXKEEPROM;
 	XBOX_VERSION		m_XBOX_Version;

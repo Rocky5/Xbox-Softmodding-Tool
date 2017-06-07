@@ -3,3 +3,4 @@ fonts:
 font1 = Segoe_UI_Semibold_11
 font2 = Segoe_UI_Semibold_10
 font3 = Segoe_UI_Semibold_13
+font4 = Segoe_UI_Semibold_9

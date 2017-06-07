@@ -2,7 +2,7 @@
 	<Information>
 		<Author>Rocky5</Author>
 		<Copyright>Xbox</Copyright>
-		<Version>1.1</Version>
+		<Version>1.1.1</Version>
 	</Information>
 	<Fonts>
 		<Font Name="font1">..\skin files\fonts\font1.xpr</Font>
@@ -59,7 +59,7 @@
 		<Text zindex="3" Top="5" Left="5" Width="498" Align="Left" ScaleX="70" ScaleY="70" Color="0xff626473" Font="font2" Source="Running: v$SkinVersion$"/>
 		<Text zindex="3" Top="149" Left="71" Width="499" Align="Middle" ScaleX="100" ScaleY="100" Color="0xffaee239" Source="Last chance to back out of restoring your Xbox to a factory state."/>
 		<Text zindex="3" Top="169" Left="71" Width="499" Align="Middle" ScaleX="100" ScaleY="100" Color="0xffaee239" Source="If you would like to proceed, please select Finish Restore"/>
-		<Text zindex="3" Top="189" Left="71" Width="499" Align="Middle" ScaleX="100" ScaleY="100" Color="0xffaee239" Source="followed by, Yes, I really want to."/>
+		<Text zindex="3" Top="189" Left="71" Width="499" Align="Middle" ScaleX="100" ScaleY="100" Color="0xffaee239" Source="followed by, what ever option you want."/>
 		<Image zindex="3" Top="10" Left="590" Width="42" Height="42" Source="GameIcon"/>
 		<!-- (A) Select (B) Back section -->
 		<Shape zindex="1" Type="Rectangle" Top="427" Left="71" Width="165" Height="25" BorderColor="0x00000000" BackColor="0xff3a3a46"/>

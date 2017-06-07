@@ -58,12 +58,12 @@
 				</list>
 			</list>
 
-			<Item>-</Item>
+			<Item></Item>
 
 			<Item>Press (B) to Exit this menu.</Item>
 		</list>
 		
-		<Item>-</Item>
+		<Item></Item>
 		
 		<List Text="Restore C Dashboard" Sort="Off">
 			<List Text="Yes please. I'm a numpty & need your help." Sort="Off" Batch="True">
@@ -84,7 +84,7 @@
 				</list>
 			</list>
 
-			<Item>-</Item>
+			<Item></Item>
 
 			<Item>Press (B) to Exit this menu.</Item>
 		</list>
@@ -107,7 +107,7 @@
 				</list>
 			</list>
 
-			<Item>-</Item>
+			<Item></Item>
 
 			<Item>Press (B) to Exit this menu.</Item>
 		</list>		

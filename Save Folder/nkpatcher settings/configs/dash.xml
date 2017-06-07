@@ -34,7 +34,7 @@
 			<AllowAnon>No</AllowAnon>
 		</FTP>
 		<Audio>
-			<EnableSoundEffect>No</EnableSoundEffect>
+			<EnableSoundEffect>Yes</EnableSoundEffect>
 		</Audio>
 		<LED>
 			<Default>Orange</Default>
@@ -82,8 +82,12 @@
 				<Item Action="MessageBox" Arg1="Complete">The CACHE has been cleared!</Item>
 			</List>
 			<List Text="Clear Recent list" Sort="Off" Batch="True">
-				<Item Action="Copy" Arg1="config.xml" Arg2="E:\UDATA\9e115330\0064122817A8\recent.dat"/>
-				<Item Action="Delete" Arg="E:\UDATA\9e115330\0064122817A8\recent.dat">Error deleting recent.dat</Item>
+				<List>
+					<Item Action="Rename" arg1="E:\UDATA\9e115330\0064122817A8\recent.dat" arg2="E:\UDATA\9e115330\0064122817A8\recent.da">Recent list already cleared</Item>
+					<Item Action="Rename" arg1="E:\UDATA\9e115330\0064122817A8\recent.da" arg2="E:\UDATA\9e115330\0064122817A8\recent.dat"/>
+				</List>
+				<Item Action="Delete" Arg="E:\UDATA\9e115330\0064122817A8\recent.dat"/>
+				<Item Action="MessageBox" Arg1="Complete">Recent list cleared, this may require you to reload the dashboard if list is still populated.</Item>
 			</List>
 			<List Text="Copy Disc to HDD" Sort="Off" Batch="True">
 				<Item Action="AskUser" Arg1="You sure??">Proceed with copying the disc to the HDD? If there is not enough space on the E partition, the F partition will be used instead. If not enough space is found there the G partition will be used, if it exists.</Item>

@@ -51,25 +51,28 @@
 		</LED>
 	</Settings>
 	<Menu>
-		<List Text="Information" Sort="Off" batch="true">
+		<List Text="Information" Sort="Off" Batch="true">
 			<Item Action="MessageBox" Arg1="Information">OK, here is where you can: \n\n1) Backup or Restore dashboards. \n2) Move your dashboard location. \n3) Restore to a stock UnleashX.</Item>
 		</List>
 
-		<Item>------------------------------------------</Item>
+		<Item></Item>
 
-		<!-- --------------------------------------------- -->
 		<!------- Backup/Restore Dashboard section ------- -->
-		<!-- --------------------------------------------- -->
-
+		
 		<Item>Backup/Restore</Item>
 		<List Text="Enter Menu" Sort="Off">
-			<List Text="Information" Sort="Off" batch="true">
+			<List Text="Information" Sort="Off" Batch="true">
 				<Item Action="MessageBox" Arg1="Information">Ok, here is where you can backup or restore a backup of your dashboard.</Item>
 			</List>
-			<Item>------------------------------------------</Item>
+			<Item></Item>
 			<Item>Backup</Item>
 			<List Text="XBMC" Sort="Off">
-				<List Text="C:\XBMC\" Sort="Off" batch="true" Icon="E:\Backups\Dashboards\C XBMC\backedup.png">
+				<List Text="Information" Sort="Off" Batch="true">
+					<Item Action="MessageBox" Arg1="Information">Backup your "XBMC" dashboards.</Item>
+				</List>
+				<Item></Item>
+				
+				<List Text="C:\XBMC\" Sort="Off" Batch="true" Icon="E:\Backups\Dashboards\C XBMC\backedup.png">
 					<Item Action="AskUser" Arg1="Question" arg2="Backup your C:\XBMC. \n\nAre you sure you want this, if there is a previous backup it will be overwritten."/>
 					<!-- Check to see if the dash is installed -->
 					<Item Action="Rename" arg1="C:\XBMC\default.xbe" arg2="C:\XBMC\default.xb">C:\XBMC\ not installed</Item>
@@ -82,7 +85,8 @@
 					<Item Action="Copy" arg1="C:\XBMC\" arg2="E:\Backups\Dashboards\C XBMC\"/>
 					<Item Action="MessageBox" Arg1="Done">Complete. \n\nDashboard backed up to. \n\nE:\Backups\Dashboards\C XBMC\</Item>
 				</List>
-				<List Text="E:\XBMC\" Sort="Off" batch="true" Icon="E:\Backups\Dashboards\E XBMC\backedup.png">
+				
+				<List Text="E:\XBMC\" Sort="Off" Batch="true" Icon="E:\Backups\Dashboards\E XBMC\backedup.png">
 					<Item Action="AskUser" Arg1="Question" arg2="Backup your E:\XBMC. \n\nAre you sure you want this, if there is a previous backup it will be overwritten."/>
 					<!-- Check to see if the dash is installed -->
 					<Item Action="Rename" arg1="E:\XBMC\default.xbe" arg2="E:\XBMC\default.xb">E:\XBMC\ not installed</Item>
@@ -95,7 +99,8 @@
 					<Item Action="Copy" arg1="E:\XBMC\" arg2="E:\Backups\Dashboards\E XBMC\"/>
 					<Item Action="MessageBox" Arg1="Done">Complete. \n\nDashboard backed up to. \n\nE:\Backups\Dashboards\E XBMC\</Item>
 				</List>
-				<List Text="F:\XBMC\" Sort="Off" batch="true" Icon="E:\Backups\Dashboards\F XBMC\backedup.png">
+				
+				<List Text="F:\XBMC\" Sort="Off" Batch="true" Icon="E:\Backups\Dashboards\F XBMC\backedup.png">
 					<Item Action="AskUser" Arg1="Question" arg2="Backup your F:\XBMC. \n\nAre you sure you want this, if there is a previous backup it will be overwritten."/>
 					<!-- Check to see if the dash is installed -->
 					<Item Action="Rename" arg1="F:\XBMC\default.xbe" arg2="F:\XBMC\default.xb">F:\XBMC\ not installed</Item>
@@ -109,8 +114,14 @@
 					<Item Action="MessageBox" Arg1="Done">Complete. \n\nDashboard backed up to. \n\nE:\Backups\Dashboards\F XBMC\</Item>
 				</List>
 			</List>
+			
 			<List Text="Dashboard" Sort="Off">
-				<List Text="C:\Dashboard\" Sort="Off" batch="true" Icon="E:\Backups\Dashboards\C Dashboard\backedup.png">
+				<List Text="Information" Sort="Off" Batch="true">
+					<Item Action="MessageBox" Arg1="Information">Backup your "Dashboard" dashboards.</Item>
+				</List>
+				<Item></Item>
+				
+				<List Text="C:\Dashboard\" Sort="Off" Batch="true" Icon="E:\Backups\Dashboards\C Dashboard\backedup.png">
 					<Item Action="AskUser" Arg1="Question" arg2="Backup your C:\Dashboard. \n\nAre you sure you want this, if there is a previous backup it will be overwritten."/>
 					<!-- Check to see if the dash is installed -->
 					<Item Action="Rename" arg1="C:\Dashboard\default.xbe" arg2="C:\Dashboard\default.xb">C:\Dashboard\ not installed</Item>
@@ -123,7 +134,8 @@
 					<Item Action="Copy" arg1="C:\Dashboard\" arg2="E:\Backups\Dashboards\C Dashboard\"/>
 					<Item Action="MessageBox" Arg1="Done">Complete. \n\nDashboard backed up to. \n\nE:\Backups\Dashboards\C Dashboard\</Item>
 				</List>
-				<List Text="E:\Dashboard\" Sort="Off" batch="true" Icon="E:\Backups\Dashboards\E Dashboard\backedup.png">
+				
+				<List Text="E:\Dashboard\" Sort="Off" Batch="true" Icon="E:\Backups\Dashboards\E Dashboard\backedup.png">
 					<Item Action="AskUser" Arg1="Question" arg2="Backup your E:\Dashboard. \n\nAre you sure you want this, if there is a previous backup it will be overwritten."/>
 					<!-- Check to see if the dash is installed -->
 					<Item Action="Rename" arg1="E:\Dashboard\default.xbe" arg2="E:\Dashboard\default.xb">E:\Dashboard\ not installed</Item>
@@ -136,7 +148,8 @@
 					<Item Action="Copy" arg1="E:\Dashboard\" arg2="E:\Backups\Dashboards\E Dashboard\"/>
 					<Item Action="MessageBox" Arg1="Done">Complete. \n\nDashboard backed up to. \n\nE:\Backups\Dashboards\E Dashboard\</Item>
 				</List>
-				<List Text="F:\Dashboard\" Sort="Off" batch="true" Icon="E:\Backups\Dashboards\F Dashboard\backedup.png">
+				
+				<List Text="F:\Dashboard\" Sort="Off" Batch="true" Icon="E:\Backups\Dashboards\F Dashboard\backedup.png">
 					<Item Action="AskUser" Arg1="Question" arg2="Backup your F:\Dashboard. \n\nAre you sure you want this, if there is a previous backup it will be overwritten."/>
 					<!-- Check to see if the dash is installed -->
 					<Item Action="Rename" arg1="F:\Dashboard\default.xbe" arg2="F:\Dashboard\default.xb">F:\Dashboard\ not installed</Item>
@@ -150,8 +163,14 @@
 					<Item Action="MessageBox" Arg1="Done">Complete. \n\nDashboard backed up to. \n\nE:\Backups\Dashboards\F Dashboard\</Item>
 				</List>
 			</List>
+			
 			<List Text="Dash" Sort="Off">
-				<List Text="C:\Dash\" Sort="Off" batch="true" Icon="E:\Backups\Dashboards\C Dash\backedup.png">
+				<List Text="Information" Sort="Off" Batch="true">
+					<Item Action="MessageBox" Arg1="Information">Backup your "Dash" dashboards.</Item>
+				</List>
+				<Item></Item>
+				
+				<List Text="C:\Dash\" Sort="Off" Batch="true" Icon="E:\Backups\Dashboards\C Dash\backedup.png">
 					<Item Action="AskUser" Arg1="Question" arg2="Backup your C:\Dash. \n\nAre you sure you want this, if there is a previous backup it will be overwritten."/>
 					<!-- Check to see if the dash is installed -->
 					<Item Action="Rename" arg1="C:\Dash\default.xbe" arg2="C:\Dash\default.xb">C:\Dash\ not installed</Item>
@@ -164,7 +183,8 @@
 					<Item Action="Copy" arg1="C:\Dash\" arg2="E:\Backups\Dashboards\C Dash\"/>
 					<Item Action="MessageBox" Arg1="Done">Complete. \n\nDashboard backed up to. \n\nE:\Backups\Dashboards\C Dash\</Item>
 				</List>
-				<List Text="E:\Dash\" Sort="Off" batch="true" Icon="E:\Backups\Dashboards\E Dash\backedup.png">
+				
+				<List Text="E:\Dash\" Sort="Off" Batch="true" Icon="E:\Backups\Dashboards\E Dash\backedup.png">
 					<Item Action="AskUser" Arg1="Question" arg2="Backup your E:\Dash. \n\nAre you sure you want this, if there is a previous backup it will be overwritten."/>
 					<!-- Check to see if the dash is installed -->
 					<Item Action="Rename" arg1="E:\Dash\default.xbe" arg2="E:\Dash\default.xb">E:\Dash\ not installed</Item>
@@ -177,7 +197,8 @@
 					<Item Action="Copy" arg1="E:\Dash\" arg2="E:\Backups\Dashboards\E Dash\"/>
 					<Item Action="MessageBox" Arg1="Done">Complete. \n\nDashboard backed up to. \n\nE:\Backups\Dashboards\E Dash\</Item>
 				</List>
-				<List Text="F:\Dash\" Sort="Off" batch="true" Icon="E:\Backups\Dashboards\F Dash\backedup.png">
+				
+				<List Text="F:\Dash\" Sort="Off" Batch="true" Icon="E:\Backups\Dashboards\F Dash\backedup.png">
 					<Item Action="AskUser" Arg1="Question" arg2="Backup your F:\Dash. \n\nAre you sure you want this, if there is a previous backup it will be overwritten."/>
 					<!-- Check to see if the dash is installed -->
 					<Item Action="Rename" arg1="F:\Dash\default.xbe" arg2="F:\Dash\default.xb">F:\Dash\ not installed</Item>
@@ -191,9 +212,15 @@
 					<Item Action="MessageBox" Arg1="Done">Complete. \n\nDashboard backed up to. \n\nE:\Backups\Dashboards\F Dash\</Item>
 				</List>
 			</List>
+			
 			<Item>Restore</Item>
 			<List Text="XBMC" Sort="Off">
-				<List Text="C:\XBMC\" Sort="Off" batch="true" Icon="E:\Backups\Dashboards\C XBMC\backedup.png">
+				<List Text="Information" Sort="Off" Batch="true">
+					<Item Action="MessageBox" Arg1="Information">Restore your "XBMC" dashboards.</Item>
+				</List>
+				<Item></Item>
+				
+				<List Text="C:\XBMC\" Sort="Off" Batch="true" Icon="E:\Backups\Dashboards\C XBMC\backedup.png">
 					<Item Action="AskUser" Arg1="Question" arg2="Restore your backup of C:\XBMC. \n\nAre you sure you want this, if there is a dashboard in C:\XBMC\ it will be overwritten."/>
 					<!-- Check for backup -->
 					<Item Action="Rename" arg1="E:\Backups\Dashboards\C XBMC\default.xbe" arg2="E:\Backups\Dashboards\C XBMC\default.xb">No backup found</Item>
@@ -211,7 +238,8 @@
 					<Item Action="Delete" arg1="C:\XBMC\backedup.png"/>
 					<Item Action="MessageBox" Arg1="Done">Complete. \n\nDashboard restored to. \n\nC:\XBMC\</Item>
 				</List>
-				<List Text="E:\XBMC\" Sort="Off" batch="true" Icon="E:\Backups\Dashboards\E XBMC\backedup.png">
+				
+				<List Text="E:\XBMC\" Sort="Off" Batch="true" Icon="E:\Backups\Dashboards\E XBMC\backedup.png">
 					<Item Action="AskUser" Arg1="Question" arg2="Restore your backup of E:\XBMC. \n\nAre you sure you want this, if there is a dashboard in E:\XBMC\ it will be overwritten."/>
 					<!-- Check for backup -->
 					<Item Action="Rename" arg1="E:\Backups\Dashboards\E XBMC\default.xbe" arg2="E:\Backups\Dashboards\E XBMC\default.xb">No backup found</Item>
@@ -229,7 +257,8 @@
 					<Item Action="Delete" arg1="E:\XBMC\backedup.png"/>
 					<Item Action="MessageBox" Arg1="Done">Complete. \n\nDashboard restored to. \n\nE:\XBMC\</Item>
 				</List>
-				<List Text="F:\XBMC\" Sort="Off" batch="true" Icon="E:\Backups\Dashboards\F XBMC\backedup.png">
+				
+				<List Text="F:\XBMC\" Sort="Off" Batch="true" Icon="E:\Backups\Dashboards\F XBMC\backedup.png">
 					<Item Action="AskUser" Arg1="Question" arg2="Restore your backup of F:\XBMC. \n\nAre you sure you want this, if there is a dashboard in F:\XBMC\ it will be overwritten."/>
 					<!-- Check for backup -->
 					<Item Action="Rename" arg1="E:\Backups\Dashboards\F XBMC\default.xbe" arg2="E:\Backups\Dashboards\F XBMC\default.xb">No backup found</Item>
@@ -248,8 +277,14 @@
 					<Item Action="MessageBox" Arg1="Done">Complete. \n\nDashboard restored to. \n\nF:\XBMC\</Item>
 				</List>
 			</List>
+			
 			<List Text="Dashboard" Sort="Off">
-				<List Text="C:\Dashboard\" Sort="Off" batch="true" Icon="E:\Backups\Dashboards\C Dashboard\backedup.png">
+				<List Text="Information" Sort="Off" Batch="true">
+					<Item Action="MessageBox" Arg1="Information">Restore your "Dashboard" dashboards.</Item>
+				</List>
+				<Item></Item>
+				
+				<List Text="C:\Dashboard\" Sort="Off" Batch="true" Icon="E:\Backups\Dashboards\C Dashboard\backedup.png">
 					<Item Action="AskUser" Arg1="Question" arg2="Restore your backup of C:\Dashboard. \n\nAre you sure you want this, if there is a dashboard in C:\Dashboard\ it will be overwritten."/>
 					<!-- Check for backup -->
 					<Item Action="Rename" arg1="E:\Backups\Dashboards\C Dashboard\default.xbe" arg2="E:\Backups\Dashboards\C Dashboard\default.xb">No backup found</Item>
@@ -267,7 +302,8 @@
 					<Item Action="Delete" arg1="C:\Dashboard\backedup.png"/>
 					<Item Action="MessageBox" Arg1="Done">Complete. \n\nDashboard restored to. \n\nC:\Dashboard\</Item>
 				</List>
-				<List Text="E:\Dashboard\" Sort="Off" batch="true" Icon="E:\Backups\Dashboards\E Dashboard\backedup.png">
+				
+				<List Text="E:\Dashboard\" Sort="Off" Batch="true" Icon="E:\Backups\Dashboards\E Dashboard\backedup.png">
 					<Item Action="AskUser" Arg1="Question" arg2="Restore your backup of E:\Dashboard. \n\nAre you sure you want this, if there is a dashboard in E:\Dashboard\ it will be overwritten."/>
 					<!-- Check for backup -->
 					<Item Action="Rename" arg1="E:\Backups\Dashboards\E Dashboard\default.xbe" arg2="E:\Backups\Dashboards\E Dashboard\default.xb">No backup found</Item>
@@ -285,7 +321,8 @@
 					<Item Action="Delete" arg1="E:\Dashboard\backedup.png"/>
 					<Item Action="MessageBox" Arg1="Done">Complete. \n\nDashboard restored to. \n\nE:\Dashboard\</Item>
 				</List>
-				<List Text="F:\Dashboard\" Sort="Off" batch="true" Icon="E:\Backups\Dashboards\F Dashboard\backedup.png">
+				
+				<List Text="F:\Dashboard\" Sort="Off" Batch="true" Icon="E:\Backups\Dashboards\F Dashboard\backedup.png">
 					<Item Action="AskUser" Arg1="Question" arg2="Restore your backup of F:\Dashboard. \n\nAre you sure you want this, if there is a dashboard in F:\Dashboard\ it will be overwritten."/>
 					<!-- Check for backup -->
 					<Item Action="Rename" arg1="E:\Backups\Dashboards\F Dashboard\default.xbe" arg2="E:\Backups\Dashboards\F Dashboard\default.xb">No backup found</Item>
@@ -304,8 +341,14 @@
 					<Item Action="MessageBox" Arg1="Done">Complete. \n\nDashboard restored to. \n\nF:\Dashboard\</Item>
 				</List>
 			</List>
+			
 			<List Text="Dash" Sort="Off">
-				<List Text="C:\Dash\" Sort="Off" batch="true" Icon="E:\Backups\Dashboards\C Dash\backedup.png">
+				<List Text="Information" Sort="Off" Batch="true">
+					<Item Action="MessageBox" Arg1="Information">Restore your "Dash" dashboards.</Item>
+				</List>
+				<Item></Item>
+				
+				<List Text="C:\Dash\" Sort="Off" Batch="true" Icon="E:\Backups\Dashboards\C Dash\backedup.png">
 					<Item Action="AskUser" Arg1="Question" arg2="Restore your backup of C:\Dash. \n\nAre you sure you want this, if there is a dashboard in C:\Dash\ it will be overwritten."/>
 					<!-- Check for backup -->
 					<Item Action="Rename" arg1="E:\Backups\Dashboards\C Dash\default.xbe" arg2="E:\Backups\Dashboards\C Dash\default.xb">No backup found</Item>
@@ -323,7 +366,8 @@
 					<Item Action="Delete" arg1="C:\Dash\backedup.png"/>
 					<Item Action="MessageBox" Arg1="Done">Complete. \n\nDashboard restored to. \n\nC:\Dash\</Item>
 				</List>
-				<List Text="E:\Dash\" Sort="Off" batch="true" Icon="E:\Backups\Dashboards\E Dash\backedup.png">
+				
+				<List Text="E:\Dash\" Sort="Off" Batch="true" Icon="E:\Backups\Dashboards\E Dash\backedup.png">
 					<Item Action="AskUser" Arg1="Question" arg2="Restore your backup of E:\Dash. \n\nAre you sure you want this, if there is a dashboard in E:\Dash\ it will be overwritten."/>
 					<!-- Check for backup -->
 					<Item Action="Rename" arg1="E:\Backups\Dashboards\E Dash\default.xbe" arg2="E:\Backups\Dashboards\E Dash\default.xb">No backup found</Item>
@@ -341,7 +385,8 @@
 					<Item Action="Delete" arg1="E:\Dash\backedup.png"/>
 					<Item Action="MessageBox" Arg1="Done">Complete. \n\nDashboard restored to. \n\nE:\Dash\</Item>
 				</List>
-				<List Text="F:\Dash\" Sort="Off" batch="true" Icon="E:\Backups\Dashboards\F Dash\backedup.png">
+				
+				<List Text="F:\Dash\" Sort="Off" Batch="true" Icon="E:\Backups\Dashboards\F Dash\backedup.png">
 					<Item Action="AskUser" Arg1="Question" arg2="Restore your backup of F:\Dash. \n\nAre you sure you want this, if there is a dashboard in F:\Dash\ it will be overwritten."/>
 					<!-- Check for backup -->
 					<Item Action="Rename" arg1="E:\Backups\Dashboards\F Dash\default.xbe" arg2="E:\Backups\Dashboards\F Dash\default.xb">No backup found</Item>
@@ -362,26 +407,25 @@
 			</List>
 		</List>
 
-		<!-- ----------------------------------- -->
 		<!------- Move Dashboard section ------- -->
-		<!-- ----------------------------------- -->
 
 		<Item>Move Dashboard</Item>
 		<List Text="Enter Menu" Sort="Off">
-			<List Text="Information" Sort="Off" batch="true">
+			<List Text="Information" Sort="Off" Batch="true">
 				<Item Action="MessageBox" Arg1="Information">In this menu you will be able to move your dashboard location to two different locations.</Item>
 			</List>
-			<Item>------------------------------------------</Item>
+			<Item></Item>
 			<Item>Move Dashboard</Item>
-			<List Text="C Dashboard Options" Sort="Off" batch="false" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\dash settings\toggles\CDashboard.png">
-				<List Text="Check Dashboard Path" Sort="Off" batch="true">
+			<List Text="C Dashboard Options" Sort="Off" Batch="false" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\dash settings\toggles\CDashboard.png">
+				<List Text="Check Dashboard Path" Sort="Off" Batch="true">
 					<Item Action="MessageBox" Arg1="Question">About to check the path, to make sure a dashboard resides there.</Item>
 					<Item Action="Rename" arg1="C:\Dashboard\default.xbe" arg2="C:\Dashboard\default.xb">C:\Dashboard\ not installed</Item>
 					<Item Action="Rename" arg1="C:\Dashboard\default.xb" arg2="C:\Dashboard\default.xbe"/>
 					<Item Action="MessageBox" Arg1="Success">""C:\Dashboard\" found.</Item>
 				</List>
-				<Item>------------------------------------------</Item>
-				<List Text="E:\Dashboard\" Sort="Off" batch="true" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\dash settings\toggles\EDashboard.png">
+				<Item></Item>
+				
+				<List Text="E:\Dashboard\" Sort="Off" Batch="true" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\dash settings\toggles\EDashboard.png">
 					<Item Action="AskUser" Arg1="Question" arg2="Move your dashboard from \n\nC:\Dashboard\ \nto \nE:\Dashboard\ \n\nAre you sure you want this, if there is a Dashboard in E:\Dashboard\ it will be overwritten."/>
 					<Item Action="Rename" arg1="C:\Dashboard\default.xbe" arg2="C:\Dashboard\default.xb">C:\Dashboard\ not installed</Item>
 					<Item Action="Rename" arg1="C:\Dashboard\default.xb" arg2="C:\Dashboard\default.xbe"/>
@@ -394,7 +438,8 @@
 					<Item Action="Delete" arg1="C:\Dashboard\"/>
 					<Item Action="MessageBox" Arg1="Done">Complete. \n\nDashboard moved to E:\Dashboard\</Item>
 				</List>
-				<List Text="C:\Dash\" Sort="Off" batch="true" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\dash settings\toggles\CDash.png">
+				
+				<List Text="C:\Dash\" Sort="Off" Batch="true" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\dash settings\toggles\CDash.png">
 					<Item Action="AskUser" Arg1="Question" arg2="Move your dashboard from \n\nC:\Dashboard\ \nto \nC:\Dash\ \n\nAre you sure you want this, if there is a Dashboard in C:\Dash\ it will be overwritten."/>
 					<Item Action="Rename" arg1="C:\Dashboard\default.xbe" arg2="C:\Dashboard\default.xb">C:\Dashboard\ not installed</Item>
 					<Item Action="Rename" arg1="C:\Dashboard\default.xb" arg2="C:\Dashboard\default.xbe"/>
@@ -407,7 +452,8 @@
 					<Item Action="Delete" arg1="C:\Dashboard\"/>
 					<Item Action="MessageBox" Arg1="Done">Complete. \n\nDashboard moved to C:\Dash\</Item>
 				</List>
-				<List Text="E:\Dash\" Sort="Off" batch="true" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\dash settings\toggles\EDash.png">
+				
+				<List Text="E:\Dash\" Sort="Off" Batch="true" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\dash settings\toggles\EDash.png">
 					<Item Action="AskUser" Arg1="Question" arg2="Move your dashboard from \n\nC:\Dashboard\ \nto \nE:\Dash\ \n\nAre you sure you want this, if there is a Dashboard in E:\Dash\ it will be overwritten."/>
 					<Item Action="Rename" arg1="C:\Dashboard\default.xbe" arg2="C:\Dashboard\default.xb">C:\Dashboard\ not installed</Item>
 					<Item Action="Rename" arg1="C:\Dashboard\default.xb" arg2="C:\Dashboard\default.xbe"/>
@@ -421,17 +467,17 @@
 					<Item Action="MessageBox" Arg1="Done">Complete. \n\nDashboard moved to E:\Dash\</Item>
 				</List>
 			</List>
-
-
-			<List Text="E Dashboard Options" Sort="Off" batch="false" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\dash settings\toggles\EDashboard.png">
-				<List Text="Check Dashboard Path" Sort="Off" batch="true">
+			
+			<List Text="E Dashboard Options" Sort="Off" Batch="false" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\dash settings\toggles\EDashboard.png">
+				<List Text="Check Dashboard Path" Sort="Off" Batch="true">
 					<Item Action="MessageBox" Arg1="Question">About to check the path, to make sure a dashboard resides there.</Item>
 					<Item Action="Rename" arg1="E:\Dashboard\default.xbe" arg2="E:\Dashboard\default.xb">E:\Dashboard\ not installed</Item>
 					<Item Action="Rename" arg1="E:\Dashboard\default.xb" arg2="E:\Dashboard\default.xbe"/>
 					<Item Action="MessageBox" Arg1="Success">""C:\Dashboard\" found.</Item>
 				</List>
-				<Item>------------------------------------------</Item>
-				<List Text="C:\Dashboard\" Sort="Off" batch="true" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\dash settings\toggles\CDashboard.png">
+				<Item></Item>
+				
+				<List Text="C:\Dashboard\" Sort="Off" Batch="true" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\dash settings\toggles\CDashboard.png">
 					<Item Action="AskUser" Arg1="Question" arg2="Move your dashboard from \n\nE:\Dashboard\ \nto \nC:\Dashboard\ \n\nAre you sure you want this, if there is a Dashboard in C:\Dashboard\ it will be overwritten."/>
 					<Item Action="Rename" arg1="E:\Dashboard\default.xbe" arg2="E:\Dashboard\default.xb">E:\Dashboard\ not installed</Item>
 					<Item Action="Rename" arg1="E:\Dashboard\default.xb" arg2="E:\Dashboard\default.xbe"/>
@@ -444,7 +490,8 @@
 					<Item Action="Delete" arg1="E:\Dashboard\"/>
 					<Item Action="MessageBox" Arg1="Done">Complete. \n\nDashboard moved to C:\Dashboard\</Item>
 				</List>
-				<List Text="C:\Dash\" Sort="Off" batch="true" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\dash settings\toggles\CDash.png">
+				
+				<List Text="C:\Dash\" Sort="Off" Batch="true" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\dash settings\toggles\CDash.png">
 					<Item Action="AskUser" Arg1="Question" arg2="Move your dashboard from \n\nE:\Dashboard\ \nto \nC:\Dash\ \n\nAre you sure you want this, if there is a Dashboard in C:\Dash\ it will be overwritten."/>
 					<Item Action="Rename" arg1="E:\Dashboard\default.xbe" arg2="E:\Dashboard\default.xb">E:\Dashboard\ not installed</Item>
 					<Item Action="Rename" arg1="E:\Dashboard\default.xb" arg2="E:\Dashboard\default.xbe"/>
@@ -457,7 +504,8 @@
 					<Item Action="Delete" arg1="E:\Dashboard\"/>
 					<Item Action="MessageBox" Arg1="Done">Complete. \n\nDashboard moved to C:\Dash\</Item>
 				</List>
-				<List Text="E:\Dash\" Sort="Off" batch="true" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\dash settings\toggles\EDash.png">
+				
+				<List Text="E:\Dash\" Sort="Off" Batch="true" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\dash settings\toggles\EDash.png">
 					<Item Action="AskUser" Arg1="Question" arg2="Move your dashboard from \n\nE:\Dashboard\ \nto \nE:\Dash\ \n\nAre you sure you want this, if there is a Dashboard in E:\Dash\ it will be overwritten."/>
 					<Item Action="Rename" arg1="E:\Dashboard\default.xbe" arg2="E:\Dashboard\default.xb">E:\Dashboard\ not installed</Item>
 					<Item Action="Rename" arg1="E:\Dashboard\default.xb" arg2="E:\Dashboard\default.xbe"/>
@@ -471,17 +519,17 @@
 					<Item Action="MessageBox" Arg1="Done">Complete. \n\nDashboard moved to E:\Dash\</Item>
 				</List>
 			</List>
-
-
-			<List Text="C Dash Options" Sort="Off" batch="false" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\dash settings\toggles\CDash.png">
-				<List Text="Check Dashboard Path" Sort="Off" batch="true">
+			
+			<List Text="C Dash Options" Sort="Off" Batch="false" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\dash settings\toggles\CDash.png">
+				<List Text="Check Dashboard Path" Sort="Off" Batch="true">
 					<Item Action="MessageBox" Arg1="Question">About to check the path, to make sure a dashboard resides there.</Item>
 					<Item Action="Rename" arg1="C:\Dash\default.xbe" arg2="C:\Dash\default.xb">C:\Dash\ not installed</Item>
 					<Item Action="Rename" arg1="C:\Dash\default.xb" arg2="C:\Dash\default.xbe"/>
 					<Item Action="MessageBox" Arg1="Success">""E:\Dashboard\" found.</Item>
 				</List>
-				<Item>------------------------------------------</Item>
-				<List Text="C:\Dashboard\" Sort="Off" batch="true" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\dash settings\toggles\CDashboard.png">
+				<Item></Item>
+				
+				<List Text="C:\Dashboard\" Sort="Off" Batch="true" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\dash settings\toggles\CDashboard.png">
 					<Item Action="AskUser" Arg1="Question" arg2="Move your dashboard from \n\nC:\Dash\ \nto \nC:\Dashboard\ \n\nAre you sure you want this, if there is a Dashboard in C:\Dashboard\ it will be overwritten."/>
 					<Item Action="Rename" arg1="C:\Dash\default.xbe" arg2="C:\Dash\default.xb">C:\Dash\ not installed</Item>
 					<Item Action="Rename" arg1="C:\Dash\default.xb" arg2="C:\Dash\default.xbe"/>
@@ -494,7 +542,8 @@
 					<Item Action="Delete" arg1="C:\Dash\"/>
 					<Item Action="MessageBox" Arg1="Done">Complete. \n\nDashboard moved to C:\Dashboard\</Item>
 				</List>
-				<List Text="E:\Dashboard\" Sort="Off" batch="true" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\dash settings\toggles\EDashboard.png">
+				
+				<List Text="E:\Dashboard\" Sort="Off" Batch="true" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\dash settings\toggles\EDashboard.png">
 					<Item Action="AskUser" Arg1="Question" arg2="Move your dashboard from \n\nC:\Dash\ \nto \nE:\Dashboard\ \n\nAre you sure you want this, if there is a Dashboard in E:\Dashboard\ it will be overwritten."/>
 					<Item Action="Rename" arg1="C:\Dash\default.xbe" arg2="C:\Dash\default.xb">C:\Dash\ not installed</Item>
 					<Item Action="Rename" arg1="C:\Dash\default.xb" arg2="C:\Dash\default.xbe"/>
@@ -507,7 +556,8 @@
 					<Item Action="Delete" arg1="C:\Dash\"/>
 					<Item Action="MessageBox" Arg1="Done">Complete. \n\nDashboard moved to E:\Dashboard\</Item>
 				</List>
-				<List Text="E:\Dash\" Sort="Off" batch="true" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\dash settings\toggles\EDash.png">
+				
+				<List Text="E:\Dash\" Sort="Off" Batch="true" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\dash settings\toggles\EDash.png">
 					<Item Action="AskUser" Arg1="Question" arg2="Move your dashboard from \n\nC:\Dash\ \nto \nE:\Dash\ \n\nAre you sure you want this, if there is a Dashboard in E:\Dash\ it will be overwritten."/>
 					<Item Action="Rename" arg1="C:\Dash\default.xbe" arg2="C:\Dash\default.xb">C:\Dash\ not installed</Item>
 					<Item Action="Rename" arg1="C:\Dash\default.xb" arg2="C:\Dash\default.xbe"/>
@@ -521,17 +571,17 @@
 					<Item Action="MessageBox" Arg1="Done">Complete. \n\nDashboard moved to E:\Dash\</Item>
 				</List>
 			</List>
-
-
-			<List Text="E Dash Options" Sort="Off" batch="false" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\dash settings\toggles\EDash.png">
-				<List Text="Check Dashboard Path" Sort="Off" batch="true">
+			
+			<List Text="E Dash Options" Sort="Off" Batch="false" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\dash settings\toggles\EDash.png">
+				<List Text="Check Dashboard Path" Sort="Off" Batch="true">
 					<Item Action="MessageBox" Arg1="Question">About to check the path, to make sure a dashboard resides there.</Item>
 					<Item Action="Rename" arg1="E:\Dash\default.xbe" arg2="E:\Dash\default.xb">E:\Dash\ not installed</Item>
 					<Item Action="Rename" arg1="E:\Dash\default.xb" arg2="E:\Dash\default.xbe"/>
 					<Item Action="MessageBox" Arg1="Success">""C:\Dashboard\" found.</Item>
 				</List>
-				<Item>------------------------------------------</Item>
-				<List Text="C:\Dashboard\" Sort="Off" batch="true" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\dash settings\toggles\CDashboard.png">
+				<Item></Item>
+				
+				<List Text="C:\Dashboard\" Sort="Off" Batch="true" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\dash settings\toggles\CDashboard.png">
 					<Item Action="AskUser" Arg1="Question" arg2="Move your dashboard from \n\nE:\Dash\ \nto \nC:\Dashboard\ \n\nAre you sure you want this, if there is a Dashboard in C:\Dashboard\ it will be overwritten."/>
 					<Item Action="Rename" arg1="E:\Dash\default.xbe" arg2="E:\Dash\default.xb">E:\Dash\ not installed</Item>
 					<Item Action="Rename" arg1="E:\Dash\default.xb" arg2="E:\Dash\default.xbe"/>
@@ -544,7 +594,8 @@
 					<Item Action="Delete" arg1="E:\Dash\"/>
 					<Item Action="MessageBox" Arg1="Done">Complete. \n\nDashboard moved to C:\Dashboard\</Item>
 				</List>
-				<List Text="E:\Dashboard\" Sort="Off" batch="true" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\dash settings\toggles\EDashboard.png">
+				
+				<List Text="E:\Dashboard\" Sort="Off" Batch="true" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\dash settings\toggles\EDashboard.png">
 					<Item Action="AskUser" Arg1="Question" arg2="Move your dashboard from \n\nE:\Dashboard\ \nto \nE:\Dashboard\ \n\nAre you sure you want this, if there is a Dashboard in E:\Dashboard\ it will be overwritten."/>
 					<Item Action="Rename" arg1="E:\Dash\default.xbe" arg2="E:\Dash\default.xb">E:\Dash\ not installed</Item>
 					<Item Action="Rename" arg1="E:\Dash\default.xb" arg2="E:\Dash\default.xbe"/>
@@ -557,7 +608,8 @@
 					<Item Action="Delete" arg1="E:\Dash\"/>
 					<Item Action="MessageBox" Arg1="Done">Complete. \n\nDashboard moved to E:\Dashboard\</Item>
 				</List>
-				<List Text="C:\Dash\" Sort="Off" batch="true" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\dash settings\toggles\CDash.png">
+				
+				<List Text="C:\Dash\" Sort="Off" Batch="true" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\dash settings\toggles\CDash.png">
 					<Item Action="AskUser" Arg1="Question" arg2="Move your dashboard from \n\nE:\Dash\ \nto \nC:\Dash\ \n\nAre you sure you want this, if there is a Dashboard in C:\Dash\ it will be overwritten."/>
 					<Item Action="Rename" arg1="E:\Dash\default.xbe" arg2="E:\Dash\default.xb">E:\Dash\ not installed</Item>
 					<Item Action="Rename" arg1="E:\Dash\default.xb" arg2="E:\Dash\default.xbe"/>
@@ -571,21 +623,19 @@
 					<Item Action="MessageBox" Arg1="Done">Complete. \n\nDashboard moved to C:\Dash\</Item>
 				</List>
 			</List>
-
 		</List>
-
-		<!-- -------------------------------------- -->
+		
 		<!------- Restore Dashboard section ------- -->
-		<!-- -------------------------------------- -->
-
+		
 		<Item>Restore Dashboard</Item>
 		<List Text="Enter Menu" Sort="Off">
-			<List Text="Information" Sort="Off" batch="true">
-				<Item Action="MessageBox" Arg1="Information">In this menu you can restore/revert to a clean UnleashX dashboard.</Item>
+			<List Text="Information" Sort="Off" Batch="true">
+				<Item Action="MessageBox" Arg1="Information">In this menu you can restore or install a clean UnleashX dashboard.</Item>
 			</List>
-			<Item>------------------------------------------</Item>
+			<Item></Item>
 			<Item>Restore</Item>
-			<List Text="C:\Dashboard\" Sort="Off" batch="true">
+			
+			<List Text="C:\Dashboard\" Sort="Off" Batch="true">
 				<Item Action="AskUser" Arg1="Question" arg2="Restore your C:\Dashboard to its default state. \nThis is a clean install of UnleashX. \n\nAre you sure you want this, if there is a dashboard in E:\Dashboard\ and C:\Dashboard\ they will be removed overwritten."/>
 				<Item Action="Copy" arg1="dummy" arg2="E:\Dashboard"/>
 				<Item Action="Copy" arg1="dummy" arg2="C:\Dashboard"/>
@@ -604,7 +654,8 @@
 				<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\dash settings\toggles\CDashboard.png"/>
 				<Item Action="MessageBox" Arg1="Done">Complete. \n\nDashboard restored to default.</Item>
 			</List>
-			<List Text="E:\Dashboard\" Sort="Off" batch="true">
+			
+			<List Text="E:\Dashboard\" Sort="Off" Batch="true">
 				<Item Action="AskUser" Arg1="Question" arg2="Restore your E:\Dashboard to its default state. \nThis is a clean install of UnleashX. \n\nAre you sure you want this, if there is a dashboard in C:\Dashboard\ and E:\Dashboard\ they will be removed overwritten."/>
 				<Item Action="Copy" arg1="dummy" arg2="C:\Dashboard"/>
 				<Item Action="Copy" arg1="dummy" arg2="E:\Dashboard"/>
@@ -624,13 +675,15 @@
 				<Item Action="MessageBox" Arg1="Done">Complete. \n\nDashboard restored to default.</Item>
 			</List>
 		</List>
-
-		<Item>------------------------------------------</Item>
-
-		<!-- ---------------------------------- -->
-		<!------- Exit settings section ------- -->
-		<!-- ---------------------------------- -->
-
-		<Item Action="E:\UDATA\21585554\000000000000\nkpatcher settings\unleashx.xbe" Icon="dummy.png">Back to NKPatcher Settings</Item>
+		
+		<Item></Item>
+		<Item></Item>
+		<Item></Item>
+		<Item></Item>
+		
+		<List Text="Back to NKPatcher Settings" Sort="Off" Batch="true">
+			<!-- <Item Action="Delete" arg1="E:\Prep"/> -->
+			<Item Action="E:\UDATA\21585554\000000000000\nkpatcher settings\unleashx.xbe"/>
+		</List>
 	</Menu>
 </Unleashx>

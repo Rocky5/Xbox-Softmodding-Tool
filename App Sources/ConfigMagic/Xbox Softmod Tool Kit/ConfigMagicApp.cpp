@@ -61,7 +61,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #define Backup_Path											"E:\\Backups\\EEPROM\\"
 #define Virtual_Path				NKPConfDirAlt
-#define Virtual_Full_Path			NKPConfDirAlt			"EEPROM.bin"
+#define Virtual_Full_Path			NKPConfDirAlt			"eeprom.bin"
 //#define Backup_Path "D:\\"
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -81,9 +81,10 @@
 #define Virtual_File										"D:\\Virtual_EEPROM_Backup.enabled"
 #define Reboot_File											"D:\\Reboot.enabled"
 #define Override_File										"D:\\Standalone_Mode.enabled"
-#define Backup												"E:\\Prep\\done.xbe"
+#define RNKP_File											"D:\\rnkp.enabled"
 #define Update_Font											"D:\\Update_Font.enabled"
 #define Restore_Font										"D:\\Restore_Font.enabled"
+#define LockHDD_File				PrepDir					"LockHDD.xbe"
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
@@ -104,7 +105,7 @@
 // Enable/Disable png files
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #define EnabledPNG					NKPSDir					"toggles\\enabled.png"
-#define IconPNG						NKPSDir					"modules\\Xbox softmod tool kit\\icon.png"
+#define Dummy_File					NKPSDir					"modules\\Xbox softmod tool kit\\dummy_file"
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
@@ -115,6 +116,7 @@
 #define FirstRunLOG					NKPDir					"default.log"
 #define FirstRunCFG					NKPDir					"default.cfg"
 #define FirstinstallCFG				NKPDir					"dashloader\\firstinstall.cfg"
+#define PrepUX						PrepDir					"unleashx.xbe"
 #define PrepXBE						PrepDir					"default.xbe"
 #define SecondRun					PrepDir					"secondrun.bin"
 #define FirstRunBin											"D:\\firstrun.bin"
@@ -263,11 +265,15 @@ HRESULT ConfigMagicApp::Initialize()
 	if (VirtualEEPROM.good())
 	{
 		VirtualEEPROM.close();
+		remove(Virtual_Full_Path);
+		remove("H:\\NKPatcher\\Configs\\EEPROM_off.bin");
+		remove("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\veeprom\\disabled.png");
+		CopyFile(EnabledPNG, "E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\veeprom\\enabled.png", NULL);
 		//Create Full path for BIN File..
 		CHAR tmpFileName[FILENAME_MAX];
 		ZeroMemory(tmpFileName, FILENAME_MAX);
 		strcat(tmpFileName, Virtual_Path);
-		strcat(tmpFileName, "EEPROM.bin");
+		strcat(tmpFileName, "eeprom.bin");
 		m_pXKEEPROM->WriteToBINFile((LPCSTR)tmpFileName);
 		/* Change the serial number to V-EEPROM ENB */
 		std::ofstream V_EEPROM(Virtual_Full_Path, std::ios::binary | std::ios::in | std::ios::out);
@@ -297,18 +303,18 @@ HRESULT ConfigMagicApp::Initialize()
 		CHAR tmpFileName[FILENAME_MAX];
 		ZeroMemory(tmpFileName, FILENAME_MAX);
 		strcat(tmpFileName, Backup_Path);
-		strcat(tmpFileName, "EEPROM.bin");
+		strcat(tmpFileName, "eeprom.bin");
 		m_pXKEEPROM->WriteToBINFile((LPCSTR)tmpFileName);
 		
 		//Write XBOX Information into .TXT file...
 		ZeroMemory(tmpFileName, FILENAME_MAX);
 		strcat(tmpFileName, Backup_Path);
-		strcat(tmpFileName, "EEPROM.cfg");
+		strcat(tmpFileName, "eeprom.cfg");
 		m_pXKEEPROM->WriteToCFGFile((LPCSTR)tmpFileName);
 		
 		ZeroMemory(tmpFileName, FILENAME_MAX);
 		strcat(tmpFileName, Backup_Path);
-		strcat(tmpFileName, "XBOX INFO.txt");
+		strcat(tmpFileName, "xbox info.txt");
 		WriteTXTInfoFile(tmpFileName);
 		
 		//Write XBOX Kernel Information file...
@@ -442,6 +448,29 @@ HRESULT ConfigMagicApp::Initialize()
 	else 
 		m_pXKEEPROM->SetDecryptedEEPROMData(m_XBOX_Version, &currentEEPROM);
 
+
+	// Reload NKPatcher Settings
+	std::ifstream rnkpfile(RNKP_File);
+	if (rnkpfile.good())
+	{
+		rnkpfile.close();
+		remove(PrepXBE);
+		remove(RNKP_File);
+		RemoveDirectory(PrepDir);
+		XKUtils::LaunchXBE(NKPatcherSettings);
+		XKUtils::XBOXPowerCycle();
+	}
+
+	// Lock Xbox HDD if hddlockfile exist
+	std::ifstream lockfile(LockHDD_File);
+	if (lockfile.good())
+	{
+		lockfile.close();
+		LockNewHDD();
+		XKUtils::LaunchXBE(PrepUX);
+		XKUtils::XBOXPowerCycle();
+	}
+	
 	// Keep config files if Override config exists
 	std::ifstream overidefile(Override_File);
 	if (overidefile.good())
@@ -762,4 +791,66 @@ void ConfigMagicApp::LoadSettingsFromINI()
 	}
 	else
 		strcpy((LPSTR)m_Reboot, "FALSE");
+}
+
+void ConfigMagicApp::LockNewHDD()
+{
+	//ATA Command Structure..
+	XKHDD::ATA_COMMAND_OBJ hddcommand;
+	UCHAR HddPass[32];
+	UCHAR MasterPassword[13] = "TEAMASSEMBLY";
+	
+	//Dont Lock if the EEPROM data was NOT read from XBOX
+	if(m_XBOX_EEPROM_Current)
+	{
+		//Decrypting EEPROM, if it fails.. Display fail message!
+		m_pXKEEPROM->Decrypt();
+		//Get IDE_ATA_IDENTIFY Data for HDD ..
+		ZeroMemory(&hddcommand, sizeof(XKHDD::ATA_COMMAND_OBJ));
+		hddcommand.DATA_BUFFSIZE = 0;
+		hddcommand.IPReg.bDriveHeadReg = IDE_DEVICE_MASTER;
+		hddcommand.IPReg.bCommandReg = IDE_ATA_IDENTIFY;
+		XKHDD::SendATACommand(IDE_PRIMARY_PORT, &hddcommand, IDE_COMMAND_READ);
+
+		XKEEPROM::EEPROMDATA tmpData;
+		m_pXKEEPROM->GetEEPROMData(&tmpData);
+		XKHDD::GenerateHDDPwd(tmpData.HDDKkey, hddcommand.DATA_BUFFER, HddPass);
+
+		//Get ATA Locked State
+		DWORD SecStatus = XKHDD::GetIDESecurityStatus(hddcommand.DATA_BUFFER);
+		//Check if Disk is already locked..
+		if ((SecStatus & IDE_SECURITY_SUPPORTED) && !(SecStatus & IDE_SECURITY_ENABLED))
+		{
+			//Execute HDD Unlock..
+			ZeroMemory(&hddcommand, sizeof(XKHDD::ATA_COMMAND_OBJ));
+			hddcommand.DATA_BUFFSIZE = 512;
+			hddcommand.IPReg.bDriveHeadReg = IDE_DEVICE_MASTER;
+			hddcommand.IPReg.bCommandReg = IDE_ATA_SECURITY_SETPASSWORD;
+			LPBYTE HDDP = (LPBYTE)&hddcommand.DATA_BUFFER;
+			LPDWORD pMastr = (LPDWORD) HDDP;
+			*pMastr = 0x0001; //Set Master Pwd..
+			memcpy(HDDP+2, MasterPassword, 13);
+			XKHDD::SendATACommand(IDE_PRIMARY_PORT, &hddcommand, IDE_COMMAND_WRITE);
+
+			//Query HDD To see if we succeeded..
+			ZeroMemory(&hddcommand, sizeof(XKHDD::ATA_COMMAND_OBJ));
+			hddcommand.DATA_BUFFSIZE = 512;
+			hddcommand.IPReg.bDriveHeadReg = IDE_DEVICE_MASTER;
+			hddcommand.IPReg.bCommandReg = IDE_ATA_IDENTIFY;
+			XKHDD::SendATACommand(IDE_PRIMARY_PORT, &hddcommand, IDE_COMMAND_READ);
+			SecStatus = XKHDD::GetIDESecurityStatus(hddcommand.DATA_BUFFER);
+			
+
+			//Execute HDD Unlock..
+			ZeroMemory(&hddcommand, sizeof(XKHDD::ATA_COMMAND_OBJ));
+			hddcommand.DATA_BUFFSIZE = 512;
+			hddcommand.IPReg.bDriveHeadReg = IDE_DEVICE_MASTER;
+			hddcommand.IPReg.bCommandReg = IDE_ATA_SECURITY_SETPASSWORD;
+			memcpy(HDDP+2, HddPass, 20);
+			XKHDD::SendATACommand(IDE_PRIMARY_PORT, &hddcommand, IDE_COMMAND_WRITE);
+
+		}
+		// Re-Encrypt EEPROM with current XBOX Version..
+		m_pXKEEPROM->EncryptAndCalculateCRC(m_XBOX_Version);
+	}
 }

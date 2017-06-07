@@ -2,7 +2,7 @@
 	<Information>
 		<Author>Rocky5</Author>
 		<Copyright>Xbox</Copyright>
-		<Version>1.1</Version>
+		<Version>1.1.1</Version>
 	</Information>
 	<Fonts>
 		<Font Name="font1">..\skin files\fonts\font1.xpr</Font>
@@ -62,11 +62,12 @@
 		<Text zindex="3" Top="219" Left="71" Width="499" Align="Middle" ScaleX="100" ScaleY="100" Color="0xffaee239" Source="know via theisozone forums. Thank you."/>
 		<Text zindex="3" Top="239" Left="71" Width="499" Align="Middle" ScaleX="100" ScaleY="100" Color="0xffaee239" Source="With this softmod, the process is simple &amp; pain free."/>
 		<Image zindex="3" Top="10" Left="590" Width="42" Height="42" Source="GameIcon"/>
-		<!-- (A) Select (B) Back section -->
+		<!-- (A) Select (B) Back section
 		<Shape zindex="1" Type="Rectangle" Top="427" Left="71" Width="165" Height="25" BorderColor="0x00000000" BackColor="0xff3a3a46"/>
 		<Shape zindex="1" Type="Rectangle" Top="427" Left="71" Width="148" Height="45" BorderColor="0x00000000" BackColor="0xff3a3a46"/>
 		<Shape zindex="1" Type="triangle" Top="450" Left="201" Width="35" Height="21" BorderColor="0x00000000" BackColor="0xff3a3a46" Direction="down"/>
-		<Image zindex="3" Top="430" Left="95" Width="112" Height="38">..\skin files\images\buttons.png</image>		
+		<Image zindex="3" Top="430" Left="95" Width="112" Height="38">..\skin files\images\buttons.png</image>
+		-->
 	</Main>
 	<MusicPlayer Top="1" Left="1" Width="640" Height="480" >
 		<BackGround>..\skin files\images\musicplayer\musicbg.png</BackGround>

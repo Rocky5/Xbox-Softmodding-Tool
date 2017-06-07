@@ -1,13 +1,14 @@
-<Skin name="ShadowC">
+﻿<Skin name="Softmod">
 	<Information>
 		<Author>Rocky5</Author>
 		<Copyright>Xbox</Copyright>
-		<Version>1.1</Version>
+		<Version>1.1.1</Version>
 	</Information>
 	<Fonts>
 		<Font Name="font1">font1.xpr</Font>
 		<Font Name="font2">font2.xpr</Font>
 		<Font Name="font3">font3.xpr</Font>
+		<Font Name="font4">font4.xpr</Font>
 	</Fonts>
 	<IntroMovie/>
 	<FileManager SafeBorder="False" DrawBorder="False">
@@ -21,12 +22,25 @@
 		<Cellwall/>
 		<Orb/>
 		<Icon/>
-		<Menu Horizontal="False" Smooth="True" Align="Middle" ShowIcon="False" Rotate="False" ShowArrows="False" Scroll="1">
-			<Position Top="133" Left="72" Width="226" Height="300" Fixed="False" FixAt="0" MaxItem="12"/>
-			<Font>font1</font>
+		<Menu Horizontal="False" Smooth="True" Align="Left" ShowIcon="False" Rotate="False" ShowArrows="False" Scroll="1">
+			<Position Top="133" Left="73" Width="324" Height="300" Fixed="False" FixAt="0" MaxItem="12"/>
+			<Font>font2</font>
 			<Preview EnableAudio="False" Top="0" Left="0" Width="0" Height="0" />
 		</Menu>
 		<InfoFont>font2</InfoFont>
+		<!-- ------------------ -->
+		<!--    Colour Pallet   -->
+		<!-- ------------------ --
+		<Text zindex="9" Top="0" Left="9" Width="82" Align="Middle" ScaleX="75" ScaleY="75" Color="0xff000000" Source="Colour Pallet"/>
+		<Shape zindex="9" Type="Rectangle" Top="19" Left="9" Width="82" Height="12" BorderColor="" BackColor="0xff000000"/>
+		<Shape zindex="10" Type="Rectangle" Top="20" Left="10" Width="10" Height="10" BorderColor="" BackColor="0xff626473"/>
+		<Shape zindex="10" Type="Rectangle" Top="20" Left="20" Width="10" Height="10" BorderColor="" BackColor="0xff4c4d58"/>
+		<Shape zindex="10" Type="Rectangle" Top="20" Left="30" Width="10" Height="10" BorderColor="" BackColor="0xff3a3a46"/>
+		<Shape zindex="10" Type="Rectangle" Top="20" Left="40" Width="10" Height="10" BorderColor="" BackColor="0xffaee239"/>
+		<Shape zindex="10" Type="Rectangle" Top="20" Left="50" Width="10" Height="10" BorderColor="" BackColor="0xffafb2ce"/>
+		<Shape zindex="10" Type="Rectangle" Top="20" Left="60" Width="10" Height="10" BorderColor="" BackColor="0x00626473"/>
+		<Shape zindex="10" Type="Rectangle" Top="20" Left="70" Width="10" Height="10" BorderColor="" BackColor="0x00de8c86"/>
+		<Shape zindex="10" Type="Rectangle" Top="20" Left="80" Width="10" Height="10" BorderColor="" BackColor="0x0086d7de"/>
 		<!-- ------------------ -->
 		<!-- GUI Elements start -->
 		<!-- ------------------ -->
@@ -34,26 +48,33 @@
 		<Image zindex="3" Top="28" Left="154" Width="334" Height="55">Xbox Logo.png</image>
 		<Image zindex="3" Top="89" Left="202" Width="239" Height="23">Softmodding Tool.png</image>
 		<!-- List Background -->
-		<Shape zindex="1" Type="Rectangle" Top="130" Left="71" Width="228" Height="298" BorderColor="0xff4c4d58" BackColor="0xbf626473"/>
+		<Shape zindex="1" Type="Rectangle" Top="130" Left="71" Width="498" Height="298" BorderColor="0xff4c4d58" BackColor="0xbf626473"/>
 		<!-- Extra Info Background & TXT -->
-		<Shape zindex="2" Type="Rectangle" Top="130" Left="407" Width="162" Height="183" BorderColor="0xff4c4d58" BackColor="0xbf626473"/>
+		<Shape zindex="2" Type="Rectangle" Top="165" Left="75" Width="238" Height="1" BorderColor="0x00000000" BackColor="0xffaee239"/>
+		<Shape zindex="2" Type="Rectangle" Top="130" Left="317" Width="5" Height="298" BorderColor="0xff4c4d58" BackColor="0xbf626473"/>
 		<!--  -->
-		<Text zindex="3" Top="133" Left="407" Width="162" Align="Middle" ScaleX="100" ScaleY="100" Color="0xffaee239" Source="System Info"/>
-		<Text zindex="3" Top="149" Left="412" Width="150" Align="Left" ScaleX="100" ScaleY="100" Color="0xffafb2ce" Source="Time"/>
-		<Text zindex="3" Top="165" Left="412" Width="150" Align="Left" ScaleX="100" ScaleY="100" Color="0xffafb2ce" Source="Xbox Region: $VideoMode$"/>
-		<Text zindex="3" Top="181" Left="412" Width="150" Align="Left" ScaleX="100" ScaleY="100" Color="0xffafb2ce" Source="Version"/>
+		<Text zindex="3" Top="133" Left="284" Width="324" Align="Middle" ScaleX="100" ScaleY="100" Color="0xffaee239" Source="System Information"/>
+		<Text zindex="3" Top="149" Left="284" Width="324" Align="Middle" ScaleX="100" ScaleY="100" Color="0xffafb2ce" Source="Time"/>
+		<Text zindex="3" Top="165" Left="284" Width="324" Align="Middle" ScaleX="100" ScaleY="100" Color="0xffafb2ce" Source="Video: $VideoMode$"/>
+		<Text zindex="3" Top="181" Left="284" Width="324" Align="Middle" ScaleX="100" ScaleY="100" Color="0xffafb2ce" Source="Xbox: $Version$"/>
+		<Text zindex="3" Top="197" Left="284" Width="324" Align="Middle" ScaleX="100" ScaleY="100" Color="0xffafb2ce" Source="Memory: $FreeMemory$"/>
+		<Text zindex="3" Top="213" Left="284" Width="324" Align="Middle" ScaleX="100" ScaleY="100" Color="0xffafb2ce" Source="BIOSVersion"/>
+		<Text zindex="3" Top="229" Left="284" Width="324" Align="Middle" ScaleX="100" ScaleY="100" Color="0xffafb2ce" Source="CPUTemp"/>
+		<Text zindex="3" Top="245" Left="284" Width="324" Align="Middle" ScaleX="100" ScaleY="100" Color="0xffafb2ce" Source="MBTemp"/>
 		<!--  -->
-		<Text zindex="3" Top="201" Left="407" Width="162" Align="Middle" ScaleX="100" ScaleY="100" Color="0xffaee239" Source="Network Info"/>
-		<Text zindex="3" Top="217" Left="412" Width="150" Align="Left" ScaleX="100" ScaleY="100" Color="0xffafb2ce" Source="IP"/>
-		<Text zindex="3" Top="233" Left="412" Width="150" Align="Left" ScaleX="100" ScaleY="100" Color="0xffafb2ce" Source="Active Users: $NumClient$"/>
-		<!--  -->
-		<Text zindex="3" Top="253" Left="407" Width="162" Align="Middle" ScaleX="100" ScaleY="100" Color="0xffaee239" Source="Xbox Extras Disc Info"/>
-		<Text zindex="3" Top="269" Left="412" Width="150" Align="Left" ScaleX="100" ScaleY="100" Color="0xffafb2ce" Source="Running: v$SkinVersion$"/>
-		<Text zindex="3" Top="285" Left="412" Width="150" Align="Left" ScaleX="100" ScaleY="100" Color="0xffafb2ce" Source="Creator: $SkinAuthor$"/>
+		<Text zindex="3" Top="266" Left="284" Width="324" Align="Middle" ScaleX="100" ScaleY="100" Color="0xffaee239" Source="Network Information"/>
+		<Text zindex="3" Top="282" Left="284" Width="324" Align="Middle" ScaleX="100" ScaleY="100" Color="0xffafb2ce" Source="IP"/>
+		<Text zindex="3" Top="298" Left="284" Width="324" Align="Middle" ScaleX="100" ScaleY="100" Color="0xffafb2ce" Source="Gateway"/>
+		<Text zindex="3" Top="314" Left="284" Width="324" Align="Middle" ScaleX="100" ScaleY="100" Color="0xffafb2ce" Source="DNS: $DNS1$"/>
+		<Text zindex="3" Top="330" Left="284" Width="324" Align="Middle" ScaleX="100" ScaleY="100" Color="0xffafb2ce" Source="LinkStatus"/>
+		<Text zindex="3" Top="346" Left="284" Width="324" Align="Middle" ScaleX="100" ScaleY="100" Color="0xffafb2ce" Source="Active Users: $NumClient$"/>
+		<!--  -->	
+		<Text zindex="3" Top="368" Left="284" Width="324" Align="Middle" ScaleX="100" ScaleY="100" Color="0xffaee239" Source="Xbox Extras Disc Information"/>
+		<Text zindex="3" Top="384" Left="284" Width="324" Align="Middle" ScaleX="100" ScaleY="100" Color="0xffafb2ce" Source="Running: v$SkinVersion$"/>
+		<Text zindex="3" Top="400" Left="284" Width="324" Align="Middle" ScaleX="100" ScaleY="100" Color="0xffafb2ce" Source="Creator: $SkinAuthor$"/>
 		<!--  -->
 		<Text zindex="3" Top="430" Left="240" Width="100" Align="Left" ScaleX="100" ScaleY="100" Color="0xff3a3a46" Source="Tray:"/>
 		<Text zindex="3" Top="430" Left="272" Width="340" Align="Left" ScaleX="100" ScaleY="100" Color="0xff3a3a46" Source="DVDTitle"/>
-		<Image zindex="3" Top="10" Left="590" Width="42" Height="42" Source="GameIcon"/>
 		<!-- (A) Select (B) Back section -->
 		<Shape zindex="1" Type="Rectangle" Top="427" Left="71" Width="165" Height="25" BorderColor="0x00000000" BackColor="0xff3b3c47"/>
 		<Shape zindex="1" Type="Rectangle" Top="427" Left="71" Width="148" Height="45" BorderColor="0x00000000" BackColor="0xff3b3c47"/>
@@ -61,7 +82,10 @@
 		<Shape zindex="1" Type="Rectangle" Top="427" Left="71" Width="499" Height="4" BorderColor="0x00000000" BackColor="0xff3b3c47"/>
 		<Shape zindex="1" Type="Rectangle" Top="450" Left="71" Width="475" Height="4" BorderColor="0x00000000" BackColor="0xff3b3c47"/>
 		<Image zindex="3" Top="430" Left="95" Width="112" Height="38">buttons.png</image>
-
+		<!--  -->
+		<!-- <Text zindex="3" Top="408" Left="285" Align="Right" ScaleX="100" ScaleY="100" Color="0xffaee239" Font="font4" Source="Enabled:"/> -->
+		<Image zindex="3" Top="396" Left="288" Width="25" Height="27">E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\disabled.png</image>
+		<Image zindex="4" Top="396" Left="288" Width="25" Height="27" Source="GameIcon"/>
 		<!-- 	
 		<Shape zindex="1" Type="Rectangle" Top="160" Left="300" Width="110" Height="4" BorderColor="0x00000000" BackColor="0xff3b3c47"/>
 		<Shape zindex="1" Type="Rectangle" Top="280" Left="300" Width="110" Height="4" BorderColor="0x00000000" BackColor="0xff3b3c47"/>

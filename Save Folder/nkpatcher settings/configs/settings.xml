@@ -4,7 +4,7 @@
 		<Preference>
 			<AbortOnError>Yes</AbortOnError>
 			<ContextMenu AllowUninstall="No" AllowItemEdit="No" AllowRecentList="No" LinkToSave="No" LinkToGame="No"/>
-			<Skin Path="E:\UDATA\21585554\000000000000\nkpatcher settings\Skins\">NKPatcher Settings</Skin>
+			<Skin Path="Skins">NKPatcher Settings</Skin>
 			<VideoSettings Soften="No" Widescreen="No" UsePAL60="No" FastRefresh="No" EnableTextureCompression="No" Use720P="No" Use480P="Yes" FilterLevel="0"/>
 			<LiveUpdate AutoCheck="No"/>
 			<AutoVideoMode MultiRegion="Off" UsePAL60="No">no</AutoVideoMode>
@@ -51,27 +51,31 @@
 		</LED>
 	</Settings>
 	<Menu>
-		<List Text="Information" Sort="Off" Batch="True">
+		<List Text="NKPatcher Settings Information" Sort="Off" Batch="True">
 			<Item Action="MessageBox" Arg1="Information">Welcome to the NKPatcher Settings. Here you will be able to change a few of the NKPatcher functions, the LED colour of your Xbox and the backing up or moving of your dashboard.</Item>
 			<Item Action="MessageBox" Arg1="Information">To exit "NKPatcher Settings" you can turn the Xbox off and on or press on the control pad.    LT+RT+(BLACK)+(BACK)</Item>
 		</List>
-		<Item>------------------------------------------</Item>
-		<List Text="Dashboards" Sort="Off">
-			<List Text="Information" Sort="Off" batch="true">
+		<Item></Item>
+		
+		<List Text="1. Dashboards" Sort="Off">
+			<List Text="Dashboards Menu Information" Sort="Off" Batch="true">
 				<Item Action="MessageBox" Arg1="Information">This option allows you to adjust some dashboard features.</Item>
 			</List>
-			<Item>------------------------------------------</Item>
-			<Item Action="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\dash settings\default.xbe">Backup, Restore or Move</Item>
-			<List Text="DualBooting" Sort="Off">
-				<List Text="Information" Sort="Off" Batch="True">
+			<Item></Item>
+			<List Text="1.1 Backup, Restore or Move" Sort="Off" Batch="True">
+				<!-- <Item Action="Copy" Arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox softmod tool kit\default.xbe" Arg2="E:\Prep\"/>
+				<Item Action="Copy" Arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox softmod tool kit\dummy_file" Arg2="E:\Prep\RNKP.enabled"/> -->
+				<Item Action="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\dash settings\default.xbe">Backup, Restore or Move</Item>
+			</List>
+			
+			<List Text="1.2 DualBooting" Sort="Off">
+				<List Text="DualBooting Menu Information" Sort="Off" Batch="True">
 					<Item Action="MessageBox" Arg1="Information">This is where you can enable the dualboot dashboard feature. After you have enabled dualbooting, you must place the "Alt Dashboard" in E:\Alt Dashboard" or when selecting "Enable" I will ask you if you want it setup.</Item>
-				</List>
-				<List Text="Advanced Info" Sort="Off" Batch="True">
 					<Item Action="MessageBox" Arg1="Info">I'm going to tell you how to setup your own dualboot path, so you can have your own custom "Alt Dashboard" location.</Item>
 					<Item Action="MessageBox" Arg1="Info">With this softmod there will be a folder called "OpenDash Dualboot.settings". Inside this this folder there is a file called "Build Dualboot.settings.bat" double click this and follow the on screen instructions. Yes its that simple.</Item>
 				</List>
-				<Item>------------------------------------------</Item>
-				<List Text="Enable" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\dualboot\enabled.png">
+				<Item></Item>
+				<List Text="1.2.1 Enable DualBooting" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\dualboot\enabled.png">
 					<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\dualboot"/>
 					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\dualboot\enabled.png"/>
 					<Item Action="Copy" arg1="C:\nkpatcher\configs\dualboot\dualboot.settings" arg2="C:\nkpatcher\configs\dualboot.settings"/>
@@ -82,7 +86,7 @@
 					</List>
 					<Item Action="MessageBox" Arg1="Complete">Setting saved. Changes will take affect on next boot.</Item>
 				</List>
-				<List Text="Disable" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\dualboot\disabled.png">
+				<List Text="1.2.2 Disable DualBooting" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\dualboot\disabled.png">
 					<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\dualboot"/>
 					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\dualboot\disabled.png"/>
 					<Item Action="Copy" arg1="dummy" arg2="C:\nkpatcher\configs\dualboot.settings"/>
@@ -95,9 +99,7 @@
 					</List>
 					<Item Action="MessageBox" Arg1="Complete">Setting saved. Changes will take affect on next boot.</Item>
 				</List>
-				<Item>------------------------------------------</Item>
-				<Item>Update</Item>
-				<List Text="Dualboot.settings" Sort="Off" Batch="True">
+				<List Text="1.2.3 Update Dualboot.settings" Sort="Off" Batch="True">
 					<Item Action="MessageBox" Arg1="Info">This option is for updating the dualboot.settings file, why would I need that I hear you say. Well if you change the dashboard path and you disable the dualboot, when you enable the dualboot again your custom dashboard path will be lost. Using this option will allow you to disable and enable the dualboot without losing your custom dashboard path.</Item>
 					<Item Action="MessageBox" Arg1="Info">Please make sure you have FTP'ed over the new "dualboot.settings" file to "E", if you haven't, do so now. Because if it's not found this process will fail. Note: You will need to select the "Enable" option again to use these new settings.</Item>
 					<Item Action="Rename" arg1="E:\dualboot.settings" arg2="E:\dualboot.setting">E:\dualboot.settings not found</Item>
@@ -106,8 +108,7 @@
 					<Item Action="Delete" arg1="E:\dualboot.settings"/>
 					<Item Action="MessageBox" Arg1="Complete">Dualboot.settings has been updated.</Item>
 				</List>
-				<Item>Restore</Item>
-				<List Text="Dualboot.settings" Sort="Off" Batch="True">
+				<List Text="1.2.4 Restore Dualboot.settings" Sort="Off" Batch="True">
 					<Item Action="AskUser" Arg1="Info">This will restore the stock "dualboot.settings". This will overwrite any custom "dualboot.settings" file that has been updated. Note: You will need to select the "Enable" option again to use these new settings.</Item>
 					<Item Action="Format" arg1="Y"/>
 					<Item Action="Unrar" arg1="E:\UDATA\21585554\000000000000\softmod files\files.rar" arg2="Y:\"/>
@@ -118,11 +119,53 @@
 				</List>
 			</List>
 		</List>
-		<List Text="Fan Speed" Sort="Off">
-			<List Text="Information" Sort="Off" Batch="True">
+		
+		<List Text="2. EEPROM" Sort="Off">
+			<List Text="EEPROM Menu Information" Sort="Off" Batch="True">
+				<Item Action="MessageBox" Arg1="Information">This is used to protect users from toying with there EEPROM. I don't use this by default because it causes issues when trying to change a PAL/NTSC Xbox to NTSC/PAL. But it's here if you really want to use it.</Item>
+			</List>
+			<Item></Item>
+			<List Text="2.1 Enable Virtual EEPROM" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\enabled.png">
+				<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.pn">Please disable the virtual eeprom. The "Virtual EEPROM" is write protected until it's disable and the system has restarted</Item>
+				<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.pn" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.png"/>
+				<Item Action="MessageBox" Arg1="Complete">To install the Virtual EEPROM. \nI will need to exit nkpatcher settings. \nNote: Changes will take affect on next boot.</Item>
+				<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\savemeta.xbx" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox softmod tool kit\Virtual_EEPROM_Backup.enabled"/>
+				<Item Action="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox softmod tool kit\default.xbe"/>
+			</List>
+			<List Text="2.2 Disable Virtual EEPROM" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.png">
+				<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\enabled.pn">Please enable the virtual eeprom</Item>
+				<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\enabled.pn" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\enabled.png"/>
+				<List>
+					<Item Action="AskUser" Arg1="Warning">This option has a mandatory restart. Would you like to continue?</Item>
+					<Item Action="Copy" arg1="C:\nkpatcher\configs\fan files\fan1.bin" arg2="C:\nkpatcher\configs\EEPROM_off.bin"/>
+					<Item Action="Copy" arg1="dummy" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom"/>
+					<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom"/>
+					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.png"/>
+					<Item Action="MessageBox" Arg1="Complete">Setting saved. \nThe Xbox will now restart.</Item>
+					<Item Action="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\reboot xbe\default.xbe"/>
+				</List>
+			</List>
+			<List Text="2.3 Backup EEPROM &amp; Xbox information" Sort="Off" Batch="True">
+				<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.pn">Please disable the virtual eeprom</Item>
+				<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.pn" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.png"/>
+				<Item Action="MessageBox" Arg1="Complete">The following: \n\neeprom.bin \neeprom.cfg \nxbox info.txt \n\nwill be placed in "E:\Backups\EEPROM\".</Item>
+				<Item Action="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox softmod tool kit\default.xbe">Restart</Item>
+			</List>
+			<Item></Item>
+			<Item></Item>
+			<Item></Item>
+			<Item></Item>
+			<Item></Item>
+			<Item></Item>
+			<Item></Item>
+			<Item>These Options Require A Restart</Item>
+		</List>
+		
+		<List Text="3. Fan Speed" Sort="Off">
+			<List Text="Fan Speed Menu Information" Sort="Off" Batch="True">
 				<Item Action="MessageBox" Arg1="Information">These will adjust the fan speed of your Xbox, from the Default 20% all the way up to 100% (noisy as hell)</Item>
 			</List>
-			<Item>------------------------------------------</Item>
+			<Item></Item>
 			<List Text="Default" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\fan\default-fan.png">
 				<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\fan"/>
 				<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\fan\default-fan.png"/>
@@ -178,20 +221,20 @@
 				<Item Action="Copy" arg1="C:\nkpatcher\configs\fan files\FAN8.bin" arg2="C:\nkpatcher\configs\FAN.bin"/>
 				<Item Action="MessageBox" Arg1="Complete">Setting saved. Changes will take affect on next boot.</Item>
 			</List>
-			<Item>------------------------------------------</Item>
-			<Item>These Options</Item>
-			<Item>Require A Restart</Item>
+			<Item></Item>
+			<Item>These Options Require A Restart</Item>
 		</List>
-		<List Text="Hard Drive" Sort="Off">
-			<List Text="Information" Sort="Off" batch="true">
+		
+		<List Text="4. Hard Drive" Sort="Off">
+			<List Text="Hard Drive Menu Information" Sort="Off" Batch="true">
 				<Item Action="MessageBox" Arg1="Information">You can change the partition types NKPatcher will use or populate a new F or G partition with all the appropriate folders.</Item>
 			</List>
-			<Item>------------------------------------------</Item>
-			<List Text="Partition Types" Sort="Off">
-				<List Text="Information" Sort="Off" Batch="True">
+			<Item></Item>
+			<List Text="4.1 Partition Types" Sort="Off">
+				<List Text="Partition Types Menu Information" Sort="Off" Batch="True">
 					<Item Action="MessageBox" Arg1="Information">Default:\nF takes all the space.\n\nPatition F and G:\nF - 137GB / G - takes the rest.\n\nXBPartitioner:\nCustom partition table.</Item>
 				</List>
-				<Item>------------------------------------------</Item>
+				<Item></Item>
 				<List Text="Default" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\part\default-part.png">
 					<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\part"/>
 					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\part\default-part.png"/>
@@ -210,15 +253,20 @@
 					<Item Action="Copy" arg1="C:\nkpatcher\configs\nkpatcher\6.xbe" arg2="C:\nkpatcher\default.xbe"/>
 					<Item Action="MessageBox" Arg1="Complete">Setting saved. Changes will take affect on next boot.</Item>
 				</List>
-				<Item>------------------------------------------</Item>
-				<Item>These Options</Item>
-				<Item>Require A Restart</Item>
+				<Item></Item>
+				<Item></Item>
+				<Item></Item>
+				<Item></Item>
+				<Item></Item>
+				<Item></Item>
+				<Item></Item>
+				<Item>These Options Require A Restart</Item>
 			</List>
-			<List Text="Populate Partitions" Sort="Off">
-				<List Text="Information" Sort="Off" Batch="True">
+			<List Text="4.2 Populate Partitions" Sort="Off">
+				<List Text="Populate Partitions Menu Information" Sort="Off" Batch="True">
 					<Item Action="MessageBox" Arg1="Information">Well these options will create all the folder structures you need for "Applications, Emulators, Games and Homebrew".</Item>
 				</List>
-				<Item>------------------------------------------</Item>
+				<Item></Item>
 				<List Text="E Partition" Sort="Off" Batch="True">
 					<Item Action="Copy" arg1="dummy" arg2="E:\Applications\"/>
 					<Item Action="Copy" arg1="dummy" arg2="E:\Emulators\"/>
@@ -248,11 +296,12 @@
 				</List>
 			</List>
 		</List>
-		<List Text="Kernel Fonts" Sort="Off">
-			<List Text="Information" Sort="Off" Batch="True">
+		
+		<List Text="5. Kernel Fonts" Sort="Off">
+			<List Text="Kernel Fonts Menu Information" Sort="Off" Batch="True">
 				<Item Action="MessageBox" Arg1="Info">This menu displays what Xbox Kernel Font is enabled. This process is automated and is done when the softmod is installed. You can also find "Advanced Features" at the bottom of the list.</Item>
 			</List>
-			<Item>------------------------------------------</Item>
+			<Item></Item>
 			<List Text="Generic" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font\generic.png"/>
 			<List Text="K:1.0.3944.1" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font\K.1.0.3944.1.png"/>
 			<List Text="K:1.0.4034.1" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font\K.1.0.4034.1.png"/>
@@ -262,20 +311,20 @@
 			<List Text="K:1.0.5530.1" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font\K.1.0.5530.1.png"/>
 			<List Text="K:1.0.5713.1" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font\K.1.0.5713.1.png"/>
 			<List Text="K:1.0.5838.1" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font\K.1.0.5838.1.png"/>
-			<Item>------------------------------------------</Item>
-			<List Text="Advanced Features" Sort="Off">
-				<List Text="Information" Sort="Off" Batch="True">
+			<Item></Item>
+			<List Text="5.1 Advanced Features" Sort="Off">
+				<List Text="Advanced Features Menu Information" Sort="Off" Batch="True">
 					<Item Action="MessageBox" Arg1="Info">In here you can install the correct kernel font for your Xbox, or fix random crashes using the xft font delay.</Item>
 				</List>
-				<Item>------------------------------------------</Item>
-				<List Text="Kernel Font Options" Sort="Off">
-					<List Text="Information" Sort="Off" Batch="True">
+				<Item></Item>
+				<List Text="5.1.1 Kernel Font Options" Sort="Off">
+					<List Text="Kernel Font Options Menu Information" Sort="Off" Batch="True">
 						<Item Action="MessageBox" Arg1="Info">These options will install the proper kernel font for your Xbox Kernel or restore the generic version.</Item>
 						<Item Action="MessageBox" Arg1="Kernel Specific">Pros:\n100% exploit boot compatibility. \n\nCons:\nCannot use this HDD on another kernel version.</Item>
 						<Item Action="MessageBox" Arg1="Generic">Pros:\nCan be used on any Xbox kernel version. \n\nCons:\nOn rare occasions can crash on or after the XLogo screen.</Item>
 						<Item Action="MessageBox" Arg1="Note">If you ever want to clone this HDD to another Xbox. Please restore the kernel font first, by selecting the "Restore Generic Font" option. This is only necessary if you have used the "Install Kernel Font" option.</Item>
 					</List>
-					<Item>------------------------------------------</Item>
+					<Item></Item>
 					<List Text="Install Kernel Font" Sort="Off" Batch="True">
 						<Item Action="MessageBox" Arg1="Info">I will need to exit nkpatcher settings for the install to get done. Changes will take effect on next reboot.</Item>
 						<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\savemeta.xbx" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox softmod tool kit\Update_Font.enabled"/>
@@ -288,21 +337,30 @@
 						<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font\generic.png"/>
 						<Item Action="MessageBox" Arg1="Info">Changes will take effect on next reboot.</Item>
 					</List>
-					<!-- 					
+					<!-- 
 					<List Text="Restore Generic Font" Sort="Off" Batch="True">
 						<Item Action="MessageBox" Arg1="Info">I will need to exit nkpatcher settings for the install to get done. Changes will take effect on next reboot.</Item>
 						<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\savemeta.xbx" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox softmod tool kit\Restore_Font.enabled"/>
 						<Item Action="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox softmod tool kit\default.xbe">Restart</Item>
 					</List>
--->
+					-->
+					<Item></Item>
+					<Item></Item>
+					<Item></Item>
+					<Item></Item>
+					<Item></Item>
+					<Item></Item>
+					<Item></Item>
+					<Item></Item>
+					<Item>These Options Require A Restart</Item>
 				</List>
-				<List Text="XTF Font Delay Options" Sort="Off">
-					<List Text="Information" Sort="Off" Batch="True">
+				<List Text="5.1.2 Font Delay Options" Sort="Off">
+					<List Text="Font Delay Options Menu Information" Sort="Off" Batch="True">
 						<Item Action="MessageBox" Arg1="Information">These are to be used if you are still getting random crashes at the "xlogo screen", only apply these if you have already tried the "Install Kernel Font" option.</Item>
 						<Item Action="MessageBox" Arg1="Information">Start at "1 s.xtf file" and then test to see if it's still crashing. If you're still getting crashing after applying "1 s.xtf file", then try "2 s.xtf files" and if you're still getting crashing :/ try "3 s.xtf files" and so on. If for some strange reason you are still crashing after all this, buy a new Xbox.</Item>
 					</List>
-					<Item>------------------------------------------</Item>
-					<List Text="Remove all" Sort="Off" Batch="True">
+					<Item></Item>
+					<List Text="Remove all delay files" Sort="Off" Batch="True">
 						<Item Action="Copy" arg1="dummy" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font-Sxtf"/>
 						<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font-Sxtf"/>
 						<Item Action="Copy" arg1="dummy" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font-Sxtf"/>
@@ -318,7 +376,7 @@
 						<Item Action="Delete" arg1="C:\xodash\5s.xtf"/>
 						<Item Action="MessageBox" Arg1="Complete">Setting saved. Changes will take affect on next boot.</Item>
 					</List>
-					<List Text="1 s.xtf file" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font-Sxtf\Sxtf-1.png">
+					<List Text="Install 1 delay file" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font-Sxtf\Sxtf-1.png">
 						<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font-Sxtf"/>
 						<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font-Sxtf\Sxtf-1.png"/>
 						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\s.xtf"/>
@@ -332,7 +390,7 @@
 						<Item Action="Delete" arg1="C:\xodash\5s.xtf"/>
 						<Item Action="MessageBox" Arg1="Complete">Setting saved. Changes will take affect on next boot.</Item>
 					</List>
-					<List Text="2 s.xtf files" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font-Sxtf\Sxtf-2.png">
+					<List Text="Install 2 delay files" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font-Sxtf\Sxtf-2.png">
 						<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font-Sxtf"/>
 						<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font-Sxtf\Sxtf-2.png"/>
 						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\s.xtf"/>
@@ -345,7 +403,7 @@
 						<Item Action="Delete" arg1="C:\xodash\5s.xtf"/>
 						<Item Action="MessageBox" Arg1="Complete">Setting saved. Changes will take affect on next boot.</Item>
 					</List>
-					<List Text="3 s.xtf files" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font-Sxtf\Sxtf-3.png">
+					<List Text="Install 3 delay files" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font-Sxtf\Sxtf-3.png">
 						<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font-Sxtf"/>
 						<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font-Sxtf\Sxtf-3.png"/>
 						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\s.xtf"/>
@@ -357,7 +415,7 @@
 						<Item Action="Delete" arg1="C:\xodash\5s.xtf"/>
 						<Item Action="MessageBox" Arg1="Complete">Setting saved. Changes will take affect on next boot.</Item>
 					</List>
-					<List Text="4 s.xtf files" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font-Sxtf\Sxtf-4.png">
+					<List Text="Install 4 delay files" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font-Sxtf\Sxtf-4.png">
 						<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font-Sxtf"/>
 						<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font-Sxtf\Sxtf-4.png"/>
 						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\s.xtf"/>
@@ -368,7 +426,7 @@
 						<Item Action="Delete" arg1="C:\xodash\5s.xtf"/>
 						<Item Action="MessageBox" Arg1="Complete">Setting saved. Changes will take affect on next boot.</Item>
 					</List>
-					<List Text="5 s.xtf files" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font-Sxtf\Sxtf-5.png">
+					<List Text="Install 5 delay files" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font-Sxtf\Sxtf-5.png">
 						<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font-Sxtf"/>
 						<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font-Sxtf\Sxtf-5.png"/>
 						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\s.xtf"/>
@@ -378,17 +436,23 @@
 						<Item Action="Copy" arg1="C:\nkpatcher\configs\fonts\s.xtf" arg2="C:\xodash\5s.xtf"/>
 						<Item Action="MessageBox" Arg1="Complete">Setting saved. Changes will take affect on next boot.</Item>
 					</List>
+					<Item></Item>
+					<Item></Item>
+					<Item></Item>
+					<Item></Item>
+					<Item>These Options Require A Restart</Item>
 				</List>
 			</List>
 		</List>
-		<List Text="Led Colours" Sort="Off">
-			<List Text="Information" Sort="Off" Batch="True">
+		
+		<List Text="6. Led Colours" Sort="Off">
+			<List Text="Led Colours Menu Information" Sort="Off" Batch="True">
 				<Item Action="MessageBox" Arg1="Information">These will change your front LED colour, from the Default Orange to the not so eye pleasing Christmas lights.</Item>
 			</List>
-			<Item>------------------------------------------</Item>
-			<List Text="Orange" Sort="Off" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led\orange.png">
+			<Item></Item>
+			<List Text="6.1 Orange" Sort="Off" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led\orange.png">
 				<Item>Orange Options</Item>
-				<Item>------------------------------------------</Item>
+				<Item></Item>
 				<List Text="Solid (Default)" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led\default-led.png">
 					<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led"/>
 					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led\orange.png"/>
@@ -412,9 +476,9 @@
 					<Item Action="MessageBox" Arg1="Complete">Setting saved. Changes will take affect on next boot.</Item>
 				</List>
 			</List>
-			<List Text="Red" Sort="Off" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led\red.png">
+			<List Text="6.2 Red" Sort="Off" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led\red.png">
 				<Item>Red Options</Item>
-				<Item>------------------------------------------</Item>
+				<Item></Item>
 				<List Text="Solid" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led\led-4.png">
 					<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led"/>
 					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led\red.png"/>
@@ -437,9 +501,9 @@
 					<Item Action="MessageBox" Arg1="Complete">Setting saved. Changes will take affect on next boot.</Item>
 				</List>
 			</List>
-			<List Text="Green" Sort="Off" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led\green.png">
+			<List Text="6.3 Green" Sort="Off" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led\green.png">
 				<Item>Green Options</Item>
-				<Item>------------------------------------------</Item>
+				<Item></Item>
 				<List Text="Solid" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led\led-7.png">
 					<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led"/>
 					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led\green.png"/>
@@ -462,9 +526,9 @@
 					<Item Action="MessageBox" Arg1="Complete">Setting saved. Changes will take affect on next boot.</Item>
 				</List>
 			</List>
-			<List Text="Cycling" Sort="Off" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led\cycle.png">
+			<List Text="6.4 Cycling" Sort="Off" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led\cycle.png">
 				<Item>Cycling Options</Item>
-				<Item>------------------------------------------</Item>
+				<Item></Item>
 				<List Text="Version 1" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led\led-10.png">
 					<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led"/>
 					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led\cycle.png"/>
@@ -480,47 +544,43 @@
 					<Item Action="MessageBox" Arg1="Complete">Setting saved. Changes will take affect on next boot.</Item>
 				</List>
 			</List>
-			<List Text="Turn Off" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led\led-12.png">
+			<List Text="6.5 Turn Off" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led\led-12.png">
 				<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led"/>
 				<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\led\led-12.png"/>
 				<Item Action="Copy" arg1="C:\nkpatcher\configs\led files\led11.bin" arg2="C:\nkpatcher\configs\LED.bin"/>
 				<Item Action="MessageBox" Arg1="Complete">Setting saved. Changes will take affect on next boot.</Item>
 			</List>
-			<Item>------------------------------------------</Item>
-			<Item>These Options</Item>
-			<Item>Require A Restart</Item>
+			<Item></Item>
+			<Item></Item>
+			<Item></Item>
+			<Item></Item>
+			<Item></Item>
+			<Item>These Options Require A Restart</Item>
 		</List>
-		<List Text="Video Modes" Sort="Off">
-			<List Text="Information" Sort="Off" Batch="True">
+		
+		<List Text="7. Video Modes" Sort="Off">
+			<List Text="Video Modes Menu Information" Sort="Off" Batch="True">
 				<Item Action="MessageBox" Arg1="Information">These will force certain video modes.\n\nDefault:\nStock video mode.\n\nForce Progressive:\n480p native support.</Item>
 			</List>
-			<Item>------------------------------------------</Item>
-			<List Text="Default" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\video\default-video.png">
+			<Item></Item>
+			<List Text="7.1 Default" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\video\default-video.png">
 				<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\video"/>
 				<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\video\default-video.png"/>
 				<Item Action="Copy" arg1="C:\nkpatcher\configs\video files\VIDEO1.bin" arg2="C:\nkpatcher\configs\VIDEO.bin"/>
 				<Item Action="Delete" arg1="C:\nkpatcher\configs\video.bin"/>
 				<Item Action="MessageBox" Arg1="Complete">Setting saved. Changes will take affect on next boot.</Item>
 			</List>
-			<List Text="Force Progressive" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\video\video-prog.png">
+			<List Text="7.2 Force Progressive" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\video\video-prog.png">
 				<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\video"/>
 				<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\video\video-prog.png"/>
 				<Item Action="Copy" arg1="C:\nkpatcher\configs\video files\VIDEO1.bin" arg2="C:\nkpatcher\configs\VIDEO.bin"/>
 				<Item Action="MessageBox" Arg1="Complete">Setting saved. Changes will take affect on next boot.</Item>
 			</List>
-			<!--
-			<List Text="Force VGA" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\video\video-vga.png">
-				<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\video"/>
-				<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\video\video-vga.png"/>
-				<Item Action="Copy" arg1="C:\nkpatcher\configs\video files\VIDEO2.bin" arg2="C:\nkpatcher\configs\VIDEO.bin"/>
-				<Item Action="MessageBox" Arg1="Complete">Setting saved. Changes will take affect on next boot.</Item>
-			</List>
--->
-			<List Text="Flicker Filter" Sort="Off">
-				<List Text="Information" Sort="Off" Batch="True">
+			<List Text="7.3 Flicker Filter" Sort="Off">
+				<List Text="Flicker Filter Menu Information" Sort="Off" Batch="True">
 					<Item Action="MessageBox" Arg1="Information">These options will change the flicker filter values for 480i and 576i video modes. Basically it reduces the flickering you see when using crt screens and reduces the soft picture on LCD screens.</Item>
 				</List>
-				<Item>------------------------------------------</Item>
+				<Item></Item>
 				<List Text="Disable" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\ff\default-ff.png">
 					<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\ff"/>
 					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\ff\default-ff.png"/>
@@ -564,58 +624,51 @@
 					<Item Action="Copy" arg1="C:\nkpatcher\configs\flicker filter\flickerfilter5.bin" arg2="C:\nkpatcher\configs\flickerfilter.settings"/>
 					<Item Action="MessageBox" Arg1="Complete">Setting saved. Changes will take affect on next boot.</Item>
 				</List>
-				<Item>------------------------------------------</Item>
-				<Item>These Options</Item>
-				<Item>Require A Restart</Item>
-			</List>
-			<Item>------------------------------------------</Item>
-			<Item>These Options</Item>
-			<Item>Require A Restart</Item>
-		</List>
-		<List Text="Virtual EEPROM" Sort="Off">
-			<List Text="Information" Sort="Off" Batch="True">
-				<Item Action="MessageBox" Arg1="Information">This is used to protect users from toying with there EEPROM. I don't use this by default because it causes issues when trying to change a PAL/NTSC Xbox to NTSC/PAL. But it's here if you really want to use it.</Item>
-			</List>
-			<Item>------------------------------------------</Item>
-			<List Text="Enable" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\enabled.png">
-				<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.pn">Please disable the virtual eeprom. The "Virtual EEPROM" is write protected until it's disable and the system has restarted</Item>
-				<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.pn" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.png"/>
-				<Item Action="MessageBox" Arg1="Complete">To install the Virtual EEPROM. \nI will need to exit nkpatcher settings. \nNote: Changes will take affect on next boot.</Item>
-				<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\savemeta.xbx" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox softmod tool kit\Virtual_EEPROM_Backup.enabled"/>
-				<Item Action="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox softmod tool kit\default.xbe"/>
-			</List>
-			<List Text="Disable" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.png">
-				<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\enabled.pn">Please enable the virtual eeprom</Item>
-				<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\enabled.pn" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\enabled.png"/>
-				<List>
-					<Item Action="AskUser" Arg1="Warning">This option has a mandatory restart. Would you like to continue?</Item>
-					<Item Action="Copy" arg1="C:\nkpatcher\configs\fan files\fan1.bin" arg2="C:\nkpatcher\configs\EEPROM_off.bin"/>
-					<Item Action="Copy" arg1="dummy" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom"/>
-					<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom"/>
-					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.png"/>
-					<Item Action="MessageBox" Arg1="Complete">Setting saved. \nThe Xbox will now restart.</Item>
-					<Item Action="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\reboot xbe\default.xbe"/>
+				<!--
+				<List Text="Force VGA" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\video\video-vga.png">
+					<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\video"/>
+					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\video\video-vga.png"/>
+					<Item Action="Copy" arg1="C:\nkpatcher\configs\video files\VIDEO2.bin" arg2="C:\nkpatcher\configs\VIDEO.bin"/>
+					<Item Action="MessageBox" Arg1="Complete">Setting saved. Changes will take affect on next boot.</Item>
 				</List>
+				-->
+				<Item></Item>
+				<Item></Item>
+				<Item></Item>
+				<Item>These Options Require A Restart</Item>
 			</List>
-			<Item>------------------------------------------</Item>
-			<List Text="Backup EEPROM Tool" Sort="Off" Batch="True">
-				<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.pn">Please disable the virtual eeprom</Item>
-				<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.pn" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.png"/>
-				<Item Action="MessageBox" Arg1="Complete">The following: \n\nEEPROM.bin \nEEPROM.cfg \nXBOX INFO.txt \n\nwill be placed in "E:\Backups\EEPROM\".</Item>
-				<Item Action="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox softmod tool kit\default.xbe">Restart</Item>
-			</List>
+			<Item></Item>
+			<Item></Item>
+			<Item></Item>
+			<Item></Item>
+			<Item></Item>
+			<Item></Item>
+			<Item></Item>
+			<Item>These Options Require A Restart</Item>
 		</List>
-		<Item>------------------------------------------</Item>
-		<List Text="Modules and Settings" Sort="Off" Batch="False">
-			<List Text="Information" Sort="Off" Batch="True">
-				<Item Action="MessageBox" Arg1="Information">Modules:\nThese are independent apps that do specific tasks.\n\nYou can add your own by placing a module (App) in "E:\NKPatcher Settings\modules\"</Item>
+		
+		<List Text="8. Modules and Settings" Sort="Off" Batch="False">
+			<List Text="Modules and Settings Menu Information" Sort="Off" Batch="True">
+				<Item Action="MessageBox" Arg1="Information">Modules and UnleashX Settings.</Item>
 			</List>
-			<Item>------------------------------------------</Item>
-			<List Text="Modules" Sort="Off" DelayLoad="True">
-				<List Text="Built in Modules" Sort="On" DelayLoad="True">
+			<Item></Item>
+			<List Text="8.1 Modules" Sort="Off" DelayLoad="True">
+				<List Text="Modules Menu Information" Sort="Off" Batch="True">
+					<Item Action="MessageBox" Arg1="Information">Modules:\nThese are independent apps that do specific tasks.\n\nYou can add your own by placing a module (App) in "E:\NKPatcher Settings\modules\"</Item>
+				</List>
+				<Item></Item>
+				<List Text="8.1.1 Built in Modules" Sort="Off" DelayLoad="True">
+					<List Text="Built in Modules Menu Information" Sort="Off" Batch="True">
+						<Item Action="MessageBox" Arg1="Information">These are the built in modules that I use to do specific tasks, really these should never be loaded manually. But it adds a menu entry lol.</Item>
+					</List>
+					<Item></Item>
 					<Path>E:\UDATA\21585554\000000000000\nkpatcher settings\modules\</Path>
 				</List>
-				<List Text="User Modules" Sort="On" DelayLoad="True">
+				<List Text="8.1.2 User Modules" Sort="Off" DelayLoad="True">
+					<List Text="User Modules Menu Information" Sort="Off" Batch="True">
+						<Item Action="MessageBox" Arg1="Information">These are the user modules that you the user create, to do specific tasks.</Item>
+					</List>
+					<Item></Item>
 					<Path>C:\Applications\NKPatcher Settings\modules\</Path>
 					<Path>E:\Applications\NKPatcher Settings\modules\</Path>
 					<Path>F:\Applications\NKPatcher Settings\modules\</Path>
@@ -626,7 +679,7 @@
 					<Path>G:\Apps\NKPatcher Settings\modules\</Path>
 				</List>
 			</List>
-			<Item Action="Settings">UnleashX Settings</Item>
+			<Item Action="Settings">8.2 UnleashX Settings</Item>
 		</List>
 	</Menu>
 </Unleashx>
