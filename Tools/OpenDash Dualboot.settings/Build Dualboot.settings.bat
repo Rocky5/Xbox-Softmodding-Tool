@@ -18,6 +18,25 @@ Echo:
 %GUI_Element_3%
 timeout /t 2 >NUL
 
+:ledmenu
+Set "Ledcolour="
+CLS
+Echo:
+Echo:
+Echo:
+Echo:
+%GUI_Element_1%
+Echo  1) Orange LED
+Echo  2) Green LED
+Echo:
+%GUI_Element_1%
+Set /p "Ledcolour=- "
+if "%Ledcolour%"=="1" Set "Partition=E" & Goto menu
+if "%Ledcolour%"=="2" Set "Partition=F" & Goto menu
+Echo  Error: Not a valid Option.
+Timeout /t 3 >NUL
+Goto ledmenu
+
 :menu
 Set "Partition="
 CLS
@@ -213,6 +232,7 @@ exit
 Echo %%define Partition '%Partition%'
 Echo %%define XBE_Name '%XBE%'
 Echo %%define Dash_Folder '%Folder%'
+Echo %%define LED_Colour '%Ledcolour%'
 )>tools\tmp
 Tools\nasm -o "tools\dualboot.settings" "Tools\default_Settings"
 del /Q "tools\tmp"
