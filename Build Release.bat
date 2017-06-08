@@ -6,6 +6,7 @@ Set "Winrar=%CD%\Tools\Winrar\winrar.exe"
 If not exist "..\Release" (
 	MD "..\Release\Extras Disc"
 	MD "..\Release\Other"
+	MD "..\Release\Tools"
 )
 Call "Update Skin Version Number.bat"
 Call "ReMove All Thumb.db.bat"
@@ -28,5 +29,7 @@ Copy "Variants\Extras Disc Attacher.zip" "..\Release\Extras Disc\"
 Move "Quick Update.zip" "..\Release\Other"
 Move "Quick Upgrade.zip" "..\Release\Other"
 Move "XBHDM Build.zip" "..\Release\Other"
+:: Tools
+Copy "Tools\zipped tools\*" "..\Release\Tools"
 
 Explorer "..\Release\"
