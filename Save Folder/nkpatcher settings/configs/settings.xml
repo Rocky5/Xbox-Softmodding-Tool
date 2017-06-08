@@ -4,7 +4,7 @@
 		<Preference>
 			<AbortOnError>Yes</AbortOnError>
 			<ContextMenu AllowUninstall="No" AllowItemEdit="No" AllowRecentList="No" LinkToSave="No" LinkToGame="No"/>
-			<Skin Path="Skins">NKPatcher Settings</Skin>
+			<Skin Path="E:\UDATA\21585554\000000000000\nkpatcher settings\Skins\">NKPatcher Settings</Skin>
 			<VideoSettings Soften="No" Widescreen="No" UsePAL60="No" FastRefresh="No" EnableTextureCompression="No" Use720P="No" Use480P="Yes" FilterLevel="0"/>
 			<LiveUpdate AutoCheck="No"/>
 			<AutoVideoMode MultiRegion="Off" UsePAL60="No">no</AutoVideoMode>
@@ -357,7 +357,7 @@
 				<List Text="5.1.2 Font Delay Options" Sort="Off">
 					<List Text="Font Delay Options Menu Information" Sort="Off" Batch="True">
 						<Item Action="MessageBox" Arg1="Information">These are to be used if you are still getting random crashes at the "xlogo screen", only apply these if you have already tried the "Install Kernel Font" option.</Item>
-						<Item Action="MessageBox" Arg1="Information">Start at "1 s.xtf file" and then test to see if it's still crashing. If you're still getting crashing after applying "1 s.xtf file", then try "2 s.xtf files" and if you're still getting crashing :/ try "3 s.xtf files" and so on. If for some strange reason you are still crashing after all this, buy a new Xbox.</Item>
+						<Item Action="MessageBox" Arg1="Information">Start at "1 delay file" and then test to see if it's still crashing. If you're still getting crashing after applying "1 delay file", then try "2 delay files" and if you're still getting crashing :/ try "3 delay files" and so on. If for some strange reason you are still crashing after all this, buy a new Xbox.</Item>
 					</List>
 					<Item></Item>
 					<List Text="Remove all delay files" Sort="Off" Batch="True">
