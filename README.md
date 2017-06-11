@@ -1,28 +1,20 @@
-=========================================
-	Read Me
-	Xbox Softmodding Tool v1.1.1
-	Created by Rocky5
-=========================================
+## Xbox Softmodding Tool v1.1.1
+### Created by Rocky5
 
 
-=========================================
-	Background:
-=========================================
-		I set out to try to make the softmodding process as pain free and user friendly as possible and to be honest I think I nailed it.
-		You don't need to have a specific MS dashboard version or mess about in menus trying to backup your EEPROM.bin or even working out what version to install.
-		I take all that and do it for you, I backup the EEPROM.bin I give you an easy to use settings menu ( NKPatcher Settings ) that has all the info you need
-		to get the just of things. I have also made it as safe as I possibly can, by having recovery dashboards and fail safes in place in case you remove your
-		dashboard or you format your E partition eg... you can always recover.
+
+###  Background:
+
+I set out to try to make the softmodding process as pain free and user friendly as possible and to be honest I think I nailed it. You don't need to have a specific MS dashboard version or mess about in menus trying to backup your EEPROM.bin or even working out what version to install. I take all that and do it for you, I backup the EEPROM.bin I give you an easy to use settings menu ( NKPatcher Settings ) that has all the info you need to get the just of things. I have also made it as safe as I possibly can, by having recovery dashboards and fail safes in place in case you remove your dashboard or you format your E partition eg... you can always recover.
 		
-		I even added support for 15 dashboard locations, so every other softmod dashboard install location is covered.
-		
-		Note: Making changes in the unprotected C partition is not advised unless you know what you are doing, you will know you are in this mode if you see
-		a folder named "Do not touch anything in here" lol
+`I even added support for 15 dashboard locations, so every other softmod dashboard install location is covered.`
+
+Note: Making changes in the unprotected C partition is not advised unless you know what you are doing, you will know you are in this mode if you see a folder named "Do not touch anything in here" lol
 
 	
-=========================================
-	Main Features:
-=========================================
+
+### Main Features:
+
 		Supports all Xbox versions
 		Supports all currently exploitable games + Tony Hawks Pro Skater 4
 		Obviously runs unsigned code
@@ -58,11 +50,12 @@
 			> E:\XBMC.xbe
 
 		
-=========================================
-	NKPatcher Settings:
-=========================================
-	NKPatcher, this is the second stage of the Softmod. This is what patches the kernel after the NDURE exploit is executed and gives you all the lovely unsigned code and fancy features.
-	NKPatcher Settings allows you to modify certain aspects of NKPatcher in a safe manor.
+
+### NKPatcher Settings:
+
+NKPatcher, this is the second stage of the Softmod. This is what patches the kernel after the NDURE exploit is executed and gives you all the lovely unsigned code and fancy features.
+
+NKPatcher Settings allows you to modify certain aspects of NKPatcher in a safe manor.
 		
 		At the top of each menus there is an "Information" button, this will give you a description of the menu you are in.
 
@@ -148,9 +141,9 @@
 					This is the settings menu for UnleashX, change network settings video settings eg...
 
 
-=========================================
-	Xbox Softmodding Tool Extras Disc:
-=========================================
+
+### Xbox Softmodding Tool Extras Disc:
+
 		
 		Install alternative dashboards
 			> Avalaunch
@@ -210,9 +203,9 @@
 		As well loads of other features.			
 
 
-=========================================
-	Update, Upgrade & Restore info:
-=========================================
+
+### Update, Upgrade & Restore info:
+
 		1. Updating the Xbox Softmodding Tool to the latest version:
 			You can use the "Xbox Softmodding Tool Extras Disc" to update the Softmod.
 			All you need to do is burn the new ISO & select the "Update Xbox Softmodding Tool" option, located in the "Advanced Features" menu, just follow the on-screen instructions.
@@ -232,9 +225,9 @@
 		The great thing about the above, is it requires no FTP access or knowledge on how to update/restore softmods, great for people who are new to the Xbox scene.
 
 
-=========================================
-	Source code:
-=========================================
+
+### Source code:
+
 		This softmod is fully open source, you can find the full source code on my GitHub with everything I have used/created in a nice organised manner.
 		If you are a windows user, I have created batch files to do most of the heavy lifting, so it makes my life and yours simple when building stuff.
 		
@@ -243,16 +236,16 @@
 		GitHub = https://github.com/Rocky5/2016-Softmodding-Tool
 
 		
-=========================================
-	Youtube Channel:
-=========================================
+
+### Youtube Channel:
+
 	Here is my Youtube Channel = https://www.youtube.com/JCRocky5
 	There you can find videos on "How to setup your USB Pen and install a Softmod", "How to clone your Hard drive using Chimp 261812 from start to finish." and many other crappy videos I make for the Xbox.
 	
 		
-=========================================
-	Credits:
-=========================================
+
+### Credits:
+
 		I would like to thank the following, without there contributions to the Xbox scene we would not have what we have today.
 		
 		Original NKPatcher:
