@@ -15,7 +15,7 @@ Note: Making changes in the unprotected C partition is not advised unless you kn
 ### Main Features:
 
  * Supports all Xbox versions
- * Supports all currently exploitable games + Tony Hawks Pro Skater 4
+ * Supports all currently exploitable games including the new Tony Hawks Pro Skater 4
  * Obviously runs unsigned code
  * Doesn't require a certain Microsoft Dashboard version
  * User friendly interface
@@ -92,7 +92,7 @@ At the top of each menus there is an "Information" button, this will give you a 
     This option will allow you to change your Xbox video region to PAL, so you can play some of the PAL exclusive games that don't work when set to NTSC.
 ### EEPROM > Advanced Features > Persistent Softmod
   * #### Enable:
-    This option will allow you to re-enable the persistent softmod mode. What this mode does is puts the Xbox into a controlled error 16 state. Don't be alarmed!. This is 100% safe, as long as you don't remove anything from the real C partition. In this mode every game is loaded under the softmod, what this means is IGR on all retail (original) games and never needing worry about losing your softmod again, though with my softmod that's a mute point.
+    This option will allow you to re-enable the persistent softmod mode. What this mode does is puts the Xbox into a controlled error 16 state. Don't be alarmed!. This is 100% safe, as long as you don't remove anything from the real C partition. In this mode every game is loaded under the softmod, what this means is IGR on all retail (original) games and never needing worry about losing your softmod again, though with my softmod that's a moot point.
   * #### Disable:
     This option will allow you to disable the persistent softmod mode. In this mode your xbox will work like any other softmod out there, retail (original) games will bypass the softmod.
 
