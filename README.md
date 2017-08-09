@@ -167,6 +167,7 @@ At the top of each menus there is an "Information" button, this will give you a 
  * #### Install alternative dashboards
     * Avalaunch
     * EvolutionX
+	* UIX Dash
     * UnleashX
     * XBMC 3.5.3
     * XBMC4Kids
@@ -180,7 +181,7 @@ At the top of each menus there is an "Information" button, this will give you a 
     * Xored Mini launcher with 882 trainers
     * Note Alt Dashboards can be installed as applications.
 			
- * #### Install game mods & homebrew
+ * #### Install game mods & homebrew  (Note not included in the GitHub build as it was to large.)
 	#### -- Homebrew --
     * Aliens versus Predator Gold
     * DoomX
