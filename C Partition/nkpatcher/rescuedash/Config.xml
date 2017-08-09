@@ -25,7 +25,7 @@
 		<Network Type="DHCP" Enable="Yes">
 			<AutoDetect>yes</AutoDetect>
 			<IP>192.168.0.6</IP>
-			<Subnet>255.255.255.255</Subnet>
+			<Subnet>255.255.255.0</Subnet>
 			<Gateway>192.168.0.1</Gateway>
 			<DNS1>192.168.0.1</DNS1>
 		</Network>
@@ -58,40 +58,50 @@
 			<List Text="Yes please. I'm a numpty & need your help." Sort="Off" Batch="True">
 				<list>
 					<Item Action="MessageBox" arg1="Warning">To fix this issue I need do a file check. If it fails, don't worry. You can select "Resoftmod my Xbox" in the previous page.</Item>
+					<Item Action="MessageBox" arg1="Info">If you have used any of the "NKPatcher Settings" they will be cleared after this process. So you will need to reapply any changes you made.</Item>
 					<list>
 						<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000" arg2="E:\UDATA\21585554\00000000000">Softmod save is missing</Item>
 						<Item Action="Rename" arg1="E:\UDATA\21585554\00000000000" arg2="E:\UDATA\21585554\000000000000"/>
 						<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox softmod tool kit\default.xbe" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox softmod tool kit\default.xb">Xbox Softmod Tool Kit is missing from the save directory</Item>
 						<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox softmod tool kit\default.xb" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox softmod tool kit\default.xbe"/>
-						<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\softmod files\Files.rar" arg2="E:\UDATA\21585554\000000000000\softmod files\files.ra">Files.rar is missing from the save directory</Item>
-						<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\softmod files\files.ra" arg2="E:\UDATA\21585554\000000000000\softmod files\Files.rar"/>
-						<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\configs\alt xbe's\dashboard.xbe" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\configs\alt xbe's\dashboard.xb">dashboard.xbe is missing from the save directory</Item>
-						<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\configs\alt xbe's\dashboard.xb" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\configs\alt xbe's\dashboard.xbe"/>
+						<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\UnleashX.xbe" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\UnleashX.xb">UnleashX.xbe is missing from the save directory</Item>
+						<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\UnleashX.xb" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\UnleashX.xbe"/>
 						<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\configs\recovery.xml" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\configs\recovery.xm">Recovery.xml is missing from the save directory</Item>
 						<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\configs\recovery.xm" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\configs\recovery.xml"/>
-						<Item Action="Rename" arg1="C:\nkpatcher\rescuedash\resoftmod files.zip" arg2="C:\nkpatcher\rescuedash\resoftmod files.zi">resoftmod files.zip is missing from C rescuedash directory</Item>
+						<Item Action="Rename" arg1="C:\nkpatcher\rescuedash\resoftmod files.zip" arg2="C:\nkpatcher\rescuedash\resoftmod files.zi">resoftmod files are missing</Item>
 						<Item Action="Rename" arg1="C:\nkpatcher\rescuedash\resoftmod files.zi" arg2="C:\nkpatcher\rescuedash\resoftmod files.zip"/>
 					</list>
-					<Item Action="MessageBox" arg1="hmm">Found the files I need :)</Item>
 					<Item Action="Format" arg1="Y"/>
-					<Item Action="Unrar" arg1="E:\UDATA\21585554\000000000000\softmod files\Files.rar" arg2="Y:\"/>
+					<Item Action="Unzip" arg1="C:\nkpatcher\rescuedash\resoftmod files.zip" arg2="Y:\"/>
+					<Item Action="Unrar" arg1="Y:\000000000000\softmod files\Files.rar" arg2="Y:\"/>
+					<Item Action="Delete" arg1="C:\xodash"/>
 					<Item Action="Unrar" arg1="Y:\xboxdash.rar" arg2="C:\"/>
-					<Item Action="Unrar" arg1="Y:\nkpatcher.rar" arg2="C:\"/>
-					<!-- Setting up rescue dashboards -->
+					<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font-Sxtf"/>
+					<Item Action="Copy" arg1="dummy" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font-Sxtf"/>
+					<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font"/>
+					<Item Action="Copy" arg1="dummy" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\font"/>
+					<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\UnleashX.xbe"/>
+					<Item Action="Copy" arg1="Y:\000000000000\softmod files\UX.xbe" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\UnleashX.xbe"/>
 					<Item Action="Copy" arg1="dummy" arg2="E:\TDATA\rescuedash"/>
 					<Item Action="Delete" arg1="E:\TDATA\rescuedash"/>
-					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\configs\alt xbe's\dashboard.xbe" arg2="E:\TDATA\rescuedash\default.xbe"/>
 					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\configs\recovery.xml" arg2="E:\TDATA\rescuedash\Config.xml"/>
 					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\skins\RescueDash_E\" arg2="E:\TDATA\rescuedash\skins\RescueDash_E\"/>
 					<Item Action="Copy" arg1="dummy" arg2="E:\UDATA\rescuedash"/>
 					<Item Action="Delete" arg1="E:\UDATA\rescuedash"/>
-					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\configs\alt xbe's\dashboard.xbe" arg2="E:\UDATA\rescuedash\default.xbe"/>
 					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\configs\recovery.xml" arg2="E:\UDATA\rescuedash\Config.xml"/>
 					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\skins\RescueDash_E\" arg2="E:\UDATA\rescuedash\skins\RescueDash_E\"/>
+					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\softmod files\skin files\rescuedash.xbx" arg2="E:\UDATA\rescuedash\TitleMeta.xbx"/>
+					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\savemeta.xbx" arg2="E:\UDATA\rescuedash\skins\savemeta.xbx"/>
+					<Item Action="Copy" arg1="E:\UDATA\21585554\TitleImage.xbx" arg2="E:\UDATA\rescuedash\TitleImage.xbx"/>
+					<Item Action="Copy" arg1="E:\UDATA\21585554\SaveImage.xbx" arg2="E:\UDATA\rescuedash\SaveImage.xbx"/>
+					
+					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\configs\alt xbe's\dashboard.xbe" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\unleashx.xbe"/>
 					<list>
 						<Item Action="AskUser" arg1="ShadowC" arg2="Have you remove the shadowc.img? \n\nThis is mandatory for the softmod to work. \n\nIf you select no and and the installer fails this means you did remove it, so slap yourself in the face for lying and reselect Fix Softmod."/>
+						<Item Action="Copy" arg1="dummy" arg2="C:\nkpatcher\shadowc"/>
 						<Item Action="Delete" arg1="C:\nkpatcher\shadowc"/>
 						<Item Action="Copy" arg1="dummy" arg2="C:\nkpatcher\shadowc"/>
+						<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox Softmod Tool Kit\dummy_file" arg2="C:\NKPatcher\Configs\shadowc_off.bin">Copy firstrun.bin to shadowc_off.bin</Item>
 						<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox Softmod Tool Kit\dummy_file" arg2="E:\Prep\firstrun.bin"/>
 						<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox softmod tool kit\default.xbe" arg2="E:\Prep\default.xbe"/>
 						<Item Action="Format" arg1="X"/>
@@ -102,6 +112,9 @@
 					</list>
 					<Item Action="Rename" arg1="C:\nkpatcher\shadowc\shadowc.img" arg2="C:\nkpatcher\shadowc\shadowc.im">The ShadowC.img had been removed</Item>
 					<Item Action="Rename" arg1="C:\nkpatcher\shadowc\shadowc.im" arg2="C:\nkpatcher\shadowc\shadowc.img"/>
+					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox Softmod Tool Kit\dummy_file" arg2="C:\NKPatcher\Configs\shadowc_off.bin">Copy updaterun.bin to shadowc_off.bin</Item>
+					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox Softmod Tool Kit\dummy_file" arg2="E:\Prep\updaterun.bin">Copy updaterun.bin to prep</Item>
+					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox softmod tool kit\default.xbe" arg2="E:\Prep\default.xbe">Copy default.xbe to prep</Item>
 					<Item Action="Format" arg1="X"/>
 					<Item Action="Format" arg1="Y"/>
 					<Item Action="Format" arg1="Z"/>
@@ -126,9 +139,8 @@
 						<Item Action="Rename" arg1="C:\nkpatcher\rescuedash\resoftmod files.zip" arg2="C:\nkpatcher\rescuedash\resoftmod files.zi">resoftmod files are missing</Item>
 						<Item Action="Rename" arg1="C:\nkpatcher\rescuedash\resoftmod files.zi" arg2="C:\nkpatcher\rescuedash\resoftmod files.zip"/>
 					</list>
-					<Item Action="MessageBox" arg1="hmm">Found the file I need :)</Item>
 					<Item Action="Copy" arg1="dummy" arg2="E:\UDATA\21585554">Removing Old Softmod save directory</Item>
-					<Item Action="Delete" arg1="E:\UDATA\21585554">Removing Old Softmod save directory</Item>
+					<Item Action="Delete" arg1="E:\UDATA\21585554"/>
 					<Item Action="UnZip" arg1="C:\nkpatcher\rescuedash\resoftmod files.zip"  arg2="E:\UDATA\21585554\">Extracting Softmod files to the HDD</Item>
 					<Item Action="E:\UDATA\21585554\000000000000\install.xbe">Loading install.xbe</Item>
 				</list>

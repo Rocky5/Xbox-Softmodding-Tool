@@ -2,7 +2,7 @@
 	<Information>
 		<Author>Rocky5</Author>
 		<Copyright>Xbox</Copyright>
-		<Version>1.1.1</Version>
+		<Version>1.1.2</Version>
 	</Information>
 	<Fonts>
 		<Font Name="font1">font1.xpr</Font>
@@ -53,25 +53,26 @@
 		<Shape zindex="2" Type="Rectangle" Top="165" Left="75" Width="238" Height="1" BorderColor="0x00000000" BackColor="0xffaee239"/>
 		<Shape zindex="2" Type="Rectangle" Top="130" Left="317" Width="5" Height="298" BorderColor="0xff4c4d58" BackColor="0xbf626473"/>
 		<!--  -->
-		<Text zindex="3" Top="133" Left="284" Width="324" Align="Middle" ScaleX="100" ScaleY="100" Color="0xffaee239" Source="System Information"/>
-		<Text zindex="3" Top="149" Left="284" Width="324" Align="Middle" ScaleX="100" ScaleY="100" Color="0xffafb2ce" Source="Time"/>
-		<Text zindex="3" Top="165" Left="284" Width="324" Align="Middle" ScaleX="100" ScaleY="100" Color="0xffafb2ce" Source="Video: $VideoMode$"/>
-		<Text zindex="3" Top="181" Left="284" Width="324" Align="Middle" ScaleX="100" ScaleY="100" Color="0xffafb2ce" Source="Xbox: $Version$"/>
-		<Text zindex="3" Top="197" Left="284" Width="324" Align="Middle" ScaleX="100" ScaleY="100" Color="0xffafb2ce" Source="Memory: $FreeMemory$"/>
-		<Text zindex="3" Top="213" Left="284" Width="324" Align="Middle" ScaleX="100" ScaleY="100" Color="0xffafb2ce" Source="BIOSVersion"/>
-		<Text zindex="3" Top="229" Left="284" Width="324" Align="Middle" ScaleX="100" ScaleY="100" Color="0xffafb2ce" Source="CPUTemp"/>
-		<Text zindex="3" Top="245" Left="284" Width="324" Align="Middle" ScaleX="100" ScaleY="100" Color="0xffafb2ce" Source="MBTemp"/>
+		<Text zindex="3" Top="131" Left="284" Width="324" Align="Middle" ScaleX="100" ScaleY="100" Color="0xffaee239" Source="System Information"/>
+		<Text zindex="3" Top="147" Left="284" Width="324" Align="Middle" ScaleX="100" ScaleY="100" Color="0xffafb2ce" Source="Time"/>
+		<Text zindex="3" Top="163" Left="284" Width="324" Align="Middle" ScaleX="100" ScaleY="100" Color="0xffafb2ce" Source="Video: $VideoMode$"/>
+		<Text zindex="3" Top="179" Left="284" Width="324" Align="Middle" ScaleX="100" ScaleY="100" Color="0xffafb2ce" Source="Xbox: $Version$"/>
+		<Text zindex="3" Top="195" Left="284" Width="324" Align="Middle" ScaleX="100" ScaleY="100" Color="0xffafb2ce" Source="CPUTemp"/>
+		<Text zindex="3" Top="211" Left="284" Width="324" Align="Middle" ScaleX="100" ScaleY="100" Color="0xffafb2ce" Source="MBTemp"/>
 		<!--  -->
-		<Text zindex="3" Top="266" Left="284" Width="324" Align="Middle" ScaleX="100" ScaleY="100" Color="0xffaee239" Source="Network Information"/>
-		<Text zindex="3" Top="282" Left="284" Width="324" Align="Middle" ScaleX="100" ScaleY="100" Color="0xffafb2ce" Source="IP"/>
-		<Text zindex="3" Top="298" Left="284" Width="324" Align="Middle" ScaleX="100" ScaleY="100" Color="0xffafb2ce" Source="Gateway"/>
-		<Text zindex="3" Top="314" Left="284" Width="324" Align="Middle" ScaleX="100" ScaleY="100" Color="0xffafb2ce" Source="DNS: $DNS1$"/>
-		<Text zindex="3" Top="330" Left="284" Width="324" Align="Middle" ScaleX="100" ScaleY="100" Color="0xffafb2ce" Source="LinkStatus"/>
-		<Text zindex="3" Top="346" Left="284" Width="324" Align="Middle" ScaleX="100" ScaleY="100" Color="0xffafb2ce" Source="Active Users: $NumClient$"/>
+		<Text zindex="3" Top="232" Left="284" Width="324" Align="Middle" ScaleX="100" ScaleY="100" Color="0xffaee239" Source="Partition Information"/>
+		<Text zindex="3" Top="249" Left="284" Width="324" Align="Middle" ScaleX="100" ScaleY="100" Color="0xffafb2ce" Source="E: $E_FreeMB$ Available"/>
+		<Text zindex="3" Top="265" Left="284" Width="324" Align="Middle" ScaleX="100" ScaleY="100" Color="0xffafb2ce" Source="F: $F_FreeMB$ Available"/>
+		<Text zindex="3" Top="281" Left="284" Width="324" Align="Middle" ScaleX="100" ScaleY="100" Color="0xffafb2ce" Source="G: $G_FreeMB$ Available"/>
+		<!--  -->
+		<Text zindex="3" Top="303" Left="284" Width="324" Align="Middle" ScaleX="100" ScaleY="100" Color="0xffaee239" Source="Network Information"/>
+		<Text zindex="3" Top="319" Left="284" Width="324" Align="Middle" ScaleX="100" ScaleY="100" Color="0xffafb2ce" Source="IP"/>
+		<Text zindex="3" Top="335" Left="284" Width="324" Align="Middle" ScaleX="100" ScaleY="100" Color="0xffafb2ce" Source="Gateway"/>
+		<Text zindex="3" Top="351" Left="284" Width="324" Align="Middle" ScaleX="100" ScaleY="100" Color="0xffafb2ce" Source="Active Users: $NumClient$"/>
 		<!--  -->	
-		<Text zindex="3" Top="368" Left="284" Width="324" Align="Middle" ScaleX="100" ScaleY="100" Color="0xffaee239" Source="Xbox Extras Disc Information"/>
-		<Text zindex="3" Top="384" Left="284" Width="324" Align="Middle" ScaleX="100" ScaleY="100" Color="0xffafb2ce" Source="Running: v$SkinVersion$"/>
-		<Text zindex="3" Top="400" Left="284" Width="324" Align="Middle" ScaleX="100" ScaleY="100" Color="0xffafb2ce" Source="Creator: $SkinAuthor$"/>
+		<Text zindex="3" Top="373" Left="284" Width="324" Align="Middle" ScaleX="100" ScaleY="100" Color="0xffaee239" Source="Xbox Extras Disc Information"/>
+		<Text zindex="3" Top="389" Left="284" Width="324" Align="Middle" ScaleX="100" ScaleY="100" Color="0xffafb2ce" Source="Running: v$SkinVersion$"/>
+		<Text zindex="3" Top="405" Left="284" Width="324" Align="Middle" ScaleX="100" ScaleY="100" Color="0xffafb2ce" Source="Creator: $SkinAuthor$"/>
 		<!--  -->
 		<Text zindex="3" Top="430" Left="240" Width="100" Align="Left" ScaleX="100" ScaleY="100" Color="0xff3a3a46" Source="Tray:"/>
 		<Text zindex="3" Top="430" Left="272" Width="340" Align="Left" ScaleX="100" ScaleY="100" Color="0xff3a3a46" Source="DVDTitle"/>

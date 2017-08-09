@@ -24,7 +24,7 @@
 		<Network Type="DHCP" Enable="Yes">
 			<AutoDetect>yes</AutoDetect>
 			<IP>192.168.0.6</IP>
-			<Subnet>255.255.255.255</Subnet>
+			<Subnet>255.255.255.0</Subnet>
 			<Gateway>192.168.0.1</Gateway>
 			<DNS1>192.168.0.1</DNS1>
 		</Network>
@@ -51,20 +51,6 @@
 		</LED>
 	</Settings>
 	<Menu>
-		<List Text="I fixed my issue via FTP" Sort="Off">
-			<List Text="Get me out of here. I'm super smart & fixed my own issue." Sort="Off" Batch="True">
-				<list>
-					<Item Action="Restart">Restart</Item>
-				</list>
-			</list>
-
-			<Item></Item>
-
-			<Item>Press (B) to Exit this menu.</Item>
-		</list>
-		
-		<Item></Item>
-		
 		<List Text="Restore C Dashboard" Sort="Off">
 			<List Text="Yes please. I'm a numpty & need your help." Sort="Off" Batch="True">
 				<list>
@@ -88,6 +74,9 @@
 
 			<Item>Press (B) to Exit this menu.</Item>
 		</list>
+
+		<Item></Item>
+
 		<List Text="Restore E Dashboard" Sort="Off">
 			<List Text="Yes please. I'm a numpty & need your help." Sort="Off" Batch="True">
 				<list>

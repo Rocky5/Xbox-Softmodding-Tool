@@ -1,8 +1,8 @@
-@Echo off & SetLocal EnableDelayedExpansion & Mode con:cols=56 lines=7 & Color 0B
+@Echo off & SetLocal EnableDelayedExpansion & Mode con:cols=100 lines=10 & Color 0B
 Title Build Files.rar
 
 ::Build save files for Xbox.
-Set "Winrar=%CD%\Tools\Winrar\winrar.exe"
+Set "Winrar=%CD%\Other\Tools\Winrar\winrar.exe"
 
 Del "Files.rar" 2>NUL
 CD "C Partition\"

@@ -15,8 +15,9 @@ IF NOT EXIST %NET% (
   GOTO:EOF
 )
 
-SET XBE_PATCH="..\..\..\tools\xbepatch.exe"
-SET XBE=Default.xbe
+SET XBE_PATCH="..\..\..\other\tools\xbepatch.exe"
+SET Habibi="..\..\..\other\tools\xbedump.exe"
+SET XBE=default.xbe
 SET DEST=Build
 RMDIR %DEST% /S /Q 2>NUL
 MKDIR %DEST%
@@ -32,7 +33,14 @@ echo:
 ECHO - XBE Patching %DEST%\%XBE%
 %XBE_PATCH% "%DEST%\%XBE%"
 ECHO - Patching Done!
-Echo:
+(
+%Habibi% "%DEST%\%XBE%" -habibi
+del /q "%DEST%\%XBE%"
+ren "out.xbe" "%XBE%"
+move "%XBE%" "%DEST%"
+)>NUL
+ECHO - XBE Signing %DEST%\%XBE%
+Echo - XBE Signed!
 timeout /t 10
 exit
 

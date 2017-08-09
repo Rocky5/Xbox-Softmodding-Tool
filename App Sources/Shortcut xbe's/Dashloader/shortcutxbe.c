@@ -88,23 +88,33 @@ void ErrorHandler(char *xbepath)
     {  
 		debuglog("\n------------------------------------------------");
 		debuglog("Prep Dashboard");
-		debuglog("------------------------------------------------\n");
+		debuglog("------------------------------------------------");
 		debuglog("Loading Prep Dashboard - E:\\Prep\\Default.xbe");
 		XLaunchXBE("E:\\Prep\\Default.xbe");
-		debuglog("Dashboard doesn't Exist\n");
+		debuglog("Dashboard doesn't Exist");
 		/*
 		*/
+		debuglog("\n------------------------------------------------");
+		debuglog("Softmod Quick Update/Upgrade Dashboard");
 		debuglog("------------------------------------------------");
+		debuglog("Loading Quick Update Dashboard - E:\\Quick Update\\Default.xbe");
+		XLaunchXBE("E:\\Quick Update\\Default.xbe");
+		debuglog("Loading Quick Upgrade Dashboard - E:\\Quick Upgrade\\Default.xbe");
+		XLaunchXBE("E:\\Quick Upgrade\\Default.xbe");
+		debuglog("Dashboards doesn't Exist");
+		/*
+		*/
+		debuglog("\n------------------------------------------------");
 		debuglog("ShadowC Partition Integrity Check");
-		debuglog("------------------------------------------------\n");
+		debuglog("------------------------------------------------");
 		debuglog("Checking ShadowC image integrity");
-		XLaunchXBE("C:\\nkpatcher\\rescuedash\\pbl\\loader.xbe");
-		debuglog("ShadowC image is loaded\n");
+		XLaunchXBE("C:\\nkpatcher\\rescuedash\\loader.xbe");
+		debuglog("ShadowC image is loaded");
 		/*
 		*/
 		debuglog("------------------------------------------------");
 		debuglog("Dashboard Locations");
-		debuglog("------------------------------------------------\n");
+		debuglog("------------------------------------------------");
 		/*
 		*/
 		debuglog("Loading C:\\XBMC\\Default.xbe");
@@ -184,7 +194,7 @@ void ErrorHandler(char *xbepath)
 		*/
 		debuglog("------------------------------------------------");
 		debuglog("Rescue Dashboard Locations");
-		debuglog("------------------------------------------------\n");
+		debuglog("------------------------------------------------");
 		/*
 		*/
 		debuglog("Loading Rescue Dashboard TDATA");
@@ -198,7 +208,7 @@ void ErrorHandler(char *xbepath)
 		/*
 		*/
 		debuglog("Loading Shadowc rescue Dashboard");
-		XLaunchXBE("R:\\NKPatcher\\Rescuedash\\pbl\\loader.xbe");
+		XLaunchXBE("R:\\NKPatcher\\rescuedash\\loader.xbe");
 		debuglog("Rescue Dashboard doesn't Exist\n");
 		/*
 		*/
@@ -303,7 +313,7 @@ void XBoxStartup()
   temp[2] = 'f';
   temp[3] = 'g';
 
-  debuglog("Dashloader Build 0.9");
+  debuglog("Dashloader Build 1.0");
   //debuglog("INFO - Mounting D: to %s", devicepath);
 
   /* make sure D: is mounted to the launch location */

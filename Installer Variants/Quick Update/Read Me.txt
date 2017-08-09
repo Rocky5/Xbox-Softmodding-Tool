@@ -1,0 +1,17 @@
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// If you do not know how to FTP to the Xbox just burn the "Xbox Softmodding Tool Extra Disc.iso" & use that to Quick Update.    //
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+This is the Quick Update option, you must know how to FTP.
+
+Installation....
+
+1) Transfer the Quick Update folder to "E:\"
+2) So should look like "E:\Quick Update\default.xbe + folders & other files."
+3) Push the following button at the same time. ( LT+RT+Black+Back )
+4) Follow the on screen instructions.
+
+
+Note:
+	If running builds before v1.1.2 you will need to manually start the updater.
+	Launch E:\Quick Update\default.xbe

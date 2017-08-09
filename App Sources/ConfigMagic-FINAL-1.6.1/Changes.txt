@@ -1,0 +1,43 @@
+UPDATE LOG:
+--------------------------------------------------------------------------------------------------------
+Date: 16/07/2017
+By: Rocky5
+
+Updated the Source to compile under retail, smaller xbe size.
+
+Include wmvdecd.lib, required to compile.
+( install to %PROGRAMFILES(x86)%\Microsoft Xbox SDK\xbox\lib )
+
+Fixed the CRC size for checksum 3
+( On v1.6 xbox the xbox would invalidate these settings and clear them. Potential Error16 if a softmod or stock MSDash isn't present on C ) 
+
+Updated the skinning aspect of the code.
+	You can now colour the menu and the menu header.
+	Removed the horrid shadowing of the text.
+	Changed all images to PNG.
+	If no wmv files are found it will just skip them, no more crashing!
+	( I never done this for images as well there needed )
+	New Skin
+	New Fonts, had to adjust font positions a tad.
+	( Segoe UI )
+	
+Exit button changes to "Lock Your Hard Drive" when the HDD is unlocked.
+( Does nothing if the HDD is unlocked, softreset or power off bypasses this obviously )
+
+Auto refresh EEPROM after an EEPROM Update.
+( Should have been this way from the beginning )
+
+Updated XKUtils to the latest version and added the option to write the following:
+	SetLanguageString
+	SetVideoFlagsString
+	SetAudioFlagsString
+	SetTimeZoneStdNameString
+	SetTimeZoneDltNameString
+	SetTimeZoneStdDateString
+	SetTimeZoneDltDateString
+	SetTimeZoneDltBiasString
+	SetNullChecksum3String
+
+Note: These aren't added to the GUI, they would be used for advanced users only.
+
+Other minor changes, like labels and new lables eg...

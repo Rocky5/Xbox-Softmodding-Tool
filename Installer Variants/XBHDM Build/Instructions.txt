@@ -1,0 +1,4 @@
+Instructions:
+
+Depending on the build of XBHDM you down there will be a couple way to install this.
+Basically follow the instruction that come with XBHDM and where it tells you to install the C folder just put the one included in here in its place.

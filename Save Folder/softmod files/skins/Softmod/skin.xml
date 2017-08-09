@@ -2,12 +2,13 @@
 	<Information>
 		<Author>Rocky5</Author>
 		<Copyright>Xbox</Copyright>
-		<Version>1.1.1</Version>
+		<Version>1.1.2</Version>
 	</Information>
 	<Fonts>
 		<Font Name="font1">E:\UDATA\21585554\000000000000\softmod files\skin files\fonts\font1.xpr</Font>
 		<Font Name="font2">E:\UDATA\21585554\000000000000\softmod files\skin files\fonts\font2.xpr</Font>
 		<Font Name="font3">E:\UDATA\21585554\000000000000\softmod files\skin files\fonts\font3.xpr</Font>
+		<Font Name="font4">E:\UDATA\21585554\000000000000\softmod files\skin files\fonts\font4.xpr</Font>
 	</Fonts>
 	<IntroMovie/>
 	<FileManager SafeBorder="False" DrawBorder="False">
@@ -55,18 +56,15 @@
 		<!-- List Background -->
 		<Shape zindex="1" Type="Rectangle" Top="130" Left="71" Width="498" Height="298" BorderColor="0xff4c4d58" BackColor="0xbf626473"/>
 		<!--  -->
-		<Text zindex="3" Top="5" Left="5" Width="498" Align="Left" ScaleX="70" ScaleY="70" Color="0xff626473" Font="font2" Source="Installer: v$SkinVersion$"/>
 		<Text zindex="3" Top="149" Left="71" Width="499" Align="Middle" ScaleX="100" ScaleY="100" Color="0xffaee239" Source="Thank you for choosing the Xbox Softmodding Tool."/>
 		<Text zindex="3" Top="169" Left="71" Width="499" Align="Middle" ScaleX="100" ScaleY="100" Color="0xffaee239" Source="If you have any feedback or bugs, please let me"/>
 		<Text zindex="3" Top="189" Left="71" Width="499" Align="Middle" ScaleX="100" ScaleY="100" Color="0xffaee239" Source="know via theisozone forums. Thank you."/>
 		<Text zindex="3" Top="219" Left="71" Width="499" Align="Middle" ScaleX="100" ScaleY="100" Color="0xffaee239" Source="With this softmod, the process is simple &amp; pain free."/>
 		<Text zindex="3" Top="239" Left="71" Width="499" Align="Middle" ScaleX="100" ScaleY="100" Color="0xffaee239" Source="All you have to do is Press (A) when asked."/>
 		<Image zindex="3" Top="10" Left="590" Width="42" Height="42" Source="GameIcon"/>
-		<!-- (A) Select (B) Back section
-		<Shape zindex="1" Type="Rectangle" Top="427" Left="71" Width="165" Height="25" BorderColor="0x00000000" BackColor="0xff3a3a46"/>
-		<Shape zindex="1" Type="Rectangle" Top="427" Left="71" Width="148" Height="45" BorderColor="0x00000000" BackColor="0xff3a3a46"/>
-		<Shape zindex="1" Type="triangle" Top="450" Left="201" Width="35" Height="21" BorderColor="0x00000000" BackColor="0xff3a3a46" Direction="down"/>
-		<Image zindex="3" Top="430" Left="95" Width="112" Height="38">E:\UDATA\21585554\000000000000\softmod files\skin files\images\buttons.png</image> -->
+		<!-- installer version section --->
+		<Shape zindex="0" Type="Rectangle" Top="427" Left="487" Width="82" Height="17" BorderColor="0xff4c4d58" BackColor="0xff3a3a46"/>
+		<Text zindex="3" Top="427" Left="479" Width="100" Height="15" Align="Middle" ScaleX="100" ScaleY="100" Color="0xffafb2ce" Font="font4" Source="Installer: v$SkinVersion$"/>
 	</Main>
 	<MusicPlayer Top="1" Left="1" Width="640" Height="480" >
 		<BackGround>E:\UDATA\21585554\000000000000\softmod files\skin files\images\musicplayer\musicbg.png</BackGround>

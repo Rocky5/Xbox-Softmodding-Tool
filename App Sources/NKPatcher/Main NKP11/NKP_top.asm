@@ -602,8 +602,8 @@ clk_ph: 	db	'\Device\Harddisk0\Partition2\nkpatcher\configs\clock.xbe',0,0
 %define ACD	2
 %endif
 ;-----------
-rescuedash1:	db	'\Device\Harddisk0\Partition14\nkpatcher\rescuedash\pbl\loader.xbe',0,0
-rescuedash2:	db	'\Device\Harddisk0\Partition2\nkpatcher\rescuedash\pbl\loader.xbe',0,0
+rescuedash1:	db	'\Device\Harddisk0\Partition14\nkpatcher\rescuedash\loader.xbe',0,0
+rescuedash2:	db	'\Device\Harddisk0\Partition2\nkpatcher\rescuedash\loader.xbe',0,0
 ;--------------------------------------------------------------------------------------------
 infofilestr:	db '\Device\Harddisk0\Partition1\debug.bin',0		; E:\debug.bin
 infofile	dd $-infofilestr-1,0,0,0 ; < space for handle 

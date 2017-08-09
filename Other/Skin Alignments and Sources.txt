@@ -1,0 +1,98 @@
+  /////////////////
+ //	Alignments: //
+/////////////////
+
+	Left
+	Middle
+	Right
+	
+  ////////////
+ //	Fonts: //
+////////////
+
+	mainfont
+	defaultfont
+	captionfont
+	infotextfont
+	infofont
+	SmallFont
+	smallfont
+	menufont
+
+  //////////////
+ //	Sources: //
+//////////////
+
+	$SongTrack$
+	$SongChannel$
+	$SongFrequency$
+	$SongLength$
+	$SongBitRate$
+	$HDTempF$
+	$HDTempC$
+	$HDTemp$
+	$TotalMemory$
+	$FreeMemory$
+	$DVDModel$
+	$HDDStatus$
+	$HDDSerial$
+	$HDDModel$
+	$Thread$
+	$FanSpeed$
+	$LaunchMode$
+	$NewsSource$
+	$Newsfeed$
+	$ChipID$
+	$NumClient$
+	$BIOSMD5$
+	$BIOSVersion$
+	$SerialNum$
+	$HDDKey$
+	$Version$
+	$SkinVersion$
+	$SkinAuthor$
+	$MAC$
+	$AppVersion$
+	$LinkStatus$
+	$DNS2$
+	$DNS1$
+	$Gateway$
+	$Subnet$
+	$IP$
+	$VideoMode$
+	$DVDType$
+	$Tray$
+	$SongTime$
+	$SoundTrack$
+	$SongName$
+	$MBTempF$
+	$CPUTempF$
+	$MBTempC$
+	$CPUTempC$
+	$MBTemp$
+	$CPUTemp$
+	$NickName$
+	$Date$
+	$Time$
+	$DateTime$
+	$C_PFree$
+	$E_PFree$
+	$F_PFree$
+	$G_PFree$
+	$G_TotalMB$
+	$G_FreeMB$
+	$F_TotalMB$
+	$F_FreeMB$
+	$E_TotalMB$
+	$E_FreeMB$
+	$C_TotalMB$
+	$C_FreeMB$
+	$G_Total$
+	$G_Free$
+	$F_Total$
+	$F_Free$
+	$E_Total$
+	$E_Free$
+	$C_Total$
+	$C_Free$
+	$DVDTitle$

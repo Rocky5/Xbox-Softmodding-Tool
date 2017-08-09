@@ -1,0 +1,19 @@
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// If you do not know how to FTP to the Xbox just burn the "Xbox Softmodding Tool Extra Disc.iso" & use that to Quick Upgrade.   //
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+This is the Quick Upgrade option, you must know how to FTP.
+
+Installation....
+
+1) Transfer the Quick Upgrade folder to "E:\"
+2) So should look like "E:\Quick Upgrade\default.xbe + folders & other files."
+3) Run the default.xbe located in the "E:\Quick Upgrade\" folder.
+4) Follow the on screen instructions.
+
+
+Note:
+	If running builds before v1.1.2 you will need to manually start the upgrader.
+	Launch E:\Quick Upgrade\default.xbe
+
+	This will wipe any dashboard installed on the ShadowC partition, back this dashboard up first if you wish to keep it.

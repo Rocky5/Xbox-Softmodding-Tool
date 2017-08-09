@@ -1,14 +1,57 @@
-
-I was meant to keep this file updated with all the changes I made, but I got lazy and I also changed that much I forgot to update it lol
-But here is what I have changed, that I can remember.
-
-
 =========================================
 	Change Log
-	Xbox Softmodding Tool v1.1.1
+	Xbox Softmodding Tool v1.1.2
 	Created by Rocky5
 =========================================
 
+
+=========================================
+	Update: July ** 2017
+=========================================
+		Fixed the Extras Disc crashing if you press Up on one of the dashboards sub menus
+		Added User Interface X Dash to the extras disc
+		Now install the systems correct kernel font when softmodding the system
+		( this is due to the persistent softmod, if the generic one is installed it will hang the system if you cold boot an original game and press eject )
+		Updated the kernel update code, now will tell you if its installing the generic font
+		( if no compatible kernel is found )
+		Updated the TH4 saves, you now have 3 versions. NTSC, PAL and Region Free
+		Changed the Quick Update/Upgrade layout, you now just place the Update or Upgrade folder in E and Softreset.
+		( Dashloader was updated to work with these layouts )
+		Added the option to disable or enable "Persistent Softmod" mode to the new Advanced features menu in the EEPROM menu.		
+		Added a modded 5960 dashboard to the extras disc.
+		( This is what's installed when you select 5960, the retail version is only used for the restore feature of the extras disc )		
+		"Xbox Softmod Tool Kit" now has a visual GUI, so you know what's happening.		
+		Extras Disc layout change, since I will be added emulators to the disc.		
+		Reorganised the source layout, cleaner and more organised.
+		Changed all the .enabled files to .bin files, just sounds cleaner.		
+		Updated the C Rescuedash config.xml		
+		Simplified the "XBHDM Build" variant.		
+		Removed the PBL from the rescuedash in the real c partition, its not needed.		
+		Added Configmagic v1.6.1
+		( This has the fixed CRC and a other changes & additions )		
+		Fixed Configmagics CRC checksum calculator.
+		( Wasn't an issue for versions under 1.6 this is why when updating the eeprom on a v1.6+ Xbox it would revert all settings )		
+		Added support for "Xbox Softmodding Tool Kit" to revert the eeprom to a factory state, dump eeprom.bin in a decrypted state, write VideoFlags, AudioFlags, Language, TimeZoneStdname, TimeZoneDltname, TimeZoneStddate, TimeZoneDltdate and TimeZoneDltBias values to the EEPROM.		
+		Added Video region changing to the new Advanced features menu for the EEPROM menu.
+		( Switch between NTSC or PAL )		
+		Slight redesign of the Extras Disc skin, now shows available space for E, F & G partitions.
+		( Compiled as release instead of debug )		
+		I now patch NKPatcher on the xbox for different partition types, this saves some space on C.		
+		Updated "Xbox Softmod Tool Kit" to take some of the burden for copying files to places on the HDD during the softmod.
+		( Makes the install faster )		
+		Added a messagebox to the "Update/Upgrade/Restore" function of the Extras disc about having a minimum of 30MB of free space on E.
+		( Hopefully people will realise you need space on E first, as there is no way to check if running from disc )		
+		"Xbox Softmod Tool Kit" code optimisation and cleaning.		
+		Added Null HDD Key to the "NKPatcher Settings > EEPROM > Advanced Features" menu
+		( This option will null the Xbox HDD key so you can now always recover or build a new HDD without the eeprom.bin )		
+		Updated the "Update/Upgrade" function on the extras disc to use the Y partition for the softmod save files, this saves 7MB of space in case you're low on space on E.		
+		Updated the Virtual EEPROM code to now do the CRC for the serial checksum, so now when virtual eeprom is enabled it will have "V-EEPROM ENB" as the serial number.		
+		Fixed subnet mask for the static IPs, not sure why they were all 255.255.255.255		
+		Added the choice to install older builds of UnleashX to the Extras Disc version of UnleashX
+		( install it as a dashboard and you got to Settings > Miscellaneous > Change UX Builds )		
+		Slight update to NKPatcher Settings menus.		
+		Disabled Virtual EEPROM writing, means you cant arse anything up with you're using it.
+		Other back-end changes that improve the functionality of the softmod and user experiences.
 
 =========================================
 	Update: June 07 2017

@@ -25,7 +25,7 @@
 		<Network Type="DHCP" Enable="Yes">
 			<AutoDetect>yes</AutoDetect>
 			<IP>192.168.0.6</IP>
-			<Subnet>255.255.255.255</Subnet>
+			<Subnet>255.255.255.0</Subnet>
 			<Gateway>192.168.0.1</Gateway>
 			<DNS1>192.168.0.1</DNS1>
 		</Network>
@@ -59,13 +59,15 @@
 
 				<!-- Removing the old Xbox/14 Softmodding Tool save & install the new one. -->
 				<Item Action="Delete" arg1="E:\UDATA\21585554">Delete softmod save</Item>
-				<Item Action="Copy" arg1="Softmod Files\21585554\" arg2="E:\UDATA\21585554\">Copy softmod save</Item>
+				<Item Action="Copy" arg1="Y:\Softmod Files\21585554\" arg2="E:\UDATA\21585554\">Copy softmod save</Item>
 
 				<!-- Formating Y to install the Softmod files -->
 				<Item Action="Format" arg1="Y">Format Y:\</Item>
 				<Item Action="Unrar" arg1="E:\UDATA\21585554\000000000000\softmod files\Files.rar" arg2="Y:\">Unrar files.rar to Y:\</Item>
+				<Item Action="Delete" arg1="C:\xodash">Remove the C:\xodash</Item>
 				<Item Action="Unrar" arg1="Y:\xboxdash.rar" arg2="C:\">Unrar xboxdash.rar to C:\</Item>
 				<Item Action="Delete" arg1="C:\nkpatcher\rescuedash">Remove the C:\ rescuedash</Item>
+				<Item Action="Delete" arg1="C:\nkpatcher\configs">Remove the C:\ configs</Item>
 				<Item Action="Unrar" arg1="Y:\nkpatcher.rar" arg2="C:\">Unrar nkpatcher.rar to C:\</Item>
 				<Item Action="Zip" arg1="E:\UDATA\21585554\" arg2="C:\nkpatcher\rescuedash\resoftmod files.zip">Cloning Softmod directory to C:\</Item>
 				<Item Action="Unrar" arg1="Y:\nkp settings.rar" arg2="E:\UDATA\21585554\000000000000\">Unrar nkp setting.rar to softmod save directory</Item>
@@ -76,34 +78,27 @@
 				<!-- Replace the installer config with the NKPatcher Settings Config. -->
 				<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\configs\settings.xml" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\config.xml">Copy settings.xml to config.xml</Item>
 
-				<!-- Setting up dashboard xbe -->
-				<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\unleashx.xbe" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\configs\alt xbe's\dashboard.xbe">unleashx.xbe to alt xbe's</Item>
-
-				<!-- Setting up dash settings -->
-				<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\unleashx.xbe" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\dash settings\default.xbe">Copy unleashx.xbe to dash settings</Item>
-
 				<!-- Setting up NKPatcher Settings shortcut -->
 				<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\configs\alt xbe's\nkps.xbe" arg2="E:\Applications\NKPatcher Settings\default.xbe">Copy nkps.xbe to NKPatcher Settings</Item>
 				<Item Action="Copy" arg1="dummy" arg2="E:\Applications\NKPatcher Settings\modules">Copy dummy to modules</Item>
 
 				<!-- Setting up rescue dashboards -->
-				<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\softmod files\pbl" arg2="C:\nkpatcher\rescuedash\pbl">Copy pbl to C rescuedash</Item>
-				<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\unleashx.xbe" arg2="C:\nkpatcher\rescuedash\unleashx.xbe">Copy unleashx.xbe to C rescuedash</Item>
 				<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\skins\RescueDash_C" arg2="C:\nkpatcher\rescuedash\skins\RescueDash_C">Copy skin to C rescuedash</Item>
 				<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\softmod files\Skin Files" arg2="C:\nkpatcher\rescuedash\skins\RescueDash_C\skin files">Copy skin to C rescuedash</Item>
 				<Item Action="Copy" arg1="dummy" arg2="E:\TDATA\rescuedash">Copy dummy to T rescuedash</Item>
 				<Item Action="Delete" arg1="E:\TDATA\rescuedash">Delete T rescuedash</Item>
-				<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\unleashx.xbe" arg2="E:\TDATA\rescuedash\default.xbe">Copy unleashx.xbe to T rescuedash</Item>
 				<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\configs\recovery.xml" arg2="E:\TDATA\rescuedash\Config.xml">Copy recovery.xml to T rescuedash</Item>
 				<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\skins\RescueDash_E\" arg2="E:\TDATA\rescuedash\skins\RescueDash_E\">Copy skin to T rescuedash</Item>
 				<Item Action="Copy" arg1="dummy" arg2="E:\UDATA\rescuedash">Copy dummy to U rescuedash</Item>
 				<Item Action="Delete" arg1="E:\UDATA\rescuedash">Delete U rescuedash</Item>
-				<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\unleashx.xbe" arg2="E:\UDATA\rescuedash\default.xbe">Copy unleashx.xbe to U rescuedash</Item>
 				<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\configs\recovery.xml" arg2="E:\UDATA\rescuedash\Config.xml">Copy recovery.xml to U rescuedash</Item>
 				<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\skins\RescueDash_E\" arg2="E:\UDATA\rescuedash\skins\RescueDash_E\">Copy skin to U rescuedash</Item>
+				<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\softmod files\skin files\rescuedash.xbx" arg2="E:\UDATA\rescuedash\TitleMeta.xbx">Copy skin to U rescuedash</Item>
+				<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\savemeta.xbx" arg2="E:\UDATA\rescuedash\skins\savemeta.xbx">Copy skin to U rescuedash</Item>
+				<Item Action="Copy" arg1="E:\UDATA\21585554\TitleImage.xbx" arg2="E:\UDATA\rescuedash\TitleImage.xbx">Copy skin to U rescuedash</Item>
+				<Item Action="Copy" arg1="E:\UDATA\21585554\SaveImage.xbx" arg2="E:\UDATA\rescuedash\SaveImage.xbx">Copy skin to U rescuedash</Item>
 
 				<!-- Settings up the "resoftmod dash", this is used for when you load a disc based game exploit. -->
-				<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\unleashx.xbe" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\resoftmod dash\default.xbe">Copy unleashx to resoftmod dash</Item>
 				<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\configs\alt xbe's\recovery.xbe" arg2="E:\UDATA\21585554\000000000000\install.xbe">Copy disabled.xbe to install.xbe</Item>
 				<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\configs\alt xbe's\recovery.xbe" arg2="E:\UDATA\4541000d\000000000000\default.xbe">Copy disabled.xbe to default.xbe</Item>
 				<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\configs\alt xbe's\recovery.xbe" arg2="E:\UDATA\4d530017\62D648EBF155\default.xbe">Copy disabled.xbe to default.xbe</Item>

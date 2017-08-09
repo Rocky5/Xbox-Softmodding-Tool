@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2006/02/22 22:43:14.756.pas,C:\Documents and Settings\Admin\Mes documents\Borland Studio Projects\Unit1.pas=C:\Documents and Settings\Admin\Mes documents\Borland Studio Projects\xisosplit\Unit1.pas</Transaction>
+    <Transaction>2006/02/22 22:43:14.766.dfm,C:\Documents and Settings\Admin\Mes documents\Borland Studio Projects\Unit1.dfm=C:\Documents and Settings\Admin\Mes documents\Borland Studio Projects\xisosplit\Unit1.dfm</Transaction>
+    <Transaction>2006/02/22 22:43:17.350.bdsproj,C:\Documents and Settings\Admin\Mes documents\Borland Studio Projects\Project1.bdsproj=C:\Documents and Settings\Admin\Mes documents\Borland Studio Projects\xisosplit\Project1.bdsproj</Transaction>
+    <Transaction>2006/02/25 16:05:29.901.bdsproj,C:\Documents and Settings\Admin\Mes documents\Borland Studio Projects\xisosplit\Project1.bdsproj=C:\Documents and Settings\Admin\Mes documents\Borland Studio Projects\xisosplit\xisosplit.bdsproj</Transaction>
+  </Transactions>
+</BorlandProject>
