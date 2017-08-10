@@ -5,7 +5,7 @@
 
 ###  Background:
 
-I set out to try to make the softmodding process as pain free and user friendly as possible and to be honest I think I nailed it. You don't need to have a specific MS dashboard version or mess about in menus trying to backup your EEPROM.bin or even working out what version to install. I take all that and do it for you, I backup the EEPROM.bin I give you an easy to use settings menu ( NKPatcher Settings ) that has all the info you need to get the just of things. I have also made it as safe as I possibly can, by having recovery dashboards and fail safes in place in case you remove your dashboard or you format your E partition eg... you can always recover.
+I set out to try and make the softmodding process as pain free and user friendly as possible and to be honest I think I nailed it. You don't need to have a specific MS dashboard version or mess about in menus trying to backup your EEPROM.bin or even working out what version to install. I take all that and do it for you, I backup the EEPROM.bin I give you an easy to use settings menu ( NKPatcher Settings ) that has all the info you need to get the just of things. I have also made it as safe as I possibly can, by having recovery dashboards and fail safes in place in case you remove your dashboard or you format your E partition eg... you can always recover.
 		
 #### I even added support for 15 dashboard locations, so every other softmod dashboard install location is covered.
 
@@ -167,10 +167,10 @@ At the top of each menus there is an "Information" button, this will give you a 
  * #### Install alternative dashboards
     * Avalaunch
     * EvolutionX
-	* UIX Dash
+    * UIX Dash
     * UnleashX
     * XBMC 3.5.3
-    * XBMC4Kids
+    * XBMC4Gamers
 			
  * #### Install useful applications
     * DVD2Xbox
