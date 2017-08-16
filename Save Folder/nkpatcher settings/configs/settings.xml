@@ -195,7 +195,7 @@
 				<List Text="2.1.3 Persistent Softmod" Sort="Off">
 					<List Text="Persistent Softmod Information" Sort="Off" Batch="True">
 						<Item Action="MessageBox" Arg1="Information">What this does is put the Xbox into a controlled error 16 state. Don't be alarmed!. This is 100% safe, as long as you don't remove anything from the real C partition.</Item>
-						<Item Action="MessageBox" Arg1="Information">In this mode every game is loaded under the softmod, what this means is IGR on all retail (original) games and you never need to worry about losing your softmod again, although with my softmod that's a mute point.</Item>
+						<Item Action="MessageBox" Arg1="Information">In this mode every game is loaded under the softmod, what this means is IGR on all retail (original) games and you never need to worry about losing your softmod again, although with my softmod that's a moot point.</Item>
 						<Item Action="MessageBox" Arg1="Information">If you're worried just disable it and never enter this menu again. Note: this mode is enabled upon updating, upgrading or reinstalling the softmod.</Item>
 					</List>
 					<Item></Item>
