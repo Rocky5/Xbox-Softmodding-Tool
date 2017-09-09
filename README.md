@@ -116,9 +116,11 @@ At the top of each menus there is an "Information" button, this will give you a 
   * #### G Partition:
 	Creates "Applications, Emulators, Games and Homebrew" folders.
 
-	
-### Kernel Fonts > Advanced Features > Kernel Font Options
+
+### Kernel Fonts
   * #### Displays current font used for the NDURE exploit.
+  * #### Advanced Features.
+### Kernel Fonts > Advanced Features > Kernel Font Options
   * #### Install Kernel Font:
 	This option will install a kernel specific font. This isn't really needed but if there are boot issues this can fix the issue.	
   * #### Restore Generic Font:

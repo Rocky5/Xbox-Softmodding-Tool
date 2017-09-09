@@ -6,6 +6,13 @@
 
 
 =========================================
+	Update: September 09 2017
+=========================================
+		Stopped the softmod setting the time to GMT
+		Fixed readme typo
+		
+
+=========================================
 	Update: July ** 2017
 =========================================
 		Fixed the Extras Disc crashing if you press Up on one of the dashboards sub menus

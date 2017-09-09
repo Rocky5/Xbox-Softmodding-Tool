@@ -769,11 +769,11 @@ void ConfigMagicApp::ColdBootSoftmod()
 	Sleep(1000);
 	m_pXKEEPROM->ReadFromXBOX();
 	m_EnryptedRegionValid = TRUE;
-	m_pXKEEPROM->SetTimeZoneStdNameString("GMT"); // Set timezone to GMT
-	m_pXKEEPROM->SetTimeZoneDltNameString("BST"); // Set Daylight saving to BST ( YES )
-	m_pXKEEPROM->SetTimeZoneStdDateString("0A050002"); // Set timezone standard Date
-	m_pXKEEPROM->SetTimeZoneDltDateString("03050001"); // Set Daylight saving Date
-	m_pXKEEPROM->SetTimeZoneDltBiasString("C4FFFFFF"); // Set Daylight saving Bias
+	//m_pXKEEPROM->SetTimeZoneStdNameString("GMT"); // Set timezone to GMT
+	//m_pXKEEPROM->SetTimeZoneDltNameString("BST"); // Set Daylight saving to BST ( YES )
+	//m_pXKEEPROM->SetTimeZoneStdDateString("0A050002"); // Set timezone standard Date
+	//m_pXKEEPROM->SetTimeZoneDltDateString("03050001"); // Set Daylight saving Date
+	//m_pXKEEPROM->SetTimeZoneDltBiasString("C4FFFFFF"); // Set Daylight saving Bias
 	m_pXKEEPROM->SetVideoFlagsString("00004A00"); // Set Videoflags to (0A) 480p, 720p or (4A) PAL60, 480p and 720p
 	m_pXKEEPROM->SetLanguageString("00"); // invalid language set, this will force the xbox to boot xboxdash.xbe always
 	Force_Write_XBOX_EEPROM();
