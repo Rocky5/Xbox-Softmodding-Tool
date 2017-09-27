@@ -923,7 +923,7 @@
 				<Item Action="Copy" arg1="D:\skins\Update Softmod" arg2="E:\Prep\skins\Update Softmod"/>
 				<Item Action="Copy" arg1="D:\skins\skin files" arg2="E:\Prep\skins\skin files"/>
 				<Item Action="Copy" arg1="D:\configs\updatesoftmod.xml" arg2="E:\Prep\Config.xml"/>
-				<Item Action="Copy" arg1="D:\softmod files\Softmod Files\21585554\" arg2="Y:\Softmod Files\21585554\"/>
+				<Item Action="Copy" arg1="D:\softmod files\Softmod Files\21585554\" arg2="E:\Prep\Softmod Files\21585554\"/>
 				<Item Action="Copy" arg1="D:\softmod files\boot.cfg" arg2="E:\Prep\"/>
 				<Item Action="Copy" arg1="D:\softmod files\NoVC.bin" arg2="E:\Prep\"/>
 				<Item Action="Copy" arg1="D:\softmod files\unleashx.xbe" arg2="E:\Prep\"/>
@@ -946,7 +946,7 @@
 				<Item Action="Copy" arg1="D:\skins\Update Softmod" arg2="E:\Prep\skins\Update Softmod"/>
 				<Item Action="Copy" arg1="D:\skins\skin files" arg2="E:\Prep\skins\skin files"/>
 				<Item Action="Copy" arg1="D:\configs\updatesoftmod.xml" arg2="E:\Prep\Config.xml"/>
-				<Item Action="Copy" arg1="D:\softmod files\Softmod Files\21585554\" arg2="Y:\Softmod Files\21585554\"/>
+				<Item Action="Copy" arg1="D:\softmod files\Softmod Files\21585554\" arg2="E:\Prep\Softmod Files\21585554\"/>
 				<Item Action="Copy" arg1="D:\softmod files\boot.cfg" arg2="E:\Prep\"/>
 				<Item Action="Copy" arg1="D:\softmod files\NoVC.bin" arg2="E:\Prep\"/>
 				<Item Action="Copy" arg1="D:\softmod files\unleashx.xbe" arg2="E:\Prep\"/>
@@ -962,7 +962,7 @@
 				<Item Action="Copy" arg1="D:\skins\Upgrade Softmod" arg2="E:\Prep\skins\Upgrade Softmod"/>
 				<Item Action="Copy" arg1="D:\skins\skin files" arg2="E:\Prep\skins\skin files"/>
 				<Item Action="Copy" arg1="D:\configs\upgradesoftmod.xml" arg2="E:\Prep\Config.xml"/>
-				<Item Action="Copy" arg1="D:\softmod files\Softmod Files\" arg2="Y:\Softmod Files\"/>
+				<Item Action="Copy" arg1="D:\softmod files\Softmod Files\" arg2="E:\Prep\Softmod Files\"/>
 				<Item Action="Copy" arg1="D:\softmod files\boot.cfg" arg2="E:\Prep\"/>
 				<Item Action="Copy" arg1="D:\softmod files\NoVC.bin" arg2="E:\Prep\"/>
 				<Item Action="Copy" arg1="D:\softmod files\unleashx.xbe" arg2="E:\Prep\"/>

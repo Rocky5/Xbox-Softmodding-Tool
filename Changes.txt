@@ -6,6 +6,15 @@
 
 
 =========================================
+	Update: September 27 2017
+=========================================
+		Changed the Upgrade and Update softmod options on the extras disc to only use the E:\Prep directory.
+		( moving it back to here as I have a pop up that states you need a minimum of 30MB on E )
+		Changed how the 5960 modded dashboard works, if persistent softmod is disabled it will show the language menu and if its enable it will hide it.
+		Removed the rar compression from best to default. ( this may fix the rare case of it failing to extract )
+		
+
+=========================================
 	Update: September 09 2017
 =========================================
 		Stopped the softmod setting the time to GMT
@@ -59,6 +68,7 @@
 		Slight update to NKPatcher Settings menus.		
 		Disabled Virtual EEPROM writing, means you cant arse anything up with you're using it.
 		Other back-end changes that improve the functionality of the softmod and user experiences.
+
 
 =========================================
 	Update: June 07 2017

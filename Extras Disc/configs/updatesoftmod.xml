@@ -59,7 +59,7 @@
 
 				<!-- Removing the old Xbox/14 Softmodding Tool save & install the new one. -->
 				<Item Action="Delete" arg1="E:\UDATA\21585554">Delete softmod save</Item>
-				<Item Action="Copy" arg1="Y:\Softmod Files\21585554\" arg2="E:\UDATA\21585554\">Copy softmod save</Item>
+				<Item Action="Copy" arg1="Softmod Files\21585554\" arg2="E:\UDATA\21585554\">Copy softmod save</Item>
 
 				<!-- Formating Y to install the Softmod files -->
 				<Item Action="Format" arg1="Y">Format Y:\</Item>
