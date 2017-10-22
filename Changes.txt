@@ -1,8 +1,18 @@
 =========================================
 	Change Log
-	Xbox Softmodding Tool v1.1.2
+	Xbox Softmodding Tool v1.1.3
 	Created by Rocky5
 =========================================
+
+
+=========================================
+	Update: October 09 2017
+=========================================
+		Patched UnleashX Build 584 to work with all FTP programs.
+		( That includes all UX xbe files I use through out the hole package )
+		Updated the UnleashX dash on the extras disc with the fix.
+		The "Xbox Softmod Tool kit" now keeps your original eeprom.bin when you run the HDD Key Nuller.
+		( eeprom_original.bin )
 
 
 =========================================

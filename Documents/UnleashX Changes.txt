@@ -1,4 +1,14 @@
 
+Patched by Rocky5
+****	Change Log	****
+
+UnleashX V0.39.0528 Build 584
+Version:	0.39 Build 584 U
+Status		Alpha
+Release Date:	10/09/2017
+
+*Fixed	UX will now work with all FTP programs.
+
 
 
 For features and description, please see UnleashX documentation, or the change

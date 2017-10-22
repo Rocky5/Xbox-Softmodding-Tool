@@ -1,26 +1,6 @@
 Troubleshooting:
 
-1) FTP - root directories are malformed.
-	
-	Cause:
-		Filezilla and newer builds of UnleashX.
-		( Build 572, Build 583 and Build 584 )
-
-	Fix:
-		Use "Core FTP LE 2.2 : free version", this FTP program has no issues and functions the same as Filezilla. Alternatively, use another dashboard.
-		( you can use any other FTP program, but that's the best free alternative )
-		
-		Note:
-			CoreFTP on Windows 10 will crash when drag and dropping directories onto the transfer window, To fix do the following.
-
-				1) Don't drag and drop ( :P ) kidding, but if you select the files/folders on the left window pane and right click and pick transfer it works fine.
-
-				2) Right click the "Core FTP LE" shortcut in the start menu or desktop if you have one there and pick:
-				   Properties > Compatibility > tick the box for "Run this program in compatibility mode for:" select Window 8 > select OK and your done.
-
-
-
-2) My G partition is missing
+1) My G partition is missing
 
 	Cause:
 		HDD is formatted without a partition table.
@@ -31,7 +11,7 @@ Troubleshooting:
 
 
 
-3) Xbox is freezing sometimes at the XLogo screen
+2) Xbox is freezing sometimes at the XLogo screen
 
 	Cause:
 		Some rare Xbox's can randomly crash due to, exploit instability.
@@ -43,6 +23,14 @@ Troubleshooting:
 		Please read the Information text before applying this fix.
 		( the process is automated, don't worry )
 
+		
+3) Some games are crashing at there main menu ( Counter Strike )
+	
+	Cause:
+		The xbox not having a valid language some games ( only know of one ^^ )
+	
+	Fix:
+		Disable Persistent Softmod.
 
 
 4) Haven't a clue

@@ -28,7 +28,6 @@ Copy "..\Documents\ReadMe.url" "ReadMe.url"
 ::Rar Xbox Softmodding Tool.zip
 "%Winrar%" a -x*.db -afzip "..\%ZipName%" "Installation Guide
 "%Winrar%" a -x*.db -afzip "..\%ZipName%" "Softmod Package"
-"%Winrar%" a -x*.db -afzip "..\%ZipName%" "..\Documents\Free FTP Programs.txt"
 "%Winrar%" a -x*.db -afzip "..\%ZipName%" "..\Documents\Troubleshooting.txt"
 "%Winrar%" a -x*.db -afzip "..\%ZipName%" "..\Documents\How to run the exploit save.txt"
 "%Winrar%" a -x*.db -afzip "..\%ZipName%" "ReadMe.url"

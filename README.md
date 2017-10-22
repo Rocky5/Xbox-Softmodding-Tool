@@ -1,5 +1,5 @@
 ![Thumb](/Other/Graphics/banner.png)
-## Xbox Softmodding Tool v1.1.2
+## Xbox Softmodding Tool v1.1.3
 ### Created by Rocky5
 
 
