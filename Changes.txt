@@ -1,8 +1,17 @@
 =========================================
 	Change Log
-	Xbox Softmodding Tool v1.1.3
+	Xbox Softmodding Tool v1.1.4
 	Created by Rocky5
 =========================================
+
+
+=========================================
+	Update: January 07 2018
+=========================================
+		Updated XBMC4Gamers to the latest revision.
+		Fixed a type in the NKPatcher Settings menu.
+		I don't install the persistent softmod during the softmod, you can enable it via NKPatcher Setting if you want that extra layer of protection.
+		I don't install the systems kernel font during the softmod process, again like above you can enable it manually if you want.
 
 
 =========================================

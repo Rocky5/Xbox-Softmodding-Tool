@@ -206,7 +206,7 @@
 						<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\psmode\disabled.pn" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\psmode\disabled.png"/>
 						<Item Action="AskUser" Arg1="Info">Are you sure you would like to enable the persistent softmod?</Item>
 						<Item Action="MessageBox" Arg1="Info">Remember, don't mess with the real C partition or you could get error 16. Just use your xbox for games and homebrew and you will never need to worry about anything.</Item>
-						<Item Action="AskUser" Arg1="Please Read">Last change to say no ;)</Item>
+						<Item Action="AskUser" Arg1="Please Read">Last chance to say no ;)</Item>
 						<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\psmode"/>
 						<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\psmode\enabled.png"/>
 						<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox Softmod Tool Kit\dummy_file" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox softmod tool kit\EnablePersistentSoftmodMode.bin"/>
