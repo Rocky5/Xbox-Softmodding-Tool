@@ -101,7 +101,7 @@ void ErrorHandler(char *xbepath)
 		XLaunchXBE("E:\\Quick Update\\Default.xbe");
 		debuglog("Loading Quick Upgrade Dashboard - E:\\Quick Upgrade\\Default.xbe");
 		XLaunchXBE("E:\\Quick Upgrade\\Default.xbe");
-		debuglog("Dashboards doesn't Exist");
+		debuglog("Dashboards don't Exist");
 		/*
 		*/
 		debuglog("\n------------------------------------------------");
@@ -112,9 +112,54 @@ void ErrorHandler(char *xbepath)
 		debuglog("ShadowC image is loaded");
 		/*
 		*/
-		debuglog("------------------------------------------------");
+		debuglog("\n------------------------------------------------");
 		debuglog("Dashboard Locations");
 		debuglog("------------------------------------------------");
+		/*
+		*/
+		debuglog("Loading C:\\XBMC-Emustation\\Default.xbe");
+		XLaunchXBE("C:\\XBMC-Emustation\\Default.xbe");
+		debuglog("Dashboard doesn't Exist\n");
+		/*
+		*/
+		debuglog("Loading E:\\XBMC-Emustation\\Default.xbe");
+		XLaunchXBE("E:\\XBMC-Emustation\\Default.xbe");
+		debuglog("Dashboard doesn't Exist\n");
+		/*
+		*/
+		debuglog("Loading F:\\XBMC-Emustation\\Default.xbe");
+		XLaunchXBE("F:\\XBMC-Emustation\\Default.xbe");
+		debuglog("Dashboard doesn't Exist\n");
+		/*
+		*/
+		debuglog("Loading C:\\XBMC4Gamers\\Default.xbe");
+		XLaunchXBE("C:\\XBMC4Gamers\\Default.xbe");
+		debuglog("Dashboard doesn't Exist\n");
+		/*
+		*/
+		debuglog("Loading E:\\XBMC4Gamers\\Default.xbe");
+		XLaunchXBE("E:\\XBMC4Gamers\\Default.xbe");
+		debuglog("Dashboard doesn't Exist\n");
+		/*
+		*/
+		debuglog("Loading F:\\XBMC4Gamers\\Default.xbe");
+		XLaunchXBE("F:\\XBMC4Gamers\\Default.xbe");
+		debuglog("Dashboard doesn't Exist\n");
+		/*
+		*/
+		debuglog("Loading C:\\XBMC4Xbox\\Default.xbe");
+		XLaunchXBE("C:\\XBMC4Xbox\\Default.xbe");
+		debuglog("Dashboard doesn't Exist\n");
+		/*
+		*/
+		debuglog("Loading E:\\XBMC4Xbox\\Default.xbe");
+		XLaunchXBE("E:\\XBMC4Xbox\\Default.xbe");
+		debuglog("Dashboard doesn't Exist\n");
+		/*
+		*/
+		debuglog("Loading F:\\XBMC4Xbox\\Default.xbe");
+		XLaunchXBE("F:\\XBMC4Xbox\\Default.xbe");
+		debuglog("Dashboard doesn't Exist\n");
 		/*
 		*/
 		debuglog("Loading C:\\XBMC\\Default.xbe");
@@ -192,7 +237,7 @@ void ErrorHandler(char *xbepath)
 		debuglog("Dashboard doesn't Exist\n");
 		/*
 		*/
-		debuglog("------------------------------------------------");
+		debuglog("\n------------------------------------------------");
 		debuglog("Rescue Dashboard Locations");
 		debuglog("------------------------------------------------");
 		/*
@@ -212,7 +257,7 @@ void ErrorHandler(char *xbepath)
 		debuglog("Rescue Dashboard doesn't Exist\n");
 		/*
 		*/
-		debuglog("------------------------------------------------");
+		debuglog("\n------------------------------------------------");
 		debuglog("All failed :( - trying to reboot");
 		debuglog("------------------------------------------------");
 		XReboot();

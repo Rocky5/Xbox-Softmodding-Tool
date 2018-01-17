@@ -7,7 +7,7 @@
 
 I set out to try and make the softmodding process as pain free and user friendly as possible and to be honest I think I nailed it. You don't need to have a specific MS dashboard version or mess about in menus trying to backup your EEPROM.bin or even working out what version to install. I take all that and do it for you, I backup the EEPROM.bin I give you an easy to use settings menu ( NKPatcher Settings ) that has all the info you need to get the just of things. I have also made it as safe as I possibly can, by having recovery dashboards and fail safes in place in case you remove your dashboard or you format your E partition eg... you can always recover.
 		
-#### I even added support for 15 dashboard locations, so every other softmod dashboard install location is covered.
+#### I even added support for 24 dashboard locations, so every other softmod dashboard install location is covered.
 
 Note: Making changes in the unprotected C partition is not advised unless you know what you are doing, you will know you are in this mode if you see a folder named "Do not touch anything in here" lol
 
@@ -39,6 +39,15 @@ Note: Making changes in the unprotected C partition is not advised unless you kn
  * Persistent Softmod Mode
  * Clock auto set to 01/01/2017 (No more clock loops)
  * Multiple dashboard locations built in
+   * C:\XBMC-Emustation\default.xbe
+   * E:\XBMC-Emustation\default.xbe
+   * F:\XBMC-Emustation\default.xbe
+   * C:\XBMC4Gamers\default.xbe
+   * E:\XBMC4Gamers\default.xbe
+   * F:\XBMC4Gamers\default.xbe
+   * C:\XBMC4Xbox\default.xbe
+   * E:\XBMC4Xbox\default.xbe
+   * F:\XBMC4Xbox\default.xbe
    * C:\XBMC\default.xbe
    * E:\XBMC\default.xbe
    * F:\XBMC\default.xbe

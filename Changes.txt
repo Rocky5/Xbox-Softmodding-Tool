@@ -6,6 +6,23 @@
 
 
 =========================================
+	Update: January 17 2018
+=========================================
+		Quick update, still same version.
+		Updated XBMC4Gamers to the latest build.
+		Added 9 new dashboard locations. ( if you installed this before this date, just run the updater and you will get the changes )
+			C:\XBMC-Emustation\default.xbe
+			E:\XBMC-Emustation\default.xbe
+			F:\XBMC-Emustation\default.xbe
+			C:\XBMC4Gamers\default.xbe
+			E:\XBMC4Gamers\default.xbe
+			F:\XBMC4Gamers\default.xbe
+			C:\XBMC4Xbox\default.xbe
+			E:\XBMC4Xbox\default.xbe
+			F:\XBMC4Xbox\default.xbe
+		
+
+=========================================
 	Update: January 07 2018
 =========================================
 		Updated XBMC4Gamers to the latest revision.
