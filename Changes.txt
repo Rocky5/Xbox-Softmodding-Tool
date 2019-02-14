@@ -1,8 +1,23 @@
 =========================================
 	Change Log
-	Xbox Softmodding Tool v1.1.4
+	Xbox Softmodding Tool v1.1.5
 	Created by Rocky5
 =========================================
+
+
+=========================================
+	Update: February 03 2019
+=========================================
+		Change to how the Softmod is installed to the HDD from the extras disc to help combat corruption or bad disc reading.
+		Added the option to set the system language for the whole system to NKPatcher Settings.
+		( means you don't need the MSDash any more to do it )
+		Small update to address C partitions with less than 500MB of space.
+		( This would normally cause the Fix softmod loop, so now if there isn't enough space it will make a smaller shadowc.img file. )
+		Added XBMC-Emustation v1.2.015 to the extras disc.
+		Updated XBMC4Gamers to the latest build.
+		Dashloader updated with xInput. So now you can hold Start+Y to enter a recovery dashboard if you corrupt or damage the dashboard xbe file.
+		( you can also create a custom "same name as xbe".rec file with a custom recovery dash path. )
+		Version change to v1.1.5
 
 
 =========================================

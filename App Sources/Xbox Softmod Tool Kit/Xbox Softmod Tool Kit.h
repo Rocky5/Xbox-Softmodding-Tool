@@ -84,6 +84,7 @@ private:
 	void	DumpDecryptedEEPROM();
 	void	EnablePersistentSoftmodState();
 	void	DisablePersistentSoftmodState();
+	void	SetLanguage();
 	
 	/////////////////////////////////////////
 	void	PatchXBEFiles();

@@ -707,25 +707,89 @@
 					<Item Action="MessageBox" arg1="Done">That's the Audio installed.</Item>
 				</list>
 			</list>
+			
+			<List Text=" XBMC-Emustation" Sort="Off">
+				<List Text=" XBMC-Emustation Options" Sort="Off" Batch="True"></List>
+				<Item></Item>
+				<Item>Install as dashboard to:</Item>
+				<List Text=" E:\Dashboard\" Sort="Off" Batch="True" Icon="E:\Dashboard\installed.png">
+					<Item Action="AskUser" arg1="Continue" arg2="This will install XBMC-Emustation to E:\Dashboard\ if there is currently a dashboard residing there it will be overwritten."/>
+					<Item Action="MessageBox" arg1="NOTE">I would recommend moving the emulators, media and roms directors to a larger partition.</Item>
+					<Item Action="Copy" arg1="dummy" arg2="E:\Dashboard"/>
+					<Item Action="Delete" arg1="E:\Dashboard">Remove old E:\Dashboard</Item>
+					<Item Action="Unzip" arg1="D:\Dashboards\XBMC-Emustation.zip" arg2="E:\Dashboard">Installing dash to E:\Dashboard\</Item>
+					<Item Action="Copy" arg1="D:\Skins\installed.png" arg2="E:\Dashboard\"/>
+					<Item Action="Format" arg1="Z"/>
+					<List>
+						<Item Action="AskUser" arg1="OH" arg2="Would you like to remove the Dashboard located in C:\Dashboard\ if it exists? This is required for the E:\Dashboard\ to load on boot."/>
+						<Item Action="Copy" arg1="dummy" arg2="C:\Dashboard"/>
+						<Item Action="Delete" arg1="C:\Dashboard">Remove old C:\Dashboard</Item>
+					</List>
+					<Item Action="MessageBox" arg1="Done">That's XBMC-Emustation installed to "E:\Dashboard\"</Item>
+				</list>
+				<List Text=" E:\XBMC-Emustation\" Sort="Off" Batch="True" Icon="E:\XBMC-Emustation\installed.png">
+					<Item Action="AskUser" arg1="Continue" arg2="This will install XBMC-Emustation to E:\XBMC-Emustation\ if there is currently a dashboard residing there it will be overwritten."/>
+					<Item Action="MessageBox" arg1="NOTE">I would recommend moving the emulators, media and roms directors to a larger partition.</Item>
+					<Item Action="Copy" arg1="dummy" arg2="E:\XBMC-Emustation"/>
+					<Item Action="Delete" arg1="E:\XBMC-Emustation">Remove old E:\XBMC-Emustation</Item>
+					<Item Action="Unzip" arg1="D:\Dashboards\XBMC-Emustation.zip" arg2="E:\XBMC-Emustation">Installing dash to E:\XBMC-Emustation\</Item>
+					<Item Action="Copy" arg1="D:\Skins\installed.png" arg2="E:\XBMC-Emustation\"/>
+					<Item Action="Format" arg1="Z"/>
+					<Item Action="MessageBox" arg1="Done">That's XBMC-Emustation installed to "E:\XBMC-Emustation\"</Item>
+				</list>
+				<List Text=" F:\XBMC-Emustation\" Sort="Off" Batch="True" Icon="F:\XBMC-Emustation\installed.png">
+					<Item Action="AskUser" arg1="Continue" arg2="This will install XBMC-Emustation to F:\XBMC-Emustation\ if there is currently a dashboard residing there it will be overwritten."/>
+					<Item Action="Copy" arg1="dummy" arg2="F:\XBMC-Emustation"/>
+					<Item Action="Delete" arg1="F:\XBMC-Emustation">Remove old F:\XBMC-Emustation</Item>
+					<Item Action="Unzip" arg1="D:\Dashboards\XBMC-Emustation.zip" arg2="F:\XBMC-Emustation">Installing dash to F:\XBMC-Emustation\</Item>
+					<Item Action="Copy" arg1="D:\Skins\installed.png" arg2="F:\XBMC-Emustation\"/>
+					<Item Action="Format" arg1="Z"/>
+					<Item Action="MessageBox" arg1="Done">That's XBMC-Emustation installed to "F:\XBMC-Emustation\"</Item>
+				</list>
+				<Item>Install as application to:</Item>
+				<List Text=" E:\Applications\" Sort="Off" Batch="True" Icon="E:\Applications\XBMC-Emustation\installed.png">
+					<Item Action="AskUser" arg1="Continue" arg2="This will install XBMC-Emustation to E:\Applications\ if there is a previous installation residing there it will be overwritten."/>
+					<Item Action="Copy" arg1="dummy" arg2="E:\Applications\XBMC-Emustation"/>
+					<Item Action="Delete" arg1="E:\Applications\XBMC-Emustation">Remove old E:\Applications\XBMC-Emustation\</Item>
+					<Item Action="Unzip" arg1="D:\Dashboards\XBMC-Emustation.zip" arg2="E:\Applications\XBMC-Emustation">Installing dash to E:\Applications\XBMC-Emustation\</Item>
+					<Item Action="Format" arg1="Z"/>
+					<Item Action="Copy" arg1="D:\Skins\installed.png" arg2="E:\Applications\XBMC-Emustation"/>
+					<Item Action="MessageBox" arg1="Done">That's XBMC-Emustation installed to "E:\Applications\XBMC-Emustation\"</Item>
+				</list>
+				<List Text=" F:\Applications\" Sort="Off" Batch="True" Icon="F:\Applications\XBMC-Emustation\installed.png">
+					<Item Action="AskUser" arg1="Continue" arg2="This will install XBMC-Emustation to F:\Applications\ if there is a previous installation residing there it will be overwritten."/>
+					<list>
+						<Item Action="Copy" arg1="D:\Skins\installed.png" arg2="F:\test_partition"/>
+						<Item Action="Rename" arg1="F:\test_partition" arg2="F:\test_partition_">No F Partition found</Item>
+						<Item Action="Delete" arg="F:\test_partition_"/>
+					</list>
+					<Item Action="Copy" arg1="dummy" arg2="F:\Applications\XBMC-Emustation"/>
+					<Item Action="Delete" arg1="F:\Applications\XBMC-Emustation">Remove old F:\Applications\XBMC-Emustation\</Item>
+					<Item Action="Unzip" arg1="D:\Dashboards\XBMC-Emustation.zip" arg2="F:\Applications\XBMC-Emustation">Installing dash to F:\Applications\XBMC-Emustation\</Item>
+					<Item Action="Format" arg1="Z"/>
+					<Item Action="Copy" arg1="D:\Skins\installed.png" arg2="F:\Applications\XBMC-Emustation"/>
+					<Item Action="MessageBox" arg1="Done">That's XBMC-Emustation installed to "F:\Applications\XBMC-Emustation\"</Item>
+				</list>
+				<List Text=" G:\Applications\" Sort="Off" Batch="True" Icon="G:\Applications\XBMC-Emustation\installed.png">
+					<Item Action="AskUser" arg1="Continue" arg2="This will install XBMC-Emustation to G:\Applications\ if there is a previous installation residing there it will be overwritten."/>
+					<list>
+						<Item Action="Copy" arg1="D:\Skins\installed.png" arg2="G:\test_partition"/>
+						<Item Action="Rename" arg1="G:\test_partition" arg2="G:\test_partition_">No G Partition found</Item>
+						<Item Action="Delete" arg="G:\test_partition_"/>
+					</list>
+					<Item Action="Copy" arg1="dummy" arg2="G:\Applications\XBMC-Emustation"/>
+					<Item Action="Delete" arg1="G:\Applications\XBMC-Emustation">Remove old G:\Applications\XBMC-Emustation\</Item>
+					<Item Action="Unzip" arg1="D:\Dashboards\XBMC-Emustation.zip" arg2="G:\Applications\XBMC-Emustation">Installing dash to G:\Applications\XBMC-Emustation\</Item>
+					<Item Action="Format" arg1="Z"/>
+					<Item Action="Copy" arg1="D:\Skins\installed.png" arg2="G:\Applications\XBMC-Emustation"/>
+					<Item Action="MessageBox" arg1="Done">That's XBMC-Emustation installed to "G:\Applications\XBMC-Emustation\"</Item>
+				</list>
+			</list>
 
 			<List Text=" XBMC4Gamers" Sort="Off">
 				<List Text=" XBMC4Gamers Options" Sort="Off" Batch="True"></List>
 				<Item></Item>
 				<Item>Install as dashboard to:</Item>
-				<List Text=" C:\Dashboard\" Sort="Off" Batch="True" Icon="C:\Dashboard\installed.png">
-					<Item Action="AskUser" arg1="Continue" arg2="This will install XBMC4Gamers to C:\Dashboard\ if there is currently a dashboard residing there it will be overwritten."/>
-					<Item Action="Copy" arg1="dummy" arg2="C:\Dashboard"/>
-					<Item Action="Delete" arg1="C:\Dashboard">Remove old C:\Dashboard</Item>
-					<Item Action="Unzip" arg1="D:\Dashboards\XBMC4Gamers.zip" arg2="C:\Dashboard">Installing dash to C:\Dashboard\</Item>
-					<Item Action="Copy" arg1="D:\Skins\installed.png" arg2="C:\Dashboard\"/>
-					<Item Action="Format" arg1="Z"/>
-					<List>
-						<Item Action="AskUser" arg1="OH" arg2="Would you like to remove the Dashboard located in E:\Dashboard\ if it exists? This is not needed, but it would clean up your E drive & stop confusion down the road."/>
-						<Item Action="Copy" arg1="dummy" arg2="E:\Dashboard"/>
-						<Item Action="Delete" arg1="E:\Dashboard">Remove old C:\Dashboard</Item>
-					</List>
-					<Item Action="MessageBox" arg1="Done">That's XBMC4Gamers installed to "C:\Dashboard\"</Item>
-				</list>
 				<List Text=" E:\Dashboard\" Sort="Off" Batch="True" Icon="E:\Dashboard\installed.png">
 					<Item Action="AskUser" arg1="Continue" arg2="This will install XBMC4Gamers to E:\Dashboard\ if there is currently a dashboard residing there it will be overwritten."/>
 					<Item Action="Copy" arg1="dummy" arg2="E:\Dashboard"/>
@@ -740,19 +804,29 @@
 					</List>
 					<Item Action="MessageBox" arg1="Done">That's XBMC4Gamers installed to "E:\Dashboard\"</Item>
 				</list>
+				<List Text=" E:\XBMC4Gamers\" Sort="Off" Batch="True" Icon="E:\XBMC4Gamers\installed.png">
+					<Item Action="AskUser" arg1="Continue" arg2="This will install XBMC4Gamers to E:\XBMC4Gamers\ if there is currently a dashboard residing there it will be overwritten."/>
+					<Item Action="MessageBox" arg1="NOTE">I would recommend moving the emulators, media and roms directors to a larger partition.</Item>
+					<Item Action="Copy" arg1="dummy" arg2="E:\XBMC4Gamers"/>
+					<Item Action="Delete" arg1="E:\XBMC4Gamers">Remove old E:\XBMC4Gamers</Item>
+					<Item Action="Unzip" arg1="D:\Dashboards\XBMC4Gamers.zip" arg2="E:\XBMC4Gamers">Installing dash to E:\XBMC4Gamers\</Item>
+					<Item Action="Copy" arg1="D:\Skins\installed.png" arg2="E:\XBMC4Gamers\"/>
+					<Item Action="Format" arg1="Z"/>
+					<Item Action="MessageBox" arg1="Done">That's XBMC4Gamers installed to "E:\XBMC4Gamers\"</Item>
+				</list>
+				<List Text=" F:\XBMC4Gamers\" Sort="Off" Batch="True" Icon="F:\XBMC4Gamers\installed.png">
+					<Item Action="AskUser" arg1="Continue" arg2="This will install XBMC4Gamers to F:\XBMC4Gamers\ if there is currently a dashboard residing there it will be overwritten."/>
+					<Item Action="Copy" arg1="dummy" arg2="F:\XBMC4Gamers"/>
+					<Item Action="Delete" arg1="F:\XBMC4Gamers">Remove old F:\XBMC4Gamers</Item>
+					<Item Action="Unzip" arg1="D:\Dashboards\XBMC4Gamers.zip" arg2="F:\XBMC4Gamers">Installing dash to F:\XBMC4Gamers\</Item>
+					<Item Action="Copy" arg1="D:\Skins\installed.png" arg2="F:\XBMC4Gamers\"/>
+					<Item Action="Format" arg1="Z"/>
+					<Item Action="MessageBox" arg1="Done">That's XBMC4Gamers installed to "F:\XBMC4Gamers\"</Item>
+				</list>
 				<Item>Install as application to:</Item>
 				<List Text=" -- Read Me first --" Sort="Off" Batch="True">
 					<Item Action="MessageBox" arg1="">If you are going to use this as an application I would advise not enabling the "Individual Saves Script", doing so may cause issues with other dashboards.</Item>
 				</List>
-				<List Text=" C:\Applications\" Sort="Off" Batch="True" Icon="C:\Applications\XBMC4Gamers\installed.png">
-					<Item Action="AskUser" arg1="Continue" arg2="This will install XBMC4Gamers to C:\Applications\ if there is a previous installation residing there it will be overwritten."/>
-					<Item Action="Copy" arg1="dummy" arg2="C:\Applications\XBMC4Gamers"/>
-					<Item Action="Delete" arg1="C:\Applications\XBMC4Gamers">Remove old C:\Applications\XBMC4Gamers\</Item>
-					<Item Action="Unzip" arg1="D:\Dashboards\XBMC4Gamers.zip" arg2="C:\Applications\XBMC4Gamers">Installing dash to C:\Applications\XBMC4Gamers\</Item>
-					<Item Action="Format" arg1="Z"/>
-					<Item Action="Copy" arg1="D:\Skins\installed.png" arg2="C:\Applications\XBMC4Gamers"/>
-					<Item Action="MessageBox" arg1="Done">That's XBMC4Gamers installed to "C:\Applications\XBMC4Gamers\"</Item>
-				</list>
 				<List Text=" E:\Applications\" Sort="Off" Batch="True" Icon="E:\Applications\XBMC4Gamers\installed.png">
 					<Item Action="AskUser" arg1="Continue" arg2="This will install XBMC4Gamers to E:\Applications\ if there is a previous installation residing there it will be overwritten."/>
 					<Item Action="Copy" arg1="dummy" arg2="E:\Applications\XBMC4Gamers"/>
@@ -1347,15 +1421,10 @@
 				<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\videoset.dat" arg2="E:\UDATA\21585554\000000000000\videoset.da">2014 softmod not installed</Item>
 				<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\videoset.da" arg2="E:\UDATA\21585554\000000000000\videoset.dat">2014 softmod not installed</Item>
 				<Item Action="MessageBox" arg1="Success">OK it would appear you're running my 2014 Softmod, so I will continue onto the next step.</Item>
-				<Item Action="Format" arg1="Y"/>
 				<Item Action="Copy" arg1="D:\skins\Update Softmod" arg2="E:\Prep\skins\Update Softmod"/>
 				<Item Action="Copy" arg1="D:\skins\skin files" arg2="E:\Prep\skins\skin files"/>
 				<Item Action="Copy" arg1="D:\configs\updatesoftmod.xml" arg2="E:\Prep\Config.xml"/>
-				<Item Action="Copy" arg1="D:\softmod files\Softmod Files\21585554\" arg2="E:\Prep\Softmod Files\21585554\"/>
-				<Item Action="Copy" arg1="D:\softmod files\boot.cfg" arg2="E:\Prep\"/>
-				<Item Action="Copy" arg1="D:\softmod files\NoVC.bin" arg2="E:\Prep\"/>
-				<Item Action="Copy" arg1="D:\softmod files\unleashx.xbe" arg2="E:\Prep\"/>
-				<Item Action="Copy" arg1="D:\softmod files\default.xbe" arg2="E:\Prep\"/>
+				<Item Action="Unzip" arg1="D:\softmod files\Xbox Softmodding Tool.zip" arg2="E:\Prep"/>
 				<Item Action="E:\Prep\default.xbe"/>
 			</list>
 
@@ -1370,15 +1439,10 @@
 				<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\reboot xbe\default.xbe" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\reboot xbe\default.xb">Xbox softmoddong tool not installed</Item>
 				<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\reboot xbe\default.xb" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\reboot xbe\default.xbe">Xbox softmoddong tool not installed</Item>
 				<Item Action="MessageBox" arg1="Success">OK it would appear you're running my Xbox Softmod, so I will continue onto the next step.</Item>
-				<Item Action="Format" arg1="Y"/>
 				<Item Action="Copy" arg1="D:\skins\Update Softmod" arg2="E:\Prep\skins\Update Softmod"/>
 				<Item Action="Copy" arg1="D:\skins\skin files" arg2="E:\Prep\skins\skin files"/>
 				<Item Action="Copy" arg1="D:\configs\updatesoftmod.xml" arg2="E:\Prep\Config.xml"/>
-				<Item Action="Copy" arg1="D:\softmod files\Softmod Files\21585554\" arg2="E:\Prep\Softmod Files\21585554\"/>
-				<Item Action="Copy" arg1="D:\softmod files\boot.cfg" arg2="E:\Prep\"/>
-				<Item Action="Copy" arg1="D:\softmod files\NoVC.bin" arg2="E:\Prep\"/>
-				<Item Action="Copy" arg1="D:\softmod files\unleashx.xbe" arg2="E:\Prep\"/>
-				<Item Action="Copy" arg1="D:\softmod files\default.xbe" arg2="E:\Prep\"/>
+				<Item Action="Unzip" arg1="D:\softmod files\Xbox Softmodding Tool.zip" arg2="E:\Prep"/>
 				<Item Action="E:\Prep\default.xbe"/>
 			</list>
 
@@ -1386,15 +1450,10 @@
 			<List Text=" Old Softmods" Sort="Off" Batch="True" password="">
 				<Item Action="MessageBox" arg1="Space!">"Please make sure you have a minimum of 30MB free on the E partition before proceeding."</Item>
 				<Item Action="AskUser" arg1="Upgrade?">"This option is for upgrading your old softmod to my "Xbox Softmodding Tool" or it can be used to install a clean installation of the "Xbox Softmodding Tool". Are you sure you want to do this?"</Item>
-				<Item Action="Format" arg1="Y"/>
 				<Item Action="Copy" arg1="D:\skins\Upgrade Softmod" arg2="E:\Prep\skins\Upgrade Softmod"/>
 				<Item Action="Copy" arg1="D:\skins\skin files" arg2="E:\Prep\skins\skin files"/>
 				<Item Action="Copy" arg1="D:\configs\upgradesoftmod.xml" arg2="E:\Prep\Config.xml"/>
-				<Item Action="Copy" arg1="D:\softmod files\Softmod Files\" arg2="E:\Prep\Softmod Files\"/>
-				<Item Action="Copy" arg1="D:\softmod files\boot.cfg" arg2="E:\Prep\"/>
-				<Item Action="Copy" arg1="D:\softmod files\NoVC.bin" arg2="E:\Prep\"/>
-				<Item Action="Copy" arg1="D:\softmod files\unleashx.xbe" arg2="E:\Prep\"/>
-				<Item Action="Copy" arg1="D:\softmod files\default.xbe" arg2="E:\Prep\"/>
+				<Item Action="Unzip" arg1="D:\softmod files\Xbox Softmodding Tool.zip" arg2="E:\Prep"/>
 				<Item Action="E:\Prep\default.xbe"/>
 			</list>
 
@@ -1407,12 +1466,12 @@
 				<Item Action="Copy" arg1="D:\skins\Factory Reset" arg2="E:\Prep\skins\Factory Reset"/>
 				<Item Action="Copy" arg1="D:\skins\skin files" arg2="E:\Prep\skins\skin files"/>
 				<Item Action="Copy" arg1="D:\configs\factoryreset.xml" arg2="E:\Prep\Config.xml"/>
-				<Item Action="Copy" arg1="D:\softmod files\boot.cfg" arg2="E:\Prep\"/>
-				<Item Action="Copy" arg1="D:\softmod files\NoVC.bin" arg2="E:\Prep\"/>
-				<Item Action="Copy" arg1="D:\softmod files\unleashx.xbe" arg2="E:\Prep\"/>
-				<Item Action="Copy" arg1="D:\softmod files\default.xbe" arg2="E:\Prep\"/>
 				<Item Action="Format" arg1="Y"/>
-				<Item Action="Copy" arg1="D:\softmod files\Softmod Files\" arg2="Y:\Softmod Files\"/>
+				<Item Action="Unzip" arg1="D:\softmod files\Xbox Softmodding Tool.zip" arg2="Y:\"/>
+				<Item Action="Copy" arg1="Y:\boot.cfg" arg2="E:\Prep\"/>
+				<Item Action="Copy" arg1="Y:\NoVC.bin" arg2="E:\Prep\"/>
+				<Item Action="Copy" arg1="Y:\unleashx.xbe" arg2="E:\Prep\"/>
+				<Item Action="Copy" arg1="Y:\default.xbe" arg2="E:\Prep\"/>
 				<Item Action="Copy" arg1="D:\dashboards\msdash\Other\Audio.zip" arg2="Y:\"/>
 				<Item Action="Copy" arg1="D:\dashboards\msdash\retail\5960.zip" arg2="Y:\"/>
 				<Item Action="Copy" arg1="D:\dashboards\msdash\Other\UDDAE-C.zip" arg2="Y:\"/>

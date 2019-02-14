@@ -80,6 +80,15 @@
 #define FactoryResetNTSC_File								"D:\\FactoryResetNTSC.bin"
 #define EnableControlledError16_File						"D:\\EnablePersistentSoftmodMode.bin"
 #define DisableControlledError16_File						"D:\\DisablePersistentSoftmodMode.bin"
+#define English_File										"D:\\English.bin"
+#define Japanese_File										"D:\\Japanese.bin"
+#define German_File											"D:\\German.bin"
+#define French_File											"D:\\French.bin"
+#define Spanish_File										"D:\\Spanish.bin"
+#define Italian_File										"D:\\Italian.bin"
+#define Korean_File											"D:\\Korean.bin"
+#define Chinese_File										"D:\\Chinese.bin"
+#define Portuguese_File										"D:\\Portuguese.bin"
 #define DecryptedEERPOM_File								"D:\\BackupDEEPROM"
 #define LockHDD_File					PrepDir				"LockHDD.xbe"
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -120,6 +129,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #define ShadowC_Location				NKPDir				"shadowc\\shadowc.img"
 #define ShadowC_Size										485
+#define ShadowC_Size_Alt									480
 #define ShadowCOFF						NKPConfDir			"shadowc_off.bin"
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Setup UnleashX for showing the ShadowC partition
@@ -302,6 +312,7 @@ void ConfigMagicApp::Stage2OfInstallSoftmod()
 		CopyFile(FirstRunBin, SecondRun, NULL);
 		remove(ShadowCOFF);
 		remove(FirstRunBin);
+		remove(ShadowC_Location);
 		remove("E:\\UDATA\\9e115330\\0064122817A8\\recent.dat");
 		CopyFile(EnabledPNG, "E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\font\\generic.png", NULL);
 		{
@@ -317,10 +328,31 @@ void ConfigMagicApp::Stage2OfInstallSoftmod()
 				FatxHeaderFile << fatxheader[i];
 			}
 			FatxHeaderFile.close();
-			std::ofstream ofs(ShadowC_Location, std::ios::binary | std::ios::out);
-			ofs.seekp((ShadowC_Size<<20) - 1);
-			ofs.write("", 1);
-			ofs.close();
+			
+			std::ofstream ShadowCFile(ShadowC_Location, std::ios::binary | std::ios::out);
+			ShadowCFile.seekp((ShadowC_Size<<20) - 1);
+			ShadowCFile.write("", 1);
+			ShadowCFile.close();
+			// Check if shadowc.img is written and if not write a smaller one.
+			FILE *fp;
+			fp = fopen( ShadowC_Location,"r" );
+			fseek(fp, 0, SEEK_END); // goto end of file
+			if (ftell(fp) == 0)
+			{
+				fclose(fp);
+				int i;
+				std::ofstream FatxHeaderFile(ShadowC_Location, std::ios::binary);
+				for(i = 0; i < sizeof(fatxheader); i++)
+				{
+					FatxHeaderFile << fatxheader[i];
+				}
+				FatxHeaderFile.close();
+				
+				std::ofstream ShadowCFileAlt(ShadowC_Location, std::ios::binary | std::ios::out);
+				ShadowCFileAlt.seekp((ShadowC_Size_Alt<<20) - 1);
+				ShadowCFileAlt.write("", 1);
+				ShadowCFileAlt.close();
+			}
 		}
 		ColdBootSoftmod();
 		PatchXBEFiles();
@@ -632,6 +664,119 @@ void ConfigMagicApp::DisablePersistentSoftmodState()
 		Render();
 		Sleep(2000);
 		DisableControlledError16State();
+		XKUtils::XBOXReset();
+	}
+}
+
+void ConfigMagicApp::SetLanguage()
+{
+	//On Screen Text
+	((LPXKControl_TextBox) m_pFrmStatus->GetControl("txtStatusMsg"))->SetText("CHANGING SYSTEM LANGUAGE");
+	((LPXKControl_TextBox) m_ActiveForm->GetControl("txtStatus"))->SetText("Please Wait");
+	Render();
+	Sleep(2000);
+	((LPXKControl_TextBox) m_pFrmStatus->GetControl("txtStatusMsg"))->SetText("PATCHING EEPROM DATA");
+	((LPXKControl_TextBox) m_ActiveForm->GetControl("txtStatus"))->SetText("Please Wait");
+	//Refresh screen....
+	Render();
+	Sleep(1000);
+	std::ifstream ChangeLanguagefile1(English_File);
+	if (ChangeLanguagefile1.good())
+	{
+		ChangeLanguagefile1.close();
+		remove(English_File);
+		m_pXKEEPROM->ReadFromXBOX();
+		m_EnryptedRegionValid = TRUE;
+		m_pXKEEPROM->SetLanguageString("01");
+		Force_Write_XBOX_EEPROM();
+		XKUtils::XBOXReset();
+	}
+	std::ifstream ChangeLanguagefile2(Japanese_File);
+	if (ChangeLanguagefile2.good())
+	{
+		ChangeLanguagefile2.close();
+		remove(Japanese_File);
+		m_pXKEEPROM->ReadFromXBOX();
+		m_EnryptedRegionValid = TRUE;
+		m_pXKEEPROM->SetLanguageString("02");
+		Force_Write_XBOX_EEPROM();
+		XKUtils::XBOXReset();
+	}
+	std::ifstream ChangeLanguagefile3(German_File);
+	if (ChangeLanguagefile3.good())
+	{
+		ChangeLanguagefile3.close();
+		remove(German_File);
+		m_pXKEEPROM->ReadFromXBOX();
+		m_EnryptedRegionValid = TRUE;
+		m_pXKEEPROM->SetLanguageString("03");
+		Force_Write_XBOX_EEPROM();
+		XKUtils::XBOXReset();
+	}
+	std::ifstream ChangeLanguagefile4(French_File);
+	if (ChangeLanguagefile4.good())
+	{
+		ChangeLanguagefile4.close();
+		remove(French_File);
+		m_pXKEEPROM->ReadFromXBOX();
+		m_EnryptedRegionValid = TRUE;
+		m_pXKEEPROM->SetLanguageString("04");
+		Force_Write_XBOX_EEPROM();
+		XKUtils::XBOXReset();
+	}
+	std::ifstream ChangeLanguagefile5(Spanish_File);
+	if (ChangeLanguagefile5.good())
+	{
+		ChangeLanguagefile5.close();
+		remove(Spanish_File);
+		m_pXKEEPROM->ReadFromXBOX();
+		m_EnryptedRegionValid = TRUE;
+		m_pXKEEPROM->SetLanguageString("05");
+		Force_Write_XBOX_EEPROM();
+		XKUtils::XBOXReset();
+	}
+	std::ifstream ChangeLanguagefile6(Italian_File);
+	if (ChangeLanguagefile6.good())
+	{
+		ChangeLanguagefile6.close();
+		remove(Italian_File);
+		m_pXKEEPROM->ReadFromXBOX();
+		m_EnryptedRegionValid = TRUE;
+		m_pXKEEPROM->SetLanguageString("06");
+		Force_Write_XBOX_EEPROM();
+		XKUtils::XBOXReset();
+	}
+	std::ifstream ChangeLanguagefile7(Korean_File);
+	if (ChangeLanguagefile7.good())
+	{
+		ChangeLanguagefile7.close();
+		remove(Korean_File);
+		m_pXKEEPROM->ReadFromXBOX();
+		m_EnryptedRegionValid = TRUE;
+		m_pXKEEPROM->SetLanguageString("07");
+		Force_Write_XBOX_EEPROM();
+		XKUtils::XBOXReset();
+	}
+	std::ifstream ChangeLanguagefile8(Chinese_File);
+	if (ChangeLanguagefile8.good())
+	{
+		ChangeLanguagefile8.close();
+		remove(Chinese_File);
+		m_pXKEEPROM->ReadFromXBOX();
+		m_EnryptedRegionValid = TRUE;
+		m_pXKEEPROM->SetLanguageString("08");
+		Force_Write_XBOX_EEPROM();
+		XKUtils::XBOXReset();
+	}
+	std::ifstream ChangeLanguagefile9(Portuguese_File);
+	if (ChangeLanguagefile9.good())
+	{
+		ChangeLanguagefile9.close();
+		remove(Portuguese_File);
+		m_pXKEEPROM->ReadFromXBOX();
+		m_EnryptedRegionValid = TRUE;
+		m_pXKEEPROM->SetLanguageString("09");
+		Force_Write_XBOX_EEPROM();
 		XKUtils::XBOXReset();
 	}
 }
@@ -1683,6 +1828,7 @@ HRESULT ConfigMagicApp::Initialize()
 	DumpDecryptedEEPROM();
 	EnablePersistentSoftmodState();
 	DisablePersistentSoftmodState();
+	SetLanguage();
 	//Default mode
 	Sleep(100);
 	LED_Flash_Green_Orange;

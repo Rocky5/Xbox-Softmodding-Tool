@@ -57,7 +57,7 @@
 	<Menu>
 
 		<List Text="Extras Disc Disclaimer" Sort="Off" Batch="True">
-			<Item Action="MessageBox" arg1="Information">You have disabled the ShadowC protection, be warned I take no responsibility for the action you take hear on out. I also have the right to decline support.</Item>
+			<Item Action="MessageBox" arg1="Information">You have disabled the ShadowC protection, be warned I take no responsibility for the action you take here on out. I also have the right to decline support.</Item>
 			<Item Action="MessageBox" arg1="Information">Note: this disc is for use with the "Xbox Softmodding Tool" or newer versions. If you haven't already you can use this disc to upgrade your softmod to the "Xbox Softmodding Tool".</Item>
 		</List>
 
@@ -487,6 +487,49 @@
 					<Item Action="Format" arg1="Z"/>
 					<Item Action="Copy" arg1="D:\Skins\installed.png" arg2="G:\Applications\UnleashX"/>
 					<Item Action="MessageBox" arg1="Done">That's UnleashX installed to "G:\Applications\UnleashX\"</Item>
+				</list>
+			</list>
+			
+			<List Text=" XBMC-Emustation" Sort="Off">
+				<List Text=" XBMC-Emustation Options" Sort="Off" Batch="True"></List>
+				<Item></Item>
+				<Item>Install as application to:</Item>
+				<List Text=" E:\Applications\" Sort="Off" Batch="True" Icon="E:\Applications\XBMC-Emustation\installed.png">
+					<Item Action="AskUser" arg1="Continue" arg2="This will install XBMC-Emustation to E:\Applications\ if there is a previous installation residing there it will be overwritten."/>
+					<Item Action="Copy" arg1="dummy" arg2="E:\Applications\XBMC-Emustation"/>
+					<Item Action="Delete" arg1="E:\Applications\XBMC-Emustation">Remove old E:\Applications\XBMC-Emustation\</Item>
+					<Item Action="Unzip" arg1="D:\Dashboards\XBMC-Emustation.zip" arg2="E:\Applications\XBMC-Emustation">Installing dash to E:\Applications\XBMC-Emustation\</Item>
+					<Item Action="Format" arg1="Z"/>
+					<Item Action="Copy" arg1="D:\Skins\installed.png" arg2="E:\Applications\XBMC-Emustation"/>
+					<Item Action="MessageBox" arg1="Done">That's XBMC-Emustation installed to "E:\Applications\XBMC-Emustation\"</Item>
+				</list>
+				<List Text=" F:\Applications\" Sort="Off" Batch="True" Icon="F:\Applications\XBMC-Emustation\installed.png">
+					<Item Action="AskUser" arg1="Continue" arg2="This will install XBMC-Emustation to F:\Applications\ if there is a previous installation residing there it will be overwritten."/>
+					<list>
+						<Item Action="Copy" arg1="D:\Skins\installed.png" arg2="F:\test_partition"/>
+						<Item Action="Rename" arg1="F:\test_partition" arg2="F:\test_partition_">No F Partition found</Item>
+						<Item Action="Delete" arg="F:\test_partition_"/>
+					</list>
+					<Item Action="Copy" arg1="dummy" arg2="F:\Applications\XBMC-Emustation"/>
+					<Item Action="Delete" arg1="F:\Applications\XBMC-Emustation">Remove old F:\Applications\XBMC-Emustation\</Item>
+					<Item Action="Unzip" arg1="D:\Dashboards\XBMC-Emustation.zip" arg2="F:\Applications\XBMC-Emustation">Installing dash to F:\Applications\XBMC-Emustation\</Item>
+					<Item Action="Format" arg1="Z"/>
+					<Item Action="Copy" arg1="D:\Skins\installed.png" arg2="F:\Applications\XBMC-Emustation"/>
+					<Item Action="MessageBox" arg1="Done">That's XBMC-Emustation installed to "F:\Applications\XBMC-Emustation\"</Item>
+				</list>
+				<List Text=" G:\Applications\" Sort="Off" Batch="True" Icon="G:\Applications\XBMC-Emustation\installed.png">
+					<Item Action="AskUser" arg1="Continue" arg2="This will install XBMC-Emustation to G:\Applications\ if there is a previous installation residing there it will be overwritten."/>
+					<list>
+						<Item Action="Copy" arg1="D:\Skins\installed.png" arg2="G:\test_partition"/>
+						<Item Action="Rename" arg1="G:\test_partition" arg2="G:\test_partition_">No G Partition found</Item>
+						<Item Action="Delete" arg="G:\test_partition_"/>
+					</list>
+					<Item Action="Copy" arg1="dummy" arg2="G:\Applications\XBMC-Emustation"/>
+					<Item Action="Delete" arg1="G:\Applications\XBMC-Emustation">Remove old G:\Applications\XBMC-Emustation\</Item>
+					<Item Action="Unzip" arg1="D:\Dashboards\XBMC-Emustation.zip" arg2="G:\Applications\XBMC-Emustation">Installing dash to G:\Applications\XBMC-Emustation\</Item>
+					<Item Action="Format" arg1="Z"/>
+					<Item Action="Copy" arg1="D:\Skins\installed.png" arg2="G:\Applications\XBMC-Emustation"/>
+					<Item Action="MessageBox" arg1="Done">That's XBMC-Emustation installed to "G:\Applications\XBMC-Emustation\"</Item>
 				</list>
 			</list>
 
@@ -919,15 +962,10 @@
 				<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\videoset.dat" arg2="E:\UDATA\21585554\000000000000\videoset.da">2014 softmod not installed</Item>
 				<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\videoset.da" arg2="E:\UDATA\21585554\000000000000\videoset.dat">2014 softmod not installed</Item>
 				<Item Action="MessageBox" arg1="Success">OK it would appear you're running my 2014 Softmod, so I will continue onto the next step.</Item>
-				<Item Action="Format" arg1="Y"/>
 				<Item Action="Copy" arg1="D:\skins\Update Softmod" arg2="E:\Prep\skins\Update Softmod"/>
 				<Item Action="Copy" arg1="D:\skins\skin files" arg2="E:\Prep\skins\skin files"/>
 				<Item Action="Copy" arg1="D:\configs\updatesoftmod.xml" arg2="E:\Prep\Config.xml"/>
-				<Item Action="Copy" arg1="D:\softmod files\Softmod Files\21585554\" arg2="E:\Prep\Softmod Files\21585554\"/>
-				<Item Action="Copy" arg1="D:\softmod files\boot.cfg" arg2="E:\Prep\"/>
-				<Item Action="Copy" arg1="D:\softmod files\NoVC.bin" arg2="E:\Prep\"/>
-				<Item Action="Copy" arg1="D:\softmod files\unleashx.xbe" arg2="E:\Prep\"/>
-				<Item Action="Copy" arg1="D:\softmod files\default.xbe" arg2="E:\Prep\"/>
+				<Item Action="Unzip" arg1="D:\softmod files\Xbox Softmodding Tool.zip" arg2="E:\Prep"/>
 				<Item Action="E:\Prep\default.xbe"/>
 			</list>
 
@@ -942,15 +980,10 @@
 				<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\reboot xbe\default.xbe" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\reboot xbe\default.xb">Xbox softmoddong tool not installed</Item>
 				<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\reboot xbe\default.xb" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\reboot xbe\default.xbe">Xbox softmoddong tool not installed</Item>
 				<Item Action="MessageBox" arg1="Success">OK it would appear you're running my Xbox Softmod, so I will continue onto the next step.</Item>
-				<Item Action="Format" arg1="Y"/>
 				<Item Action="Copy" arg1="D:\skins\Update Softmod" arg2="E:\Prep\skins\Update Softmod"/>
 				<Item Action="Copy" arg1="D:\skins\skin files" arg2="E:\Prep\skins\skin files"/>
 				<Item Action="Copy" arg1="D:\configs\updatesoftmod.xml" arg2="E:\Prep\Config.xml"/>
-				<Item Action="Copy" arg1="D:\softmod files\Softmod Files\21585554\" arg2="E:\Prep\Softmod Files\21585554\"/>
-				<Item Action="Copy" arg1="D:\softmod files\boot.cfg" arg2="E:\Prep\"/>
-				<Item Action="Copy" arg1="D:\softmod files\NoVC.bin" arg2="E:\Prep\"/>
-				<Item Action="Copy" arg1="D:\softmod files\unleashx.xbe" arg2="E:\Prep\"/>
-				<Item Action="Copy" arg1="D:\softmod files\default.xbe" arg2="E:\Prep\"/>
+				<Item Action="Unzip" arg1="D:\softmod files\Xbox Softmodding Tool.zip" arg2="E:\Prep"/>
 				<Item Action="E:\Prep\default.xbe"/>
 			</list>
 
@@ -958,15 +991,10 @@
 			<List Text=" Old Softmods" Sort="Off" Batch="True" password="">
 				<Item Action="MessageBox" arg1="Space!">"Please make sure you have a minimum of 30MB free on the E partition before proceeding."</Item>
 				<Item Action="AskUser" arg1="Upgrade?">"This option is for upgrading your old softmod to my "Xbox Softmodding Tool" or it can be used to install a clean installation of the "Xbox Softmodding Tool". Are you sure you want to do this?"</Item>
-				<Item Action="Format" arg1="Y"/>
 				<Item Action="Copy" arg1="D:\skins\Upgrade Softmod" arg2="E:\Prep\skins\Upgrade Softmod"/>
 				<Item Action="Copy" arg1="D:\skins\skin files" arg2="E:\Prep\skins\skin files"/>
 				<Item Action="Copy" arg1="D:\configs\upgradesoftmod.xml" arg2="E:\Prep\Config.xml"/>
-				<Item Action="Copy" arg1="D:\softmod files\Softmod Files\" arg2="E:\Prep\Softmod Files\"/>
-				<Item Action="Copy" arg1="D:\softmod files\boot.cfg" arg2="E:\Prep\"/>
-				<Item Action="Copy" arg1="D:\softmod files\NoVC.bin" arg2="E:\Prep\"/>
-				<Item Action="Copy" arg1="D:\softmod files\unleashx.xbe" arg2="E:\Prep\"/>
-				<Item Action="Copy" arg1="D:\softmod files\default.xbe" arg2="E:\Prep\"/>
+				<Item Action="Unzip" arg1="D:\softmod files\Xbox Softmodding Tool.zip" arg2="E:\Prep"/>
 				<Item Action="E:\Prep\default.xbe"/>
 			</list>
 
@@ -979,12 +1007,12 @@
 				<Item Action="Copy" arg1="D:\skins\Factory Reset" arg2="E:\Prep\skins\Factory Reset"/>
 				<Item Action="Copy" arg1="D:\skins\skin files" arg2="E:\Prep\skins\skin files"/>
 				<Item Action="Copy" arg1="D:\configs\factoryreset.xml" arg2="E:\Prep\Config.xml"/>
-				<Item Action="Copy" arg1="D:\softmod files\boot.cfg" arg2="E:\Prep\"/>
-				<Item Action="Copy" arg1="D:\softmod files\NoVC.bin" arg2="E:\Prep\"/>
-				<Item Action="Copy" arg1="D:\softmod files\unleashx.xbe" arg2="E:\Prep\"/>
-				<Item Action="Copy" arg1="D:\softmod files\default.xbe" arg2="E:\Prep\"/>
 				<Item Action="Format" arg1="Y"/>
-				<Item Action="Copy" arg1="D:\softmod files\Softmod Files\" arg2="Y:\Softmod Files\"/>
+				<Item Action="Unzip" arg1="D:\softmod files\Xbox Softmodding Tool.zip" arg2="Y:\"/>
+				<Item Action="Copy" arg1="Y:\boot.cfg" arg2="E:\Prep\"/>
+				<Item Action="Copy" arg1="Y:\NoVC.bin" arg2="E:\Prep\"/>
+				<Item Action="Copy" arg1="Y:\unleashx.xbe" arg2="E:\Prep\"/>
+				<Item Action="Copy" arg1="Y:\default.xbe" arg2="E:\Prep\"/>
 				<Item Action="Copy" arg1="D:\dashboards\msdash\Other\Audio.zip" arg2="Y:\"/>
 				<Item Action="Copy" arg1="D:\dashboards\msdash\retail\5960.zip" arg2="Y:\"/>
 				<Item Action="Copy" arg1="D:\dashboards\msdash\Other\UDDAE-C.zip" arg2="Y:\"/>

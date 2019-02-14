@@ -1,5 +1,5 @@
 ![Thumb](/Other/Graphics/banner.png)
-## Xbox Softmodding Tool v1.1.4
+## Xbox Softmodding Tool v1.1.5
 ### Created by Rocky5
 
 ###  Background:
@@ -15,7 +15,14 @@ Note: Making changes in the unprotected C partition is not advised unless you kn
 
 [![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=65NJWU9PUUX7W&lc=GB&currency_code=GBP&bn=PP%2dDonationsBF%3abtn_donate_LG%2egif%3aNonHosted)
 
-## Prebuilt Version [download](https://drive.google.com/drive/folders/0BzRN8P835YijRU94cVNNWFA1Z28)
+## Installation
+ #### Download Prebuilt build: [Download](https://drive.google.com/drive/folders/0BzRN8P835YijRU94cVNNWFA1Z28)
+ 
+ #### Build from Source:
+ * Download [Xbox Softmodding Tool](https://github.com/Rocky5/Xbox-Softmodding-Tool/archive/master.zip) and extract the **Xbox-Softmodding-Tool-master** folder to your desktop.
+ * Navigate to the **Xbox-Softmodding-Tool-master** directory and double click **Build Release.bat**
+ * Wait till it's done doing its thing and it will then open a new window with the built source files all ready for use.
+ * [Youtube - How to setup your USB Pen and install a Softmod](https://www.youtube.com/watch?v=FnL1ttepaDo)
 
 ### Main Features:
 
@@ -35,6 +42,7 @@ Note: Making changes in the unprotected C partition is not advised unless you kn
  * Extremely simple to install
  * Extremely difficult to break the softmod
  * Supports the Xbox HDD partition table
+ * Built in back door if you break your dashboard. ( Hold Start+Y on startup )
  * Allows you to NULL the HDD Key
  * Allows you to switch video regions
  * Persistent Softmod Mode
@@ -109,7 +117,10 @@ At the top of each menus there is an "Information" button, this will give you a 
     This option will allow you to re-enable the persistent softmod mode. What this mode does is puts the Xbox into a controlled error 16 state. Don't be alarmed!. This is 100% safe, as long as you don't remove anything from the real C partition. In this mode every game is loaded under the softmod, what this means is IGR on all retail (original) games and never needing worry about losing your softmod again, though with my softmod that's a moot point.
   * #### Disable:
     This option will allow you to disable the persistent softmod mode. In this mode your xbox will work like any other softmod out there, retail (original) games will bypass the softmod.
-
+### EEPROM > Advanced Features > System Language
+  * #### Select a language:
+    This option will allow you to change the system language at the eeprom level, ie this will change the games ingame languages for PAL releases.
+	
 
 ### Fan speed
   * #### Self explanatory.
