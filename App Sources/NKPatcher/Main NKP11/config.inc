@@ -32,7 +32,7 @@
 ;%define FAN_SPEED    10 ; < CHANGE IT HERE ( % fan speed / 2 ) 10-50 << changed !!!!
 ;;;---------------------------------------------------------------------------
 ;;; tray boot enable (must enable to use dual/tri or patch back)
-%define TRAY_BOOT 
+;%define TRAY_BOOT 
 ;;; tri-boot enable < dual is default, with tray_boot enabled
 ;%define TRI_BOOT
 ;;; close the tray when NOT tri-booting (faster booting then tri-boot)

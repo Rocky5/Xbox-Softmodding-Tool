@@ -79,8 +79,9 @@ private:
 	void	NULLEEPROMCheckSum3();
 	void	NTSCResetToFactoryEEPROM();
 	void	PALResetToFactoryEEPROM();
-	void	PatchNKPatcherToSupportFtakesAll();
+	void	PatchNKPatcherToSupportOtherPartitions();
 	void	PatchNKPatcherToSupportFAndG();
+	void	PatchNKPatcherToSupportDualBoot();
 	void	DumpDecryptedEEPROM();
 	void	EnablePersistentSoftmodState();
 	void	DisablePersistentSoftmodState();

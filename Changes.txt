@@ -1,8 +1,23 @@
 =========================================
 	Change Log
-	Xbox Softmodding Tool v1.1.5
+	Xbox Softmodding Tool v1.1.6
 	Created by Rocky5
 =========================================
+
+=========================================
+	Update: March 06 2019
+=========================================
+		Changed how dual booting is done, its disabled by default but had to be changed due to how I do the NKPatcher patching on the xbox.
+		( a rework of some stuff in the Xbox Softmodding Tool Kit tool, also fixed the language set text showing when it shouldn't. )
+		Enabled Force VGA in the Video modes menu in NKPatcher Settings.
+		I now update the dashboard config.xml and skin files when updating the softmod.
+		( only if the files exist, so no more 1.1.5 when in fact its v1.1.6 eg... )
+		Updated the ernie font to patch the time to 2019
+		
+		
+		NOTE:
+			The above Dual Boot change will fix any issues where the DVD drive is finicky or the IDE cable is on its way out.
+			If you enable Dual Booting and have boot issues fix the DVD drive, IDE cable or disable it.
 
 
 =========================================

@@ -213,8 +213,8 @@
 ;;; LBA48 and partition table not enabled by default.
 %define LBA48
 ;%define PARTITION_METHOD 0
-;%define PARTITION_METHOD 1
-%define PARTITION_METHOD 2
+%define PARTITION_METHOD 1
+;%define PARTITION_METHOD 2
 ;%define PARTITION_METHOD 3
 ; %define IGNORE_HD_PARTITION_TABLE
 ;;;

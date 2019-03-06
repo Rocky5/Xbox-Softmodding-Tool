@@ -68,33 +68,37 @@
 				<Item Action="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\dash settings\default.xbe">Backup, Restore or Move</Item>
 			</List>
 
-			<List Text="1.2 DualBooting" Sort="Off">
-				<List Text="DualBooting Information" Sort="Off" Batch="True">
-					<Item Action="MessageBox" Arg1="Information">This is where you can enable the dualboot dashboard feature. After you have enabled dualbooting, you must place the "Alt Dashboard" in E:\Alt Dashboard" or when selecting "Enable" I will ask you if you want it setup.</Item>
+			<List Text="1.2 Dual Booting" Sort="Off">
+				<List Text="Dual Booting Information" Sort="Off" Batch="True">
+					<Item Action="MessageBox" Arg1="Information">This is where you can enable the dualboot dashboard feature. After you have enabled dual booting, you must place the "Alt Dashboard" in E:\Alt Dashboard" or when selecting "Enable" I will ask you if you want it setup.</Item>
 					<Item Action="MessageBox" Arg1="Info">I'm going to tell you how to setup your own dualboot path, so you can have your own custom "Alt Dashboard" location.</Item>
 					<Item Action="MessageBox" Arg1="Info">With this softmod there will be a folder called "OpenDash Dualboot.settings". Inside this this folder there is a file called "Build Dualboot.settings.bat" double click this and follow the on screen instructions. Yes its that simple.</Item>
 				</List>
 				<Item></Item>
-				<List Text="Enable DualBooting" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\dualboot\enabled.png">
-					<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\dualboot"/>
-					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\dualboot\enabled.png"/>
-					<Item Action="Copy" arg1="C:\nkpatcher\configs\dualboot\dualboot.settings" arg2="C:\nkpatcher\configs\dualboot.settings"/>
+				<List Text="Enable Dual Booting" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\dualboot\enabled.png">
+					<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\dualboot"></Item>
+					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\dualboot\enabled.png"></Item>
+					<Item Action="Copy" arg1="C:\nkpatcher\configs\dualboot\dualboot.settings" arg2="C:\nkpatcher\configs\dualboot.settings"></Item>
 					<List>
 						<Item Action="AskUser" Arg1="Install?">Would you like me to install UnleashX to the Alt Dashboard location? Note: If you are using a custom "dualboot.settings" file, please select no.</Item>
-						<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\configs\alt xbe's\dashboard.xbe" arg2="E:\Alt Dashboard\default.xbe"/>
+						<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\configs\alt xbe's\dashboard.xbe" arg2="E:\Alt Dashboard\default.xbe"></Item>
 						<Item Action="MessageBox" Arg1="Installed">UnleashX installed to \n"E:\Alt Dashboard"</Item>
 					</List>
-					<Item Action="MessageBox" Arg1="Complete">Setting saved. Changes will take affect on next boot.</Item>
+					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox Softmod Tool Kit\dummy_file" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox softmod tool kit\NKP_DB.bin"></Item>
+					<Item Action="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox softmod tool kit\default.xbe">Restart</Item>
 				</List>
-				<List Text="Disable DualBooting" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\dualboot\disabled.png">
-					<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\dualboot"/>
-					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\dualboot\disabled.png"/>
-					<Item Action="Copy" arg1="dummy" arg2="C:\nkpatcher\configs\dualboot.settings"/>
-					<Item Action="Delete" arg1="C:\nkpatcher\configs\dualboot.settings"/>
+				<List Text="Disable Dual Booting" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\dualboot\disabled.png">
+					<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\dualboot"></Item>
+					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\dualboot\disabled.png"></Item>
+					<Item Action="Copy" arg1="dummy" arg2="C:\nkpatcher\configs\dualboot.settings"></Item>
+					<Item Action="Delete" arg1="C:\nkpatcher\configs\dualboot.settings"></Item>
+					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox Softmod Tool Kit\dummy_file" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox softmod tool kit\NKP_Part.bin"></Item>
+					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox Softmod Tool Kit\dummy_file" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox softmod tool kit\NKP_Disable_DB.bin"></Item>
+					<Item Action="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox softmod tool kit\default.xbe">Restart</Item>
 					<List>
 						<Item Action="AskUser" Arg1="Remove?">Would you like me to remove the Alt Dashboard in "E" if it exists?</Item>
-						<Item Action="Copy" arg1="dummy" arg2="E:\Alt Dashboard"/>
-						<Item Action="Delete" arg1="E:\Alt Dashboard"/>
+						<Item Action="Copy" arg1="dummy" arg2="E:\Alt Dashboard"></Item>
+						<Item Action="Delete" arg1="E:\Alt Dashboard"></Item>
 						<Item Action="MessageBox" Arg1="YEAH">Alt Dashboard Removed successfully.</Item>
 					</List>
 					<Item Action="MessageBox" Arg1="Complete">Setting saved. Changes will take affect on next boot.</Item>
@@ -104,17 +108,17 @@
 					<Item Action="MessageBox" Arg1="Info">Please make sure you have FTP'ed over the new "dualboot.settings" file to "E", if you haven't, do so now. Because if it's not found this process will fail. Note: You will need to select the "Enable" option again to use these new settings.</Item>
 					<Item Action="Rename" arg1="E:\dualboot.settings" arg2="E:\dualboot.setting">E:\dualboot.settings not found</Item>
 					<Item Action="Rename" arg1="E:\dualboot.setting" arg2="E:\dualboot.settings">E:\dualboot.settings not found</Item>
-					<Item Action="Copy" arg1="E:\dualboot.settings" arg2="C:\nkpatcher\configs\dualboot\dualboot.settings"/>
-					<Item Action="Delete" arg1="E:\dualboot.settings"/>
+					<Item Action="Copy" arg1="E:\dualboot.settings" arg2="C:\nkpatcher\configs\dualboot\dualboot.settings"></Item>
+					<Item Action="Delete" arg1="E:\dualboot.settings"></Item>
 					<Item Action="MessageBox" Arg1="Complete">Dualboot.settings has been updated.</Item>
 				</List>
 				<List Text="Restore Dualboot.settings" Sort="Off" Batch="True">
 					<Item Action="AskUser" Arg1="Info">This will restore the stock "dualboot.settings". This will overwrite any custom "dualboot.settings" file that has been updated. Note: You will need to select the "Enable" option again to use these new settings.</Item>
-					<Item Action="Format" arg1="Y"/>
-					<Item Action="Unrar" arg1="E:\UDATA\21585554\000000000000\softmod files\files.rar" arg2="Y:\"/>
-					<Item Action="Unrar" arg1="Y:\nkpatcher.rar" arg2="Y:\"/>
-					<Item Action="Copy" arg1="Y:\nkpatcher\configs\dualboot\dualboot.settings" arg2="C:\nkpatcher\configs\dualboot\dualboot.settings"/>
-					<Item Action="Format" arg1="Y"/>
+					<Item Action="Format" arg1="Y"></Item>
+					<Item Action="Unrar" arg1="E:\UDATA\21585554\000000000000\softmod files\files.rar" arg2="Y:\"></Item>
+					<Item Action="Unrar" arg1="Y:\nkpatcher.rar" arg2="Y:\"></Item>
+					<Item Action="Copy" arg1="Y:\nkpatcher\configs\dualboot\dualboot.settings" arg2="C:\nkpatcher\configs\dualboot\dualboot.settings"></Item>
+					<Item Action="Format" arg1="Y"></Item>
 					<Item Action="MessageBox" Arg1="Complete">Dualboot.settings has been restored.</Item>
 				</List>
 			</List>
@@ -435,16 +439,26 @@
 				<Item></Item>
 				<List Text="Default" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\part\default-part.png">
 					<Item Action="AskUser" Arg1="Warning">This option has a mandatory restart. Would you like to continue? Note: NKPatcher Settings will reload after the reboot.</Item>
-					<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\part"/>
-					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\part\default-part.png"/>
-					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox Softmod Tool Kit\dummy_file" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox softmod tool kit\NKP_6.bin"/>
+					<Item Action="MessageBox" Arg1="Warning">If you use Dual Booting, you will need to re-enable it after this process.</Item>
+					<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\part"></Item>
+					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\part\default-part.png"></Item>
+					<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\dualboot"></Item>
+					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\dualboot\disabled.png"></Item>
+					<Item Action="Copy" arg1="dummy" arg2="C:\nkpatcher\configs\dualboot.settings"></Item>
+					<Item Action="Delete" arg1="C:\nkpatcher\configs\dualboot.settings"></Item>
+					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox Softmod Tool Kit\dummy_file" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox softmod tool kit\NKP_Part.bin"></Item>
 					<Item Action="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox softmod tool kit\default.xbe">Restart</Item>
 				</List>
 				<List Text="Partition F and G" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\part\default-FG.png">
 					<Item Action="AskUser" Arg1="Warning">This option has a mandatory restart. Would you like to continue? Note: NKPatcher Settings will reload after the reboot.</Item>
-					<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\part"/>
-					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\part\default-FG.png"/>
-					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox Softmod Tool Kit\dummy_file" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox softmod tool kit\NKP_67.bin"/>
+					<Item Action="MessageBox" Arg1="Warning">If you use Dual Booting, you will need to re-enable it after this process.</Item>
+					<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\part"></Item>
+					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\part\default-FG.png"></Item>
+					<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\dualboot"></Item>
+					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\dualboot\disabled.png"></Item>
+					<Item Action="Copy" arg1="dummy" arg2="C:\nkpatcher\configs\dualboot.settings"></Item>
+					<Item Action="Delete" arg1="C:\nkpatcher\configs\dualboot.settings"></Item>
+					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox Softmod Tool Kit\dummy_file" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox softmod tool kit\NKP_Part.bin"></Item>
 					<Item Action="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox softmod tool kit\default.xbe">Restart</Item>
 				</List>
 				<List Text="XBPartitioner" Sort="Off" Batch="True">
@@ -773,6 +787,13 @@
 				<Item Action="Copy" arg1="C:\nkpatcher\configs\video files\VIDEO1.bin" arg2="C:\nkpatcher\configs\VIDEO.bin"/>
 				<Item Action="MessageBox" Arg1="Complete">Setting saved. Changes will take affect on next boot.</Item>
 			</List>
+			<List Text="Force VGA" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\video\video-vga.png">
+				<Item Action="AskUser" Arg1="Warning">This option requires that you have a compatible monitor that supports sync on green. Note, not sure if this works properly on v1.6 Xbox. Proceed?</Item>
+				<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\video"/>
+				<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\video\video-vga.png"/>
+				<Item Action="Copy" arg1="C:\nkpatcher\configs\video files\VIDEO2.bin" arg2="C:\nkpatcher\configs\VIDEO.bin"/>
+				<Item Action="MessageBox" Arg1="Complete">Setting saved. Changes will take affect on next boot.</Item>
+			</List>
 			<List Text="7.1 Flicker Filter" Sort="Off">
 				<List Text="Flicker Filter Information" Sort="Off" Batch="True">
 					<Item Action="MessageBox" Arg1="Information">These options will change the flicker filter values for 480i and 576i video modes. Basically it reduces the flickering you see when using crt screens and reduces the soft picture on LCD screens.</Item>
@@ -821,14 +842,6 @@
 					<Item Action="Copy" arg1="C:\nkpatcher\configs\flicker filter\flickerfilter5.bin" arg2="C:\nkpatcher\configs\flickerfilter.settings"/>
 					<Item Action="MessageBox" Arg1="Complete">Setting saved. Changes will take affect on next boot.</Item>
 				</List>
-				<!--
-				<List Text="Force VGA" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\video\video-vga.png">
-					<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\video"/>
-					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\video\video-vga.png"/>
-					<Item Action="Copy" arg1="C:\nkpatcher\configs\video files\VIDEO2.bin" arg2="C:\nkpatcher\configs\VIDEO.bin"/>
-					<Item Action="MessageBox" Arg1="Complete">Setting saved. Changes will take affect on next boot.</Item>
-				</List>
-				-->
 				<Item></Item>
 				<Item></Item>
 				<Item></Item>

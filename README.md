@@ -1,5 +1,5 @@
 ![Thumb](/Other/Graphics/banner.png)
-## Xbox Softmodding Tool v1.1.5
+## Xbox Softmodding Tool v1.1.6
 ### Created by Rocky5
 
 ###  Background:
@@ -86,13 +86,13 @@ At the top of each menus there is an "Information" button, this will give you a 
 
 ### Dashboard Settings > Backup, Restore or Move
   * This is used to move or restore a clean copy of UnleashX, as well as backup your dashboards.
-### Dashboard Settings > Dualbooting
+### Dashboard Settings > Dual Booting
   * #### Enable:
-	This option is used to enabled dualbooting, you get asked if you would like a dashboard setup for you when you select this option.
+	This option is used to enabled dual booting, you get asked if you would like a dashboard setup for you when you select this option.
   * #### Disable:
-	This option is used to disabled the dualbooting process. You are also asked if you would like the alt dashboard to be removed.
+	This option is used to disabled the dual booting process. You are also asked if you would like the alt dashboard to be removed.
   * #### Update:
-	This option is to be used if you want to use your own custom dualbooting path, you can use the "OpenDash Dualboot.settings" tool to do this, it explains things.
+	This option is to be used if you want to use your own custom dual booting path, you can use the "OpenDash Dualboot.settings" tool to do this, it explains things.
   * #### Restore:
 	This option will restore the stock dualboot.settings file.
 
@@ -174,6 +174,8 @@ At the top of each menus there is an "Information" button, this will give you a 
 	This is the default mode, supports all video mode.
   * #### Force Progressive:
 	This option will force 480p video mode even if your game doest support it. Note: This will make the image distorted in PAL video mode.
+  * #### Force VGA:
+	This option will force VGA video mode. Note: This requires a compatible monitor that support sync on green, also it may not work on v1.6 Xbox properly.
   * #### Flicker Filter:
 	Used to change the blur amount when using 480i and 576i video signals.
 
@@ -198,6 +200,7 @@ At the top of each menus there is an "Information" button, this will give you a 
     * UnleashX
     * XBMC 3.5.3
     * XBMC4Gamers
+    * XBMC-Emustation
 			
  * #### Install useful applications
     * DVD2Xbox
@@ -215,7 +218,7 @@ At the top of each menus there is an "Information" button, this will give you a 
     * Super Mario War 1.8
     * Super Mario War 1.8 Halloween Edition
     * xDuke
-	#### -- Mods --
+	#### -- Mods -- (only on prebuilt version)
     * FIFA 07 - real gameplay mod
     * Operation Flashpoint Elite - Addons
     * Richard Burns Rally - Textures & realistic damage & physics.

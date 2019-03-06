@@ -71,8 +71,9 @@
 #define Update_Font											"D:\\Update_Font.bin"
 #define Restore_Font										"D:\\Restore_Font.bin"
 #define NULLHDDKey_File										"D:\\NULL_HDD_Key.bin"
-#define PatchNKP_File1										"D:\\NKP_6.bin"
-#define PatchNKP_File2										"D:\\NKP_67.bin"
+#define PatchNKP_File1										"D:\\NKP_Part.bin"
+#define PatchNKP_File2										"D:\\NKP_Disable_DB.bin"
+#define PatchNKP_File3										"D:\\NKP_DB.bin"
 #define Region_File1										"D:\\NTSC.bin"
 #define Region_File2										"D:\\PAL.bin"
 #define NullChecksum3_File									"D:\\NullChecksum3.bin"
@@ -80,6 +81,7 @@
 #define FactoryResetNTSC_File								"D:\\FactoryResetNTSC.bin"
 #define EnableControlledError16_File						"D:\\EnablePersistentSoftmodMode.bin"
 #define DisableControlledError16_File						"D:\\DisablePersistentSoftmodMode.bin"
+#define Change_Language_File								"D:\\Change_Language.bin"
 #define English_File										"D:\\English.bin"
 #define Japanese_File										"D:\\Japanese.bin"
 #define German_File											"D:\\German.bin"
@@ -116,6 +118,7 @@
 #define PrepUX							PrepDir				"unleashx.xbe"
 #define PrepXBE							PrepDir				"default.xbe"
 #define SecondRun											"D:\\secondrun.bin"
+#define SecondRunUpdate										"D:\\secondrunupdate.bin"
 #define FirstRunBin											"D:\\firstrun.bin"
 #define UpdateRunBin										"D:\\updaterun.bin"
 #define Font_Path						NKPConfDir			"fonts\\"
@@ -144,12 +147,20 @@
 // Setup modifications for the xbe files
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // NKPatcher default
-#define NKPHabibi							"\x58\x42\x45\x48\x20\x9B\xC0\x0F\xF1\x4F\x4F\x58\x73\xB8\x9F\x3B\x3C\x91\xED\x16\xE9\x14\x3C\x33\x77\xD8\xA4\xF9\xAF\xA9\xBF\x3B\xA0\xDA\x5A\x5B\x30\x0A\x57\x99\x5E\x1E\x8D\x68\xCA\x3C\x44\xF2\xFE\x95\x5B\x0D\x1C\xB3\xD6\xC7\x92\x7D\xC1\x8C\x4D\x1E\x92\x59\x0D\x08\xEC\xA6\x40\x2E\x41\x55\x41\xEB\x7D\x18\xB4\x1E\xCE\xBB\xB7\x31\xB0\xD5\xE6\x44\xCB\xEF\x53\xB5\xC5\xD8\x67\xB7\x2F\x98\x21\x62\xF1\xE7\x15\x9E\x6B\x33\x0F\x01\x53\xBA\xB3\x56\xFA\x06\x7D\x5A\x9F\x80\x01\x07\xA4\x6A\x69\x4A\x47\xD9\xF5\xFF\xF0\x0D\xA2\x15\xE6\x97\xA3\xAB\xA0\x09\x9F\x82\x54\x41\x36\x58\xF2\xB5\x87\x44\x05\xB9\x81\xAC\xEF\x62\xCF\x81\xD1\x62\x01\x1C\x48\x4F\x88\x79\xB6\x7C\x3F\x57\xDD\x85\x35\x73\xE4\x92\x7E\x7F\x0C\xF9\xD8\x8D\xEE\xE3\xB8\xEB\xFC\x27\xB9\xC1\x58\xBF\x3D\xEF\xC8\x1F\xE2\x79\xA3\x69\x21\xDD\x2D\xA9\x3C\xA9\x24\x94\xA3\x59\x7D\x0B\xD1\x54\xA0\x28\x57\x34\x91\x2D\xDD\x64\x78\xDB\x83\x08\x79\xD3\xDE\x33\x8C\x2C\x64\x37\x99\xE8\xE9\xEE\x3A\x6A\xCB\x27\x89\x09\x95\xC8\x15\xEE\xB0\x4C\x64\x85\xDB\x5E\x8B\xB6\x82\xBF\xD2\x27\x87\xE2\x2F\x11"
-#define NKPHash								"\x0B\x03\xB1\xB9\x09\x3E\x6F\xE5\x82\x26\xD1\x88\x06\x45\x89\xD0\xCF\x63\x08\x75"
-#define NKPHabibialt						"\x58\x42\x45\x48\x34\x83\xEB\x76\x6C\xC2\xAA\x09\xCD\x18\x7F\xF1\xEC\x00\xB2\x1A\x61\x9B\x8B\x34\xBA\x35\xC2\x0B\xCF\x7B\xB9\x05\x26\xF6\x39\x0A\xB3\xC1\x79\x5E\x90\xA4\xAD\x71\x56\x34\x81\xDD\xE9\x79\xEB\x93\x6F\xC0\xC0\xE4\xFD\x77\x9E\x13\x99\xA5\x36\x5E\x32\xA1\xA9\x6C\xA9\xE5\x24\x6D\x01\xAB\x30\x37\x0D\x2B\x9F\x03\x43\x34\xEC\x92\x2E\x59\xDF\x72\x7D\xA8\xCA\x4B\x5D\xAD\x75\xF4\x22\xFE\x82\x75\xBA\xA1\xC5\x3E\xD0\x5D\x39\xE5\x66\x95\x18\x4C\x3C\x2F\xD1\xDB\xEB\xB7\x7E\x86\xD5\x19\x9B\x77\x9A\x24\x75\x5E\x69\xBD\x37\x64\x6B\x07\x9F\x85\x1B\xB2\x2C\xC7\xA5\xAE\x45\xB4\xFA\x55\x04\xA6\xDC\x35\xDC\xFB\xFE\x6B\x41\xC2\x9F\xD3\xD7\x3E\x64\x59\x09\x59\x77\xC8\x66\xC4\x28\x32\x19\x5E\x30\x7B\x50\xA7\xD0\x3A\x22\x7E\x56\x9A\xF9\xC7\x0C\x3B\x54\x94\x2E\x38\xFF\xF4\x16\xCF\xD9\xB3\xFD\x37\xFE\xD5\xD5\xCC\x30\x82\xF4\xE0\xF9\x5D\xBC\x76\xBB\x81\x57\xC4\xC7\x87\x37\x63\x8E\xB6\x2E\x13\xE6\x80\xCC\xCE\xCB\x38\x60\x8E\x05\x61\x11\xE0\x18\x2A\x06\x53\xB9\x42\xD3\x52\xDE\x51\xA7\x80\x8A\x54\x79\x23\x74\x0A\x44\x9D\x2C\xC0\x58\x37\x3C\x27"
-#define NKPHashalt							"\x25\x27\x01\x3E\xA1\xF6\x7A\x8C\x0A\xBF\xA5\x28\x97\x47\x3E\x1C\xDC\x9C\x67\x13"
+#define NKPHabibi_F_No_DB					"\x58\x42\x45\x48\x0E\x86\x3D\x59\x21\x06\x05\xE1\x07\x1D\x8D\x57\xCE\x00\x7E\x55\x52\x3E\xEE\x8D\x30\x7D\xCC\x49\x83\x4A\xA0\xC9\xED\x28\x84\x08\x1B\x65\xCD\x1B\x5C\x29\xD6\xDA\xE2\x34\x41\xB1\x36\x81\x15\x4A\x97\x66\xE3\xB4\x3E\x52\x55\xC6\xA6\xFE\xC8\x48\x82\x19\xF7\x73\xD0\x0B\x6F\x52\x96\x70\xB5\xB0\x14\x08\x74\xCD\x8A\x1C\x18\x66\x56\x41\xB7\x24\x86\xDD\x10\x50\xE5\x05\xBA\x42\x90\xBC\x0E\x33\xEB\x17\xDE\x26\xA9\x28\x4D\x2E\x9F\x92\x5E\x1F\x59\xAF\x17\xCD\xFD\x71\x2F\xF5\x8A\x81\xCE\x9B\xCE\x8E\x6F\x00\x2E\xCA\xE6\xBC\xF7\xDC\xCC\x6D\xAA\x8B\x65\x18\x39\x12\xF8\x2B\x7C\x26\xB7\x66\x2D\x4E\x27\xBC\xAD\x77\x10\xC5\x86\xD0\x0B\xB4\x3E\x93\xFA\x24\x72\x10\x31\xBD\x9D\xBD\xCD\x0D\x0E\x29\x87\x28\x93\x15\x3D\x8D\x3A\xBE\xC3\x78\x24\x5D\x9B\xD8\xAB\xA4\x66\xA9\xCE\x1F\x7B\x38\xC6\xD8\x72\xF3\xEA\x04\x06\x5A\x54\x6D\xF6\x47\x6E\x0D\xAD\x8E\x56\x0F\xF2\xB6\x24\xF8\x7E\x0F\x59\x32\x86\x7F\xC6\xAB\x8D\x1D\x3B\xF4\xC6\xBC\x63\xE9\x21\xD6\x27\xD8\x34\x12\x89\x7A\x9C\x90\x05\xB0\xA5\xA1\xAF\x2D\xE4\x27\x00\xEC\x11\x21\x45\xA9\x9B\x4C"
+#define NKPHash_F_No_DB						"\x4C\x9F\x8F\x0B\xF9\xA8\x86\x0D\xD7\xE8\x10\x86\x01\xFD\x1E\xE6\xF7\xF0\xB1\x7A"
+#define NKPHabibi_F_G_No_DB					"\x58\x42\x45\x48\xA5\x0D\x95\x6B\x9C\x81\xF8\xC8\x55\xF2\xF6\xE0\xB0\xDF\xB4\x5F\x14\xB8\xF8\x14\xD9\x39\x1E\x44\x05\x5F\xCE\x56\x98\x34\x5A\x92\x75\x14\x85\xD2\x03\x82\x54\x9E\x25\xC7\xC0\x6D\xCA\x47\x0B\x0E\x4A\x2B\x65\x7F\xB5\xDD\x2D\xF3\xEF\x7B\x83\xF2\xF6\x10\xE1\x42\xD9\xC1\xAB\x47\x29\x55\x10\xD9\x93\x7E\x66\x3D\xA6\xB8\x4B\x8F\x20\x99\x13\x96\xD2\xA8\x7D\x7C\x78\x74\x5C\xAA\x6E\x04\xB6\x00\x7E\x59\x3E\x76\xA5\x18\x2E\x23\xEA\x22\xF8\x6F\x58\x57\x2E\x5C\x0E\x78\x11\x8B\xEF\x08\xF8\x3E\x38\x04\x3C\x93\xC2\x76\x9B\xE0\x45\x18\xE3\x23\x6B\xC4\x35\x70\x0C\x9F\x7B\xBF\x9E\x7E\x24\x76\x07\x77\x50\x00\x15\x01\xD0\xCC\xBC\xF2\x56\x97\xF1\xF9\x94\x06\xD6\x43\x1F\xA2\x81\xEF\x1C\xA4\x4D\x80\xC7\xAA\xCB\x36\xE1\x35\x81\x30\xF7\xD7\x29\xE9\xA2\x4E\x9F\x35\x38\xCA\xAB\x60\x5E\x39\xE5\x04\xE4\x07\x49\x3E\x57\x86\x3B\x8E\xAC\xA5\x25\xF4\x0E\x63\x2A\x29\x1E\x05\x6B\xF4\xDF\x22\x0F\x87\x1F\x42\xDB\xF8\x19\x27\xB0\xBA\xFE\x50\x7B\xDC\xA5\x6E\xAC\x72\x0A\x9F\x38\xCC\x7F\xBF\x23\xB7\xA5\x79\x56\x10\x81\x83\x78\xF9\x32\x30\x2C\x1A\x80\x53"
+#define NKPHash_F_G_No_DB					"\x9C\x0F\x60\x6C\xF7\x56\x24\x1C\xD3\x9F\x17\xD4\xC5\x0A\xB0\x72\x65\xE8\x30\xEF"
+
+#define NKPHabibi_F_DB						"\x58\x42\x45\x48\x20\x9B\xC0\x0F\xF1\x4F\x4F\x58\x73\xB8\x9F\x3B\x3C\x91\xED\x16\xE9\x14\x3C\x33\x77\xD8\xA4\xF9\xAF\xA9\xBF\x3B\xA0\xDA\x5A\x5B\x30\x0A\x57\x99\x5E\x1E\x8D\x68\xCA\x3C\x44\xF2\xFE\x95\x5B\x0D\x1C\xB3\xD6\xC7\x92\x7D\xC1\x8C\x4D\x1E\x92\x59\x0D\x08\xEC\xA6\x40\x2E\x41\x55\x41\xEB\x7D\x18\xB4\x1E\xCE\xBB\xB7\x31\xB0\xD5\xE6\x44\xCB\xEF\x53\xB5\xC5\xD8\x67\xB7\x2F\x98\x21\x62\xF1\xE7\x15\x9E\x6B\x33\x0F\x01\x53\xBA\xB3\x56\xFA\x06\x7D\x5A\x9F\x80\x01\x07\xA4\x6A\x69\x4A\x47\xD9\xF5\xFF\xF0\x0D\xA2\x15\xE6\x97\xA3\xAB\xA0\x09\x9F\x82\x54\x41\x36\x58\xF2\xB5\x87\x44\x05\xB9\x81\xAC\xEF\x62\xCF\x81\xD1\x62\x01\x1C\x48\x4F\x88\x79\xB6\x7C\x3F\x57\xDD\x85\x35\x73\xE4\x92\x7E\x7F\x0C\xF9\xD8\x8D\xEE\xE3\xB8\xEB\xFC\x27\xB9\xC1\x58\xBF\x3D\xEF\xC8\x1F\xE2\x79\xA3\x69\x21\xDD\x2D\xA9\x3C\xA9\x24\x94\xA3\x59\x7D\x0B\xD1\x54\xA0\x28\x57\x34\x91\x2D\xDD\x64\x78\xDB\x83\x08\x79\xD3\xDE\x33\x8C\x2C\x64\x37\x99\xE8\xE9\xEE\x3A\x6A\xCB\x27\x89\x09\x95\xC8\x15\xEE\xB0\x4C\x64\x85\xDB\x5E\x8B\xB6\x82\xBF\xD2\x27\x87\xE2\x2F\x11"
+#define NKPHash_F_DB						"\x0B\x03\xB1\xB9\x09\x3E\x6F\xE5\x82\x26\xD1\x88\x06\x45\x89\xD0\xCF\x63\x08\x75"
+#define NKPHabibi_F_G_DB					"\x58\x42\x45\x48\x34\x83\xEB\x76\x6C\xC2\xAA\x09\xCD\x18\x7F\xF1\xEC\x00\xB2\x1A\x61\x9B\x8B\x34\xBA\x35\xC2\x0B\xCF\x7B\xB9\x05\x26\xF6\x39\x0A\xB3\xC1\x79\x5E\x90\xA4\xAD\x71\x56\x34\x81\xDD\xE9\x79\xEB\x93\x6F\xC0\xC0\xE4\xFD\x77\x9E\x13\x99\xA5\x36\x5E\x32\xA1\xA9\x6C\xA9\xE5\x24\x6D\x01\xAB\x30\x37\x0D\x2B\x9F\x03\x43\x34\xEC\x92\x2E\x59\xDF\x72\x7D\xA8\xCA\x4B\x5D\xAD\x75\xF4\x22\xFE\x82\x75\xBA\xA1\xC5\x3E\xD0\x5D\x39\xE5\x66\x95\x18\x4C\x3C\x2F\xD1\xDB\xEB\xB7\x7E\x86\xD5\x19\x9B\x77\x9A\x24\x75\x5E\x69\xBD\x37\x64\x6B\x07\x9F\x85\x1B\xB2\x2C\xC7\xA5\xAE\x45\xB4\xFA\x55\x04\xA6\xDC\x35\xDC\xFB\xFE\x6B\x41\xC2\x9F\xD3\xD7\x3E\x64\x59\x09\x59\x77\xC8\x66\xC4\x28\x32\x19\x5E\x30\x7B\x50\xA7\xD0\x3A\x22\x7E\x56\x9A\xF9\xC7\x0C\x3B\x54\x94\x2E\x38\xFF\xF4\x16\xCF\xD9\xB3\xFD\x37\xFE\xD5\xD5\xCC\x30\x82\xF4\xE0\xF9\x5D\xBC\x76\xBB\x81\x57\xC4\xC7\x87\x37\x63\x8E\xB6\x2E\x13\xE6\x80\xCC\xCE\xCB\x38\x60\x8E\x05\x61\x11\xE0\x18\x2A\x06\x53\xB9\x42\xD3\x52\xDE\x51\xA7\x80\x8A\x54\x79\x23\x74\x0A\x44\x9D\x2C\xC0\x58\x37\x3C\x27"
+#define NKPHash_F_G_DB						"\x25\x27\x01\x3E\xA1\xF6\x7A\x8C\x0A\xBF\xA5\x28\x97\x47\x3E\x1C\xDC\x9C\x67\x13"
+
 #define NKPValue1							"\x01"
 #define NKPValue2							"\x02"
+#define NKPValue3							"\x08"
+#define NKPValue4							"\x09"
 #define NKPValue1Size						1
 // NKPatcher Settings
 #define NKPSHabibi							"\x58\x42\x45\x48\x36\x52\x21\x23\xAC\xB1\x16\xDF\xC6\x41\xAC\xD6\xD4\x9C\xDC\x3C\x44\xB2\x5B\xB1\x53\xD5\x2C\xBA\x04\xC6\x01\x5D\x19\x6F\xA1\x7E\x71\x02\xFE\x93\xD7\x3C\xC1\x82\xAF\x9D\x6B\x02\x7A\xC1\x61\x3E\x41\xB2\x90\xB7\x11\x8D\x1D\xAA\x9B\x63\x83\xF4\xE7\x7B\x2C\xF5\xF0\xA3\x91\x0F\x1B\x3F\x84\xE9\xDE\x62\x4F\xDA\xCF\xF7\x80\xB3\xF2\x65\xDD\x49\x18\x6A\x53\xF7\xC6\x96\xEF\xBC\xBD\xFD\xAE\xC7\x70\xA9\xE0\x8A\xDF\x64\x4D\x10\x27\x9D\xE5\x4F\x76\xE8\x9E\x8A\xDA\xBC\x01\x9A\x4B\x66\xA8\xFA\xC2\xED\x80\x48\x77\x81\x84\x7F\x42\xB0\x82\x84\x29\x3B\xD9\x37\xBD\xC3\x2C\x9F\xA4\x70\x31\xD4\x59\xF9\xB2\xB6\x18\x8F\x78\x9A\x6A\xB5\x67\x94\x8E\xE3\x52\x66\xB0\x9F\x88\x4B\x26\xE2\xCF\x7E\x46\x70\x08\xB7\x80\x37\xEE\x41\x65\x04\xB7\xFA\xD2\x26\x78\x50\x58\x04\xFA\x1B\x3E\xF5\x21\xF2\xCC\xBE\x9C\x8E\x0A\x5D\x9D\xCA\xDD\x1E\x2D\xD9\x39\xBC\xE6\xAB\xD9\x62\x9C\xC3\x10\x46\x22\x36\xE2\x86\x7C\xC3\x35\x22\x48\x89\x04\x85\xC3\x2C\xBF\x5D\x0F\x4D\xB9\x41\xFD\x84\x3C\x43\x77\x4C\x62\xF7\x95\x0F\x8D\x64\x83\xB5\x6F\x49\x30\xD0\x5A\xD9\xCA\x69"
@@ -301,6 +312,72 @@ void ConfigMagicApp::SetUpDashboard()
 			XKUtils::LaunchXBE(Rescuedashloader);
 		}
 	}
+	std::ifstream DashSkinUpdate(SecondRunUpdate);
+	if (DashSkinUpdate.good())
+	{
+		DashSkinUpdate.close();
+		((LPXKControl_TextBox) m_pFrmStatus->GetControl("txtStatusMsg"))->SetText("UPDATING DASHBOARD FILES");
+		((LPXKControl_TextBox) m_ActiveForm->GetControl("txtStatus"))->SetText("Please Wait");
+		Render();
+		Sleep(1000);
+		remove(SecondRunUpdate);
+		remove(PrepXBE);
+		RemoveDirectory(PrepDir);
+		std::ifstream UpdateSkinFile1("C:\\dashboard\\skins\\Softmod\\skin.xml");
+		if (UpdateSkinFile1.good())
+		{
+			UpdateSkinFile1.close();
+			CopyFile("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\skins\\dashboard\\skin.xml", "C:\\dashboard\\skins\\Softmod\\skin.xml", NULL);
+			CopyFile("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\skins\\dashboard\\skinevox.xml", "C:\\dashboard\\skins\\Softmod Evox\\skin.xml", NULL);
+			CopyFile("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\skins\\dashboard\\skinwide.xml", "C:\\dashboard\\skins\\Softmod Wide\\skin.xml", NULL);
+			std::ifstream UpdateConfigFile1("C:\\dashboard\\config.xml");
+			if (UpdateConfigFile1.good())
+			{
+				UpdateConfigFile1.close();
+				std::rename("C:\\dashboard\\config.xml", "C:\\dashboard\\config_old.xml");
+				CopyFile("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\configs\\dash.xml", "C:\\dashboard\\config.xml", NULL);
+				CopyFile("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\configs\\alt xbe's\\dashboard.xbe", "C:\\dashboard\\default.xbe", NULL);
+			}
+		}
+		std::ifstream UpdateSkinFile2("E:\\dashboard\\skins\\Softmod\\skin.xml");
+		if (UpdateSkinFile2.good())
+		{
+			UpdateSkinFile2.close();
+			CopyFile("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\skins\\dashboard\\skin.xml", "E:\\dashboard\\skins\\Softmod\\skin.xml", NULL);
+			CopyFile("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\skins\\dashboard\\skinevox.xml", "E:\\dashboard\\skins\\Softmod Evox\\skin.xml", NULL);
+			CopyFile("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\skins\\dashboard\\skinwide.xml", "E:\\dashboard\\skins\\Softmod Wide\\skin.xml", NULL);
+			std::ifstream UpdateConfigFile2("E:\\dashboard\\config.xml");
+			if (UpdateConfigFile2.good())
+			{
+				UpdateConfigFile2.close();
+				std::rename("E:\\dashboard\\config.xml", "E:\\dashboard\\config_old.xml");
+				CopyFile("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\configs\\dash.xml", "E:\\dashboard\\config.xml", NULL);
+				CopyFile("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\configs\\alt xbe's\\dashboard.xbe", "E:\\dashboard\\default.xbe", NULL);
+			}
+		}
+		((LPXKControl_TextBox) m_ActiveForm->GetControl("txtStatus"))->SetText("Complete");
+		Render();
+		Sleep(1000);
+		std::ifstream IfDashExist(RunDashboard);
+		if (IfDashExist.good())
+		{
+			IfDashExist.close();
+			((LPXKControl_TextBox) m_ActiveForm->GetControl("txtStatus"))->SetText("Loading Dashboard");
+			Render();
+			Sleep(1500);
+			XKUtils::LaunchXBE(Dashloader);
+		}
+		else
+		{
+			IfDashExist.close();
+			((LPXKControl_TextBox) m_pFrmStatus->GetControl("txtStatusMsg"))->SetText("ERROR !!");
+			((LPXKControl_TextBox) m_ActiveForm->GetControl("txtStatus"))->SetText("Loading Recovery Menu");
+			Render();
+			LED_Flash_Red;
+			Sleep(3000);
+			XKUtils::LaunchXBE(Rescuedashloader);
+		}
+	}
 }
 
 void ConfigMagicApp::Stage2OfInstallSoftmod()
@@ -374,8 +451,7 @@ void ConfigMagicApp::Stage2OfUpdateSoftmod()
 		Sleep(1500);
 		remove(ShadowCOFF);
 		remove(UpdateRunBin);
-		remove(PrepXBE);
-		RemoveDirectory(PrepDir);
+		CopyFile(Dummy_File, SecondRunUpdate, NULL);
 		remove("E:\\UDATA\\9e115330\\0064122817A8\\recent.dat");
 		CopyFile(EnabledPNG, "E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\font\\generic.png", NULL);
 		ColdBootSoftmod();
@@ -559,32 +635,89 @@ void ConfigMagicApp::PALResetToFactoryEEPROM()
 	}
 }
 
-void ConfigMagicApp::PatchNKPatcherToSupportFtakesAll()
+void ConfigMagicApp::PatchNKPatcherToSupportOtherPartitions()
 {
 	std::ifstream nkppatchfile(PatchNKP_File1);
 	if (nkppatchfile.good())
 	{
 		nkppatchfile.close();
 		remove(PatchNKP_File1);
-		((LPXKControl_TextBox) m_pFrmStatus->GetControl("txtStatusMsg"))->SetText("ENABLING ONLY F PARTITION");
-		((LPXKControl_TextBox) m_ActiveForm->GetControl("txtStatus"))->SetText("Please Wait");
-		Render();
-		Sleep(1000);
-		std::ofstream NKPDefault(NKP_XBE, std::ios::binary | std::ios::in | std::ios::out);
-			// Habibi Signature
-			NKPDefault.seekp(0);
-			NKPDefault.write(NKPHabibi, 260);
-			// XBE Hash
-			NKPDefault.seekp(888);
-			NKPDefault.write(NKPHash, 20);
-			//
-			NKPDefault.seekp(8027);
-			NKPDefault.write(NKPValue1, NKPValue1Size);
-			//
-			NKPDefault.seekp(17080);
-			NKPDefault.write(NKPValue1, NKPValue1Size);
-			NKPDefault.close();
-		((LPXKControl_TextBox) m_ActiveForm->GetControl("txtStatus"))->SetText("Complete");
+		std::ifstream FSet("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\part\\default-part.png");
+			if (FSet.good())
+			{
+				FSet.close();
+				std::ifstream DisableDBSet(PatchNKP_File2);
+					if (DisableDBSet.good())
+					{
+						DisableDBSet.close();
+						remove(PatchNKP_File2);
+						((LPXKControl_TextBox) m_pFrmStatus->GetControl("txtStatusMsg"))->SetText("DISABLING DUAL BOOTING");
+						((LPXKControl_TextBox) m_ActiveForm->GetControl("txtStatus"))->SetText("Please Wait");
+					}
+					else
+					{
+						((LPXKControl_TextBox) m_pFrmStatus->GetControl("txtStatusMsg"))->SetText("ENABLING ONLY F PARTITION");
+						((LPXKControl_TextBox) m_ActiveForm->GetControl("txtStatus"))->SetText("Please Wait");
+					}
+				Render();
+				Sleep(1000);
+				std::ofstream NKPDefaultF(NKP_XBE, std::ios::binary | std::ios::in | std::ios::out);
+					// Habibi Signature
+					NKPDefaultF.seekp(0);
+					NKPDefaultF.write(NKPHabibi_F_No_DB, 260);
+					// XBE Hash
+					NKPDefaultF.seekp(888);
+					NKPDefaultF.write(NKPHash_F_No_DB, 20);
+					//
+					NKPDefaultF.seekp(8027);
+					NKPDefaultF.write(NKPValue1, NKPValue1Size);
+					//
+					NKPDefaultF.seekp(5700);
+					NKPDefaultF.write(NKPValue3, NKPValue1Size);
+					//
+					NKPDefaultF.seekp(17080);
+					NKPDefaultF.write(NKPValue1, NKPValue1Size);
+					NKPDefaultF.close();
+				((LPXKControl_TextBox) m_ActiveForm->GetControl("txtStatus"))->SetText("Complete");
+			}
+		std::ifstream FGSet("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\part\\default-FG.png");
+			if (FGSet.good())
+			{
+				FGSet.close();
+				std::ifstream DisableDBSet(PatchNKP_File2);
+					if (DisableDBSet.good())
+					{
+						DisableDBSet.close();
+						remove(PatchNKP_File2);
+						((LPXKControl_TextBox) m_pFrmStatus->GetControl("txtStatusMsg"))->SetText("DISABLING DUAL BOOTING");
+						((LPXKControl_TextBox) m_ActiveForm->GetControl("txtStatus"))->SetText("Please Wait");
+					}
+					else
+					{
+						((LPXKControl_TextBox) m_pFrmStatus->GetControl("txtStatusMsg"))->SetText("ENABLING F & G PARTITION");
+						((LPXKControl_TextBox) m_ActiveForm->GetControl("txtStatus"))->SetText("Please Wait");
+					}
+				Render();
+				Sleep(1000);
+				std::ofstream NKPDefaultFG(NKP_XBE, std::ios::binary | std::ios::in | std::ios::out);
+					// Habibi Signature
+					NKPDefaultFG.seekp(0);
+					NKPDefaultFG.write(NKPHabibi_F_G_No_DB, 260);
+					// XBE Hash
+					NKPDefaultFG.seekp(888);
+					NKPDefaultFG.write(NKPHash_F_G_No_DB, 20);
+					//
+					NKPDefaultFG.seekp(8027);
+					NKPDefaultFG.write(NKPValue2, NKPValue1Size);
+					//
+					NKPDefaultFG.seekp(5700);
+					NKPDefaultFG.write(NKPValue3, NKPValue1Size);
+					//
+					NKPDefaultFG.seekp(17080);
+					NKPDefaultFG.write(NKPValue2, NKPValue1Size);
+					NKPDefaultFG.close();
+				((LPXKControl_TextBox) m_ActiveForm->GetControl("txtStatus"))->SetText("Complete");
+			}
 		Render();
 		Sleep(1500);
 		SetupRNKP();
@@ -592,31 +725,61 @@ void ConfigMagicApp::PatchNKPatcherToSupportFtakesAll()
 	}
 }
 
-void ConfigMagicApp::PatchNKPatcherToSupportFAndG()
+void ConfigMagicApp::PatchNKPatcherToSupportDualBoot()
 {
-	std::ifstream nkppatchfilealt(PatchNKP_File2);
-	if (nkppatchfilealt.good())
+	std::ifstream nkppatchfiledb(PatchNKP_File3);
+	if (nkppatchfiledb.good())
 	{
-		nkppatchfilealt.close();
-		remove(PatchNKP_File2);
-		((LPXKControl_TextBox) m_pFrmStatus->GetControl("txtStatusMsg"))->SetText("ENABLING F & G PARTITIONS");
+		nkppatchfiledb.close();
+		remove(PatchNKP_File3);
+		((LPXKControl_TextBox) m_pFrmStatus->GetControl("txtStatusMsg"))->SetText("ENABLING DUAL BOOTING");
 		((LPXKControl_TextBox) m_ActiveForm->GetControl("txtStatus"))->SetText("Please Wait");
 		Render();
 		Sleep(1000);
-		std::ofstream NKPAlt(NKP_XBE, std::ios::binary | std::ios::in | std::ios::out);
-			// Habibi Signature
-			NKPAlt.seekp(0);
-			NKPAlt.write(NKPHabibialt, 260);
-			// XBE Hash
-			NKPAlt.seekp(888);
-			NKPAlt.write(NKPHashalt, 20);
-			//
-			NKPAlt.seekp(8027);
-			NKPAlt.write(NKPValue2, NKPValue1Size);
-			//
-			NKPAlt.seekp(17080);
-			NKPAlt.write(NKPValue2, NKPValue1Size);
-			NKPAlt.close();
+		std::ifstream dualbootFSet("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\part\\default-part.png");
+			if (dualbootFSet.good())
+			{
+				dualbootFSet.close();
+				std::ofstream NKPDefaultFDB(NKP_XBE, std::ios::binary | std::ios::in | std::ios::out);
+					// Habibi Signature
+					NKPDefaultFDB.seekp(0);
+					NKPDefaultFDB.write(NKPHabibi_F_DB, 260);
+					// XBE Hash
+					NKPDefaultFDB.seekp(888);
+					NKPDefaultFDB.write(NKPHash_F_DB, 20);
+					//
+					NKPDefaultFDB.seekp(8027);
+					NKPDefaultFDB.write(NKPValue1, NKPValue1Size);
+					//
+					NKPDefaultFDB.seekp(5700);
+					NKPDefaultFDB.write(NKPValue4, NKPValue1Size);
+					//
+					NKPDefaultFDB.seekp(17080);
+					NKPDefaultFDB.write(NKPValue1, NKPValue1Size);
+					NKPDefaultFDB.close();
+			}
+		std::ifstream dualbootFGSet("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\part\\default-FG.png");
+			if (dualbootFGSet.good())
+			{
+				dualbootFGSet.close();
+				std::ofstream NKPDefaultFGDB(NKP_XBE, std::ios::binary | std::ios::in | std::ios::out);
+					// Habibi Signature
+					NKPDefaultFGDB.seekp(0);
+					NKPDefaultFGDB.write(NKPHabibi_F_G_DB, 260);
+					// XBE Hash
+					NKPDefaultFGDB.seekp(888);
+					NKPDefaultFGDB.write(NKPHash_F_G_DB, 20);
+					//
+					NKPDefaultFGDB.seekp(8027);
+					NKPDefaultFGDB.write(NKPValue2, NKPValue1Size);
+					//
+					NKPDefaultFGDB.seekp(5700);
+					NKPDefaultFGDB.write(NKPValue4, NKPValue1Size);
+					//
+					NKPDefaultFGDB.seekp(17080);
+					NKPDefaultFGDB.write(NKPValue2, NKPValue1Size);
+					NKPDefaultFGDB.close();
+			}
 		((LPXKControl_TextBox) m_ActiveForm->GetControl("txtStatus"))->SetText("Complete");
 		Render();
 		Sleep(1500);
@@ -670,16 +833,18 @@ void ConfigMagicApp::DisablePersistentSoftmodState()
 
 void ConfigMagicApp::SetLanguage()
 {
-	//On Screen Text
-	((LPXKControl_TextBox) m_pFrmStatus->GetControl("txtStatusMsg"))->SetText("CHANGING SYSTEM LANGUAGE");
-	((LPXKControl_TextBox) m_ActiveForm->GetControl("txtStatus"))->SetText("Please Wait");
-	Render();
-	Sleep(2000);
-	((LPXKControl_TextBox) m_pFrmStatus->GetControl("txtStatusMsg"))->SetText("PATCHING EEPROM DATA");
-	((LPXKControl_TextBox) m_ActiveForm->GetControl("txtStatus"))->SetText("Please Wait");
-	//Refresh screen....
-	Render();
-	Sleep(1000);
+	std::ifstream ChangeLanguagefile(Change_Language_File);
+	if (ChangeLanguagefile.good())
+	{
+		ChangeLanguagefile.close();
+		remove(Change_Language_File);
+		//On Screen Text
+		((LPXKControl_TextBox) m_pFrmStatus->GetControl("txtStatusMsg"))->SetText("CHANGING SYSTEM LANGUAGE");
+		((LPXKControl_TextBox) m_ActiveForm->GetControl("txtStatus"))->SetText("Patching EEPROM Data");
+		//Refresh screen....
+		Render();
+		Sleep(1000);
+	}
 	std::ifstream ChangeLanguagefile1(English_File);
 	if (ChangeLanguagefile1.good())
 	{
@@ -1810,6 +1975,7 @@ HRESULT ConfigMagicApp::Initialize()
 	CreateDummy.write("", 0);
 	CreateDummy.close();
 	//Functions ( These check for specific files )
+	SetLanguage();
 	VirtualEEPROMRemoval();
 	EnableVirtualEEPROM();
 	SetUpDashboard();
@@ -1823,12 +1989,11 @@ HRESULT ConfigMagicApp::Initialize()
 	ChangeVideoRegionToNTSC();
 	ChangeVideoRegionToPAL();
 	NULLEEPROMCheckSum3();
-	PatchNKPatcherToSupportFtakesAll();
-	PatchNKPatcherToSupportFAndG();
+	PatchNKPatcherToSupportOtherPartitions();
+	PatchNKPatcherToSupportDualBoot();
 	DumpDecryptedEEPROM();
 	EnablePersistentSoftmodState();
 	DisablePersistentSoftmodState();
-	SetLanguage();
 	//Default mode
 	Sleep(100);
 	LED_Flash_Green_Orange;
