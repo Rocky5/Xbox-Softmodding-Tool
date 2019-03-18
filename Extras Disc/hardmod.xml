@@ -48,8 +48,8 @@
 			<Memory_Slot>dummy.wav</Memory_Slot>
 		</Audio>
 		<Shortcut>
-			<GP_BLACK>D:\Hardmod\Applications\Enigmah-X\default.xbe</GP_BLACK>
-			<GP_WHITE>D:\Hardmod\shadowc.xbe</GP_WHITE>
+			<GP_BLACK>D:\Softmod\Applications\Enigmah-X\default.xbe</GP_BLACK>
+			<GP_WHITE>D:\Softmod\default.xbe</GP_WHITE>
 		</Shortcut>
 		<LED>
 			<Default>Orange</Default>

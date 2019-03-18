@@ -49,7 +49,7 @@
 		</Audio>
 		<Shortcut>
 			<GP_BLACK>D:\Softmod\Applications\Enigmah-X\default.xbe</GP_BLACK>
-			<GP_WHITE>D:\Softmod\shadowc.xbe</GP_WHITE>
+			<GP_WHITE>D:\Softmod\default.xbe</GP_WHITE>
 		</Shortcut>
 		<LED>
 			<Default>Orange</Default>
