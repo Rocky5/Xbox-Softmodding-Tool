@@ -1,0 +1,61 @@
+<!--- This file is used with the Xbox Softmodding Tool Extras Disc if it doesn't fine a retail bios is loaded. --->
+<?xml version="1.0" encoding="utf-8"?>
+<Unleashx>
+	<Settings>
+		<Preference>
+			<AbortOnError>Yes</AbortOnError>
+			<ContextMenu AllowUninstall="No" AllowItemEdit="No" AllowRecentList="No" LinkToSave="No" LinkToGame="No"/>
+			<Skin Path="D:\Hardmod\Skins\">Hardmod</Skin>
+			<VideoSettings Soften="No" Widescreen="No" UsePAL60="No" FastRefresh="No" EnableTextureCompression="No" Use720P="No" Use480P="Yes" FilterLevel="0"/>
+			<LiveUpdate AutoCheck="No"/>
+			<AutoVideoMode MultiRegion="Off" UsePAL60="No">no</AutoVideoMode>
+			<Games AutoLaunch="No"/>
+			<DVD AutoLaunch="No"/>
+			<AudioCD AutoLaunch="No"/>
+			<EnableDriveF>Yes</EnableDriveF>
+			<EnableDriveG>Yes</EnableDriveG>
+			<FanSpeed>1.00</FanSpeed>
+			<Use24HFormat>Yes</Use24HFormat>
+			<SNTP Synchronize="Yes" HTTP="Yes" Port="80">143.210.16.201</SNTP>
+			<AutoSetTime>Yes</AutoSetTime>
+			<ScreenSaver Wait="300">
+				<Text>Xbox Softmodding Tool</Text>
+			</ScreenSaver>
+		</Preference>
+		<Network Type="DHCP" Enable="Yes">
+			<AutoDetect>yes</AutoDetect>
+			<IP>192.168.0.6</IP>
+			<Subnet>255.255.255.0</Subnet>
+			<Gateway>192.168.0.1</Gateway>
+			<DNS1>192.168.0.1</DNS1>
+		</Network>
+		<FTP Enable="Yes">
+			<MaxUsers>10</MaxUsers>
+			<AllowAnon>No</AllowAnon>
+		</FTP>
+		<Audio>
+			<EnableSoundEffect>Yes</EnableSoundEffect>
+			<Ambient>D:\Hardmod\skins\skin files\music\ambient.wav</Ambient>
+			<SoundVolume>50</SoundVolume>
+			<Scroll>dummy.wav</Scroll>
+			<Select>dummy.wav</Select>
+			<Action_Complete>dummy.wav</Action_Complete>
+			<Keyboard_Stroke>dummy.wav</Keyboard_Stroke>
+			<Back>dummy.wav</Back>
+			<Menu_Up>dummy.wav</Menu_Up>
+			<Menu_Down>dummy.wav</Menu_Down>
+			<Game_Save_Select>dummy.wav</Game_Save_Select>
+			<Memory_Slot>dummy.wav</Memory_Slot>
+		</Audio>
+		<Shortcut>
+			<GP_BLACK>D:\Hardmod\Applications\Enigmah-X\default.xbe</GP_BLACK>
+			<GP_WHITE>D:\Hardmod\shadowc.xbe</GP_WHITE>
+		</Shortcut>
+		<LED>
+			<Default>Orange</Default>
+		</LED>
+	</Settings>
+	<Menu>
+		<Item Action="Shutdown">Press (A) to Shutdown.</Item>
+	</Menu>
+</Unleashx>

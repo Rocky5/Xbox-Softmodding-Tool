@@ -132,6 +132,9 @@
 				RelativePath=".\Xbox Softmod Tool Kit.cpp">
 			</File>
 			<File
+				RelativePath=".\md5.cpp">
+			</File>
+			<File
 				RelativePath=".\XKBaseApp\XKBaseApp.cpp">
 			</File>
 			<File

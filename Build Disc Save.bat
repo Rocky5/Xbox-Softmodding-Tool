@@ -6,8 +6,8 @@ If not exist "Files.rar" Call "Build Files.rar.bat" 2>NUL
 Set "ZipName=Xbox Softmodding Tool.zip"
 Set "Winrar=%CD%\Other\Tools\Winrar\winrar.exe"
 Echo %CD%
-RD /Q /S "Extras Disc\softmod files"
-MD "Extras Disc\softmod files"
+RD /Q /S "Extras Disc\Softmod\softmod files"
+MD "Extras Disc\Softmod\softmod files"
 MD "Other\tmp"
 XCopy /s /y /e "Save Folder\*" "Other\tmp\softmod files\21585554\000000000000\"
 RD /Q /S "Other\tmp\softmod files\21585554\000000000000\nkpatcher settings"
@@ -23,6 +23,6 @@ XCopy /s /y "Other\Game Saves\BFM" "Other\tmp\"
 Copy "Save Folder\softmod files\UX.xbe" "Other\tmp\unleashx.xbe"
 CD "Other\tmp"
 ::Rar Xbox Softmodding Tool.zip
-"%Winrar%" a -r -y -x*.db -afzip "..\..\Extras Disc\softmod files\%ZipName%" "*"
+"%Winrar%" a -r -y -x*.db -afzip "..\..\Extras Disc\Softmod\softmod files\%ZipName%" "*"
 CD ..\..\
 RD /Q /S "Other\tmp"

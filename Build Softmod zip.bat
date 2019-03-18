@@ -37,4 +37,4 @@ Copy "..\Documents\ReadMe.url" "ReadMe.url"
 CD "..\"
 RD /Q /S "temp" 2>NUL
 CD "Installer Variants\UDDAE\"
-"%Winrar%" a -x*.db -afzip "..\..\Extras Disc\Dashboards\msdash\other\UDDAE-C.zip" "resoftmod dash"
+"%Winrar%" a -x*.db -afzip "..\..\Extras Disc\Softmod\Dashboards\msdash\other\UDDAE-C.zip" "resoftmod dash"

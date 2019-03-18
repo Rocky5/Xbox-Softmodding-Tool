@@ -14,4 +14,4 @@ Echo  %OutputISOName%
 Timeout /t 3 >NUL
 Call "Build Disc Save.bat"
 "Other\Tools\XDVDFS Tools\bin\windows\xdvdfs_maker.exe" "%SourceDirectory%" "%OutputISOName%"
-RD /Q /S "%SourceDirectory%\softmod files\Softmod Files"
+RD /Q /S "%SourceDirectory%\Softmod\softmod files\Softmod Files"

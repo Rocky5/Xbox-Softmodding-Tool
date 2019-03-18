@@ -14,7 +14,7 @@ Echo  Output ISO Name.
 Echo  %OutputISOName%
 Timeout /t 3 >NUL
 Call "Build Disc Save.bat"
-Move "%SourceDirectory%\%FolderToMove%" "Other\"
+Move "%SourceDirectory%\Softmod\%FolderToMove%" "Other\"
 "Other\Tools\XDVDFS Tools\bin\windows\xdvdfs_maker.exe" "%SourceDirectory%" "%OutputISOName%"
-Move "Other\%FolderToMove%" "%SourceDirectory%"
-RD /Q /S "%SourceDirectory%\softmod files\Softmod Files"
+Move "Other\%FolderToMove%" "%SourceDirectory%\Softmod\"
+RD /Q /S "%SourceDirectory%\Softmod\softmod files\Softmod Files"

@@ -5,14 +5,18 @@
 =========================================
 
 =========================================
-	Update: March 06 2019
+	Update: March 18 2019
 =========================================
+		Updated the Extras Disc to detect my softmod, other softmods or a hardmodded system.
+		( this should fix folk softmodding hardmodded systems, this can also be used for other discs like hexen eg... )
 		Changed how dual booting is done, its disabled by default but had to be changed due to how I do the NKPatcher patching on the xbox.
 		( a rework of some stuff in the Xbox Softmodding Tool Kit tool, also fixed the language set text showing when it shouldn't. )
 		Enabled Force VGA in the Video modes menu in NKPatcher Settings.
 		I now update the dashboard config.xml and skin files when updating the softmod.
 		( only if the files exist, so no more 1.1.5 when in fact its v1.1.6 eg... )
 		Updated the ernie font to patch the time to 2019
+		New .bat file for building the Extras Disc straight to a application format.
+		( you just FTP over the "Xbox Softmodding Tool Extras Disc" to your applications/apps folder. )
 		
 		
 		NOTE:

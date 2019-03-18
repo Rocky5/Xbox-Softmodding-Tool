@@ -1,0 +1,1101 @@
+<!--- This file is used with the Xbox Softmodding Tool Extras Disc for when the ShadowC option is used from the extras disc. --->
+<?xml version="1.0" encoding="utf-8"?>
+<Unleashx>
+	<Settings>
+		<Preference>
+			<AbortOnError>Yes</AbortOnError>
+			<ContextMenu AllowUninstall="No" AllowItemEdit="No" AllowRecentList="No" LinkToSave="No" LinkToGame="No"/>
+			<Skin Path="D:\Softmod\Skins\">ShadowC</Skin>
+			<VideoSettings Soften="No" Widescreen="No" UsePAL60="No" FastRefresh="No" EnableTextureCompression="No" Use720P="No" Use480P="Yes" FilterLevel="0"/>
+			<LiveUpdate AutoCheck="No"/>
+			<AutoVideoMode MultiRegion="Off" UsePAL60="No">no</AutoVideoMode>
+			<Games AutoLaunch="No"/>
+			<DVD AutoLaunch="No"/>
+			<AudioCD AutoLaunch="No"/>
+			<EnableDriveF>Yes</EnableDriveF>
+			<EnableDriveG>Yes</EnableDriveG>
+			<FanSpeed>1.00</FanSpeed>
+			<Use24HFormat>Yes</Use24HFormat>
+			<SNTP Synchronize="Yes" HTTP="Yes" Port="80">143.210.16.201</SNTP>
+			<AutoSetTime>Yes</AutoSetTime>
+			<ScreenSaver Wait="300">
+				<Text>Xbox Softmodding Tool</Text>
+			</ScreenSaver>
+		</Preference>
+		<Network Type="DHCP" Enable="Yes">
+			<AutoDetect>yes</AutoDetect>
+			<IP>192.168.0.6</IP>
+			<Subnet>255.255.255.0</Subnet>
+			<Gateway>192.168.0.1</Gateway>
+			<DNS1>192.168.0.1</DNS1>
+		</Network>
+		<FTP Enable="Yes">
+			<MaxUsers>10</MaxUsers>
+			<AllowAnon>No</AllowAnon>
+		</FTP>
+		<Audio>
+			<EnableSoundEffect>Yes</EnableSoundEffect>
+			<Ambient>D:\Softmod\skins\skin files\music\ambient.wav</Ambient>
+			<SoundVolume>50</SoundVolume>
+			<Scroll>dummy.wav</Scroll>
+			<Select>dummy.wav</Select>
+			<Action_Complete>dummy.wav</Action_Complete>
+			<Keyboard_Stroke>dummy.wav</Keyboard_Stroke>
+			<Back>dummy.wav</Back>
+			<Menu_Up>dummy.wav</Menu_Up>
+			<Menu_Down>dummy.wav</Menu_Down>
+			<Game_Save_Select>dummy.wav</Game_Save_Select>
+			<Memory_Slot>dummy.wav</Memory_Slot>
+		</Audio>
+		<Shortcut>
+			<GP_BLACK>D:\Softmod\Applications\Enigmah-X\default.xbe</GP_BLACK>
+			<GP_WHITE>D:\Softmod\default.xbe</GP_WHITE>
+		</Shortcut>
+		<LED>
+			<Default>Red</Default>
+		</LED>
+	</Settings>
+	<Menu>
+
+		<List Text="Extras Disc Disclaimer" Sort="Off" Batch="True">
+			<Item Action="MessageBox" arg1="Information">You have disabled the ShadowC protection, be warned I take no responsibility for the action you take here on out. I also have the right to decline support.</Item>
+			<Item Action="MessageBox" arg1="Information">Note: this disc is for use with the "Xbox Softmodding Tool" or newer versions. If you haven't already you can use this disc to upgrade your softmod to the "Xbox Softmodding Tool".</Item>
+		</List>
+
+		<Item></Item>
+
+		<List Text="Re-enable ShadowC" Sort="Off" Batch="True">
+			<Item Action="AskUser" arg1="Warning!">Do you want me to re-enable the ShadowC protection?.</Item>
+			<Item Action="D:\Softmod\default.xbe">Enable ShadowC</Item>
+		</List>
+
+		<Item>Install:</Item>
+		<List Text=" Applications" Sort="Off">
+			<List Text="Applications Information" Sort="On" Batch="True">
+				<Item Action="MessageBox" arg1="Information">In this menu you can install applications to do various things, like add trainers to games or copy games to your HDD.</Item>
+			</List>
+			<Item></Item>
+			<List Text=" DVD2Xbox" Sort="Off">
+				<List Text="DVD2Xbox Information" Sort="Off" Batch="True">
+					<Item Action="MessageBox" arg1="Information">DVD2Xbox is used to rip game discs to your Xbox hardrive. It can also be used to rip audio CDs & DVD discs.</Item>
+				</List>
+				<Item></Item>
+				<Item>Install to:</Item>
+				<List Text=" E:\Applications\" Sort="Off" Batch="True" Icon="E:\Applications\DVD2Xbox\installed.png">
+					<Item Action="AskUser" arg1="Continue" arg2="This will install DVD2Xbox to E:\Applications\DVD2Xbox\ if there is currently a application residing there it will be overwritten."/>
+					<Item Action="Copy" arg1="dummy" arg2="E:\Applications\DVD2Xbox"/>
+					<Item Action="Delete" arg1="E:\Applications\DVD2Xbox">Remove old E:\Applications\DVD2Xbox\</Item>
+					<Item Action="Unzip" arg1="D:\Softmod\Applications\DVD2Xbox.zip" arg2="E:\Applications\DVD2Xbox">Installing app to E:\Applications\DVD2Xbox\</Item>
+					<Item Action="Format" arg1="Z"/>
+					<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="E:\Applications\DVD2Xbox"/>
+					<Item Action="MessageBox" arg1="Done">That's DVD2Xbox installed to "E:\Applications\DVD2Xbox\"</Item>
+				</list>
+				<List Text=" F:\Applications\" Sort="Off" Batch="True" Icon="F:\Applications\DVD2Xbox\installed.png">
+					<Item Action="AskUser" arg1="Continue" arg2="This will install DVD2Xbox to F:\Applications\DVD2Xbox\ if there is currently a application residing there it will be overwritten."/>
+					<list>
+						<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="F:\test_partition"/>
+						<Item Action="Rename" arg1="F:\test_partition" arg2="F:\test_partition_">No F Partition found</Item>
+						<Item Action="Delete" arg="F:\test_partition_"/>
+					</list>
+					<Item Action="Copy" arg1="dummy" arg2="F:\Applications\DVD2Xbox"/>
+					<Item Action="Delete" arg1="F:\Applications\DVD2Xbox">Remove old F:\Applications\DVD2Xbox\</Item>
+					<Item Action="Unzip" arg1="D:\Softmod\Applications\DVD2Xbox.zip" arg2="F:\Applications\DVD2Xbox">Installing app to E:\Applications\DVD2Xbox\</Item>
+					<Item Action="Format" arg1="Z"/>
+					<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="F:\Applications\DVD2Xbox"/>
+					<Item Action="MessageBox" arg1="Done">That's DVD2Xbox installed to "F:\Applications\DVD2Xbox\"</Item>
+				</list>
+				<List Text=" G:\Applications\" Sort="Off" Batch="True" Icon="G:\Applications\DVD2Xbox\installed.png">
+					<Item Action="AskUser" arg1="Continue" arg2="This will install DVD2Xbox to G:\Applications\DVD2Xbox\ if there is currently a application residing there it will be overwritten."/>
+					<list>
+						<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="G:\test_partition"/>
+						<Item Action="Rename" arg1="G:\test_partition" arg2="G:\test_partition_">No G Partition found</Item>
+						<Item Action="Delete" arg="G:\test_partition_"/>
+					</list>
+					<Item Action="Copy" arg1="dummy" arg2="G:\Applications\DVD2Xbox"/>
+					<Item Action="Delete" arg1="G:\Applications\DVD2Xbox">Remove old G:\Applications\DVD2Xbox\</Item>
+					<Item Action="Unzip" arg1="D:\Softmod\Applications\DVD2Xbox.zip" arg2="G:\Applications\DVD2Xbox">Installing app to E:\Applications\DVD2Xbox\</Item>
+					<Item Action="Format" arg1="Z"/>
+					<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="G:\Applications\DVD2Xbox"/>
+					<Item Action="MessageBox" arg1="Done">That's DVD2Xbox installed to "G:\Applications\DVD2Xbox\"</Item>
+				</list>
+			</list>
+
+			<List Text=" DVDX v2" Sort="Off">
+				<List Text="DVD v2 Information" Sort="Off" Batch="True">
+					<Item Action="MessageBox" arg1="Information">DVDX v2 is used to play DVD movies without the need for the DVD kit.</Item>
+				</List>
+				<Item></Item>
+				<Item>Install to:</Item>
+				<List Text=" E:\Applications\" Sort="Off" Batch="True"Icon="E:\Applications\DVDX v2\installed.png">
+					<Item Action="AskUser" arg1="Continue" arg2="This will install DVDX v2 to E:\Applications\DVDX v2\ if there is currently a application residing there it will be overwritten."/>
+					<Item Action="Copy" arg1="dummy" arg2="E:\Applications\DVDX v2"/>
+					<Item Action="Delete" arg1="E:\Applications\DVDX v2">Remove old E:\Applications\DVDX v2\</Item>
+					<Item Action="Unzip" arg1="D:\Softmod\Applications\DVDX v2.zip" arg2="E:\Applications\DVDX v2">Installing app to E:\Applications\DVDX v2\</Item>
+					<Item Action="Format" arg1="Z"/>
+					<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="E:\Applications\DVDX v2"/>
+					<Item Action="MessageBox" arg1="Done">That's DVDX v2 installed to "E:\Applications\DVDX v2\"</Item>
+				</list>
+				<List Text=" F:\Applications\" Sort="Off" Batch="True"Icon="F:\Applications\DVDX v2\installed.png">
+					<Item Action="AskUser" arg1="Continue" arg2="This will install DVDX v2 to F:\Applications\DVDX v2\ if there is currently a application residing there it will be overwritten."/>
+					<list>
+						<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="F:\test_partition"/>
+						<Item Action="Rename" arg1="F:\test_partition" arg2="F:\test_partition_">No F Partition found</Item>
+						<Item Action="Delete" arg="F:\test_partition_"/>
+					</list>
+					<Item Action="Copy" arg1="dummy" arg2="F:\Applications\DVDX v2"/>
+					<Item Action="Delete" arg1="F:\Applications\DVDX v2">Remove old F:\Applications\DVDX v2\</Item>
+					<Item Action="Unzip" arg1="D:\Softmod\Applications\DVDX v2.zip" arg2="F:\Applications\DVDX v2">Installing app to F:\Applications\DVDX v2\</Item>
+					<Item Action="Format" arg1="Z"/>
+					<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="F:\Applications\DVDX v2"/>
+					<Item Action="MessageBox" arg1="Done">That's DVDX v2 installed to "F:\Applications\DVDX v2\"</Item>
+				</list>
+				<List Text=" G:\Applications\" Sort="Off" Batch="True"Icon="G:\Applications\DVDX v2\installed.png">
+					<Item Action="AskUser" arg1="Continue" arg2="This will install DVDX v2 to G:\Applications\DVDX v2\ if there is currently a application residing there it will be overwritten."/>
+					<list>
+						<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="G:\test_partition"/>
+						<Item Action="Rename" arg1="G:\test_partition" arg2="G:\test_partition_">No G Partition found</Item>
+						<Item Action="Delete" arg="G:\test_partition_"/>
+					</list>
+					<Item Action="Copy" arg1="dummy" arg2="G:\Applications\DVDX v2"/>
+					<Item Action="Delete" arg1="G:\Applications\DVDX v2">Remove old G:\Applications\DVDX v2\</Item>
+					<Item Action="Unzip" arg1="D:\Softmod\Applications\DVDX v2.zip" arg2="G:\Applications\DVDX v2">Installing app to G:\Applications\DVDX v2\</Item>
+					<Item Action="Format" arg1="Z"/>
+					<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="G:\Applications\DVDX v2"/>
+					<Item Action="MessageBox" arg1="Done">That's DVDX v2 installed to "G:\Applications\DVDX v2\"</Item>
+				</list>
+			</list>
+
+			<List Text=" EEPROM Backuperer" Sort="Off">
+				<List Text="EEPROM Backuperer Information" Sort="Off" Batch="True">
+					<Item Action="MessageBox" arg1="Information">The EEPROM Backuperer is used to backup your current Xbox EEPROM. The output files will be placed in "E:\Backups\EEPROM\", note this is a silent app. ie, you will not get a GUI.</Item>
+				</List>
+				<Item></Item>
+				<Item>Install to:</Item>
+				<List Text=" E:\Applications\" Sort="Off" Batch="True" Icon="E:\Applications\EEPROM Backuperer\installed.png">
+					<Item Action="AskUser" arg1="Continue" arg2="This will install EEPROM Backuperer to E:\Applications\EEPROM Backuperer\ if there is currently a application residing there it will be overwritten."/>
+					<Item Action="Copy" arg1="dummy" arg2="E:\Applications\EEPROM Backuperer"/>
+					<Item Action="Delete" arg1="E:\Applications\EEPROM Backuperer">Remove old E:\Applications\EEPROM Backuperer\</Item>
+					<Item Action="Unzip" arg1="D:\Softmod\Applications\EEPROM Backuperer.zip" arg2="E:\Applications\EEPROM Backuperer">Installing app to E:\Applications\EEPROM Backuperer\</Item>
+					<Item Action="Format" arg1="Z"/>
+					<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="E:\Applications\EEPROM Backuperer"/>
+					<Item Action="MessageBox" arg1="Done">That's EEPROM Backuperer installed to "E:\Applications\EEPROM Backuperer\"</Item>
+				</list>
+				<List Text=" F:\Applications\" Sort="Off" Batch="True" Icon="F:\Applications\EEPROM Backuperer\installed.png">
+					<Item Action="AskUser" arg1="Continue" arg2="This will install EEPROM Backuperer to F:\Applications\EEPROM Backuperer\ if there is currently a application residing there it will be overwritten."/>
+					<list>
+						<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="F:\test_partition"/>
+						<Item Action="Rename" arg1="F:\test_partition" arg2="F:\test_partition_">No F Partition found</Item>
+						<Item Action="Delete" arg="F:\test_partition_"/>
+					</list>
+					<Item Action="Copy" arg1="dummy" arg2="F:\Applications\EEPROM Backuperer"/>
+					<Item Action="Delete" arg1="F:\Applications\EEPROM Backuperer">Remove old F:\Applications\EEPROM Backuperer\</Item>
+					<Item Action="Unzip" arg1="D:\Softmod\Applications\EEPROM Backuperer.zip" arg2="F:\Applications\EEPROM Backuperer">Installing app to F:\Applications\EEPROM Backuperer\</Item>
+					<Item Action="Format" arg1="Z"/>
+					<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="F:\Applications\EEPROM Backuperer"/>
+					<Item Action="MessageBox" arg1="Done">That's EEPROM Backuperer installed to "F:\Applications\EEPROM Backuperer\"</Item>
+				</list>
+				<List Text=" G:\Applications\" Sort="Off" Batch="True" Icon="G:\Applications\EEPROM Backuperer\installed.png">
+					<Item Action="AskUser" arg1="Continue" arg2="This will install EEPROM Backuperer to G:\Applications\EEPROM Backuperer\ if there is currently a application residing there it will be overwritten."/>
+					<list>
+						<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="G:\test_partition"/>
+						<Item Action="Rename" arg1="G:\test_partition" arg2="G:\test_partition_">No G Partition found</Item>
+						<Item Action="Delete" arg="G:\test_partition_"/>
+					</list>
+					<Item Action="Copy" arg1="dummy" arg2="G:\Applications\EEPROM Backuperer"/>
+					<Item Action="Delete" arg1="G:\Applications\EEPROM Backuperer">Remove old G:\Applications\EEPROM Backuperer\</Item>
+					<Item Action="Unzip" arg1="D:\Softmod\Applications\EEPROM Backuperer.zip" arg2="G:\Applications\EEPROM Backuperer">Installing app to G:\Applications\EEPROM Backuperer\</Item>
+					<Item Action="Format" arg1="Z"/>
+					<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="G:\Applications\EEPROM Backuperer"/>
+					<Item Action="MessageBox" arg1="Done">That's EEPROM Backuperer installed to "G:\Applications\EEPROM Backuperer\"</Item>
+				</list>
+			</list>
+
+			<List Text=" Enigmah-X" Sort="Off">
+				<List Text="Enigmah-X Information" Sort="Off" Batch="True">
+					<Item Action="MessageBox" arg1="Information">This is a video mode switcher, that is used to switch a PAL console to an NTSC  console, or visa versa.</Item>
+				</List>
+				<Item></Item>
+				<Item>Install to:</Item>
+				<List Text=" E:\Applications\" Sort="Off" Batch="True" Icon="E:\Applications\Enigmah-X\installed.png">
+					<Item Action="AskUser" arg1="Continue" arg2="This will install Enigmah-X to E:\Applications\Enigmah-X\ if there is currently a application residing there it will be overwritten."/>
+					<Item Action="Copy" arg1="dummy" arg2="E:\Applications\Enigmah-X"/>
+					<Item Action="Delete" arg1="E:\Applications\Enigmah-X">Remove old E:\Applications\Enigmah-X\</Item>
+					<Item Action="Unzip" arg1="D:\Softmod\Applications\Enigmah-X.zip" arg2="E:\Applications\Enigmah-X">Installing app to E:\Applications\Enigmah-X\</Item>
+					<Item Action="Format" arg1="Z"/>
+					<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="E:\Applications\Enigmah-X"/>
+					<Item Action="MessageBox" arg1="Done">That's Enigmah-X installed to "E:\Applications\Enigmah-X\"</Item>
+				</list>
+				<List Text=" F:\Applications\" Sort="Off" Batch="True" Icon="F:\Applications\Enigmah-X\installed.png">
+					<Item Action="AskUser" arg1="Continue" arg2="This will install Enigmah-X to F:\Applications\Enigmah-X\ if there is currently a application residing there it will be overwritten."/>
+					<list>
+						<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="F:\test_partition"/>
+						<Item Action="Rename" arg1="F:\test_partition" arg2="F:\test_partition_">No F Partition found</Item>
+						<Item Action="Delete" arg="F:\test_partition_"/>
+					</list>
+					<Item Action="Copy" arg1="dummy" arg2="F:\Applications\Enigmah-X"/>
+					<Item Action="Delete" arg1="F:\Applications\Enigmah-X">Remove old F:\Applications\Enigmah-X\</Item>
+					<Item Action="Unzip" arg1="D:\Softmod\Applications\Enigmah-X.zip" arg2="F:\Applications\Enigmah-X">Installing app to F:\Applications\Enigmah-X\</Item>
+					<Item Action="Format" arg1="Z"/>
+					<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="F:\Applications\Enigmah-X"/>
+					<Item Action="MessageBox" arg1="Done">That's Enigmah-X installed to "F:\Applications\Enigmah-X\"</Item>
+				</list>
+				<List Text=" G:\Applications\" Sort="Off" Batch="True" Icon="G:\Applications\Enigmah-X\installed.png">
+					<Item Action="AskUser" arg1="Continue" arg2="This will install Enigmah-X to G:\Applications\Enigmah-X\ if there is currently a application residing there it will be overwritten."/>
+					<list>
+						<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="G:\test_partition"/>
+						<Item Action="Rename" arg1="G:\test_partition" arg2="G:\test_partition_">No G Partition found</Item>
+						<Item Action="Delete" arg="G:\test_partition_"/>
+					</list>
+					<Item Action="Copy" arg1="dummy" arg2="G:\Applications\Enigmah-X"/>
+					<Item Action="Delete" arg1="G:\Applications\Enigmah-X">Remove old G:\Applications\Enigmah-X\</Item>
+					<Item Action="Unzip" arg1="D:\Softmod\Applications\Enigmah-X.zip" arg2="G:\Applications\Enigmah-X">Installing app to G:\Applications\Enigmah-X\</Item>
+					<Item Action="Format" arg1="Z"/>
+					<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="G:\Applications\Enigmah-X"/>
+					<Item Action="MessageBox" arg1="Done">That's Enigmah-X installed to "G:\Applications\Enigmah-X\"</Item>
+				</list>
+				<Item>Extra:</Item>
+				<List Text=" Run from disc" Sort="Off" Batch="True">
+					<Item Action="AskUser" arg1="Continue" arg2="Are you sure you want to launch Enigmah-X?"/>
+					<Item Action="D:\Softmod\Applications\Enigmah-X\default.xbe">Run Enigmah-X Tool</Item>
+				</list>
+			</list>
+
+			<List Text=" NKPatcher Shortcut" Sort="Off">
+				<List Text="NKPatcher Shortcut Information" Sort="Off" Batch="True">
+					<Item Action="MessageBox" arg1="Information">This will reinstall the NKPatcher Settings Shortcut into the Applications menu.</Item>
+				</List>
+				<Item></Item>
+				<List Text=" Reinstall" Sort="Off" Batch="True">
+					<Item Action="AskUser" arg1="Continue" arg2="This will install NKPatcher Settings launcher to E:\Applications\NKPatcher Settings\ if there is currently a application residing there it will be overwritten."/>
+					<Item Action="Copy" arg1="dummy" arg2="E:\Applications\NKPatcher Settings"/>
+					<Item Action="Delete" arg1="E:\Applications\NKPatcher Settings">Remove old E:\Applications\NKPatcher Settings\</Item>
+					<Item Action="Copy" arg1="D:\Softmod\Applications\NKPatcher Settings\" arg2="E:\Applications\NKPatcher Settings">Installing app to E:\Applications\NKPatcher Settings\</Item>
+					<Item Action="MessageBox" arg1="Done">That's NKPatcher Settings installed to "E:\Applications\NKPatcher Settings\"</Item>
+				</list>
+			</list>
+
+			<List Text=" Xored Mini" Sort="Off">
+				<List Text="Xored Mini Information" Sort="Off" Batch="True">
+					<Item Action="MessageBox" arg1="Information">Xored Mini is used to apply trainers to your games. I include 882 trainers.</Item>
+				</List>
+				<Item></Item>
+				<Item>Install to:</Item>
+				<List Text=" E:\Applications\" Sort="Off" Batch="True" Icon="E:\Applications\Xored Mini\installed.png">
+					<Item Action="AskUser" arg1="Continue" arg2="This will install Xored Mini launcher to E:\Applications\Xored Mini\ if there is currently a application residing there it will be overwritten."/>
+					<Item Action="Copy" arg1="dummy" arg2="E:\Applications\Xored Mini"/>
+					<Item Action="Delete" arg1="E:\Applications\Xored Mini">Remove old E:\Applications\Xored Mini\</Item>
+					<Item Action="Unzip" arg1="D:\Softmod\Applications\Xored Mini.zip" arg2="E:\Applications\Xored Mini">Installing app to E:\Applications\Xored Mini\</Item>
+					<Item Action="Format" arg1="Z"/>
+					<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="E:\Applications\Xored Mini"/>
+					<Item Action="MessageBox" arg1="Done">That's Xored Mini installed to "E:\Applications\Xored Mini\"</Item>
+				</list>
+				<List Text=" F:\Applications\" Sort="Off" Batch="True" Icon="F:\Applications\Xored Mini\installed.png">
+					<Item Action="AskUser" arg1="Continue" arg2="This will install Xored Mini launcher to F:\Applications\Xored Mini\ if there is currently a application residing there it will be overwritten."/>
+					<list>
+						<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="F:\test_partition"/>
+						<Item Action="Rename" arg1="F:\test_partition" arg2="F:\test_partition_">No F Partition found</Item>
+						<Item Action="Delete" arg="F:\test_partition_"/>
+					</list>
+					<Item Action="Copy" arg1="dummy" arg2="F:\Applications\Xored Mini"/>
+					<Item Action="Delete" arg1="F:\Applications\Xored Mini">Remove old F:\Applications\Xored Mini\</Item>
+					<Item Action="Unzip" arg1="D:\Softmod\Applications\Xored Mini.zip" arg2="F:\Applications\Xored Mini">Installing app to F:\Applications\Xored Mini\</Item>
+					<Item Action="Format" arg1="Z"/>
+					<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="F:\Applications\Xored Mini"/>
+					<Item Action="MessageBox" arg1="Done">That's Xored Mini installed to "F:\Applications\Xored Mini\"</Item>
+				</list>
+				<List Text=" G:\Applications\" Sort="Off" Batch="True" Icon="G:\Applications\Xored Mini\installed.png">
+					<Item Action="AskUser" arg1="Continue" arg2="This will install Xored Mini launcher to G:\Applications\Xored Mini\ if there is currently a application residing there it will be overwritten."/>
+					<list>
+						<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="G:\test_partition"/>
+						<Item Action="Rename" arg1="G:\test_partition" arg2="G:\test_partition_">No G Partition found</Item>
+						<Item Action="Delete" arg="G:\test_partition_"/>
+					</list>
+					<Item Action="Copy" arg1="dummy" arg2="G:\Applications\Xored Mini"/>
+					<Item Action="Delete" arg1="G:\Applications\Xored Mini">Remove old G:\Applications\Xored Mini\</Item>
+					<Item Action="Unzip" arg1="D:\Softmod\Applications\Xored Mini.zip" arg2="G:\Applications\Xored Mini">Installing app to G:\Applications\Xored Mini\</Item>
+					<Item Action="Format" arg1="Z"/>
+					<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="G:\Applications\Xored Mini"/>
+					<Item Action="MessageBox" arg1="Done">That's Xored Mini installed to "G:\Applications\Xored Mini\"</Item>
+				</list>
+			</list>
+
+			<List Text=" Avalaunch" Sort="Off">
+				<List Text=" Avalaunch Options" Sort="Off" Batch="True"></List>
+				<Item></Item>
+				<Item>Install as application to:</Item>
+				<List Text=" E:\Applications\" Sort="Off" Batch="True" Icon="E:\Applications\Avalaunch\installed.png">
+					<Item Action="AskUser" arg1="Continue" arg2="This will install Avalaunch to E:\Applications\ if there is a previous installation residing there it will be overwritten."/>
+					<Item Action="Copy" arg1="dummy" arg2="E:\Applications\Avalaunch"/>
+					<Item Action="Delete" arg1="E:\Applications\Avalaunch">Remove old E:\Applications\Avalaunch\</Item>
+					<Item Action="Unzip" arg1="D:\Softmod\Dashboards\Avalaunch.zip" arg2="E:\Applications\Avalaunch">Installing dash to E:\Applications\Avalaunch\</Item>
+					<Item Action="Format" arg1="Z"/>
+					<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="E:\Applications\Avalaunch"/>
+					<Item Action="MessageBox" arg1="Done">That's Avalaunch installed to "E:\Applications\Avalaunch\"</Item>
+				</list>
+				<List Text=" F:\Applications\" Sort="Off" Batch="True" Icon="F:\Applications\Avalaunch\installed.png">
+					<Item Action="AskUser" arg1="Continue" arg2="This will install Avalaunch to F:\Applications\ if there is a previous installation residing there it will be overwritten."/>
+					<list>
+						<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="F:\test_partition"/>
+						<Item Action="Rename" arg1="F:\test_partition" arg2="F:\test_partition_">No F Partition found</Item>
+						<Item Action="Delete" arg="F:\test_partition_"/>
+					</list>
+					<Item Action="Copy" arg1="dummy" arg2="F:\Applications\Avalaunch"/>
+					<Item Action="Delete" arg1="F:\Applications\Avalaunch">Remove old F:\Applications\Avalaunch\</Item>
+					<Item Action="Unzip" arg1="D:\Softmod\Dashboards\Avalaunch.zip" arg2="F:\Applications\Avalaunch">Installing dash to F:\Applications\Avalaunch\</Item>
+					<Item Action="Format" arg1="Z"/>
+					<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="F:\Applications\Avalaunch"/>
+					<Item Action="MessageBox" arg1="Done">That's Avalaunch installed to "F:\Applications\Avalaunch\"</Item>
+				</list>
+				<List Text=" G:\Applications\" Sort="Off" Batch="True" Icon="G:\Applications\Avalaunch\installed.png">
+					<Item Action="AskUser" arg1="Continue" arg2="This will install Avalaunch to G:\Applications\ if there is a previous installation residing there it will be overwritten."/>
+					<list>
+						<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="G:\test_partition"/>
+						<Item Action="Rename" arg1="G:\test_partition" arg2="G:\test_partition_">No G Partition found</Item>
+						<Item Action="Delete" arg="G:\test_partition_"/>
+					</list>
+					<Item Action="Copy" arg1="dummy" arg2="G:\Applications\Avalaunch"/>
+					<Item Action="Delete" arg1="G:\Applications\Avalaunch">Remove old G:\Applications\Avalaunch\</Item>
+					<Item Action="Unzip" arg1="D:\Softmod\Dashboards\Avalaunch.zip" arg2="G:\Applications\Avalaunch">Installing dash to G:\Applications\Avalaunch\</Item>
+					<Item Action="Format" arg1="Z"/>
+					<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="G:\Applications\Avalaunch"/>
+					<Item Action="MessageBox" arg1="Done">That's Avalaunch installed to "G:\Applications\Avalaunch\"</Item>
+				</list>
+			</list>
+
+			<List Text=" EvolutionX" Sort="Off">
+				<List Text=" EvolutionX Options" Sort="Off" Batch="True"></List>
+				<Item></Item>
+				<Item>Install as application to:</Item>
+				<List Text=" E:\Applications\" Sort="Off" Batch="True" Icon="E:\Applications\EvolutionX\installed.png">
+					<Item Action="AskUser" arg1="Continue" arg2="This will install EvolutionX to E:\Applications\ if there is a previous installation residing there it will be overwritten."/>
+					<Item Action="Copy" arg1="dummy" arg2="E:\Applications\EvolutionX"/>
+					<Item Action="Delete" arg1="E:\Applications\EvolutionX">Remove old E:\Applications\EvolutionX\</Item>
+					<Item Action="Unzip" arg1="D:\Softmod\Dashboards\EvolutionX.zip" arg2="E:\Applications\EvolutionX">Installing dash to E:\Applications\EvolutionX\</Item>
+					<Item Action="Format" arg1="Z"/>
+					<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="E:\Applications\EvolutionX"/>
+					<Item Action="MessageBox" arg1="Done">That's EvolutionX installed to "E:\Applications\EvolutionX\"</Item>
+				</list>
+				<List Text=" F:\Applications\" Sort="Off" Batch="True" Icon="F:\Applications\EvolutionX\installed.png">
+					<Item Action="AskUser" arg1="Continue" arg2="This will install EvolutionX to F:\Applications\ if there is a previous installation residing there it will be overwritten."/>
+					<list>
+						<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="F:\test_partition"/>
+						<Item Action="Rename" arg1="F:\test_partition" arg2="F:\test_partition_">No F Partition found</Item>
+						<Item Action="Delete" arg="F:\test_partition_"/>
+					</list>
+					<Item Action="Copy" arg1="dummy" arg2="F:\Applications\EvolutionX"/>
+					<Item Action="Delete" arg1="F:\Applications\EvolutionX">Remove old F:\Applications\EvolutionX\</Item>
+					<Item Action="Unzip" arg1="D:\Softmod\Dashboards\EvolutionX.zip" arg2="F:\Applications\EvolutionX">Installing dash to F:\Applications\EvolutionX\</Item>
+					<Item Action="Format" arg1="Z"/>
+					<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="F:\Applications\EvolutionX"/>
+					<Item Action="MessageBox" arg1="Done">That's EvolutionX installed to "F:\Applications\EvolutionX\"</Item>
+				</list>
+				<List Text=" G:\Applications\" Sort="Off" Batch="True" Icon="G:\Applications\EvolutionX\installed.png">
+					<Item Action="AskUser" arg1="Continue" arg2="This will install EvolutionX to G:\Applications\ if there is a previous installation residing there it will be overwritten."/>
+					<list>
+						<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="G:\test_partition"/>
+						<Item Action="Rename" arg1="G:\test_partition" arg2="G:\test_partition_">No G Partition found</Item>
+						<Item Action="Delete" arg="G:\test_partition_"/>
+					</list>
+					<Item Action="Copy" arg1="dummy" arg2="G:\Applications\EvolutionX"/>
+					<Item Action="Delete" arg1="G:\Applications\EvolutionX">Remove old G:\Applications\EvolutionX\</Item>
+					<Item Action="Unzip" arg1="D:\Softmod\Dashboards\EvolutionX.zip" arg2="G:\Applications\EvolutionX">Installing dash to G:\Applications\EvolutionX\</Item>
+					<Item Action="Format" arg1="Z"/>
+					<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="G:\Applications\EvolutionX"/>
+					<Item Action="MessageBox" arg1="Done">That's EvolutionX installed to "G:\Applications\EvolutionX\"</Item>
+				</list>
+			</list>
+
+			<List Text=" User Interface X Dash" Sort="Off">
+				<List Text=" User Interface X Dash Options" Sort="Off" Batch="True"></List>
+				<Item></Item>
+				<Item>Install as application to:</Item>
+				<List Text=" E:\Applications\" Sort="Off" Batch="True" Icon="E:\Applications\User Interface X Dash\installed.png">
+					<Item Action="AskUser" arg1="Continue" arg2="This will install User Interface X Dash to E:\Applications\ if there is a previous installation residing there it will be overwritten."/>
+					<Item Action="Copy" arg1="dummy" arg2="E:\Applications\User Interface X Dash"/>
+					<Item Action="Delete" arg1="E:\Applications\User Interface X Dash">Remove old E:\Applications\User Interface X Dash\</Item>
+					<Item Action="Unzip" arg1="D:\Softmod\Dashboards\UIX Dash.zip" arg2="E:\Applications\User Interface X Dash">Installing dash to E:\Applications\User Interface X Dash\</Item>
+					<Item Action="Format" arg1="Z"/>
+					<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="E:\Applications\User Interface X Dash"/>
+					<Item Action="MessageBox" arg1="Done">That's User Interface X Dash installed to "E:\Applications\User Interface X Dash\"</Item>
+				</list>
+				<List Text=" F:\Applications\" Sort="Off" Batch="True" Icon="F:\Applications\User Interface X Dash\installed.png">
+					<Item Action="AskUser" arg1="Continue" arg2="This will install User Interface X Dash to F:\Applications\ if there is a previous installation residing there it will be overwritten."/>
+					<list>
+						<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="F:\test_partition"/>
+						<Item Action="Rename" arg1="F:\test_partition" arg2="F:\test_partition_">No F Partition found</Item>
+						<Item Action="Delete" arg="F:\test_partition_"/>
+					</list>
+					<Item Action="Copy" arg1="dummy" arg2="F:\Applications\User Interface X Dash"/>
+					<Item Action="Delete" arg1="F:\Applications\User Interface X Dash">Remove old F:\Applications\User Interface X Dash\</Item>
+					<Item Action="Unzip" arg1="D:\Softmod\Dashboards\UIX Dash.zip" arg2="F:\Applications\User Interface X Dash">Installing dash to F:\Applications\User Interface X Dash\</Item>
+					<Item Action="Format" arg1="Z"/>
+					<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="F:\Applications\User Interface X Dash"/>
+					<Item Action="MessageBox" arg1="Done">That's User Interface X Dash installed to "F:\Applications\User Interface X Dash\"</Item>
+				</list>
+				<List Text=" G:\Applications\" Sort="Off" Batch="True" Icon="G:\Applications\User Interface X Dash\installed.png">
+					<Item Action="AskUser" arg1="Continue" arg2="This will install User Interface X Dash to G:\Applications\ if there is a previous installation residing there it will be overwritten."/>
+					<list>
+						<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="G:\test_partition"/>
+						<Item Action="Rename" arg1="G:\test_partition" arg2="G:\test_partition_">No G Partition found</Item>
+						<Item Action="Delete" arg="G:\test_partition_"/>
+					</list>
+					<Item Action="Copy" arg1="dummy" arg2="G:\Applications\User Interface X Dash"/>
+					<Item Action="Delete" arg1="G:\Applications\User Interface X Dash">Remove old G:\Applications\User Interface X Dash\</Item>
+					<Item Action="Unzip" arg1="D:\Softmod\Dashboards\UIX Dash.zip" arg2="G:\Applications\User Interface X Dash">Installing dash to G:\Applications\User Interface X Dash\</Item>
+					<Item Action="Format" arg1="Z"/>
+					<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="G:\Applications\User Interface X Dash"/>
+					<Item Action="MessageBox" arg1="Done">That's User Interface X Dash installed to "G:\Applications\User Interface X Dash\"</Item>
+				</list>
+			</list>
+
+			<List Text=" UnleashX" Sort="Off">
+				<List Text=" UnleashX Options" Sort="Off" Batch="True"></List>
+				<Item></Item>
+				<Item>Install as application to:</Item>
+				<List Text=" E:\Applications\" Sort="Off" Batch="True" Icon="E:\Applications\UnleashX\installed.png">
+					<Item Action="AskUser" arg1="Continue" arg2="This will install UnleashX to E:\Applications\ if there is a previous installation residing there it will be overwritten."/>
+					<Item Action="Copy" arg1="dummy" arg2="E:\Applications\UnleashX"/>
+					<Item Action="Delete" arg1="E:\Applications\UnleashX">Remove old E:\Applications\UnleashX\</Item>
+					<Item Action="Unzip" arg1="D:\Softmod\Dashboards\UnleashX.zip" arg2="E:\Applications\UnleashX">Installing dash to E:\Applications\UnleashX\</Item>
+					<Item Action="Format" arg1="Z"/>
+					<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="E:\Applications\UnleashX"/>
+					<Item Action="MessageBox" arg1="Done">That's UnleashX installed to "E:\Applications\UnleashX\"</Item>
+				</list>
+				<List Text=" F:\Applications\" Sort="Off" Batch="True" Icon="F:\Applications\UnleashX\installed.png">
+					<Item Action="AskUser" arg1="Continue" arg2="This will install UnleashX to F:\Applications\ if there is a previous installation residing there it will be overwritten."/>
+					<list>
+						<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="F:\test_partition"/>
+						<Item Action="Rename" arg1="F:\test_partition" arg2="F:\test_partition_">No F Partition found</Item>
+						<Item Action="Delete" arg="F:\test_partition_"/>
+					</list>
+					<Item Action="Copy" arg1="dummy" arg2="F:\Applications\UnleashX"/>
+					<Item Action="Delete" arg1="F:\Applications\UnleashX">Remove old F:\Applications\UnleashX\</Item>
+					<Item Action="Unzip" arg1="D:\Softmod\Dashboards\UnleashX.zip" arg2="F:\Applications\UnleashX">Installing dash to F:\Applications\UnleashX\</Item>
+					<Item Action="Format" arg1="Z"/>
+					<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="F:\Applications\UnleashX"/>
+					<Item Action="MessageBox" arg1="Done">That's UnleashX installed to "F:\Applications\UnleashX\"</Item>
+				</list>
+				<List Text=" G:\Applications\" Sort="Off" Batch="True" Icon="G:\Applications\UnleashX\installed.png">
+					<Item Action="AskUser" arg1="Continue" arg2="This will install UnleashX to G:\Applications\ if there is a previous installation residing there it will be overwritten."/>
+					<list>
+						<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="G:\test_partition"/>
+						<Item Action="Rename" arg1="G:\test_partition" arg2="G:\test_partition_">No G Partition found</Item>
+						<Item Action="Delete" arg="G:\test_partition_"/>
+					</list>
+					<Item Action="Copy" arg1="dummy" arg2="G:\Applications\UnleashX"/>
+					<Item Action="Delete" arg1="G:\Applications\UnleashX">Remove old G:\Applications\UnleashX\</Item>
+					<Item Action="Unzip" arg1="D:\Softmod\Dashboards\UnleashX.zip" arg2="G:\Applications\UnleashX">Installing dash to G:\Applications\UnleashX\</Item>
+					<Item Action="Format" arg1="Z"/>
+					<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="G:\Applications\UnleashX"/>
+					<Item Action="MessageBox" arg1="Done">That's UnleashX installed to "G:\Applications\UnleashX\"</Item>
+				</list>
+			</list>
+			
+			<List Text=" XBMC-Emustation" Sort="Off">
+				<List Text=" XBMC-Emustation Options" Sort="Off" Batch="True"></List>
+				<Item></Item>
+				<Item>Install as application to:</Item>
+				<List Text=" E:\Applications\" Sort="Off" Batch="True" Icon="E:\Applications\XBMC-Emustation\installed.png">
+					<Item Action="AskUser" arg1="Continue" arg2="This will install XBMC-Emustation to E:\Applications\ if there is a previous installation residing there it will be overwritten."/>
+					<Item Action="Copy" arg1="dummy" arg2="E:\Applications\XBMC-Emustation"/>
+					<Item Action="Delete" arg1="E:\Applications\XBMC-Emustation">Remove old E:\Applications\XBMC-Emustation\</Item>
+					<Item Action="Unzip" arg1="D:\Softmod\Dashboards\XBMC-Emustation.zip" arg2="E:\Applications\XBMC-Emustation">Installing dash to E:\Applications\XBMC-Emustation\</Item>
+					<Item Action="Format" arg1="Z"/>
+					<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="E:\Applications\XBMC-Emustation"/>
+					<Item Action="MessageBox" arg1="Done">That's XBMC-Emustation installed to "E:\Applications\XBMC-Emustation\"</Item>
+				</list>
+				<List Text=" F:\Applications\" Sort="Off" Batch="True" Icon="F:\Applications\XBMC-Emustation\installed.png">
+					<Item Action="AskUser" arg1="Continue" arg2="This will install XBMC-Emustation to F:\Applications\ if there is a previous installation residing there it will be overwritten."/>
+					<list>
+						<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="F:\test_partition"/>
+						<Item Action="Rename" arg1="F:\test_partition" arg2="F:\test_partition_">No F Partition found</Item>
+						<Item Action="Delete" arg="F:\test_partition_"/>
+					</list>
+					<Item Action="Copy" arg1="dummy" arg2="F:\Applications\XBMC-Emustation"/>
+					<Item Action="Delete" arg1="F:\Applications\XBMC-Emustation">Remove old F:\Applications\XBMC-Emustation\</Item>
+					<Item Action="Unzip" arg1="D:\Softmod\Dashboards\XBMC-Emustation.zip" arg2="F:\Applications\XBMC-Emustation">Installing dash to F:\Applications\XBMC-Emustation\</Item>
+					<Item Action="Format" arg1="Z"/>
+					<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="F:\Applications\XBMC-Emustation"/>
+					<Item Action="MessageBox" arg1="Done">That's XBMC-Emustation installed to "F:\Applications\XBMC-Emustation\"</Item>
+				</list>
+				<List Text=" G:\Applications\" Sort="Off" Batch="True" Icon="G:\Applications\XBMC-Emustation\installed.png">
+					<Item Action="AskUser" arg1="Continue" arg2="This will install XBMC-Emustation to G:\Applications\ if there is a previous installation residing there it will be overwritten."/>
+					<list>
+						<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="G:\test_partition"/>
+						<Item Action="Rename" arg1="G:\test_partition" arg2="G:\test_partition_">No G Partition found</Item>
+						<Item Action="Delete" arg="G:\test_partition_"/>
+					</list>
+					<Item Action="Copy" arg1="dummy" arg2="G:\Applications\XBMC-Emustation"/>
+					<Item Action="Delete" arg1="G:\Applications\XBMC-Emustation">Remove old G:\Applications\XBMC-Emustation\</Item>
+					<Item Action="Unzip" arg1="D:\Softmod\Dashboards\XBMC-Emustation.zip" arg2="G:\Applications\XBMC-Emustation">Installing dash to G:\Applications\XBMC-Emustation\</Item>
+					<Item Action="Format" arg1="Z"/>
+					<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="G:\Applications\XBMC-Emustation"/>
+					<Item Action="MessageBox" arg1="Done">That's XBMC-Emustation installed to "G:\Applications\XBMC-Emustation\"</Item>
+				</list>
+			</list>
+
+			<List Text=" XBMC4Gamers" Sort="Off">
+				<List Text=" XBMC4Gamers Options" Sort="Off" Batch="True"></List>
+				<Item></Item>
+				<Item>Install as application to:</Item>
+				<List Text=" -- Read Me first --" Sort="Off" Batch="True">
+					<Item Action="MessageBox" arg1="">If you are going to use this as an application I would advise not enabling the "Individual Saves Script", doing so may cause issues with other dashboards.</Item>
+				</List>
+				<List Text=" E:\Applications\" Sort="Off" Batch="True" Icon="E:\Applications\XBMC4Gamers\installed.png">
+					<Item Action="AskUser" arg1="Continue" arg2="This will install XBMC4Gamers to E:\Applications\ if there is a previous installation residing there it will be overwritten."/>
+					<Item Action="Copy" arg1="dummy" arg2="E:\Applications\XBMC4Gamers"/>
+					<Item Action="Delete" arg1="E:\Applications\XBMC4Gamers">Remove old E:\Applications\XBMC4Gamers\</Item>
+					<Item Action="Unzip" arg1="D:\Softmod\Dashboards\XBMC4Gamers.zip" arg2="E:\Applications\XBMC4Gamers">Installing dash to E:\Applications\XBMC4Gamers\</Item>
+					<Item Action="Format" arg1="Z"/>
+					<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="E:\Applications\XBMC4Gamers"/>
+					<Item Action="MessageBox" arg1="Done">That's XBMC4Gamers installed to "E:\Applications\XBMC4Gamers\"</Item>
+				</list>
+				<List Text=" F:\Applications\" Sort="Off" Batch="True" Icon="F:\Applications\XBMC4Gamers\installed.png">
+					<Item Action="AskUser" arg1="Continue" arg2="This will install XBMC4Gamers to F:\Applications\ if there is a previous installation residing there it will be overwritten."/>
+					<list>
+						<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="F:\test_partition"/>
+						<Item Action="Rename" arg1="F:\test_partition" arg2="F:\test_partition_">No F Partition found</Item>
+						<Item Action="Delete" arg="F:\test_partition_"/>
+					</list>
+					<Item Action="Copy" arg1="dummy" arg2="F:\Applications\XBMC4Gamers"/>
+					<Item Action="Delete" arg1="F:\Applications\XBMC4Gamers">Remove old F:\Applications\XBMC4Gamers\</Item>
+					<Item Action="Unzip" arg1="D:\Softmod\Dashboards\XBMC4Gamers.zip" arg2="F:\Applications\XBMC4Gamers">Installing dash to F:\Applications\XBMC4Gamers\</Item>
+					<Item Action="Format" arg1="Z"/>
+					<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="F:\Applications\XBMC4Gamers"/>
+					<Item Action="MessageBox" arg1="Done">That's XBMC4Gamers installed to "F:\Applications\XBMC4Gamers\"</Item>
+				</list>
+				<List Text=" G:\Applications\" Sort="Off" Batch="True" Icon="G:\Applications\XBMC4Gamers\installed.png">
+					<Item Action="AskUser" arg1="Continue" arg2="This will install XBMC4Gamers to G:\Applications\ if there is a previous installation residing there it will be overwritten."/>
+					<list>
+						<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="G:\test_partition"/>
+						<Item Action="Rename" arg1="G:\test_partition" arg2="G:\test_partition_">No G Partition found</Item>
+						<Item Action="Delete" arg="G:\test_partition_"/>
+					</list>
+					<Item Action="Copy" arg1="dummy" arg2="G:\Applications\XBMC4Gamers"/>
+					<Item Action="Delete" arg1="G:\Applications\XBMC4Gamers">Remove old G:\Applications\XBMC4Gamers\</Item>
+					<Item Action="Unzip" arg1="D:\Softmod\Dashboards\XBMC4Gamers.zip" arg2="G:\Applications\XBMC4Gamers">Installing dash to G:\Applications\XBMC4Gamers\</Item>
+					<Item Action="Format" arg1="Z"/>
+					<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="G:\Applications\XBMC4Gamers"/>
+					<Item Action="MessageBox" arg1="Done">That's XBMC4Gamers installed to "G:\Applications\XBMC4Gamers\"</Item>
+				</list>
+			</list>
+
+			<List Text=" XBMC4Xbox" Sort="Off">
+				<List Text=" XBMC4Xbox v3.5.3 Options" Sort="Off" Batch="True"></List>
+				<Item></Item>
+				<Item>Install as application to:</Item>
+				<List Text=" E:\Applications\" Sort="Off" Batch="True" Icon="E:\Applications\XBMC4Xbox\installed.png">
+					<Item Action="AskUser" arg1="Continue" arg2="This will install XBMC4Xbox to E:\Applications\ if there is a previous installation residing there it will be overwritten."/>
+					<Item Action="Copy" arg1="dummy" arg2="E:\Applications\XBMC4Xbox"/>
+					<Item Action="Delete" arg1="E:\Applications\XBMC4Xbox">Remove old E:\Applications\XBMC4Xbox\</Item>
+					<Item Action="Unzip" arg1="D:\Softmod\Dashboards\XBMC4Xbox.zip" arg2="E:\Applications\XBMC4Xbox">Installing dash to E:\Applications\XBMC4Xbox\</Item>
+					<Item Action="Format" arg1="Z"/>
+					<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="E:\Applications\XBMC4Xbox"/>
+					<Item Action="MessageBox" arg1="Done">That's XBMC4Xbox installed to "E:\Applications\XBMC4Xbox\"</Item>
+				</list>
+				<List Text=" F:\Applications\" Sort="Off" Batch="True" Icon="F:\Applications\XBMC4Xbox\installed.png">
+					<Item Action="AskUser" arg1="Continue" arg2="This will install XBMC4Xbox to F:\Applications\ if there is a previous installation residing there it will be overwritten."/>
+					<list>
+						<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="F:\test_partition"/>
+						<Item Action="Rename" arg1="F:\test_partition" arg2="F:\test_partition_">No F Partition found</Item>
+						<Item Action="Delete" arg="F:\test_partition_"/>
+					</list>
+					<Item Action="Copy" arg1="dummy" arg2="F:\Applications\XBMC4Xbox"/>
+					<Item Action="Delete" arg1="F:\Applications\XBMC4Xbox">Remove old F:\Applications\XBMC4Xbox\</Item>
+					<Item Action="Unzip" arg1="D:\Softmod\Dashboards\XBMC4Xbox.zip" arg2="F:\Applications\XBMC4Xbox">Installing dash to F:\Applications\XBMC4Xbox\</Item>
+					<Item Action="Format" arg1="Z"/>
+					<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="F:\Applications\XBMC4Xbox"/>
+					<Item Action="MessageBox" arg1="Done">That's XBMC4Xbox installed to "F:\Applications\XBMC4Xbox\"</Item>
+				</list>
+				<List Text=" G:\Applications\" Sort="Off" Batch="True" Icon="G:\Applications\XBMC4Xbox\installed.png">
+					<Item Action="AskUser" arg1="Continue" arg2="This will install XBMC4Xbox to G:\Applications\ if there is a previous installation residing there it will be overwritten."/>
+					<list>
+						<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="G:\test_partition"/>
+						<Item Action="Rename" arg1="G:\test_partition" arg2="G:\test_partition_">No G Partition found</Item>
+						<Item Action="Delete" arg="G:\test_partition_"/>
+					</list>
+					<Item Action="Copy" arg1="dummy" arg2="G:\Applications\XBMC4Xbox"/>
+					<Item Action="Delete" arg1="G:\Applications\XBMC4Xbox">Remove old G:\Applications\XBMC4Xbox\</Item>
+					<Item Action="Unzip" arg1="D:\Softmod\Dashboards\XBMC4Xbox.zip" arg2="G:\Applications\XBMC4Xbox">Installing dash to G:\Applications\XBMC4Xbox\</Item>
+					<Item Action="Format" arg1="Z"/>
+					<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="G:\Applications\XBMC4Xbox"/>
+					<Item Action="MessageBox" arg1="Done">That's XBMC4Xbox installed to "G:\Applications\XBMC4Xbox\"</Item>
+				</list>
+			</list>
+		</list>
+
+		<List Text=" Homebrew" Sort="Off">
+			<List Text="Homebrew Information" Sort="Off" Batch="True">
+				<Item Action="MessageBox" arg1="Information">Just a few homebrew games all setup &amp; ready to play.</Item>
+			</List>
+			<Item></Item>
+			<List Text=" AVP Gold Beta 2" Sort="Off">
+				<List Text="AVP Gold Beta 2 Information" Sort="Off" Batch="True">
+					<Item Action="MessageBox" arg1="Info">This is a PC port of Alien vs Predator by SirLemonhead &amp; it functions surprisingly well, considering the port was abandoned. This version uses the unreleased beta that fixed most issues with the original release.</Item>
+				</Item>
+				<Item></Item>
+				<Item>Install to:</Item>
+				<List Text=" E:\Homebrew\" Sort="Off" Batch="True">
+					<Item Action="Unrar" arg1="D:\Softmod\Other\Homebrew\Aliens versus Predator Gold.rar" arg2="E:\Homebrew\"/>
+					<Item Action="MessageBox" Arg1="Complete">AVP Gold installed to.\n\n"E:\Homebrew\Aliens versus Predator Gold\"</Item>
+				</List>
+				<List Text=" F:\Homebrew\" Sort="Off" Batch="True">
+					<list>
+						<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="F:\test_partition"/>
+						<Item Action="Rename" arg1="F:\test_partition" arg2="F:\test_partition_">No F Partition found</Item>
+						<Item Action="Delete" arg="F:\test_partition_"/>
+					</list>
+					<Item Action="Unrar" arg1="D:\Softmod\Other\Homebrew\Aliens versus Predator Gold.rar" arg2="F:\Homebrew\"/>
+					<Item Action="MessageBox" Arg1="Complete">AVP Gold installed to.\n\n"F:\Homebrew\Aliens versus Predator Gold\"</Item>
+				</List>
+				<List Text=" G:\Homebrew\" Sort="Off" Batch="True">
+					<list>
+						<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="G:\test_partition"/>
+						<Item Action="Rename" arg1="G:\test_partition" arg2="G:\test_partition_">No G Partition found</Item>
+						<Item Action="Delete" arg="G:\test_partition_"/>
+					</list>
+					<Item Action="Unrar" arg1="D:\Softmod\Other\Homebrew\Aliens versus Predator Gold.rar" arg2="G:\Homebrew\"/>
+					<Item Action="MessageBox" Arg1="Complete">AVP Gold installed to.\n\n"G:\Homebrew\Aliens versus Predator Gold\"</Item>
+				</List>
+			</List>
+
+			<List Text=" DoomX v2.2 Beta" Sort="Off">
+				<List Text="DoomX v2.2 Beta Information" Sort="Off" Batch="True">
+					<Item Action="MessageBox" arg1="Info">This allows you to play Doom, Doom II, Ultimate Doom, Final Doom: TNT	Evilution &amp; Final Doom: Plutonia Exp.</Item>
+				</Item>
+				<Item></Item>
+				<Item>Install to:</Item>
+				<List Text=" E:\Homebrew\" Sort="Off" Batch="True">
+					<Item Action="Unrar" arg1="D:\Softmod\Other\Homebrew\DoomX.rar" arg2="E:\Homebrew\"/>
+					<Item Action="MessageBox" Arg1="Complete">DoomX installed to.\n\n"E:\Homebrew\DoomX\"</Item>
+				</List>
+				<List Text=" F:\Homebrew\" Sort="Off" Batch="True">
+					<list>
+						<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="F:\test_partition"/>
+						<Item Action="Rename" arg1="F:\test_partition" arg2="F:\test_partition_">No F Partition found</Item>
+						<Item Action="Delete" arg="F:\test_partition_"/>
+					</list>
+					<Item Action="Unrar" arg1="D:\Softmod\Other\Homebrew\DoomX.rar" arg2="F:\Homebrew\"/>
+					<Item Action="MessageBox" Arg1="Complete">DoomX installed to.\n\n"F:\Homebrew\DoomX\"</Item>
+				</List>
+				<List Text=" G:\Homebrew\" Sort="Off" Batch="True">
+					<list>
+						<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="G:\test_partition"/>
+						<Item Action="Rename" arg1="G:\test_partition" arg2="G:\test_partition_">No G Partition found</Item>
+						<Item Action="Delete" arg="G:\test_partition_"/>
+					</list>
+					<Item Action="Unrar" arg1="D:\Softmod\Other\Homebrew\DoomX.rar" arg2="G:\Homebrew\"/>
+					<Item Action="MessageBox" Arg1="Complete">DoomX installed to.\n\n"G:\Homebrew\DoomX\"</Item>
+				</List>
+			</List>
+
+			<List Text=" Super Mario War v1.8" Sort="Off">
+				<List Text="Super Mario War v1.8 Information" Sort="Off" Batch="True">
+					<Item Action="MessageBox" arg1="Info">Super Mario War is a Super Mario multiplayer game. The goal is to stomp as many other Marios as possible to win the game. It's a tribute to Nintendo and the game Mario War by Samuele Poletto.</Item>
+				</Item>
+				<Item></Item>
+				<Item>Install to:</Item>
+				<List Text=" E:\Homebrew\" Sort="Off" Batch="True">
+					<Item Action="Unrar" arg1="D:\Softmod\Other\Homebrew\Super Mario War 1.8.rar" arg2="E:\Homebrew\"/>
+					<Item Action="MessageBox" Arg1="Complete">Super Mario War installed to.\n\n"E:\Homebrew\Super Mario War 1.8\"</Item>
+				</List>
+				<List Text=" F:\Homebrew\" Sort="Off" Batch="True">
+					<list>
+						<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="F:\test_partition"/>
+						<Item Action="Rename" arg1="F:\test_partition" arg2="F:\test_partition_">No F Partition found</Item>
+						<Item Action="Delete" arg="F:\test_partition_"/>
+					</list>
+					<Item Action="Unrar" arg1="D:\Softmod\Other\Homebrew\Super Mario War 1.8.rar" arg2="F:\Homebrew\"/>
+					<Item Action="MessageBox" Arg1="Complete">Super Mario War installed to.\n\n"F:\Homebrew\Super Mario War 1.8\"</Item>
+				</List>
+				<List Text=" G:\Homebrew\" Sort="Off" Batch="True">
+					<list>
+						<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="G:\test_partition"/>
+						<Item Action="Rename" arg1="G:\test_partition" arg2="G:\test_partition_">No G Partition found</Item>
+						<Item Action="Delete" arg="G:\test_partition_"/>
+					</list>
+					<Item Action="Unrar" arg1="D:\Softmod\Other\Homebrew\Super Mario War 1.8.rar" arg2="G:\Homebrew\"/>
+					<Item Action="MessageBox" Arg1="Complete">Super Mario War istalled to.\n\n"G:\Homebrew\Super Mario War 1.8\"</Item>
+				</List>
+			</List>
+
+			<List Text=" SMW v1.8 Halloween Edition" Sort="Off">
+				<List Text="SMW v1.8 Halloween Edition Information" Sort="Off" Batch="True">
+					<Item Action="MessageBox" arg1="Info">Super Mario War is a Super Mario multiplayer game. The goal is to stomp as many other Marios as possible to win the game. It's a tribute to Nintendo and the game Mario War by Samuele Poletto.</Item>
+				</Item>
+				<Item></Item>
+				<Item>Install to:</Item>
+				<List Text=" E:\Homebrew\" Sort="Off" Batch="True">
+					<Item Action="Unrar" arg1="D:\Softmod\Other\Homebrew\Super Mario War 1.8 Halloween Edition.rar" arg2="E:\Homebrew\"/>
+					<Item Action="MessageBox" Arg1="Complete">Super Mario War 1.8 Halloween Edition installed to.\n\n"E:\Homebrew\Super Mario War 1.8 Halloween Edition\"</Item>
+				</List>
+				<List Text=" F:\Homebrew\" Sort="Off" Batch="True">
+					<list>
+						<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="F:\test_partition"/>
+						<Item Action="Rename" arg1="F:\test_partition" arg2="F:\test_partition_">No F Partition found</Item>
+						<Item Action="Delete" arg="F:\test_partition_"/>
+					</list>
+					<Item Action="Unrar" arg1="D:\Softmod\Other\Homebrew\Super Mario War 1.8 Halloween Edition.rar" arg2="F:\Homebrew\"/>
+					<Item Action="MessageBox" Arg1="Complete">Super Mario War 1.8 Halloween Edition installed to.\n\n"F:\Homebrew\Super Mario War 1.8 Halloween Edition\"</Item>
+				</List>
+				<List Text=" G:\Homebrew\" Sort="Off" Batch="True">
+					<list>
+						<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="G:\test_partition"/>
+						<Item Action="Rename" arg1="G:\test_partition" arg2="G:\test_partition_">No G Partition found</Item>
+						<Item Action="Delete" arg="G:\test_partition_"/>
+					</list>
+					<Item Action="Unrar" arg1="D:\Softmod\Other\Homebrew\Super Mario War 1.8 Halloween Edition.rar" arg2="G:\Homebrew\"/>
+					<Item Action="MessageBox" Arg1="Complete">Super Mario War 1.8 Halloween Edition installed to.\n\n"G:\Homebrew\Super Mario War 1.8 Halloween Edition\"</Item>
+				</List>
+			</List>
+
+			<List Text=" xDuke v1.0" Sort="Off">
+				<List Text="xDuke v1.0 Information" Sort="Off" Batch="True">
+					<Item Action="MessageBox" arg1="Info">Play Duke Nukem 3D on the XBOX!, also supports loading of SHIT LOADS OF MODS!.</Item>
+				</Item>
+				<Item></Item>
+				<Item>Install to:</Item>
+				<List Text=" E:\Homebrew\" Sort="Off" Batch="True">
+					<Item Action="Unrar" arg1="D:\Softmod\Other\Homebrew\xDuke.rar" arg2="E:\Homebrew\"/>
+					<Item Action="Copy" arg1="E:\Homebrew\xDuke\Configs\EPartition.xml" arg2="E:\Homebrew\xDuke\Config.xml"/>
+					<Item Action="MessageBox" Arg1="Complete">xDuke installed to.\n\n"E:\Homebrew\xDuke\"</Item>
+				</List>
+				<List Text=" F:\Homebrew\" Sort="Off" Batch="True">
+					<list>
+						<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="F:\test_partition"/>
+						<Item Action="Rename" arg1="F:\test_partition" arg2="F:\test_partition_">No F Partition found</Item>
+						<Item Action="Delete" arg="F:\test_partition_"/>
+					</list>
+					<Item Action="Unrar" arg1="D:\Softmod\Other\Homebrew\xDuke.rar" arg2="F:\Homebrew\"/>
+					<Item Action="Copy" arg1="F:\Homebrew\xDuke\Configs\FPartition.xml" arg2="F:\Homebrew\xDuke\Config.xml"/>
+					<Item Action="MessageBox" Arg1="Complete">xDuke installed to.\n\n"F:\Homebrew\xDuke\"</Item>
+				</List>
+				<List Text=" G:\Homebrew\" Sort="Off" Batch="True">
+					<list>
+						<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="G:\test_partition"/>
+						<Item Action="Rename" arg1="G:\test_partition" arg2="G:\test_partition_">No G Partition found</Item>
+						<Item Action="Delete" arg="G:\test_partition_"/>
+					</list>
+					<Item Action="Unrar" arg1="D:\Softmod\Other\Homebrew\xDuke.rar" arg2="G:\Homebrew\"/>
+					<Item Action="Copy" arg1="G:\Homebrew\xDuke\Configs\GPartition.xml" arg2="G:\Homebrew\xDuke\Config.xml"/>
+					<Item Action="MessageBox" Arg1="Complete">xDuke installed to.\n\n"G:\Homebrew\xDuke\"</Item>
+				</List>
+			</List>	
+		</List>
+
+		<List Text=" Game Mods" Sort="Off">
+
+			<List Text="Game Mods Information" Sort="Off" Batch="True">
+				<Item Action="MessageBox" arg1="Information">Just a few mods of mine &amp; one from CrazyChris.</Item>
+			</List>
+			<Item></Item>
+			<List Text=" FIFA 07" Sort="Off">
+				<List Text="v1.1 - Information" Sort="Off" Batch="True">
+					<Item Action="MessageBox" arg1="Info">Mod by Rocky5\n\nFor information on this mod please\nread the Info.txt file located in\n\n"D:\Softmod\Other\Mods\FIFA 07\"\n\nThere is to much to list here.</Item>
+				</Item>
+				<Item></Item>
+				<Item>Install to:</Item>
+				<List Text=" E:\Games\FIFA 07\" Sort="Off" Batch="True">
+					<Item Action="Rename" arg1="E:\Games\FIFA 07" arg2="E:\Games\FIFA 071">FIFA 07 Not Installed</Item>
+					<Item Action="Rename" arg1="E:\Games\FIFA 071" arg2="E:\Games\FIFA 07"/>
+					<Item Action="Unrar" arg1="D:\Softmod\Other\Mods\FIFA 07\FIFA 07 Real Gameplay Mod.rar" arg2="E:\Games\FIFA 07\"/>
+					<Item Action="Copy" Arg1="Dummy" Arg2="E:\CACHE"/>
+					<Item Action="Delete" Arg1="E:\CACHE"/>
+					<Item Action="Copy" Arg1="Dummy" Arg2="E:\CACHE"/>
+					<Item Action="Format" Arg1="X"/>
+					<Item Action="Format" Arg1="Y"/>
+					<Item Action="Format" Arg1="Z"/>
+					<Item Action="MessageBox" Arg1="Complete">Mod installed.</Item>
+				</List>
+				<List Text=" F:\Games\FIFA 07\" Sort="Off" Batch="True">
+					<Item Action="Rename" arg1="F:\Games\FIFA 07" arg2="F:\Games\FIFA 071">FIFA 07 Not Installed</Item>
+					<Item Action="Rename" arg1="F:\Games\FIFA 071" arg2="F:\Games\FIFA 07"/>
+					<Item Action="Unrar" arg1="D:\Softmod\Other\Mods\FIFA 07\FIFA 07 Real Gameplay Mod.rar" arg2="F:\Games\FIFA 07\"/>
+					<Item Action="Copy" Arg1="Dummy" Arg2="E:\CACHE"/>
+					<Item Action="Delete" Arg1="E:\CACHE"/>
+					<Item Action="Copy" Arg1="Dummy" Arg2="E:\CACHE"/>
+					<Item Action="Format" Arg1="X"/>
+					<Item Action="Format" Arg1="Y"/>
+					<Item Action="Format" Arg1="Z"/>
+					<Item Action="MessageBox" Arg1="Complete">Mod installed.</Item>
+				</List>
+				<List Text=" G:\Games\FIFA 07\" Sort="Off" Batch="True">
+					<Item Action="Rename" arg1="G:\Games\FIFA 07" arg2="G:\Games\FIFA 071">FIFA 07 Not Installed</Item>
+					<Item Action="Rename" arg1="G:\Games\FIFA 071" arg2="G:\Games\FIFA 07"/>
+					<Item Action="Unrar" arg1="D:\Softmod\Other\Mods\FIFA 07\FIFA 07 Real Gameplay Mod.rar" arg2="G:\Games\FIFA 07\"/>
+					<Item Action="Copy" Arg1="Dummy" Arg2="E:\CACHE"/>
+					<Item Action="Delete" Arg1="E:\CACHE"/>
+					<Item Action="Copy" Arg1="Dummy" Arg2="E:\CACHE"/>
+					<Item Action="Format" Arg1="X"/>
+					<Item Action="Format" Arg1="Y"/>
+					<Item Action="Format" Arg1="Z"/>
+					<Item Action="MessageBox" Arg1="Complete">Mod installed.</Item>
+				</List>
+			</List>
+
+			<List Text=" Operation Flashpoint" Sort="Off">
+				<List Text="v1 - Information" Sort="Off" Batch="True">
+					<Item Action="MessageBox" arg1="Info">Addons created/converted by Rocky5 &amp; Bless\n\nFor information on this mod please\nread the Info.txt file located in\n\n"D:\Softmod\Other\Mods\Operation Flashpoint Elite\"\n\nThere is to much to list here.</Item>
+				</Item>
+				<Item></Item>
+				<List Text=" Cheats" Sort="Off" Batch="True">
+					<Item Action="MessageBox" arg1="Step 1">Create the following Profiles to unlock the Hidden cheat menu. Once the following profiles have been created the hidden features menu will be unlocked.</Item>
+					<Item Action="MessageBox" arg1="Step 1">Cheat options:\nEnhanced view distance and ambient life\n"Dentist Guba"\nSame as Dentist Guba then some more stuff\n"QA Tester"\nUnlocks everything\n"XaX 1985"</Item>
+					<Item Action="MessageBox" arg1="Step 2">Now that you have unlocked the hidden menus it's time to activate them. From any menu you hold the left trigger and the white button simultaneously. A menu will appear. Now press right on the DPAD and this should enable the option you have selected.</Item>
+					<Item Action="MessageBox" arg1="Step 2">You will know you have toggling the option correctly when you receive a message in the top left corner that says "hidden objects unlocked.</Item>
+				</Item>
+				<Item>Install to:</Item>
+				<List Text=" E:\Games\Operation Flashpoint Elite\" Sort="Off" Batch="True">
+					<Item Action="Rename" arg1="E:\Games\Operation Flashpoint Elite" arg2="E:\Games\Operation Flashpoint Elite1">Operation Flashpoint Elite Not Installed</Item>
+					<Item Action="Rename" arg1="E:\Games\Operation Flashpoint Elite1" arg2="E:\Games\Operation Flashpoint Elite"/>
+					<Item Action="Unrar" arg1="D:\Softmod\Other\Mods\Operation Flashpoint Elite\New Addons.rar" arg2="E:\Games\Operation Flashpoint Elite\addons\"/>
+					<Item Action="MessageBox" Arg1="Complete">Mod installed.</Item>
+				</List>
+				<List Text=" F:\Games\Operation Flashpoint Elite\" Sort="Off" Batch="True">
+					<Item Action="Rename" arg1="F:\Games\Operation Flashpoint Elite" arg2="F:\Games\Operation Flashpoint Elite1">Operation Flashpoint Elite Not Installed</Item>
+					<Item Action="Rename" arg1="F:\Games\Operation Flashpoint Elite1" arg2="F:\Games\Operation Flashpoint Elite"/>
+					<Item Action="Unrar" arg1="D:\Softmod\Other\Mods\Operation Flashpoint Elite\New Addons.rar" arg2="F:\Games\Operation Flashpoint Elite\addons\"/>
+					<Item Action="MessageBox" Arg1="Complete">Mod installed.</Item>
+				</List>
+				<List Text=" G:\Games\Operation Flashpoint Elite\" Sort="Off" Batch="True">
+					<Item Action="Rename" arg1="G:\Games\Operation Flashpoint Elite" arg2="G:\Games\Operation Flashpoint Elite1">Operation Flashpoint Elite Not Installed</Item>
+					<Item Action="Rename" arg1="G:\Games\Operation Flashpoint Elite1" arg2="G:\Games\Operation Flashpoint Elite"/>
+					<Item Action="Unrar" arg1="D:\Softmod\Other\Mods\Operation Flashpoint Elite\New Addons.rar" arg2="G:\Games\Operation Flashpoint Elite\addons\"/>
+					<Item Action="MessageBox" Arg1="Complete">Mod installed.</Item>
+				</List>
+			</List>
+
+			<List Text=" Richard Burns Rally" Sort="Off">
+				<List Text="v1 - Information" Sort="Off" Batch="True">
+					<Item Action="MessageBox" arg1="Info">Mod by Rocky5\n\n1. New Cockpit view\n2. New sounds\n3. New Skins for cars 512x512 or 1024x1024\n4. New weather effects\n5. New Car damage\n6. Loads of small tweaks and changes</Item>
+				</Item>
+				<Item></Item>
+				<List Text="Cheats" Sort="Off" Batch="True">
+					<Item Action="MessageBox" arg1="Cheats">Enter your profile name as: Creole</Item>
+				</Item>
+				<Item>Install to:</Item>
+				<Item>512x512 Textures</Item>
+				<List Text=" E:\Games\Richard Burns Rally\" Sort="Off" Batch="True">
+					<Item Action="Rename" arg1="E:\Games\Richard Burns Rally" arg2="E:\Games\Richard Burns Rally1">Richard Burns Rally Not Installed</Item>
+					<Item Action="Rename" arg1="E:\Games\Richard Burns Rally1" arg2="E:\Games\Richard Burns Rally"/>
+					<Item Action="Unrar" arg1="D:\Softmod\Other\Mods\Richard Burns Rally\512x512 Textures.rar" arg2="E:\Games\Richard Burns Rally\"/>
+					<Item Action="MessageBox" Arg1="Complete">Mod installed.</Item>
+				</List>
+				<List Text=" F:\Games\Richard Burns Rally\" Sort="Off" Batch="True">
+					<Item Action="Rename" arg1="F:\Games\Richard Burns Rally" arg2="F:\Games\Richard Burns Rally1">Richard Burns Rally Not Installed</Item>
+					<Item Action="Rename" arg1="F:\Games\Richard Burns Rally1" arg2="F:\Games\Richard Burns Rally"/>
+					<Item Action="Unrar" arg1="D:\Softmod\Other\Mods\Richard Burns Rally\512x512 Textures.rar" arg2="F:\Games\Richard Burns Rally\"/>
+					<Item Action="MessageBox" Arg1="Complete">Mod installed.</Item>
+				</List>
+				<List Text=" G:\Games\Richard Burns Rally\" Sort="Off" Batch="True">
+					<Item Action="Rename" arg1="G:\Games\Richard Burns Rally" arg2="G:\Games\Richard Burns Rally1">Richard Burns Rally Not Installed</Item>
+					<Item Action="Rename" arg1="G:\Games\Richard Burns Rally1" arg2="G:\Games\Richard Burns Rally"/>
+					<Item Action="Unrar" arg1="D:\Softmod\Other\Mods\Richard Burns Rally\512x512 Textures.rar" arg2="G:\Games\Richard Burns Rally\"/>
+					<Item Action="MessageBox" Arg1="Complete">Mod installed.</Item>
+				</List>
+
+				<Item>1024x1024 Textures</Item>
+				<List Text=" E:\Games\Richard Burns Rally\" Sort="Off" Batch="True">
+					<Item Action="Rename" arg1="E:\Games\Richard Burns Rally" arg2="E:\Games\Richard Burns Rally1">Richard Burns Rally Not Installed</Item>
+					<Item Action="Rename" arg1="E:\Games\Richard Burns Rally1" arg2="E:\Games\Richard Burns Rally"/>
+					<Item Action="Unrar" arg1="D:\Softmod\Other\Mods\Richard Burns Rally\1024x1024 Textures.rar" arg2="E:\Games\Richard Burns Rally\"/>
+					<Item Action="MessageBox" Arg1="Complete">Mod installed.</Item>
+				</List>
+				<List Text=" F:\Games\Richard Burns Rally\" Sort="Off" Batch="True">
+					<Item Action="Rename" arg1="F:\Games\Richard Burns Rally" arg2="F:\Games\Richard Burns Rally1">Richard Burns Rally Not Installed</Item>
+					<Item Action="Rename" arg1="F:\Games\Richard Burns Rally1" arg2="F:\Games\Richard Burns Rally"/>
+					<Item Action="Unrar" arg1="D:\Softmod\Other\Mods\Richard Burns Rally\1024x1024 Textures.rar" arg2="F:\Games\Richard Burns Rally\"/>
+					<Item Action="MessageBox" Arg1="Complete">Mod installed.</Item>
+				</List>
+				<List Text=" G:\Games\Richard Burns Rally\" Sort="Off" Batch="True">
+					<Item Action="Rename" arg1="G:\Games\Richard Burns Rally" arg2="G:\Games\Richard Burns Rally1">Richard Burns Rally Not Installed</Item>
+					<Item Action="Rename" arg1="G:\Games\Richard Burns Rally1" arg2="G:\Games\Richard Burns Rally"/>
+					<Item Action="Unrar" arg1="D:\Softmod\Other\Mods\Richard Burns Rally\1024x1024 Textures.rar" arg2="G:\Games\Richard Burns Rally\"/>
+					<Item Action="MessageBox" Arg1="Complete">Mod installed.</Item>
+				</List>
+			</List>
+
+			<List Text=" Wrestlemania XXI" Sort="Off">
+				<List Text="v1 - Information" Sort="Off" Batch="True">
+					<Item Action="MessageBox" arg1="Info">Mod by CrazyChris\n\nFor information on this mod please\nread the Info.txt file located in\n\n"D:\Softmod\Other\Mods\WWE Wrestlemania XXI\"\n\nThere is to much to list here.</Item>
+				</Item>
+				<Item></Item>
+				<Item>Install to:</Item>
+				<List Text=" E:\Games\WWE Wrestlemania XXI\" Sort="Off" Batch="True">
+					<Item Action="Rename" arg1="E:\Games\WWE Wrestlemania XXI" arg2="E:\Games\WWE Wrestlemania XXI1">WWE Wrestlemania XXI Not Installed</Item>
+					<Item Action="Rename" arg1="E:\Games\WWE Wrestlemania XXI1" arg2="E:\Games\WWE Wrestlemania XXI"/>
+					<Item Action="Unrar" arg1="D:\Softmod\Other\Mods\WWE Wrestlemania XXI\CrazyChris Modpack v1.rar" arg2="E:\Games\WWE Wrestlemania XXI\"/>
+					<Item Action="MessageBox" Arg1="Complete">Mod installed.</Item>
+				</List>
+				<List Text=" F:\Games\WWE Wrestlemania XXI\" Sort="Off" Batch="True">
+					<Item Action="Rename" arg1="F:\Games\WWE Wrestlemania XXI" arg2="F:\Games\WWE Wrestlemania XXI1">WWE Wrestlemania XXI Not Installed</Item>
+					<Item Action="Rename" arg1="F:\Games\WWE Wrestlemania XXI1" arg2="F:\Games\WWE Wrestlemania XXI"/>
+					<Item Action="Unrar" arg1="D:\Softmod\Other\Mods\WWE Wrestlemania XXI\CrazyChris Modpack v1.rar" arg2="F:\Games\WWE Wrestlemania XXI\"/>
+					<Item Action="MessageBox" Arg1="Complete">Mod installed.</Item>
+				</List>
+				<List Text=" G:\Games\WWE Wrestlemania XXI\" Sort="Off" Batch="True">
+					<Item Action="Rename" arg1="G:\Games\WWE Wrestlemania XXI" arg2="G:\Games\WWE Wrestlemania XXI1">WWE Wrestlemania XXI Not Installed</Item>
+					<Item Action="Rename" arg1="G:\Games\WWE Wrestlemania XXI1" arg2="G:\Games\WWE Wrestlemania XXI"/>
+					<Item Action="Unrar" arg1="D:\Softmod\Other\Mods\WWE Wrestlemania XXI\CrazyChris Modpack v1.rar" arg2="G:\Games\WWE Wrestlemania XXI\"/>
+					<Item Action="MessageBox" Arg1="Complete">Mod installed.</Item>
+				</List>
+			</List>
+		</List>
+
+		<Item>Advanced Menu:</Item>
+		<List Text=" Enter Menu" Sort="Off">
+			<List Text="Advanced Features Information" Sort="Off" Batch="True" password="">
+				<Item Action="MessageBox" arg1="Information">In this menu you can update your "Xbox Softmodding Tool" to the latest version, or upgrade older softmods as well as revert to a stock Xbox.</Item>
+				<Item Action="MessageBox" arg1="Disclaimer!">If you don't know what these do, or you don't know how they work, do not use them. I take no responsibility for you mucking about with things you don't understand.</Item>
+			</list>
+			<Item></Item>
+			<Item>Update:</Item>
+			<List Text=" 2014 Softmod" Sort="Off" Batch="True" password="">
+				<Item Action="MessageBox" arg1="Space!">"Please make sure you have a minimum of 30MB free on the E partition before proceeding."</Item>
+				<Item Action="MessageBox" arg1="Info">This option is for upgrading your 2014 softmod installation to the new version. Your current dashboard will not be effected.</Item>
+				<Item Action="AskUser" arg1="Continue?" arg2="I'm about to do some checks, to makes sure you're running my 2014 Softmod kit. Continue with the Upgrade?"/>
+				<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\Configs\settings.xml" arg2="E:\UDATA\21585554\000000000000\Configs\settings.xm">2014 softmod not installed</Item>
+				<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\Configs\settings.xm" arg2="E:\UDATA\21585554\000000000000\Configs\settings.xml">2014 softmod not installed</Item>
+				<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\NoVC.bin" arg2="E:\UDATA\21585554\000000000000\NoVC.bi">2014 softmod not installed</Item>
+				<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\NoVC.bi" arg2="E:\UDATA\21585554\000000000000\NoVC.bin">2014 softmod not installed</Item>
+				<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\reboot.xbe" arg2="E:\UDATA\21585554\000000000000\reboot.xb">2014 softmod not installed</Item>
+				<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\reboot.xb" arg2="E:\UDATA\21585554\000000000000\reboot.xbe">2014 softmod not installed</Item>
+				<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\videoset.dat" arg2="E:\UDATA\21585554\000000000000\videoset.da">2014 softmod not installed</Item>
+				<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\videoset.da" arg2="E:\UDATA\21585554\000000000000\videoset.dat">2014 softmod not installed</Item>
+				<Item Action="MessageBox" arg1="Success">OK it would appear you're running my 2014 Softmod, so I will continue onto the next step.</Item>
+				<Item Action="Copy" arg1="D:\Softmod\skins\Update Softmod" arg2="E:\Prep\skins\Update Softmod"/>
+				<Item Action="Copy" arg1="D:\Softmod\skins\skin files" arg2="E:\Prep\skins\skin files"/>
+				<Item Action="Copy" arg1="D:\Softmod\configs\updatesoftmod.xml" arg2="E:\Prep\Config.xml"/>
+				<Item Action="Unzip" arg1="D:\Softmod\softmod files\Xbox Softmodding Tool.zip" arg2="E:\Prep"/>
+				<Item Action="E:\Prep\default.xbe"/>
+			</list>
+
+			<List Text=" Xbox Softmodding Tool" Sort="Off" Batch="True" password="">
+				<Item Action="MessageBox" arg1="Space!">"Please make sure you have a minimum of 30MB free on the E partition before proceeding."</Item>
+				<Item Action="MessageBox" arg1="Info">This option is for updating your "Xbox Softmodding Tool" installation to the latest version. Your current dashboard will not be effected.</Item>
+				<Item Action="AskUser" arg1="Continue?" arg2="I'm about to do some checks, to makes sure you're running my Xbox Softmodding Tool. Continue with the Upgrade?"/>
+				<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\unleashx.xbe" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\unleashx.xb">Xbox softmoddong tool not installed</Item>
+				<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\unleashx.xb" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\unleashx.xbe">Xbox softmoddong tool not installed</Item>
+				<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\Configs\settings.xml" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\Configs\settings.xm">Xbox softmoddong tool not installed</Item>
+				<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\Configs\settings.xm" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\Configs\settings.xml">Xbox softmoddong tool not installed</Item>
+				<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\reboot xbe\default.xbe" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\reboot xbe\default.xb">Xbox softmoddong tool not installed</Item>
+				<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\reboot xbe\default.xb" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\reboot xbe\default.xbe">Xbox softmoddong tool not installed</Item>
+				<Item Action="MessageBox" arg1="Success">OK it would appear you're running my Xbox Softmod, so I will continue onto the next step.</Item>
+				<Item Action="Copy" arg1="D:\Softmod\skins\Update Softmod" arg2="E:\Prep\skins\Update Softmod"/>
+				<Item Action="Copy" arg1="D:\Softmod\skins\skin files" arg2="E:\Prep\skins\skin files"/>
+				<Item Action="Copy" arg1="D:\Softmod\configs\updatesoftmod.xml" arg2="E:\Prep\Config.xml"/>
+				<Item Action="Unzip" arg1="D:\Softmod\softmod files\Xbox Softmodding Tool.zip" arg2="E:\Prep"/>
+				<Item Action="E:\Prep\default.xbe"/>
+			</list>
+
+			<Item>Upgrade:</Item>
+			<List Text=" Old Softmods" Sort="Off" Batch="True" password="">
+				<Item Action="MessageBox" arg1="Space!">"Please make sure you have a minimum of 30MB free on the E partition before proceeding."</Item>
+				<Item Action="AskUser" arg1="Upgrade?">"This option is for upgrading your old softmod to my "Xbox Softmodding Tool" or it can be used to install a clean installation of the "Xbox Softmodding Tool". Are you sure you want to do this?"</Item>
+				<Item Action="Copy" arg1="D:\Softmod\skins\Upgrade Softmod" arg2="E:\Prep\skins\Upgrade Softmod"/>
+				<Item Action="Copy" arg1="D:\Softmod\skins\skin files" arg2="E:\Prep\skins\skin files"/>
+				<Item Action="Copy" arg1="D:\Softmod\configs\upgradesoftmod.xml" arg2="E:\Prep\Config.xml"/>
+				<Item Action="Unzip" arg1="D:\Softmod\softmod files\Xbox Softmodding Tool.zip" arg2="E:\Prep"/>
+				<Item Action="E:\Prep\default.xbe"/>
+			</list>
+
+			<Item>Restore Xbox:</Item>
+			<List Text=" To Default Factory State" Sort="Off" Batch="True" password="">
+				<Item Action="MessageBox" arg1="Space!">"Please make sure you have a minimum of 30MB free on the E partition before proceeding."</Item>
+				<Item Action="MessageBox" arg1="Warning!">Please note, This will revert your Xbox to a state similar to how it was when originally purchased. You will have two options to pick from, "A Clean State" or "keep Game Saves". Note: This will not keep any DLC, Applications eg... on the E partition.</Item>
+				<Item Action="MessageBox" arg1="Note!">I will install all the exploitable saves so you can resoftmod the system at a later date. I also include the UDDAE exploit so you can resoftmod the system without needing one of the exploitable games.</Item>
+				<Item Action="AskUser" arg1="Restore?" arg2="Are you sure you want to continue?"/>
+				<Item Action="Copy" arg1="D:\Softmod\skins\Factory Reset" arg2="E:\Prep\skins\Factory Reset"/>
+				<Item Action="Copy" arg1="D:\Softmod\skins\skin files" arg2="E:\Prep\skins\skin files"/>
+				<Item Action="Copy" arg1="D:\Softmod\configs\factoryreset.xml" arg2="E:\Prep\Config.xml"/>
+				<Item Action="Format" arg1="Y"/>
+				<Item Action="Unzip" arg1="D:\Softmod\softmod files\Xbox Softmodding Tool.zip" arg2="Y:\"/>
+				<Item Action="Copy" arg1="Y:\boot.cfg" arg2="E:\Prep\"/>
+				<Item Action="Copy" arg1="Y:\NoVC.bin" arg2="E:\Prep\"/>
+				<Item Action="Copy" arg1="Y:\unleashx.xbe" arg2="E:\Prep\"/>
+				<Item Action="Copy" arg1="Y:\default.xbe" arg2="E:\Prep\"/>
+				<Item Action="Copy" arg1="D:\Softmod\dashboards\msdash\Other\Audio.zip" arg2="Y:\"/>
+				<Item Action="Copy" arg1="D:\Softmod\dashboards\msdash\retail\5960.zip" arg2="Y:\"/>
+				<Item Action="Copy" arg1="D:\Softmod\dashboards\msdash\Other\UDDAE-C.zip" arg2="Y:\"/>
+				<Item Action="Copy" arg1="D:\Softmod\dashboards\msdash\Other\UDDAE-E.zip" arg2="Y:\"/>
+				<Item Action="E:\Prep\default.xbe"/>
+			</list>
+
+			<Item>Use with caution:</Item>
+			<List Text=" Advanced Apps" Sort="Off">
+				<List Text="Advanced Apps Information" Sort="On" Batch="True">
+					<Item Action="MessageBox" arg1="Information">These applications are to be used by people that know what they are doing. I take no responsibility for users formatting or breaking there Xbox.</Item>
+				</List>
+				<Item></Item>
+				<List Text=" Chimp 261812" Sort="Off">
+					<List Text="Chimp 261812 Information" Sort="Off" Batch="True">
+						<Item Action="MessageBox" arg1="Information">This is the latest version of Chimp &amp; it supports all Xbox versions. You use Chimp to install larger HDD's for Softmodded Xbox's, please search Youtube for "Chimp 261812"</Item>
+					</List>
+					<Item></Item>
+					<List Text=" Install Chimp 261812" Sort="Off" Batch="True">
+						<Item Action="AskUser" arg1="Continue" arg2="This will install Chimp 261812 to E:\Applications\Chimp\ if there is currently a application residing there it will be overwritten."/>
+						<Item Action="Copy" arg1="dummy" arg2="E:\Applications\Chimp"/>
+						<Item Action="Delete" arg1="E:\Applications\Chimp">Remove old E:\Applications\Chimp\</Item>
+						<Item Action="Unzip" arg1="D:\Softmod\Applications\Chimp261812.zip" arg2="E:\Applications\Chimp">Installing app to E:\Applications\Chimp\</Item>
+						<Item Action="Format" arg1="Z"/>
+						<Item Action="MessageBox" arg1="Done">That's Chimp 261812 installed to "E:\Applications\Chimp\"</Item>
+					</list>
+				</list>
+
+				<List Text=" ConfigMagic v1.6.1" Sort="Off">
+					<List Text="ConfigMagic v1.6.1 Information" Sort="Off" Batch="True">
+						<Item Action="MessageBox" arg1="Information">Updated by "Me", New Skin,, fixed the skinning engine, fixed the crc size for checksum3, check the "changes.txt" for the full change log.</Item>
+					</List>
+					<Item></Item>
+					<Item>Install to:</Item>
+					<List Text=" E:\Applications\" Sort="Off" Batch="True">
+						<Item Action="AskUser" arg1="Continue" arg2="This will install ConfigMagic v1.6.1 to E:\Applications\ConfigMagic v1.6.1\ if there is currently a application residing there it will be overwritten."/>
+						<Item Action="Copy" arg1="dummy" arg2="E:\Applications\ConfigMagic v1.6.1"/>
+						<Item Action="Delete" arg1="E:\Applications\ConfigMagic v1.6.1">Remove old E:\Applications\ConfigMagic v1.6.1\</Item>
+						<Item Action="Unzip" arg1="D:\Softmod\Applications\ConfigMagic v1.6.1.zip" arg2="E:\Applications\ConfigMagic v1.6.1">Installing app to E:\Applications\ConfigMagic v1.6.1\</Item>
+						<Item Action="Format" arg1="Z"/>
+						<Item Action="MessageBox" arg1="Done">That's ConfigMagic v1.6.1 installed to "E:\Applications\ConfigMagic v1.6.1\"</Item>
+					</list>
+				</list>
+
+				<List Text=" XBPartitioner v1.3" Sort="Off">
+					<List Text="XBPartitioner v1.3 Information" Sort="Off" Batch="True">
+						<Item Action="MessageBox" arg1="Information">XBpartitioner is used to Format large HDD's, mainly the Extra Partitions (F &amp; G) after cloning with older versions of Chimp. So please be careful with this applications. It's other use, is custom partitions.</Item>
+					</List>
+					<Item></Item>
+					<Item>Install to:</Item>
+					<List Text=" E:\Applications\" Sort="Off" Batch="True">
+						<Item Action="AskUser" arg1="Continue" arg2="This will install XBpartitioner to E:\Applications\XBpartitioner\ if there is currently a application residing there it will be overwritten."/>
+						<Item Action="Copy" arg1="dummy" arg2="E:\Applications\XBpartitioner"/>
+						<Item Action="Delete" arg1="E:\Applications\XBpartitioner">Remove old E:\Applications\XBpartitioner\</Item>
+						<Item Action="Unzip" arg1="D:\Softmod\Applications\XBpartitioner.zip" arg2="E:\Applications\XBpartitioner">Installing app to E:\Applications\XBpartitioner\</Item>
+						<Item Action="Format" arg1="Z"/>
+						<Item Action="MessageBox" arg1="Done">That's XBpartitioner installed to "E:\Applications\XBpartitioner\"</Item>
+					</list>
+				</list>
+
+				<List Text=" XBP Table Writer" Sort="Off">
+					<List Text="XBP Table Writer Information" Sort="Off" Batch="True">
+						<Item Action="MessageBox" arg1="Information">This is only to be used on a HDD that has been formatted with UnleashX ( Hexen disc eg... ) EvolutionX Dash or older versions of Chimp. ( 2618 or lower ).</Item>
+						<Item Action="MessageBox" arg1="Information">This is used to write a partition table to the HDD so you can use the "C, E, F &amp; G takes remaining space" option in Chimp 261812.</Item>
+					</List>
+					<Item></Item>
+					<List Text=" Install XBP Table Writer" Sort="Off" Batch="True">
+						<Item Action="AskUser" arg1="Continue" arg2="This will install XBP Table Writer to E:\Applications\XBP Table Writer\ if there is currently a application residing there it will be overwritten."/>
+						<Item Action="Copy" arg1="dummy" arg2="E:\Applications\XBP Table Writer"/>
+						<Item Action="Delete" arg1="E:\Applications\XBP Table Writer">Remove old E:\Applications\XBP Table Writer\</Item>
+						<Item Action="Unzip" arg1="D:\Softmod\Applications\XBPTableWriter.zip" arg2="E:\Applications\XBP Table Writer">Installing app to E:\Applications\XBP Table Writer\</Item>
+						<Item Action="Format" arg1="Z"/>
+						<Item Action="MessageBox" arg1="Done">That's XBP Table Writer installed to "E:\Applications\XBP Table Writer\"</Item>
+					</list>
+				</list>
+			</List>
+			<List Text=" File Manager" Sort="Off" Batch="True" password="">
+				<Item Action="MessageBox" arg1="Warning!">Be careful when using this, as you can potentially remove something you're not meant to.</Item>
+				<Item Action="FileManager">Filemanager</Item>
+			</list>
+		</list>
+	</list>
+</list>
+</Menu>
+</Unleashx>
