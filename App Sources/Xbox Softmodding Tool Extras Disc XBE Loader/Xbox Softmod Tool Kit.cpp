@@ -48,13 +48,11 @@ extern "C" XPP_DEVICE_TYPE XDEVICE_TYPE_IR_REMOTE_TABLE;
 // LED Colours
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #define	LED_Orange							XKUtils::SetXBOXLEDStatus(XKUtils::LED_REGISTER_CYCLE0_GREEN|XKUtils::LED_REGISTER_CYCLE0_RED|XKUtils::LED_REGISTER_CYCLE1_GREEN|XKUtils::LED_REGISTER_CYCLE1_RED|XKUtils::LED_REGISTER_CYCLE2_GREEN|XKUtils::LED_REGISTER_CYCLE2_RED|XKUtils::LED_REGISTER_CYCLE3_GREEN|XKUtils::LED_REGISTER_CYCLE3_RED)
-#define LED_Flash_Orange					XKUtils::SetXBOXLEDStatus(XKUtils::LED_REGISTER_CYCLE0_GREEN|XKUtils::LED_REGISTER_CYCLE0_RED|XKUtils::LED_REGISTER_CYCLE3_GREEN|XKUtils::LED_REGISTER_CYCLE3_RED)
 #define LED_Green							XKUtils::SetXBOXLEDStatus(XKUtils::LED_REGISTER_CYCLE0_GREEN|XKUtils::LED_REGISTER_CYCLE1_GREEN|XKUtils::LED_REGISTER_CYCLE2_GREEN|XKUtils::LED_REGISTER_CYCLE3_GREEN)
+#define	LED_Red								XKUtils::SetXBOXLEDStatus(XKUtils::LED_REGISTER_CYCLE0_RED|XKUtils::LED_REGISTER_CYCLE0_RED|XKUtils::LED_REGISTER_CYCLE1_RED|XKUtils::LED_REGISTER_CYCLE1_RED|XKUtils::LED_REGISTER_CYCLE2_RED|XKUtils::LED_REGISTER_CYCLE2_RED|XKUtils::LED_REGISTER_CYCLE3_RED|XKUtils::LED_REGISTER_CYCLE3_RED)
+#define LED_Flash_Orange					XKUtils::SetXBOXLEDStatus(XKUtils::LED_REGISTER_CYCLE0_GREEN|XKUtils::LED_REGISTER_CYCLE0_RED|XKUtils::LED_REGISTER_CYCLE3_GREEN|XKUtils::LED_REGISTER_CYCLE3_RED)
 #define LED_Flash_Green						XKUtils::SetXBOXLEDStatus(XKUtils::LED_REGISTER_CYCLE0_GREEN|XKUtils::LED_REGISTER_CYCLE3_GREEN)
-#define LED_Flash_Green_Orange				XKUtils::SetXBOXLEDStatus(XKUtils::LED_REGISTER_CYCLE0_GREEN|XKUtils::LED_REGISTER_CYCLE0_RED|XKUtils::LED_REGISTER_CYCLE1_GREEN|XKUtils::LED_REGISTER_CYCLE1_RED|XKUtils::LED_REGISTER_CYCLE2_GREEN|XKUtils::LED_REGISTER_CYCLE3_GREEN)
 #define LED_Flash_Red						XKUtils::SetXBOXLEDStatus(XKUtils::LED_REGISTER_CYCLE0_RED|XKUtils::LED_REGISTER_CYCLE3_RED)
-#define LED_Flash_Red_Fast					XKUtils::SetXBOXLEDStatus(XKUtils::LED_REGISTER_CYCLE0_RED|XKUtils::LED_REGISTER_CYCLE2_RED)
-#define LED_Flash_Red_Orange				XKUtils::SetXBOXLEDStatus(XKUtils::LED_REGISTER_CYCLE0_GREEN|XKUtils::LED_REGISTER_CYCLE0_RED|XKUtils::LED_REGISTER_CYCLE1_GREEN|XKUtils::LED_REGISTER_CYCLE1_RED|XKUtils::LED_REGISTER_CYCLE2_RED|XKUtils::LED_REGISTER_CYCLE3_RED)
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Main Code
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -131,10 +129,12 @@ void ConfigMagicApp::CheckBios()
 		std::ifstream TXST_Softmod("S:\\nkpatcher\\rescuedash\\resoftmod files.zip");
 		if (TXST_Softmod.good())
 		{
+			LED_Flash_Orange;
 			XKUtils::LaunchXBE("D:\\Softmod\\default.xbe");
 		}
 		else
 		{
+			LED_Flash_Green;
 			XKUtils::LaunchXBE("D:\\OtherSM\\default.xbe");
 		}
 	}
@@ -144,6 +144,7 @@ void ConfigMagicApp::CheckBios()
 		// ((LPXKControl_TextBox) m_ActiveForm->GetControl("txtStatus"))->SetText("Loading Hardmod menu");
 		// Render();
 		// Sleep(4000);
+		LED_Flash_Red;
 		XKUtils::LaunchXBE("D:\\Hardmod\\default.xbe");
 	}
 }
@@ -305,8 +306,8 @@ HRESULT ConfigMagicApp::Render()
 	m_pd3dDevice->SetRenderState( D3DRS_ALPHATESTENABLE,  FALSE); //some reason rendergradientbg doesn't wrok if this is false...
 	RenderGradientBackground(0, 0);
 	//Render Background Image..
-	if (m_ActiveForm->IsImageLoaded())
-	//m_ActiveForm->Render();
+	//if (m_ActiveForm->IsImageLoaded())
+	m_ActiveForm->Render();
 	//Present Data
 	m_pd3dDevice->Present(NULL, NULL, NULL, NULL);
 	return S_OK;

@@ -862,7 +862,6 @@ void ConfigMagicApp::SetLanguage()
 		ChangeLanguagefile1.close();
 		remove(English_File);
 		m_pXKEEPROM->ReadFromXBOX();
-		m_EnryptedRegionValid = TRUE;
 		m_pXKEEPROM->SetLanguageString("01");
 		Force_Write_XBOX_EEPROM();
 		XKUtils::XBOXReset();
@@ -873,7 +872,6 @@ void ConfigMagicApp::SetLanguage()
 		ChangeLanguagefile2.close();
 		remove(Japanese_File);
 		m_pXKEEPROM->ReadFromXBOX();
-		m_EnryptedRegionValid = TRUE;
 		m_pXKEEPROM->SetLanguageString("02");
 		Force_Write_XBOX_EEPROM();
 		XKUtils::XBOXReset();
@@ -884,7 +882,6 @@ void ConfigMagicApp::SetLanguage()
 		ChangeLanguagefile3.close();
 		remove(German_File);
 		m_pXKEEPROM->ReadFromXBOX();
-		m_EnryptedRegionValid = TRUE;
 		m_pXKEEPROM->SetLanguageString("03");
 		Force_Write_XBOX_EEPROM();
 		XKUtils::XBOXReset();
@@ -895,7 +892,6 @@ void ConfigMagicApp::SetLanguage()
 		ChangeLanguagefile4.close();
 		remove(French_File);
 		m_pXKEEPROM->ReadFromXBOX();
-		m_EnryptedRegionValid = TRUE;
 		m_pXKEEPROM->SetLanguageString("04");
 		Force_Write_XBOX_EEPROM();
 		XKUtils::XBOXReset();
@@ -906,7 +902,6 @@ void ConfigMagicApp::SetLanguage()
 		ChangeLanguagefile5.close();
 		remove(Spanish_File);
 		m_pXKEEPROM->ReadFromXBOX();
-		m_EnryptedRegionValid = TRUE;
 		m_pXKEEPROM->SetLanguageString("05");
 		Force_Write_XBOX_EEPROM();
 		XKUtils::XBOXReset();
@@ -917,7 +912,6 @@ void ConfigMagicApp::SetLanguage()
 		ChangeLanguagefile6.close();
 		remove(Italian_File);
 		m_pXKEEPROM->ReadFromXBOX();
-		m_EnryptedRegionValid = TRUE;
 		m_pXKEEPROM->SetLanguageString("06");
 		Force_Write_XBOX_EEPROM();
 		XKUtils::XBOXReset();
@@ -928,7 +922,6 @@ void ConfigMagicApp::SetLanguage()
 		ChangeLanguagefile7.close();
 		remove(Korean_File);
 		m_pXKEEPROM->ReadFromXBOX();
-		m_EnryptedRegionValid = TRUE;
 		m_pXKEEPROM->SetLanguageString("07");
 		Force_Write_XBOX_EEPROM();
 		XKUtils::XBOXReset();
@@ -939,7 +932,6 @@ void ConfigMagicApp::SetLanguage()
 		ChangeLanguagefile8.close();
 		remove(Chinese_File);
 		m_pXKEEPROM->ReadFromXBOX();
-		m_EnryptedRegionValid = TRUE;
 		m_pXKEEPROM->SetLanguageString("08");
 		Force_Write_XBOX_EEPROM();
 		XKUtils::XBOXReset();
@@ -950,7 +942,6 @@ void ConfigMagicApp::SetLanguage()
 		ChangeLanguagefile9.close();
 		remove(Portuguese_File);
 		m_pXKEEPROM->ReadFromXBOX();
-		m_EnryptedRegionValid = TRUE;
 		m_pXKEEPROM->SetLanguageString("09");
 		Force_Write_XBOX_EEPROM();
 		XKUtils::XBOXReset();
@@ -1098,7 +1089,6 @@ void ConfigMagicApp::ColdBootSoftmod()
 	Render();
 	Sleep(1000);
 	m_pXKEEPROM->ReadFromXBOX();
-	m_EnryptedRegionValid = TRUE;
 	//m_pXKEEPROM->SetTimeZoneStdNameString("GMT"); // Set timezone to GMT
 	//m_pXKEEPROM->SetTimeZoneDltNameString("BST"); // Set Daylight saving to BST ( YES )
 	//m_pXKEEPROM->SetTimeZoneStdDateString("0A050002"); // Set timezone standard Date
@@ -1118,7 +1108,6 @@ void ConfigMagicApp::EnableControlledError16State()
 	Render();
 	Sleep(1000);
 	m_pXKEEPROM->ReadFromXBOX();
-	m_EnryptedRegionValid = TRUE;
 	m_pXKEEPROM->SetLanguageString("00"); // invalid language set, this will force the xbox to boot xboxdash.xbe always
 	Force_Write_XBOX_EEPROM();
 }
@@ -1132,7 +1121,6 @@ void ConfigMagicApp::DisableControlledError16State()
 	Render();
 	Sleep(1000);
 	m_pXKEEPROM->ReadFromXBOX();
-	m_EnryptedRegionValid = TRUE;
 	m_pXKEEPROM->SetLanguageString("01"); // sets language to ENGLISH and stops the persistent softmod effect
 	Force_Write_XBOX_EEPROM();
 }
@@ -1146,7 +1134,6 @@ void ConfigMagicApp::NULLChecksum3()
 	Render();
 	Sleep(1000);
 	m_pXKEEPROM->ReadFromXBOX();
-	m_EnryptedRegionValid = TRUE;
 	m_pXKEEPROM->SetNullChecksum3String(CheckSum3NULL);
 	Force_Write_XBOX_EEPROM();
 }
@@ -1158,7 +1145,6 @@ void ConfigMagicApp::FactoryResetPAL()
 	Render();
 	Sleep(1000);
 	m_pXKEEPROM->ReadFromXBOX();
-	m_EnryptedRegionValid = TRUE;
 	m_pXKEEPROM->SetVideoStandardVal(XKEEPROM::PAL_I);
 	//m_pXKEEPROM->SetVideoFlagsString("00004800"); // Set Videoflags to PAL 60
 	m_pXKEEPROM->SetNullChecksum3String(CheckSum3NULL);
@@ -1172,7 +1158,6 @@ void ConfigMagicApp::FactoryResetNTSC()
 	Render();
 	Sleep(1000);
 	m_pXKEEPROM->ReadFromXBOX();
-	m_EnryptedRegionValid = TRUE;
 	m_pXKEEPROM->SetVideoStandardVal(XKEEPROM::NTSC_M);
 	m_pXKEEPROM->SetNullChecksum3String(CheckSum3NULL);
 	Force_Write_XBOX_EEPROM();
@@ -1185,7 +1170,6 @@ void ConfigMagicApp::ChangeRegionNTSC()
 	Render();
 	Sleep(1000);
 	m_pXKEEPROM->ReadFromXBOX();
-	m_EnryptedRegionValid = TRUE;
 	//Re-Encrypt with correct Version...
 	m_pXKEEPROM->SetVideoStandardVal(XKEEPROM::NTSC_M);
 	Force_Write_XBOX_EEPROM();
@@ -1200,7 +1184,6 @@ void ConfigMagicApp::ChangeRegionPAL()
 	Render();
 	Sleep(1000);
 	m_pXKEEPROM->ReadFromXBOX();
-	m_EnryptedRegionValid = TRUE;
 	//Re-Encrypt with correct Version...
 	m_pXKEEPROM->SetVideoStandardVal(XKEEPROM::PAL_I);
 	Force_Write_XBOX_EEPROM();
@@ -2189,12 +2172,12 @@ HRESULT ConfigMagicApp::Initialize()
 	DumpDecryptedEEPROM();
 	EnablePersistentSoftmodState();
 	DisablePersistentSoftmodState();
+	//CheckBios();
 	//Default mode
 	Sleep(100);
 	LED_Flash_Green_Orange;
 	CreateEEPROMBackup();
 	LED_Orange;
-	//CheckBios();
 	XKUtils::LaunchXBE(NKPatcherSettings);
 	return retVal;
 }

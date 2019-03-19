@@ -15,10 +15,11 @@ IF NOT EXIST %NET% (
   GOTO:EOF
 )
 
-SET XBE_PATCH="..\..\other\tools\xbepatch.exe"
-SET Habibi="..\..\other\tools\xbedump.exe"
+SET "XBE_PATCH=..\..\other\tools\xbepatch.exe"
+SET "Habibi=..\..\other\tools\xbedump.exe"
 SET XBE=default.xbe
 SET DEST=Build
+SET "DEST2=..\..\Extras Disc\"
 RMDIR %DEST% /S /Q 2>NUL
 MKDIR %DEST%
 
@@ -40,6 +41,8 @@ RD /Q /S "%DEST%\Media\PSD's" 2>NUL
 %Habibi% "%DEST%\%XBE%" -habibi
 del /q "%DEST%\%XBE%"
 ren "out.xbe" "%XBE%"
+echo "%XBE%" "%DEST2%"
+copy /Y "%XBE%" "%DEST2%"
 move "%XBE%" "%DEST%"
 )>NUL
 ECHO - XBE Signing %DEST%\%XBE%
