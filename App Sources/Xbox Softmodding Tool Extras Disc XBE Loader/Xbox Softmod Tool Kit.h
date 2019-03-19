@@ -127,6 +127,7 @@ private:
 	ULONG				m_MenuYOffset;
 	LPXKControl_Menu	m_pMainMenu;
 	BOOL				ShowMenu;
+	BOOL				bios_dumped;
 
 	LPXKControl_Panel	m_ActiveForm;
 	LPXKControl_Panel	m_pFrmInfo;

@@ -1951,25 +1951,67 @@ void ConfigMagicApp::CheckBios()
 		data = mbFlash.Read(addr++);
 		flash_copy[loop] = data;
 	}
+
+	((LPXKControl_TextBox) m_pFrmStatus->GetControl("txtStatusMsg"))->SetText("CHECKING BIOS");
+	Render();
+	Sleep(4000);
 	// Detect a 1024 KB Bios MD5
 	MD5Buffer (flash_copy,0,1024);
 	strcpy(BIOS_Name,CheckMD5(Listone, MD5_Sign));
+	if ( strcmp(BIOS_Name, "Unknown") == 0)
+	{ 
+		bios_dumped = 0;
+		// Detect a 512 KB Bios MD5
+		MD5Buffer (flash_copy,0,512);
+		strcpy(BIOS_Name,CheckMD5(Listone, MD5_Sign));
+		if ( strcmp(BIOS_Name,"Unknown") == 0)
+		{
+			bios_dumped = 0;
+			// Detect a 256 KB Bios MD5
+			MD5Buffer (flash_copy,0,256);
+			strcpy(BIOS_Name,CheckMD5(Listone, MD5_Sign));
+			if ( strcmp(BIOS_Name,"Unknown") != 0)
+			{
+				bios_dumped = 0;
+			}
+			else
+			{		
+				bios_dumped = 1;
+			}
+		}
+		else
+		{		
+			bios_dumped = 1;
+		}
+	}
+	else
+	{		
+		bios_dumped = 1;
+	}
 	strBiosName = BIOS_Name;
-	((LPXKControl_TextBox) m_pFrmStatus->GetControl("txtStatusMsg"))->SetText("CHECKING BIOS");
-
-	Render();
-	
-	if ( (strBiosName == "Retail 3944") || (strBiosName == "Retail 4034") || (strBiosName == "Retail 4134") || (strBiosName == "Retail 4817") || (strBiosName == "Retail 5101") || (strBiosName == "Retail 5530") || (strBiosName == "Retail 5713") || (strBiosName == "Retail 5838") )
+	if ( (bios_dumped == 1) && (strBiosName == "Retail 3944") || (strBiosName == "Retail 4034") || (strBiosName == "Retail 4134") || (strBiosName == "Retail 4817") || (strBiosName == "Retail 5101") || (strBiosName == "Retail 5530") || (strBiosName == "Retail 5713") || (strBiosName == "Retail 5838") )
 	{
-		((LPXKControl_TextBox) m_ActiveForm->GetControl("txtStatus"))->SetText("Loading Softmod menu");
+		((LPXKControl_TextBox) m_pFrmStatus->GetControl("txtStatusMsg"))->SetText(strBiosName+" BIOS DETECTED");
+		((LPXKControl_TextBox) m_ActiveForm->GetControl("txtStatus"))->SetText("Loading Softmod Menu");
 		Render();
-		Sleep(2000);
+		Sleep(4000);
+		std::ifstream TXST_Softmod("S:\\nkpatcher\\rescuedash\\resoftmod files.zip");
+		if (TXST_Softmod.good())
+		{
+			//XKUtils::LaunchXBE("D:\\Softmod\\default.xbe");
+		}
+		else
+		{
+			//XKUtils::LaunchXBE("D:\\OtherSM\\default.xbe");
+		}
 	}
 	else
 	{
+		((LPXKControl_TextBox) m_pFrmStatus->GetControl("txtStatusMsg"))->SetText("UNOFFICIAL MODE");
 		((LPXKControl_TextBox) m_ActiveForm->GetControl("txtStatus"))->SetText("Loading Hardmod menu");
 		Render();
-		Sleep(2000);
+		Sleep(4000);
+		//XKUtils::LaunchXBE("D:\\Hardmod\\default.xbe");
 	}
 }
 

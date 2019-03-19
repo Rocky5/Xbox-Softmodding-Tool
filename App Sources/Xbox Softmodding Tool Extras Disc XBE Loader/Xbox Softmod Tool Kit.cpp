@@ -84,20 +84,50 @@ void ConfigMagicApp::CheckBios()
 		data = mbFlash.Read(addr++);
 		flash_copy[loop] = data;
 	}
+
+	// ((LPXKControl_TextBox) m_pFrmStatus->GetControl("txtStatusMsg"))->SetText("CHECKING BIOS");
+	// Render();
+	// Sleep(4000);
 	// Detect a 1024 KB Bios MD5
 	MD5Buffer (flash_copy,0,1024);
 	strcpy(BIOS_Name,CheckMD5(Listone, MD5_Sign));
+	if ( strcmp(BIOS_Name, "Unknown") == 0)
+	{ 
+		bios_dumped = 0;
+		// Detect a 512 KB Bios MD5
+		MD5Buffer (flash_copy,0,512);
+		strcpy(BIOS_Name,CheckMD5(Listone, MD5_Sign));
+		if ( strcmp(BIOS_Name,"Unknown") == 0)
+		{
+			bios_dumped = 0;
+			// Detect a 256 KB Bios MD5
+			MD5Buffer (flash_copy,0,256);
+			strcpy(BIOS_Name,CheckMD5(Listone, MD5_Sign));
+			if ( strcmp(BIOS_Name,"Unknown") != 0)
+			{
+				bios_dumped = 0;
+			}
+			else
+			{		
+				bios_dumped = 1;
+			}
+		}
+		else
+		{		
+			bios_dumped = 1;
+		}
+	}
+	else
+	{		
+		bios_dumped = 1;
+	}
 	strBiosName = BIOS_Name;
-	//((LPXKControl_TextBox) m_pFrmStatus->GetControl("txtStatusMsg"))->SetText("CHECKING BIOS");
-	//Render();
-	//Sleep(1000);
-	
-	if ( (strBiosName == "Retail 3944") || (strBiosName == "Retail 4034") || (strBiosName == "Retail 4134") || (strBiosName == "Retail 4817") || (strBiosName == "Retail 5101") || (strBiosName == "Retail 5530") || (strBiosName == "Retail 5713") || (strBiosName == "Retail 5838") )
+	if ( (bios_dumped == 1) && (strBiosName == "Retail 3944") || (strBiosName == "Retail 4034") || (strBiosName == "Retail 4134") || (strBiosName == "Retail 4817") || (strBiosName == "Retail 5101") || (strBiosName == "Retail 5530") || (strBiosName == "Retail 5713") || (strBiosName == "Retail 5838") )
 	{
-		//((LPXKControl_TextBox) m_pFrmStatus->GetControl("txtStatusMsg"))->SetText("RETAIL MODE");
-		//((LPXKControl_TextBox) m_ActiveForm->GetControl("txtStatus"))->SetText("Loading Softmod menu");
-		//Render();
-		//Sleep(4000);
+		// ((LPXKControl_TextBox) m_pFrmStatus->GetControl("txtStatusMsg"))->SetText(strBiosName+" BIOS DETECTED");
+		// ((LPXKControl_TextBox) m_ActiveForm->GetControl("txtStatus"))->SetText("Loading Softmod Menu");
+		// Render();
+		// Sleep(4000);
 		std::ifstream TXST_Softmod("S:\\nkpatcher\\rescuedash\\resoftmod files.zip");
 		if (TXST_Softmod.good())
 		{
@@ -110,106 +140,106 @@ void ConfigMagicApp::CheckBios()
 	}
 	else
 	{
-		//((LPXKControl_TextBox) m_pFrmStatus->GetControl("txtStatusMsg"))->SetText("UNOFFICIAL MODE");
-		//((LPXKControl_TextBox) m_ActiveForm->GetControl("txtStatus"))->SetText("Loading Hardmod menu");
-		//Render();
-		//Sleep(4000);
+		// ((LPXKControl_TextBox) m_pFrmStatus->GetControl("txtStatusMsg"))->SetText("UNOFFICIAL MODE");
+		// ((LPXKControl_TextBox) m_ActiveForm->GetControl("txtStatus"))->SetText("Loading Hardmod menu");
+		// Render();
+		// Sleep(4000);
 		XKUtils::LaunchXBE("D:\\Hardmod\\default.xbe");
 	}
 }
 
 struct Bios * ConfigMagicApp::LoadBiosSigns()
 {
-  FILE *infile;
+	FILE *infile;
 
-  if ((infile = fopen(Retail_Bios_Hash_File,"r")) == NULL)
-  {
-    return NULL;
-  }
-  else
-  {
-    struct Bios * Listone = (struct Bios *)calloc(1000, sizeof(struct Bios));
-    int cntBioses=0;
-    char buffer[255];
-    char stringone[255];
-    do
-    {
-      fgets(stringone,255,infile);
-      if  (stringone[0] != '#')
-      {
-        if (strstr(stringone,"=")!= NULL)
-        {
-          strcpy(Listone[cntBioses].Name,ReturnBiosName(buffer, stringone));
-          strcpy(Listone[cntBioses].Signature,ReturnBiosSign(buffer, stringone));
-          cntBioses++;
-        }
-      }
-    } while( !feof( infile ) && cntBioses < 999 );
-    fclose(infile);
-    strcpy(Listone[cntBioses++].Name,"\0");
-    strcpy(Listone[cntBioses++].Signature,"\0");
-    return Listone;
-  }
+	if ((infile = fopen(Retail_Bios_Hash_File,"r")) == NULL)
+	{
+		return NULL;
+	}
+	else
+	{
+		struct Bios * Listone = (struct Bios *)calloc(1000, sizeof(struct Bios));
+		int cntBioses=0;
+		char buffer[255];
+		char stringone[255];
+		do
+		{
+			fgets(stringone,255,infile);
+			if  (stringone[0] != '#')
+			{
+				if (strstr(stringone,"=")!= NULL)
+				{
+					strcpy(Listone[cntBioses].Name,ReturnBiosName(buffer, stringone));
+					strcpy(Listone[cntBioses].Signature,ReturnBiosSign(buffer, stringone));
+					cntBioses++;
+				}
+			}
+		} while( !feof( infile ) && cntBioses < 999 );
+		fclose(infile);
+		strcpy(Listone[cntBioses++].Name,"\0");
+		strcpy(Listone[cntBioses++].Signature,"\0");
+		return Listone;
+	}
 }
 
 char* ConfigMagicApp::MD5Buffer(char *buffer, long PosizioneInizio,int KBytes)
 {
-  XBMC::XBMC_MD5 mdContext;
-  CStdString md5sumstring;
-  mdContext.append((unsigned char *)(buffer + PosizioneInizio), KBytes * 1024);
-  mdContext.getDigest(md5sumstring);
-  strcpy(MD5_Sign, md5sumstring.c_str());
-  return MD5_Sign;
+	XBMC::XBMC_MD5 mdContext;
+	CStdString md5sumstring;
+	mdContext.append((unsigned char *)(buffer + PosizioneInizio), KBytes * 1024);
+	mdContext.getDigest(md5sumstring);
+	strcpy(MD5_Sign, md5sumstring.c_str());
+	return MD5_Sign;
 }
 
 char* ConfigMagicApp::ReturnBiosName(char *buffer, char *str)
 {
-  int cnt1,cnt2,i;
-  cnt1=cnt2=0;
+	int cnt1,cnt2,i;
+	cnt1=cnt2=0;
 
-  for (i=0;i<255;i++) buffer[i]='\0';
+	for (i=0;i<255;i++) buffer[i]='\0';
 
-  while (str[cnt2] != '=')
-  {
-    buffer[cnt1]=str[cnt2];
-    cnt1++;
-    cnt2++;
-  }
-  buffer[cnt1++]='\0';
-  return buffer;
+	while (str[cnt2] != '=')
+	{
+		buffer[cnt1]=str[cnt2];
+		cnt1++;
+		cnt2++;
+	}
+	buffer[cnt1++]='\0';
+	return buffer;
 }
 char* ConfigMagicApp::ReturnBiosSign(char *buffer, char *str)
 {
-  int cnt1,cnt2,i;
-  cnt1=cnt2=0;
-  for (i=0;i<255;i++) buffer[i]='\0';
-  while (str[cnt2] != '=') cnt2++;
-  cnt2++;
-  while (str[cnt2] != NULL)
-  {
-    if ( str[cnt2] != ' ' )
-    {
-      buffer[cnt1]=toupper(str[cnt2]);
-      cnt1++;
-      cnt2++;
-    }
-    else cnt2++;
-  }
-  buffer[cnt1++]='\0';
-  return buffer;
+	int cnt1,cnt2,i;
+	cnt1=cnt2=0;
+	for (i=0;i<255;i++) buffer[i]='\0';
+	while (str[cnt2] != '=') cnt2++;
+	cnt2++;
+	while (str[cnt2] != NULL)
+	{
+		if ( str[cnt2] != ' ' )
+		{
+			buffer[cnt1]=toupper(str[cnt2]);
+			cnt1++;
+			cnt2++;
+		}
+		else cnt2++;
+	}
+	buffer[cnt1++]='\0';
+	return buffer;
 }
 char* ConfigMagicApp::CheckMD5 (struct Bios *Listone, char *Sign)
 {
-  int cntBioses;
-  cntBioses=0;
-  do
-  {
-    if  (strstr(Listone[cntBioses].Signature, Sign) != NULL)
-    { return (Listone[cntBioses].Name);   }
-    cntBioses++;
-  }
-  while( strcmp(Listone[cntBioses].Name,"\0") != 0);
-  return ("Unknown");
+	int cntBioses;
+	cntBioses=0;
+	do
+	{
+		if  (strstr(Listone[cntBioses].Signature, Sign) != NULL)
+		{ return (Listone[cntBioses].Name);   }
+		cntBioses++;
+	}
+	while( strcmp(Listone[cntBioses].Name,"\0") != 0);
+	return ("Unknown");
 }
 
 HRESULT ConfigMagicApp::Initialize()
