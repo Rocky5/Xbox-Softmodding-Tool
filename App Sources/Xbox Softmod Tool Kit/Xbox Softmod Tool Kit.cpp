@@ -847,7 +847,7 @@ void ConfigMagicApp::RemoveParentalControls()
 		removepcfile.close();
 		remove(Remove_Parental_Controls);
 		//On Screen Text
-		((LPXKControl_TextBox) m_pFrmStatus->GetControl("txtStatusMsg"))->SetText("REMOVING PARENTEL CONTROLS");
+		((LPXKControl_TextBox) m_pFrmStatus->GetControl("txtStatusMsg"))->SetText("REMOVING PARENTAL CONTROLS");
 		((LPXKControl_TextBox) m_ActiveForm->GetControl("txtStatus"))->SetText("Please Wait");
 		//Refresh screen....
 		Render();
