@@ -860,6 +860,7 @@ void ConfigMagicApp::RemoveParentalControls()
 		((LPXKControl_TextBox) m_ActiveForm->GetControl("txtStatus"))->SetText("Complete");
 		Render();
 		Sleep(1000);
+		XKUtils::XBOXReset();
 	}
 }
 
