@@ -44,6 +44,7 @@ extern "C" XPP_DEVICE_TYPE XDEVICE_TYPE_IR_REMOTE_TABLE;
 // Shared paths
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #define Retail_Bios_Hash_File				"D:\\Media\\xbe loader\\RetailMD5Hashes.ini"
+#define Retail_Bios_Save_Path				"E:\\Backups\\BIOS\\bios.bin"
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // LED Colours
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -56,6 +57,31 @@ extern "C" XPP_DEVICE_TYPE XDEVICE_TYPE_IR_REMOTE_TABLE;
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Main Code
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+void ConfigMagicApp::CreateBiosBackup()
+{
+  CreateDirectory("E:\\Backups", NULL);
+  CreateDirectory("E:\\Backups\\BIOS", NULL);
+  FILE *fp;
+  DWORD addr        = FLASH_BASE_ADDRESS;
+  DWORD addr_kernel = KERNEL_BASE_ADDRESS;
+  char * flash_copy, data;
+  CXBoxFlash mbFlash;
+
+  flash_copy = (char *) malloc(0x100000);
+
+  if((fp = fopen(Retail_Bios_Save_Path, "wb")) != NULL)
+  {
+    for(int loop=0;loop<0x100000;loop++)
+    {
+        data = mbFlash.Read(addr++);
+        flash_copy[loop] = data;
+    }
+    fwrite(flash_copy, 0x100000, 1, fp);
+    fclose(fp);
+    free(flash_copy);
+  }
+}
+
 void ConfigMagicApp::CheckBios()
 {
 	BYTE data;
@@ -68,7 +94,7 @@ void ConfigMagicApp::CheckBios()
 
 	flash_copy = (char *) malloc(0x100000);
 
-	BIOS_Name     = (char*) malloc(100);
+	BIOS_Name  = (char*) malloc(100);
 
 	struct Bios *Listone = LoadBiosSigns();
 
@@ -268,6 +294,7 @@ HRESULT ConfigMagicApp::Initialize()
 	m_ActiveForm = m_pFrmStatus;
 	((LPXKControl_TextBox) m_pFrmStatus->GetControl("txtStatusMsg"))->SetText("INITIALISING");
 	((LPXKControl_TextBox) m_ActiveForm->GetControl("txtStatus"))->SetText("Please Wait");
+	//CreateBiosBackup();
 	CheckBios();
 	return retVal;
 }

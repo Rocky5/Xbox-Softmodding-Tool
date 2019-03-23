@@ -5,6 +5,13 @@
 =========================================
 
 =========================================
+	Update: March 22 2019
+=========================================
+		Added the option to Backup the Xbox BIOS to the Kernel options in NKPatcher Settings.
+		( E:\Backups\BIOS is where the bios is dumped to )
+
+
+=========================================
 	Update: March 18 2019
 =========================================
 		Updated the Extras Disc to detect my softmod, other softmods or a hardmodded system.

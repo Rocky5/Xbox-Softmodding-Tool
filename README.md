@@ -16,9 +16,9 @@ Note: Making changes in the unprotected C partition is not advised unless you kn
 [![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=65NJWU9PUUX7W&lc=GB&currency_code=GBP&bn=PP%2dDonationsBF%3abtn_donate_LG%2egif%3aNonHosted)
 
 ## Installation
- #### Download Prebuilt build: [Download](https://drive.google.com/drive/folders/0BzRN8P835YijRU94cVNNWFA1Z28)
+ ### Download Prebuilt versions: [Download](https://drive.google.com/drive/folders/0BzRN8P835YijRU94cVNNWFA1Z28)
  
- #### Build from Source:
+ #### Build from Source: (Note: this is only for advanced users)
  * Download [Xbox Softmodding Tool](https://github.com/Rocky5/Xbox-Softmodding-Tool/archive/master.zip) and extract the **Xbox-Softmodding-Tool-master** folder to your desktop.
  * Navigate to the **Xbox-Softmodding-Tool-master** directory and double click **Build Release.bat**
  * Wait till it's done doing its thing and it will then open a new window with the built source files all ready for use.
@@ -48,32 +48,35 @@ Note: Making changes in the unprotected C partition is not advised unless you kn
  * Persistent Softmod Mode
  * Clock auto set to 01/01/2017 (No more clock loops)
  * Multiple dashboard locations built in
-   * C:\XBMC-Emustation\default.xbe
-   * E:\XBMC-Emustation\default.xbe
-   * F:\XBMC-Emustation\default.xbe
-   * C:\XBMC4Gamers\default.xbe
-   * E:\XBMC4Gamers\default.xbe
-   * F:\XBMC4Gamers\default.xbe
-   * C:\XBMC4Xbox\default.xbe
-   * E:\XBMC4Xbox\default.xbe
-   * F:\XBMC4Xbox\default.xbe
-   * C:\XBMC\default.xbe
-   * E:\XBMC\default.xbe
-   * F:\XBMC\default.xbe
-   * C:\dashboard\default.xbe
-   * E:\dashboard\default.xbe
-   * F:\dashboard\default.xbe
-   * C:\dash\default.xbe
-   * E:\dash\default.xbe
-   * F:\dash\default.xbe
-   * E:\default.xbe
-   * E:\dashboard.xbe
-   * C:\evoxdash.xbe
-   * E:\evoxdash.xbe
-   * C:\XBMC.xbe
-   * E:\XBMC.xbe
-
-
+<details>
+  <summary>Show dashboard locations</summary>
+  
+ * C:\XBMC-Emustation\default.xbe
+ * E:\XBMC-Emustation\default.xbe
+ * F:\XBMC-Emustation\default.xbe
+ * C:\XBMC4Gamers\default.xbe
+ * E:\XBMC4Gamers\default.xbe
+ * F:\XBMC4Gamers\default.xbe
+ * C:\XBMC4Xbox\default.xbe
+ * E:\XBMC4Xbox\default.xbe
+ * F:\XBMC4Xbox\default.xbe
+ * C:\XBMC\default.xbe
+ * E:\XBMC\default.xbe
+ * F:\XBMC\default.xbe
+ * C:\dashboard\default.xbe
+ * E:\dashboard\default.xbe
+ * F:\dashboard\default.xbe
+ * C:\dash\default.xbe
+ * E:\dash\default.xbe
+ * F:\dash\default.xbe
+ * E:\default.xbe
+ * E:\dashboard.xbe
+ * C:\evoxdash.xbe
+ * E:\evoxdash.xbe
+ * C:\XBMC.xbe
+ * E:\XBMC.xbe
+ 
+</details>
 
 ### NKPatcher Settings:
 
@@ -84,9 +87,10 @@ NKPatcher Settings allows you to modify certain aspects of NKPatcher in a safe m
 At the top of each menus there is an "Information" button, this will give you a description of the menu you are in.
 
 
-### Dashboard Settings > Backup, Restore or Move
+### Dashboard Settings
+  > ### Backup, Restore or Move
   * This is used to move or restore a clean copy of UnleashX, as well as backup your dashboards.
-### Dashboard Settings > Dual Booting
+  > ### Dual Booting
   * #### Enable:
 	This option is used to enabled dual booting, you get asked if you would like a dashboard setup for you when you select this option.
   * #### Disable:
@@ -104,36 +108,38 @@ At the top of each menus there is an "Information" button, this will give you a 
 	This option will disable the virtual eeprom. Allowing you to edit the onboard one. ( not recommended to go modifying the eeprom if you don't know what you're doing )
   * #### Backup EEPROM Tool:
 	This option will load my "Xbox Softmod Tool Kit" and backup the eeprom. You will be taken back to the NKPatcher Settings when complete.
-### EEPROM > Advanced Features > Hard Drive
+### EEPROM > Advanced Features
+  > ### Hard Drive
   * #### Null Key:
 	This option will allow you to NULL your eeprom Key and relock your Hard drive to this new key. This allows the creation of new hard drive's or fixing your current hard drive a doddle as you will be able to lock these drives with a 32 zero key.
-### EEPROM > Advanced Features > Video Region
-  * #### Set Video to NTSC:
-    This option will allow you to change your Xbox video region to NTSC, so you can get those lovely HD resolutions. ( using a component cable )
-  * #### Set Video to PAL:
-    This option will allow you to change your Xbox video region to PAL, so you can play some of the PAL exclusive games that don't work when set to NTSC.
-### EEPROM > Advanced Features > Persistent Softmod
+  > ### Persistent Softmod
   * #### Enable:
     This option will allow you to re-enable the persistent softmod mode. What this mode does is puts the Xbox into a controlled error 16 state. Don't be alarmed!. This is 100% safe, as long as you don't remove anything from the real C partition. In this mode every game is loaded under the softmod, what this means is IGR on all retail (original) games and never needing worry about losing your softmod again, though with my softmod that's a moot point.
   * #### Disable:
     This option will allow you to disable the persistent softmod mode. In this mode your xbox will work like any other softmod out there, retail (original) games will bypass the softmod.
-### EEPROM > Advanced Features > System Language
+  > ### System Language
   * #### Select a language:
     This option will allow you to change the system language at the eeprom level, ie this will change the games ingame languages for PAL releases.
+  > ### Video Region
+  * #### Set Video to NTSC:
+    This option will allow you to change your Xbox video region to NTSC, so you can get those lovely HD resolutions. ( using a component cable )
+  * #### Set Video to PAL:
+    This option will allow you to change your Xbox video region to PAL, so you can play some of the PAL exclusive games that don't work when set to NTSC.
 	
 
 ### Fan speed
   * #### Self explanatory.
 
 
-### Hard Drive > Partition Types
+### Hard Drive
+  > ### Partition Types
   * #### Default:
 	This is the standard/default option, this allows Partition 6 ( F ) to use all available extra space.
   * #### Partition F & G:
 	This option allows a F and G partition. Where F takes upto 137GB and G takes the remaining space of the drive.
   * #### XBPartitioner:
 	This option is a placebo option, all above options will allow the partition table, I just added this for simplistic reasons.
-### Hard Drive > Populate partitions
+  > ### Populate partitions
   * #### E Partition:
 	Creates "Applications, Emulators, Games and Homebrew" folders.
   * #### F Partition:
@@ -145,12 +151,15 @@ At the top of each menus there is an "Information" button, this will give you a 
 ### Kernel Fonts
   * #### Displays current font used for the NDURE exploit.
   * #### Advanced Features.
-### Kernel Fonts > Advanced Features > Kernel Font Options
+### Kernel Fonts > Advanced Features
+  > ### Backup Xbox Bios
+  * Backs up the Xbox Bios to E:\Backups\Bios
+  > ### Kernel Font Options
   * #### Install Kernel Font:
 	This option will install a kernel specific font. This isn't really needed but if there are boot issues this can fix the issue.	
   * #### Restore Generic Font:
 	This option will restore the generic font to the Xbox. This font works on all Xbox kernel versions and is the default font used.
-### Kernel Fonts > Advanced Features > XTF Font Delay Options
+  > ### XTF Font Delay Options
   * #### Remove all:
 	Removes these delay files.
   * #### Install 1 Delay file:
@@ -180,12 +189,13 @@ At the top of each menus there is an "Information" button, this will give you a 
 	Used to change the blur amount when using 480i and 576i video signals.
 
 
-### Modules & Settings > Modules
+### Modules & Settings
+  > ### Modules
   * #### Built in Modules
 	These are what I use to do specific tasks.
   * #### User Modules
 	If you make your own, you will see them here. ( you add your own to the modules folder inside the NKPatcher Settings App )
-### Modules & Settings > UnleashX Settings
+  > ### UnleashX Settings
   * #### This is the settings menu for UnleashX, change network settings video settings eg...
 
 

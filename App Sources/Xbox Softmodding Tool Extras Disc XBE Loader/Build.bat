@@ -43,6 +43,7 @@ del /q "%DEST%\%XBE%"
 ren "out.xbe" "%XBE%"
 echo "%XBE%" "%DEST2%"
 copy /Y "%XBE%" "%DEST2%"
+XCopy /s /y /e "Media" "%DEST2%\Media\" >NUL
 move "%XBE%" "%DEST%"
 )>NUL
 ECHO - XBE Signing %DEST%\%XBE%

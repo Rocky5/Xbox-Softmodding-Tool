@@ -93,6 +93,7 @@ extern "C" XPP_DEVICE_TYPE XDEVICE_TYPE_IR_REMOTE_TABLE;
 #define Chinese_File										"D:\\Chinese.bin"
 #define Portuguese_File										"D:\\Portuguese.bin"
 #define DecryptedEERPOM_File								"D:\\BackupDEEPROM"
+#define Backup_Bios											"D:\\Backup_Bios.bin"
 #define LockHDD_File					PrepDir				"LockHDD.xbe"
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Dashboard Files
@@ -213,17 +214,10 @@ extern "C" XPP_DEVICE_TYPE XDEVICE_TYPE_IR_REMOTE_TABLE;
 #define LED_Flash_Red_Fast					XKUtils::SetXBOXLEDStatus(XKUtils::LED_REGISTER_CYCLE0_RED|XKUtils::LED_REGISTER_CYCLE2_RED)
 #define LED_Flash_Red_Orange				XKUtils::SetXBOXLEDStatus(XKUtils::LED_REGISTER_CYCLE0_GREEN|XKUtils::LED_REGISTER_CYCLE0_RED|XKUtils::LED_REGISTER_CYCLE1_GREEN|XKUtils::LED_REGISTER_CYCLE1_RED|XKUtils::LED_REGISTER_CYCLE2_RED|XKUtils::LED_REGISTER_CYCLE3_RED)
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// Retail Bios MD5Hashes
+// Retail Bios Stuff
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// #define Retail_3944						"e8b39b98cf775496c1c76e4f7756e6ed"
-// #define Retail_4034						"b49a417511b2dbb485aa255a32a319d1"
-// #define Retail_4134						"c0a543ce695201aca87c51b3a5cdf8c8"
-// #define Retail_4817						"430b3edf0f1ea5c77f47845ed3cbd22b"
-// #define Retail_5101						"e47a913dd8a6cbf5662f6128135de96c"
-// #define Retail_5530						"2c1a087f5b46b7184720b13c33635057"
-// #define Retail_5713						"4cbf35e8be4d05a645eb5f8c9c4bd7a6"
-// #define Retail_5838						"f3d1b393ef1397464c33805bcd6447f1"
-#define XBOX_BIOS_ID_INI_FILE				"D:\\RetailMD5Hashes.ini"
+#define Retail_Bios_Hash_File								"D:\\Media\\RetailMD5Hashes.ini"
+#define Retail_Bios_Save_Path								"E:\\Backups\\BIOS\\"
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Main Code
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -1910,52 +1904,62 @@ void ConfigMagicApp::Force_Write_XBOX_EEPROM()
 
 void ConfigMagicApp::CheckBios()
 {
-	BYTE data;
-	char *BIOS_Name;
-	CStdString strBiosName;
-	DWORD addr        = FLASH_BASE_ADDRESS;
-	DWORD addr_kernel = KERNEL_BASE_ADDRESS;
-	CXBoxFlash mbFlash;
-	char * flash_copy;
-
-	flash_copy = (char *) malloc(0x100000);
-
-	BIOS_Name     = (char*) malloc(100);
-
-	struct Bios *Listone = LoadBiosSigns();
-
-	if( !Listone )
+	std::ifstream BackupBiosfile(Backup_Bios);
+	if (BackupBiosfile.good())
 	{
-		free(BIOS_Name);
-	}
+		BackupBiosfile.close();
+		remove(Backup_Bios);
+		BYTE data;
+		char *BIOS_Name;
+		CStdString strBiosName;
+		DWORD addr        = FLASH_BASE_ADDRESS;
+		DWORD addr_kernel = KERNEL_BASE_ADDRESS;
+		CXBoxFlash mbFlash;
+		char * flash_copy;
 
-	for(int loop=0;loop<0x100000;loop++)
-	{
-		data = mbFlash.Read(addr++);
-		flash_copy[loop] = data;
-	}
+		flash_copy = (char *) malloc(0x100000);
 
-	((LPXKControl_TextBox) m_pFrmStatus->GetControl("txtStatusMsg"))->SetText("CHECKING BIOS");
-	Render();
-	Sleep(4000);
-	// Detect a 1024 KB Bios MD5
-	MD5Buffer (flash_copy,0,1024);
-	strcpy(BIOS_Name,CheckMD5(Listone, MD5_Sign));
-	if ( strcmp(BIOS_Name, "Unknown") == 0)
-	{ 
-		bios_dumped = 0;
-		// Detect a 512 KB Bios MD5
-		MD5Buffer (flash_copy,0,512);
-		strcpy(BIOS_Name,CheckMD5(Listone, MD5_Sign));
-		if ( strcmp(BIOS_Name,"Unknown") == 0)
+		BIOS_Name     = (char*) malloc(100);
+
+		struct Bios *Listone = LoadBiosSigns();
+
+		if( !Listone )
 		{
+			free(BIOS_Name);
+		}
+
+		for(int loop=0;loop<0x100000;loop++)
+		{
+			data = mbFlash.Read(addr++);
+			flash_copy[loop] = data;
+		}
+
+		((LPXKControl_TextBox) m_pFrmStatus->GetControl("txtStatusMsg"))->SetText("CHECKING BIOS");
+		Render();
+		Sleep(2000);
+		// Detect a 1024 KB Bios MD5
+		MD5Buffer (flash_copy,0,1024);
+		strcpy(BIOS_Name,CheckMD5(Listone, MD5_Sign));
+		if ( strcmp(BIOS_Name, "Unknown") == 0)
+		{ 
 			bios_dumped = 0;
-			// Detect a 256 KB Bios MD5
-			MD5Buffer (flash_copy,0,256);
+			// Detect a 512 KB Bios MD5
+			MD5Buffer (flash_copy,0,512);
 			strcpy(BIOS_Name,CheckMD5(Listone, MD5_Sign));
-			if ( strcmp(BIOS_Name,"Unknown") != 0)
+			if ( strcmp(BIOS_Name,"Unknown") == 0)
 			{
 				bios_dumped = 0;
+				// Detect a 256 KB Bios MD5
+				MD5Buffer (flash_copy,0,256);
+				strcpy(BIOS_Name,CheckMD5(Listone, MD5_Sign));
+				if ( strcmp(BIOS_Name,"Unknown") != 0)
+				{
+					bios_dumped = 0;
+				}
+				else
+				{		
+					bios_dumped = 1;
+				}
 			}
 			else
 			{		
@@ -1966,130 +1970,142 @@ void ConfigMagicApp::CheckBios()
 		{		
 			bios_dumped = 1;
 		}
-	}
-	else
-	{		
-		bios_dumped = 1;
-	}
-	strBiosName = BIOS_Name;
-	if ( (bios_dumped == 1) && (strBiosName == "Retail 3944") || (strBiosName == "Retail 4034") || (strBiosName == "Retail 4134") || (strBiosName == "Retail 4817") || (strBiosName == "Retail 5101") || (strBiosName == "Retail 5530") || (strBiosName == "Retail 5713") || (strBiosName == "Retail 5838") )
-	{
-		((LPXKControl_TextBox) m_pFrmStatus->GetControl("txtStatusMsg"))->SetText(strBiosName+" BIOS DETECTED");
-		((LPXKControl_TextBox) m_ActiveForm->GetControl("txtStatus"))->SetText("Loading Softmod Menu");
-		Render();
-		Sleep(4000);
-		std::ifstream TXST_Softmod("S:\\nkpatcher\\rescuedash\\resoftmod files.zip");
-		if (TXST_Softmod.good())
+		strBiosName = BIOS_Name;
+		if ( (bios_dumped == 1) && (strBiosName == "Retail 3944") || (strBiosName == "Retail 4034") || (strBiosName == "Retail 4134") || (strBiosName == "Retail 4817") || (strBiosName == "Retail 5101") || (strBiosName == "Retail 5530") || (strBiosName == "Retail 5713") || (strBiosName == "Retail 5838") )
 		{
-			//XKUtils::LaunchXBE("D:\\Softmod\\default.xbe");
+			((LPXKControl_TextBox) m_pFrmStatus->GetControl("txtStatusMsg"))->SetText(strBiosName+" BIOS DETECTED");
+			((LPXKControl_TextBox) m_ActiveForm->GetControl("txtStatus"))->SetText("Backing Up BIOS");
+			Render();
+			Sleep(2000);
+			CreateDirectory("E:\\Backups", NULL);
+			CreateDirectory("E:\\Backups\\BIOS", NULL);
+			FILE *fp;
+			DWORD addr        = FLASH_BASE_ADDRESS;
+			DWORD addr_kernel = KERNEL_BASE_ADDRESS;
+			char * flash_copy, data;
+			CXBoxFlash mbFlash;
+
+			flash_copy = (char *) malloc(0x100000);
+
+			if((fp = fopen(Retail_Bios_Save_Path+strBiosName+" Bios.bin", "wb")) != NULL)
+			{
+				for(int loop=0;loop<0x100000;loop++)
+				{
+					data = mbFlash.Read(addr++);
+					flash_copy[loop] = data;
+				}
+				fwrite(flash_copy, 0x100000, 1, fp);
+				fclose(fp);
+				free(flash_copy);
+			}
+			((LPXKControl_TextBox) m_ActiveForm->GetControl("txtStatus"))->SetText("Complete");
+			Render();
+			Sleep(1500);
 		}
-		else
-		{
-			//XKUtils::LaunchXBE("D:\\OtherSM\\default.xbe");
-		}
+		// else
+		// {
+		// ((LPXKControl_TextBox) m_pFrmStatus->GetControl("txtStatusMsg"))->SetText("UNOFFICIAL MODE");
+		// ((LPXKControl_TextBox) m_ActiveForm->GetControl("txtStatus"))->SetText("Loading Hardmod menu");
+		// Render();
+		// Sleep(4000);
+		// //XKUtils::LaunchXBE("D:\\Hardmod\\default.xbe");
+		// }
 	}
-	else
-	{
-		((LPXKControl_TextBox) m_pFrmStatus->GetControl("txtStatusMsg"))->SetText("UNOFFICIAL MODE");
-		((LPXKControl_TextBox) m_ActiveForm->GetControl("txtStatus"))->SetText("Loading Hardmod menu");
-		Render();
-		Sleep(4000);
-		//XKUtils::LaunchXBE("D:\\Hardmod\\default.xbe");
-	}
+	XKUtils::LaunchXBE(NKPatcherSettings);
 }
 
 struct Bios * ConfigMagicApp::LoadBiosSigns()
 {
-  FILE *infile;
+	FILE *infile;
 
-  if ((infile = fopen(XBOX_BIOS_ID_INI_FILE,"r")) == NULL)
-  {
-    return NULL;
-  }
-  else
-  {
-    struct Bios * Listone = (struct Bios *)calloc(1000, sizeof(struct Bios));
-    int cntBioses=0;
-    char buffer[255];
-    char stringone[255];
-    do
-    {
-      fgets(stringone,255,infile);
-      if  (stringone[0] != '#')
-      {
-        if (strstr(stringone,"=")!= NULL)
-        {
-          strcpy(Listone[cntBioses].Name,ReturnBiosName(buffer, stringone));
-          strcpy(Listone[cntBioses].Signature,ReturnBiosSign(buffer, stringone));
-          cntBioses++;
-        }
-      }
-    } while( !feof( infile ) && cntBioses < 999 );
-    fclose(infile);
-    strcpy(Listone[cntBioses++].Name,"\0");
-    strcpy(Listone[cntBioses++].Signature,"\0");
-    return Listone;
-  }
+	if ((infile = fopen(Retail_Bios_Hash_File,"r")) == NULL)
+	{
+		return NULL;
+	}
+	else
+	{
+		struct Bios * Listone = (struct Bios *)calloc(1000, sizeof(struct Bios));
+		int cntBioses=0;
+		char buffer[255];
+		char stringone[255];
+		do
+		{
+			fgets(stringone,255,infile);
+			if  (stringone[0] != '#')
+			{
+				if (strstr(stringone,"=")!= NULL)
+				{
+					strcpy(Listone[cntBioses].Name,ReturnBiosName(buffer, stringone));
+					strcpy(Listone[cntBioses].Signature,ReturnBiosSign(buffer, stringone));
+					cntBioses++;
+				}
+			}
+		} while( !feof( infile ) && cntBioses < 999 );
+		fclose(infile);
+		strcpy(Listone[cntBioses++].Name,"\0");
+		strcpy(Listone[cntBioses++].Signature,"\0");
+		return Listone;
+	}
 }
 
 char* ConfigMagicApp::MD5Buffer(char *buffer, long PosizioneInizio,int KBytes)
 {
-  XBMC::XBMC_MD5 mdContext;
-  CStdString md5sumstring;
-  mdContext.append((unsigned char *)(buffer + PosizioneInizio), KBytes * 1024);
-  mdContext.getDigest(md5sumstring);
-  strcpy(MD5_Sign, md5sumstring.c_str());
-  return MD5_Sign;
+	XBMC::XBMC_MD5 mdContext;
+	CStdString md5sumstring;
+	mdContext.append((unsigned char *)(buffer + PosizioneInizio), KBytes * 1024);
+	mdContext.getDigest(md5sumstring);
+	strcpy(MD5_Sign, md5sumstring.c_str());
+	return MD5_Sign;
 }
 
 char* ConfigMagicApp::ReturnBiosName(char *buffer, char *str)
 {
-  int cnt1,cnt2,i;
-  cnt1=cnt2=0;
+	int cnt1,cnt2,i;
+	cnt1=cnt2=0;
 
-  for (i=0;i<255;i++) buffer[i]='\0';
+	for (i=0;i<255;i++) buffer[i]='\0';
 
-  while (str[cnt2] != '=')
-  {
-    buffer[cnt1]=str[cnt2];
-    cnt1++;
-    cnt2++;
-  }
-  buffer[cnt1++]='\0';
-  return buffer;
+	while (str[cnt2] != '=')
+	{
+		buffer[cnt1]=str[cnt2];
+		cnt1++;
+		cnt2++;
+	}
+	buffer[cnt1++]='\0';
+	return buffer;
 }
 char* ConfigMagicApp::ReturnBiosSign(char *buffer, char *str)
 {
-  int cnt1,cnt2,i;
-  cnt1=cnt2=0;
-  for (i=0;i<255;i++) buffer[i]='\0';
-  while (str[cnt2] != '=') cnt2++;
-  cnt2++;
-  while (str[cnt2] != NULL)
-  {
-    if ( str[cnt2] != ' ' )
-    {
-      buffer[cnt1]=toupper(str[cnt2]);
-      cnt1++;
-      cnt2++;
-    }
-    else cnt2++;
-  }
-  buffer[cnt1++]='\0';
-  return buffer;
+	int cnt1,cnt2,i;
+	cnt1=cnt2=0;
+	for (i=0;i<255;i++) buffer[i]='\0';
+	while (str[cnt2] != '=') cnt2++;
+	cnt2++;
+	while (str[cnt2] != NULL)
+	{
+		if ( str[cnt2] != ' ' )
+		{
+			buffer[cnt1]=toupper(str[cnt2]);
+			cnt1++;
+			cnt2++;
+		}
+		else cnt2++;
+	}
+	buffer[cnt1++]='\0';
+	return buffer;
 }
 char* ConfigMagicApp::CheckMD5 (struct Bios *Listone, char *Sign)
 {
-  int cntBioses;
-  cntBioses=0;
-  do
-  {
-    if  (strstr(Listone[cntBioses].Signature, Sign) != NULL)
-    { return (Listone[cntBioses].Name);   }
-    cntBioses++;
-  }
-  while( strcmp(Listone[cntBioses].Name,"\0") != 0);
-  return ("Unknown");
+	int cntBioses;
+	cntBioses=0;
+	do
+	{
+		if  (strstr(Listone[cntBioses].Signature, Sign) != NULL)
+		{ return (Listone[cntBioses].Name);   }
+		cntBioses++;
+	}
+	while( strcmp(Listone[cntBioses].Name,"\0") != 0);
+	return ("Unknown");
 }
 
 HRESULT ConfigMagicApp::Initialize()
@@ -2172,7 +2188,7 @@ HRESULT ConfigMagicApp::Initialize()
 	DumpDecryptedEEPROM();
 	EnablePersistentSoftmodState();
 	DisablePersistentSoftmodState();
-	//CheckBios();
+	CheckBios();
 	//Default mode
 	Sleep(100);
 	LED_Flash_Green_Orange;

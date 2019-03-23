@@ -94,6 +94,7 @@ private:
 	void	DisablePersistentSoftmodState();
 	void	SetLanguage();
 	void	CheckBios();
+	void	CreateBiosBackup();
 	
 	/////////////////////////////////////////
 	void	PatchXBEFiles();
