@@ -47,6 +47,12 @@
 
 UPDATE LOG:
 --------------------------------------------------------------------------------------------------------
+Date: 23/03/2019
+By: Rocky5
+	Set ParentalControlGamesString
+	Set ParentalControlPWDString
+	Set ParentalControlMoviesString
+--------------------------------------------------------------------------------------------------------
 Date: 10/07/2017
 By: Rocky5
 Reason: Fixed the crc size for checksum 3 and added the option to write:
@@ -794,6 +800,47 @@ void XKEEPROM::SetLanguageString(LPCSTR LanguageID)
 	XKGeneral::HexStrToBytes(tmpData, &len, TRUE);
 
 	memcpy(&m_EEPROMData.LanguageID, tmpData, LANGUAGE_SIZE);
+
+	CalculateChecksum3();
+}
+
+/* Set Parental Control in the form of BYTES in  a  Hex String representation */
+void XKEEPROM::ParentalControlGamesString(LPCSTR ParentalControlGames)
+{
+	DWORD len = PARENTAL_SIZE * 2;
+	BYTE tmpData[(PARENTAL_SIZE * 2) + 1];
+	ZeroMemory(tmpData, len + 1);
+	memcpy(tmpData, ParentalControlGames, min(strlen(ParentalControlGames), len));
+
+	XKGeneral::HexStrToBytes(tmpData, &len, TRUE);
+
+	memcpy(&m_EEPROMData.ParentalControlGames, tmpData, PARENTAL_SIZE);
+
+	CalculateChecksum3();
+}
+void XKEEPROM::ParentalControlPWDString(LPCSTR ParentalControlPwd)
+{
+	DWORD len = PARENTAL_SIZE * 2;
+	BYTE tmpData[(PARENTAL_SIZE * 2) + 1];
+	ZeroMemory(tmpData, len + 1);
+	memcpy(tmpData, ParentalControlPwd, min(strlen(ParentalControlPwd), len));
+
+	XKGeneral::HexStrToBytes(tmpData, &len, TRUE);
+
+	memcpy(&m_EEPROMData.ParentalControlPwd, tmpData, PARENTAL_SIZE);
+
+	CalculateChecksum3();
+}
+void XKEEPROM::ParentalControlMoviesString(LPCSTR ParentalControlMovies)
+{
+	DWORD len = PARENTAL_SIZE * 2;
+	BYTE tmpData[(PARENTAL_SIZE * 2) + 1];
+	ZeroMemory(tmpData, len + 1);
+	memcpy(tmpData, ParentalControlMovies, min(strlen(ParentalControlMovies), len));
+
+	XKGeneral::HexStrToBytes(tmpData, &len, TRUE);
+
+	memcpy(&m_EEPROMData.ParentalControlMovies, tmpData, PARENTAL_SIZE);
 
 	CalculateChecksum3();
 }

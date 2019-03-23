@@ -162,6 +162,11 @@
 					<Item Action="MessageBox" Arg1="Information">Advanced stuff, not much else I can really say lol.</Item>
 				</List>
 				<Item></Item>
+				<List Text="Remove Parental Controls" Sort="Off" Batch="True">
+					<Item Action="AskUser" Arg1="Warning">This will remove the parental controls from the Xbox.</Item>
+					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox Softmod Tool Kit\dummy_file" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox softmod tool kit\Remove_PC.bin"/>
+					<Item Action="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox softmod tool kit\default.xbe">Xbox softmod tool kit</Item>
+				</List>
 				<List Text="2.1.1 Hard Drive" Sort="Off">
 					<List Text="Hard Drive Information" Sort="Off" Batch="True">
 						<Item Action="MessageBox" Arg1="Information">This will NULL the Xbox HDD key, so that you can build new Xbox HDDs with an all zero key. Means if you don't have the eeprom you don't need to worry.</Item>

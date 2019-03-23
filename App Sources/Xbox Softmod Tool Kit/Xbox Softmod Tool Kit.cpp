@@ -94,6 +94,7 @@ extern "C" XPP_DEVICE_TYPE XDEVICE_TYPE_IR_REMOTE_TABLE;
 #define Portuguese_File										"D:\\Portuguese.bin"
 #define DecryptedEERPOM_File								"D:\\BackupDEEPROM"
 #define Backup_Bios											"D:\\Backup_Bios.bin"
+#define Remove_Parental_Controls							"D:\\Remove_PC.bin"
 #define LockHDD_File					PrepDir				"LockHDD.xbe"
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Dashboard Files
@@ -466,7 +467,9 @@ void ConfigMagicApp::Stage2OfUpdateSoftmod()
 		XKUtils::XBOXReset();
 	}
 }
-
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Function functions
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void ConfigMagicApp::InstallKernelFont()
 {
 	((LPXKControl_TextBox) m_pFrmStatus->GetControl("txtStatusMsg"))->SetText("INSTALLING KERNEL FONT");
@@ -836,6 +839,30 @@ void ConfigMagicApp::DisablePersistentSoftmodState()
 	}
 }
 
+void ConfigMagicApp::RemoveParentalControls()
+{
+	std::ifstream removepcfile(Remove_Parental_Controls);
+	if (removepcfile.good())
+	{
+		removepcfile.close();
+		remove(Remove_Parental_Controls);
+		//On Screen Text
+		((LPXKControl_TextBox) m_pFrmStatus->GetControl("txtStatusMsg"))->SetText("REMOVING PARENTEL CONTROLS");
+		((LPXKControl_TextBox) m_ActiveForm->GetControl("txtStatus"))->SetText("Please Wait");
+		//Refresh screen....
+		Render();
+		Sleep(1000);
+		m_pXKEEPROM->ReadFromXBOX();
+		m_pXKEEPROM->ParentalControlGamesString("00000000");
+		m_pXKEEPROM->ParentalControlPWDString("00000000");
+		m_pXKEEPROM->ParentalControlMoviesString("00000000");
+		Force_Write_XBOX_EEPROM();
+		((LPXKControl_TextBox) m_ActiveForm->GetControl("txtStatus"))->SetText("Complete");
+		Render();
+		Sleep(1000);
+	}
+}
+
 void ConfigMagicApp::SetLanguage()
 {
 	std::ifstream ChangeLanguagefile(Change_Language_File);
@@ -941,9 +968,7 @@ void ConfigMagicApp::SetLanguage()
 		XKUtils::XBOXReset();
 	}
 }
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// Function functions
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 void ConfigMagicApp::PatchXBEFiles()
 {
 	((LPXKControl_TextBox) m_pFrmStatus->GetControl("txtStatusMsg"))->SetText("MOVING XBE FILES");
@@ -2010,8 +2035,8 @@ void ConfigMagicApp::CheckBios()
 		// Sleep(4000);
 		// //XKUtils::LaunchXBE("D:\\Hardmod\\default.xbe");
 		// }
+		XKUtils::LaunchXBE(NKPatcherSettings);
 	}
-	XKUtils::LaunchXBE(NKPatcherSettings);
 }
 
 struct Bios * ConfigMagicApp::LoadBiosSigns()
@@ -2189,6 +2214,7 @@ HRESULT ConfigMagicApp::Initialize()
 	EnablePersistentSoftmodState();
 	DisablePersistentSoftmodState();
 	CheckBios();
+	RemoveParentalControls();
 	//Default mode
 	Sleep(100);
 	LED_Flash_Green_Orange;

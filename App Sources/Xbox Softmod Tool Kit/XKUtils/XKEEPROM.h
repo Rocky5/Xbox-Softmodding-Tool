@@ -115,6 +115,7 @@ public:
 	#define TIMEZONE_SIZE			0x004
 	#define VIDEOFLAGS_SIZE			0x004
 	#define AUDIOFLAGS_SIZE			0x004
+	#define PARENTAL_SIZE			0x004
 	#define CHECKSUM_SIZE			0x004
 	#define NullChecksum3_SIZE		0x060
 
@@ -275,6 +276,9 @@ public:
 	void			SetLanguageString(LPCSTR LanguageID);
 	void			SetVideoFlagsString(LPCSTR VideoFlags);
 	void			SetAudioFlagsString(LPCSTR AudioFlags);
+	void			ParentalControlGamesString(LPCSTR ParentalControlGames);
+	void			ParentalControlPWDString(LPCSTR ParentalControlPWD);
+	void			ParentalControlMoviesString(LPCSTR ParentalControlMovies);
 	void			SetTimeZoneStdNameString(LPCSTR TimeZoneStdName);
 	void			SetTimeZoneDltNameString(LPCSTR TimeZoneDltName);
 	void			SetTimeZoneStdDateString(LPCSTR TimeZoneStdDate);

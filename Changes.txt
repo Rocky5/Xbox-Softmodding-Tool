@@ -5,6 +5,13 @@
 =========================================
 
 =========================================
+	Update: March 23 2019
+=========================================
+		Added the option to remove parental controls to the EEPROM options in NKPatcher Settings.
+		Fixed backing up the eeprom from NKPatcher settings.
+
+
+=========================================
 	Update: March 22 2019
 =========================================
 		Added the option to Backup the Xbox BIOS to the Kernel options in NKPatcher Settings.

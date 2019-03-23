@@ -109,6 +109,8 @@ At the top of each menus there is an "Information" button, this will give you a 
   * #### Backup EEPROM Tool:
 	This option will load my "Xbox Softmod Tool Kit" and backup the eeprom. You will be taken back to the NKPatcher Settings when complete.
 ### EEPROM > Advanced Features
+  * #### Remove Parental Controls:
+	This option will remove the parental controls set by the MSDash without requiring the MSDash.
   > ### Hard Drive
   * #### Null Key:
 	This option will allow you to NULL your eeprom Key and relock your Hard drive to this new key. This allows the creation of new hard drive's or fixing your current hard drive a doddle as you will be able to lock these drives with a 32 zero key.
