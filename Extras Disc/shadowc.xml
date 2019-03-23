@@ -1090,6 +1090,16 @@
 					</list>
 				</list>
 			</List>
+			<List Text=" Clear Cache" Sort="Off" Batch="True">
+				<Item Action="AskUser" Arg1="Clear CACHE?">Doing this can help with applications or games that crash or refusing to boot.</Item>
+				<Item Action="Copy" Arg1="Dummy" Arg2="E:\CACHE"></Item>
+				<Item Action="Delete" Arg1="E:\CACHE"></Item>
+				<Item Action="Copy" Arg1="Dummy" Arg2="E:\CACHE"></Item>
+				<Item Action="Format" Arg1="X"></Item>
+				<Item Action="Format" Arg1="Y"></Item>
+				<Item Action="Format" Arg1="Z"></Item>
+				<Item Action="MessageBox" Arg1="Complete">The CACHE has been cleared!</Item>
+			</List>
 			<List Text=" File Manager" Sort="Off" Batch="True" password="">
 				<Item Action="MessageBox" arg1="Warning!">Be careful when using this, as you can potentially remove something you're not meant to.</Item>
 				<Item Action="FileManager">Filemanager</Item>
