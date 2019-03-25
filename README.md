@@ -3,7 +3,7 @@
 
 ##  Background:
 
-I set out to try and make the softmodding process as pain free and user friendly as possible. You don't need to have a specific MS dashboard version or mess about in menus trying to backup your EEPROM or even working out what version to install. I do it for you, I backup the EEPROM I give you an easy to use settings menu ( NKPatcher Settings ) that has all the info you need to get the just of things. I have also made it as safe as I possibly can, by having recovery dashboards and fail safes in place in case you remove your dashboard or you format your E partition eg... you can always recover.
+I set out to try and make the softmodding process as pain free and user friendly as possible. You don't need to have a specific MS dashboard version or mess about in menus trying to backup your EEPROM or even working out what version to install. I do it for you, I backup the EEPROM I give you an easy to use settings menu ( NKPatcher Settings ) that has all the info you need to get the gist of things. I have also made it as safe as I possibly can, by having recovery dashboards and fail safes in place in case you remove your dashboard or you format your E partition eg... you can always recover.
 		
 ##### I even added support for 24 dashboard locations, so every other softmod dashboard install location is covered.
 
@@ -114,25 +114,25 @@ Power on using the eject button allows you to load an alternative dashboard.
  - This option will disable the virtual eeprom. Allowing you to edit the onboard one. ( not recommended to go modifying the eeprom if you don't know what you're doing )
 #### Backup EEPROM &amp; Xbox information:
  - This option will load my "Xbox Softmod Tool Kit" and backup the eeprom. You will be taken back to the NKPatcher Settings when complete.
- - ### 2.1 Advanced Features
-   - ### Remove Parental Controls:
-     - This option will remove the parental controls set by the MSDash without requiring the MSDash.
- - ### 2.1.1 Hard Drive
-   - #### Null Key:
-     - This option will allow you to NULL your eeprom Key and relock your Hard drive to this new key. This allows the creation of new hard drive's or fixing your current hard drive a doddle as you will be able to lock these drives with a 32 zero key.
- - ### 2.1.2 Persistent Softmod
-   - #### Enable:
-     - This option will allow you to re-enable the persistent softmod mode. What this mode does is puts the Xbox into a controlled error 16 state. Don't be alarmed!. This is 100% safe, as long as you don't remove anything from the real C partition. In this mode every game is loaded under the softmod, what this means is IGR on all retail (original) games and never needing worry about losing your softmod again, though with my softmod that's a moot point.
-   - #### Disable:
-     - This option will allow you to disable the persistent softmod mode. In this mode your xbox will work like any other softmod out there, retail (original) games will bypass the softmod.
- - ### 2.1.3 System Language
-   - #### Select a language:
-     - This option will allow you to change the system language at the eeprom level. This will change ingame languages for PAL releases.
- - ### 2.1.4 Video Region
-   - #### Set Video to NTSC:
-     - This option will allow you to change your Xbox video region to NTSC, so you can get those lovely HD resolutions. ( using a component cable )
-   - #### Set Video to PAL:
-     - This option will allow you to change your Xbox video region to PAL, so you can play some of the PAL exclusive games that don't work when set to NTSC.
+### 2.1 Advanced Features
+ - ### Remove Parental Controls:
+   - This option will remove the parental controls set by the MSDash without requiring the MSDash.
+### 2.1.1 Hard Drive
+ - #### Null Key:
+   - This option will allow you to NULL your eeprom Key and relock your Hard drive to this new key. This allows the creation of new hard drive's or fixing your current hard drive a doddle as you will be able to lock these drives with a 32 zero key.
+### 2.1.2 Persistent Softmod
+ - #### Enable:
+   - This option will allow you to re-enable the persistent softmod mode. What this mode does is puts the Xbox into a controlled error 16 state. Don't be alarmed!. This is 100% safe, as long as you don't remove anything from the real C partition. In this mode every game is loaded under the softmod, what this means is IGR on all retail (original) games and never needing worry about losing your softmod again, though with my softmod that's a moot point.
+ - #### Disable:
+   - This option will allow you to disable the persistent softmod mode. In this mode your xbox will work like any other softmod out there, retail (original) games will bypass the softmod.
+### 2.1.3 System Language
+ - #### Select a language:
+   - This option will allow you to change the system language at the eeprom level. This will change ingame languages for PAL releases.
+### 2.1.4 Video Region
+ - #### Set Video to NTSC:
+   - This option will allow you to change your Xbox video region to NTSC, so you can get those lovely HD resolutions. ( using a component cable )
+ - #### Set Video to PAL:
+   - This option will allow you to change your Xbox video region to PAL, so you can play some of the PAL exclusive games that don't work when set to NTSC.
 
 
 ## 3. Fan speed
@@ -161,18 +161,18 @@ Displays current font used for the NDURE exploit.
 ### 5.1 Advanced Features
  - ### Backup Xbox Bios
    - Backs up the Xbox Bios to E:\Backups\Bios
- - ### 5.1.1 Kernel Font Options
-   - #### Install Kernel Font:
-     - This option will install a kernel specific font. This isn't really needed but if there are boot issues this can fix the issue.	
-   - #### Restore Generic Font:
-     - This option will restore the generic font to the Xbox. This font works on all Xbox kernel versions and is the default font used.
- - ### 5.1.2 XTF Font Delay Options
-   - #### Remove all:
-   - #### Install 1 Delay file:
-   - #### Install 2 Delay files:
-   - #### Install 3 Delay files:
-   - #### Install 4 Delay files:
-   - #### Install 5 Delay files:
+### 5.1.1 Kernel Font Options
+ - #### Install Kernel Font:
+   - This option will install a kernel specific font. This isn't really needed but if there are boot issues this can fix the issue.	
+ - #### Restore Generic Font:
+   - This option will restore the generic font to the Xbox. This font works on all Xbox kernel versions and is the default font used.
+### 5.1.2 XTF Font Delay Options
+ - #### Remove all:
+ - #### Install 1 Delay file:
+ - #### Install 2 Delay files:
+ - #### Install 3 Delay files:
+ - #### Install 4 Delay files:
+ - #### Install 5 Delay files:
 
 
 ## 6. LED colour
@@ -180,29 +180,29 @@ Displays current font used for the NDURE exploit.
 
 
 ## 7. Video modes
- - #### Default:
-   - This is the default mode, supports all video mode.
- - #### Force Progressive:
-   - This option will force 480p video mode even if your game doest support it. Note: This will make the image distorted in PAL video mode.
- - #### Force VGA:
-   - This option will force VGA video mode. Note: This requires a compatible monitor that support sync on green, also it may not work on v1.6 Xbox properly.
- - #### 7.1 Flicker Filter:
-   - Used to change the blur amount when using 480i and 576i video signals.
-     - Disable
-     - Off
-     - Low
-     - Semi Medium
-     - Medium
-     - Semi High
-     - High
+#### Default:
+ - This is the default mode, supports all video mode.
+#### Force Progressive:
+ - This option will force 480p video mode even if your game doest support it. Note: This will make the image distorted in PAL video mode.
+#### Force VGA:
+ - This option will force VGA video mode. Note: This requires a compatible monitor that support sync on green, also it may not work on v1.6 Xbox properly.
+#### 7.1 Flicker Filter:
+ - Used to change the blur amount when using 480i and 576i video signals.
+   - Disable
+   - Off
+   - Low
+   - Semi Medium
+   - Medium
+   - Semi High
+   - High
 
 
 ## 8. Modules & Settings
 ### 8.1 Modules
- - #### 8.1.1 Built in Modules
-   - These are what I use to do specific tasks.
- - #### 8.1.2 User Modules
-   - If you make your own, you will see them here. ( you add your own to the modules folder inside the NKPatcher Settings App )
+#### 8.1.1 Built in Modules
+ - These are what I use to do specific tasks.
+#### 8.1.2 User Modules
+ - If you make your own, you will see them here. ( you add your own to the modules folder inside the NKPatcher Settings App )
 ### UnleashX Settings
  - #### This is the settings menu for UnleashX, change network settings video settings eg...
 
