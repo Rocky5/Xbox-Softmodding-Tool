@@ -114,9 +114,9 @@ Power on using the eject button allows you to load an alternative dashboard.
  - This option will disable the virtual eeprom. Allowing you to edit the onboard one. ( not recommended to go modifying the eeprom if you don't know what you're doing )
 #### Backup EEPROM &amp; Xbox information:
  - This option will load my "Xbox Softmod Tool Kit" and backup the eeprom. You will be taken back to the NKPatcher Settings when complete.
-### 2.1 Advanced Features
- - ### Remove Parental Controls:
-   - This option will remove the parental controls set by the MSDash without requiring the MSDash.
+ - ### 2.1 Advanced Features
+   - ### Remove Parental Controls:
+     - This option will remove the parental controls set by the MSDash without requiring the MSDash.
  - ### 2.1.1 Hard Drive
    - #### Null Key:
      - This option will allow you to NULL your eeprom Key and relock your Hard drive to this new key. This allows the creation of new hard drive's or fixing your current hard drive a doddle as you will be able to lock these drives with a 32 zero key.
