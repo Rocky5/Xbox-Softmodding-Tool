@@ -108,14 +108,14 @@ Power on using the eject button allows you to load an alternative dashboard.
 
 	
 ## 2. EEPROM
-#### Enable virtual eeprom:
+### Enable virtual eeprom:
  - This option will enable the virtual eeprom. This will install a copy of your Xbox eeprom.bin to the HDD and use it instead of the onboard one.
-#### Disable virtual eeprom:
+### Disable virtual eeprom:
  - This option will disable the virtual eeprom. Allowing you to edit the onboard one. ( not recommended to go modifying the eeprom if you don't know what you're doing )
-#### Backup EEPROM &amp; Xbox information:
+### Backup EEPROM &amp; Xbox information:
  - This option will load my "Xbox Softmod Tool Kit" and backup the eeprom. You will be taken back to the NKPatcher Settings when complete.
 ### 2.1 Advanced Features
- - ### Remove Parental Controls:
+ - #### Remove Parental Controls:
    - This option will remove the parental controls set by the MSDash without requiring the MSDash.
 ### 2.1.1 Hard Drive
  - #### Null Key:
@@ -136,7 +136,7 @@ Power on using the eject button allows you to load an alternative dashboard.
 
 
 ## 3. Fan speed
- - #### Self explanatory.
+ - ### Self explanatory.
 
 
 ## 4. Hard Drive
@@ -159,7 +159,7 @@ Power on using the eject button allows you to load an alternative dashboard.
 ## 5. Kernel Fonts
 Displays current font used for the NDURE exploit.
 ### 5.1 Advanced Features
- - ### Backup Xbox Bios
+ - #### Backup Xbox Bios
    - Backs up the Xbox Bios to E:\Backups\Bios
 ### 5.1.1 Kernel Font Options
  - #### Install Kernel Font:
@@ -176,32 +176,32 @@ Displays current font used for the NDURE exploit.
 
 
 ## 6. LED colour
- - #### Self explanatory.
+ - ### Self explanatory.
 
 
 ## 7. Video modes
-#### Default:
+### Default:
  - This is the default mode, supports all video mode.
-#### Force Progressive:
+### Force Progressive:
  - This option will force 480p video mode even if your game doest support it. Note: This will make the image distorted in PAL video mode.
-#### Force VGA:
+### Force VGA:
  - This option will force VGA video mode. Note: This requires a compatible monitor that support sync on green, also it may not work on v1.6 Xbox properly.
-#### 7.1 Flicker Filter:
+### 7.1 Flicker Filter:
  - Used to change the blur amount when using 480i and 576i video signals.
-   - Disable
-   - Off
-   - Low
-   - Semi Medium
-   - Medium
-   - Semi High
-   - High
+   - #### Disable
+   - #### Off
+   - #### Low
+   - #### Semi Medium
+   - #### Medium
+   - #### Semi High
+   - #### High
 
 
 ## 8. Modules & Settings
 ### 8.1 Modules
-#### 8.1.1 Built in Modules
+### 8.1.1 Built in Modules
  - These are what I use to do specific tasks.
-#### 8.1.2 User Modules
+### 8.1.2 User Modules
  - If you make your own, you will see them here. ( you add your own to the modules folder inside the NKPatcher Settings App )
 ### UnleashX Settings
  - #### This is the settings menu for UnleashX, change network settings video settings eg...
