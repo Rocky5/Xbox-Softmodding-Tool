@@ -690,7 +690,7 @@
 					<Item Action="MessageBox" arg1="Done">That's UnleashX installed to "G:\Applications\UnleashX\"</Item>
 				</list>
 				<Item>Extras:</Item>
-				<List Text=" Install Audio Folder" Sort="Off" Batch="True" Icon="G:\Applications\UnleashX\installed.png">
+				<List Text=" Install Audio Folder" Sort="Off" Batch="True">
 					<Item Action="AskUser" arg1="Continue" arg2="This will install the MSDash's Audio folder to C:\Audio\. This will enable sound effects and background sounds in UnleashX."/>
 					<Item Action="Format" arg1="Y"/>
 					<Item Action="Unzip" arg1="dashboards\msdash\Other\Audio.zip" arg2="Y:\"/>
