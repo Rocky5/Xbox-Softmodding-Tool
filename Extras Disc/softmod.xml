@@ -955,15 +955,15 @@
 					<Item Action="MessageBox" arg1="Information">These are not used as a default dashboard, but can be installed to allow you to copy CD's to the Xbox for playback in some games or to manage your save games.</Item>
 				</List>
 				<Item></Item>
-				<List Text=" Stock MS Dash 5960" Sort="Off" Icon="C:\xboxdashdata.185ead00\installed.png">	
-					<list Text="Stock MS Dash  Information" Sort="Off" Batch="True">
+				<!--TODO Can retail MS Dash be installed in a modded Xbox?
+				<List Text=" Retail MS Dash 5960" Sort="Off" Icon="C:\xboxdashdata.185ead00\installed.png">	
+					<list Text="Retail MS Dash  Information" Sort="Off" Batch="True">
 						<Item Action="MessageBox" Arg1="Info">This was the last official dashboard MS released for the Xbox.</Item>
 					</list>
 					<Item></Item>
 					<list Text=" Install" Sort="Off" Batch="True">
 						<Item Action="AskUser" arg1="Continue?" arg2="Proceed with installation? \n\nMS Dashboard total size is 138MB"/>
 						<Item Action="MessageBox" arg1="Clean Up">I'm about to clean up the C drive.</Item>
-						<!-- Remove old files (or if they don't exist create & remove) -->
 						<Item Action="Copy" arg1="dummy" arg2="C:\xboxdashdata.185ead00\">Copying C:\xboxdashdata.185ead00\</Item>
 						<Item Action="Delete" arg1="C:\xboxdashdata.185ead00\">Deleting C:\xboxdashdata.185ead00\</Item>
 						<Item Action="Copy" arg1="dummy" arg2="C:\Xbox Book.xtf">Copying C:\Xbox Book.xtf</Item>
@@ -995,7 +995,6 @@
 					<list Text=" Uninstall" Sort="Off" Batch="True">
 						<Item Action="AskUser" arg1="Continue?" arg2="Proceed with the uninstall?"/>
 						<Item Action="MessageBox" arg1="Clean Up">I'm about to clean up the C drive.</Item>
-						<!-- Remove old files (or if they don't exist create & remove) -->
 						<Item Action="Copy" arg1="dummy" arg2="C:\xboxdashdata.185ead00\">Copying C:\xboxdashdata.185ead00\</Item>
 						<Item Action="Delete" arg1="C:\xboxdashdata.185ead00\">Deleting C:\xboxdashdata.185ead00\</Item>
 						<Item Action="Copy" arg1="dummy" arg2="C:\Xbox Book.xtf">Copying C:\Xbox Book.xtf</Item>
@@ -1016,8 +1015,8 @@
 						<Item Action="Delete" arg1="E:\Applications\MSDash\">Deleting E:\Applications\MSDash</Item>
 						<Item Action="MessageBox" arg1="Done">That's the MS Dashboard uninstalled.</Item>
 					</list>
-				</list>
-				<List Text=" Modded MS Dash 5960" Sort="Off" Icon="C:\xboxdashdata.185ead00\installed.png"><!--TODO use different icon from stock MS Dash 5960?-->
+				</list>-->
+				<List Text=" Modded MS Dash 5960" Sort="Off" Icon="C:\xboxdashdata.185ead00\installed.png"><!--TODO use different icon from retail MS Dash 5960?-->
 					<list Text="Modded MS Dash  Information" Sort="Off" Batch="True">
 						<Item Action="MessageBox" Arg1="Info">Modded version of the last official dashboard MS released for the Xbox.</Item>
 					</list>
@@ -1050,7 +1049,7 @@
 						</list>
 						<Item Action="Unzip" arg1="dashboards\msdash\modded\5960.zip" arg2="C:\"/>
 						<Item Action="Copy" arg1="C:\xboxdash.xbe" arg2="E:\Applications\MSDash\default.xbe">Copying C:\xboxdash.xbe</Item>
-						<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="C:\xboxdashdata.185ead00\"/><!--TODO use different icon from stock MS Dash 5960?-->
+						<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="C:\xboxdashdata.185ead00\"/><!--TODO use different icon from retail MS Dash 5960?-->
 						<Item Action="Format" arg1="Z"/>
 						<Item Action="MessageBox" arg1="Done">That's the MS Dashboard installed.</Item>
 					</list>
