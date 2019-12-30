@@ -1,5 +1,5 @@
 ![Thumb](/Other/Graphics/banner.png)
-## Current release v1.1.6
+## Current release v1.1.7
 
 ##  Background:
 
@@ -133,6 +133,8 @@ Power on using the eject button allows you to load an alternative dashboard.
    - This option will allow you to change your Xbox video region to NTSC, so you can get those lovely HD resolutions. ( using a component cable )
  - #### Set Video to PAL:
    - This option will allow you to change your Xbox video region to PAL, so you can play some of the PAL exclusive games that don't work when set to NTSC.
+### 2.1.5 Remove parental controles:
+ - This option will remove all parental controls from the xbox, no more Xbox dash yah!
 
 
 ## 3. Fan speed
@@ -159,8 +161,8 @@ Power on using the eject button allows you to load an alternative dashboard.
 ## 5. Kernel Fonts
 Displays current font used for the NDURE exploit.
 ### 5.1 Advanced Features
- - #### Backup Xbox Bios
-   - Backs up the Xbox Bios to E:\Backups\Bios
+ - #### Install Kernel Font:
+   - This option will install a kernel specific font. This isn't really needed but if there are boot issues this can fix the issue.	
 ### 5.1.1 Kernel Font Options
  - #### Install Kernel Font:
    - This option will install a kernel specific font. This isn't really needed but if there are boot issues this can fix the issue.	
@@ -173,10 +175,12 @@ Displays current font used for the NDURE exploit.
  - #### Install 3 Delay files:
  - #### Install 4 Delay files:
  - #### Install 5 Delay files:
+### 5.1.3 Backup Xbox Bios
+ - Backs up the Xbox Bios to E:\Backups\Bios
 
 
 ## 6. LED colour
- - ### Self explanatory.
+ - Self explanatory.
 
 
 ## 7. Video modes

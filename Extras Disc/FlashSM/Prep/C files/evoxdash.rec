@@ -1,0 +1,7 @@
+E:\Custom Path\.xbe
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;This file is used to set a custom recovery dashboard path.
+;Start + Y on boot will load this recover dashboard first.
+;Enter your custom path above.
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

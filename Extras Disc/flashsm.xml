@@ -1,0 +1,112 @@
+<!--- This file is used with the Xbox Softmodding Tool Extras Disc if it finds you're running my Softmod. --->
+<?xml version="1.0" encoding="utf-8"?>
+<Unleashx>
+	<Settings>
+		<Preference>
+			<AbortOnError>Yes</AbortOnError>
+			<ContextMenu AllowUninstall="No" AllowItemEdit="No" AllowRecentList="No" LinkToSave="No" LinkToGame="No"/>
+			<Skin Path="D:\FlashSM\Skins\">Flasher</Skin>
+			<VideoSettings Soften="No" Widescreen="No" UsePAL60="No" FastRefresh="No" EnableTextureCompression="No" Use720P="No" Use480P="Yes" FilterLevel="0"/>
+			<LiveUpdate AutoCheck="No"/>
+			<AutoVideoMode MultiRegion="Off" UsePAL60="No">no</AutoVideoMode>
+			<Games AutoLaunch="No"/>
+			<DVD AutoLaunch="No"/>
+			<AudioCD AutoLaunch="No"/>
+			<EnableDriveF>Yes</EnableDriveF>
+			<EnableDriveG>Yes</EnableDriveG>
+			<FanSpeed>1.00</FanSpeed>
+			<Use24HFormat>Yes</Use24HFormat>
+			<SNTP Synchronize="Yes" HTTP="Yes" Port="80">143.210.16.201</SNTP>
+			<AutoSetTime>Yes</AutoSetTime>
+			<ScreenSaver Wait="300">
+				<Text>Xbox Softmodding Tool</Text>
+			</ScreenSaver>
+		</Preference>
+		<Network Type="DHCP" Enable="Yes">
+			<AutoDetect>yes</AutoDetect>
+			<IP>192.168.0.6</IP>
+			<Subnet>255.255.255.0</Subnet>
+			<Gateway>192.168.0.1</Gateway>
+			<DNS1>192.168.0.1</DNS1>
+		</Network>
+		<FTP Enable="Yes">
+			<MaxUsers>10</MaxUsers>
+			<AllowAnon>No</AllowAnon>
+		</FTP>
+		<Audio>
+			<EnableSoundEffect>Yes</EnableSoundEffect>
+			<Ambient>D:\Softmod\skins\skin files\music\ambient.wav</Ambient>
+			<SoundVolume>50</SoundVolume>
+			<Scroll>dummy.wav</Scroll>
+			<Select>dummy.wav</Select>
+			<Action_Complete>dummy.wav</Action_Complete>
+			<Keyboard_Stroke>dummy.wav</Keyboard_Stroke>
+			<Back>dummy.wav</Back>
+			<Menu_Up>dummy.wav</Menu_Up>
+			<Menu_Down>dummy.wav</Menu_Down>
+			<Game_Save_Select>dummy.wav</Game_Save_Select>
+			<Memory_Slot>dummy.wav</Memory_Slot>
+		</Audio>
+		<LED>
+			<Default>Red</Default>
+		</LED>
+	</Settings>
+	<Menu>
+		<List Text="Flash TSOP Mode Disclaimer" Sort="Off" Batch="True">
+			<Item Action="MessageBox" arg1="Read this">This disc is to be used with the Xbox Softmodding Tool, not doing so could potentially break your Xbox. You have been warned. I take no responsibility for your actions.</Item>
+			<Item Action="MessageBox" arg1="Read this">This section of the Extras Disc will allow you to Flash your TSOP with a bios.</Item>
+		</List>
+		<List Text="M8Plus" Sort="Off" Batch="False">
+			<List Text="M8Plus No Intro" Sort="Off" Batch="True">
+				<Item Action="MessageBox" arg1="M8Plus">This bios is simple and fast, but it does not support 128MB of Ram.</Item>
+				<Item Action="AskUser" arg1="Continue" arg2="Would you like to use this Bios?"/>
+				<Item Action="Copy" arg1="D:\FlashSM\Prep\" arg2="E:\Prep\">Error Failed to copy Prep app</Item>
+				<Item Action="Copy" arg1="D:\FlashSM\bios\M8Plus_no_intro.bin" arg2="E:\Prep\C files\bios\bios.bin">Error Failed to copy M8Plus</Item>
+				<Item Action="E:\Prep\default.xbe">test</Item>
+			</List>
+			<List Text="M8Plus Stock Look" Sort="Off" Batch="True">
+				<Item Action="MessageBox" arg1="M8Plus">This bios is simple and fast, but it does not support 128MB of Ram.</Item>
+				<Item Action="AskUser" arg1="Continue" arg2="Would you like to use this Bios?"/>
+				<Item Action="Copy" arg1="D:\FlashSM\Prep\" arg2="E:\Prep\">Error Failed to copy Prep app</Item>
+				<Item Action="Copy" arg1="D:\FlashSM\bios\M8Plus_stock_look.bin" arg2="E:\Prep\C files\bios\bios.bin">Error Failed to copy M8Plus</Item>
+				<Item Action="E:\Prep\default.xbe">test</Item>
+			</List>
+		</List>
+		<List Text="iND-BiOS 5003" Sort="Off" Batch="False">
+			<List Text="iND-BiOS 5003 No Intro" Sort="Off" Batch="True">
+				<Item Action="MessageBox" arg1="Ind-Bios 5003">This bios has to many features to specify here, but it works with 128MB of Ram and allows debugging and custom xLogos. Issues: IGR Shutdown bug (Select+Start)</Item>
+				<Item Action="AskUser" arg1="Continue" arg2="Would you like to use this Bios?"/>
+				<Item Action="Copy" arg1="D:\FlashSM\Prep\" arg2="E:\Prep\">Error Failed to copy Prep app</Item>
+				<Item Action="Copy" arg1="D:\FlashSM\bios\5003_no_intro.bin" arg2="E:\Prep\C files\BIOS\bios.bin">Error Failed to copy iND-BiOS.500367</Item>
+				<Item Action="Copy" arg1="D:\FlashSM\bios\ind-bios_no_intro.cfg" arg2="E:\Prep\C files\ind-bios.cfg">Error Failed to copy "ind-bios-no_intro.cfg"</Item>
+				<Item Action="E:\Prep\default.xbe">test</Item>
+			</List>
+			<List Text="iND-BiOS 5003 Stock Look" Sort="Off" Batch="True">
+				<Item Action="MessageBox" arg1="Ind-Bios 5003">This bios has to many features to specify here, but it works with 128MB of Ram and allows debugging and custom xLogos. Issues: IGR Shutdown bug (Select+Start)</Item>
+				<Item Action="AskUser" arg1="Continue" arg2="Would you like to use this Bios?"/>
+				<Item Action="Copy" arg1="D:\FlashSM\Prep\" arg2="E:\Prep\">Error Failed to copy Prep app</Item>
+				<Item Action="Copy" arg1="D:\FlashSM\bios\5003_stock_look.bin" arg2="E:\Prep\C files\BIOS\bios.bin">Error Failed to copy iND-BiOS.500367</Item>
+				<Item Action="Copy" arg1="D:\FlashSM\bios\ind-bios_stock_look.cfg" arg2="E:\Prep\C files\ind-bios.cfg">Error Failed to copy "ind-bios-stock_look.cfg"</Item>
+				<Item Action="E:\Prep\default.xbe">test</Item>
+			</List>
+		</List>
+		<List Text="iND-BiOS 5004" Sort="Off" Batch="False">
+			<List Text="iND-BiOS 5004 No Intro" Sort="Off" Batch="True">
+				<Item Action="MessageBox" arg1="Ind-Bios 5004">This bios has to many features to specify here, but it works with 128MB of Ram and allows debugging and custom xLogos. Fixes IGR Shutdown bug (Select+Start)</Item>
+				<Item Action="AskUser" arg1="Continue" arg2="Would you like to use this Bios?"/>
+				<Item Action="Copy" arg1="D:\FlashSM\Prep\" arg2="E:\Prep\">Error Failed to copy Prep app</Item>
+				<Item Action="Copy" arg1="D:\FlashSM\bios\5004_no_intro.bin" arg2="E:\Prep\C files\BIOS\bios.bin">Error Failed to copy 5004</Item>
+				<Item Action="Copy" arg1="D:\FlashSM\bios\ind-bios_no_intro.cfg" arg2="E:\Prep\C files\ind-bios.cfg">Error Failed to copy "ind-bios-no_intro.cfg"</Item>
+				<Item Action="E:\Prep\default.xbe">test</Item>
+			</List>
+			<List Text="iND-BiOS 5004 Stock Look" Sort="Off" Batch="True">
+				<Item Action="MessageBox" arg1="Ind-Bios 5004">This bios has to many features to specify here, but it works with 128MB of Ram and allows debugging and custom xLogos. Fixes IGR Shutdown bug (Select+Start)</Item>
+				<Item Action="AskUser" arg1="Continue" arg2="Would you like to use this Bios?"/>
+				<Item Action="Copy" arg1="D:\FlashSM\Prep\" arg2="E:\Prep\">Error Failed to copy Prep app</Item>
+				<Item Action="Copy" arg1="D:\FlashSM\bios\5004_stock_look.bin" arg2="E:\Prep\C files\BIOS\bios.bin">Error Failed to copy 5004</Item>
+				<Item Action="Copy" arg1="D:\FlashSM\bios\ind-bios_stock_look.cfg" arg2="E:\Prep\C files\ind-bios.cfg">Error Failed to copy "ind-bios-stock_look.cfg"</Item>
+				<Item Action="E:\Prep\default.xbe">test</Item>
+			</List>
+		</list>
+	</Menu>
+</Unleashx>

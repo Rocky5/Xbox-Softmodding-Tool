@@ -47,11 +47,8 @@
 			<Game_Save_Select>dummy.wav</Game_Save_Select>
 			<Memory_Slot>dummy.wav</Memory_Slot>
 		</Audio>
-		<Shortcut>
-			<GP_BLACK>D:\Softmod\Applications\Enigmah-X\default.xbe</GP_BLACK>
-		</Shortcut>
 		<LED>
-			<Default>Orange</Default>
+			<Default>Red</Default>
 		</LED>
 	</Settings>
 	<Menu>
@@ -368,7 +365,7 @@
 						<Item Action="Copy" arg1="dummy" arg2="E:\Dashboard"/>
 						<Item Action="Delete" arg1="E:\Dashboard">Remove old C:\Dashboard</Item>
 					</List>
-					<Item Action="Copy" arg1="D:\Hardmod\dashloader\evoxdash.xbe" arg2="C:\"/>
+					<Item Action="Copy" arg1="D:\Hardmod\dashloader\" arg2="C:\"/>
 					<Item Action="MessageBox" arg1="Done">That's Avalaunch installed to "C:\Dashboard\"</Item>
 				</list>
 				<List Text=" E:\Dashboard\" Sort="Off" Batch="True" Icon="E:\Dashboard\installed.png">
@@ -383,7 +380,7 @@
 						<Item Action="Copy" arg1="dummy" arg2="C:\Dashboard"/>
 						<Item Action="Delete" arg1="C:\Dashboard">Remove old C:\Dashboard</Item>
 					</List>
-					<Item Action="Copy" arg1="D:\Hardmod\dashloader\evoxdash.xbe" arg2="C:\"/>
+					<Item Action="Copy" arg1="D:\Hardmod\dashloader\" arg2="C:\"/>
 					<Item Action="MessageBox" arg1="Done">That's Avalaunch installed to "E:\Dashboard\"</Item>
 				</list>
 				<Item>Install as application to:</Item>
@@ -451,7 +448,7 @@
 						<Item Action="Copy" arg1="dummy" arg2="E:\Dashboard"/>
 						<Item Action="Delete" arg1="E:\Dashboard">Remove old C:\Dashboard</Item>
 					</List>
-					<Item Action="Copy" arg1="D:\Hardmod\dashloader\evoxdash.xbe" arg2="C:\"/>
+					<Item Action="Copy" arg1="D:\Hardmod\dashloader\" arg2="C:\"/>
 					<Item Action="MessageBox" arg1="Done">That's EvolutionX installed to "C:\Dashboard\"</Item>
 				</list>
 				<List Text=" E:\Dashboard\" Sort="Off" Batch="True" Icon="E:\Dashboard\installed.png">
@@ -466,7 +463,7 @@
 						<Item Action="Copy" arg1="dummy" arg2="C:\Dashboard"/>
 						<Item Action="Delete" arg1="C:\Dashboard">Remove old C:\Dashboard</Item>
 					</List>
-					<Item Action="Copy" arg1="D:\Hardmod\dashloader\evoxdash.xbe" arg2="C:\"/>
+					<Item Action="Copy" arg1="D:\Hardmod\dashloader\" arg2="C:\"/>
 					<Item Action="MessageBox" arg1="Done">That's EvolutionX installed to "E:\Dashboard\"</Item>
 				</list>
 				<Item>Install as application to:</Item>
@@ -534,7 +531,7 @@
 						<Item Action="Copy" arg1="dummy" arg2="E:\Dashboard"/>
 						<Item Action="Delete" arg1="E:\Dashboard">Remove old C:\Dashboard</Item>
 					</List>
-					<Item Action="Copy" arg1="D:\Hardmod\dashloader\evoxdash.xbe" arg2="C:\"/>
+					<Item Action="Copy" arg1="D:\Hardmod\dashloader\" arg2="C:\"/>
 					<Item Action="MessageBox" arg1="Done">That's User Interface X Dash installed to "C:\Dashboard\"</Item>
 				</list>
 				<List Text=" E:\Dashboard\" Sort="Off" Batch="True" Icon="E:\Dashboard\installed.png">
@@ -549,7 +546,7 @@
 						<Item Action="Copy" arg1="dummy" arg2="C:\Dashboard"/>
 						<Item Action="Delete" arg1="C:\Dashboard">Remove old C:\Dashboard</Item>
 					</List>
-					<Item Action="Copy" arg1="D:\Hardmod\dashloader\evoxdash.xbe" arg2="C:\"/>
+					<Item Action="Copy" arg1="D:\Hardmod\dashloader\" arg2="C:\"/>
 					<Item Action="MessageBox" arg1="Done">That's User Interface X Dash installed to "E:\Dashboard\"</Item>
 				</list>
 				<Item>Install as application to:</Item>
@@ -617,7 +614,7 @@
 						<Item Action="Copy" arg1="dummy" arg2="E:\Dashboard"/>
 						<Item Action="Delete" arg1="E:\Dashboard">Remove old C:\Dashboard</Item>
 					</List>
-					<Item Action="Copy" arg1="D:\Hardmod\dashloader\evoxdash.xbe" arg2="C:\"/>
+					<Item Action="Copy" arg1="D:\Hardmod\dashloader\" arg2="C:\"/>
 					<Item Action="MessageBox" arg1="Done">That's UnleashX installed to "C:\Dashboard\"</Item>
 				</list>
 				<List Text=" E:\Dashboard\" Sort="Off" Batch="True" Icon="E:\Dashboard\installed.png">
@@ -632,7 +629,7 @@
 						<Item Action="Copy" arg1="dummy" arg2="C:\Dashboard"/>
 						<Item Action="Delete" arg1="C:\Dashboard">Remove old C:\Dashboard</Item>
 					</List>
-					<Item Action="Copy" arg1="D:\Hardmod\dashloader\evoxdash.xbe" arg2="C:\"/>
+					<Item Action="Copy" arg1="D:\Hardmod\dashloader\" arg2="C:\"/>
 					<Item Action="MessageBox" arg1="Done">That's UnleashX installed to "E:\Dashboard\"</Item>
 				</list>
 				<Item>Install as application to:</Item>
@@ -719,7 +716,7 @@
 						<Item Action="Copy" arg1="dummy" arg2="C:\Dashboard"/>
 						<Item Action="Delete" arg1="C:\Dashboard">Remove old C:\Dashboard</Item>
 					</List>
-					<Item Action="Copy" arg1="D:\Hardmod\dashloader\evoxdash.xbe" arg2="C:\"/>
+					<Item Action="Copy" arg1="D:\Hardmod\dashloader\" arg2="C:\"/>
 					<Item Action="MessageBox" arg1="Done">That's XBMC-Emustation installed to "E:\Dashboard\"</Item>
 				</list>
 				<List Text=" E:\XBMC-Emustation\" Sort="Off" Batch="True" Icon="E:\XBMC-Emustation\installed.png">
@@ -730,7 +727,7 @@
 					<Item Action="Unzip" arg1="D:\Softmod\Dashboards\XBMC-Emustation.zip" arg2="E:\XBMC-Emustation">Installing dash to E:\XBMC-Emustation\</Item>
 					<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="E:\XBMC-Emustation\"/>
 					<Item Action="Format" arg1="Z"/>
-					<Item Action="Copy" arg1="D:\Hardmod\dashloader\evoxdash.xbe" arg2="C:\"/>
+					<Item Action="Copy" arg1="D:\Hardmod\dashloader\" arg2="C:\"/>
 					<Item Action="MessageBox" arg1="Done">That's XBMC-Emustation installed to "E:\XBMC-Emustation\"</Item>
 				</list>
 				<List Text=" F:\XBMC-Emustation\" Sort="Off" Batch="True" Icon="F:\XBMC-Emustation\installed.png">
@@ -740,7 +737,7 @@
 					<Item Action="Unzip" arg1="D:\Softmod\Dashboards\XBMC-Emustation.zip" arg2="F:\XBMC-Emustation">Installing dash to F:\XBMC-Emustation\</Item>
 					<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="F:\XBMC-Emustation\"/>
 					<Item Action="Format" arg1="Z"/>
-					<Item Action="Copy" arg1="D:\Hardmod\dashloader\evoxdash.xbe" arg2="C:\"/>
+					<Item Action="Copy" arg1="D:\Hardmod\dashloader\" arg2="C:\"/>
 					<Item Action="MessageBox" arg1="Done">That's XBMC-Emustation installed to "F:\XBMC-Emustation\"</Item>
 				</list>
 				<Item>Install as application to:</Item>
@@ -799,7 +796,7 @@
 						<Item Action="Copy" arg1="dummy" arg2="C:\Dashboard"/>
 						<Item Action="Delete" arg1="C:\Dashboard">Remove old C:\Dashboard</Item>
 					</List>
-					<Item Action="Copy" arg1="D:\Hardmod\dashloader\evoxdash.xbe" arg2="C:\"/>
+					<Item Action="Copy" arg1="D:\Hardmod\dashloader\" arg2="C:\"/>
 					<Item Action="MessageBox" arg1="Done">That's XBMC4Gamers installed to "E:\Dashboard\"</Item>
 				</list>
 				<List Text=" E:\XBMC4Gamers\" Sort="Off" Batch="True" Icon="E:\XBMC4Gamers\installed.png">
@@ -810,7 +807,7 @@
 					<Item Action="Unzip" arg1="D:\Softmod\Dashboards\XBMC4Gamers.zip" arg2="E:\XBMC4Gamers">Installing dash to E:\XBMC4Gamers\</Item>
 					<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="E:\XBMC4Gamers\"/>
 					<Item Action="Format" arg1="Z"/>
-					<Item Action="Copy" arg1="D:\Hardmod\dashloader\evoxdash.xbe" arg2="C:\"/>
+					<Item Action="Copy" arg1="D:\Hardmod\dashloader\" arg2="C:\"/>
 					<Item Action="MessageBox" arg1="Done">That's XBMC4Gamers installed to "E:\XBMC4Gamers\"</Item>
 				</list>
 				<List Text=" F:\XBMC4Gamers\" Sort="Off" Batch="True" Icon="F:\XBMC4Gamers\installed.png">
@@ -820,7 +817,7 @@
 					<Item Action="Unzip" arg1="D:\Softmod\Dashboards\XBMC4Gamers.zip" arg2="F:\XBMC4Gamers">Installing dash to F:\XBMC4Gamers\</Item>
 					<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="F:\XBMC4Gamers\"/>
 					<Item Action="Format" arg1="Z"/>
-					<Item Action="Copy" arg1="D:\Hardmod\dashloader\evoxdash.xbe" arg2="C:\"/>
+					<Item Action="Copy" arg1="D:\Hardmod\dashloader\" arg2="C:\"/>
 					<Item Action="MessageBox" arg1="Done">That's XBMC4Gamers installed to "F:\XBMC4Gamers\"</Item>
 				</list>
 				<Item>Install as application to:</Item>
@@ -882,7 +879,7 @@
 						<Item Action="Copy" arg1="dummy" arg2="E:\Dashboard"/>
 						<Item Action="Delete" arg1="E:\Dashboard">Remove old C:\Dashboard</Item>
 					</List>
-					<Item Action="Copy" arg1="D:\Hardmod\dashloader\evoxdash.xbe" arg2="C:\"/>
+					<Item Action="Copy" arg1="D:\Hardmod\dashloader\" arg2="C:\"/>
 					<Item Action="MessageBox" arg1="Done">That's XBMC4Xbox installed to "C:\Dashboard\"</Item>
 				</list>
 				<List Text=" E:\Dashboard\" Sort="Off" Batch="True" Icon="E:\Dashboard\installed.png">
@@ -897,7 +894,7 @@
 						<Item Action="Copy" arg1="dummy" arg2="C:\Dashboard"/>
 						<Item Action="Delete" arg1="C:\Dashboard">Remove old C:\Dashboard</Item>
 					</List>
-					<Item Action="Copy" arg1="D:\Hardmod\dashloader\evoxdash.xbe" arg2="C:\"/>
+					<Item Action="Copy" arg1="D:\Hardmod\dashloader\" arg2="C:\"/>
 					<Item Action="MessageBox" arg1="Done">That's XBMC4Xbox installed to "E:\Dashboard\"</Item>
 				</list>
 				<Item>Install as application to:</Item>
@@ -956,70 +953,9 @@
 					<Item Action="MessageBox" arg1="Information">These are not used as a default dashboard, but can be installed to allow you to copy CD's to the Xbox for playback in some games or to manage your save games.</Item>
 				</List>
 				<Item></Item>
-				<!--TODO Can retail MS Dash be installed in a modded Xbox?
-				<List Text=" Retail MS Dash 5960" Sort="Off" Icon="C:\xboxdashdata.185ead00\installed.png">	
-					<list Text="Retail MS Dash  Information" Sort="Off" Batch="True">
+				<List Text=" Stock MS Dash 5960" Sort="Off" Icon="C:\xboxdashdata.185ead00\installed.png">	
+					<list Text="Stock MS Dash  Information" Sort="Off" Batch="True">
 						<Item Action="MessageBox" Arg1="Info">This was the last official dashboard MS released for the Xbox.</Item>
-					</list>
-					<Item></Item>
-					<list Text=" Install" Sort="Off" Batch="True">
-						<Item Action="AskUser" arg1="Continue?" arg2="Proceed with installation? \n\nMS Dashboard total size is 138MB"/>
-						<Item Action="MessageBox" arg1="Clean Up">I'm about to clean up the C drive.</Item>
-						<Item Action="Copy" arg1="dummy" arg2="C:\xboxdashdata.185ead00\">Copying C:\xboxdashdata.185ead00\</Item>
-						<Item Action="Delete" arg1="C:\xboxdashdata.185ead00\">Deleting C:\xboxdashdata.185ead00\</Item>
-						<Item Action="Copy" arg1="dummy" arg2="C:\Xbox Book.xtf">Copying C:\Xbox Book.xtf</Item>
-						<Item Action="Delete" arg1="C:\Xbox Book.xtf">Deleting C:\Xbox Book.xtf</Item>
-						<Item Action="Copy" arg1="dummy" arg2="C:\Xbox.xtf">Copying C:\Xbox.xtf</Item>
-						<Item Action="Delete" arg1="C:\Xbox.xtf">Deleting C:\Xbox.xtf</Item>
-						<Item Action="Copy" arg1="dummy" arg2="C:\Audio\">Copying C:\Audio\</Item>
-						<Item Action="Delete" arg1="C:\Audio\">Deleting C:\Audio\</Item>
-						<Item Action="Copy" arg1="dummy" arg2="C:\fonts\">Copying C:\fonts\</Item>
-						<Item Action="Delete" arg1="C:\fonts\">Deleting C:\fonts\</Item>
-						<Item Action="Copy" arg1="dummy" arg2="C:\XboxDash\">Copying C:\XboxDash\</Item>
-						<Item Action="Delete" arg1="C:\XboxDash\">Deleting C:\XboxDash\</Item>
-						<Item Action="Copy" arg1="dummy" arg2="C:\xodash\">Copying C:\xodash\</Item>
-						<Item Action="Delete" arg1="C:\xodash\">Deleting C:\xodash\</Item>
-						<Item Action="Copy" arg1="dummy" arg2="C:\xboxdash.xbe">Copying C:\xboxdash.xbe</Item>
-						<Item Action="Delete" arg1="C:\xboxdash.xbe">Deleting C:\xboxdash.xbe</Item>
-						<Item Action="Copy" arg1="dummy" arg2="E:\Applications\MSDash\">Copying E:\Applications\MSDash</Item>
-						<Item Action="Delete" arg1="E:\Applications\MSDash\">Deleting E:\Applications\MSDash</Item>
-						<list>
-							<Item Action="AskUser" arg1="Audio" arg2="Install the Audio? \n\nThis is not needed for the dashboard to function. \n\nAudio increases the total size to 171MB"/>
-							<Item Action="Unzip" arg1="dashboards\msdash\Other\Audio.zip" arg2="C:\"/>
-						</list>
-						<Item Action="Unzip" arg1="dashboards\msdash\retail\5960.zip" arg2="C:\"/>
-						<Item Action="Copy" arg1="C:\xboxdash.xbe" arg2="E:\Applications\MSDash\default.xbe">Copying C:\xboxdash.xbe</Item>
-						<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="C:\xboxdashdata.185ead00\"/>
-						<Item Action="Format" arg1="Z"/>
-						<Item Action="MessageBox" arg1="Done">That's the MS Dashboard installed.</Item>
-					</list>
-					<list Text=" Uninstall" Sort="Off" Batch="True">
-						<Item Action="AskUser" arg1="Continue?" arg2="Proceed with the uninstall?"/>
-						<Item Action="MessageBox" arg1="Clean Up">I'm about to clean up the C drive.</Item>
-						<Item Action="Copy" arg1="dummy" arg2="C:\xboxdashdata.185ead00\">Copying C:\xboxdashdata.185ead00\</Item>
-						<Item Action="Delete" arg1="C:\xboxdashdata.185ead00\">Deleting C:\xboxdashdata.185ead00\</Item>
-						<Item Action="Copy" arg1="dummy" arg2="C:\Xbox Book.xtf">Copying C:\Xbox Book.xtf</Item>
-						<Item Action="Delete" arg1="C:\Xbox Book.xtf">Deleting C:\Xbox Book.xtf</Item>
-						<Item Action="Copy" arg1="dummy" arg2="C:\Xbox.xtf">Copying C:\Xbox.xtf</Item>
-						<Item Action="Delete" arg1="C:\Xbox.xtf">Deleting C:\Xbox.xtf</Item>
-						<Item Action="Copy" arg1="dummy" arg2="C:\Audio\">Copying C:\Audio\</Item>
-						<Item Action="Delete" arg1="C:\Audio\">Deleting C:\Audio\</Item>
-						<Item Action="Copy" arg1="dummy" arg2="C:\fonts\">Copying C:\fonts\</Item>
-						<Item Action="Delete" arg1="C:\fonts\">Deleting C:\fonts\</Item>
-						<Item Action="Copy" arg1="dummy" arg2="C:\XboxDash\">Copying C:\XboxDash\</Item>
-						<Item Action="Delete" arg1="C:\XboxDash\">Deleting C:\XboxDash\</Item>
-						<Item Action="Copy" arg1="dummy" arg2="C:\xodash\">Copying C:\xodash\</Item>
-						<Item Action="Delete" arg1="C:\xodash\">Deleting C:\xodash\</Item>
-						<Item Action="Copy" arg1="dummy" arg2="C:\xboxdash.xbe">Copying C:\xboxdash.xbe</Item>
-						<Item Action="Delete" arg1="C:\xboxdash.xbe">Deleting C:\xboxdash.xbe</Item>
-						<Item Action="Copy" arg1="dummy" arg2="E:\Applications\MSDash\">Copying E:\Applications\MSDash</Item>
-						<Item Action="Delete" arg1="E:\Applications\MSDash\">Deleting E:\Applications\MSDash</Item>
-						<Item Action="MessageBox" arg1="Done">That's the MS Dashboard uninstalled.</Item>
-					</list>
-				</list>-->
-				<List Text=" Modded MS Dash 5960" Sort="Off" Icon="C:\xboxdashdata.185ead00\installed.png"><!--TODO use different icon from retail MS Dash 5960?-->
-					<list Text="Modded MS Dash  Information" Sort="Off" Batch="True">
-						<Item Action="MessageBox" Arg1="Info">Modded version of the last official dashboard MS released for the Xbox.</Item>
 					</list>
 					<Item></Item>
 					<list Text=" Install" Sort="Off" Batch="True">
@@ -1050,7 +986,7 @@
 						</list>
 						<Item Action="Unzip" arg1="dashboards\msdash\modded\5960.zip" arg2="C:\"/>
 						<Item Action="Copy" arg1="C:\xboxdash.xbe" arg2="E:\Applications\MSDash\default.xbe">Copying C:\xboxdash.xbe</Item>
-						<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="C:\xboxdashdata.185ead00\"/><!--TODO use different icon from retail MS Dash 5960?-->
+						<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="C:\xboxdashdata.185ead00\"/>
 						<Item Action="Format" arg1="Z"/>
 						<Item Action="MessageBox" arg1="Done">That's the MS Dashboard installed.</Item>
 					</list>
@@ -1079,6 +1015,7 @@
 						<Item Action="MessageBox" arg1="Done">That's the MS Dashboard uninstalled.</Item>
 					</list>
 				</list>
+
 				<List Text=" Hacked MS Dash 4920" Sort="Off" Icon="C:\XboxDash\installed.png">	
 					<list Text="Hacked MS Dash Information" Sort="Off" Batch="True">
 						<Item Action="MessageBox" Arg1="Info">Feature list. \n\n1) Defaults to Games Saves list. \n2) XBL functionality removed. \n3) Smaller footprint. \n4) Update Safe.</Item>
@@ -1553,15 +1490,21 @@
 					</list>
 				</list>
 			</List>
-			<List Text=" Clear Cache" Sort="Off" Batch="True">
-				<Item Action="AskUser" Arg1="Clear CACHE?">Doing this can help with applications or games that crash or refusing to boot.</Item>
-				<Item Action="Copy" Arg1="Dummy" Arg2="E:\CACHE"></Item>
-				<Item Action="Delete" Arg1="E:\CACHE"></Item>
-				<Item Action="Copy" Arg1="Dummy" Arg2="E:\CACHE"></Item>
-				<Item Action="Format" Arg1="X"></Item>
-				<Item Action="Format" Arg1="Y"></Item>
-				<Item Action="Format" Arg1="Z"></Item>
-				<Item Action="MessageBox" Arg1="Complete">The CACHE has been cleared!</Item>
+			<List Text=" Tools" Sort="Off">
+				<List Text="Tools Information" Sort="On" Batch="True">
+					<Item Action="MessageBox" arg1="Information">This menu is for stuff that doesn't work in other menus. I take no responsibility for users formatting or breaking there Xbox.</Item>
+				</List>
+				<Item></Item>
+				<List Text=" Clear Cache" Sort="Off" Batch="True">
+					<Item Action="AskUser" Arg1="Clear CACHE?">Doing this can help with applications or games that crash or refusing to boot.</Item>
+					<Item Action="Copy" Arg1="Dummy" Arg2="E:\CACHE"/>
+					<Item Action="Delete" Arg1="E:\CACHE"/>
+					<Item Action="Copy" Arg1="Dummy" Arg2="E:\CACHE"/>
+					<Item Action="Format" Arg1="X"/>
+					<Item Action="Format" Arg1="Y"/>
+					<Item Action="Format" Arg1="Z"/>
+					<Item Action="MessageBox" Arg1="Complete">The CACHE has been cleared!</Item>
+				</List>
 			</List>
 			<List Text=" File Manager" Sort="Off" Batch="True" password="">
 				<Item Action="MessageBox" arg1="Warning!">Be careful when using this, as you can potentially remove something you're not meant to.</Item>

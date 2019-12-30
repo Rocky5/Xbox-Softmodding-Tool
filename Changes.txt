@@ -1,8 +1,19 @@
 =========================================
 	Change Log
-	Xbox Softmodding Tool v1.1.6
+	Xbox Softmodding Tool v1.1.7
 	Created by Rocky5
 =========================================
+
+=========================================
+	Update: December 30 2019
+=========================================
+		Updated Dashloader to support multiple dash configs via pressing face buttons.
+		( A,B,X,Y,Start,Back,White and black configs are located in E:/UDATA/21585554/000000000000/nkpatcher settings/dashloader/ )
+		Updated Dashloader to store its files on E so people can change stuff and add custom boot paths eg...
+		Added a TSOP flasher feature to the extras disc.
+		( Hold Start or run it from the menu under the tools menu )
+		Updated the disc to allow users to install apps eg... if hardmodded.
+		Note: this update has been sitting here for the better part of a year, so I have probably forgot some things :lol:
 
 =========================================
 	Update: March 23 2019

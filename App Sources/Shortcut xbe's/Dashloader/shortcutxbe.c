@@ -13,36 +13,14 @@
 #include <string.h>
 #include <stdio.h>
 #include "shortcutxbe.h"
+#define dashloader_Files_path	"E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\dashloader\\"
 static FILE* logfile = NULL;
 void initlog()
 {
-	char devicepath[MAX_PATH];
-	char filename[MAX_PATH];
-	char *temp;
-#ifdef _MSC_VER
-	PANSI_STRING imageFileName = (PANSI_STRING)XeImageFileName;
-#else
-	PANSI_STRING imageFileName = (PANSI_STRING)&XeImageFileName;
-#endif
-	strncpy(devicepath, imageFileName->Buffer, imageFileName->Length);
-	devicepath[imageFileName->Length] = '\0';
-	temp = strrchr(devicepath, '\\');
-	if( temp == NULL ) return;
-	strcpy(filename, "D:");
-	strcat(filename, temp);
-	/* let the device path only include path and not filename */
-	*temp = '\0';
-	/* extension */
-	temp = strstr(filename, ".xbe");
-	if( temp == NULL ) return;
-	/* switch extension */
-	temp[1] = 'l';
-	temp[2] = 'o';
-	temp[3] = 'g';
 	/* mount up a drive to use for debug logging */
-	XUnmount("D:");
-	XMount("D:", devicepath);
-	logfile = fopen(filename, "w+t");
+	XUnmount("E:");
+	XMount("E:", "\\Device\\Harddisk0\\Partition1");
+	logfile = fopen(dashloader_Files_path"Dashloader.log", "w+t");
 }
 void debuglog(const char* format, ...)
 {
@@ -274,58 +252,13 @@ int LaunchRecovery(char* filename)
 /* initial starting point of program */
 int main(int argc,char* argv[])
 {
-	char devicepath[MAX_PATH];
-	char xbepath[MAX_PATH];
-	char recovery[MAX_PATH];
 	char shortcut[MAX_PATH];
-	char *temp;
-#ifdef _MSC_VER
-	PANSI_STRING imageFileName = (PANSI_STRING)XeImageFileName;
-#else
-	PANSI_STRING imageFileName = (PANSI_STRING)&XeImageFileName;
-#endif
 	initlog();
-	strncpy(devicepath, imageFileName->Buffer, imageFileName->Length);
-	devicepath[imageFileName->Length] = '\0';
-	temp = strrchr(devicepath, '\\');
-	if( temp == NULL )
-	{	   
-		/* debuglog("ERROR - Can't find launching xbe"); */
-		ErrorHandler(NULL);
-	}
-	/* move to xbepath buffer */
-	strcpy(xbepath, "D:");
-	strcat(xbepath, temp);
-	/* setup the shortcut path */
-	strcpy(shortcut, xbepath);
-	strcpy(recovery, xbepath);
-	/* let the device path only include path and not filename */
-	*temp = '\0';
-	/* extension */
-	temp = strstr(shortcut, ".xbe");
-	if( temp == NULL )
-	{
-		debuglog("ERROR - Can't find launching xbe's extension part");
-		ErrorHandler(NULL);
-	}
-	/* switch extension */
-	temp[1] = 'c';
-	temp[2] = 'f';
-	temp[3] = 'g';
-	temp = strstr(recovery, ".xbe");
-	if( temp == NULL )
-	{
-		debuglog("ERROR - Can't find launching xbe's extension part");
-		ErrorHandler(NULL);
-	}
-	/* switch extension */
-	temp[1] = 'r';
-	temp[2] = 'e';
-	temp[3] = 'c';
+	/* move to xbepath buffer */	
+	strcpy(shortcut, dashloader_Files_path"Custom_Dash.cfg");
+	XUnmount("E:");
+	XMount("E:", "\\Device\\Harddisk0\\Partition1");
 	debuglog("Dashloader Build 1.1");
-	/* make sure D: is mounted to the launch location */
-	XUnmount("D:");
-	XMount("D:", devicepath);
 	XInitDevices( 0, NULL );
 	if( FAILED( XBInput_CreateGamepads( &m_Gamepad ) ) )
 	{
@@ -384,13 +317,45 @@ int main(int argc,char* argv[])
 		m_DefaultGamepad.sThumbLY = SHORT( nThumbLY );
 		m_DefaultGamepad.sThumbRX = SHORT( nThumbRX );
 		m_DefaultGamepad.sThumbRY = SHORT( nThumbRY );
+		if( m_DefaultGamepad.bPressedAnalogButtons[XINPUT_GAMEPAD_A] )
+		{
+			strcpy(shortcut, dashloader_Files_path"A_Button_Dash.cfg");
+		}
+		if( m_DefaultGamepad.bPressedAnalogButtons[XINPUT_GAMEPAD_B] )
+		{
+			strcpy(shortcut, dashloader_Files_path"B_Button_Dash.cfg");
+		}
+		if( m_DefaultGamepad.bPressedAnalogButtons[XINPUT_GAMEPAD_X] )
+		{
+			strcpy(shortcut, dashloader_Files_path"C_Button_Dash.cfg");
+		}
+		if( m_DefaultGamepad.bPressedAnalogButtons[XINPUT_GAMEPAD_Y] )
+		{
+			strcpy(shortcut, dashloader_Files_path"Y_Button_Dash.cfg");
+		}
+		if( m_DefaultGamepad.bPressedAnalogButtons[XINPUT_GAMEPAD_START] )
+		{
+			strcpy(shortcut, dashloader_Files_path"Start_Button_Dash.cfg");
+		}
+		if( m_DefaultGamepad.bPressedAnalogButtons[XINPUT_GAMEPAD_BACK] )
+		{
+			strcpy(shortcut, dashloader_Files_path"Back_Button_Dash.cfg");
+		}
+		if( m_DefaultGamepad.bPressedAnalogButtons[XINPUT_GAMEPAD_BLACK] )
+		{
+			strcpy(shortcut, dashloader_Files_path"Black_Button_Dash.cfg");
+		}
+		if( m_DefaultGamepad.bPressedAnalogButtons[XINPUT_GAMEPAD_WHITE] )
+		{
+			strcpy(shortcut, dashloader_Files_path"White_Button_Dash.cfg");
+		}
 		if( m_DefaultGamepad.bPressedAnalogButtons[XINPUT_GAMEPAD_Y] && (m_DefaultGamepad.wPressedButtons & XINPUT_GAMEPAD_START) )
 		{
 			debuglog("\n------------------------------------------------");
 			debuglog("Rescue Dashboard Locations");
 			debuglog("------------------------------------------------");
 			debuglog("Loading Custom Rescue Dashboard\n");
-			LaunchRecovery(recovery);
+			LaunchRecovery(dashloader_Files_path"Custom_Recovery.cfg");
 			debuglog("Custom Rescue Dashboard doesn't Exist\n");
 			/**/
 			debuglog("Loading Rescue Dashboard TDATA");
@@ -411,5 +376,5 @@ int main(int argc,char* argv[])
 		break;
 	}
 	LaunchShortcut(shortcut);
-	ErrorHandler(xbepath);
+	ErrorHandler(dashloader_Files_path"Dashloader.log");
 }

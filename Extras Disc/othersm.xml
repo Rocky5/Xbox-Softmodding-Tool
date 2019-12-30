@@ -52,7 +52,7 @@
 			<GP_WHITE>D:\Softmod\default.xbe</GP_WHITE>
 		</Shortcut>
 		<LED>
-			<Default>Orange</Default>
+			<Default>Green</Default>
 		</LED>
 	</Settings>
 	<Menu>
@@ -69,7 +69,7 @@
 			<Item Action="Copy" arg1="D:\Softmod\skins\Upgrade Softmod" arg2="E:\Prep\skins\Upgrade Softmod"/>
 			<Item Action="Copy" arg1="D:\Softmod\skins\skin files" arg2="E:\Prep\skins\skin files"/>
 			<Item Action="Copy" arg1="D:\Softmod\configs\upgradesoftmod.xml" arg2="E:\Prep\Config.xml"/>
-			<Item Action="Unzip" arg1="D:\Softmod\softmod files\Xbox Softmodding Tool.zip" arg2="E:\Prep"/>
+			<Item Action="Unzip" arg1="D:\Softmod\softmod files\Xbox Softmodding Tool.zip" arg2="E:\Prep\"/>
 			<Item Action="E:\Prep\default.xbe"/>
 		</list>
 	</Menu>

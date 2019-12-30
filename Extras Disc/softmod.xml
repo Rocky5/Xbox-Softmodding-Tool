@@ -47,10 +47,6 @@
 			<Game_Save_Select>dummy.wav</Game_Save_Select>
 			<Memory_Slot>dummy.wav</Memory_Slot>
 		</Audio>
-		<Shortcut>
-			<GP_BLACK>D:\Softmod\Applications\Enigmah-X\default.xbe</GP_BLACK>
-			<GP_WHITE>D:\Softmod\shadowc.xbe</GP_WHITE>
-		</Shortcut>
 		<LED>
 			<Default>Orange</Default>
 		</LED>
@@ -368,7 +364,7 @@
 			<Item></Item>
 
 			<List Text=" Avalaunch" Sort="Off">
-				<List Text=" Avalaunch Options" Sort="Off" Batch="True"></List>
+				<List Text=" Avalaunch Options" Sort="Off" Batch="True"/>
 				<Item></Item>
 				<Item>Install as dashboard to:</Item>
 				<List Text=" C:\Dashboard\" Sort="Off" Batch="True" Icon="C:\Dashboard\installed.png">
@@ -449,7 +445,7 @@
 			</list>
 
 			<List Text=" EvolutionX" Sort="Off">
-				<List Text=" EvolutionX Options" Sort="Off" Batch="True"></List>
+				<List Text=" EvolutionX Options" Sort="Off" Batch="True"/>
 				<Item></Item>
 				<Item>Install as dashboard to:</Item>
 				<List Text=" C:\Dashboard\" Sort="Off" Batch="True" Icon="C:\Dashboard\installed.png">
@@ -530,7 +526,7 @@
 			</list>
 
 			<List Text=" User Interface X Dash" Sort="Off">
-				<List Text=" User Interface X Dash Options" Sort="Off" Batch="True"></List>
+				<List Text=" User Interface X Dash Options" Sort="Off" Batch="True"/>
 				<Item></Item>
 				<Item>Install as dashboard to:</Item>
 				<List Text=" C:\Dashboard\" Sort="Off" Batch="True" Icon="C:\Dashboard\installed.png">
@@ -611,7 +607,7 @@
 			</list>
 
 			<List Text=" UnleashX" Sort="Off">
-				<List Text=" UnleashX Options" Sort="Off" Batch="True"></List>
+				<List Text=" UnleashX Options" Sort="Off" Batch="True"/>
 				<Item></Item>
 				<Item>Install as dashboard to:</Item>
 				<List Text=" C:\Dashboard\" Sort="Off" Batch="True" Icon="C:\Dashboard\installed.png">
@@ -708,9 +704,9 @@
 					<Item Action="MessageBox" arg1="Done">That's the Audio installed.</Item>
 				</list>
 			</list>
-			
+
 			<List Text=" XBMC-Emustation" Sort="Off">
-				<List Text=" XBMC-Emustation Options" Sort="Off" Batch="True"></List>
+				<List Text=" XBMC-Emustation Options" Sort="Off" Batch="True"/>
 				<Item></Item>
 				<Item>Install as dashboard to:</Item>
 				<List Text=" E:\Dashboard\" Sort="Off" Batch="True" Icon="E:\Dashboard\installed.png">
@@ -788,7 +784,7 @@
 			</list>
 
 			<List Text=" XBMC4Gamers" Sort="Off">
-				<List Text=" XBMC4Gamers Options" Sort="Off" Batch="True"></List>
+				<List Text=" XBMC4Gamers Options" Sort="Off" Batch="True"/>
 				<Item></Item>
 				<Item>Install as dashboard to:</Item>
 				<List Text=" E:\Dashboard\" Sort="Off" Batch="True" Icon="E:\Dashboard\installed.png">
@@ -868,7 +864,7 @@
 			</list>
 
 			<List Text=" XBMC4Xbox" Sort="Off">
-				<List Text=" XBMC4Xbox v3.5.3 Options" Sort="Off" Batch="True"></List>
+				<List Text=" XBMC4Xbox v3.5.3 Options" Sort="Off" Batch="True"/>
 				<Item></Item>
 				<Item>Install as dashboard to:</Item>
 				<List Text=" C:\Dashboard\" Sort="Off" Batch="True" Icon="C:\Dashboard\installed.png">
@@ -955,70 +951,9 @@
 					<Item Action="MessageBox" arg1="Information">These are not used as a default dashboard, but can be installed to allow you to copy CD's to the Xbox for playback in some games or to manage your save games.</Item>
 				</List>
 				<Item></Item>
-				<!--TODO Can retail MS Dash be installed in a modded Xbox?
-				<List Text=" Retail MS Dash 5960" Sort="Off" Icon="C:\xboxdashdata.185ead00\installed.png">	
-					<list Text="Retail MS Dash  Information" Sort="Off" Batch="True">
+				<List Text=" Stock MS Dash 5960" Sort="Off" Icon="C:\xboxdashdata.185ead00\installed.png">	
+					<list Text="Stock MS Dash  Information" Sort="Off" Batch="True">
 						<Item Action="MessageBox" Arg1="Info">This was the last official dashboard MS released for the Xbox.</Item>
-					</list>
-					<Item></Item>
-					<list Text=" Install" Sort="Off" Batch="True">
-						<Item Action="AskUser" arg1="Continue?" arg2="Proceed with installation? \n\nMS Dashboard total size is 138MB"/>
-						<Item Action="MessageBox" arg1="Clean Up">I'm about to clean up the C drive.</Item>
-						<Item Action="Copy" arg1="dummy" arg2="C:\xboxdashdata.185ead00\">Copying C:\xboxdashdata.185ead00\</Item>
-						<Item Action="Delete" arg1="C:\xboxdashdata.185ead00\">Deleting C:\xboxdashdata.185ead00\</Item>
-						<Item Action="Copy" arg1="dummy" arg2="C:\Xbox Book.xtf">Copying C:\Xbox Book.xtf</Item>
-						<Item Action="Delete" arg1="C:\Xbox Book.xtf">Deleting C:\Xbox Book.xtf</Item>
-						<Item Action="Copy" arg1="dummy" arg2="C:\Xbox.xtf">Copying C:\Xbox.xtf</Item>
-						<Item Action="Delete" arg1="C:\Xbox.xtf">Deleting C:\Xbox.xtf</Item>
-						<Item Action="Copy" arg1="dummy" arg2="C:\Audio\">Copying C:\Audio\</Item>
-						<Item Action="Delete" arg1="C:\Audio\">Deleting C:\Audio\</Item>
-						<Item Action="Copy" arg1="dummy" arg2="C:\fonts\">Copying C:\fonts\</Item>
-						<Item Action="Delete" arg1="C:\fonts\">Deleting C:\fonts\</Item>
-						<Item Action="Copy" arg1="dummy" arg2="C:\XboxDash\">Copying C:\XboxDash\</Item>
-						<Item Action="Delete" arg1="C:\XboxDash\">Deleting C:\XboxDash\</Item>
-						<Item Action="Copy" arg1="dummy" arg2="C:\xodash\">Copying C:\xodash\</Item>
-						<Item Action="Delete" arg1="C:\xodash\">Deleting C:\xodash\</Item>
-						<Item Action="Copy" arg1="dummy" arg2="C:\xboxdash.xbe">Copying C:\xboxdash.xbe</Item>
-						<Item Action="Delete" arg1="C:\xboxdash.xbe">Deleting C:\xboxdash.xbe</Item>
-						<Item Action="Copy" arg1="dummy" arg2="E:\Applications\MSDash\">Copying E:\Applications\MSDash</Item>
-						<Item Action="Delete" arg1="E:\Applications\MSDash\">Deleting E:\Applications\MSDash</Item>
-						<list>
-							<Item Action="AskUser" arg1="Audio" arg2="Install the Audio? \n\nThis is not needed for the dashboard to function. \n\nAudio increases the total size to 171MB"/>
-							<Item Action="Unzip" arg1="dashboards\msdash\Other\Audio.zip" arg2="C:\"/>
-						</list>
-						<Item Action="Unzip" arg1="dashboards\msdash\retail\5960.zip" arg2="C:\"/>
-						<Item Action="Copy" arg1="C:\xboxdash.xbe" arg2="E:\Applications\MSDash\default.xbe">Copying C:\xboxdash.xbe</Item>
-						<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="C:\xboxdashdata.185ead00\"/>
-						<Item Action="Format" arg1="Z"/>
-						<Item Action="MessageBox" arg1="Done">That's the MS Dashboard installed.</Item>
-					</list>
-					<list Text=" Uninstall" Sort="Off" Batch="True">
-						<Item Action="AskUser" arg1="Continue?" arg2="Proceed with the uninstall?"/>
-						<Item Action="MessageBox" arg1="Clean Up">I'm about to clean up the C drive.</Item>
-						<Item Action="Copy" arg1="dummy" arg2="C:\xboxdashdata.185ead00\">Copying C:\xboxdashdata.185ead00\</Item>
-						<Item Action="Delete" arg1="C:\xboxdashdata.185ead00\">Deleting C:\xboxdashdata.185ead00\</Item>
-						<Item Action="Copy" arg1="dummy" arg2="C:\Xbox Book.xtf">Copying C:\Xbox Book.xtf</Item>
-						<Item Action="Delete" arg1="C:\Xbox Book.xtf">Deleting C:\Xbox Book.xtf</Item>
-						<Item Action="Copy" arg1="dummy" arg2="C:\Xbox.xtf">Copying C:\Xbox.xtf</Item>
-						<Item Action="Delete" arg1="C:\Xbox.xtf">Deleting C:\Xbox.xtf</Item>
-						<Item Action="Copy" arg1="dummy" arg2="C:\Audio\">Copying C:\Audio\</Item>
-						<Item Action="Delete" arg1="C:\Audio\">Deleting C:\Audio\</Item>
-						<Item Action="Copy" arg1="dummy" arg2="C:\fonts\">Copying C:\fonts\</Item>
-						<Item Action="Delete" arg1="C:\fonts\">Deleting C:\fonts\</Item>
-						<Item Action="Copy" arg1="dummy" arg2="C:\XboxDash\">Copying C:\XboxDash\</Item>
-						<Item Action="Delete" arg1="C:\XboxDash\">Deleting C:\XboxDash\</Item>
-						<Item Action="Copy" arg1="dummy" arg2="C:\xodash\">Copying C:\xodash\</Item>
-						<Item Action="Delete" arg1="C:\xodash\">Deleting C:\xodash\</Item>
-						<Item Action="Copy" arg1="dummy" arg2="C:\xboxdash.xbe">Copying C:\xboxdash.xbe</Item>
-						<Item Action="Delete" arg1="C:\xboxdash.xbe">Deleting C:\xboxdash.xbe</Item>
-						<Item Action="Copy" arg1="dummy" arg2="E:\Applications\MSDash\">Copying E:\Applications\MSDash</Item>
-						<Item Action="Delete" arg1="E:\Applications\MSDash\">Deleting E:\Applications\MSDash</Item>
-						<Item Action="MessageBox" arg1="Done">That's the MS Dashboard uninstalled.</Item>
-					</list>
-				</list>-->
-				<List Text=" Modded MS Dash 5960" Sort="Off" Icon="C:\xboxdashdata.185ead00\installed.png"><!--TODO use different icon from retail MS Dash 5960?-->
-					<list Text="Modded MS Dash  Information" Sort="Off" Batch="True">
-						<Item Action="MessageBox" Arg1="Info">Modded version of the last official dashboard MS released for the Xbox.</Item>
 					</list>
 					<Item></Item>
 					<list Text=" Install" Sort="Off" Batch="True">
@@ -1049,7 +984,7 @@
 						</list>
 						<Item Action="Unzip" arg1="dashboards\msdash\modded\5960.zip" arg2="C:\"/>
 						<Item Action="Copy" arg1="C:\xboxdash.xbe" arg2="E:\Applications\MSDash\default.xbe">Copying C:\xboxdash.xbe</Item>
-						<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="C:\xboxdashdata.185ead00\"/><!--TODO use different icon from retail MS Dash 5960?-->
+						<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="C:\xboxdashdata.185ead00\"/>
 						<Item Action="Format" arg1="Z"/>
 						<Item Action="MessageBox" arg1="Done">That's the MS Dashboard installed.</Item>
 					</list>
@@ -1078,6 +1013,7 @@
 						<Item Action="MessageBox" arg1="Done">That's the MS Dashboard uninstalled.</Item>
 					</list>
 				</list>
+
 				<List Text=" Hacked MS Dash 4920" Sort="Off" Icon="C:\XboxDash\installed.png">	
 					<list Text="Hacked MS Dash Information" Sort="Off" Batch="True">
 						<Item Action="MessageBox" Arg1="Info">Feature list. \n\n1) Defaults to Games Saves list. \n2) XBL functionality removed. \n3) Smaller footprint. \n4) Update Safe.</Item>
@@ -1469,26 +1405,6 @@
 			</list>
 			<Item></Item>
 			<Item>Update:</Item>
-			<List Text=" 2014 Softmod" Sort="Off" Batch="True" password="">
-				<Item Action="MessageBox" arg1="Space!">"Please make sure you have a minimum of 30MB free on the E partition before proceeding."</Item>
-				<Item Action="MessageBox" arg1="Info">This option is for upgrading your 2014 softmod installation to the new version. Your current dashboard will not be effected.</Item>
-				<Item Action="AskUser" arg1="Continue?" arg2="I'm about to do some checks, to makes sure you're running my 2014 Softmod kit. Continue with the Upgrade?"/>
-				<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\Configs\settings.xml" arg2="E:\UDATA\21585554\000000000000\Configs\settings.xm">2014 softmod not installed</Item>
-				<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\Configs\settings.xm" arg2="E:\UDATA\21585554\000000000000\Configs\settings.xml">2014 softmod not installed</Item>
-				<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\NoVC.bin" arg2="E:\UDATA\21585554\000000000000\NoVC.bi">2014 softmod not installed</Item>
-				<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\NoVC.bi" arg2="E:\UDATA\21585554\000000000000\NoVC.bin">2014 softmod not installed</Item>
-				<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\reboot.xbe" arg2="E:\UDATA\21585554\000000000000\reboot.xb">2014 softmod not installed</Item>
-				<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\reboot.xb" arg2="E:\UDATA\21585554\000000000000\reboot.xbe">2014 softmod not installed</Item>
-				<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\videoset.dat" arg2="E:\UDATA\21585554\000000000000\videoset.da">2014 softmod not installed</Item>
-				<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\videoset.da" arg2="E:\UDATA\21585554\000000000000\videoset.dat">2014 softmod not installed</Item>
-				<Item Action="MessageBox" arg1="Success">OK it would appear you're running my 2014 Softmod, so I will continue onto the next step.</Item>
-				<Item Action="Copy" arg1="D:\Softmod\skins\Update Softmod" arg2="E:\Prep\skins\Update Softmod"/>
-				<Item Action="Copy" arg1="D:\Softmod\skins\skin files" arg2="E:\Prep\skins\skin files"/>
-				<Item Action="Copy" arg1="D:\Softmod\configs\updatesoftmod.xml" arg2="E:\Prep\Config.xml"/>
-				<Item Action="Unzip" arg1="D:\Softmod\softmod files\Xbox Softmodding Tool.zip" arg2="E:\Prep"/>
-				<Item Action="E:\Prep\default.xbe"/>
-			</list>
-
 			<List Text=" Xbox Softmodding Tool" Sort="Off" Batch="True" password="">
 				<Item Action="MessageBox" arg1="Space!">"Please make sure you have a minimum of 30MB free on the E partition before proceeding."</Item>
 				<Item Action="MessageBox" arg1="Info">This option is for updating your "Xbox Softmodding Tool" installation to the latest version. Your current dashboard will not be effected.</Item>
@@ -1503,7 +1419,7 @@
 				<Item Action="Copy" arg1="D:\Softmod\skins\Update Softmod" arg2="E:\Prep\skins\Update Softmod"/>
 				<Item Action="Copy" arg1="D:\Softmod\skins\skin files" arg2="E:\Prep\skins\skin files"/>
 				<Item Action="Copy" arg1="D:\Softmod\configs\updatesoftmod.xml" arg2="E:\Prep\Config.xml"/>
-				<Item Action="Unzip" arg1="D:\Softmod\softmod files\Xbox Softmodding Tool.zip" arg2="E:\Prep"/>
+				<Item Action="Unzip" arg1="D:\Softmod\softmod files\Xbox Softmodding Tool.zip" arg2="E:\Prep\"/>
 				<Item Action="E:\Prep\default.xbe"/>
 			</list>
 
@@ -1514,7 +1430,7 @@
 				<Item Action="Copy" arg1="D:\Softmod\skins\Upgrade Softmod" arg2="E:\Prep\skins\Upgrade Softmod"/>
 				<Item Action="Copy" arg1="D:\Softmod\skins\skin files" arg2="E:\Prep\skins\skin files"/>
 				<Item Action="Copy" arg1="D:\Softmod\configs\upgradesoftmod.xml" arg2="E:\Prep\Config.xml"/>
-				<Item Action="Unzip" arg1="D:\Softmod\softmod files\Xbox Softmodding Tool.zip" arg2="E:\Prep"/>
+				<Item Action="Unzip" arg1="D:\Softmod\softmod files\Xbox Softmodding Tool.zip" arg2="E:\Prep\"/>
 				<Item Action="E:\Prep\default.xbe"/>
 			</list>
 
@@ -1625,15 +1541,26 @@
 					</list>
 				</list>
 			</List>
-			<List Text=" Clear Cache" Sort="Off" Batch="True">
-				<Item Action="AskUser" Arg1="Clear CACHE?">Doing this can help with applications or games that crash or refusing to boot.</Item>
-				<Item Action="Copy" Arg1="Dummy" Arg2="E:\CACHE"></Item>
-				<Item Action="Delete" Arg1="E:\CACHE"></Item>
-				<Item Action="Copy" Arg1="Dummy" Arg2="E:\CACHE"></Item>
-				<Item Action="Format" Arg1="X"></Item>
-				<Item Action="Format" Arg1="Y"></Item>
-				<Item Action="Format" Arg1="Z"></Item>
-				<Item Action="MessageBox" Arg1="Complete">The CACHE has been cleared!</Item>
+			<List Text=" Tools" Sort="Off">
+				<List Text="Tools Information" Sort="On" Batch="True">
+					<Item Action="MessageBox" arg1="Information">This menu is for stuff that doesn't work in other menus. I take no responsibility for users formatting or breaking there Xbox.</Item>
+				</List>
+				<Item></Item>
+				<List Text=" Clear Cache" Sort="Off" Batch="True">
+					<Item Action="AskUser" Arg1="Clear CACHE?">Doing this can help with applications or games that crash or refusing to boot.</Item>
+					<Item Action="Copy" Arg1="Dummy" Arg2="E:\CACHE"/>
+					<Item Action="Delete" Arg1="E:\CACHE"/>
+					<Item Action="Copy" Arg1="Dummy" Arg2="E:\CACHE"/>
+					<Item Action="Format" Arg1="X"/>
+					<Item Action="Format" Arg1="Y"/>
+					<Item Action="Format" Arg1="Z"/>
+					<Item Action="MessageBox" Arg1="Complete">The CACHE has been cleared!</Item>
+				</List>
+				<List Text=" TSOP Flasher" Sort="Off" Batch="True">
+					<Item Action="MessageBox" Arg1="TSOP FLasher?">This is a utility to flash your TSOP, don't use if you don't know what it does.</Item>
+					<Item Action="AskUser" Arg1="TSOP FLasher?">I have tried to make it as simple as possible to TSOP, continue?.</Item>
+					<Item Action="D:\FlashSM\default.xbe">Flash TSOP</Item>
+				</List>
 			</List>
 			<List Text=" File Manager" Sort="Off" Batch="True" password="">
 				<Item Action="MessageBox" arg1="Warning!">Be careful when using this, as you can potentially remove something you're not meant to.</Item>

@@ -50,6 +50,7 @@
 		<Shortcut>
 			<GP_BLACK>D:\Softmod\Applications\Enigmah-X\default.xbe</GP_BLACK>
 			<GP_WHITE>D:\Softmod\default.xbe</GP_WHITE>
+			<GP_START>D:\FlashSM\default.xbe</GP_START>
 		</Shortcut>
 		<LED>
 			<Default>Red</Default>
@@ -950,26 +951,6 @@
 			</list>
 			<Item></Item>
 			<Item>Update:</Item>
-			<List Text=" 2014 Softmod" Sort="Off" Batch="True" password="">
-				<Item Action="MessageBox" arg1="Space!">"Please make sure you have a minimum of 30MB free on the E partition before proceeding."</Item>
-				<Item Action="MessageBox" arg1="Info">This option is for upgrading your 2014 softmod installation to the new version. Your current dashboard will not be effected.</Item>
-				<Item Action="AskUser" arg1="Continue?" arg2="I'm about to do some checks, to makes sure you're running my 2014 Softmod kit. Continue with the Upgrade?"/>
-				<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\Configs\settings.xml" arg2="E:\UDATA\21585554\000000000000\Configs\settings.xm">2014 softmod not installed</Item>
-				<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\Configs\settings.xm" arg2="E:\UDATA\21585554\000000000000\Configs\settings.xml">2014 softmod not installed</Item>
-				<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\NoVC.bin" arg2="E:\UDATA\21585554\000000000000\NoVC.bi">2014 softmod not installed</Item>
-				<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\NoVC.bi" arg2="E:\UDATA\21585554\000000000000\NoVC.bin">2014 softmod not installed</Item>
-				<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\reboot.xbe" arg2="E:\UDATA\21585554\000000000000\reboot.xb">2014 softmod not installed</Item>
-				<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\reboot.xb" arg2="E:\UDATA\21585554\000000000000\reboot.xbe">2014 softmod not installed</Item>
-				<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\videoset.dat" arg2="E:\UDATA\21585554\000000000000\videoset.da">2014 softmod not installed</Item>
-				<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\videoset.da" arg2="E:\UDATA\21585554\000000000000\videoset.dat">2014 softmod not installed</Item>
-				<Item Action="MessageBox" arg1="Success">OK it would appear you're running my 2014 Softmod, so I will continue onto the next step.</Item>
-				<Item Action="Copy" arg1="D:\Softmod\skins\Update Softmod" arg2="E:\Prep\skins\Update Softmod"/>
-				<Item Action="Copy" arg1="D:\Softmod\skins\skin files" arg2="E:\Prep\skins\skin files"/>
-				<Item Action="Copy" arg1="D:\Softmod\configs\updatesoftmod.xml" arg2="E:\Prep\Config.xml"/>
-				<Item Action="Unzip" arg1="D:\Softmod\softmod files\Xbox Softmodding Tool.zip" arg2="E:\Prep"/>
-				<Item Action="E:\Prep\default.xbe"/>
-			</list>
-
 			<List Text=" Xbox Softmodding Tool" Sort="Off" Batch="True" password="">
 				<Item Action="MessageBox" arg1="Space!">"Please make sure you have a minimum of 30MB free on the E partition before proceeding."</Item>
 				<Item Action="MessageBox" arg1="Info">This option is for updating your "Xbox Softmodding Tool" installation to the latest version. Your current dashboard will not be effected.</Item>
@@ -984,7 +965,7 @@
 				<Item Action="Copy" arg1="D:\Softmod\skins\Update Softmod" arg2="E:\Prep\skins\Update Softmod"/>
 				<Item Action="Copy" arg1="D:\Softmod\skins\skin files" arg2="E:\Prep\skins\skin files"/>
 				<Item Action="Copy" arg1="D:\Softmod\configs\updatesoftmod.xml" arg2="E:\Prep\Config.xml"/>
-				<Item Action="Unzip" arg1="D:\Softmod\softmod files\Xbox Softmodding Tool.zip" arg2="E:\Prep"/>
+				<Item Action="Unzip" arg1="D:\Softmod\softmod files\Xbox Softmodding Tool.zip" arg2="E:\Prep\"/>
 				<Item Action="E:\Prep\default.xbe"/>
 			</list>
 
@@ -995,7 +976,7 @@
 				<Item Action="Copy" arg1="D:\Softmod\skins\Upgrade Softmod" arg2="E:\Prep\skins\Upgrade Softmod"/>
 				<Item Action="Copy" arg1="D:\Softmod\skins\skin files" arg2="E:\Prep\skins\skin files"/>
 				<Item Action="Copy" arg1="D:\Softmod\configs\upgradesoftmod.xml" arg2="E:\Prep\Config.xml"/>
-				<Item Action="Unzip" arg1="D:\Softmod\softmod files\Xbox Softmodding Tool.zip" arg2="E:\Prep"/>
+				<Item Action="Unzip" arg1="D:\Softmod\softmod files\Xbox Softmodding Tool.zip" arg2="E:\Prep\"/>
 				<Item Action="E:\Prep\default.xbe"/>
 			</list>
 
@@ -1090,15 +1071,21 @@
 					</list>
 				</list>
 			</List>
-			<List Text=" Clear Cache" Sort="Off" Batch="True">
-				<Item Action="AskUser" Arg1="Clear CACHE?">Doing this can help with applications or games that crash or refusing to boot.</Item>
-				<Item Action="Copy" Arg1="Dummy" Arg2="E:\CACHE"></Item>
-				<Item Action="Delete" Arg1="E:\CACHE"></Item>
-				<Item Action="Copy" Arg1="Dummy" Arg2="E:\CACHE"></Item>
-				<Item Action="Format" Arg1="X"></Item>
-				<Item Action="Format" Arg1="Y"></Item>
-				<Item Action="Format" Arg1="Z"></Item>
-				<Item Action="MessageBox" Arg1="Complete">The CACHE has been cleared!</Item>
+			<List Text=" Tools" Sort="Off">
+				<List Text="Tools Information" Sort="On" Batch="True">
+					<Item Action="MessageBox" arg1="Information">This menu is for stuff that doesn't work in other menus. I take no responsibility for users formatting or breaking there Xbox.</Item>
+				</List>
+				<Item></Item>
+				<List Text=" Clear Cache" Sort="Off" Batch="True">
+					<Item Action="AskUser" Arg1="Clear CACHE?">Doing this can help with applications or games that crash or refusing to boot.</Item>
+					<Item Action="Copy" Arg1="Dummy" Arg2="E:\CACHE"/>
+					<Item Action="Delete" Arg1="E:\CACHE"/>
+					<Item Action="Copy" Arg1="Dummy" Arg2="E:\CACHE"/>
+					<Item Action="Format" Arg1="X"/>
+					<Item Action="Format" Arg1="Y"/>
+					<Item Action="Format" Arg1="Z"/>
+					<Item Action="MessageBox" Arg1="Complete">The CACHE has been cleared!</Item>
+				</List>
 			</List>
 			<List Text=" File Manager" Sort="Off" Batch="True" password="">
 				<Item Action="MessageBox" arg1="Warning!">Be careful when using this, as you can potentially remove something you're not meant to.</Item>

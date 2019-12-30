@@ -95,6 +95,10 @@ private:
 	void	SetLanguage();
 	void	CheckBios();
 	void	CreateBiosBackup();
+	void	TSOPCleanup();
+	void	XBST_Softmodded_System();
+	void	Other_Softmodded_System();
+	void	Hardmodded_System();
 	
 	/////////////////////////////////////////
 	void	PatchXBEFiles();

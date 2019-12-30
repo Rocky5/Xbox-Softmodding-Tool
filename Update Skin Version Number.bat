@@ -1,5 +1,6 @@
 @Echo off & SetLocal EnableDelayedExpansion & Mode con:cols=100 lines=10 & Color 0B
 Title Update Skin Version Number
+Set "Winrar=%CD%\Other\Tools\Winrar\winrar.exe"
 
 Set "Skin1=%CD%\Save Folder\nkpatcher Settings\skins\Dashboard"
 Set "Skin2=%CD%\Save Folder\nkpatcher Settings\skins\NKPatcher Settings"
@@ -12,11 +13,14 @@ Set "Skin8=%CD%\Extras Disc\Softmod\skins\ShadowC"
 Set "Skin9=%CD%\Extras Disc\Softmod\skins\Softmod"
 Set "Skin10=%CD%\Extras Disc\Softmod\skins\Update Softmod"
 Set "Skin11=%CD%\Extras Disc\Softmod\skins\Upgrade Softmod"
-Set "Skin11=%CD%\Extras Disc\Hardmod\skins\Hardmod"
-Set "Skin12=%CD%\Installer Variants\XBHDM Build\C\installer\skins\Softmod"
-Set "Skin13=%CD%\Installer Variants\Quick Upgrade\Quick Upgrade\skins\Softmod"
-Set "Skin14=%CD%\Installer Variants\Quick Update\Quick Update\skins\Softmod"
-Set "Skin15=%CD%\Installer Variants\UDDAE\resoftmod dash\skins\ReSoftmod Dash"
+Set "Skin12=%CD%\Extras Disc\Hardmod\skins\Hardmod"
+Set "Skin13=%CD%\Extras Disc\FlashSM\skins\Flasher"
+Set "Skin14=%CD%\Extras Disc\FlashSM\cleanup\skins\CleanupHM"
+Set "Skin15=%CD%\Extras Disc\FlashSM\cleanup\skins\CleanupSM"
+Set "Skin16=%CD%\Installer Variants\XBHDM Build\C\installer\skins\Softmod"
+Set "Skin17=%CD%\Installer Variants\Quick Upgrade\Quick Upgrade\skins\Softmod"
+Set "Skin18=%CD%\Installer Variants\Quick Update\Quick Update\skins\Softmod"
+Set "Skin19=%CD%\Installer Variants\UDDAE\resoftmod dash\skins\ReSoftmod Dash"
 
 Set "BuildFileLocation=%CD%\Other"
 
@@ -50,8 +54,14 @@ Call Other\Tools\repl.bat "<Version>%old_version%</Version>" "<Version>%replace%
 Call Other\Tools\repl.bat "<Version>%old_version%</Version>" "<Version>%replace%</Version>" L < "%Skin13%\skin.xml" >"%Skin13%\tmp.xml" & Del "%Skin13%\skin.xml" & rename "%Skin13%\tmp.xml" "skin.xml"
 Call Other\Tools\repl.bat "<Version>%old_version%</Version>" "<Version>%replace%</Version>" L < "%Skin14%\skin.xml" >"%Skin14%\tmp.xml" & Del "%Skin14%\skin.xml" & rename "%Skin14%\tmp.xml" "skin.xml"
 Call Other\Tools\repl.bat "<Version>%old_version%</Version>" "<Version>%replace%</Version>" L < "%Skin15%\skin.xml" >"%Skin15%\tmp.xml" & Del "%Skin15%\skin.xml" & rename "%Skin15%\tmp.xml" "skin.xml"
+Call Other\Tools\repl.bat "<Version>%old_version%</Version>" "<Version>%replace%</Version>" L < "%Skin16%\skin.xml" >"%Skin16%\tmp.xml" & Del "%Skin16%\skin.xml" & rename "%Skin16%\tmp.xml" "skin.xml"
+Call Other\Tools\repl.bat "<Version>%old_version%</Version>" "<Version>%replace%</Version>" L < "%Skin17%\skin.xml" >"%Skin17%\tmp.xml" & Del "%Skin17%\skin.xml" & rename "%Skin17%\tmp.xml" "skin.xml"
+Call Other\Tools\repl.bat "<Version>%old_version%</Version>" "<Version>%replace%</Version>" L < "%Skin18%\skin.xml" >"%Skin18%\tmp.xml" & Del "%Skin18%\skin.xml" & rename "%Skin18%\tmp.xml" "skin.xml"
+Call Other\Tools\repl.bat "<Version>%old_version%</Version>" "<Version>%replace%</Version>" L < "%Skin19%\skin.xml" >"%Skin19%\tmp.xml" & Del "%Skin19%\skin.xml" & rename "%Skin19%\tmp.xml" "skin.xml"
 
 Call Other\Tools\repl.bat "Xbox Softmodding Tool v%old_version%" "Xbox Softmodding Tool v%replace%" L < "README.md" >"tmp.txt" & Del "README.md" & rename "tmp.txt" "README.md"
 Call Other\Tools\repl.bat "Xbox Softmodding Tool v%old_version%" "Xbox Softmodding Tool v%replace%" L < "Changes.txt" >"tmp.txt" & Del "Changes.txt" & rename "tmp.txt" "Changes.txt"
 
 :EOF
+CD "Installer Variants\UDDAE\"
+"%Winrar%" a -x*.db -afzip "..\..\Extras Disc\Softmod\Dashboards\msdash\other\UDDAE-C.zip" "resoftmod dash"

@@ -162,14 +162,6 @@
 					<Item Action="MessageBox" Arg1="Information">Advanced stuff, not much else I can really say lol.</Item>
 				</List>
 				<Item></Item>
-				<List Text="Remove Parental Controls" Sort="Off" Batch="True">
-					<Item Action="MessageBox" Arg1="Information">This will remove the parental controls from the Xbox.</Item>
-					<Item Action="AskUser" Arg1="Warning">This option has a mandatory restart. Would you like to continue? Note: NKPatcher Settings will reload after the reboot.</Item>
-					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox Softmod Tool Kit\dummy_file" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox softmod tool kit\Remove_PC.bin"/>
-					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox softmod tool kit\dummy_file" arg2="E:\Prep\RNKP.bin"/>
-					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox softmod tool kit\default.xbe" arg2="E:\Prep\default.xbe"/>
-					<Item Action="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox softmod tool kit\default.xbe">Xbox softmod tool kit</Item>
-				</List>
 				<List Text="2.1.1 Hard Drive" Sort="Off">
 					<List Text="Hard Drive Information" Sort="Off" Batch="True">
 						<Item Action="MessageBox" Arg1="Information">This will NULL the Xbox HDD key, so that you can build new Xbox HDDs with an all zero key. Means if you don't have the eeprom you don't need to worry.</Item>
@@ -361,6 +353,14 @@
 						<Item Action="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox softmod tool kit\default.xbe">Xbox softmod tool kit</Item>
 					</List>
 				</List>
+				<List Text="2.1.5 Remove Parental Controls" Sort="Off" Batch="True">
+					<Item Action="MessageBox" Arg1="Information">This will remove the parental controls from the Xbox.</Item>
+					<Item Action="AskUser" Arg1="Warning">This option has a mandatory restart. Would you like to continue? Note: NKPatcher Settings will reload after the reboot.</Item>
+					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox Softmod Tool Kit\dummy_file" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox softmod tool kit\Remove_PC.bin"/>
+					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox softmod tool kit\dummy_file" arg2="E:\Prep\RNKP.bin"/>
+					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox softmod tool kit\default.xbe" arg2="E:\Prep\default.xbe"/>
+					<Item Action="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox softmod tool kit\default.xbe">Xbox softmod tool kit</Item>
+				</List>
 			</List>
 			<Item></Item>
 			<Item></Item>
@@ -536,11 +536,6 @@
 					<Item Action="MessageBox" Arg1="Info">In here you can install the correct kernel font for your Xbox, or fix random crashes using the xft font delay.</Item>
 				</List>
 				<Item></Item>
-				<List Text="Backup Xbox Bios" Sort="Off" Batch="True" Icon="">
-					<Item Action="MessageBox" Arg1="Information">This will backup your Xbox bios to E:\Backups\BIOS.</Item>
-					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox Softmod Tool Kit\dummy_file" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox softmod tool kit\Backup_Bios.bin"/>
-					<Item Action="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox softmod tool kit\default.xbe">Restart</Item>
-				</List>
 				<List Text="5.1.1 Kernel Font Options" Sort="Off">
 					<List Text="Kernel Font Options Information" Sort="Off" Batch="True">
 						<Item Action="MessageBox" Arg1="Info">These options will install the proper kernel font for your Xbox Kernel or restore the generic version.</Item>
@@ -665,6 +660,11 @@
 					<Item></Item>
 					<Item></Item>
 					<Item>These Options Require A Restart</Item>
+				</List>
+				<List Text="5.1.3 Backup Xbox Bios" Sort="Off" Batch="True" Icon="">
+					<Item Action="MessageBox" Arg1="Information">This will backup your Xbox bios to E:\Backups\BIOS.</Item>
+					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox Softmod Tool Kit\dummy_file" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox softmod tool kit\Backup_Bios.bin"/>
+					<Item Action="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox softmod tool kit\default.xbe">Restart</Item>
 				</List>
 			</List>
 		</List>

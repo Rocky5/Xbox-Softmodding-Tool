@@ -43,7 +43,7 @@ extern "C" XPP_DEVICE_TYPE XDEVICE_TYPE_IR_REMOTE_TABLE;
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Shared paths
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-#define Retail_Bios_Hash_File				"D:\\Media\\xbe loader\\RetailMD5Hashes.ini"
+#define Retail_Bios_Hash_File				"D:\\Media\\RetailMD5Hashes.ini"
 #define Retail_Bios_Save_Path				"E:\\Backups\\BIOS\\bios.bin"
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // LED Colours
@@ -57,31 +57,6 @@ extern "C" XPP_DEVICE_TYPE XDEVICE_TYPE_IR_REMOTE_TABLE;
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Main Code
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-void ConfigMagicApp::CreateBiosBackup()
-{
-  CreateDirectory("E:\\Backups", NULL);
-  CreateDirectory("E:\\Backups\\BIOS", NULL);
-  FILE *fp;
-  DWORD addr        = FLASH_BASE_ADDRESS;
-  DWORD addr_kernel = KERNEL_BASE_ADDRESS;
-  char * flash_copy, data;
-  CXBoxFlash mbFlash;
-
-  flash_copy = (char *) malloc(0x100000);
-
-  if((fp = fopen(Retail_Bios_Save_Path, "wb")) != NULL)
-  {
-    for(int loop=0;loop<0x100000;loop++)
-    {
-        data = mbFlash.Read(addr++);
-        flash_copy[loop] = data;
-    }
-    fwrite(flash_copy, 0x100000, 1, fp);
-    fclose(fp);
-    free(flash_copy);
-  }
-}
-
 void ConfigMagicApp::CheckBios()
 {
 	BYTE data;
@@ -108,69 +83,171 @@ void ConfigMagicApp::CheckBios()
 		data = mbFlash.Read(addr++);
 		flash_copy[loop] = data;
 	}
-
+	if(g_Gamepads[0].hDevice && g_Gamepads[0].bPressedAnalogButtons[XINPUT_GAMEPAD_BLACK])
+	{
+		std::ifstream TXST_EnigmahX("D:\\Softmod\\Applications\\Enigmah-X\\default.xbe");
+		if (TXST_EnigmahX.good())
+		{
+			TXST_EnigmahX.close();
+			((LPXKControl_TextBox) m_ActiveForm->GetControl("txtStatus"))->SetText("Loading Enigmah-X");
+			Render();
+			Sleep(3000);
+			XKUtils::LaunchXBE("D:\\Softmod\\Applications\\Enigmah-X\\default.xbe");
+		}
+	}
 	// ((LPXKControl_TextBox) m_pFrmStatus->GetControl("txtStatusMsg"))->SetText("CHECKING BIOS");
 	// Render();
-	// Sleep(4000);
+	// Sleep(3000);
 	// Detect a 1024 KB Bios MD5
 	MD5Buffer (flash_copy,0,1024);
 	strcpy(BIOS_Name,CheckMD5(Listone, MD5_Sign));
+	strBiosName = BIOS_Name;
 	if ( strcmp(BIOS_Name, "Unknown") == 0)
 	{ 
-		bios_dumped = 0;
 		// Detect a 512 KB Bios MD5
 		MD5Buffer (flash_copy,0,512);
 		strcpy(BIOS_Name,CheckMD5(Listone, MD5_Sign));
+		strBiosName = BIOS_Name;
 		if ( strcmp(BIOS_Name,"Unknown") == 0)
 		{
-			bios_dumped = 0;
 			// Detect a 256 KB Bios MD5
 			MD5Buffer (flash_copy,0,256);
 			strcpy(BIOS_Name,CheckMD5(Listone, MD5_Sign));
+			strBiosName = BIOS_Name;
 			if ( strcmp(BIOS_Name,"Unknown") != 0)
 			{
-				bios_dumped = 0;
+				Hardmodded_System();
 			}
 			else
 			{		
-				bios_dumped = 1;
+				if ( (strBiosName == "Retail 3944") || (strBiosName == "Retail 4034") || (strBiosName == "Retail 4134") || (strBiosName == "Retail 4817") || (strBiosName == "Retail 5101") || (strBiosName == "Retail 5530") || (strBiosName == "Retail 5713") || (strBiosName == "Retail 5838") )
+				{
+					((LPXKControl_TextBox) m_pFrmStatus->GetControl("txtStatusMsg"))->SetText(strBiosName+" BIOS DETECTED");
+					XKUtils::MountDiskS();
+					std::ifstream TXST_Softmod("S:\\nkpatcher\\rescuedash\\resoftmod files.zip");
+					if (TXST_Softmod.good())
+					{
+						TXST_Softmod.close();
+						XBST_Softmodded_System();
+					}
+					else
+					{
+						Other_Softmodded_System();
+					}
+				}
 			}
 		}
 		else
 		{		
-			bios_dumped = 1;
+			if ( (strBiosName == "Retail 3944") || (strBiosName == "Retail 4034") || (strBiosName == "Retail 4134") || (strBiosName == "Retail 4817") || (strBiosName == "Retail 5101") || (strBiosName == "Retail 5530") || (strBiosName == "Retail 5713") || (strBiosName == "Retail 5838") )
+			{
+				((LPXKControl_TextBox) m_pFrmStatus->GetControl("txtStatusMsg"))->SetText(strBiosName+" BIOS DETECTED");
+				XKUtils::MountDiskS();
+				std::ifstream TXST_Softmod("S:\\nkpatcher\\rescuedash\\resoftmod files.zip");
+				if (TXST_Softmod.good())
+				{
+					TXST_Softmod.close();
+					XBST_Softmodded_System();
+				}
+				else
+				{
+					Other_Softmodded_System();
+				}
+			}
 		}
 	}
 	else
 	{		
-		bios_dumped = 1;
-	}
-	strBiosName = BIOS_Name;
-	if ( (bios_dumped == 1) && (strBiosName == "Retail 3944") || (strBiosName == "Retail 4034") || (strBiosName == "Retail 4134") || (strBiosName == "Retail 4817") || (strBiosName == "Retail 5101") || (strBiosName == "Retail 5530") || (strBiosName == "Retail 5713") || (strBiosName == "Retail 5838") )
-	{
-		// ((LPXKControl_TextBox) m_pFrmStatus->GetControl("txtStatusMsg"))->SetText(strBiosName+" BIOS DETECTED");
-		// ((LPXKControl_TextBox) m_ActiveForm->GetControl("txtStatus"))->SetText("Loading Softmod Menu");
-		// Render();
-		// Sleep(4000);
-		std::ifstream TXST_Softmod("S:\\nkpatcher\\rescuedash\\resoftmod files.zip");
-		if (TXST_Softmod.good())
+		if ( (strBiosName == "Retail 3944") || (strBiosName == "Retail 4034") || (strBiosName == "Retail 4134") || (strBiosName == "Retail 4817") || (strBiosName == "Retail 5101") || (strBiosName == "Retail 5530") || (strBiosName == "Retail 5713") || (strBiosName == "Retail 5838") )
 		{
-			LED_Flash_Orange;
-			XKUtils::LaunchXBE("D:\\Softmod\\default.xbe");
+			((LPXKControl_TextBox) m_pFrmStatus->GetControl("txtStatusMsg"))->SetText(strBiosName+" BIOS DETECTED");
+			XKUtils::MountDiskS();
+			std::ifstream TXST_Softmod("S:\\nkpatcher\\rescuedash\\resoftmod files.zip");
+			if (TXST_Softmod.good())
+			{
+				TXST_Softmod.close();
+				XBST_Softmodded_System();
+			}
+			else
+			{
+				
+			}
 		}
-		else
+	}
+}
+
+void ConfigMagicApp::XBST_Softmodded_System()
+{
+	if (g_Gamepads[0].hDevice && g_Gamepads[0].wPressedButtons & XINPUT_GAMEPAD_START)
+	{
+		std::ifstream TXST_FlashSMSoftmod("D:\\FlashSM\\default.xbe");
+		if (TXST_FlashSMSoftmod.good())
 		{
-			LED_Flash_Green;
-			XKUtils::LaunchXBE("D:\\OtherSM\\default.xbe");
+			TXST_FlashSMSoftmod.close();
+			LED_Flash_Red;
+			((LPXKControl_TextBox) m_ActiveForm->GetControl("txtStatus"))->SetText("Loading Xbox Softmodding Tools TSOP Flasher Menu");
+			Render();
+			XKUtils::MountDiskD();
+			Sleep(3000);
+			XKUtils::LaunchXBE("D:\\FlashSM\\default.xbe");
+		}
+	}
+	else if(g_Gamepads[0].hDevice && g_Gamepads[0].bPressedAnalogButtons[XINPUT_GAMEPAD_WHITE])
+	{
+		std::ifstream TXST_Shadowc("D:\\Softmod\\shadowc.xbe");
+		if (TXST_Shadowc.good())
+		{
+			TXST_Shadowc.close();
+			((LPXKControl_TextBox) m_ActiveForm->GetControl("txtStatus"))->SetText("Loading XBST menu with ShadowC disabled");
+			Render();
+			XKUtils::MountDiskD();
+			Sleep(3000);
+			XKUtils::LaunchXBE("D:\\Softmod\\shadowc.xbe");
 		}
 	}
 	else
 	{
-		// ((LPXKControl_TextBox) m_pFrmStatus->GetControl("txtStatusMsg"))->SetText("UNOFFICIAL MODE");
-		// ((LPXKControl_TextBox) m_ActiveForm->GetControl("txtStatus"))->SetText("Loading Hardmod menu");
-		// Render();
-		// Sleep(4000);
+		std::ifstream TXST_XBSTSoftmod("D:\\Softmod\\default.xbe");
+		if (TXST_XBSTSoftmod.good())
+		{
+			TXST_XBSTSoftmod.close();
+			LED_Flash_Orange;
+			((LPXKControl_TextBox) m_ActiveForm->GetControl("txtStatus"))->SetText("Loading Xbox Softmodding Tools Menu");
+			Render();
+			XKUtils::MountDiskD();
+			Sleep(3000);
+			XKUtils::LaunchXBE("D:\\Softmod\\default.xbe");
+		}
+	}
+}
+
+void ConfigMagicApp::Other_Softmodded_System()
+{
+	std::ifstream TXST_OtherSoftmod("D:\\OtherSM\\default.xbe");
+	if (TXST_OtherSoftmod.good())
+	{
+		TXST_OtherSoftmod.close();
+		LED_Flash_Green;
+		((LPXKControl_TextBox) m_ActiveForm->GetControl("txtStatus"))->SetText("Loading Other Softmod Menu");
+		Render();
+		XKUtils::MountDiskD();
+		Sleep(3000);
+		XKUtils::LaunchXBE("D:\\OtherSM\\default.xbe");
+	}
+}
+
+void ConfigMagicApp::Hardmodded_System()
+{
+	std::ifstream TXST_HardmodSoftmod("D:\\Hardmod\\default.xbe");
+	if (TXST_HardmodSoftmod.good())
+	{
+		TXST_HardmodSoftmod.close();
 		LED_Flash_Red;
+		((LPXKControl_TextBox) m_pFrmStatus->GetControl("txtStatusMsg"))->SetText("UNOFFICIAL/HACKED BIOS MODE");
+		((LPXKControl_TextBox) m_ActiveForm->GetControl("txtStatus"))->SetText("Loading Hardmod menu");
+		Render();
+		XKUtils::MountDiskD();
+		Sleep(3000);
 		XKUtils::LaunchXBE("D:\\Hardmod\\default.xbe");
 	}
 }
@@ -271,18 +348,19 @@ char* ConfigMagicApp::CheckMD5 (struct Bios *Listone, char *Sign)
 
 HRESULT ConfigMagicApp::Initialize()
 {
+	XKUtils::MountDiskC();
+	XKUtils::MountDiskE();
+	XKUtils::MountDiskS();
+	XKUtils::MountDiskX();
 	HRESULT retVal = S_OK;
 	m_pXKEEPROM = new XKEEPROM();
 	m_EnryptedRegionValid = FALSE;
 	m_XBOX_EEPROM_Current = FALSE;
 	//incase path is on these drives..
-	XKUtils::MountDiskC();
-	XKUtils::MountDiskE();
-	XKUtils::MountDiskS();
 	// Check for font files
-	retVal = m_XBFont1.Create(m_pd3dDevice, "D:\\Media\\xbe loader\\Font_Message.xpr");
-	retVal = m_XBFont2.Create(m_pd3dDevice, "D:\\Media\\xbe loader\\Font_Status.xpr");
-	//Load Settings from Config File.. 
+	retVal = m_XBFont1.Create(m_pd3dDevice, "D:\\media\\Font_Message.xpr");
+	retVal = m_XBFont2.Create(m_pd3dDevice, "D:\\media\\Font_Status.xpr");
+	//Load Settings from Config File..
 	LoadSettings();
 	//Initialise the display.
 	m_MenuXOffset = 0;
@@ -294,7 +372,9 @@ HRESULT ConfigMagicApp::Initialize()
 	m_ActiveForm = m_pFrmStatus;
 	((LPXKControl_TextBox) m_pFrmStatus->GetControl("txtStatusMsg"))->SetText("INITIALISING");
 	((LPXKControl_TextBox) m_ActiveForm->GetControl("txtStatus"))->SetText("Please Wait");
-	//CreateBiosBackup();
+	Render();
+	Sleep(1000);
+	XBInput_GetInput();
 	CheckBios();
 	return retVal;
 }
@@ -303,7 +383,7 @@ void ConfigMagicApp::InitScreen()
 {
 	m_pFrmStatus = new XKControl_Panel("Status", m_bgSprite, XOffset, YOffset, ScreenWidth,ScreenHeight);
 	// Check for image file
-	m_pFrmStatus->LoadImage("D:\\Media\\xbe loader\\background.png");
+	m_pFrmStatus->LoadImage("D:\\media\\background.png");
 	txtStatusMsg = new XKControl_TextBox("txtStatusMsg", m_bgSprite);
 	txtStatusMsg->SetBitmapFont(&m_XBFont1);
 	txtStatusMsg->SetTextColor(m_clrMessageTextColor);

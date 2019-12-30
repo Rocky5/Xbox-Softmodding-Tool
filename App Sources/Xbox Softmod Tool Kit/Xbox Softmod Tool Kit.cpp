@@ -298,7 +298,7 @@ void ConfigMagicApp::SetUpDashboard()
 		((LPXKControl_TextBox) m_ActiveForm->GetControl("txtStatus"))->SetText("Complete");
 		Render();
 		Sleep(1000);
-		std::ifstream IfDashExist(RunDashboard);
+		std::ifstream IfDashExist(Dashloader);
 		if (IfDashExist.good())
 		{
 			IfDashExist.close();
@@ -364,7 +364,7 @@ void ConfigMagicApp::SetUpDashboard()
 		((LPXKControl_TextBox) m_ActiveForm->GetControl("txtStatus"))->SetText("Complete");
 		Render();
 		Sleep(1000);
-		std::ifstream IfDashExist(RunDashboard);
+		std::ifstream IfDashExist(Dashloader);
 		if (IfDashExist.good())
 		{
 			IfDashExist.close();
@@ -2229,14 +2229,14 @@ void ConfigMagicApp::InitScreen()
 {
 	m_pFrmStatus = new XKControl_Panel("Status", m_bgSprite, XOffset, YOffset, ScreenWidth,ScreenHeight);
 	// Check for image file
-	std::ifstream imageexist("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\modules\\Xbox softmod tool kit\\Media\\Status.png");
+	std::ifstream imageexist("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\modules\\Xbox softmod tool kit\\Media\\background.png");
 	if (imageexist.good())
 	{
-		m_pFrmStatus->LoadImage("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\modules\\Xbox softmod tool kit\\Media\\Status.png");
+		m_pFrmStatus->LoadImage("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\modules\\Xbox softmod tool kit\\Media\\background.png");
 	}
 	else
 	{	
-		m_pFrmStatus->LoadImage("D:\\Media\\Status.png");
+		m_pFrmStatus->LoadImage("D:\\Media\\background.png");
 	}
 	txtStatusMsg = new XKControl_TextBox("txtStatusMsg", m_bgSprite);
 	txtStatusMsg->SetBitmapFont(&m_XBFont1);

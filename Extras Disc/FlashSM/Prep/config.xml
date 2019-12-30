@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Unleashx>
+	<Settings>
+		<Preference>
+			<AbortOnError>Yes</AbortOnError>
+			<ContextMenu AllowUninstall="No" AllowItemEdit="No" AllowRecentList="No" LinkToSave="No" LinkToGame="No"/>
+			<Skin Path="Skins\">TSOPFlash</Skin>
+			<VideoSettings Soften="No" Widescreen="No" UsePAL60="No" FastRefresh="No" EnableTextureCompression="No" Use720P="No" Use480P="Yes" FilterLevel="0"/>
+			<LiveUpdate AutoCheck="No"/>
+			<AutoVideoMode MultiRegion="Off" UsePAL60="No">no</AutoVideoMode>
+			<Games AutoLaunch="No"/>
+			<DVD AutoLaunch="No"/>
+			<AudioCD AutoLaunch="No"/>
+			<EnableDriveF>Yes</EnableDriveF>
+			<EnableDriveG>Yes</EnableDriveG>
+			<FanSpeed>1.00</FanSpeed>
+			<Use24HFormat>Yes</Use24HFormat>
+			<SNTP Synchronize="Yes" HTTP="Yes" Port="80">143.210.16.201</SNTP>
+			<AutoSetTime>Yes</AutoSetTime>
+			<ScreenSaver Wait="300">
+				<Text>Xbox Softmodding Tool</Text>
+			</ScreenSaver>
+			<LanguageFile>E:\Prep\skins\TSOPFlash\lang.xml</LanguageFile>
+		</Preference>
+		<Network Type="DHCP" Enable="Yes">
+			<AutoDetect>yes</AutoDetect>
+			<IP>192.168.0.6</IP>
+			<Subnet>255.255.255.0</Subnet>
+			<Gateway>192.168.0.1</Gateway>
+			<DNS1>192.168.0.1</DNS1>
+		</Network>
+		<FTP Enable="Yes">
+			<MaxUsers>10</MaxUsers>
+			<AllowAnon>No</AllowAnon>
+		</FTP>
+		<Audio>
+			<EnableSoundEffect>Yes</EnableSoundEffect>
+			<Ambient>E:\Prep\skins\skin files\music\ambient.wav</Ambient>
+			<SoundVolume>50</SoundVolume>
+			<Scroll>dummy.wav</Scroll>
+			<Select>dummy.wav</Select>
+			<Action_Complete>dummy.wav</Action_Complete>
+			<Keyboard_Stroke>dummy.wav</Keyboard_Stroke>
+			<Back>dummy.wav</Back>
+			<Menu_Up>dummy.wav</Menu_Up>
+			<Menu_Down>dummy.wav</Menu_Down>
+			<Game_Save_Select>dummy.wav</Game_Save_Select>
+			<Memory_Slot>dummy.wav</Memory_Slot>
+		</Audio>
+		<LED>
+			<Default>Red</Default>
+		</LED>
+	</Settings>
+	<Menu>
+
+		<List Text="Proceed with Flash" Sort="Off">
+
+			<List Text="Yes, I really want to" Sort="Off" Batch="True">
+				<!-- Cleanup & put a folder in C for the end user to read -->
+				<Item Action="MessageBox" Arg1="Note">I need to disable 480p during this process, I will re-enable it after everything is done.</Item>
+				<Item Action="UnZip" arg1="E:\Prep\stage2.zip" arg2="E:\Prep\">UnZip stage2 files to E:\Prep</Item>
+				<Item Action="Copy" arg1="E:\Prep\C files\" arg2="C:\">Copy C files to C:\</Item>
+				<Item Action="TrayOpen">Tray open</Item>
+				<Item Action="Format" arg1="X">Format X</Item>
+				<Item Action="Format" arg1="Y">Format Y</Item>
+				<Item Action="Format" arg1="Z">Format Z</Item>
+				<Item Action="MessageBox" Arg1="Done">Please remove the disc from the tray &amp; press (A)</Item>
+				<Item Action="TrayClose">Tray close</Item>
+				<Item Action="MessageBox" Arg1="Done">The system will do a power cycle and finish the process.</Item>
+				<Item Action="E:\Prep\default.xbe">Restart</Item>
+			</list>
+
+			<Item></Item>
+
+			<Item>Press (B) to Exit this menu.</Item>
+		</list>
+
+		<Item></Item>
+
+		<List Text="Exit & Clean up" Sort="Off">
+			<List Text="Get me out of here. I don't want to flash my TSOP." Sort="Off" Batch="True">
+				<list>
+					<Item Action="Delete" arg1="E:\Prep">Delete prep</Item>
+					<Item Action="Format" arg1="X">Format X</Item>
+					<Item Action="Format" arg1="Y">Format Y</Item>
+					<Item Action="Format" arg1="Z">Format Z</Item>
+					<Item Action="Restart">Restart</Item>
+				</list>
+			</list>
+
+			<Item></Item>
+
+			<Item>Press (B) to Exit this menu.</Item>
+		</list>
+	</Menu>
+</Unleashx>

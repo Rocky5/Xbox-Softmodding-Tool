@@ -1,4 +1,4 @@
-@Echo off & COLOR 1B & TITLE EEPROM Backeruper Build Batch
+@Echo off & COLOR 1B & TITLE Xbox Softmod Tool Kit Batch
 goto getadminwrites >NUL
 
 :start
