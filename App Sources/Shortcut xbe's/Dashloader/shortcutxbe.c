@@ -327,7 +327,7 @@ int main(int argc,char* argv[])
 		}
 		if( m_DefaultGamepad.bPressedAnalogButtons[XINPUT_GAMEPAD_X] )
 		{
-			strcpy(shortcut, dashloader_Files_path"C_Button_Dash.cfg");
+			strcpy(shortcut, dashloader_Files_path"X_Button_Dash.cfg");
 		}
 		if( m_DefaultGamepad.bPressedAnalogButtons[XINPUT_GAMEPAD_Y] )
 		{
