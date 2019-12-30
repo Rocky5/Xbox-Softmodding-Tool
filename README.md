@@ -82,6 +82,14 @@ I set out to try and make the softmodding process as pain free and user friendly
 </details>
 
 
+## Custom face button XBE launching.
+
+You can create up to 8 custom boot locations that can be activated with the hold of a button on boot.
+
+Currently it supports A,B,X,Y,Start,Back,White and black, Configs are located in E:/UDATA/21585554/000000000000/nkpatcher settings/dashloader/
+
+Simply open the corresponding .cfg file and add the absolute path of what ever you want to load.
+
 
 ## NKPatcher Settings:
 
