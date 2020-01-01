@@ -321,35 +321,35 @@ int main(int argc,char* argv[])
 		{
 			strcpy(shortcut, dashloader_Files_path"A_Button_Dash.cfg");
 		}
-		if( m_DefaultGamepad.bPressedAnalogButtons[XINPUT_GAMEPAD_B] )
+		else if( m_DefaultGamepad.bPressedAnalogButtons[XINPUT_GAMEPAD_B] )
 		{
 			strcpy(shortcut, dashloader_Files_path"B_Button_Dash.cfg");
 		}
-		if( m_DefaultGamepad.bPressedAnalogButtons[XINPUT_GAMEPAD_X] )
+		else if( m_DefaultGamepad.bPressedAnalogButtons[XINPUT_GAMEPAD_X] )
 		{
 			strcpy(shortcut, dashloader_Files_path"X_Button_Dash.cfg");
 		}
-		if( m_DefaultGamepad.bPressedAnalogButtons[XINPUT_GAMEPAD_Y] )
+		else if( m_DefaultGamepad.bPressedAnalogButtons[XINPUT_GAMEPAD_Y] )
 		{
 			strcpy(shortcut, dashloader_Files_path"Y_Button_Dash.cfg");
 		}
-		if( m_DefaultGamepad.bPressedAnalogButtons[XINPUT_GAMEPAD_START] )
+		else if( m_DefaultGamepad.wPressedButtons & XINPUT_GAMEPAD_START )
 		{
 			strcpy(shortcut, dashloader_Files_path"Start_Button_Dash.cfg");
 		}
-		if( m_DefaultGamepad.bPressedAnalogButtons[XINPUT_GAMEPAD_BACK] )
+		else if( m_DefaultGamepad.wPressedButtons & XINPUT_GAMEPAD_BACK )
 		{
 			strcpy(shortcut, dashloader_Files_path"Back_Button_Dash.cfg");
 		}
-		if( m_DefaultGamepad.bPressedAnalogButtons[XINPUT_GAMEPAD_BLACK] )
+		else if( m_DefaultGamepad.bPressedAnalogButtons[XINPUT_GAMEPAD_BLACK] )
 		{
 			strcpy(shortcut, dashloader_Files_path"Black_Button_Dash.cfg");
 		}
-		if( m_DefaultGamepad.bPressedAnalogButtons[XINPUT_GAMEPAD_WHITE] )
+		else if( m_DefaultGamepad.bPressedAnalogButtons[XINPUT_GAMEPAD_WHITE] )
 		{
 			strcpy(shortcut, dashloader_Files_path"White_Button_Dash.cfg");
 		}
-		if( m_DefaultGamepad.bPressedAnalogButtons[XINPUT_GAMEPAD_Y] && (m_DefaultGamepad.wPressedButtons & XINPUT_GAMEPAD_START) )
+		else if( m_DefaultGamepad.bPressedAnalogButtons[XINPUT_GAMEPAD_Y] && (m_DefaultGamepad.wPressedButtons & XINPUT_GAMEPAD_START) )
 		{
 			debuglog("\n------------------------------------------------");
 			debuglog("Rescue Dashboard Locations");

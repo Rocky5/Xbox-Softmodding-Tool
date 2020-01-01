@@ -12,6 +12,8 @@
 		Backup Bios in NKPatcher settings will dump proper sized bios.
 		( no more 1MB bios for v1.6 xbox for example )
 		Added a new app Dashloader Customizer so you can set your custom face button launch paths easily.
+		Fixed dashloader not working with the start and back buttons
+		( face button launching, forgot they ain't analogue buttons )
 
 
 =========================================
