@@ -5,6 +5,16 @@
 =========================================
 
 =========================================
+	Update: December 1 2020
+=========================================
+		Extras Disc should now detect retail bios properly.
+		( no more crashing )
+		Backup Bios in NKPatcher settings will dump proper sized bios.
+		( no more 1MB bios for v1.6 xbox for example )
+		Added a new app Dashloader Customizer so you can set your custom face button launch paths easily.
+
+
+=========================================
 	Update: December 30 2019
 =========================================
 		Updated Dashloader to support multiple dash configs via pressing face buttons.

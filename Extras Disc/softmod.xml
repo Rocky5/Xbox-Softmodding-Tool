@@ -65,6 +65,60 @@
 				<Item Action="MessageBox" arg1="Information">In this menu you can install applications to do various things, like add trainers to games or copy games to your HDD.</Item>
 			</List>
 			<Item></Item>
+			<List Text=" Dashloader Customizer" Sort="Off">
+				<List Text="Dashloader Customizer Information" Sort="Off" Batch="True">
+					<Item Action="MessageBox" arg1="Information">Dashloader Customizer is used to configure the new face button dash loading when booting the xbox.</Item>
+				</List>
+				<Item></Item>
+				<Item>Install to:</Item>
+				<List Text=" C:\Applications\" Sort="Off" Batch="True" Icon="C:\Applications\Dashloader Customizer\installed.png">
+					<Item Action="AskUser" arg1="Continue" arg2="This will install Dashloader Customizer to C:\Applications\Dashloader Customizer\ if there is currently a application residing there it will be overwritten."/>
+					<Item Action="Copy" arg1="dummy" arg2="C:\Applications\Dashloader Customizer"/>
+					<Item Action="Delete" arg1="C:\Applications\Dashloader Customizer">Remove old C:\Applications\Dashloader Customizer\</Item>
+					<Item Action="Unzip" arg1="D:\Softmod\Applications\Dashloader Customizer.zip" arg2="C:\Applications\Dashloader Customizer">Installing app to C:\Applications\Dashloader Customizer\</Item>
+					<Item Action="Format" arg1="Z"/>
+					<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="C:\Applications\Dashloader Customizer"/>
+					<Item Action="MessageBox" arg1="Done">That's Dashloader Customizer installed to "C:\Applications\Dashloader Customizer\"</Item>
+				</list>
+				<List Text=" E:\Applications\" Sort="Off" Batch="True" Icon="E:\Applications\Dashloader Customizer\installed.png">
+					<Item Action="AskUser" arg1="Continue" arg2="This will install Dashloader Customizer to E:\Applications\Dashloader Customizer\ if there is currently a application residing there it will be overwritten."/>
+					<Item Action="Copy" arg1="dummy" arg2="E:\Applications\Dashloader Customizer"/>
+					<Item Action="Delete" arg1="E:\Applications\Dashloader Customizer">Remove old E:\Applications\Dashloader Customizer\</Item>
+					<Item Action="Unzip" arg1="D:\Softmod\Applications\Dashloader Customizer.zip" arg2="E:\Applications\Dashloader Customizer">Installing app to E:\Applications\Dashloader Customizer\</Item>
+					<Item Action="Format" arg1="Z"/>
+					<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="E:\Applications\Dashloader Customizer"/>
+					<Item Action="MessageBox" arg1="Done">That's Dashloader Customizer installed to "E:\Applications\Dashloader Customizer\"</Item>
+				</list>
+				<List Text=" F:\Applications\" Sort="Off" Batch="True" Icon="F:\Applications\Dashloader Customizer\installed.png">
+					<Item Action="AskUser" arg1="Continue" arg2="This will install Dashloader Customizer to F:\Applications\Dashloader Customizer\ if there is currently a application residing there it will be overwritten."/>
+					<list>
+						<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="F:\test_partition"/>
+						<Item Action="Rename" arg1="F:\test_partition" arg2="F:\test_partition_">No F Partition found</Item>
+						<Item Action="Delete" arg="F:\test_partition_"/>
+					</list>
+					<Item Action="Copy" arg1="dummy" arg2="F:\Applications\Dashloader Customizer"/>
+					<Item Action="Delete" arg1="F:\Applications\Dashloader Customizer">Remove old F:\Applications\Dashloader Customizer\</Item>
+					<Item Action="Unzip" arg1="D:\Softmod\Applications\Dashloader Customizer.zip" arg2="F:\Applications\Dashloader Customizer">Installing app to E:\Applications\Dashloader Customizer\</Item>
+					<Item Action="Format" arg1="Z"/>
+					<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="F:\Applications\Dashloader Customizer"/>
+					<Item Action="MessageBox" arg1="Done">That's Dashloader Customizer installed to "F:\Applications\Dashloader Customizer\"</Item>
+				</list>
+				<List Text=" G:\Applications\" Sort="Off" Batch="True" Icon="G:\Applications\Dashloader Customizer\installed.png">
+					<Item Action="AskUser" arg1="Continue" arg2="This will install Dashloader Customizer to G:\Applications\Dashloader Customizer\ if there is currently a application residing there it will be overwritten."/>
+					<list>
+						<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="G:\test_partition"/>
+						<Item Action="Rename" arg1="G:\test_partition" arg2="G:\test_partition_">No G Partition found</Item>
+						<Item Action="Delete" arg="G:\test_partition_"/>
+					</list>
+					<Item Action="Copy" arg1="dummy" arg2="G:\Applications\Dashloader Customizer"/>
+					<Item Action="Delete" arg1="G:\Applications\Dashloader Customizer">Remove old G:\Applications\Dashloader Customizer\</Item>
+					<Item Action="Unzip" arg1="D:\Softmod\Applications\Dashloader Customizer.zip" arg2="G:\Applications\Dashloader Customizer">Installing app to E:\Applications\Dashloader Customizer\</Item>
+					<Item Action="Format" arg1="Z"/>
+					<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="G:\Applications\Dashloader Customizer"/>
+					<Item Action="MessageBox" arg1="Done">That's Dashloader Customizer installed to "G:\Applications\Dashloader Customizer\"</Item>
+				</list>
+			</list>
+
 			<List Text=" DVD2Xbox" Sort="Off">
 				<List Text="DVD2Xbox Information" Sort="Off" Batch="True">
 					<Item Action="MessageBox" arg1="Information">DVD2Xbox is used to rip game discs to your Xbox hardrive. It can also be used to rip audio CDs & DVD discs.</Item>

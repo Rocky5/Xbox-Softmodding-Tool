@@ -1969,28 +1969,6 @@ void ConfigMagicApp::CheckBios()
 		if ( strcmp(BIOS_Name, "Unknown") == 0)
 		{ 
 			bios_dumped = 0;
-			// Detect a 512 KB Bios MD5
-			MD5Buffer (flash_copy,0,512);
-			strcpy(BIOS_Name,CheckMD5(Listone, MD5_Sign));
-			if ( strcmp(BIOS_Name,"Unknown") == 0)
-			{
-				bios_dumped = 0;
-				// Detect a 256 KB Bios MD5
-				MD5Buffer (flash_copy,0,256);
-				strcpy(BIOS_Name,CheckMD5(Listone, MD5_Sign));
-				if ( strcmp(BIOS_Name,"Unknown") != 0)
-				{
-					bios_dumped = 0;
-				}
-				else
-				{		
-					bios_dumped = 1;
-				}
-			}
-			else
-			{		
-				bios_dumped = 1;
-			}
 		}
 		else
 		{		
@@ -2012,7 +1990,7 @@ void ConfigMagicApp::CheckBios()
 			CXBoxFlash mbFlash;
 
 			flash_copy = (char *) malloc(0x100000);
-
+			
 			if((fp = fopen(Retail_Bios_Save_Path+strBiosName+" Bios.bin", "wb")) != NULL)
 			{
 				for(int loop=0;loop<0x100000;loop++)
@@ -2020,22 +1998,32 @@ void ConfigMagicApp::CheckBios()
 					data = mbFlash.Read(addr++);
 					flash_copy[loop] = data;
 				}
-				fwrite(flash_copy, 0x100000, 1, fp);
-				fclose(fp);
-				free(flash_copy);
+				if ( (MD5Buffer(flash_copy,0,256) == MD5Buffer(flash_copy,262144,256)) && (MD5Buffer(flash_copy,524288,256)== MD5Buffer(flash_copy,786432,256)) )
+				{
+					fwrite(flash_copy, 0x40000, 1, fp);
+					fclose(fp);
+				}
+			}
+			else
+			{
+				if ((MD5Buffer(flash_copy,0,512)) == (MD5Buffer(flash_copy,524288,512)))
+				{
+					fwrite(flash_copy, 0x80000, 1, fp);
+					fclose(fp);
+				}
+				else
+				{
+					if((fp = fopen(Retail_Bios_Save_Path+strBiosName+" Bios.bin", "wb")) != NULL)
+					{
+						fwrite(flash_copy, 0x100000, 1, fp);
+						fclose(fp);
+					}
+				}
 			}
 			((LPXKControl_TextBox) m_ActiveForm->GetControl("txtStatus"))->SetText("Complete");
 			Render();
 			Sleep(1500);
 		}
-		// else
-		// {
-		// ((LPXKControl_TextBox) m_pFrmStatus->GetControl("txtStatusMsg"))->SetText("UNOFFICIAL MODE");
-		// ((LPXKControl_TextBox) m_ActiveForm->GetControl("txtStatus"))->SetText("Loading Hardmod menu");
-		// Render();
-		// Sleep(4000);
-		// //XKUtils::LaunchXBE("D:\\Hardmod\\default.xbe");
-		// }
 		XKUtils::LaunchXBE(NKPatcherSettings);
 	}
 }

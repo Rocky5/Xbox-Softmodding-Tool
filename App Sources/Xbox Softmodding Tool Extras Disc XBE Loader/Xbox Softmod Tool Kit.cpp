@@ -59,8 +59,21 @@ extern "C" XPP_DEVICE_TYPE XDEVICE_TYPE_IR_REMOTE_TABLE;
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void ConfigMagicApp::CheckBios()
 {
+	if(g_Gamepads[0].hDevice && g_Gamepads[0].bPressedAnalogButtons[XINPUT_GAMEPAD_BLACK])
+	{
+		std::ifstream TXST_EnigmahX("D:\\Softmod\\Applications\\Enigmah-X\\default.xbe");
+		if (TXST_EnigmahX.good())
+		{
+			TXST_EnigmahX.close();
+			((LPXKControl_TextBox) m_ActiveForm->GetControl("txtStatus"))->SetText("Loading Enigmah-X");
+			Render();
+			Sleep(3000);
+			XKUtils::LaunchXBE("D:\\Softmod\\Applications\\Enigmah-X\\default.xbe");
+		}
+	}	
 	BYTE data;
 	char *BIOS_Name;
+	int BiosTrovato,i;
 	CStdString strBiosName;
 	DWORD addr        = FLASH_BASE_ADDRESS;
 	DWORD addr_kernel = KERNEL_BASE_ADDRESS;
@@ -69,6 +82,7 @@ void ConfigMagicApp::CheckBios()
 
 	flash_copy = (char *) malloc(0x100000);
 
+	BiosTrovato = 0;
 	BIOS_Name  = (char*) malloc(100);
 
 	struct Bios *Listone = LoadBiosSigns();
@@ -83,95 +97,40 @@ void ConfigMagicApp::CheckBios()
 		data = mbFlash.Read(addr++);
 		flash_copy[loop] = data;
 	}
-	if(g_Gamepads[0].hDevice && g_Gamepads[0].bPressedAnalogButtons[XINPUT_GAMEPAD_BLACK])
-	{
-		std::ifstream TXST_EnigmahX("D:\\Softmod\\Applications\\Enigmah-X\\default.xbe");
-		if (TXST_EnigmahX.good())
-		{
-			TXST_EnigmahX.close();
-			((LPXKControl_TextBox) m_ActiveForm->GetControl("txtStatus"))->SetText("Loading Enigmah-X");
-			Render();
-			Sleep(3000);
-			XKUtils::LaunchXBE("D:\\Softmod\\Applications\\Enigmah-X\\default.xbe");
-		}
-	}
 	// ((LPXKControl_TextBox) m_pFrmStatus->GetControl("txtStatusMsg"))->SetText("CHECKING BIOS");
 	// Render();
-	// Sleep(3000);
+	// Sleep(1000);
 	// Detect a 1024 KB Bios MD5
 	MD5Buffer (flash_copy,0,1024);
 	strcpy(BIOS_Name,CheckMD5(Listone, MD5_Sign));
 	strBiosName = BIOS_Name;
 	if ( strcmp(BIOS_Name, "Unknown") == 0)
 	{ 
-		// Detect a 512 KB Bios MD5
-		MD5Buffer (flash_copy,0,512);
-		strcpy(BIOS_Name,CheckMD5(Listone, MD5_Sign));
-		strBiosName = BIOS_Name;
-		if ( strcmp(BIOS_Name,"Unknown") == 0)
-		{
-			// Detect a 256 KB Bios MD5
-			MD5Buffer (flash_copy,0,256);
-			strcpy(BIOS_Name,CheckMD5(Listone, MD5_Sign));
-			strBiosName = BIOS_Name;
-			if ( strcmp(BIOS_Name,"Unknown") != 0)
-			{
-				Hardmodded_System();
-			}
-			else
-			{		
-				if ( (strBiosName == "Retail 3944") || (strBiosName == "Retail 4034") || (strBiosName == "Retail 4134") || (strBiosName == "Retail 4817") || (strBiosName == "Retail 5101") || (strBiosName == "Retail 5530") || (strBiosName == "Retail 5713") || (strBiosName == "Retail 5838") )
-				{
-					((LPXKControl_TextBox) m_pFrmStatus->GetControl("txtStatusMsg"))->SetText(strBiosName+" BIOS DETECTED");
-					XKUtils::MountDiskS();
-					std::ifstream TXST_Softmod("S:\\nkpatcher\\rescuedash\\resoftmod files.zip");
-					if (TXST_Softmod.good())
-					{
-						TXST_Softmod.close();
-						XBST_Softmodded_System();
-					}
-					else
-					{
-						Other_Softmodded_System();
-					}
-				}
-			}
-		}
-		else
-		{		
-			if ( (strBiosName == "Retail 3944") || (strBiosName == "Retail 4034") || (strBiosName == "Retail 4134") || (strBiosName == "Retail 4817") || (strBiosName == "Retail 5101") || (strBiosName == "Retail 5530") || (strBiosName == "Retail 5713") || (strBiosName == "Retail 5838") )
-			{
-				((LPXKControl_TextBox) m_pFrmStatus->GetControl("txtStatusMsg"))->SetText(strBiosName+" BIOS DETECTED");
-				XKUtils::MountDiskS();
-				std::ifstream TXST_Softmod("S:\\nkpatcher\\rescuedash\\resoftmod files.zip");
-				if (TXST_Softmod.good())
-				{
-					TXST_Softmod.close();
-					XBST_Softmodded_System();
-				}
-				else
-				{
-					Other_Softmodded_System();
-				}
-			}
-		}
+		Hardmodded_System();
 	}
 	else
-	{		
+	{
+		// ((LPXKControl_TextBox) m_pFrmStatus->GetControl("txtStatusMsg"))->SetText("Checking for 1024kb Bios");
+		// Render();
+		// Sleep(1000);
 		if ( (strBiosName == "Retail 3944") || (strBiosName == "Retail 4034") || (strBiosName == "Retail 4134") || (strBiosName == "Retail 4817") || (strBiosName == "Retail 5101") || (strBiosName == "Retail 5530") || (strBiosName == "Retail 5713") || (strBiosName == "Retail 5838") )
 		{
 			((LPXKControl_TextBox) m_pFrmStatus->GetControl("txtStatusMsg"))->SetText(strBiosName+" BIOS DETECTED");
 			XKUtils::MountDiskS();
-			std::ifstream TXST_Softmod("S:\\nkpatcher\\rescuedash\\resoftmod files.zip");
-			if (TXST_Softmod.good())
+			std::ifstream TXST_Softmod_Check1("S:\\nkpatcher\\rescuedash\\resoftmod files.zip");
+			if (TXST_Softmod_Check1.good())
 			{
-				TXST_Softmod.close();
+				TXST_Softmod_Check1.close();
 				XBST_Softmodded_System();
 			}
 			else
 			{
-				
+				Other_Softmodded_System();
 			}
+		}
+		else
+		{
+			Hardmodded_System();
 		}
 	}
 }
