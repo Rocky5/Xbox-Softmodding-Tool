@@ -1122,7 +1122,7 @@ patchflickerfilter:
 ;;; Definitions for available free space in the kernel
 ;;; --------------------------------------------------------------------------
 %define SPACE_LDR1_3944_START	80030262h
-%define SPACE_LDR1_3944_END	80030315h
+%define SPACE_LDR1_3944_END	80030309h
 %define SPACE_LDR2_3944_START	800303C5h
 %define SPACE_LDR2_3944_END	8003043Bh
 %define SPACE_SIGN_3944_START	8002FE6Ah

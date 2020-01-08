@@ -34,20 +34,20 @@
 #include <d3d8.h>
 #include "xkhdd.h"
 #include "xkeeprom.h"
-#include <fstream>
-#include <iostream>
 #include <time.h>
 #include <cstdio>
+#include <sys/stat.h>
 extern "C" XPP_DEVICE_TYPE XDEVICE_TYPE_IR_REMOTE_TABLE;
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Shared paths
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #define Retail_Bios_Hash_File				"D:\\RetailMD5Hashes.ini"
-#define Retail_Bios_Save_Path				"E:\\Backups\\BIOS\\bios.bin"
+#define Retail_Bios_Save_Path				"E:\\Backups\\BIOS\\"
 #define PrepDir								"E:\\Prep\\"
 #define PrepXBE			PrepDir				"default.xbe"
 #define CleanXBE		PrepDir				"cleanup.xbe"
 #define LXblastOS		PrepDir				"load_xblast_os.bin"
+#define enableHD		PrepDir				"enableHD.bin"
 #define NoVCBin			PrepDir				"novc.bin"
 #define BootCFG			PrepDir				"boot.cfg"
 #define BiosDir								"C:\\bios\\"
@@ -78,28 +78,95 @@ void ConfigMagicApp::CreateBiosBackup()
 	Sleep(2000);
 	CreateDirectory("E:\\Backups", NULL);
 	CreateDirectory("E:\\Backups\\BIOS", NULL);
-	FILE *fp;
+	BYTE data;
+	char *BIOS_Name;
+	CStdString strBiosName;
 	DWORD addr        = FLASH_BASE_ADDRESS;
 	DWORD addr_kernel = KERNEL_BASE_ADDRESS;
-	char * flash_copy, data;
 	CXBoxFlash mbFlash;
+	char * flash_copy;
+
 	flash_copy = (char *) malloc(0x100000);
-	if((fp = fopen(Retail_Bios_Save_Path, "wb")) != NULL)
+
+	BIOS_Name     = (char*) malloc(100);
+
+	struct Bios *Listone = LoadBiosSigns();
+
+	if( !Listone )
 	{
-		for(int loop=0;loop<0x100000;loop++)
-		{
-			data = mbFlash.Read(addr++);
-			flash_copy[loop] = data;
-		}
-		fwrite(flash_copy, 0x100000, 1, fp);
-		fclose(fp);
-		free(flash_copy);
+		free(BIOS_Name);
 	}
-	((LPXKControl_TextBox) m_ActiveForm->GetControl("txtStatus"))->SetText("Complete");
+
+	for(int loop=0;loop<0x100000;loop++)
+	{
+		data = mbFlash.Read(addr++);
+		flash_copy[loop] = data;
+	}
+
+	((LPXKControl_TextBox) m_pFrmStatus->GetControl("txtStatusMsg"))->SetText("CHECKING BIOS");
 	Render();
-	Sleep(1500);
+	Sleep(1000);
+	// Detect a 1024 KB Bios MD5
+	MD5Buffer (flash_copy,0,1024);
+	strcpy(BIOS_Name,CheckMD5(Listone, MD5_Sign));
+	if ( strcmp(BIOS_Name, "Unknown") == 0)
+	{ 
+		bios_dumped = 0;
+	}
+	else
+	{		
+		bios_dumped = 1;
+	}
+	strBiosName = BIOS_Name;
+	if ( (bios_dumped == 1) && (strBiosName == "Retail 3944") || (strBiosName == "Retail 4034") || (strBiosName == "Retail 4134") || (strBiosName == "Retail 4817") || (strBiosName == "Retail 5101") || (strBiosName == "Retail 5530") || (strBiosName == "Retail 5713") || (strBiosName == "Retail 5838") )
+	{
+		((LPXKControl_TextBox) m_pFrmStatus->GetControl("txtStatusMsg"))->SetText(strBiosName+" BIOS DETECTED");
+		((LPXKControl_TextBox) m_ActiveForm->GetControl("txtStatus"))->SetText("Backing Up BIOS");
+		Render();
+		Sleep(2000);
+		CreateDirectory("E:\\Backups", NULL);
+		CreateDirectory("E:\\Backups\\BIOS", NULL);
+		FILE *fp;
+		DWORD addr        = FLASH_BASE_ADDRESS;
+		DWORD addr_kernel = KERNEL_BASE_ADDRESS;
+		char * flash_copy, data;
+		CXBoxFlash mbFlash;
+
+		flash_copy = (char *) malloc(0x100000);
+		
+		if((fp = fopen(Retail_Bios_Save_Path+strBiosName+" Bios.bin", "wb")) != NULL)
+		{
+			for(int loop=0;loop<0x100000;loop++)
+			{
+				data = mbFlash.Read(addr++);
+				flash_copy[loop] = data;
+			}
+			if ( (MD5Buffer(flash_copy,0,256) == MD5Buffer(flash_copy,262144,256)) && (MD5Buffer(flash_copy,524288,256)== MD5Buffer(flash_copy,786432,256)) )
+			{
+				fwrite(flash_copy, 0x40000, 1, fp);
+				fclose(fp);
+			}
+		}
+		else
+		{
+			if ((MD5Buffer(flash_copy,0,512)) == (MD5Buffer(flash_copy,524288,512)))
+			{
+				fwrite(flash_copy, 0x80000, 1, fp);
+				fclose(fp);
+			}
+			else
+			{
+				fwrite(flash_copy, 0x100000, 1, fp);
+				fclose(fp);
+			}
+		}
+		((LPXKControl_TextBox) m_ActiveForm->GetControl("txtStatus"))->SetText("Complete");
+		Render();
+		Sleep(1500);
+	}
 	XKUtils::XBOXRebootToDash();
 }
+
 void ConfigMagicApp::CheckBios()
 {
 	XKUtils::MountDiskE();
@@ -128,37 +195,12 @@ void ConfigMagicApp::CheckBios()
 		flash_copy[loop] = data;
 	}
 
-	// ((LPXKControl_TextBox) m_pFrmStatus->GetControl("txtStatusMsg"))->SetText("CHECKING BIOS");
-	// Render();
-	// Sleep(4000);
 	// Detect a 1024 KB Bios MD5
 	MD5Buffer (flash_copy,0,1024);
 	strcpy(BIOS_Name,CheckMD5(Listone, MD5_Sign));
 	if ( strcmp(BIOS_Name, "Unknown") == 0)
 	{ 
 		bios_dumped = 0;
-		// Detect a 512 KB Bios MD5
-		MD5Buffer (flash_copy,0,512);
-		strcpy(BIOS_Name,CheckMD5(Listone, MD5_Sign));
-		if ( strcmp(BIOS_Name,"Unknown") == 0)
-		{
-			bios_dumped = 0;
-			// Detect a 256 KB Bios MD5
-			MD5Buffer (flash_copy,0,256);
-			strcpy(BIOS_Name,CheckMD5(Listone, MD5_Sign));
-			if ( strcmp(BIOS_Name,"Unknown") != 0)
-			{
-				bios_dumped = 0;
-			}
-			else
-			{		
-				bios_dumped = 1;
-			}
-		}
-		else
-		{		
-			bios_dumped = 1;
-		}
 	}
 	else
 	{		
@@ -166,62 +208,42 @@ void ConfigMagicApp::CheckBios()
 	}
 	strBiosName = BIOS_Name;
 	
-	std::ifstream TXST_RebootFile(RebootFile);
-	if (TXST_RebootFile.good())
+	if (file_exist(RebootFile))
 	{
-		TXST_RebootFile.close();
 		remove(RebootFile);
 		DisableHDRes();
 		XKUtils::XBOXPowerCycle();
 	}
 	else
 	{
-		std::ifstream TXST_BootXblastOS(LXblastOS);
-		if (TXST_BootXblastOS.good())
+		if (file_exist(LXblastOS))
 		{
-			TXST_BootXblastOS.close();
 			remove(LXblastOS);
-			std::ifstream TXST_XblastOS("E:\\Prep\\xBlast OS.xbe");
-			if (TXST_XblastOS.good())
+			LED_Flash_Red;
+			XKUtils::LaunchXBE("E:\\Prep\\xBlast OS.xbe");
+		}
+		else
+		{
+			if (file_exist(enableHD))
 			{
-				TXST_XblastOS.close();
-				//((LPXKControl_TextBox) m_pFrmStatus->GetControl("txtStatusMsg"))->SetText("UNOFFICIAL/HACKED BIOS MODE");
-				LED_Flash_Red;
-				//((LPXKControl_TextBox) m_ActiveForm->GetControl("txtStatus"))->SetText("Loading Hardmod menu");
-				//Render();
-				//Sleep(4000);
-				XKUtils::LaunchXBE("E:\\Prep\\xBlast OS.xbe");
+				remove(enableHD);
+				EnableHDRes();
+				XKUtils::XBOXReset();
 			}
 		}
 	}
-	EnableHDRes();
-	if ( (bios_dumped == 1) && (strBiosName == "Retail 3944") || (strBiosName == "Retail 4034") || (strBiosName == "Retail 4134") || (strBiosName == "Retail 4817") || (strBiosName == "Retail 5101") || (strBiosName == "Retail 5530") || (strBiosName == "Retail 5713") || (strBiosName == "Retail 5838") )
+	if (bios_dumped == 1)
 	{
-		//((LPXKControl_TextBox) m_pFrmStatus->GetControl("txtStatusMsg"))->SetText(strBiosName+" BIOS DETECTED");
-		std::ifstream TXST_XBSTSoftmod("E:\\Prep\\softmod.xbe");
-		if (TXST_XBSTSoftmod.good())
+		if ( (strBiosName == "Retail 3944") || (strBiosName == "Retail 4034") || (strBiosName == "Retail 4134") || (strBiosName == "Retail 4817") || (strBiosName == "Retail 5101") || (strBiosName == "Retail 5530") || (strBiosName == "Retail 5713") || (strBiosName == "Retail 5838") )
 		{
-			TXST_XBSTSoftmod.close();
 			LED_Flash_Orange;
-			//((LPXKControl_TextBox) m_ActiveForm->GetControl("txtStatus"))->SetText("Loading Xbox Softmodding Tools Menu");
-			//Render();
-			//Sleep(4000);
 			XKUtils::LaunchXBE("E:\\Prep\\softmod.xbe");
 		}
 	}
 	else
 	{
-		std::ifstream TXST_HardmodSoftmod("E:\\Prep\\hardmod.xbe");
-		if (TXST_HardmodSoftmod.good())
-		{
-			TXST_HardmodSoftmod.close();
-			//((LPXKControl_TextBox) m_pFrmStatus->GetControl("txtStatusMsg"))->SetText("UNOFFICIAL/HACKED BIOS MODE");
-			LED_Flash_Red;
-			//((LPXKControl_TextBox) m_ActiveForm->GetControl("txtStatus"))->SetText("Loading Hardmod menu");
-			//Render();
-			//Sleep(4000);
-			XKUtils::LaunchXBE("E:\\Prep\\hardmod.xbe");
-		}
+		LED_Flash_Red;
+		XKUtils::LaunchXBE("E:\\Prep\\hardmod.xbe");
 	}
 }
 
@@ -357,6 +379,12 @@ char* ConfigMagicApp::CheckMD5 (struct Bios *Listone, char *Sign)
 	}
 	while( strcmp(Listone[cntBioses].Name,"\0") != 0);
 	return ("Unknown");
+}
+
+int ConfigMagicApp::file_exist(const char *name)
+{
+	struct stat   buffer;
+	return (stat (name, &buffer) == 0);
 }
 
 HRESULT ConfigMagicApp::Initialize()

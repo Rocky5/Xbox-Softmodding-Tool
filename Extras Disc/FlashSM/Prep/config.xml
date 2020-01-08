@@ -59,6 +59,7 @@
 				<!-- Cleanup & put a folder in C for the end user to read -->
 				<Item Action="MessageBox" Arg1="Note">I need to disable 480p during this process, I will re-enable it after everything is done.</Item>
 				<Item Action="UnZip" arg1="E:\Prep\stage2.zip" arg2="E:\Prep\">UnZip stage2 files to E:\Prep</Item>
+				<Item Action="UnZip" arg1="E:\Prep\Cfiles.zip" arg2="E:\Prep\">UnZip C files to C:\</Item>
 				<Item Action="Copy" arg1="E:\Prep\C files\" arg2="C:\">Copy C files to C:\</Item>
 				<Item Action="TrayOpen">Tray open</Item>
 				<Item Action="Format" arg1="X">Format X</Item>

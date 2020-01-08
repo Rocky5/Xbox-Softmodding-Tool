@@ -39,6 +39,7 @@
 #include <iostream>
 #include <time.h>
 #include <cstdio>
+#include <sys/stat.h>
 extern "C" XPP_DEVICE_TYPE XDEVICE_TYPE_IR_REMOTE_TABLE;
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Shared paths
@@ -224,10 +225,8 @@ extern "C" XPP_DEVICE_TYPE XDEVICE_TYPE_IR_REMOTE_TABLE;
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void ConfigMagicApp::VirtualEEPROMRemoval()
 {
-	std::ifstream VEEPROMRemoval(Virtual_Remove_File);
-	if (VEEPROMRemoval.good())
+	if (file_exist(Virtual_Remove_File))
 	{
-		VEEPROMRemoval.close();
 		Sleep(1000);
 		remove(Virtual_Full_Path);
 		remove("S:\\NKPatcher\\Configs\\EEPROM_off.bin");
@@ -241,10 +240,8 @@ void ConfigMagicApp::VirtualEEPROMRemoval()
 
 void ConfigMagicApp::EnableVirtualEEPROM()
 {
-	std::ifstream EnableVEEPROM(Virtual_File);
-	if (EnableVEEPROM.good())
+	if (file_exist(Virtual_File))
 	{
-		EnableVEEPROM.close();
 		((LPXKControl_TextBox) m_pFrmStatus->GetControl("txtStatusMsg"))->SetText("INSTALLING VIRTUAL EEPROM");
 		((LPXKControl_TextBox) m_ActiveForm->GetControl("txtStatus"))->SetText("Please Wait");
 		Render();
@@ -270,10 +267,8 @@ void ConfigMagicApp::EnableVirtualEEPROM()
 
 void ConfigMagicApp::SetUpDashboard()
 {
-	std::ifstream DashPrep(SecondRun);
-	if (DashPrep.good())
+	if (file_exist(SecondRun))
 	{
-		DashPrep.close();
 		((LPXKControl_TextBox) m_pFrmStatus->GetControl("txtStatusMsg"))->SetText("INSTALLING DASHBOARD FILES");
 		((LPXKControl_TextBox) m_ActiveForm->GetControl("txtStatus"))->SetText("Please Wait");
 		Render();
@@ -298,10 +293,8 @@ void ConfigMagicApp::SetUpDashboard()
 		((LPXKControl_TextBox) m_ActiveForm->GetControl("txtStatus"))->SetText("Complete");
 		Render();
 		Sleep(1000);
-		std::ifstream IfDashExist(Dashloader);
-		if (IfDashExist.good())
+		if (file_exist(Dashloader))
 		{
-			IfDashExist.close();
 			((LPXKControl_TextBox) m_ActiveForm->GetControl("txtStatus"))->SetText("Loading Dashboard");
 			Render();
 			Sleep(1500);
@@ -309,7 +302,6 @@ void ConfigMagicApp::SetUpDashboard()
 		}
 		else
 		{
-			IfDashExist.close();
 			((LPXKControl_TextBox) m_pFrmStatus->GetControl("txtStatusMsg"))->SetText("ERROR !!");
 			((LPXKControl_TextBox) m_ActiveForm->GetControl("txtStatus"))->SetText("Loading Recovery Menu");
 			Render();
@@ -318,10 +310,8 @@ void ConfigMagicApp::SetUpDashboard()
 			XKUtils::LaunchXBE(Rescuedashloader);
 		}
 	}
-	std::ifstream DashSkinUpdate(SecondRunUpdate);
-	if (DashSkinUpdate.good())
+	if (file_exist(SecondRunUpdate))
 	{
-		DashSkinUpdate.close();
 		((LPXKControl_TextBox) m_pFrmStatus->GetControl("txtStatusMsg"))->SetText("UPDATING DASHBOARD FILES");
 		((LPXKControl_TextBox) m_ActiveForm->GetControl("txtStatus"))->SetText("Please Wait");
 		Render();
@@ -329,33 +319,25 @@ void ConfigMagicApp::SetUpDashboard()
 		remove(SecondRunUpdate);
 		remove(PrepXBE);
 		RemoveDirectory(PrepDir);
-		std::ifstream UpdateSkinFile1("C:\\dashboard\\skins\\Softmod\\skin.xml");
-		if (UpdateSkinFile1.good())
+		if (file_exist("C:\\dashboard\\skins\\Softmod\\skin.xml"))
 		{
-			UpdateSkinFile1.close();
 			CopyFile("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\skins\\dashboard\\skin.xml", "C:\\dashboard\\skins\\Softmod\\skin.xml", NULL);
 			CopyFile("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\skins\\dashboard\\skinevox.xml", "C:\\dashboard\\skins\\Softmod Evox\\skin.xml", NULL);
 			CopyFile("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\skins\\dashboard\\skinwide.xml", "C:\\dashboard\\skins\\Softmod Wide\\skin.xml", NULL);
-			std::ifstream UpdateConfigFile1("C:\\dashboard\\config.xml");
-			if (UpdateConfigFile1.good())
+			if (file_exist("C:\\dashboard\\config.xml"))
 			{
-				UpdateConfigFile1.close();
 				std::rename("C:\\dashboard\\config.xml", "C:\\dashboard\\config_old.xml");
 				CopyFile("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\configs\\dash.xml", "C:\\dashboard\\config.xml", NULL);
 				CopyFile("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\configs\\alt xbe's\\dashboard.xbe", "C:\\dashboard\\default.xbe", NULL);
 			}
 		}
-		std::ifstream UpdateSkinFile2("E:\\dashboard\\skins\\Softmod\\skin.xml");
-		if (UpdateSkinFile2.good())
+		if (file_exist("E:\\dashboard\\skins\\Softmod\\skin.xml"))
 		{
-			UpdateSkinFile2.close();
 			CopyFile("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\skins\\dashboard\\skin.xml", "E:\\dashboard\\skins\\Softmod\\skin.xml", NULL);
 			CopyFile("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\skins\\dashboard\\skinevox.xml", "E:\\dashboard\\skins\\Softmod Evox\\skin.xml", NULL);
 			CopyFile("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\skins\\dashboard\\skinwide.xml", "E:\\dashboard\\skins\\Softmod Wide\\skin.xml", NULL);
-			std::ifstream UpdateConfigFile2("E:\\dashboard\\config.xml");
-			if (UpdateConfigFile2.good())
+			if (file_exist("E:\\dashboard\\config.xml"))
 			{
-				UpdateConfigFile2.close();
 				std::rename("E:\\dashboard\\config.xml", "E:\\dashboard\\config_old.xml");
 				CopyFile("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\configs\\dash.xml", "E:\\dashboard\\config.xml", NULL);
 				CopyFile("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\configs\\alt xbe's\\dashboard.xbe", "E:\\dashboard\\default.xbe", NULL);
@@ -364,10 +346,8 @@ void ConfigMagicApp::SetUpDashboard()
 		((LPXKControl_TextBox) m_ActiveForm->GetControl("txtStatus"))->SetText("Complete");
 		Render();
 		Sleep(1000);
-		std::ifstream IfDashExist(Dashloader);
-		if (IfDashExist.good())
+		if (file_exist(Dashloader))
 		{
-			IfDashExist.close();
 			((LPXKControl_TextBox) m_ActiveForm->GetControl("txtStatus"))->SetText("Loading Dashboard");
 			Render();
 			Sleep(1500);
@@ -375,7 +355,6 @@ void ConfigMagicApp::SetUpDashboard()
 		}
 		else
 		{
-			IfDashExist.close();
 			((LPXKControl_TextBox) m_pFrmStatus->GetControl("txtStatusMsg"))->SetText("ERROR !!");
 			((LPXKControl_TextBox) m_ActiveForm->GetControl("txtStatus"))->SetText("Loading Recovery Menu");
 			Render();
@@ -388,10 +367,8 @@ void ConfigMagicApp::SetUpDashboard()
 
 void ConfigMagicApp::Stage2OfInstallSoftmod()
 {
-	std::ifstream firstrun(FirstRunBin);
-	if (firstrun.good())
-	{	
-		firstrun.close();
+	if (file_exist(FirstRunBin))
+	{
 		CopyFile(FirstRunBin, SecondRun, NULL);
 		remove(ShadowCOFF);
 		remove(FirstRunBin);
@@ -447,10 +424,8 @@ void ConfigMagicApp::Stage2OfInstallSoftmod()
 
 void ConfigMagicApp::Stage2OfUpdateSoftmod()
 {
-	std::ifstream UpdateRun(UpdateRunBin);
-	if (UpdateRun.good())
+	if (file_exist(UpdateRunBin))
 	{
-		UpdateRun.close();
 		((LPXKControl_TextBox) m_pFrmStatus->GetControl("txtStatusMsg"))->SetText("UPDATING SOFTMOD");
 		((LPXKControl_TextBox) m_ActiveForm->GetControl("txtStatus"))->SetText("Please Wait");
 		Render();
@@ -484,10 +459,8 @@ void ConfigMagicApp::InstallKernelFont()
 
 void ConfigMagicApp::UpdateKernelFont()
 {
-	std::ifstream UpdateFont(Update_Font);
-	if (UpdateFont.good())
+	if (file_exist(Update_Font))
 	{
-		UpdateFont.close();
 		((LPXKControl_TextBox) m_pFrmStatus->GetControl("txtStatusMsg"))->SetText("UPDATING INSTALLED KERNEL FONT");
 		((LPXKControl_TextBox) m_ActiveForm->GetControl("txtStatus"))->SetText("Please Wait");
 		Render();
@@ -502,14 +475,10 @@ void ConfigMagicApp::UpdateKernelFont()
 
 void ConfigMagicApp::RestoreKernelFont()
 {
-	std::ifstream restorefont(Restore_Font);
-	if (restorefont.good())
+	if (file_exist(Restore_Font))
 	{
-		restorefont.close();
-		std::ifstream restorefontcheck(Generic_Font_File_Alt);
-		if (restorefontcheck.good())
+		if (file_exist(Generic_Font_File_Alt))
 		{
-			restorefontcheck.close();
 			remove("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\font\\generic.png");
 			remove("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\font\\K.1.0.3944.1.png");
 			remove("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\font\\K.1.0.4034.1.png");
@@ -530,10 +499,8 @@ void ConfigMagicApp::RestoreKernelFont()
 
 void ConfigMagicApp::ReloadNKPatcherSettings()
 {
-	std::ifstream rnkpfile(RNKP_File);
-	if (rnkpfile.good())
+	if (file_exist(RNKP_File))
 	{
-		rnkpfile.close();
 		remove(PrepXBE);
 		remove(RNKP_File);
 		RemoveDirectory(PrepDir);
@@ -543,17 +510,14 @@ void ConfigMagicApp::ReloadNKPatcherSettings()
 
 void ConfigMagicApp::NullHardDriveKey()
 {
-	std::ifstream nullfile(NULLHDDKey_File);
-	if (nullfile.good())
+	if (file_exist(NULLHDDKey_File))
 	{
-		nullfile.close();
 		remove(NULLHDDKey_File);
 		UnLock_New_HDD();
 		NULL_HDD_KEY();
 		Write_XBOX_EEPROM();
 		Lock_New_HDD();
-		std::ifstream originaleeprom("E:\\Backups\\eeprom\\eeprom_original.bin");
-		if (originaleeprom.good())
+		if (file_exist("E:\\Backups\\eeprom\\eeprom_original.bin"))
 		{
 			CreateEEPROMBackup();
 		}
@@ -568,10 +532,8 @@ void ConfigMagicApp::NullHardDriveKey()
 
 void ConfigMagicApp::LockHardDrive()
 {
-	std::ifstream lockfile(LockHDD_File);
-	if (lockfile.good())
+	if (file_exist(LockHDD_File))
 	{
-		lockfile.close();
 		CreateEEPROMBackup();
 		Lock_New_HDD();
 		XKUtils::LaunchXBE(PrepUX);
@@ -579,10 +541,8 @@ void ConfigMagicApp::LockHardDrive()
 }
 void ConfigMagicApp::ChangeVideoRegionToNTSC()
 {
-	std::ifstream regionfile1(Region_File1);
-	if (regionfile1.good())
+	if (file_exist(Region_File1))
 	{
-		regionfile1.close();
 		remove(Region_File1);
 		ChangeRegionNTSC();
 		SetupRNKP();
@@ -592,10 +552,8 @@ void ConfigMagicApp::ChangeVideoRegionToNTSC()
 
 void ConfigMagicApp::ChangeVideoRegionToPAL()
 {
-	std::ifstream regionfile2(Region_File2);
-	if (regionfile2.good())
+	if (file_exist(Region_File2))
 	{
-		regionfile2.close();
 		remove(Region_File2);
 		ChangeRegionPAL();
 		SetupRNKP();
@@ -605,10 +563,8 @@ void ConfigMagicApp::ChangeVideoRegionToPAL()
 
 void ConfigMagicApp::NULLEEPROMCheckSum3()
 {
-	std::ifstream nullchecksum3file(NullChecksum3_File);
-	if (nullchecksum3file.good())
+	if (file_exist(NullChecksum3_File))
 	{
-		nullchecksum3file.close();
 		remove(NullChecksum3_File);
 		NULLChecksum3();
 		XKUtils::XBOXPowerCycle();
@@ -617,10 +573,8 @@ void ConfigMagicApp::NULLEEPROMCheckSum3()
 
 void ConfigMagicApp::NTSCResetToFactoryEEPROM()
 {
-	std::ifstream factoryresetntscfile(FactoryResetNTSC_File);
-	if (factoryresetntscfile.good())
+	if (file_exist(FactoryResetNTSC_File))
 	{
-		factoryresetntscfile.close();
 		remove(FactoryResetNTSC_File);
 		FactoryResetNTSC();
 		remove(PrepXBE);
@@ -631,10 +585,8 @@ void ConfigMagicApp::NTSCResetToFactoryEEPROM()
 
 void ConfigMagicApp::PALResetToFactoryEEPROM()
 {
-	std::ifstream factoryresetpalfile(FactoryResetPAL_File);
-	if (factoryresetpalfile.good())
+	if (file_exist(FactoryResetPAL_File))
 	{
-		factoryresetpalfile.close();
 		remove(FactoryResetPAL_File);
 		FactoryResetPAL();
 		remove(PrepXBE);
@@ -645,19 +597,13 @@ void ConfigMagicApp::PALResetToFactoryEEPROM()
 
 void ConfigMagicApp::PatchNKPatcherToSupportOtherPartitions()
 {
-	std::ifstream nkppatchfile(PatchNKP_File1);
-	if (nkppatchfile.good())
+	if (file_exist(PatchNKP_File1))
 	{
-		nkppatchfile.close();
 		remove(PatchNKP_File1);
-		std::ifstream FSet("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\part\\default-part.png");
-		if (FSet.good())
+		if (file_exist("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\part\\default-part.png"))
 		{
-			FSet.close();
-			std::ifstream DisableDBSet(PatchNKP_File2);
-			if (DisableDBSet.good())
+			if (file_exist(PatchNKP_File2))
 			{
-				DisableDBSet.close();
 				remove(PatchNKP_File2);
 				((LPXKControl_TextBox) m_pFrmStatus->GetControl("txtStatusMsg"))->SetText("DISABLING DUAL BOOTING");
 				((LPXKControl_TextBox) m_ActiveForm->GetControl("txtStatus"))->SetText("Please Wait");
@@ -688,14 +634,10 @@ void ConfigMagicApp::PatchNKPatcherToSupportOtherPartitions()
 			NKPDefaultF.close();
 			((LPXKControl_TextBox) m_ActiveForm->GetControl("txtStatus"))->SetText("Complete");
 		}
-		std::ifstream FGSet("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\part\\default-FG.png");
-		if (FGSet.good())
+		if (file_exist("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\part\\default-FG.png"))
 		{
-			FGSet.close();
-			std::ifstream DisableDBSet(PatchNKP_File2);
-			if (DisableDBSet.good())
+			if (file_exist(PatchNKP_File2))
 			{
-				DisableDBSet.close();
 				remove(PatchNKP_File2);
 				((LPXKControl_TextBox) m_pFrmStatus->GetControl("txtStatusMsg"))->SetText("DISABLING DUAL BOOTING");
 				((LPXKControl_TextBox) m_ActiveForm->GetControl("txtStatus"))->SetText("Please Wait");
@@ -735,19 +677,15 @@ void ConfigMagicApp::PatchNKPatcherToSupportOtherPartitions()
 
 void ConfigMagicApp::PatchNKPatcherToSupportDualBoot()
 {
-	std::ifstream nkppatchfiledb(PatchNKP_File3);
-	if (nkppatchfiledb.good())
+	if (file_exist(PatchNKP_File3))
 	{
-		nkppatchfiledb.close();
 		remove(PatchNKP_File3);
 		((LPXKControl_TextBox) m_pFrmStatus->GetControl("txtStatusMsg"))->SetText("ENABLING DUAL BOOTING");
 		((LPXKControl_TextBox) m_ActiveForm->GetControl("txtStatus"))->SetText("Please Wait");
 		Render();
 		Sleep(1000);
-		std::ifstream dualbootFSet("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\part\\default-part.png");
-		if (dualbootFSet.good())
+		if (file_exist("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\part\\default-part.png"))
 		{
-			dualbootFSet.close();
 			std::ofstream NKPDefaultFDB(NKP_XBE, std::ios::binary | std::ios::in | std::ios::out);
 			// Habibi Signature
 			NKPDefaultFDB.seekp(0);
@@ -766,10 +704,8 @@ void ConfigMagicApp::PatchNKPatcherToSupportDualBoot()
 			NKPDefaultFDB.write(NKPValue1, NKPValue1Size);
 			NKPDefaultFDB.close();
 		}
-		std::ifstream dualbootFGSet("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\part\\default-FG.png");
-		if (dualbootFGSet.good())
+		if (file_exist("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\part\\default-FG.png"))
 		{
-			dualbootFGSet.close();
 			std::ofstream NKPDefaultFGDB(NKP_XBE, std::ios::binary | std::ios::in | std::ios::out);
 			// Habibi Signature
 			NKPDefaultFGDB.seekp(0);
@@ -798,10 +734,8 @@ void ConfigMagicApp::PatchNKPatcherToSupportDualBoot()
 
 void ConfigMagicApp::DumpDecryptedEEPROM()
 {
-	std::ifstream deepromfile(DecryptedEERPOM_File);
-	if (deepromfile.good())
+	if (file_exist(DecryptedEERPOM_File))
 	{
-		deepromfile.close();
 		CreateDecryptedEEPROMBackup();
 		XKUtils::LaunchXBE(NKPatcherSettings);
 	}
@@ -809,10 +743,8 @@ void ConfigMagicApp::DumpDecryptedEEPROM()
 
 void ConfigMagicApp::EnablePersistentSoftmodState()
 {
-	std::ifstream EnablePSfile(EnableControlledError16_File);
-	if (EnablePSfile.good())
+	if (file_exist(EnableControlledError16_File))
 	{
-		EnablePSfile.close();
 		remove(EnableControlledError16_File);
 		((LPXKControl_TextBox) m_pFrmStatus->GetControl("txtStatusMsg"))->SetText("ENABLING PERSISTENT SOFTMOD");
 		((LPXKControl_TextBox) m_ActiveForm->GetControl("txtStatus"))->SetText("Please Wait");
@@ -825,10 +757,8 @@ void ConfigMagicApp::EnablePersistentSoftmodState()
 
 void ConfigMagicApp::DisablePersistentSoftmodState()
 {
-	std::ifstream DisablePSfile(DisableControlledError16_File);
-	if (DisablePSfile.good())
+	if (file_exist(DisableControlledError16_File))
 	{
-		DisablePSfile.close();
 		remove(DisableControlledError16_File);
 		((LPXKControl_TextBox) m_pFrmStatus->GetControl("txtStatusMsg"))->SetText("DISABLING THE PERSISTENT SOFTMOD");
 		((LPXKControl_TextBox) m_ActiveForm->GetControl("txtStatus"))->SetText("Please Wait");
@@ -841,10 +771,8 @@ void ConfigMagicApp::DisablePersistentSoftmodState()
 
 void ConfigMagicApp::RemoveParentalControls()
 {
-	std::ifstream removepcfile(Remove_Parental_Controls);
-	if (removepcfile.good())
+	if (file_exist(Remove_Parental_Controls))
 	{
-		removepcfile.close();
 		remove(Remove_Parental_Controls);
 		//On Screen Text
 		((LPXKControl_TextBox) m_pFrmStatus->GetControl("txtStatusMsg"))->SetText("REMOVING PARENTAL CONTROLS");
@@ -866,10 +794,8 @@ void ConfigMagicApp::RemoveParentalControls()
 
 void ConfigMagicApp::SetLanguage()
 {
-	std::ifstream ChangeLanguagefile(Change_Language_File);
-	if (ChangeLanguagefile.good())
+	if (file_exist(Change_Language_File))
 	{
-		ChangeLanguagefile.close();
 		remove(Change_Language_File);
 		//On Screen Text
 		((LPXKControl_TextBox) m_pFrmStatus->GetControl("txtStatusMsg"))->SetText("CHANGING SYSTEM LANGUAGE");
@@ -878,90 +804,72 @@ void ConfigMagicApp::SetLanguage()
 		Render();
 		Sleep(1000);
 	}
-	std::ifstream ChangeLanguagefile1(English_File);
-	if (ChangeLanguagefile1.good())
+	if (file_exist(English_File))
 	{
-		ChangeLanguagefile1.close();
 		remove(English_File);
 		m_pXKEEPROM->ReadFromXBOX();
 		m_pXKEEPROM->SetLanguageString("01");
 		Force_Write_XBOX_EEPROM();
 		XKUtils::XBOXReset();
 	}
-	std::ifstream ChangeLanguagefile2(Japanese_File);
-	if (ChangeLanguagefile2.good())
+	if (file_exist(Japanese_File))
 	{
-		ChangeLanguagefile2.close();
 		remove(Japanese_File);
 		m_pXKEEPROM->ReadFromXBOX();
 		m_pXKEEPROM->SetLanguageString("02");
 		Force_Write_XBOX_EEPROM();
 		XKUtils::XBOXReset();
 	}
-	std::ifstream ChangeLanguagefile3(German_File);
-	if (ChangeLanguagefile3.good())
+	if (file_exist(German_File))
 	{
-		ChangeLanguagefile3.close();
 		remove(German_File);
 		m_pXKEEPROM->ReadFromXBOX();
 		m_pXKEEPROM->SetLanguageString("03");
 		Force_Write_XBOX_EEPROM();
 		XKUtils::XBOXReset();
 	}
-	std::ifstream ChangeLanguagefile4(French_File);
-	if (ChangeLanguagefile4.good())
+	if (file_exist(French_File))
 	{
-		ChangeLanguagefile4.close();
 		remove(French_File);
 		m_pXKEEPROM->ReadFromXBOX();
 		m_pXKEEPROM->SetLanguageString("04");
 		Force_Write_XBOX_EEPROM();
 		XKUtils::XBOXReset();
 	}
-	std::ifstream ChangeLanguagefile5(Spanish_File);
-	if (ChangeLanguagefile5.good())
+	if (file_exist(Spanish_File))
 	{
-		ChangeLanguagefile5.close();
 		remove(Spanish_File);
 		m_pXKEEPROM->ReadFromXBOX();
 		m_pXKEEPROM->SetLanguageString("05");
 		Force_Write_XBOX_EEPROM();
 		XKUtils::XBOXReset();
 	}
-	std::ifstream ChangeLanguagefile6(Italian_File);
-	if (ChangeLanguagefile6.good())
+	if (file_exist(Italian_File))
 	{
-		ChangeLanguagefile6.close();
 		remove(Italian_File);
 		m_pXKEEPROM->ReadFromXBOX();
 		m_pXKEEPROM->SetLanguageString("06");
 		Force_Write_XBOX_EEPROM();
 		XKUtils::XBOXReset();
 	}
-	std::ifstream ChangeLanguagefile7(Korean_File);
-	if (ChangeLanguagefile7.good())
+	if (file_exist(Korean_File))
 	{
-		ChangeLanguagefile7.close();
 		remove(Korean_File);
 		m_pXKEEPROM->ReadFromXBOX();
 		m_pXKEEPROM->SetLanguageString("07");
 		Force_Write_XBOX_EEPROM();
 		XKUtils::XBOXReset();
 	}
-	std::ifstream ChangeLanguagefile8(Chinese_File);
-	if (ChangeLanguagefile8.good())
+	if (file_exist(Chinese_File))
 	{
-		ChangeLanguagefile8.close();
 		remove(Chinese_File);
 		m_pXKEEPROM->ReadFromXBOX();
 		m_pXKEEPROM->SetLanguageString("08");
 		Force_Write_XBOX_EEPROM();
 		XKUtils::XBOXReset();
 	}
-	std::ifstream ChangeLanguagefile9(Portuguese_File);
-	if (ChangeLanguagefile9.good())
+	if (file_exist(Portuguese_File))
 	{
-		ChangeLanguagefile9.close();
 		remove(Portuguese_File);
 		m_pXKEEPROM->ReadFromXBOX();
 		m_pXKEEPROM->SetLanguageString("09");
@@ -1218,8 +1126,7 @@ void ConfigMagicApp::V_Serial()
 void ConfigMagicApp::NULL_HDD_KEY()
 {	
 	m_pXKEEPROM->ReadFromXBOX();
-	std::ifstream nulltestfile("D:\\nulltestfile");
-	if (nulltestfile.good())
+	if (file_exist("D:\\nulltestfile"))
 	{
 		m_pXKEEPROM->SetHDDKeyString("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
 	}
@@ -1287,16 +1194,13 @@ void ConfigMagicApp::KernelFontInstall()
 	strcat(tmpFileStr2, tmpData );
 	strcat(tmpFileStr2, " Font" );
 	ZeroMemory(tmpFileName, FILENAME_MAX);
-	std::ifstream FontPath(Update_Font);
-	if (FontPath.good())
+	if (file_exist(Update_Font))
 	{
-		FontPath.close();
 		strcat(tmpFileName, Font_Path_Alt);
 		Install_Font_Partition = xbox_xtf_File_Alt;
 	}
 	else
 	{
-		FontPath.close();
 		strcat(tmpFileName, Font_Path);
 		Install_Font_Partition = xbox_xtf_File;
 	}
@@ -1305,10 +1209,8 @@ void ConfigMagicApp::KernelFontInstall()
 	strcat(tmpFileName2, "E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\toggles\\font\\");
 	strcat(tmpFileName2, tmpFileStr);
 	strcat(tmpFileName2, ".png");
-	std::ifstream updatefontcheck(tmpFileName);
-	if (updatefontcheck.good())
+	if (file_exist(tmpFileName))
 	{
-		updatefontcheck.close();
 		((LPXKControl_TextBox) m_ActiveForm->GetControl("txtStatus"))->SetText(tmpFileStr2);
 		Render();
 		Sleep(1000);
@@ -1930,10 +1832,8 @@ void ConfigMagicApp::Force_Write_XBOX_EEPROM()
 
 void ConfigMagicApp::CheckBios()
 {
-	std::ifstream BackupBiosfile(Backup_Bios);
-	if (BackupBiosfile.good())
+	if (file_exist(Backup_Bios))
 	{
-		BackupBiosfile.close();
 		remove(Backup_Bios);
 		BYTE data;
 		char *BIOS_Name;
@@ -2122,6 +2022,12 @@ char* ConfigMagicApp::CheckMD5 (struct Bios *Listone, char *Sign)
 	return ("Unknown");
 }
 
+int ConfigMagicApp::file_exist(const char *name)
+{
+  struct stat   buffer;
+  return (stat (name, &buffer) == 0);
+}
+
 HRESULT ConfigMagicApp::Initialize()
 {
 	HRESULT retVal = S_OK;
@@ -2133,8 +2039,7 @@ HRESULT ConfigMagicApp::Initialize()
 	XKUtils::MountDiskE();
 	XKUtils::MountDiskS();
 	// Check for font files
-	std::ifstream font1exist("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\modules\\Xbox softmod tool kit\\Media\\Font_Message.xpr"); // Size 24
-	if (font1exist.good())
+	if (file_exist("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\modules\\Xbox softmod tool kit\\Media\\Font_Message.xpr")) // Size 24
 	{
 		retVal = m_XBFont1.Create(m_pd3dDevice, "E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\modules\\Xbox softmod tool kit\\Media\\Font_Message.xpr");
 	}
@@ -2142,8 +2047,7 @@ HRESULT ConfigMagicApp::Initialize()
 	{
 		retVal = m_XBFont1.Create(m_pd3dDevice, "D:\\Media\\Font_Message.xpr");
 	}
-	std::ifstream font2exist("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\modules\\Xbox softmod tool kit\\Media\\Font_Status.xpr"); // Size 20
-	if (font2exist.good())
+	if (file_exist("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\modules\\Xbox softmod tool kit\\Media\\Font_Status.xpr")) // Size 20
 	{
 		retVal = m_XBFont2.Create(m_pd3dDevice, "E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\modules\\Xbox softmod tool kit\\Media\\Font_Status.xpr");
 	}
@@ -2163,15 +2067,12 @@ HRESULT ConfigMagicApp::Initialize()
 	m_ActiveForm = m_pFrmStatus;
 	((LPXKControl_TextBox) m_pFrmStatus->GetControl("txtStatusMsg"))->SetText("INITIALISING");
 	((LPXKControl_TextBox) m_ActiveForm->GetControl("txtStatus"))->SetText("Please Wait");
-	std::ifstream rnkpfileexist(RNKP_File);
-	if (rnkpfileexist.good())
+	if (file_exist(RNKP_File))
 	{
-		rnkpfileexist.close();
 		Sleep(0);
 	}
 	else
 	{
-		rnkpfileexist.close();
 		Render();
 		Sleep(2000);
 	}
@@ -2217,8 +2118,7 @@ void ConfigMagicApp::InitScreen()
 {
 	m_pFrmStatus = new XKControl_Panel("Status", m_bgSprite, XOffset, YOffset, ScreenWidth,ScreenHeight);
 	// Check for image file
-	std::ifstream imageexist("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\modules\\Xbox softmod tool kit\\Media\\background.png");
-	if (imageexist.good())
+	if (file_exist("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\modules\\Xbox softmod tool kit\\Media\\background.png"))
 	{
 		m_pFrmStatus->LoadImage("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\modules\\Xbox softmod tool kit\\Media\\background.png");
 	}

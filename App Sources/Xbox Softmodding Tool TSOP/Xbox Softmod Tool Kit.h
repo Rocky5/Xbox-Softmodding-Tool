@@ -54,6 +54,9 @@ struct Bios
 
 class ConfigMagicApp : public XKBaseApp  
 {
+
+int file_exist(const char *name);
+
 private:
 
 	void	InitScreen();

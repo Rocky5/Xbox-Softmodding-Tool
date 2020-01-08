@@ -35,10 +35,9 @@
 #include <d3d8.h>
 #include "xkhdd.h"
 #include "xkeeprom.h"
-#include <fstream>
-#include <iostream>
 #include <time.h>
 #include <cstdio>
+#include <sys/stat.h>
 extern "C" XPP_DEVICE_TYPE XDEVICE_TYPE_IR_REMOTE_TABLE;
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Shared paths
@@ -61,37 +60,29 @@ void ConfigMagicApp::CheckBios()
 {
 	if(g_Gamepads[0].hDevice && g_Gamepads[0].bPressedAnalogButtons[XINPUT_GAMEPAD_BLACK])
 	{
-		std::ifstream TXST_EnigmahX("D:\\Softmod\\Applications\\Enigmah-X\\default.xbe");
-		if (TXST_EnigmahX.good())
+		if (file_exist("d:\\Softmod\\Applications\\Enigmah-X\\default.xbe"))
 		{
-			TXST_EnigmahX.close();
 			((LPXKControl_TextBox) m_ActiveForm->GetControl("txtStatus"))->SetText("Loading Enigmah-X");
 			Render();
 			Sleep(3000);
-			XKUtils::LaunchXBE("D:\\Softmod\\Applications\\Enigmah-X\\default.xbe");
+			XKUtils::LaunchXBE("d:\\Softmod\\Applications\\Enigmah-X\\default.xbe");
 		}
-	}	
+	}
+	XKUtils::MountDiskS();
 	BYTE data;
 	char *BIOS_Name;
-	int BiosTrovato,i;
 	CStdString strBiosName;
 	DWORD addr        = FLASH_BASE_ADDRESS;
 	DWORD addr_kernel = KERNEL_BASE_ADDRESS;
 	CXBoxFlash mbFlash;
 	char * flash_copy;
-
 	flash_copy = (char *) malloc(0x100000);
-
-	BiosTrovato = 0;
 	BIOS_Name  = (char*) malloc(100);
-
 	struct Bios *Listone = LoadBiosSigns();
-
 	if( !Listone )
 	{
 		free(BIOS_Name);
 	}
-
 	for(int loop=0;loop<0x100000;loop++)
 	{
 		data = mbFlash.Read(addr++);
@@ -106,115 +97,55 @@ void ConfigMagicApp::CheckBios()
 	strBiosName = BIOS_Name;
 	if ( strcmp(BIOS_Name, "Unknown") == 0)
 	{ 
-		Hardmodded_System();
-	}
-	else
-	{
-		// ((LPXKControl_TextBox) m_pFrmStatus->GetControl("txtStatusMsg"))->SetText("Checking for 1024kb Bios");
-		// Render();
-		// Sleep(1000);
-		if ( (strBiosName == "Retail 3944") || (strBiosName == "Retail 4034") || (strBiosName == "Retail 4134") || (strBiosName == "Retail 4817") || (strBiosName == "Retail 5101") || (strBiosName == "Retail 5530") || (strBiosName == "Retail 5713") || (strBiosName == "Retail 5838") )
-		{
-			((LPXKControl_TextBox) m_pFrmStatus->GetControl("txtStatusMsg"))->SetText(strBiosName+" BIOS DETECTED");
-			XKUtils::MountDiskS();
-			std::ifstream TXST_Softmod_Check1("S:\\nkpatcher\\rescuedash\\resoftmod files.zip");
-			if (TXST_Softmod_Check1.good())
-			{
-				TXST_Softmod_Check1.close();
-				XBST_Softmodded_System();
-			}
-			else
-			{
-				Other_Softmodded_System();
-			}
-		}
-		else
-		{
-			Hardmodded_System();
-		}
-	}
-}
-
-void ConfigMagicApp::XBST_Softmodded_System()
-{
-	if (g_Gamepads[0].hDevice && g_Gamepads[0].wPressedButtons & XINPUT_GAMEPAD_START)
-	{
-		std::ifstream TXST_FlashSMSoftmod("D:\\FlashSM\\default.xbe");
-		if (TXST_FlashSMSoftmod.good())
-		{
-			TXST_FlashSMSoftmod.close();
-			LED_Flash_Red;
-			((LPXKControl_TextBox) m_ActiveForm->GetControl("txtStatus"))->SetText("Loading Xbox Softmodding Tools TSOP Flasher Menu");
-			Render();
-			XKUtils::MountDiskD();
-			Sleep(3000);
-			XKUtils::LaunchXBE("D:\\FlashSM\\default.xbe");
-		}
-	}
-	else if(g_Gamepads[0].hDevice && g_Gamepads[0].bPressedAnalogButtons[XINPUT_GAMEPAD_WHITE])
-	{
-		std::ifstream TXST_Shadowc("D:\\Softmod\\shadowc.xbe");
-		if (TXST_Shadowc.good())
-		{
-			TXST_Shadowc.close();
-			((LPXKControl_TextBox) m_ActiveForm->GetControl("txtStatus"))->SetText("Loading XBST menu with ShadowC disabled");
-			Render();
-			XKUtils::MountDiskD();
-			Sleep(3000);
-			XKUtils::LaunchXBE("D:\\Softmod\\shadowc.xbe");
-		}
-	}
-	else
-	{
-		std::ifstream TXST_XBSTSoftmod("D:\\Softmod\\default.xbe");
-		if (TXST_XBSTSoftmod.good())
-		{
-			TXST_XBSTSoftmod.close();
-			LED_Flash_Orange;
-			((LPXKControl_TextBox) m_ActiveForm->GetControl("txtStatus"))->SetText("Loading Xbox Softmodding Tools Menu");
-			Render();
-			XKUtils::MountDiskD();
-			Sleep(3000);
-			XKUtils::LaunchXBE("D:\\Softmod\\default.xbe");
-		}
-	}
-}
-
-void ConfigMagicApp::Other_Softmodded_System()
-{
-	std::ifstream TXST_OtherSoftmod("D:\\OtherSM\\default.xbe");
-	if (TXST_OtherSoftmod.good())
-	{
-		TXST_OtherSoftmod.close();
-		LED_Flash_Green;
-		((LPXKControl_TextBox) m_ActiveForm->GetControl("txtStatus"))->SetText("Loading Other Softmod Menu");
-		Render();
-		XKUtils::MountDiskD();
-		Sleep(3000);
-		XKUtils::LaunchXBE("D:\\OtherSM\\default.xbe");
-	}
-}
-
-void ConfigMagicApp::Hardmodded_System()
-{
-	std::ifstream TXST_HardmodSoftmod("D:\\Hardmod\\default.xbe");
-	if (TXST_HardmodSoftmod.good())
-	{
-		TXST_HardmodSoftmod.close();
 		LED_Flash_Red;
 		((LPXKControl_TextBox) m_pFrmStatus->GetControl("txtStatusMsg"))->SetText("UNOFFICIAL/HACKED BIOS MODE");
 		((LPXKControl_TextBox) m_ActiveForm->GetControl("txtStatus"))->SetText("Loading Hardmod menu");
 		Render();
-		XKUtils::MountDiskD();
 		Sleep(3000);
-		XKUtils::LaunchXBE("D:\\Hardmod\\default.xbe");
+		XKUtils::LaunchXBE("d:\\Hardmod\\default.xbe");
+	}
+	else
+	{
+		((LPXKControl_TextBox) m_pFrmStatus->GetControl("txtStatusMsg"))->SetText(strBiosName+" BIOS DETECTED");
+		if (file_exist("S:\\nkpatcher\\rescuedash\\resoftmod files.zip"))
+		{
+			if (g_Gamepads[0].hDevice && g_Gamepads[0].wPressedButtons & XINPUT_GAMEPAD_START)
+			{
+				LED_Flash_Red;
+				((LPXKControl_TextBox) m_ActiveForm->GetControl("txtStatus"))->SetText("Loading Xbox Softmodding Tools TSOP Flasher Menu");
+				Render();
+				Sleep(3000);
+				XKUtils::LaunchXBE("d:\\FlashSM\\default.xbe");
+			}
+			else if(g_Gamepads[0].hDevice && g_Gamepads[0].bPressedAnalogButtons[XINPUT_GAMEPAD_WHITE])
+			{
+				((LPXKControl_TextBox) m_ActiveForm->GetControl("txtStatus"))->SetText("Loading XBST menu with ShadowC disabled");
+				Render();
+				Sleep(3000);
+				XKUtils::LaunchXBE("d:\\Softmod\\shadowc.xbe");
+			}
+			else
+			{
+				LED_Flash_Orange;
+				((LPXKControl_TextBox) m_ActiveForm->GetControl("txtStatus"))->SetText("Loading Xbox Softmodding Tools Menu");
+				Render();
+				Sleep(3000);
+				XKUtils::LaunchXBE("d:\\Softmod\\default.xbe");
+			}
+		}
+		else
+		{
+			LED_Flash_Green;
+			((LPXKControl_TextBox) m_ActiveForm->GetControl("txtStatus"))->SetText("Loading Other Softmod Menu");
+			Render();	
+			Sleep(3000);
+			XKUtils::LaunchXBE("d:\\OtherSM\\default.xbe");
+		}
 	}
 }
-
 struct Bios * ConfigMagicApp::LoadBiosSigns()
 {
 	FILE *infile;
-
 	if ((infile = fopen(Retail_Bios_Hash_File,"r")) == NULL)
 	{
 		return NULL;
@@ -244,7 +175,6 @@ struct Bios * ConfigMagicApp::LoadBiosSigns()
 		return Listone;
 	}
 }
-
 char* ConfigMagicApp::MD5Buffer(char *buffer, long PosizioneInizio,int KBytes)
 {
 	XBMC::XBMC_MD5 mdContext;
@@ -254,14 +184,11 @@ char* ConfigMagicApp::MD5Buffer(char *buffer, long PosizioneInizio,int KBytes)
 	strcpy(MD5_Sign, md5sumstring.c_str());
 	return MD5_Sign;
 }
-
 char* ConfigMagicApp::ReturnBiosName(char *buffer, char *str)
 {
 	int cnt1,cnt2,i;
 	cnt1=cnt2=0;
-
 	for (i=0;i<255;i++) buffer[i]='\0';
-
 	while (str[cnt2] != '=')
 	{
 		buffer[cnt1]=str[cnt2];
@@ -304,7 +231,11 @@ char* ConfigMagicApp::CheckMD5 (struct Bios *Listone, char *Sign)
 	while( strcmp(Listone[cntBioses].Name,"\0") != 0);
 	return ("Unknown");
 }
-
+int ConfigMagicApp::file_exist(const char *name)
+{
+	struct stat   buffer;
+	return (stat (name, &buffer) == 0);
+}
 HRESULT ConfigMagicApp::Initialize()
 {
 	XKUtils::MountDiskC();
@@ -337,7 +268,6 @@ HRESULT ConfigMagicApp::Initialize()
 	CheckBios();
 	return retVal;
 }
-
 void ConfigMagicApp::InitScreen()
 {
 	m_pFrmStatus = new XKControl_Panel("Status", m_bgSprite, XOffset, YOffset, ScreenWidth,ScreenHeight);
@@ -356,7 +286,6 @@ void ConfigMagicApp::InitScreen()
 	m_pFrmStatus->AddControl(txtStatusMsg,  0, 180,  ScreenWidth, 30);
 	m_pFrmStatus->AddControl(txtStatus,		0, 400,  ScreenWidth, 30);
 }
-
 void ConfigMagicApp::ResetLocations(LONG xoffset, LONG yoffset)
 {
 	XOffset = (xoffset<=0)?0:xoffset;
@@ -365,7 +294,6 @@ void ConfigMagicApp::ResetLocations(LONG xoffset, LONG yoffset)
 	m_pFrmStatus->SetPosition(XOffset, YOffset);
 	txtStatus->SetPosition(XOffset, YOffset+405);
 }
-
 HRESULT ConfigMagicApp::Render()
 {
 	//Clear screen..
@@ -378,7 +306,6 @@ HRESULT ConfigMagicApp::Render()
 	m_pd3dDevice->Present(NULL, NULL, NULL, NULL);
 	return S_OK;
 }
-
 void ConfigMagicApp::LoadSettings()
 {
 	//*************************** READ SCREEN SIZE, OFFSETS & COLOURS *****************************************
@@ -389,7 +316,6 @@ void ConfigMagicApp::LoadSettings()
 	m_clrMessageTextColor		= 0xffaee239;
 	m_clrStatusTextColor		= 0xff626473;
 }
-
 //Application start point
 void main()
 {

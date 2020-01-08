@@ -4,8 +4,17 @@
 	Created by Rocky5
 =========================================
 
+
 =========================================
-	Update: December 1 2020
+	Update: January 4 2020
+=========================================
+		Moved to stat() when checking if a file exists.
+		( shouldn't have just used that from the beginning, ifstream is a pain )
+		Few other minor adjustments to things
+
+
+=========================================
+	Update: January 1 2020
 =========================================
 		Extras Disc should now detect retail bios properly.
 		( no more crashing )

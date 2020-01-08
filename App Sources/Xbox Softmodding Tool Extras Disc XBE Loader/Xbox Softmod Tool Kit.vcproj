@@ -23,6 +23,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
+				GlobalOptimizations="FALSE"
 				OptimizeForProcessor="2"
 				AdditionalIncludeDirectories="include,XKUtils,XKBaseApp,"
 				PreprocessorDefinitions="WIN32,_XBOX,_DEBUG"
@@ -129,10 +130,10 @@
 			Name="Source Files"
 			Filter="cpp;c;cxx;rc;def;r;odl;idl;hpj;bat">
 			<File
-				RelativePath=".\Xbox Softmod Tool Kit.cpp">
+				RelativePath=".\md5.cpp">
 			</File>
 			<File
-				RelativePath=".\md5.cpp">
+				RelativePath=".\Xbox Softmod Tool Kit.cpp">
 			</File>
 			<File
 				RelativePath=".\XKBaseApp\XKBaseApp.cpp">
@@ -187,10 +188,10 @@
 			Name="Header Files"
 			Filter="h;hpp;hxx;hm;inl">
 			<File
-				RelativePath=".\Xbox Softmod Tool Kit.h">
+				RelativePath=".\wmvplayer.h">
 			</File>
 			<File
-				RelativePath=".\wmvplayer.h">
+				RelativePath=".\Xbox Softmod Tool Kit.h">
 			</File>
 			<File
 				RelativePath="..\XKBaseApp\XKBaseApp.h">

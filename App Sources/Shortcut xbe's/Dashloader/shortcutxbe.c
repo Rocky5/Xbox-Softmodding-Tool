@@ -317,7 +317,28 @@ int main(int argc,char* argv[])
 		m_DefaultGamepad.sThumbLY = SHORT( nThumbLY );
 		m_DefaultGamepad.sThumbRX = SHORT( nThumbRX );
 		m_DefaultGamepad.sThumbRY = SHORT( nThumbRY );
-		if( m_DefaultGamepad.bPressedAnalogButtons[XINPUT_GAMEPAD_A] )
+		if( m_DefaultGamepad.bPressedAnalogButtons[XINPUT_GAMEPAD_Y] && (m_DefaultGamepad.wPressedButtons & XINPUT_GAMEPAD_START) )
+		{
+			debuglog("\n------------------------------------------------");
+			debuglog("Rescue Dashboard Locations");
+			debuglog("------------------------------------------------");
+			debuglog("Loading Custom Rescue Dashboard\n");
+			LaunchRecovery(dashloader_Files_path"Custom_Recovery.cfg");
+			debuglog("Custom Rescue Dashboard doesn't Exist\n");
+			/**/
+			debuglog("Loading Rescue Dashboard TDATA");
+			XLaunchXBE("E:\\TDATA\\Rescuedash\\Default.xbe");
+			debuglog("Rescue Dashboard doesn't Exist\n");
+			/**/
+			debuglog("Loading Rescue Dashboard UDATA");
+			XLaunchXBE("E:\\UDATA\\Rescuedash\\Default.xbe");
+			debuglog("RescueDashboard doesn't Exist\n");
+			/**/
+			debuglog("Loading Shadowc rescue Dashboard");
+			XLaunchXBE("R:\\NKPatcher\\rescuedash\\loader.xbe");
+			debuglog("Rescue Dashboard doesn't Exist\n");
+		}
+		else if( m_DefaultGamepad.bPressedAnalogButtons[XINPUT_GAMEPAD_A] )
 		{
 			strcpy(shortcut, dashloader_Files_path"A_Button_Dash.cfg");
 		}
@@ -348,27 +369,6 @@ int main(int argc,char* argv[])
 		else if( m_DefaultGamepad.bPressedAnalogButtons[XINPUT_GAMEPAD_WHITE] )
 		{
 			strcpy(shortcut, dashloader_Files_path"White_Button_Dash.cfg");
-		}
-		else if( m_DefaultGamepad.bPressedAnalogButtons[XINPUT_GAMEPAD_Y] && (m_DefaultGamepad.wPressedButtons & XINPUT_GAMEPAD_START) )
-		{
-			debuglog("\n------------------------------------------------");
-			debuglog("Rescue Dashboard Locations");
-			debuglog("------------------------------------------------");
-			debuglog("Loading Custom Rescue Dashboard\n");
-			LaunchRecovery(dashloader_Files_path"Custom_Recovery.cfg");
-			debuglog("Custom Rescue Dashboard doesn't Exist\n");
-			/**/
-			debuglog("Loading Rescue Dashboard TDATA");
-			XLaunchXBE("E:\\TDATA\\Rescuedash\\Default.xbe");
-			debuglog("Rescue Dashboard doesn't Exist\n");
-			/**/
-			debuglog("Loading Rescue Dashboard UDATA");
-			XLaunchXBE("E:\\UDATA\\Rescuedash\\Default.xbe");
-			debuglog("RescueDashboard doesn't Exist\n");
-			/**/
-			debuglog("Loading Shadowc rescue Dashboard");
-			XLaunchXBE("R:\\NKPatcher\\rescuedash\\loader.xbe");
-			debuglog("Rescue Dashboard doesn't Exist\n");
 		}
 		Sleep(500);
 		timer -= 1;
