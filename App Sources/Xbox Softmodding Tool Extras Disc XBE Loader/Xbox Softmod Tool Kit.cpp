@@ -60,15 +60,15 @@ void ConfigMagicApp::CheckBios()
 {
 	if(g_Gamepads[0].hDevice && g_Gamepads[0].bPressedAnalogButtons[XINPUT_GAMEPAD_BLACK])
 	{
-		if (file_exist("d:\\Softmod\\Applications\\Enigmah-X\\default.xbe"))
+		if (file_exist("D:\\Softmod\\Applications\\Enigmah-X\\default.xbe"))
 		{
 			((LPXKControl_TextBox) m_ActiveForm->GetControl("txtStatus"))->SetText("Loading Enigmah-X");
 			Render();
 			Sleep(3000);
-			XKUtils::LaunchXBE("d:\\Softmod\\Applications\\Enigmah-X\\default.xbe");
+			XKUtils::LaunchXBE("D:\\Softmod\\Applications\\Enigmah-X\\default.xbe");
 		}
 	}
-	XKUtils::MountDiskS();
+	XKUtils::MountDiskE();
 	BYTE data;
 	char *BIOS_Name;
 	CStdString strBiosName;
@@ -102,12 +102,12 @@ void ConfigMagicApp::CheckBios()
 		((LPXKControl_TextBox) m_ActiveForm->GetControl("txtStatus"))->SetText("Loading Hardmod menu");
 		Render();
 		Sleep(3000);
-		XKUtils::LaunchXBE("d:\\Hardmod\\default.xbe");
+		XKUtils::LaunchXBE("D:\\Hardmod\\default.xbe");
 	}
 	else
 	{
 		((LPXKControl_TextBox) m_pFrmStatus->GetControl("txtStatusMsg"))->SetText(strBiosName+" BIOS DETECTED");
-		if (file_exist("S:\\nkpatcher\\rescuedash\\resoftmod files.zip"))
+		if (file_exist("E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\modules\\Xbox softmod tool kit\\default.xbe"))
 		{
 			if (g_Gamepads[0].hDevice && g_Gamepads[0].wPressedButtons & XINPUT_GAMEPAD_START)
 			{
@@ -115,14 +115,14 @@ void ConfigMagicApp::CheckBios()
 				((LPXKControl_TextBox) m_ActiveForm->GetControl("txtStatus"))->SetText("Loading Xbox Softmodding Tools TSOP Flasher Menu");
 				Render();
 				Sleep(3000);
-				XKUtils::LaunchXBE("d:\\FlashSM\\default.xbe");
+				XKUtils::LaunchXBE("D:\\FlashSM\\default.xbe");
 			}
 			else if(g_Gamepads[0].hDevice && g_Gamepads[0].bPressedAnalogButtons[XINPUT_GAMEPAD_WHITE])
 			{
 				((LPXKControl_TextBox) m_ActiveForm->GetControl("txtStatus"))->SetText("Loading XBST menu with ShadowC disabled");
 				Render();
 				Sleep(3000);
-				XKUtils::LaunchXBE("d:\\Softmod\\shadowc.xbe");
+				XKUtils::LaunchXBE("D:\\Softmod\\shadowc.xbe");
 			}
 			else
 			{
@@ -130,7 +130,7 @@ void ConfigMagicApp::CheckBios()
 				((LPXKControl_TextBox) m_ActiveForm->GetControl("txtStatus"))->SetText("Loading Xbox Softmodding Tools Menu");
 				Render();
 				Sleep(3000);
-				XKUtils::LaunchXBE("d:\\Softmod\\default.xbe");
+				XKUtils::LaunchXBE("D:\\Softmod\\default.xbe");
 			}
 		}
 		else
@@ -139,7 +139,7 @@ void ConfigMagicApp::CheckBios()
 			((LPXKControl_TextBox) m_ActiveForm->GetControl("txtStatus"))->SetText("Loading Other Softmod Menu");
 			Render();	
 			Sleep(3000);
-			XKUtils::LaunchXBE("d:\\OtherSM\\default.xbe");
+			XKUtils::LaunchXBE("D:\\OtherSM\\default.xbe");
 		}
 	}
 }

@@ -12,9 +12,16 @@
 #endif
 #include <string.h>
 #include <stdio.h>
+#include <sys/stat.h>
 #include "shortcutxbe.h"
+#define ES_IGR	"E:\\CACHE\\LocalCache20.bin"
 #define dashloader_Files_path	"E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\dashloader\\"
 static FILE* logfile = NULL;
+int file_exist(char *name)
+{
+  struct stat   buffer;   
+  return (stat (name, &buffer) == 0);
+}
 void initlog()
 {
 	/* mount up a drive to use for debug logging */
@@ -212,6 +219,8 @@ int LaunchShortcut(char* filename)
 	}
 	/* null terminate string, and chop of any trailing blanks */
 	target[length] = '\0';
+	/* remove ES_File */
+	remove(ES_IGR);
 	/* launching xbe */
 	XLaunchXBE(target);
 	/* if we get here something went wrong */
@@ -252,13 +261,18 @@ int LaunchRecovery(char* filename)
 /* initial starting point of program */
 int main(int argc,char* argv[])
 {
-	char shortcut[MAX_PATH];
 	initlog();
-	/* move to xbepath buffer */	
-	strcpy(shortcut, dashloader_Files_path"Custom_Dash.cfg");
-	XUnmount("E:");
-	XMount("E:", "\\Device\\Harddisk0\\Partition1");
-	debuglog("Dashloader Build 1.1");
+	char shortcut[MAX_PATH];
+	/* move to xbepath buffer */
+	if (file_exist(ES_IGR))
+	{
+		strcpy(shortcut, ES_IGR);
+	}
+	else
+	{
+		strcpy(shortcut, dashloader_Files_path"Custom_Dash.cfg");
+	}
+	debuglog("Dashloader Build 1.3");
 	XInitDevices( 0, NULL );
 	if( FAILED( XBInput_CreateGamepads( &m_Gamepad ) ) )
 	{

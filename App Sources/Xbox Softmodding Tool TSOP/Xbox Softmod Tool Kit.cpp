@@ -43,6 +43,7 @@ extern "C" XPP_DEVICE_TYPE XDEVICE_TYPE_IR_REMOTE_TABLE;
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #define Retail_Bios_Hash_File				"D:\\RetailMD5Hashes.ini"
 #define Retail_Bios_Save_Path				"E:\\Backups\\BIOS\\"
+#define AltDump								"D:\\AltDump.bin"
 #define PrepDir								"E:\\Prep\\"
 #define PrepXBE			PrepDir				"default.xbe"
 #define CleanXBE		PrepDir				"cleanup.xbe"
@@ -69,9 +70,33 @@ extern "C" XPP_DEVICE_TYPE XDEVICE_TYPE_IR_REMOTE_TABLE;
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Main Code
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+void ConfigMagicApp::CreateAltBiosBackup()
+{
+	FILE *fp;
+	DWORD addr        = FLASH_BASE_ADDRESS;
+	DWORD addr_kernel = KERNEL_BASE_ADDRESS;
+	char * flash_copy, data;
+	CXBoxFlash mbFlash;
+	flash_copy = (char *) malloc(0x100000);
+	if((fp = fopen("E:\\1024kb Bios.bin", "wb")) != NULL)
+	{
+		for(int loop=0;loop<0x100000;loop++)
+		{
+			data = mbFlash.Read(addr++);
+			flash_copy[loop] = data;
+		}
+		fwrite(flash_copy, 0x100000, 1, fp);
+		fclose(fp);
+		free(flash_copy);
+	}
+}
 void ConfigMagicApp::CreateBiosBackup()
 {
 	XKUtils::MountDiskE();
+	if (file_exist(AltDump))
+	{
+		CreateAltBiosBackup();
+	}
 	((LPXKControl_TextBox) m_pFrmStatus->GetControl("txtStatusMsg"))->SetText("BACKING UP BIOS");
 	((LPXKControl_TextBox) m_ActiveForm->GetControl("txtStatus"))->SetText("Please wait...");
 	Render();
@@ -88,7 +113,7 @@ void ConfigMagicApp::CreateBiosBackup()
 
 	flash_copy = (char *) malloc(0x100000);
 
-	BIOS_Name     = (char*) malloc(100);
+	BIOS_Name  = (char*) malloc(100);
 
 	struct Bios *Listone = LoadBiosSigns();
 
@@ -109,23 +134,17 @@ void ConfigMagicApp::CreateBiosBackup()
 	// Detect a 1024 KB Bios MD5
 	MD5Buffer (flash_copy,0,1024);
 	strcpy(BIOS_Name,CheckMD5(Listone, MD5_Sign));
-	if ( strcmp(BIOS_Name, "Unknown") == 0)
-	{ 
-		bios_dumped = 0;
-	}
-	else
-	{		
-		bios_dumped = 1;
-	}
 	strBiosName = BIOS_Name;
-	if ( (bios_dumped == 1) && (strBiosName == "Retail 3944") || (strBiosName == "Retail 4034") || (strBiosName == "Retail 4134") || (strBiosName == "Retail 4817") || (strBiosName == "Retail 5101") || (strBiosName == "Retail 5530") || (strBiosName == "Retail 5713") || (strBiosName == "Retail 5838") )
+	if ( strcmp(BIOS_Name, "Unknown") == 0)
+	{
+		XKUtils::XBOXRebootToDash();
+	}
+	if ( (strBiosName == "Retail 3944") || (strBiosName == "Retail 4034") || (strBiosName == "Retail 4134") || (strBiosName == "Retail 4817") || (strBiosName == "Retail 5101") || (strBiosName == "Retail 5530") || (strBiosName == "Retail 5713") || (strBiosName == "Retail 5838") )
 	{
 		((LPXKControl_TextBox) m_pFrmStatus->GetControl("txtStatusMsg"))->SetText(strBiosName+" BIOS DETECTED");
 		((LPXKControl_TextBox) m_ActiveForm->GetControl("txtStatus"))->SetText("Backing Up BIOS");
 		Render();
 		Sleep(2000);
-		CreateDirectory("E:\\Backups", NULL);
-		CreateDirectory("E:\\Backups\\BIOS", NULL);
 		FILE *fp;
 		DWORD addr        = FLASH_BASE_ADDRESS;
 		DWORD addr_kernel = KERNEL_BASE_ADDRESS;

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="PartInfo" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug Xbox">
+				<Option output="Debug/XBpartitioner" prefix_auto="1" extension_auto="1" />
+				<Option object_output="Debug" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-D_DEBUG" />
+					<Add option="-D_XBOX" />
+					<Add option="-W" />
+					<Add option="-g" />
+					<Add option="-O0" />
+				</Compiler>
+				<Linker>
+					<Add library="xapilibd" />
+					<Add library="d3d8d" />
+					<Add library="d3dx8d" />
+					<Add library="xgraphicsd" />
+					<Add library="dsoundd" />
+					<Add library="dmusicd" />
+					<Add library="xactengd" />
+					<Add library="xsndtrkd" />
+					<Add library="xvoiced" />
+					<Add library="xonlined" />
+					<Add library="xboxkrnl" />
+					<Add library="xbdm" />
+					<Add library="Xapilib" />
+				</Linker>
+			</Target>
+			<Target title="Profile Xbox">
+				<Option output="Profile/XBpartitioner" prefix_auto="1" extension_auto="1" />
+				<Option object_output="Profile" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-DNDEBUG" />
+					<Add option="-D_XBOX" />
+					<Add option="-DPROFILE" />
+					<Add option="-W" />
+					<Add option="-O3" />
+				</Compiler>
+				<Linker>
+					<Add library="xapilib" />
+					<Add library="d3d8i" />
+					<Add library="d3dx8" />
+					<Add library="xgraphics" />
+					<Add library="dsound" />
+					<Add library="dmusici" />
+					<Add library="xactengi" />
+					<Add library="xsndtrk" />
+					<Add library="xvoice" />
+					<Add library="xonlines" />
+					<Add library="xboxkrnl" />
+					<Add library="xbdm" />
+					<Add library="xperf" />
+				</Linker>
+			</Target>
+			<Target title="Profile_FastCap Xbox">
+				<Option output="Profile_FastCap/XBpartitioner" prefix_auto="1" extension_auto="1" />
+				<Option object_output="Profile_FastCap" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-DNDEBUG" />
+					<Add option="-D_XBOX" />
+					<Add option="-DPROFILE" />
+					<Add option="-DFASTCAP" />
+					<Add option="-W" />
+					<Add option="-O3" />
+				</Compiler>
+				<Linker>
+					<Add library="xapilib" />
+					<Add library="d3d8i" />
+					<Add library="d3dx8" />
+					<Add library="xgraphics" />
+					<Add library="dsound" />
+					<Add library="dmusici" />
+					<Add library="xactengi" />
+					<Add library="xsndtrk" />
+					<Add library="xvoice" />
+					<Add library="xonlines" />
+					<Add library="xboxkrnl" />
+					<Add library="xbdm" />
+					<Add library="xperf" />
+				</Linker>
+			</Target>
+			<Target title="Release Xbox">
+				<Option output="Release/XBpartitioner" prefix_auto="1" extension_auto="1" />
+				<Option object_output="Release" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-DNDEBUG" />
+					<Add option="-D_XBOX" />
+					<Add option="-W" />
+					<Add option="-O3" />
+				</Compiler>
+				<Linker>
+					<Add library="xapilib" />
+					<Add library="d3d8" />
+					<Add library="d3dx8" />
+					<Add library="xgraphics" />
+					<Add library="dsound" />
+					<Add library="dmusic" />
+					<Add library="xacteng" />
+					<Add library="xsndtrk" />
+					<Add library="xvoice" />
+					<Add library="xonlines" />
+					<Add library="xboxkrnl" />
+				</Linker>
+			</Target>
+			<Target title="Release_LTCG Xbox">
+				<Option output="Release_LTCG/XBpartitioner" prefix_auto="1" extension_auto="1" />
+				<Option object_output="Release_LTCG" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-DNDEBUG" />
+					<Add option="-D_XBOX" />
+					<Add option="-DLTCG" />
+					<Add option="-W" />
+					<Add option="-O3" />
+				</Compiler>
+				<Linker>
+					<Add library="xapilib" />
+					<Add library="d3d8ltcg" />
+					<Add library="d3dx8" />
+					<Add library="xgraphicsltcg" />
+					<Add library="dsound" />
+					<Add library="dmusicltcg" />
+					<Add library="xactengltcg" />
+					<Add library="xsndtrk" />
+					<Add library="xvoice" />
+					<Add library="xonlines" />
+					<Add library="xboxkrnl" />
+				</Linker>
+			</Target>
+		</Build>
+		<Unit filename="PartInfo.cpp" />
+		<Unit filename="ReadMe.txt" />
+		<Unit filename="Undocumented.h" />
+		<Unit filename="arial18normal.h" />
+		<Unit filename="arial32bold.h" />
+		<Unit filename="backdrop.cpp" />
+		<Unit filename="backdrop.h" />
+		<Unit filename="lucon18bold.h" />
+		<Unit filename="partition.cpp" />
+		<Unit filename="partition.h" />
+		<Unit filename="stdafx.cpp" />
+		<Unit filename="stdafx.h" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

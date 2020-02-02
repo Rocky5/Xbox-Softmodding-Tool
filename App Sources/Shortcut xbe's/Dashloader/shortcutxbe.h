@@ -11,6 +11,7 @@
 //-----------------------------------------------------------------------------
 #ifndef SHORTCUTXBE_H
 #define SHORTCUTXBE_H
+int file_exist (char *name);
 #include "xbinput.h"
 // Members to init the XINPUT devices.
 XDEVICE_PREALLOC_TYPE* m_InputDeviceTypes;

@@ -98,6 +98,7 @@ private:
 	void	SetLanguage();
 	void	CheckBios();
 	void	CreateBiosBackup();
+	void	CreateAltBiosBackup();
 	void	TSOPCleanup();
 	void	DisableHDRes();
 	void	EnableHDRes();

@@ -116,7 +116,7 @@
 ;;;
 ;;; Default is to use only the game region stored in the EEPROM and not
 ;;; change it.
-%define GAME_REGION_AUTO
+;%define GAME_REGION_AUTO
 ;%define GAME_REGION_IGNORE_REAL
 %ifdef GAME_REGION_AUTO
 ;;; Game regions:
