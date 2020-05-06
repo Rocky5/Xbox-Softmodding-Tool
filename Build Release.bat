@@ -1,8 +1,10 @@
 @Echo off & SetLocal EnableDelayedExpansion & Mode con:cols=100 lines=10 & Color 0B
 Title Build Release
+Set "root=%~dp0"
+
+if not exist "..\Other Stuff\dev.bin" Call :Download & Exit
 
 Set "Winrar=%CD%\Other\Tools\Winrar\winrar.exe"
-
 If not exist "..\Release" (
 	MD "..\Release\Extras Disc\Documents"
 	MD "..\Release\Extras Disc\Extras"
@@ -35,3 +37,13 @@ Move "XBHDM Build.zip" "..\Release\Installer Variants"
 :: Tools
 Copy "Utilites\PC\zipped\*" "..\Release\Utilites"
 Explorer "..\Release\"
+
+CD %root%
+:Download
+if not exist "..\Other Stuff\dev.bin" (
+	Echo:
+	Echo  This is intended for people that know what they are doing.
+	Echo  If you do not please hit enter to be taken to the Pre-Build versions of the files.
+	Set /p "tmp="
+	start "" https://drive.google.com/drive/folders/0BzRN8P835YijRU94cVNNWFA1Z28?usp=sharing
+)

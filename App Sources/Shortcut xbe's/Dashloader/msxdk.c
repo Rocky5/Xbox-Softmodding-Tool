@@ -56,6 +56,7 @@ DRIVEMAPPING g_driveMapping[] =
 {
 	{ 'C', "Harddisk0\\Partition2", 2},
 	{ 'D', "Cdrom0", -1},
+	{ 'VD', "Cdrom1", -1},
 	{ 'E', "Harddisk0\\Partition1", 1},
 	{ 'F', "Harddisk0\\Partition6", 6},
 	{ 'X', "Harddisk0\\Partition3", 3},

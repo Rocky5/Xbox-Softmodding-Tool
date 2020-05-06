@@ -1,5 +1,8 @@
 @Echo off & SetLocal EnableDelayedExpansion & Mode con:cols=100 lines=10 & Color 0B
 Title Build Installer Variants
+Set "root=%~dp0"
+
+if not exist "..\Other Stuff\dev.bin" Call :Download & Exit
 
 Set "Winrar=%CD%\Other\Tools\Winrar\winrar.exe"
 ::Build save files for Xbox.
@@ -74,3 +77,13 @@ If not exist "Extras Disc Attacher.zip" (
 
 RD /Q /S "..\..\..\Other\Game Saves\BFM\Softmod Files"
 RD /Q /S "..\..\..\Other\tmp"
+
+CD %root%
+:Download
+if not exist "..\Other Stuff\dev.bin" (
+	Echo:
+	Echo  This is intended for people that know what they are doing.
+	Echo  If you do not please hit enter to be taken to the Pre-Build versions of the files.
+	Set /p "tmp="
+	start "" https://drive.google.com/drive/folders/1GO8e61Urz0Ck8110A5C5X0qxnGpLjTI8?usp=sharing
+)

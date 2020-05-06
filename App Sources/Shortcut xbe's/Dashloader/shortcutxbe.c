@@ -13,7 +13,10 @@
 #include <string.h>
 #include <stdio.h>
 #include <sys/stat.h>
+#include <fstream>
+#include <iostream>
 #include "shortcutxbe.h"
+#include "dismountxbe.h"
 #define ES_IGR	"E:\\CACHE\\LocalCache20.bin"
 #define dashloader_Files_path	"E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\dashloader\\"
 static FILE* logfile = NULL;
@@ -262,6 +265,20 @@ int LaunchRecovery(char* filename)
 int main(int argc,char* argv[])
 {
 	initlog();
+	XMount("VD:", "\\Device\\Cdrom1");
+	if (file_exist("VD:\\default.xbe"))
+	{
+		XMount("E:", "\\Device\\Harddisk0\\Partition1");
+		int i;
+		std::ofstream DismountXBEFile("E:\\UDATA\\tmp.xbe", std::ios::binary);
+		for(i = 0; i < sizeof(dismount_xbe); i++)
+		{
+			DismountXBEFile << dismount_xbe[i];
+		}
+		DismountXBEFile.close();
+		XLaunchXBE("E:\\UDATA\\tmp.xbe");
+	}
+	remove("E:\\UDATA\\tmp.xbe");
 	char shortcut[MAX_PATH];
 	/* move to xbepath buffer */
 	if (file_exist(ES_IGR))
@@ -331,6 +348,14 @@ int main(int argc,char* argv[])
 		m_DefaultGamepad.sThumbLY = SHORT( nThumbLY );
 		m_DefaultGamepad.sThumbRX = SHORT( nThumbRX );
 		m_DefaultGamepad.sThumbRY = SHORT( nThumbRY );
+		
+		
+		XMount("D1:", "\\Device\\Cdrom1");
+		if (file_exist("D1:\\default.xbe"))
+		{
+			strcpy(shortcut, dashloader_Files_path"B_Button_Dash.cfg");
+		}
+		
 		if( m_DefaultGamepad.bPressedAnalogButtons[XINPUT_GAMEPAD_Y] && (m_DefaultGamepad.wPressedButtons & XINPUT_GAMEPAD_START) )
 		{
 			debuglog("\n------------------------------------------------");

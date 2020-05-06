@@ -6,6 +6,15 @@
 
 
 =========================================
+	Update: May 06 2020
+=========================================
+		Dashloader will now dismount a virtual disc if found when IGRing. So ISO Games can be played like HDD games.
+		( They could be played that way before but the image would stay mounted across IGRs )
+		Updated the bat files to take a user to the Pre-Build version of the files.
+		( No one except devs or peeps that know what to do should be building the source, and now I need to step in to change that. )
+
+
+=========================================
 	Update: January 4 2020
 =========================================
 		Moved to stat() when checking if a file exists.
