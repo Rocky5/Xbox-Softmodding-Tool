@@ -215,7 +215,7 @@
 				Progress="TRUE"/>
 			<Tool
 				Name="XboxImageTool"
-				FileName="$(TargetDir)default.xbe"
+				FileName="$(TargetDir)evoxdash.xbe"
 				StackSize="65536"
 				TitleID="0x21585554"
 				TitleName="Dashloader Hardmod Edition"/>

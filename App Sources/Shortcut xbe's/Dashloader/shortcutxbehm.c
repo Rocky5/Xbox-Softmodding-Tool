@@ -223,7 +223,7 @@ int main(int argc,char* argv[])
 {
 	initlog();
 	XMount("VD:", "\\Device\\Cdrom1");
-	if (file_exist("VD:\\default.xbe"))
+	if (file_exist("VD:\\default.xbe") && !file_exist(dashloader_Files_path"Disabled Virtual-ISO Dismount.bin"))
 	{
 		XMount("E:", "\\Device\\Harddisk0\\Partition1");
 		int i;

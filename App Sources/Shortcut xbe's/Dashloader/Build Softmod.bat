@@ -19,7 +19,7 @@ SET XBE_PATCH="..\..\..\other\tools\xbepatch.exe"
 SET Habibi="..\..\..\other\tools\xbedump.exe"
 SET XBE=default.xbe
 SET DEST=Build
-RMDIR %DEST% /S /Q 2>NUL
+Del %DEST%\%XBE% /Q 2>NUL
 MKDIR %DEST%
 
 ECHO Wait while preparing the build.

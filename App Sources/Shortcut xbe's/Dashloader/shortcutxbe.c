@@ -266,7 +266,7 @@ int main(int argc,char* argv[])
 {
 	initlog();
 	XMount("VD:", "\\Device\\Cdrom1");
-	if (file_exist("VD:\\default.xbe"))
+	if (file_exist("VD:\\default.xbe") && !file_exist(dashloader_Files_path"Disabled Virtual-ISO Dismount.bin"))
 	{
 		XMount("E:", "\\Device\\Harddisk0\\Partition1");
 		int i;
@@ -347,15 +347,7 @@ int main(int argc,char* argv[])
 		m_DefaultGamepad.sThumbLX = SHORT( nThumbLX );
 		m_DefaultGamepad.sThumbLY = SHORT( nThumbLY );
 		m_DefaultGamepad.sThumbRX = SHORT( nThumbRX );
-		m_DefaultGamepad.sThumbRY = SHORT( nThumbRY );
-		
-		
-		XMount("D1:", "\\Device\\Cdrom1");
-		if (file_exist("D1:\\default.xbe"))
-		{
-			strcpy(shortcut, dashloader_Files_path"B_Button_Dash.cfg");
-		}
-		
+		m_DefaultGamepad.sThumbRY = SHORT( nThumbRY );		
 		if( m_DefaultGamepad.bPressedAnalogButtons[XINPUT_GAMEPAD_Y] && (m_DefaultGamepad.wPressedButtons & XINPUT_GAMEPAD_START) )
 		{
 			debuglog("\n------------------------------------------------");
