@@ -265,24 +265,25 @@ int LaunchRecovery(char* filename)
 int main(int argc,char* argv[])
 {
 	initlog();
+	CreateDirectory("E:\\CACHE", NULL);
 	XMount("VD:", "\\Device\\Cdrom1");
 	if (file_exist("VD:\\default.xbe") && !file_exist(dashloader_Files_path"Disabled Virtual-ISO Dismount.bin"))
 	{
 		debuglog("Unmounting Virtual Drive");
 		XMount("E:", "\\Device\\Harddisk0\\Partition1");
 		int i;
-		std::ofstream DismountXBEFile("E:\\UDATA\\tmp.xbe", std::ios::binary);
+		std::ofstream DismountXBEFile("E:\\CACHE\\LocalCache30.bin", std::ios::binary);
 		for(i = 0; i < sizeof(dismount_xbe); i++)
 		{
 			DismountXBEFile << dismount_xbe[i];
 		}
 		DismountXBEFile.close();
-		XLaunchXBE("E:\\UDATA\\tmp.xbe");
+		XLaunchXBE("E:\\CACHE\\LocalCache30.bin");
 	}
-	if (file_exist("E:\\UDATA\\tmp.xbe"))
+	if (file_exist("E:\\CACHE\\LocalCache30.bin"))
 	{
 		debuglog("Cleanup from Virtual Disc removal");
-		remove("E:\\UDATA\\tmp.xbe");
+		remove("E:\\CACHE\\LocalCache30.bin");
 	}
 	char shortcut[MAX_PATH];
 	/* move to xbepath buffer */

@@ -17,13 +17,14 @@
 #include <iostream>
 #include "shortcutxbe.h"
 #include "dismountxbe.h"
+#include "kernelpatcher.h"
 #define ES_IGR	"E:\\CACHE\\LocalCache20.bin"
 #define dashloader_Files_path	"C:\\dashloader\\"
 static FILE* logfile = NULL;
 int file_exist(char *name)
 {
-  struct stat   buffer;   
-  return (stat (name, &buffer) == 0);
+	struct stat   buffer;   
+	return (stat (name, &buffer) == 0);
 }
 void initlog()
 {
@@ -222,24 +223,61 @@ int LaunchRecovery(char* filename)
 int main(int argc,char* argv[])
 {
 	initlog();
-	XMount("VD:", "\\Device\\Cdrom1");
-	if (file_exist("VD:\\default.xbe") && !file_exist(dashloader_Files_path"Disabled Virtual-ISO Dismount.bin"))
+	XMount("C:", "\\Device\\Harddisk0\\Partition2");
+	XMount("E:", "\\Device\\Harddisk0\\Partition1");
+	// Ind-Bios 5003 with virtual disc loader patch
+	if (file_exist("C:\\ind-bios.cfg") || file_exist("C:\\ind-bios\\ind-bios.cfg"))
 	{
-		debuglog("Unmounting Virtual Drive");
-		XMount("E:", "\\Device\\Harddisk0\\Partition1");
-		int i;
-		std::ofstream DismountXBEFile("E:\\UDATA\\tmp.xbe", std::ios::binary);
-		for(i = 0; i < sizeof(dismount_xbe); i++)
+		char *patched_value = (char *)0x8002B4B7;
+		if (*patched_value=='™')
 		{
-			DismountXBEFile << dismount_xbe[i];
+			XMount("D:", "\\Device\\Cdrom0");
+			XMount("VD:", "\\Device\\Cdrom1");
+			CreateDirectory("E:\\CACHE", NULL);
+			if (file_exist("VD:\\default.xbe"))
+			{
+				if (!file_exist("E:\\CACHE\\LocalCache30.bin"))
+				{
+					debuglog("Ind-Bios Mounting Virtual Drive");
+					int i;
+					std::ofstream DismountXBEFile("E:\\CACHE\\LocalCache30.bin", std::ios::binary);
+					for(i = 0; i < sizeof(dismount_xbe); i++)
+					{
+						DismountXBEFile << dismount_xbe[i];
+					}
+					DismountXBEFile.close();
+					XLaunchXBE("D:\\default.xbe");	
+				}
+				if (!file_exist(dashloader_Files_path"Disabled Virtual-ISO Dismount.bin"))
+				{
+					debuglog("Unmounting Virtual Drive");
+					if (!file_exist("E:\\CACHE\\LocalCache30.bin"))
+					{
+						int i;
+						std::ofstream DismountXBEFile("E:\\CACHE\\LocalCache30.bin", std::ios::binary);
+						for(i = 0; i < sizeof(dismount_xbe); i++)
+						{
+							DismountXBEFile << dismount_xbe[i];
+						}
+						DismountXBEFile.close();
+					}
+					XLaunchXBE("E:\\CACHE\\LocalCache30.bin");
+				}
+			}
 		}
-		DismountXBEFile.close();
-		XLaunchXBE("E:\\UDATA\\tmp.xbe");
-	}
-	if (file_exist("E:\\UDATA\\tmp.xbe"))
-	{
-		debuglog("Cleanup from Virtual Disc removal");
-		remove("E:\\UDATA\\tmp.xbe");
+		else
+		{
+			int i;
+			std::ofstream PatcherXBEFile("E:\\CACHE\\LocalCache40.bin", std::ios::binary);
+			for(i = 0; i < sizeof(kernel_patcher); i++)
+			{
+				PatcherXBEFile << kernel_patcher[i];
+			}
+			PatcherXBEFile.close();
+			XLaunchXBE("E:\\CACHE\\LocalCache40.bin");
+		}
+		remove("E:\\CACHE\\LocalCache30.bin");
+		remove("E:\\CACHE\\LocalCache40.bin");
 	}
 	char shortcut[MAX_PATH];
 	/* move to xbepath buffer */	

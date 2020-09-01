@@ -74,7 +74,7 @@
 		</List>
 		<List Text="iND-BiOS 5003" Sort="Off" Batch="False">
 			<List Text="iND-BiOS 5003 No Intro" Sort="Off" Batch="True">
-				<Item Action="MessageBox" arg1="Ind-Bios 5003">This bios has to many features to specify here, but it works with 128MB of Ram and allows debugging and custom xLogos. Issues: IGR Shutdown bug (Select+Start)</Item>
+				<Item Action="MessageBox" arg1="Ind-Bios 5003">This bios has to many features to specify here, but it works with 128MB of Ram and allows debugging and custom xLogos. Shutdown button combo fixed, XBL Enable and Ram fix.</Item>
 				<Item Action="AskUser" arg1="Continue" arg2="Would you like to use this Bios?"/>
 				<Item Action="Copy" arg1="D:\FlashSM\Prep\" arg2="E:\Prep\">Error Failed to copy Prep app</Item>
 				<Item Action="Copy" arg1="D:\FlashSM\bios\5003_no_intro.bin" arg2="E:\Prep\C files\BIOS\bios.bin">Error Failed to copy iND-BiOS.500367</Item>
@@ -82,7 +82,7 @@
 				<Item Action="E:\Prep\default.xbe">test</Item>
 			</List>
 			<List Text="iND-BiOS 5003 Stock Look" Sort="Off" Batch="True">
-				<Item Action="MessageBox" arg1="Ind-Bios 5003">This bios has to many features to specify here, but it works with 128MB of Ram and allows debugging and custom xLogos. Issues: IGR Shutdown bug (Select+Start)</Item>
+				<Item Action="MessageBox" arg1="Ind-Bios 5003">This bios has to many features to specify here, but it works with 128MB of Ram and allows debugging and custom xLogos. Shutdown button combo fixed, XBL Enable and Ram fix. </Item>
 				<Item Action="AskUser" arg1="Continue" arg2="Would you like to use this Bios?"/>
 				<Item Action="Copy" arg1="D:\FlashSM\Prep\" arg2="E:\Prep\">Error Failed to copy Prep app</Item>
 				<Item Action="Copy" arg1="D:\FlashSM\bios\5003_stock_look.bin" arg2="E:\Prep\C files\BIOS\bios.bin">Error Failed to copy iND-BiOS.500367</Item>
@@ -90,23 +90,5 @@
 				<Item Action="E:\Prep\default.xbe">test</Item>
 			</List>
 		</List>
-		<List Text="iND-BiOS 5004" Sort="Off" Batch="False">
-			<List Text="iND-BiOS 5004 No Intro" Sort="Off" Batch="True">
-				<Item Action="MessageBox" arg1="Ind-Bios 5004">This bios has to many features to specify here, but it works with 128MB of Ram and allows debugging and custom xLogos. Fixes IGR Shutdown bug (Select+Start)</Item>
-				<Item Action="AskUser" arg1="Continue" arg2="Would you like to use this Bios?"/>
-				<Item Action="Copy" arg1="D:\FlashSM\Prep\" arg2="E:\Prep\">Error Failed to copy Prep app</Item>
-				<Item Action="Copy" arg1="D:\FlashSM\bios\5004_no_intro.bin" arg2="E:\Prep\C files\BIOS\bios.bin">Error Failed to copy 5004</Item>
-				<Item Action="Copy" arg1="D:\FlashSM\bios\ind-bios_no_intro.cfg" arg2="E:\Prep\C files\ind-bios.cfg">Error Failed to copy "ind-bios-no_intro.cfg"</Item>
-				<Item Action="E:\Prep\default.xbe">test</Item>
-			</List>
-			<List Text="iND-BiOS 5004 Stock Look" Sort="Off" Batch="True">
-				<Item Action="MessageBox" arg1="Ind-Bios 5004">This bios has to many features to specify here, but it works with 128MB of Ram and allows debugging and custom xLogos. Fixes IGR Shutdown bug (Select+Start)</Item>
-				<Item Action="AskUser" arg1="Continue" arg2="Would you like to use this Bios?"/>
-				<Item Action="Copy" arg1="D:\FlashSM\Prep\" arg2="E:\Prep\">Error Failed to copy Prep app</Item>
-				<Item Action="Copy" arg1="D:\FlashSM\bios\5004_stock_look.bin" arg2="E:\Prep\C files\BIOS\bios.bin">Error Failed to copy 5004</Item>
-				<Item Action="Copy" arg1="D:\FlashSM\bios\ind-bios_stock_look.cfg" arg2="E:\Prep\C files\ind-bios.cfg">Error Failed to copy "ind-bios-stock_look.cfg"</Item>
-				<Item Action="E:\Prep\default.xbe">test</Item>
-			</List>
-		</list>
 	</Menu>
 </Unleashx>
