@@ -127,7 +127,7 @@ Power on using the eject button allows you to load an alternative dashboard.
    - This option will remove the parental controls set by the MSDash without requiring the MSDash.
 ### 2.1.1 Hard Drive
  - #### Change EEPROM HDD Key:
-   - This option will allow you to change your eeprom hdd Key to a known key and relock your Hard drive to this new key. This allows the creation of new hard drive's or fixing your current hard drive a doddle as you will be able to lock these drives with a 32 zero key.
+   - This option will allow you to change your eeprom hdd Key to a known key and relock your Hard drive to this new key. This allows the creation of new hard drive's or fixing your current hard drive a doddle as you will be able to lock these drives with a 32 1s key.
 ### 2.1.2 Persistent Softmod
  - #### Enable:
    - This option will allow you to re-enable the persistent softmod mode. What this mode does is puts the Xbox into a controlled error 16 state. Don't be alarmed!. This is 100% safe, as long as you don't remove anything from the real C partition. In this mode every game is loaded under the softmod, what this means is IGR on all retail (original) games and never needing worry about losing your softmod again, though with my softmod that's a moot point.
