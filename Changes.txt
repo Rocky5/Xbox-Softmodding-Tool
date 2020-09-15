@@ -6,6 +6,16 @@
 
 
 =========================================
+	Update: Sep 15 2020
+=========================================
+		Updated the save xbe files to load the installer if disc is left in and exploit is run again during the softmod process.
+		Updated the resoftmod dash to allow launching of NKPatcher Settings.
+		Updated and fixed some skin files showing the wong version.
+		( extras disc stuff )
+		Couple types fixed.
+
+
+=========================================
 	Update: Sep 01 2020
 =========================================
 		Updated the Hardmod dashloader to patch ind-bio5003 on load for XISO support.

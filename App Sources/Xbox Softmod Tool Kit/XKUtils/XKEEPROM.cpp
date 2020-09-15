@@ -1140,7 +1140,7 @@ BOOL XKEEPROM::IsEncrypted()
 void XKEEPROM::CalculateChecksum2()
 {
 	//Calculate CRC for Serial, Mac, OnlineKey, video region
-	XKCRC::QuickCRC(m_EEPROMData.Checksum2, m_EEPROMData.SerialNumber, 0x28);
+	XKCRC::QuickCRC(m_EEPROMData.Checksum2, m_EEPROMData.SerialNumber, 0x2C);
 }
 
 //Calculate Checksum3

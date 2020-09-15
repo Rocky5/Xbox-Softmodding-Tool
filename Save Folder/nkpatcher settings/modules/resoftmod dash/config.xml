@@ -68,5 +68,9 @@
 
 			<Item>Press (B) to Exit this menu.</Item>
 		</list>
+		
+		<Item></Item>
+		
+		<Item Action="E:\UDATA\21585554\000000000000\nkpatcher settings\unleashx.xbe">Launch NKPatcher Settings</Item>
 	</Menu>
 </Unleashx>

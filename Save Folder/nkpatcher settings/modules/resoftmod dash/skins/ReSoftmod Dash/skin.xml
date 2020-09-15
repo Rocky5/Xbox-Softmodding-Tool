@@ -25,12 +25,12 @@
 		<Menu Horizontal="False" Smooth="True" Align="Middle" ShowIcon="False" Rotate="False" ShowArrows="False" Scroll="1">
 			<Position Top="0" Left="0" Width="0" Height="0" Fixed="False" FixAt="0" MaxItem="12"/>
 			<Font>font1</font>
-			<itempos Top="259" Left="71" Width="499" Align="Middle">Label 1</itempos>
-			<itempos Top="279" Left="71" Width="499" Align="Middle">Label 2</itempos>
-			<itempos Top="299" Left="71" Width="499" Align="Middle">Label 3</itempos>
-			<itempos Top="319" Left="71" Width="499" Align="Middle">Label 4</itempos>
-			<itempos Top="339" Left="71" Width="499" Align="Middle">Label 5</itempos>
-			<itempos Top="359" Left="71" Width="499" Align="Middle">Label 6</itempos>
+			<itempos Top="299" Left="71" Width="499" Align="Middle">Label 1</itempos>
+			<itempos Top="319" Left="71" Width="499" Align="Middle">Label 2</itempos>
+			<itempos Top="339" Left="71" Width="499" Align="Middle">Label 3</itempos>
+			<itempos Top="359" Left="71" Width="499" Align="Middle">Label 4</itempos>
+			<itempos Top="379" Left="71" Width="499" Align="Middle">Label 5</itempos>
+			<itempos Top="399" Left="71" Width="499" Align="Middle">Label 6</itempos>
 			<Preview EnableAudio="False" Top="0" Left="0" Width="0" Height="0" />
 		</Menu>
 		<InfoFont>font1</InfoFont>
@@ -55,13 +55,14 @@
 		<Image zindex="3" Top="89" Left="202" Width="239" Height="23">E:\UDATA\21585554\000000000000\softmod files\skin files\images\Softmodding Tool.png</image>
 		<!-- List Background -->
 		<Shape zindex="1" Type="Rectangle" Top="130" Left="71" Width="498" Height="298" BorderColor="0xff4c4d58" BackColor="0xbf626473"/>
+		<Shape zindex="10" Type="Rectangle" Top="328" Left="72" Width="496" Height="1" BorderColor="" BackColor="0xffaee239"/>
 		<!--  -->
 		<Text zindex="3" Top="149" Left="71" Width="499" Align="Middle" ScaleX="100" ScaleY="100" Color="0xffaee239" Source=""/>
-		<Text zindex="3" Top="169" Left="71" Width="499" Align="Middle" ScaleX="100" ScaleY="100" Color="0xffaee239" Source="You're here because you loaded one of the gamesave exploits."/>
-		<Text zindex="3" Top="189" Left="71" Width="499" Align="Middle" ScaleX="100" ScaleY="100" Color="0xffaee239" Source=""/>
+		<Text zindex="3" Top="169" Left="71" Width="499" Align="Middle" ScaleX="100" ScaleY="100" Color="0xffaee239" Source=""/>
+		<Text zindex="3" Top="189" Left="71" Width="499" Align="Middle" ScaleX="100" ScaleY="100" Color="0xffaee239" Source="You're here because you loaded one of the gamesave exploits."/>
 		<Text zindex="3" Top="219" Left="71" Width="499" Align="Middle" ScaleX="100" ScaleY="100" Color="0xffaee239" Source=""/>
 		<Text zindex="3" Top="239" Left="71" Width="499" Align="Middle" ScaleX="100" ScaleY="100" Color="0xffaee239" Source=""/>
-		<Image zindex="3" Top="10" Left="590" Width="42" Height="42" Source="GameIcon"/>
+		<!-- <Image zindex="3" Top="10" Left="590" Width="42" Height="42" Source="GameIcon"/> -->
 		<!-- (A) Select (B) Back section -->
 		<Shape zindex="1" Type="Rectangle" Top="427" Left="71" Width="165" Height="25" BorderColor="0x00000000" BackColor="0xff3a3a46"/>
 		<Shape zindex="1" Type="Rectangle" Top="427" Left="71" Width="148" Height="45" BorderColor="0x00000000" BackColor="0xff3a3a46"/>
