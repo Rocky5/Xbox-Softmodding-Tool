@@ -15,7 +15,7 @@ I set out to try and make the softmodding process as pain free and user friendly
 [![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=65NJWU9PUUX7W&lc=GB&currency_code=GBP&bn=PP%2dDonationsBF%3abtn_donate_LG%2egif%3aNonHosted)
 
 ## Installation
- ### Download Prebuilt versions: [Download](https://drive.google.com/drive/folders/0BzRN8P835YijRU94cVNNWFA1Z28)
+ ### Download Prebuilt versions: [Download](https://drive.google.com/drive/folders/1Gs_yYVotDxAxtHZeHUVr_ts7KeMgqEmQ)
 <details>
  <summary>Build from Source: (Note: this is only for advanced users)</summary>
 	
