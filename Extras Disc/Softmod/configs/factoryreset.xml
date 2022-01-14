@@ -59,12 +59,14 @@
 				<Item Action="Format" arg1="E"/>
 				<Item Action="Copy" arg1="Y:\Softmod Files\SC-NTSC\5553000c\" arg2="E:\UDATA\5553000c\"/>
 				<Item Action="Copy" arg1="Y:\Softmod Files\TH4-NTSC\41560017\" arg2="E:\UDATA\41560017\"/>
+				<Item Action="Copy" arg1="Y:\Softmod Files\MetalArms-NTSC\5655000a\" arg2="E:\UDATA\5655000a\"/>
 				<Item Action="Copy" arg1="Y:\Softmod Files\21585554\000000000000\savemeta.xbx" arg2="E:\Prep\FactoryResetNTSC.bin"/>
 				<list>
-					<Item Action="AskUser" Arg1="Regions" arg2="What region of Splinter Cell or Tony Hawks 4 do you own? If you don't own these games that's OK just select the region your Xbox is from."/>
+					<Item Action="AskUser" Arg1="Regions" arg2="What region of Splinter Cell, Tony Hawks 4, or Metal Arms do you own? If you don't own these games that's OK just select the region your Xbox is from."/>
 					<Item Action="Delete" arg1="E:\UDATA\5553000c"/>
 					<Item Action="Copy" arg1="Y:\Softmod Files\SC-PAL\5553000c\" arg2="E:\UDATA\5553000c\"/>
 					<Item Action="Copy" arg1="Y:\Softmod Files\TH4-PAL\41560017\" arg2="E:\UDATA\41560017\"/>
+					<Item Action="Copy" arg1="Y:\Softmod Files\MetalArms-PAL\5655000a\" arg2="E:\UDATA\5655000a\"/>
 					<Item Action="Delete" arg1="E:\Prep\FactoryResetNTSC.bin"/>
 					<Item Action="Copy" arg1="Y:\Softmod Files\21585554\000000000000\savemeta.xbx" arg2="E:\Prep\FactoryResetPAL.bin"/>
 				</list>
@@ -102,12 +104,14 @@
 				<Item Action="Copy" arg1="X:\UDATA\" arg2="E:\UDATA\">No UDATA folder found.</Item>
 				<Item Action="Copy" arg1="Y:\Softmod Files\SC-NTSC\5553000c\" arg2="E:\UDATA\5553000c\"/>
 				<Item Action="Copy" arg1="Y:\Softmod Files\TH4-NTSC\41560017\" arg2="E:\UDATA\41560017\"/>
+				<Item Action="Copy" arg1="Y:\Softmod Files\MetalArms-NTSC\5655000a\" arg2="E:\UDATA\5655000a\"\>
 				<Item Action="Copy" arg1="Y:\Softmod Files\21585554\000000000000\savemeta.xbx" arg2="E:\Prep\FactoryResetNTSC.bin"/>
 				<list>
-					<Item Action="AskUser" Arg1="Regions" arg2="What region of Splinter Cell or Tony Hawks 4 do you own? If you don't own these games that's OK just select the region your Xbox is from."/>
+					<Item Action="AskUser" Arg1="Regions" arg2="What region of Splinter Cell, Tony Hawks 4, or Metal Arms do you own? If you don't own these games that's OK just select the region your Xbox is from."/>
 					<Item Action="Delete" arg1="E:\UDATA\5553000c"/>
 					<Item Action="Copy" arg1="Y:\Softmod Files\SC-PAL\5553000c\" arg2="E:\UDATA\5553000c\"/>
 					<Item Action="Copy" arg1="Y:\Softmod Files\TH4-PAL\41560017\" arg2="E:\UDATA\41560017\"/>
+					<Item Action="Copy" arg1="Y:\Softmod Files\MetalArms-PAL\5655000a\" arg2="E:\UDATA\5655000a\"/>
 					<Item Action="Delete" arg1="E:\Prep\FactoryResetNTSC.bin"/>
 					<Item Action="Copy" arg1="Y:\Softmod Files\21585554\000000000000\savemeta.xbx" arg2="E:\Prep\FactoryResetPAL.bin"/>
 				</list>
