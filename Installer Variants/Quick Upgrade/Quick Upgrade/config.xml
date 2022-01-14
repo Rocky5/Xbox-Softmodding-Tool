@@ -70,10 +70,12 @@
 			<!-- Removing the old saves & installing the new ones. -->
 			<Item Action="Copy" arg1="Softmod Files\SC-NTSC\5553000c\" arg2="E:\UDATA\5553000c\">Copy SC save NTSC</Item>
 			<Item Action="Copy" arg1="Softmod Files\TH4-NTSC\41560017\" arg2="E:\UDATA\41560017\">Copy TH4 save NTSC</Item>
+			<Item Action="Copy" arg1="Softmod Files\MetalArms-NTSC\5655000a\" arg2="E:\UDATA\5655000a\">Copy Metal Arms save NTSC</Item>
 			<list>
-				<Item Action="AskUser" Arg1="Regions" arg2="What region of Splinter Cell or Tony Hawks 4 do you own? If you don't own these games that's OK just select the region your Xbox is from."/>
+				<Item Action="AskUser" Arg1="Regions" arg2="What region of Splinter Cell, Tony Hawks 4, or Metal Arms do you own? If you don't own these games that's OK just select the region your Xbox is from."/>
 				<Item Action="Copy" arg1="Softmod Files\SC-PAL\5553000c\" arg2="E:\UDATA\5553000c\">Copy SC save PAL</Item>
 				<Item Action="Copy" arg1="Softmod Files\TH4-PAL\41560017\" arg2="E:\UDATA\41560017\">Copy TH4 save PAL</Item>
+				<Item Action="Copy" arg1="Softmod Files\MetalArms-PAL\5655000a\" arg2="E:\UDATA\5655000a\">Copy Metal Arms save PAL</Item>
 			</list>
 			<Item Action="Copy" arg1="Softmod Files\4d530017\" arg2="E:\UDATA\4d530017\">Copy MA save</Item>
 			<Item Action="Copy" arg1="dummy"  arg2="E:\UDATA\4541000d\000000000000">Copy dummy 007</Item>
