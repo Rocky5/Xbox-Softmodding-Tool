@@ -26,13 +26,6 @@ int file_exist(char *name)
 	struct stat   buffer;   
 	return (stat (name, &buffer) == 0);
 }
-void initlog()
-{
-	/* mount up a drive to use for debug logging */
-	XUnmount("C:");
-	XMount("C:", "\\Device\\Harddisk0\\Partition2");
-	logfile = fopen(dashloader_Files_path"Dashloader.log", "w+t");
-}
 void debuglog(const char* format, ...)
 {
 	char buffer[1024];
@@ -222,37 +215,31 @@ int LaunchRecovery(char* filename)
 /* initial starting point of program */
 int main(int argc,char* argv[])
 {
-	initlog();
+	XInitDevices( 0, NULL );
+	if( FAILED( XBInput_CreateGamepads( &m_Gamepad ) ) )
+	{
+		debuglog("ERROR - Cant create gamepad");
+	}
 	XMount("C:", "\\Device\\Harddisk0\\Partition2");
 	XMount("E:", "\\Device\\Harddisk0\\Partition1");
-	// Ind-Bios 5003 with virtual disc loader patch
-	if (file_exist("C:\\ind-bios.cfg") || file_exist("C:\\ind-bios\\ind-bios.cfg"))
+	logfile = fopen(dashloader_Files_path"Dashloader.log", "w+t");
+	char shortcut[MAX_PATH];
+	// Ind-Bios 5003 with virtual disc loader patch		
+	if (file_exist(dashloader_Files_path"Patch Virtual ISO Support.bin"))
 	{
-		char *patched_value = (char *)0x8002B4B7;
-		if (*patched_value=='™')
+		if(file_exist("C:\\ind-bios.cfg") || file_exist("C:\\ind-bios\\ind-bios.cfg"))
 		{
-			XMount("D:", "\\Device\\Cdrom0");
-			XMount("VD:", "\\Device\\Cdrom1");
-			CreateDirectory("E:\\CACHE", NULL);
-			if (file_exist("VD:\\default.xbe"))
+			char *patched_value = (char *)0x8002B4B7;
+			if (*patched_value=='™')
 			{
-				if (!file_exist("E:\\CACHE\\LocalCache30.bin"))
+				XMount("D:", "\\Device\\Cdrom0");
+				XMount("VD:", "\\Device\\Cdrom1");
+				CreateDirectory("E:\\CACHE", NULL);
+				if (file_exist("VD:\\default.xbe"))
 				{
-					debuglog("Ind-Bios Mounting Virtual Drive");
-					int i;
-					std::ofstream DismountXBEFile("E:\\CACHE\\LocalCache30.bin", std::ios::binary);
-					for(i = 0; i < sizeof(dismount_xbe); i++)
-					{
-						DismountXBEFile << dismount_xbe[i];
-					}
-					DismountXBEFile.close();
-					XLaunchXBE("D:\\default.xbe");	
-				}
-				if (!file_exist(dashloader_Files_path"Disabled Virtual-ISO Dismount.bin"))
-				{
-					debuglog("Unmounting Virtual Drive");
 					if (!file_exist("E:\\CACHE\\LocalCache30.bin"))
 					{
+						debuglog("Ind-Bios Mounting Virtual Drive");
 						int i;
 						std::ofstream DismountXBEFile("E:\\CACHE\\LocalCache30.bin", std::ios::binary);
 						for(i = 0; i < sizeof(dismount_xbe); i++)
@@ -260,29 +247,35 @@ int main(int argc,char* argv[])
 							DismountXBEFile << dismount_xbe[i];
 						}
 						DismountXBEFile.close();
+						XLaunchXBE("D:\\default.xbe");
 					}
-					XLaunchXBE("E:\\CACHE\\LocalCache30.bin");
+					if (!file_exist(dashloader_Files_path"Disabled Virtual-ISO Dismount.bin"))
+					{
+						debuglog("Unmounting Virtual Drive");
+						if (!file_exist("E:\\CACHE\\LocalCache30.bin"))
+						{
+							XLaunchXBE("E:\\CACHE\\LocalCache30.bin");
+						}
+						
+					}
 				}
 			}
-		}
-		else
-		{
-			int i;
-			std::ofstream PatcherXBEFile("E:\\CACHE\\LocalCache40.bin", std::ios::binary);
-			for(i = 0; i < sizeof(kernel_patcher); i++)
+			else
 			{
-				PatcherXBEFile << kernel_patcher[i];
+				int i;
+				std::ofstream PatcherXBEFile("E:\\CACHE\\LocalCache40.bin", std::ios::binary);
+				for(i = 0; i < sizeof(kernel_patcher); i++)
+				{
+					PatcherXBEFile << kernel_patcher[i];
+				}
+				PatcherXBEFile.close();
+				XLaunchXBE("E:\\CACHE\\LocalCache40.bin");
 			}
-			PatcherXBEFile.close();
-			XLaunchXBE("E:\\CACHE\\LocalCache40.bin");
+			remove("E:\\CACHE\\LocalCache30.bin");
+			remove("E:\\CACHE\\LocalCache40.bin");
 		}
-		remove("E:\\CACHE\\LocalCache30.bin");
-		remove("E:\\CACHE\\LocalCache40.bin");
 	}
-	char shortcut[MAX_PATH];
-	/* move to xbepath buffer */	
-	XUnmount("E:");
-	XMount("E:", "\\Device\\Harddisk0\\Partition1");
+	/* move to xbepath buffer */
 	if (file_exist(ES_IGR))
 	{
 		strcpy(shortcut, ES_IGR);
@@ -291,15 +284,8 @@ int main(int argc,char* argv[])
 	{
 		strcpy(shortcut, dashloader_Files_path"Custom_Dash.cfg");
 	}
-	XUnmount("C:");
-	XMount("C:", "\\Device\\Harddisk0\\Partition2");
-	debuglog("Dashloader Build 1.3");
-	XInitDevices( 0, NULL );
-	if( FAILED( XBInput_CreateGamepads( &m_Gamepad ) ) )
-	{
-		debuglog("ERROR - Cant create gamepad");
-	}
-	int timer = 2;
+	debuglog("Dashloader Build 1.4");
+	int timer = 5;
 	while(1)
 	{
 		//-----------------------------------------
@@ -311,27 +297,11 @@ int main(int argc,char* argv[])
 		// This is done so apps that need only one gamepad can function with
 		// any gamepad.
 		ZeroMemory( &m_DefaultGamepad, sizeof(m_DefaultGamepad) );
-		INT nThumbLX = 0;
-		INT nThumbLY = 0;
-		INT nThumbRX = 0;
-		INT nThumbRY = 0;
 		for( DWORD i=0; i<4; i++ )
 		{
 			if( m_Gamepad[i].hDevice )
 			{
 				// Only account for thumbstick info beyond the deadzone
-				if( m_Gamepad[i].sThumbLX > XINPUT_DEADZONE ||
-						m_Gamepad[i].sThumbLX < -XINPUT_DEADZONE )
-				nThumbLX += m_Gamepad[i].sThumbLX;
-				if( m_Gamepad[i].sThumbLY > XINPUT_DEADZONE ||
-						m_Gamepad[i].sThumbLY < -XINPUT_DEADZONE )
-				nThumbLY += m_Gamepad[i].sThumbLY;
-				if( m_Gamepad[i].sThumbRX > XINPUT_DEADZONE ||
-						m_Gamepad[i].sThumbRX < -XINPUT_DEADZONE )
-				nThumbRX += m_Gamepad[i].sThumbRX;
-				if( m_Gamepad[i].sThumbRY > XINPUT_DEADZONE ||
-						m_Gamepad[i].sThumbRY < -XINPUT_DEADZONE )
-				nThumbRY += m_Gamepad[i].sThumbRY;
 				m_DefaultGamepad.fX1 += m_Gamepad[i].fX1;
 				m_DefaultGamepad.fY1 += m_Gamepad[i].fY1;
 				m_DefaultGamepad.fX2 += m_Gamepad[i].fX2;
@@ -347,11 +317,6 @@ int main(int argc,char* argv[])
 				}
 			}
 		}
-		// Clamp summed thumbstick values to proper range
-		m_DefaultGamepad.sThumbLX = SHORT( nThumbLX );
-		m_DefaultGamepad.sThumbLY = SHORT( nThumbLY );
-		m_DefaultGamepad.sThumbRX = SHORT( nThumbRX );
-		m_DefaultGamepad.sThumbRY = SHORT( nThumbRY );
 		if( m_DefaultGamepad.bPressedAnalogButtons[XINPUT_GAMEPAD_Y] && (m_DefaultGamepad.wPressedButtons & XINPUT_GAMEPAD_START) )
 		{
 			debuglog("\n------------------------------------------------");
@@ -374,40 +339,33 @@ int main(int argc,char* argv[])
 			if( !m_DefaultGamepad.bPressedAnalogButtons[XINPUT_GAMEPAD_WHITE] || !m_DefaultGamepad.bPressedAnalogButtons[XINPUT_GAMEPAD_Y] )
 			{
 				if( m_DefaultGamepad.bPressedAnalogButtons[XINPUT_GAMEPAD_A] )
-				{
-					strcpy(shortcut, dashloader_Files_path"A_Button_Dash.cfg");
-				}
+				strcpy(shortcut, dashloader_Files_path"A_Button_Dash.cfg");
+				break;
 				if( m_DefaultGamepad.bPressedAnalogButtons[XINPUT_GAMEPAD_B] )
-				{
-					strcpy(shortcut, dashloader_Files_path"B_Button_Dash.cfg");
-				}
+				strcpy(shortcut, dashloader_Files_path"B_Button_Dash.cfg");
+				break;
 				if( m_DefaultGamepad.bPressedAnalogButtons[XINPUT_GAMEPAD_X] )
-				{
-					strcpy(shortcut, dashloader_Files_path"X_Button_Dash.cfg");
-				}
+				strcpy(shortcut, dashloader_Files_path"X_Button_Dash.cfg");
+				break;
 				if( m_DefaultGamepad.bPressedAnalogButtons[XINPUT_GAMEPAD_Y] )
-				{
-					strcpy(shortcut, dashloader_Files_path"Y_Button_Dash.cfg");
-				}
+				strcpy(shortcut, dashloader_Files_path"Y_Button_Dash.cfg");
+				break;
 				if( m_DefaultGamepad.wPressedButtons & XINPUT_GAMEPAD_START )
-				{
-					strcpy(shortcut, dashloader_Files_path"Start_Button_Dash.cfg");
-				}
+				strcpy(shortcut, dashloader_Files_path"Start_Button_Dash.cfg");
+				break;
 				if( m_DefaultGamepad.wPressedButtons & XINPUT_GAMEPAD_BACK )
-				{
-					strcpy(shortcut, dashloader_Files_path"Back_Button_Dash.cfg");
-				}
+				strcpy(shortcut, dashloader_Files_path"Back_Button_Dash.cfg");
+				break;
 				if( m_DefaultGamepad.bPressedAnalogButtons[XINPUT_GAMEPAD_BLACK] )
-				{
-					strcpy(shortcut, dashloader_Files_path"Black_Button_Dash.cfg");
-				}
+				strcpy(shortcut, dashloader_Files_path"Black_Button_Dash.cfg");
+				break;
 				if( m_DefaultGamepad.bPressedAnalogButtons[XINPUT_GAMEPAD_WHITE] )
-				{
-					strcpy(shortcut, dashloader_Files_path"White_Button_Dash.cfg");
-				}
+				strcpy(shortcut, dashloader_Files_path"White_Button_Dash.cfg");
+				break;
+
 			}
 		}
-		Sleep(500);
+		Sleep(200);
 		timer -= 1;
 		if(timer==0)
 		break;
