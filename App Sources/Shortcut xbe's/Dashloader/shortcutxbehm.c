@@ -239,7 +239,7 @@ int main(int argc,char* argv[])
 				{
 					if (!file_exist("E:\\CACHE\\LocalCache30.bin"))
 					{
-						debuglog("Ind-Bios Mounting Virtual Drive");
+						debuglog("Creating De-mounter");
 						int i;
 						std::ofstream DismountXBEFile("E:\\CACHE\\LocalCache30.bin", std::ios::binary);
 						for(i = 0; i < sizeof(dismount_xbe); i++)
@@ -252,11 +252,7 @@ int main(int argc,char* argv[])
 					if (!file_exist(dashloader_Files_path"Disabled Virtual-ISO Dismount.bin"))
 					{
 						debuglog("Unmounting Virtual Drive");
-						if (!file_exist("E:\\CACHE\\LocalCache30.bin"))
-						{
-							XLaunchXBE("E:\\CACHE\\LocalCache30.bin");
-						}
-						
+						XLaunchXBE("E:\\CACHE\\LocalCache30.bin");
 					}
 				}
 			}
@@ -271,9 +267,9 @@ int main(int argc,char* argv[])
 				PatcherXBEFile.close();
 				XLaunchXBE("E:\\CACHE\\LocalCache40.bin");
 			}
-			remove("E:\\CACHE\\LocalCache30.bin");
-			remove("E:\\CACHE\\LocalCache40.bin");
 		}
+		remove("E:\\CACHE\\LocalCache30.bin");
+		remove("E:\\CACHE\\LocalCache40.bin");
 	}
 	/* move to xbepath buffer */
 	if (file_exist(ES_IGR))
