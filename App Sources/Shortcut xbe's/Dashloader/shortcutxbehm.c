@@ -281,8 +281,8 @@ int main(int argc,char* argv[])
 		strcpy(shortcut, dashloader_Files_path"Custom_Dash.cfg");
 	}
 	debuglog("Dashloader Build 1.4");
-	int timer = 5;
-	while(1)
+	int timer = 0;
+	while(timer++ <= 2000)
 	{
 		//-----------------------------------------
 		// Handle input
@@ -335,36 +335,48 @@ int main(int argc,char* argv[])
 			if( !m_DefaultGamepad.bPressedAnalogButtons[XINPUT_GAMEPAD_WHITE] || !m_DefaultGamepad.bPressedAnalogButtons[XINPUT_GAMEPAD_Y] )
 			{
 				if( m_DefaultGamepad.bPressedAnalogButtons[XINPUT_GAMEPAD_A] )
-				strcpy(shortcut, dashloader_Files_path"A_Button_Dash.cfg");
-				break;
+				{
+					strcpy(shortcut, dashloader_Files_path"A_Button_Dash.cfg");
+					break;
+				}
 				if( m_DefaultGamepad.bPressedAnalogButtons[XINPUT_GAMEPAD_B] )
-				strcpy(shortcut, dashloader_Files_path"B_Button_Dash.cfg");
-				break;
+				{
+					strcpy(shortcut, dashloader_Files_path"B_Button_Dash.cfg");
+					break;
+				}
 				if( m_DefaultGamepad.bPressedAnalogButtons[XINPUT_GAMEPAD_X] )
-				strcpy(shortcut, dashloader_Files_path"X_Button_Dash.cfg");
-				break;
+				{
+					strcpy(shortcut, dashloader_Files_path"X_Button_Dash.cfg");
+					break;
+				}
 				if( m_DefaultGamepad.bPressedAnalogButtons[XINPUT_GAMEPAD_Y] )
-				strcpy(shortcut, dashloader_Files_path"Y_Button_Dash.cfg");
-				break;
+				{
+					strcpy(shortcut, dashloader_Files_path"Y_Button_Dash.cfg");
+					break;
+				}
 				if( m_DefaultGamepad.wPressedButtons & XINPUT_GAMEPAD_START )
-				strcpy(shortcut, dashloader_Files_path"Start_Button_Dash.cfg");
-				break;
+				{
+					strcpy(shortcut, dashloader_Files_path"Start_Button_Dash.cfg");
+					break;
+				}
 				if( m_DefaultGamepad.wPressedButtons & XINPUT_GAMEPAD_BACK )
-				strcpy(shortcut, dashloader_Files_path"Back_Button_Dash.cfg");
-				break;
+				{
+					strcpy(shortcut, dashloader_Files_path"Back_Button_Dash.cfg");
+					break;
+				}
 				if( m_DefaultGamepad.bPressedAnalogButtons[XINPUT_GAMEPAD_BLACK] )
-				strcpy(shortcut, dashloader_Files_path"Black_Button_Dash.cfg");
-				break;
+				{
+					strcpy(shortcut, dashloader_Files_path"Black_Button_Dash.cfg");
+					break;
+				}
 				if( m_DefaultGamepad.bPressedAnalogButtons[XINPUT_GAMEPAD_WHITE] )
-				strcpy(shortcut, dashloader_Files_path"White_Button_Dash.cfg");
-				break;
-
+				{
+					strcpy(shortcut, dashloader_Files_path"White_Button_Dash.cfg");
+					break;
+				}
 			}
 		}
-		Sleep(200);
-		timer -= 1;
-		if(timer==0)
-		break;
+		Sleep(1);
 	}
 	LaunchShortcut(shortcut);
 	ErrorHandler(dashloader_Files_path"Dashloader.log");
