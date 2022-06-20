@@ -45,105 +45,79 @@ void debuglog(const char* format, ...)
 }
 void ErrorHandler(char *xbepath)
 {
-	debuglog("\n------------------------------------------------");
-	debuglog("Dashboard Locations");
-	debuglog("------------------------------------------------");
-	/**/
-	debuglog("Loading C:\\XBMC-Emustation\\Default.xbe");
+	debuglog("Checking: Dashboard Locations\n");
+	
+	debuglog("\t> Loading C:\\XBMC-Emustation\\Default.xbe");
 	XLaunchXBE("C:\\XBMC-Emustation\\Default.xbe");
-	debuglog("Dashboard doesn't Exist\n");
-	/**/
-	debuglog("Loading E:\\XBMC-Emustation\\Default.xbe");
+	
+	debuglog("\t\t> Dashboard not found\n\n\t> Loading E:\\XBMC-Emustation\\Default.xbe");
 	XLaunchXBE("E:\\XBMC-Emustation\\Default.xbe");
-	debuglog("Dashboard doesn't Exist\n");
-	/**/
-	debuglog("Loading F:\\XBMC-Emustation\\Default.xbe");
+	
+	debuglog("\t\t> Dashboard not found\n\n\t> Loading F:\\XBMC-Emustation\\Default.xbe");
 	XLaunchXBE("F:\\XBMC-Emustation\\Default.xbe");
-	debuglog("Dashboard doesn't Exist\n");
-	/**/
-	debuglog("Loading C:\\XBMC4Gamers\\Default.xbe");
+	
+	debuglog("\t\t> Dashboard not found\n\n\t> Loading C:\\XBMC4Gamers\\Default.xbe");
 	XLaunchXBE("C:\\XBMC4Gamers\\Default.xbe");
-	debuglog("Dashboard doesn't Exist\n");
-	/**/
-	debuglog("Loading E:\\XBMC4Gamers\\Default.xbe");
+	
+	debuglog("\t\t> Dashboard not found\n\n\t> Loading E:\\XBMC4Gamers\\Default.xbe");
 	XLaunchXBE("E:\\XBMC4Gamers\\Default.xbe");
-	debuglog("Dashboard doesn't Exist\n");
-	/**/
-	debuglog("Loading F:\\XBMC4Gamers\\Default.xbe");
+	
+	debuglog("\t\t> Dashboard not found\n\n\t> Loading F:\\XBMC4Gamers\\Default.xbe");
 	XLaunchXBE("F:\\XBMC4Gamers\\Default.xbe");
-	debuglog("Dashboard doesn't Exist\n");
-	/**/
-	debuglog("Loading C:\\XBMC4Xbox\\Default.xbe");
+	
+	debuglog("\t\t> Dashboard not found\n\n\t> Loading C:\\XBMC4Xbox\\Default.xbe");
 	XLaunchXBE("C:\\XBMC4Xbox\\Default.xbe");
-	debuglog("Dashboard doesn't Exist\n");
-	/**/
-	debuglog("Loading E:\\XBMC4Xbox\\Default.xbe");
+	
+	debuglog("\t\t> Dashboard not found\n\n\t> Loading E:\\XBMC4Xbox\\Default.xbe");
 	XLaunchXBE("E:\\XBMC4Xbox\\Default.xbe");
-	debuglog("Dashboard doesn't Exist\n");
-	/**/
-	debuglog("Loading F:\\XBMC4Xbox\\Default.xbe");
+	
+	debuglog("\t\t> Dashboard not found\n\n\t> Loading F:\\XBMC4Xbox\\Default.xbe");
 	XLaunchXBE("F:\\XBMC4Xbox\\Default.xbe");
-	debuglog("Dashboard doesn't Exist\n");
-	/**/
-	debuglog("Loading C:\\XBMC\\Default.xbe");
+	
+	debuglog("\t\t> Dashboard not found\n\n\t> Loading C:\\XBMC\\Default.xbe");
 	XLaunchXBE("C:\\XBMC\\Default.xbe");
-	debuglog("Dashboard doesn't Exist\n");
-	/**/
-	debuglog("Loading E:\\XBMC\\Default.xbe");
+	
+	debuglog("\t\t> Dashboard not found\n\n\t> Loading E:\\XBMC\\Default.xbe");
 	XLaunchXBE("E:\\XBMC\\Default.xbe");
-	debuglog("Dashboard doesn't Exist\n");
-	/**/
-	debuglog("Loading F:\\XBMC\\Default.xbe");
+	
+	debuglog("\t\t> Dashboard not found\n\n\t> Loading F:\\XBMC\\Default.xbe");
 	XLaunchXBE("F:\\XBMC\\Default.xbe");
-	debuglog("Dashboard doesn't Exist\n");
-	/**/
-	debuglog("Loading C:\\Dashboard\\Default.xbe");
-	XLaunchXBE("C:\\Dashboard\\Default.xbe");
-	debuglog("Dashboard doesn't Exist\n");
-	/**/
-	debuglog("Loading E:\\Dashboard\\Default.xbe");
-	XLaunchXBE("E:\\Dashboard\\Default.xbe");
-	debuglog("Dashboard doesn't Exist\n");
-	/**/
-	debuglog("Loading F:\\Dashboard\\Default.xbe");
-	XLaunchXBE("F:\\Dashboard\\Default.xbe");
-	debuglog("Dashboard doesn't Exist\n");
-	/**/
-	debuglog("Loading C:\\Dash\\Default.xbe");
+	
+	debuglog("\t\t> Dashboard not found\n\n\t> Loading C:\\dashboard\\Default.xbe");
+	XLaunchXBE("C:\\dashboard\\Default.xbe");
+	
+	debuglog("\t\t> Dashboard not found\n\n\t> Loading E:\\dashboard\\Default.xbe");
+	XLaunchXBE("E:\\dashboard\\Default.xbe");
+	
+	debuglog("\t\t> Dashboard not found\n\n\t> Loading F:\\dashboard\\Default.xbe");
+	XLaunchXBE("F:\\dashboard\\Default.xbe");
+	
+	debuglog("\t\t> Dashboard not found\n\n\t> Loading C:\\Dash\\Default.xbe");
 	XLaunchXBE("C:\\Dash\\Default.xbe");
-	debuglog("Dashboard doesn't Exist\n");
-	/**/
-	debuglog("Loading E:\\Dash\\Default.xbe");
+	
+	debuglog("\t\t> Dashboard not found\n\n\t> Loading E:\\Dash\\Default.xbe");
 	XLaunchXBE("E:\\Dash\\Default.xbe");
-	debuglog("Dashboard doesn't Exist\n");
-	/**/
-	debuglog("Loading F:\\Dash\\Default.xbe");
+	
+	debuglog("\t\t> Dashboard not found\n\n\t> Loading F:\\Dash\\Default.xbe");
 	XLaunchXBE("F:\\Dash\\Default.xbe");
-	debuglog("Dashboard doesn't Exist\n");
-	/**/
-	debuglog("Loading E:\\Default.xbe");
+	
+	debuglog("\t\t> Dashboard not found\n\n\t> Loading E:\\Default.xbe");
 	XLaunchXBE("E:\\Default.xbe");
-	debuglog("Dashboard doesn't Exist\n");
-	/**/
-	debuglog("Loading E:\\Dashboard.xbe");
-	XLaunchXBE("E:\\Dashboard.xbe");
-	debuglog("Dashboard doesn't Exist\n");
-	/**/
-	debuglog("Loading E:\\Evoxdash.xbe");
+	
+	debuglog("\t\t> Dashboard not found\n\n\t> Loading E:\\dashboard.xbe");
+	XLaunchXBE("E:\\dashboard.xbe");
+	
+	debuglog("\t\t> Dashboard not found\n\n\t> Loading E:\\Evoxdash.xbe");
 	XLaunchXBE("E:\\Evoxdash.xbe");
-	debuglog("Dashboard doesn't Exist\n");
-	/**/
-	debuglog("Loading C:\\XBMC.xbe");
+	
+	debuglog("\t\t> Dashboard not found\n\n\t> Loading C:\\XBMC.xbe");
 	XLaunchXBE("C:\\XBMC.xbe");
-	debuglog("Dashboard doesn't Exist\n");
-	/**/
-	debuglog("Loading E:\\XBMC.xbe");
+	
+	debuglog("\t\t> Dashboard not found\n\n\t> Loading E:\\XBMC.xbe");
 	XLaunchXBE("E:\\XBMC.xbe");
-	debuglog("Dashboard doesn't Exist\n");
-	/**/
-	debuglog("\n------------------------------------------------");
-	debuglog("All failed :( - trying to reboot");
-	debuglog("------------------------------------------------");
+	debuglog("\t\t> Dashboard not found\n");
+
+	debuglog("\nAll failed :( - insert a disc and load from there");
 	XReboot();
 }
 int LaunchShortcut(char* filename)
@@ -280,9 +254,9 @@ int main(int argc,char* argv[])
 	{
 		strcpy(shortcut, dashloader_Files_path"Custom_Dash.cfg");
 	}
-	debuglog("Dashloader Build 1.4");
+	debuglog("Dashloader Build 1.4\n");
 	int timer = 0;
-	while(timer++ <= 2000)
+	while(timer++ <= 1000)
 	{
 		//-----------------------------------------
 		// Handle input
@@ -315,67 +289,63 @@ int main(int argc,char* argv[])
 		}
 		if( m_DefaultGamepad.bPressedAnalogButtons[XINPUT_GAMEPAD_Y] && (m_DefaultGamepad.wPressedButtons & XINPUT_GAMEPAD_START) )
 		{
-			debuglog("\n------------------------------------------------");
-			debuglog("Rescue Dashboard Locations");
-			debuglog("------------------------------------------------");
-			debuglog("Loading Custom Rescue Dashboard\n");
+			debuglog("Checking: Rescue dashboards\n");
+			debuglog("\t> Loading Custom Rescue dashboard");
 			LaunchRecovery(dashloader_Files_path"Custom_Recovery.cfg");
-			debuglog("Custom Rescue Dashboard doesn't Exist\n");
-			/**/
-			debuglog("Loading Rescue Dashboard TDATA");
+
+			debuglog("\t\t> Custom Rescue dashboard not found\n\n\t> Loading Rescue dashboard TDATA");
 			XLaunchXBE("E:\\TDATA\\Rescuedash\\Default.xbe");
-			debuglog("Rescue Dashboard doesn't Exist\n");
-			/**/
-			debuglog("Loading Rescue Dashboard UDATA");
+
+			debuglog("\t\t> Rescue dashboard not found\n\n\t> Loading Rescue dashboard UDATA");
 			XLaunchXBE("E:\\UDATA\\Rescuedash\\Default.xbe");
-			debuglog("RescueDashboard doesn't Exist\n");
 		}
-		if( !m_DefaultGamepad.bPressedAnalogButtons[XINPUT_GAMEPAD_X] || !m_DefaultGamepad.bPressedAnalogButtons[XINPUT_GAMEPAD_Y] )
+		if( m_DefaultGamepad.bPressedAnalogButtons[XINPUT_GAMEPAD_X] && m_DefaultGamepad.bPressedAnalogButtons[XINPUT_GAMEPAD_Y] )
+		break;
+		
+		if( m_DefaultGamepad.bPressedAnalogButtons[XINPUT_GAMEPAD_WHITE] && m_DefaultGamepad.bPressedAnalogButtons[XINPUT_GAMEPAD_Y] )
+		break;
+
+		if( m_DefaultGamepad.bPressedAnalogButtons[XINPUT_GAMEPAD_A] )
 		{
-			if( !m_DefaultGamepad.bPressedAnalogButtons[XINPUT_GAMEPAD_WHITE] || !m_DefaultGamepad.bPressedAnalogButtons[XINPUT_GAMEPAD_Y] )
-			{
-				if( m_DefaultGamepad.bPressedAnalogButtons[XINPUT_GAMEPAD_A] )
-				{
-					strcpy(shortcut, dashloader_Files_path"A_Button_Dash.cfg");
-					break;
-				}
-				if( m_DefaultGamepad.bPressedAnalogButtons[XINPUT_GAMEPAD_B] )
-				{
-					strcpy(shortcut, dashloader_Files_path"B_Button_Dash.cfg");
-					break;
-				}
-				if( m_DefaultGamepad.bPressedAnalogButtons[XINPUT_GAMEPAD_X] )
-				{
-					strcpy(shortcut, dashloader_Files_path"X_Button_Dash.cfg");
-					break;
-				}
-				if( m_DefaultGamepad.bPressedAnalogButtons[XINPUT_GAMEPAD_Y] )
-				{
-					strcpy(shortcut, dashloader_Files_path"Y_Button_Dash.cfg");
-					break;
-				}
-				if( m_DefaultGamepad.wPressedButtons & XINPUT_GAMEPAD_START )
-				{
-					strcpy(shortcut, dashloader_Files_path"Start_Button_Dash.cfg");
-					break;
-				}
-				if( m_DefaultGamepad.wPressedButtons & XINPUT_GAMEPAD_BACK )
-				{
-					strcpy(shortcut, dashloader_Files_path"Back_Button_Dash.cfg");
-					break;
-				}
-				if( m_DefaultGamepad.bPressedAnalogButtons[XINPUT_GAMEPAD_BLACK] )
-				{
-					strcpy(shortcut, dashloader_Files_path"Black_Button_Dash.cfg");
-					break;
-				}
-				if( m_DefaultGamepad.bPressedAnalogButtons[XINPUT_GAMEPAD_WHITE] )
-				{
-					strcpy(shortcut, dashloader_Files_path"White_Button_Dash.cfg");
-					break;
-				}
-			}
+			strcpy(shortcut, dashloader_Files_path"A_Button_Dash.cfg");
+			break;
 		}
+		if( m_DefaultGamepad.bPressedAnalogButtons[XINPUT_GAMEPAD_B] )
+		{
+			strcpy(shortcut, dashloader_Files_path"B_Button_Dash.cfg");
+			break;
+		}
+		if( m_DefaultGamepad.bPressedAnalogButtons[XINPUT_GAMEPAD_X] )
+		{
+			strcpy(shortcut, dashloader_Files_path"X_Button_Dash.cfg");
+			break;
+		}
+		if( m_DefaultGamepad.bPressedAnalogButtons[XINPUT_GAMEPAD_Y] )
+		{
+			strcpy(shortcut, dashloader_Files_path"Y_Button_Dash.cfg");
+			break;
+		}
+		if( m_DefaultGamepad.wPressedButtons & XINPUT_GAMEPAD_START )
+		{
+			strcpy(shortcut, dashloader_Files_path"Start_Button_Dash.cfg");
+			break;
+		}
+		if( m_DefaultGamepad.wPressedButtons & XINPUT_GAMEPAD_BACK )
+		{
+			strcpy(shortcut, dashloader_Files_path"Back_Button_Dash.cfg");
+			break;
+		}
+		if( m_DefaultGamepad.bPressedAnalogButtons[XINPUT_GAMEPAD_BLACK] )
+		{
+			strcpy(shortcut, dashloader_Files_path"Black_Button_Dash.cfg");
+			break;
+		}
+		if( m_DefaultGamepad.bPressedAnalogButtons[XINPUT_GAMEPAD_WHITE] )
+		{
+			strcpy(shortcut, dashloader_Files_path"White_Button_Dash.cfg");
+			break;
+		}
+
 		Sleep(1);
 	}
 	LaunchShortcut(shortcut);
