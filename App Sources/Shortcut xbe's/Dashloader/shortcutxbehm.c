@@ -197,40 +197,51 @@ int main(int argc,char* argv[])
 	XMount("C:", "\\Device\\Harddisk0\\Partition2");
 	XMount("E:", "\\Device\\Harddisk0\\Partition1");
 	logfile = fopen(dashloader_Files_path"Dashloader.log", "w+t");
-	char shortcut[MAX_PATH];
-	// Ind-Bios 5003 with virtual disc loader patch		
-	if (file_exist(dashloader_Files_path"Patch Virtual ISO Support.bin"))
+	char shortcut[MAX_PATH];	
+	// Ind-Bios 5003/M8+ with virtual disc loader patch		
+	if (!file_exist(dashloader_Files_path"Disable Virtual ISO Support.bin"))
 	{
-		if(file_exist("C:\\ind-bios.cfg") || file_exist("C:\\ind-bios\\ind-bios.cfg"))
+		char *patched_value_M8 = (char *)0x8002691E; // M8+
+		if (*patched_value_M8=='™')
+		debuglog("M8+ Detected and XISO support added\n");
+		char *patched_value_Ind = (char *)0x8002B4B7; // ind-biod 5003
+		if (*patched_value_Ind=='™')
 		{
-			char *patched_value = (char *)0x8002B4B7;
-			if (*patched_value=='™')
+			debuglog("Ind-Bios 5003 Detected and XISO support added\n");
+			XMount("D:", "\\Device\\Cdrom0");
+			XMount("VD:", "\\Device\\Cdrom1");
+			CreateDirectory("E:\\CACHE", NULL);
+			if (file_exist("VD:\\default.xbe"))
 			{
-				XMount("D:", "\\Device\\Cdrom0");
-				XMount("VD:", "\\Device\\Cdrom1");
-				CreateDirectory("E:\\CACHE", NULL);
-				if (file_exist("VD:\\default.xbe"))
+				if (!file_exist("E:\\CACHE\\LocalCache30.bin"))
 				{
-					if (!file_exist("E:\\CACHE\\LocalCache30.bin"))
+					debuglog("Creating De-mounter");
+					int i;
+					std::ofstream DismountXBEFile("E:\\CACHE\\LocalCache30.bin", std::ios::binary);
+					for(i = 0; i < sizeof(dismount_xbe); i++)
 					{
-						debuglog("Creating De-mounter");
-						int i;
-						std::ofstream DismountXBEFile("E:\\CACHE\\LocalCache30.bin", std::ios::binary);
-						for(i = 0; i < sizeof(dismount_xbe); i++)
-						{
-							DismountXBEFile << dismount_xbe[i];
-						}
-						DismountXBEFile.close();
-						XLaunchXBE("D:\\default.xbe");
+						DismountXBEFile << dismount_xbe[i];
 					}
-					if (!file_exist(dashloader_Files_path"Disabled Virtual-ISO Dismount.bin"))
-					{
-						debuglog("Unmounting Virtual Drive");
-						XLaunchXBE("E:\\CACHE\\LocalCache30.bin");
-					}
+					DismountXBEFile.close();
+					XLaunchXBE("D:\\default.xbe");
+				}
+				if (!file_exist(dashloader_Files_path"Disabled Virtual-ISO Dismount.bin"))
+				{
+					debuglog("Unmounting Virtual Drive");
+					XLaunchXBE("E:\\CACHE\\LocalCache30.bin");
 				}
 			}
-			else
+		}
+		// Check for characters at these offsets so I know to patch it.
+		char *unpatched_value_M8_1 = (char *)0x8002691B; // M8+
+		char *unpatched_value_M8_2 = (char *)0x8002691E; // M8+
+		char *unpatched_value_M8_3 = (char *)0x8002690E; // M8+
+		char *unpatched_value_Ind_1 = (char *)0x8002B4B5; // ind-biod 5003
+		char *unpatched_value_Ind_2 = (char *)0x8002B4B7; // ind-biod 5003
+		char *unpatched_value_Ind_3 = (char *)0x8002B4C7; // ind-biod 5003
+		if (*unpatched_value_M8_1=='ì' && *unpatched_value_M8_2==' ' && *unpatched_value_M8_3=='ÿ' || *unpatched_value_Ind_1=='ƒ' && *unpatched_value_Ind_2==' ' && *unpatched_value_Ind_3=='€')
+		{
+			if (!file_exist("E:\\CACHE\\LocalCache40.bin"))
 			{
 				int i;
 				std::ofstream PatcherXBEFile("E:\\CACHE\\LocalCache40.bin", std::ios::binary);
@@ -239,8 +250,8 @@ int main(int argc,char* argv[])
 					PatcherXBEFile << kernel_patcher[i];
 				}
 				PatcherXBEFile.close();
-				XLaunchXBE("E:\\CACHE\\LocalCache40.bin");
 			}
+			XLaunchXBE("E:\\CACHE\\LocalCache40.bin");
 		}
 		remove("E:\\CACHE\\LocalCache30.bin");
 		remove("E:\\CACHE\\LocalCache40.bin");
@@ -254,7 +265,7 @@ int main(int argc,char* argv[])
 	{
 		strcpy(shortcut, dashloader_Files_path"Custom_Dash.cfg");
 	}
-	debuglog("Dashloader Build 1.4\n");
+	debuglog("Dashloader Build 1.4.1\n");
 	int timer = 0;
 	while(timer++ <= 1000)
 	{
