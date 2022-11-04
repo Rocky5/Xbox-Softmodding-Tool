@@ -77,6 +77,7 @@
 				<Item Action="Copy" arg1="Softmod Files\TH4-PAL\41560017\" arg2="E:\UDATA\41560017\">Copy TH4 save PAL</Item>
 				<Item Action="Copy" arg1="Softmod Files\MetalArms-PAL\5655000a\" arg2="E:\UDATA\5655000a\">Copy Metal Arms save PAL</Item>
 			</list>
+			<Item Action="Copy" arg1="Softmod Files\FroggerBeyond\4b4e0013\" arg2="E:\UDATA\4b4e0013\">Copy Frogger Beyond save</Item>
 			<Item Action="Copy" arg1="Softmod Files\4d530017\" arg2="E:\UDATA\4d530017\">Copy MA save</Item>
 			<Item Action="Copy" arg1="dummy"  arg2="E:\UDATA\4541000d\000000000000">Copy dummy 007</Item>
 			<Item Action="Delete" arg1="E:\UDATA\4541000d\000000000000">Delete 007</Item>
