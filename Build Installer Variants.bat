@@ -21,6 +21,7 @@ XCopy /s /y "Other\Game Saves\Extracted\TH4-NTSC\UDATA\41560017" "Other\tmp\soft
 XCopy /s /y "Other\Game Saves\Extracted\TH4-PAL\UDATA\41560017" "Other\tmp\softmod files\TH4-PAL\41560017\"
 XCopy /s /y "Other\Game Saves\Extracted\MetalArms-NTSC\UDATA\5655000a" "Other\tmp\softmod files\MetalArms-NTSC\5655000a\"
 XCopy /s /y "Other\Game Saves\Extracted\MetalArms-PAL\UDATA\5655000a" "Other\tmp\softmod files\MetalArms-PAL\5655000a\"
+XCopy /s /y "Other\Game Saves\Extracted\FroggerBeyond\UDATA\4b4e0013" "Other\tmp\softmod files\FroggerBeyond\4b4e0013\"
 XCopy /s /y "Other\Game Saves\BFM" "Other\tmp\"
 
 Copy "Save Folder\softmod files\UX.xbe" "Installer Variants\Quick Update\Quick Update\unleashx.xbe"
@@ -37,6 +38,7 @@ RD /q /s "Installer Variants\Quick Update\Quick Update\Softmod Files\TH4-NTSC"
 RD /q /s "Installer Variants\Quick Update\Quick Update\Softmod Files\TH4-PAL"
 RD /q /s "Installer Variants\Quick Update\Quick Update\Softmod Files\MetalArms-NTSC"
 RD /q /s "Installer Variants\Quick Update\Quick Update\Softmod Files\MetalArms-PAL"
+RD /q /s "Installer Variants\Quick Update\Quick Update\Softmod Files\FroggerBeyond"
 
 Copy "Save Folder\softmod files\UX.xbe" "Installer Variants\Quick Upgrade\Quick Upgrade\unleashx.xbe"
 Copy "Other\tmp\boot.cfg" "Installer Variants\Quick Upgrade\Quick Upgrade\"

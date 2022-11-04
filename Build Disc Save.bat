@@ -21,6 +21,7 @@ XCopy /s /y "Other\Game Saves\Extracted\TH4-NTSC\UDATA\41560017" "Other\tmp\soft
 XCopy /s /y "Other\Game Saves\Extracted\TH4-PAL\UDATA\41560017" "Other\tmp\softmod files\TH4-PAL\41560017\"
 XCopy /s /y "Other\Game Saves\Extracted\MetalArms-NTSC\UDATA\5655000a" "Other\tmp\softmod files\MetalArms-NTSC\5655000a\"
 XCopy /s /y "Other\Game Saves\Extracted\MetalArms-PAL\UDATA\5655000a" "Other\tmp\softmod files\MetalArms-PAL\5655000a\"
+XCopy /s /y "Other\Game Saves\Extracted\FroggerBeyond\UDATA\4b4e0013" "Other\tmp\softmod files\FroggerBeyond\4b4e0013\"
 XCopy /s /y "Other\Game Saves\BFM" "Other\tmp\"
 Copy "Save Folder\softmod files\UX.xbe" "Other\tmp\unleashx.xbe"
 CD "Other\tmp"
