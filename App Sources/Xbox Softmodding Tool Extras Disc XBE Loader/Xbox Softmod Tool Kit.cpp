@@ -313,8 +313,8 @@ void ConfigMagicApp::LoadSettings()
 	YOffset = 20;
 	XImgCorrection = 45;
 	YImgCorrection = 40;
-	m_clrMessageTextColor		= 0xffaee239;
-	m_clrStatusTextColor		= 0xff626473;
+	m_clrMessageTextColor		= 0xffefcb49;
+	m_clrStatusTextColor		= 0xff979797;
 }
 //Application start point
 void main()

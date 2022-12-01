@@ -24,13 +24,23 @@ Troubleshooting:
 		( the process is automated, don't worry )
 
 		
-3) Some games are crashing at there main menu ( Counter Strike )
+3) Some games are crashing at there main menu ( Counter Strike or Froza )
 	
 	Cause:
-		The xbox not having a valid language some games ( only know of one ^^ )
+		The xbox not having a valid language some games
 	
 	Fix:
 		Disable Persistent Softmod.
+		If already disabled, set system language under EEPROM > advanced features > Select a language.
 
 
-4) Haven't a clue
+4) My MSDash is missing
+	
+	Cause:
+		It's not backed up during the softmod process.
+	
+	Fix:
+		Install via the Extras Disc > Dashboards > MS Dashboards
+
+
+5) Haven't a clue

@@ -29,7 +29,7 @@ NtSetSystemTime				dd 228
 RtlTimeFieldsToTime			dd 304
 							dd 0
 mintimefields
-							dw 2019		; Year
+							dw 2022		; Year
 							dw 1		; Month
 							dw 1		; Day
 							dw 12		; Hour
@@ -38,10 +38,10 @@ mintimefields
 							dw 0		; Milliseconds
 							dw 0		; Weekday (ignored)
 maxtimefields
-							dw 2099		; Year
+							dw 9999		; Year
 							dw 1		; Month
 							dw 1		; Day
-							dw 0		; Hour
+							dw 12		; Hour
 							dw 0		; Minute
 							dw 0		; Second
 							dw 0		; Milliseconds

@@ -1,8 +1,23 @@
 ========================================= 
 	Change Log
-	Xbox Softmodding Tool v1.1.8
+	Xbox Softmodding Tool v1.1.9
 	Created by Rocky5
 =========================================
+
+=========================================
+	Update: Dec 1 2022
+=========================================
+		New look (colour scheme)
+		Removed the Virtual EEPROM from the softmod, this caused XBLA disc to stop functioning and it's not really required in this day and age.
+		(Even though it was disabled, due to me using partition14 for ShadowC it was failing :/)
+		Fixed the extras disc restore to factory config.
+		(was broken after an external commit)
+		Added some extra steps to change the HDD Key.
+		(Try and stop people changing the key after insignia setup)
+		Updated M8 bios to the patched 128MB variant for the extras disc TSOP flasher.
+		Updated the extras disc MS dash menu, now only install the retail dash.
+		Updated the preset date to 1/1/2022 - 1/1/9999
+		(never run out lol)
 
 =========================================
 	Update: Nov 04 2022

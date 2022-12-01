@@ -950,133 +950,64 @@
 
 			<List Text=" MS Dashboards" Sort="Off">	
 				<List Text="MS Dashboards Information" Sort="Off" Batch="True">
-					<Item Action="MessageBox" arg1="Information">These are not used as a default dashboard, but can be installed to allow you to copy CD's to the Xbox for playback in some games or to manage your save games.</Item>
+					<Item Action="MessageBox" arg1="Information">This was the last official (5960 retail) dashboard MS released for the Xbox.</Item>
 				</List>
 				<Item></Item>
-				<List Text=" Stock MS Dash 5960" Sort="Off" Icon="C:\xboxdashdata.185ead00\installed.png">	
-					<list Text="Stock MS Dash  Information" Sort="Off" Batch="True">
-						<Item Action="MessageBox" Arg1="Info">This was the last official dashboard MS released for the Xbox.</Item>
+				<list Text=" Install" Sort="Off" Batch="True" Icon="C:\xboxdashdata.185ead00\installed.png">
+					<Item Action="AskUser" arg1="Continue?" arg2="Proceed with installation? \n\nMS Dashboard total size is 138MB"/>
+					<Item Action="MessageBox" arg1="Clean Up">I'm about to clean up the C drive.</Item>
+					<!-- Remove old files (or if they don't exist create & remove) -->
+					<Item Action="Copy" arg1="dummy" arg2="C:\xboxdashdata.185ead00\">Copying C:\xboxdashdata.185ead00\</Item>
+					<Item Action="Delete" arg1="C:\xboxdashdata.185ead00\">Deleting C:\xboxdashdata.185ead00\</Item>
+					<Item Action="Copy" arg1="dummy" arg2="C:\Xbox Book.xtf">Copying C:\Xbox Book.xtf</Item>
+					<Item Action="Delete" arg1="C:\Xbox Book.xtf">Deleting C:\Xbox Book.xtf</Item>
+					<Item Action="Copy" arg1="dummy" arg2="C:\Xbox.xtf">Copying C:\Xbox.xtf</Item>
+					<Item Action="Delete" arg1="C:\Xbox.xtf">Deleting C:\Xbox.xtf</Item>
+					<Item Action="Copy" arg1="dummy" arg2="C:\Audio\">Copying C:\Audio\</Item>
+					<Item Action="Delete" arg1="C:\Audio\">Deleting C:\Audio\</Item>
+					<Item Action="Copy" arg1="dummy" arg2="C:\fonts\">Copying C:\fonts\</Item>
+					<Item Action="Delete" arg1="C:\fonts\">Deleting C:\fonts\</Item>
+					<Item Action="Copy" arg1="dummy" arg2="C:\XboxDash\">Copying C:\XboxDash\</Item>
+					<Item Action="Delete" arg1="C:\XboxDash\">Deleting C:\XboxDash\</Item>
+					<Item Action="Copy" arg1="dummy" arg2="C:\xodash\">Copying C:\xodash\</Item>
+					<Item Action="Delete" arg1="C:\xodash\">Deleting C:\xodash\</Item>
+					<Item Action="Copy" arg1="dummy" arg2="C:\xboxdash.xbe">Copying C:\xboxdash.xbe</Item>
+					<Item Action="Delete" arg1="C:\xboxdash.xbe">Deleting C:\xboxdash.xbe</Item>
+					<Item Action="Copy" arg1="dummy" arg2="E:\Applications\MSDash\">Copying E:\Applications\MSDash</Item>
+					<Item Action="Delete" arg1="E:\Applications\MSDash\">Deleting E:\Applications\MSDash</Item>
+					<list>
+						<Item Action="AskUser" arg1="Audio" arg2="Install the Audio? \n\nThis is not needed for the dashboard to function. \n\nAudio increases the total size to 171MB"/>
+						<Item Action="Unzip" arg1="dashboards\msdash\Other\Audio.zip" arg2="C:\"/>
 					</list>
-					<Item></Item>
-					<list Text=" Install" Sort="Off" Batch="True">
-						<Item Action="AskUser" arg1="Continue?" arg2="Proceed with installation? \n\nMS Dashboard total size is 138MB"/>
-						<Item Action="MessageBox" arg1="Clean Up">I'm about to clean up the C drive.</Item>
-						<!-- Remove old files (or if they don't exist create & remove) -->
-						<Item Action="Copy" arg1="dummy" arg2="C:\xboxdashdata.185ead00\">Copying C:\xboxdashdata.185ead00\</Item>
-						<Item Action="Delete" arg1="C:\xboxdashdata.185ead00\">Deleting C:\xboxdashdata.185ead00\</Item>
-						<Item Action="Copy" arg1="dummy" arg2="C:\Xbox Book.xtf">Copying C:\Xbox Book.xtf</Item>
-						<Item Action="Delete" arg1="C:\Xbox Book.xtf">Deleting C:\Xbox Book.xtf</Item>
-						<Item Action="Copy" arg1="dummy" arg2="C:\Xbox.xtf">Copying C:\Xbox.xtf</Item>
-						<Item Action="Delete" arg1="C:\Xbox.xtf">Deleting C:\Xbox.xtf</Item>
-						<Item Action="Copy" arg1="dummy" arg2="C:\Audio\">Copying C:\Audio\</Item>
-						<Item Action="Delete" arg1="C:\Audio\">Deleting C:\Audio\</Item>
-						<Item Action="Copy" arg1="dummy" arg2="C:\fonts\">Copying C:\fonts\</Item>
-						<Item Action="Delete" arg1="C:\fonts\">Deleting C:\fonts\</Item>
-						<Item Action="Copy" arg1="dummy" arg2="C:\XboxDash\">Copying C:\XboxDash\</Item>
-						<Item Action="Delete" arg1="C:\XboxDash\">Deleting C:\XboxDash\</Item>
-						<Item Action="Copy" arg1="dummy" arg2="C:\xodash\">Copying C:\xodash\</Item>
-						<Item Action="Delete" arg1="C:\xodash\">Deleting C:\xodash\</Item>
-						<Item Action="Copy" arg1="dummy" arg2="C:\xboxdash.xbe">Copying C:\xboxdash.xbe</Item>
-						<Item Action="Delete" arg1="C:\xboxdash.xbe">Deleting C:\xboxdash.xbe</Item>
-						<Item Action="Copy" arg1="dummy" arg2="E:\Applications\MSDash\">Copying E:\Applications\MSDash</Item>
-						<Item Action="Delete" arg1="E:\Applications\MSDash\">Deleting E:\Applications\MSDash</Item>
-						<list>
-							<Item Action="AskUser" arg1="Audio" arg2="Install the Audio? \n\nThis is not needed for the dashboard to function. \n\nAudio increases the total size to 171MB"/>
-							<Item Action="Unzip" arg1="dashboards\msdash\Other\Audio.zip" arg2="C:\"/>
-						</list>
-						<Item Action="Unzip" arg1="dashboards\msdash\modded\5960.zip" arg2="C:\"/>
-						<Item Action="Copy" arg1="C:\xboxdash.xbe" arg2="E:\Applications\MSDash\default.xbe">Copying C:\xboxdash.xbe</Item>
-						<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="C:\xboxdashdata.185ead00\"/>
-						<Item Action="Format" arg1="Z"/>
-						<Item Action="MessageBox" arg1="Done">That's the MS Dashboard installed.</Item>
-					</list>
-					<list Text=" Uninstall" Sort="Off" Batch="True">
-						<Item Action="AskUser" arg1="Continue?" arg2="Proceed with the uninstall?"/>
-						<Item Action="MessageBox" arg1="Clean Up">I'm about to clean up the C drive.</Item>
-						<!-- Remove old files (or if they don't exist create & remove) -->
-						<Item Action="Copy" arg1="dummy" arg2="C:\xboxdashdata.185ead00\">Copying C:\xboxdashdata.185ead00\</Item>
-						<Item Action="Delete" arg1="C:\xboxdashdata.185ead00\">Deleting C:\xboxdashdata.185ead00\</Item>
-						<Item Action="Copy" arg1="dummy" arg2="C:\Xbox Book.xtf">Copying C:\Xbox Book.xtf</Item>
-						<Item Action="Delete" arg1="C:\Xbox Book.xtf">Deleting C:\Xbox Book.xtf</Item>
-						<Item Action="Copy" arg1="dummy" arg2="C:\Xbox.xtf">Copying C:\Xbox.xtf</Item>
-						<Item Action="Delete" arg1="C:\Xbox.xtf">Deleting C:\Xbox.xtf</Item>
-						<Item Action="Copy" arg1="dummy" arg2="C:\Audio\">Copying C:\Audio\</Item>
-						<Item Action="Delete" arg1="C:\Audio\">Deleting C:\Audio\</Item>
-						<Item Action="Copy" arg1="dummy" arg2="C:\fonts\">Copying C:\fonts\</Item>
-						<Item Action="Delete" arg1="C:\fonts\">Deleting C:\fonts\</Item>
-						<Item Action="Copy" arg1="dummy" arg2="C:\XboxDash\">Copying C:\XboxDash\</Item>
-						<Item Action="Delete" arg1="C:\XboxDash\">Deleting C:\XboxDash\</Item>
-						<Item Action="Copy" arg1="dummy" arg2="C:\xodash\">Copying C:\xodash\</Item>
-						<Item Action="Delete" arg1="C:\xodash\">Deleting C:\xodash\</Item>
-						<Item Action="Copy" arg1="dummy" arg2="C:\xboxdash.xbe">Copying C:\xboxdash.xbe</Item>
-						<Item Action="Delete" arg1="C:\xboxdash.xbe">Deleting C:\xboxdash.xbe</Item>
-						<Item Action="Copy" arg1="dummy" arg2="E:\Applications\MSDash\">Copying E:\Applications\MSDash</Item>
-						<Item Action="Delete" arg1="E:\Applications\MSDash\">Deleting E:\Applications\MSDash</Item>
-						<Item Action="MessageBox" arg1="Done">That's the MS Dashboard uninstalled.</Item>
-					</list>
+					<Item Action="Unzip" arg1="dashboards\msdash\retail\5960.zip" arg2="C:\"/>
+					<Item Action="Copy" arg1="C:\xboxdash.xbe" arg2="E:\Applications\MSDash\default.xbe">Copying C:\xboxdash.xbe</Item>
+					<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="C:\xboxdashdata.185ead00\"/>
+					<Item Action="Format" arg1="Z"/>
+					<Item Action="MessageBox" arg1="Done">That's the MS Dashboard installed.</Item>
 				</list>
-
-				<List Text=" Hacked MS Dash 4920" Sort="Off" Icon="C:\XboxDash\installed.png">	
-					<list Text="Hacked MS Dash Information" Sort="Off" Batch="True">
-						<Item Action="MessageBox" Arg1="Info">Feature list. \n\n1) Defaults to Games Saves list. \n2) XBL functionality removed. \n3) Smaller footprint. \n4) Update Safe.</Item>
-					</list>
-					<Item></Item>
-					<list Text=" Install" Sort="Off" Batch="True">
-						<Item Action="AskUser" arg1="Continue?" arg2="Proceed with installation? \n\nMS Dashboard total size is 65MB"/>
-						<Item Action="MessageBox" arg1="Clean Up">I'm about to clean up the C drive.</Item>
-						<!-- Remove old files (or if they don't exist create & remove) -->
-						<Item Action="Copy" arg1="dummy" arg2="C:\xboxdashdata.185ead00\">Copying C:\xboxdashdata.185ead00\</Item>
-						<Item Action="Delete" arg1="C:\xboxdashdata.185ead00\">Deleting C:\xboxdashdata.185ead00\</Item>
-						<Item Action="Copy" arg1="dummy" arg2="C:\Xbox Book.xtf">Copying C:\Xbox Book.xtf</Item>
-						<Item Action="Delete" arg1="C:\Xbox Book.xtf">Deleting C:\Xbox Book.xtf</Item>
-						<Item Action="Copy" arg1="dummy" arg2="C:\Xbox.xtf">Copying C:\Xbox.xtf</Item>
-						<Item Action="Delete" arg1="C:\Xbox.xtf">Deleting C:\Xbox.xtf</Item>
-						<Item Action="Copy" arg1="dummy" arg2="C:\Audio\">Copying C:\Audio\</Item>
-						<Item Action="Delete" arg1="C:\Audio\">Deleting C:\Audio\</Item>
-						<Item Action="Copy" arg1="dummy" arg2="C:\fonts\">Copying C:\fonts\</Item>
-						<Item Action="Delete" arg1="C:\fonts\">Deleting C:\fonts\</Item>
-						<Item Action="Copy" arg1="dummy" arg2="C:\XboxDash\">Copying C:\XboxDash\</Item>
-						<Item Action="Delete" arg1="C:\XboxDash\">Deleting C:\XboxDash\</Item>
-						<Item Action="Copy" arg1="dummy" arg2="C:\xodash\">Copying C:\xodash\</Item>
-						<Item Action="Delete" arg1="C:\xodash\">Deleting C:\xodash\</Item>
-						<Item Action="Copy" arg1="dummy" arg2="C:\xboxdash.xbe">Copying C:\xboxdash.xbe</Item>
-						<Item Action="Delete" arg1="C:\xboxdash.xbe">Deleting C:\xboxdash.xbe</Item>
-						<Item Action="Copy" arg1="dummy" arg2="E:\Applications\MSDash\">Copying E:\Applications\MSDash</Item>
-						<Item Action="Delete" arg1="E:\Applications\MSDash\">Deleting E:\Applications\MSDash</Item>
-						<list>
-							<Item Action="AskUser" arg1="Audio" arg2="Install the Audio? \n\nThis is not needed for the dashboard to function. \n\nAudio increases the total size to 98MB"/>
-							<Item Action="Unzip" arg1="dashboards\msdash\Other\Audio.zip" arg2="C:\"/>
-						</list>
-						<Item Action="Unzip" arg1="dashboards\msdash\modded\4920.zip" arg2="C:\"/>
-						<Item Action="Copy" arg1="C:\xboxdash.xbe" arg2="E:\Applications\MSDash\default.xbe">Copying C:\xboxdash.xbe</Item>
-						<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="C:\XboxDash\"/>
-						<Item Action="Format" arg1="Z"/>
-						<Item Action="MessageBox" arg1="Done">That's the MS Dashboard installed.</Item>
-					</list>
-					<list Text=" Uninstall" Sort="Off" Batch="True">
-						<Item Action="AskUser" arg1="Continue?" arg2="Proceed with the uninstall?"/>
-						<Item Action="MessageBox" arg1="Clean Up">I'm about to clean up the C drive.</Item>
-						<!-- Remove old files (or if they don't exist create & remove) -->
-						<Item Action="Copy" arg1="dummy" arg2="C:\xboxdashdata.185ead00\">Copying C:\xboxdashdata.185ead00\</Item>
-						<Item Action="Delete" arg1="C:\xboxdashdata.185ead00\">Deleting C:\xboxdashdata.185ead00\</Item>
-						<Item Action="Copy" arg1="dummy" arg2="C:\Xbox Book.xtf">Copying C:\Xbox Book.xtf</Item>
-						<Item Action="Delete" arg1="C:\Xbox Book.xtf">Deleting C:\Xbox Book.xtf</Item>
-						<Item Action="Copy" arg1="dummy" arg2="C:\Xbox.xtf">Copying C:\Xbox.xtf</Item>
-						<Item Action="Delete" arg1="C:\Xbox.xtf">Deleting C:\Xbox.xtf</Item>
-						<Item Action="Copy" arg1="dummy" arg2="C:\Audio\">Copying C:\Audio\</Item>
-						<Item Action="Delete" arg1="C:\Audio\">Deleting C:\Audio\</Item>
-						<Item Action="Copy" arg1="dummy" arg2="C:\fonts\">Copying C:\fonts\</Item>
-						<Item Action="Delete" arg1="C:\fonts\">Deleting C:\fonts\</Item>
-						<Item Action="Copy" arg1="dummy" arg2="C:\XboxDash\">Copying C:\XboxDash\</Item>
-						<Item Action="Delete" arg1="C:\XboxDash\">Deleting C:\XboxDash\</Item>
-						<Item Action="Copy" arg1="dummy" arg2="C:\xodash\">Copying C:\xodash\</Item>
-						<Item Action="Delete" arg1="C:\xodash\">Deleting C:\xodash\</Item>
-						<Item Action="Copy" arg1="dummy" arg2="C:\xboxdash.xbe">Copying C:\xboxdash.xbe</Item>
-						<Item Action="Delete" arg1="C:\xboxdash.xbe">Deleting C:\xboxdash.xbe</Item>
-						<Item Action="Copy" arg1="dummy" arg2="E:\Applications\MSDash\">Copying E:\Applications\MSDash</Item>
-						<Item Action="Delete" arg1="E:\Applications\MSDash\">Deleting E:\Applications\MSDash</Item>
-						<Item Action="MessageBox" arg1="Done">That's the MS Dashboard uninstalled.</Item>
-					</list>
+				<list Text=" Uninstall" Sort="Off" Batch="True">
+					<Item Action="AskUser" arg1="Continue?" arg2="Proceed with the uninstall?"/>
+					<Item Action="MessageBox" arg1="Clean Up">I'm about to clean up the C drive.</Item>
+					<!-- Remove old files (or if they don't exist create & remove) -->
+					<Item Action="Copy" arg1="dummy" arg2="C:\xboxdashdata.185ead00\">Copying C:\xboxdashdata.185ead00\</Item>
+					<Item Action="Delete" arg1="C:\xboxdashdata.185ead00\">Deleting C:\xboxdashdata.185ead00\</Item>
+					<Item Action="Copy" arg1="dummy" arg2="C:\Xbox Book.xtf">Copying C:\Xbox Book.xtf</Item>
+					<Item Action="Delete" arg1="C:\Xbox Book.xtf">Deleting C:\Xbox Book.xtf</Item>
+					<Item Action="Copy" arg1="dummy" arg2="C:\Xbox.xtf">Copying C:\Xbox.xtf</Item>
+					<Item Action="Delete" arg1="C:\Xbox.xtf">Deleting C:\Xbox.xtf</Item>
+					<Item Action="Copy" arg1="dummy" arg2="C:\Audio\">Copying C:\Audio\</Item>
+					<Item Action="Delete" arg1="C:\Audio\">Deleting C:\Audio\</Item>
+					<Item Action="Copy" arg1="dummy" arg2="C:\fonts\">Copying C:\fonts\</Item>
+					<Item Action="Delete" arg1="C:\fonts\">Deleting C:\fonts\</Item>
+					<Item Action="Copy" arg1="dummy" arg2="C:\XboxDash\">Copying C:\XboxDash\</Item>
+					<Item Action="Delete" arg1="C:\XboxDash\">Deleting C:\XboxDash\</Item>
+					<Item Action="Copy" arg1="dummy" arg2="C:\xodash\">Copying C:\xodash\</Item>
+					<Item Action="Delete" arg1="C:\xodash\">Deleting C:\xodash\</Item>
+					<Item Action="Copy" arg1="dummy" arg2="C:\xboxdash.xbe">Copying C:\xboxdash.xbe</Item>
+					<Item Action="Delete" arg1="C:\xboxdash.xbe">Deleting C:\xboxdash.xbe</Item>
+					<Item Action="Copy" arg1="dummy" arg2="E:\Applications\MSDash\">Copying E:\Applications\MSDash</Item>
+					<Item Action="Delete" arg1="E:\Applications\MSDash\">Deleting E:\Applications\MSDash</Item>
+					<Item Action="MessageBox" arg1="Done">That's the MS Dashboard uninstalled.</Item>
 				</list>
 			</list>
 		</list>

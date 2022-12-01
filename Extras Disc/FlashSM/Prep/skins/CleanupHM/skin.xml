@@ -2,7 +2,7 @@
 	<Information>
 		<Author>Rocky5</Author>
 		<Copyright>Xbox</Copyright>
-		<Version>1.1.8</Version>
+		<Version>1.1.9</Version>
 	</Information>
 	<Fonts>
 		<Font Name="font1">..\skin files\fonts\font1.xpr</Font>
@@ -35,45 +35,32 @@
 		</Menu>
 		<InfoFont>font1</InfoFont>
 		<!-- ------------------ -->
-		<!--    Colour Pallet   -->
-		<!-- ------------------ --
-		<Text zindex="9" Top="0" Left="9" Width="82" Align="Middle" ScaleX="75" ScaleY="75" Color="0xff000000" Source="Colour Pallet"/>
-		<Shape zindex="9" Type="Rectangle" Top="19" Left="9" Width="82" Height="12" BorderColor="" BackColor="0xff000000"/>
-		<Shape zindex="10" Type="Rectangle" Top="20" Left="10" Width="10" Height="10" BorderColor="" BackColor="0xff626473"/>
-		<Shape zindex="10" Type="Rectangle" Top="20" Left="20" Width="10" Height="10" BorderColor="" BackColor="0xff4c4d58"/>
-		<Shape zindex="10" Type="Rectangle" Top="20" Left="30" Width="10" Height="10" BorderColor="" BackColor="0xff3a3a46"/>
-		<Shape zindex="10" Type="Rectangle" Top="20" Left="40" Width="10" Height="10" BorderColor="" BackColor="0xffaee239"/>
-		<Shape zindex="10" Type="Rectangle" Top="20" Left="50" Width="10" Height="10" BorderColor="" BackColor="0xffafb2ce"/>
-		<Shape zindex="10" Type="Rectangle" Top="20" Left="60" Width="10" Height="10" BorderColor="" BackColor="0x00626473"/>
-		<Shape zindex="10" Type="Rectangle" Top="20" Left="70" Width="10" Height="10" BorderColor="" BackColor="0x00de8c86"/>
-		<Shape zindex="10" Type="Rectangle" Top="20" Left="80" Width="10" Height="10" BorderColor="" BackColor="0x0086d7de"/>
-		<!-- ------------------ -->
 		<!-- GUI Elements start -->
 		<!-- ------------------ -->
 		<!-- Logos at the top of the screen -->
 		<Image zindex="3" Top="28" Left="154" Width="334" Height="55">..\skin files\images\Xbox Logo.png</image>
 		<Image zindex="3" Top="89" Left="202" Width="239" Height="23">..\skin files\images\Softmodding Tool.png</image>
 		<!-- List Background -->
-		<Shape zindex="1" Type="Rectangle" Top="130" Left="71" Width="498" Height="298" BorderColor="0xff4c4d58" BackColor="0xbf626473"/>
+		<Shape zindex="1" Type="Rectangle" Top="130" Left="71" Width="498" Height="298" BorderColor="0x003c3c3c" BackColor="0xff3c3c3c"/>
+		<Shape zindex="10" Type="Rectangle" Top="268" Left="72" Width="496" Height="1" BorderColor="" BackColor="0xffefcb49"/>
 		<!--  -->
-		<Text zindex="3" Top="149" Left="71" Width="499" Align="Middle" ScaleX="100" ScaleY="100" Color="0xffaee239" Source=""/>
-		<Text zindex="3" Top="169" Left="71" Width="499" Align="Middle" ScaleX="100" ScaleY="100" Color="0xffaee239" Source=""/>
-		<Text zindex="3" Top="189" Left="71" Width="499" Align="Middle" ScaleX="100" ScaleY="100" Color="0xffaee239" Source="Welcome to the Hardmod side."/>
-		<Text zindex="3" Top="219" Left="71" Width="499" Align="Middle" ScaleX="100" ScaleY="100" Color="0xffaee239" Source="Here you can cleanup the files left by the TSOP flasher."/>
-		<Text zindex="3" Top="239" Left="71" Width="499" Align="Middle" ScaleX="100" ScaleY="100" Color="0xffaee239" Source="Or do a full clean that will remove the old softmod saves."/>
-		<Image zindex="3" Top="10" Left="590" Width="42" Height="42" Source="GameIcon"/>
+		<Text zindex="3" Top="149" Left="71" Width="499" Align="Middle" ScaleX="100" ScaleY="100" Color="0xffefcb49" Source=""/>
+		<Text zindex="3" Top="169" Left="71" Width="499" Align="Middle" ScaleX="100" ScaleY="100" Color="0xffefcb49" Source=""/>
+		<Text zindex="3" Top="189" Left="71" Width="499" Align="Middle" ScaleX="100" ScaleY="100" Color="0xffefcb49" Source="Welcome to the Hardmod side."/>
+		<Text zindex="3" Top="219" Left="71" Width="499" Align="Middle" ScaleX="100" ScaleY="100" Color="0xffefcb49" Source="Here you can cleanup the files left by the TSOP flasher."/>
+		<Text zindex="3" Top="239" Left="71" Width="499" Align="Middle" ScaleX="100" ScaleY="100" Color="0xffefcb49" Source="Or do a full clean that will remove the old softmod saves."/>
 		<!-- (A) Select (B) Back section -->
-		<Shape zindex="1" Type="Rectangle" Top="427" Left="71" Width="165" Height="25" BorderColor="0x00000000" BackColor="0xff3a3a46"/>
-		<Shape zindex="1" Type="Rectangle" Top="427" Left="71" Width="148" Height="45" BorderColor="0x00000000" BackColor="0xff3a3a46"/>
-		<Shape zindex="1" Type="triangle" Top="450" Left="201" Width="35" Height="21" BorderColor="0x00000000" BackColor="0xff3a3a46" Direction="down"/>
+		<Shape zindex="1" Type="Rectangle" Top="427" Left="71" Width="165" Height="25" BorderColor="0x00000000" BackColor="0xff302f2f"/>
+		<Shape zindex="1" Type="Rectangle" Top="427" Left="71" Width="148" Height="45" BorderColor="0x00000000" BackColor="0xff302f2f"/>
+		<Shape zindex="1" Type="triangle" Top="450" Left="201" Width="35" Height="21" BorderColor="0x00000000" BackColor="0xff302f2f" Direction="down"/>
 		<Image zindex="3" Top="430" Left="95" Width="112" Height="38">..\skin files\images\buttons.png</image>
 		<!-- installer version section --->
-		<Shape zindex="0" Type="Rectangle" Top="427" Left="487" Width="82" Height="17" BorderColor="0xff4c4d58" BackColor="0xff3a3a46"/>
-		<Text zindex="3" Top="427" Left="479" Width="100" Height="15" Align="Middle" ScaleX="100" ScaleY="100" Color="0xffafb2ce" Font="font4" Source="Running: v$SkinVersion$"/>		
+		<Shape zindex="0" Type="Rectangle" Top="427" Left="487" Width="82" Height="17" BorderColor="0x00000000" BackColor="0xff302f2f"/>
+		<Text zindex="3" Top="427" Left="479" Width="100" Height="15" Align="Middle" ScaleX="100" ScaleY="100" Color="0xffefcb49" Font="font4" Source="Installer: v$SkinVersion$"/>
 	</Main>
 	<MusicPlayer Top="1" Left="1" Width="640" Height="480" >
-		<BackGround>..\skin files\images\musicplayer\musicbg.png</BackGround>
-		<ButtonMap>..\skin files\images\musicplayer\buttonmap.png</ButtonMap>
+		<BackGround>musicplayer\musicbg.png</BackGround>
+		<ButtonMap>musicplayer\buttonmap.png</ButtonMap>
 		<Element Type="Prev" Top="275" Left="170" Width="35" Height="40"/>
 		<Element Type="Play" Top="275" Left="206" Width="35" Height="40"/>
 		<Element Type="Pause" Top="275" Left="242" Width="35" Height="40"/>
@@ -84,83 +71,91 @@
 		<Element Type="Random" Top="275" Left="350" Width="35" Height="20" zIndex="2"/>
 		<Element Type="Mute" Top="275" Left="386" Width="35" Height="20" zIndex="2"/>
 		<!-- Visualisation -->
-		<Image zindex="0" Top="154" Left="169" Width="78" Height="94">..\skin files\images\musicplayer\vbunderlay.png</image>
-		<Image zindex="2" Top="0" Left="0" Width="640" Height="480">..\skin files\images\musicplayer\vboverlay.png</image>
+		<Image zindex="0" Top="158" Left="173" Width="74" Height="90">musicplayer\vbunderlay.png</image>
+		<Image zindex="2" Top="0" Left="0" Width="640" Height="480">musicplayer\vboverlay.png</image>
 		<Element zIndex="1" Type="Meter" Top="149" Left="174" Width="190" Height="94"/>
 		<!-- Volume bar -->
 		<Element Type="Volume" Top="320" Left="165" Width="310" Height="5"/>
 		<!-- Progress bar -->
 		<Element Type="Progress" Top="325" Left="165" Width="310" Height="5"/>
 		<Image zIndex="3" Top="275" Left="427" Width="40" Height="40" Source="AlbumArt"/>
-		<Text zIndex="3" Top="251" Left="172" Width="300" Height="20" Color="0xffafb2ce" Align="Left" Font="font2" Scroll="1" ScaleX="100" ScaleY="100" Source="Track: $SongName$"/>
-		<Text zIndex="3" Top="168" Left="255" Width="215" Height="20" Color="0xffafb2ce" Align="Left" Font="font2" Scroll="1" ScaleX="100" ScaleY="100" Source="Duration:"/>
-		<Text zIndex="3" Top="183" Left="260" Width="215" Height="20" Color="0xffafb2ce" Align="Left" Font="font2" Scroll="1" ScaleX="100" ScaleY="100" Source="SongLength"/>
-		<Text zIndex="3" Top="182" Left="291" Width="215" Height="20" Color="0xffafb2ce" Align="Left" Font="font2" Scroll="1" ScaleX="100" ScaleY="100" Source="/"/>
-		<Text zIndex="3" Top="183" Left="297" Width="215" Height="20" Color="0xffaee239" Align="Left" Font="font2" Scroll="1" ScaleX="100" ScaleY="100" Source="SongTime"/>
-		<Text zIndex="3" Top="168" Left="340" Width="215" Height="20" Color="0xffafb2ce" Align="Left" Font="font2" Scroll="1" ScaleX="100" ScaleY="100" Source="Extras Info:"/>
-		<Text zIndex="3" Top="183" Left="345" Width="215" Height="20" Color="0xffafb2ce" Align="Left" Font="font2" Scroll="1" ScaleX="100" ScaleY="100" Source="Bitrate:"/>
-		<Text zIndex="3" Top="183" Left="389" Width="215" Height="20" Color="0xffaee239" Align="Left" Font="font2" Scroll="1" ScaleX="100" ScaleY="100" Source="SongBitRate"/>
-		<Text zIndex="3" Top="198" Left="345" Width="215" Height="20" Color="0xffafb2ce" Align="Left" Font="font2" Scroll="1" ScaleX="100" ScaleY="100" Source="Channels:"/>
-		<Text zIndex="3" Top="198" Left="403" Width="215" Height="20" Color="0xffaee239" Align="Left" Font="font2" Scroll="1" ScaleX="100" ScaleY="100" Source="SongChannel"/>
-		<Text zIndex="3" Top="213" Left="345" Width="215" Height="20" Color="0xffafb2ce" Align="Left" Font="font2" Scroll="1" ScaleX="100" ScaleY="100" Source="Frequency:"/>
-		<Text zIndex="3" Top="213" Left="411" Width="215" Height="20" Color="0xffaee239" Align="Left" Font="font2" Scroll="1" ScaleX="100" ScaleY="100" Source="SongFrequency"/>
+		<Text zIndex="3" Top="253" Left="172" Width="300" Height="20" Color="0xff979797" Align="Left" Font="font2" Scroll="1" ScaleX="100" ScaleY="100" Source="Track: $SongName$"/>
+		<Text zIndex="3" Top="168" Left="255" Width="215" Height="20" Color="0xff979797" Align="Left" Font="font2" Scroll="1" ScaleX="100" ScaleY="100" Source="Duration:"/>
+		<Text zIndex="3" Top="183" Left="260" Width="215" Height="20" Color="0xff979797" Align="Left" Font="font2" Scroll="1" ScaleX="100" ScaleY="100" Source="SongLength"/>
+		<Text zIndex="3" Top="182" Left="291" Width="215" Height="20" Color="0xff979797" Align="Left" Font="font2" Scroll="1" ScaleX="100" ScaleY="100" Source="/"/>
+		<Text zIndex="3" Top="183" Left="297" Width="215" Height="20" Color="0xffefcb49" Align="Left" Font="font2" Scroll="1" ScaleX="100" ScaleY="100" Source="SongTime"/>
+		<Text zIndex="3" Top="168" Left="340" Width="215" Height="20" Color="0xff979797" Align="Left" Font="font2" Scroll="1" ScaleX="100" ScaleY="100" Source="Extras Info:"/>
+		<Text zIndex="3" Top="183" Left="345" Width="215" Height="20" Color="0xff979797" Align="Left" Font="font2" Scroll="1" ScaleX="100" ScaleY="100" Source="Bitrate:"/>
+		<Text zIndex="3" Top="183" Left="389" Width="215" Height="20" Color="0xffefcb49" Align="Left" Font="font2" Scroll="1" ScaleX="100" ScaleY="100" Source="SongBitRate"/>
+		<Text zIndex="3" Top="198" Left="345" Width="215" Height="20" Color="0xff979797" Align="Left" Font="font2" Scroll="1" ScaleX="100" ScaleY="100" Source="Channels:"/>
+		<Text zIndex="3" Top="198" Left="403" Width="215" Height="20" Color="0xffefcb49" Align="Left" Font="font2" Scroll="1" ScaleX="100" ScaleY="100" Source="SongChannel"/>
+		<Text zIndex="3" Top="213" Left="345" Width="215" Height="20" Color="0xff979797" Align="Left" Font="font2" Scroll="1" ScaleX="100" ScaleY="100" Source="Frequency:"/>
+		<Text zIndex="3" Top="213" Left="411" Width="215" Height="20" Color="0xffefcb49" Align="Left" Font="font2" Scroll="1" ScaleX="100" ScaleY="100" Source="SongFrequency"/>
 		<Playlist Top="105" Left="-25" Width="690" Height="480" OffsetX="174" OffsetX2="170" OffsetY="152" OffsetY2="0">
-			<BackGround>..\skin files\images\musicplayer\musicbg.png</BackGround>
+			<BackGround>musicplayer\musicbg.png</BackGround>
 		</Playlist>		
 	</MusicPlayer>
 	<ColorScheme>
 		<!-- Music menu playlist screen -->
-		<MMActiveForeColor>0xffaee239</MMActiveForeColor>
-		<MMForeColor>0xffafb2ce</MMForeColor>
-		<MMDarkBackColor>0xff3a3a46</MMDarkBackColor>
-		<MMLightBackColor>0xff626473</MMLightBackColor>
-		<MM_BORDERCOLOR>0xff4c4d58</MM_BORDERCOLOR>
+		<MMActiveForeColor>0xffefcb49</MMActiveForeColor>
+		<MMForeColor>0xff2a2929</MMForeColor>
+		<MMDarkBackColor>0xff2a2929</MMDarkBackColor>
+		<MMLightBackColor>0xff2a2929</MMLightBackColor>
+		<MM_BORDERCOLOR>0xff2a2929</MM_BORDERCOLOR>
 		<!-- Visualisation colour -->
-		<MMDarkBarColor>0xffaee239</MMDarkBarColor>
+		<MMDarkBarColor>0xffefcb49</MMDarkBarColor>
 		<!-- These seem to do nothing -->
-		<MMBarBackColor>0xff86d7de</MMBarBackColor>
-		<MMOffForeColor>0xff86d7de</MMOffForeColor>
-		<MMLightBarColor>0xff86d7de</MMLightBarColor>
-		<!-- Not sure, they seem to do nothing -->
-		<WINDOWBACKCOLOR>0xffaee239</WINDOWBACKCOLOR>
-		<WINDOWFORECOLOR>0xff000000</WINDOWFORECOLOR>
+		<MMBarBackColor>0xffde8c86</MMBarBackColor>
+		<MMOffForeColor>0xffde8c86</MMOffForeColor>
+		<MMLightBarColor>0xffde8c86</MMLightBarColor>
+		<!-- Text editor window -->
+		<WINDOWBACKCOLOR>0xffefcb49</WINDOWBACKCOLOR>
+		<WINDOWFORECOLOR>0xff2a2929</WINDOWFORECOLOR>
 		<!-- Background effect colours -->
 		<AMBIENT_FOGCOLOR>0x00000000</AMBIENT_FOGCOLOR>
 		<AMBIENT_SKYCOLOR>0x00000000</AMBIENT_SKYCOLOR>
 		<AMBIENT_CELLCOLOR>0x00000000</AMBIENT_CELLCOLOR>
 		<!-- Please wait overlay, menu header colour eg... -->
-		<CAPTION_TEXTCOLOR>0xffaee239</CAPTION_TEXTCOLOR>
-		<CAPTION_BACKCOLOR>0x00626473</CAPTION_BACKCOLOR>
+		<CAPTION_TEXTCOLOR>0xffefcb49</CAPTION_TEXTCOLOR>
+		<CAPTION_BACKCOLOR>0xff302f2f</CAPTION_BACKCOLOR>
 		<!-- Dialogs, ie, Batch process and progress bars eg... -->
-		<DIALOG_BORDERCOLOR>0xff3a3a46</DIALOG_BORDERCOLOR>
-		<DIALOG_BACKCOLOR>0xdd626473</DIALOG_BACKCOLOR>
-		<DIALOG_INNER_BORDERCOLOR>0xff3a3a46</DIALOG_INNER_BORDERCOLOR>
-		<DIALOG_INNER_BACKCOLOR>0xbb3a3a46</DIALOG_INNER_BACKCOLOR>
-		<DIALOG_TEXTCOLOR>0xffafb2ce</DIALOG_TEXTCOLOR>
-		<DIALOG_DISABLEDTEXT>0xff626473</DIALOG_DISABLEDTEXT>
+		<DIALOG_BORDERCOLOR>0xff2a2929</DIALOG_BORDERCOLOR>
+		<DIALOG_BACKCOLOR>0xff302f2f</DIALOG_BACKCOLOR>
+		<DIALOG_INNER_BORDERCOLOR>0xff302f2f</DIALOG_INNER_BORDERCOLOR>
+		<DIALOG_INNER_BACKCOLOR>0xff2a2929</DIALOG_INNER_BACKCOLOR>
+		<DIALOG_TEXTCOLOR>0xff979797</DIALOG_TEXTCOLOR>
+		<DIALOG_DISABLEDTEXT>0xff626267</DIALOG_DISABLEDTEXT>
 		<!-- Settings menu -->
-		<OPTION_TEXTCOLOR>0xffafb2ce</OPTION_TEXTCOLOR>
-		<OPTION_ACTIVETEXTCOLOR>0xffaee239</OPTION_ACTIVETEXTCOLOR>
-		<OPTION_ACTIVEBACKCOLOR>0xff3a3a46</OPTION_ACTIVEBACKCOLOR>
+		<OPTION_TEXTCOLOR>0xff979797</OPTION_TEXTCOLOR>
+		<OPTION_ACTIVETEXTCOLOR>0xffefcb49</OPTION_ACTIVETEXTCOLOR>
+		<OPTION_ACTIVEBACKCOLOR>0xff353535</OPTION_ACTIVEBACKCOLOR>
 		<!-- Dialogs, ie, Yes/no buttons eg... -->
-		<BUTTON_BORDERCOLOR>0xff3a3a46</BUTTON_BORDERCOLOR>
-		<BUTTON_TEXTCOLOR>0xffafb2ce</BUTTON_TEXTCOLOR>
-		<BUTTON_BACKCOLOR>0xff626473</BUTTON_BACKCOLOR>
-		<BUTTON_ACTIVETEXTCOLOR>0xffaee239</BUTTON_ACTIVETEXTCOLOR>
-		<BUTTON_ACTIVEBACKCOLOR>0xff3a3a46</BUTTON_ACTIVEBACKCOLOR>
+		<BUTTON_BORDERCOLOR>0xff353535</BUTTON_BORDERCOLOR>
+		<BUTTON_TEXTCOLOR>0xff979797</BUTTON_TEXTCOLOR>
+		<BUTTON_BACKCOLOR>0xff2a2929</BUTTON_BACKCOLOR>
+		<BUTTON_ACTIVETEXTCOLOR>0xffefcb49</BUTTON_ACTIVETEXTCOLOR>
+		<BUTTON_ACTIVEBACKCOLOR>0xff353535</BUTTON_ACTIVEBACKCOLOR>
 		<!-- Keyboard -->
-		<KB_KEYBG_HIGHLIGHT>0xff626473</KB_KEYBG_HIGHLIGHT>
-		<KB_KEYBG_DISABLED>0xff3a3a46</KB_KEYBG_DISABLED>
-		<KB_KEY_PRESSED>0xff3a3a46</KB_KEY_PRESSED>
-		<KB_KEY_NORMAL>0xff3a3a46</KB_KEY_NORMAL>
-		<KB_KEY_DISABLED>0xffafb2ce</KB_KEY_DISABLED>
-		<KB_KEY_ACTIVEBORDER>0xffaee239</KB_KEY_ACTIVEBORDER>
-		<KB_KEY_TEXTCOLOR>0xff3a3a46</KB_KEY_TEXTCOLOR>
-		<KB_KEY_TEXTBACKCOLOR>0xffaee239</KB_KEY_TEXTBACKCOLOR>
-		<KB_KEY_TEXTBORDERCOLOR>0xffaee239</KB_KEY_TEXTBORDERCOLOR>
+		<!-- Button background -->
+		<KB_KEYBG_HIGHLIGHT>0xffefcb49</KB_KEYBG_HIGHLIGHT>
+		<KB_KEYBG_DISABLED>0xffef4949</KB_KEYBG_DISABLED>
+		<!-- Disabled button -->
+		<KB_KEY_PRESSED>0xff302f2f</KB_KEY_PRESSED>
+		<!-- Letters -->
+		<KB_KEY_NORMAL>0xff2a2929</KB_KEY_NORMAL>
+		<!-- Can see me to see where this is -->
+		<KB_KEY_DISABLED>0xffde8c86</KB_KEY_DISABLED>
+		<!-- Selected border -->
+		<KB_KEY_ACTIVEBORDER>0xff2a2929</KB_KEY_ACTIVEBORDER>
+		<!-- Text area text -->
+		<KB_KEY_TEXTCOLOR>0xff2a2929</KB_KEY_TEXTCOLOR>
+		<!-- Text area -->
+		<KB_KEY_TEXTBACKCOLOR>0xffefcb49</KB_KEY_TEXTBACKCOLOR>
+		<!-- Text area border -->
+		<KB_KEY_TEXTBORDERCOLOR>0xff2a2929</KB_KEY_TEXTBORDERCOLOR>
 		<!-- Main menu -->
-		<MENU_TEXTCOLOR>0xffafb2ce</MENU_TEXTCOLOR>
-		<MENU_ACTIVETEXTCOLOR>0xffde8c86</MENU_ACTIVETEXTCOLOR>
+		<MENU_TEXTCOLOR>0xff979797</MENU_TEXTCOLOR>
+		<MENU_ACTIVETEXTCOLOR>0xff4974a5</MENU_ACTIVETEXTCOLOR>
 		<MENU_BORDERCOLOR>0x00000000</MENU_BORDERCOLOR>
 		<MENU_BACKCOLOR>0x00000000</MENU_BACKCOLOR>
 		<MENU_ACTIVEBACKCOLOR>0x00000000</MENU_ACTIVEBACKCOLOR>

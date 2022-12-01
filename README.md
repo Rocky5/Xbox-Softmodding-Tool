@@ -116,10 +116,6 @@ Power on using the eject button allows you to load an alternative dashboard.
 
 	
 ## 2. EEPROM
-### Enable virtual eeprom:
- - This option will enable the virtual eeprom. This will install a copy of your Xbox eeprom.bin to the HDD and use it instead of the onboard one.
-### Disable virtual eeprom:
- - This option will disable the virtual eeprom. Allowing you to edit the onboard one. ( not recommended to go modifying the eeprom if you don't know what you're doing )
 ### Backup EEPROM &amp; Xbox information:
  - This option will load my "Xbox Softmod Tool Kit" and backup the eeprom. You will be taken back to the NKPatcher Settings when complete.
 ### 2.1 Advanced Features

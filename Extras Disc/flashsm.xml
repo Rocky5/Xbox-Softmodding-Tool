@@ -58,14 +58,14 @@
 		</List>
 		<List Text="M8Plus" Sort="Off" Batch="False">
 			<List Text="M8Plus No Intro" Sort="Off" Batch="True">
-				<Item Action="MessageBox" arg1="M8Plus">This bios is simple and fast, but it does not support 128MB of Ram.</Item>
+				<Item Action="MessageBox" arg1="M8Plus">This bios is simple and fast, patched to support 128MB of Ram.</Item>
 				<Item Action="AskUser" arg1="Continue" arg2="Would you like to use this Bios?"/>
 				<Item Action="Copy" arg1="D:\FlashSM\Prep\" arg2="E:\Prep\">Error Failed to copy Prep app</Item>
 				<Item Action="Copy" arg1="D:\FlashSM\bios\M8Plus_no_intro.bin" arg2="E:\Prep\C files\bios\bios.bin">Error Failed to copy M8Plus</Item>
 				<Item Action="E:\Prep\default.xbe">test</Item>
 			</List>
 			<List Text="M8Plus Stock Look" Sort="Off" Batch="True">
-				<Item Action="MessageBox" arg1="M8Plus">This bios is simple and fast, but it does not support 128MB of Ram.</Item>
+				<Item Action="MessageBox" arg1="M8Plus">This bios is simple and fast, patched to support 128MB of Ram.</Item>
 				<Item Action="AskUser" arg1="Continue" arg2="Would you like to use this Bios?"/>
 				<Item Action="Copy" arg1="D:\FlashSM\Prep\" arg2="E:\Prep\">Error Failed to copy Prep app</Item>
 				<Item Action="Copy" arg1="D:\FlashSM\bios\M8Plus_stock_look.bin" arg2="E:\Prep\C files\bios\bios.bin">Error Failed to copy M8Plus</Item>
@@ -90,5 +90,6 @@
 				<Item Action="E:\Prep\default.xbe">test</Item>
 			</List>
 		</List>
+		<Item Action="D:\Softmod\default.xbe">Back to Extras Disc</Item>
 	</Menu>
 </Unleashx>

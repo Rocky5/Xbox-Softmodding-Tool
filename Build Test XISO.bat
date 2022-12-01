@@ -6,7 +6,7 @@ if not exist "..\Other Stuff\dev.bin" Call :Download & Exit
 
 Set "SourceDirectory=Extras Disc"
 Set "OutputISOName=Xbox Softmodding Tool Extras Disc.iso"
-Set "FolderToMove=Other"
+Set "FolderToMove=dashboards"
 
 Echo  About to create an Xbox ISO.
 Echo:

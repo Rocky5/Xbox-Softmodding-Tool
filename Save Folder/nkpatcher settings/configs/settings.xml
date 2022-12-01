@@ -126,31 +126,31 @@
 
 		<List Text="2. EEPROM" Sort="Off">
 			<List Text="EEPROM Information" Sort="Off" Batch="True">
-				<Item Action="MessageBox" Arg1="Information">This is used to protect users from toying with there EEPROM. I don't use this by default because it causes issues when trying to change a PAL/NTSC Xbox to NTSC/PAL. But it's here if you really want to use it.</Item>
+				<Item Action="MessageBox" Arg1="Information">Options for change some EEPROM system settings.</Item>
 			</List>
 			<Item></Item>
-			<List Text="Enable Virtual EEPROM" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\enabled.png">
-				<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.pn">Please disable the virtual eeprom. The "Virtual EEPROM" is write protected until it's disable and the system has restarted</Item>
-				<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.pn" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.png"/>
-				<Item Action="MessageBox" Arg1="Complete">To install the Virtual EEPROM. \nI will need to exit nkpatcher settings. \nNote: Changes will take affect on next boot.</Item>
-				<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox Softmod Tool Kit\dummy_file" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox softmod tool kit\Virtual_EEPROM_Backup.bin"/>
-				<Item Action="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox softmod tool kit\default.xbe">Xbox softmod tool kit</Item>
-			</List>
-			<List Text="Disable Virtual EEPROM" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.png">
-				<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\enabled.pn">Please enable the virtual eeprom</Item>
-				<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\enabled.pn" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\enabled.png"/>
-				<List>
-					<Item Action="AskUser" Arg1="Warning">This option has a mandatory restart. Would you like to continue? Note: NKPatcher Settings will reload after the reboot.</Item>
-					<Item Action="Copy" arg1="dummy" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom"/>
-					<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom"/>
-					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.png"/>
-					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox softmod tool kit\dummy_file" arg2="C:\nkpatcher\configs\EEPROM_off.bin"/>
-					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox softmod tool kit\dummy_file" arg2="E:\Prep\RNKP.bin"/>
-					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox softmod tool kit\dummy_file" arg2="E:\Prep\Virtual_EEPROM_Remove.bin"/>
-					<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox softmod tool kit\default.xbe" arg2="E:\Prep\default.xbe"/>
-					<Item Action="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\reboot xbe\default.xbe"/>
-				</List>
-			</List>
+			<!-- <List Text="Enable Virtual EEPROM" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\enabled.png"> -->
+				<!-- <Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.pn">Please disable the virtual eeprom. The "Virtual EEPROM" is write protected until it's disable and the system has restarted</Item> -->
+				<!-- <Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.pn" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.png"/> -->
+				<!-- <Item Action="MessageBox" Arg1="Complete">To install the Virtual EEPROM. \nI will need to exit nkpatcher settings. \nNote: Changes will take affect on next boot.</Item> -->
+				<!-- <Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox Softmod Tool Kit\dummy_file" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox softmod tool kit\Virtual_EEPROM_Backup.bin"/> -->
+				<!-- <Item Action="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox softmod tool kit\default.xbe">Xbox softmod tool kit</Item> -->
+			<!-- </List> -->
+			<!-- <List Text="Disable Virtual EEPROM" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.png"> -->
+				<!-- <Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\enabled.pn">Please enable the virtual eeprom</Item> -->
+				<!-- <Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\enabled.pn" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\enabled.png"/> -->
+				<!-- <List> -->
+					<!-- <Item Action="AskUser" Arg1="Warning">This option has a mandatory restart. Would you like to continue? Note: NKPatcher Settings will reload after the reboot.</Item> -->
+					<!-- <Item Action="Copy" arg1="dummy" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom"/> -->
+					<!-- <Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom"/> -->
+					<!-- <Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.png"/> -->
+					<!-- <Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox softmod tool kit\dummy_file" arg2="C:\nkpatcher\configs\EEPROM_off.bin"/> -->
+					<!-- <Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox softmod tool kit\dummy_file" arg2="E:\Prep\RNKP.bin"/> -->
+					<!-- <Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox softmod tool kit\dummy_file" arg2="E:\Prep\Virtual_EEPROM_Remove.bin"/> -->
+					<!-- <Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox softmod tool kit\default.xbe" arg2="E:\Prep\default.xbe"/> -->
+					<!-- <Item Action="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\reboot xbe\default.xbe"/> -->
+				<!-- </List> -->
+			<!-- </List> -->
 			<List Text="Backup EEPROM &amp; Xbox information" Sort="Off" Batch="True">
 				<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.pn">Please disable the virtual eeprom</Item>
 				<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.pn" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.png"/>
@@ -168,10 +168,12 @@
 					</List>
 					<Item></Item>
 					<List Text="Change EEPROM HDD Key" Sort="Off" Batch="True">
-						<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.pn">Please disable the virtual eeprom</Item>
-						<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.pn" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.png"/>
-						<Item Action="AskUser" Arg1="Disclaimer" arg2="This process will unlock your HDD, set the key to all 1s and then re-lock the HDD to the new key. Note: This is a fool proof process, but I cannot account for hardware faults or failure, so proceed at your own risk."/>
-						<Item Action="MessageBox" Arg1="Master Password">The Master Password will be set to:\nTEAMASSEMBLY\n\nNote: Not all hard drives allow setting the master password.</Item>
+						<!-- <Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.pn">Please disable the virtual eeprom</Item> -->
+						<!-- <Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.pn" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.png"/> -->
+						<Item Action="MessageBox" Arg1="Disclaimer">This process will unlock your HDD, set the key to all 1s and then re-lock the HDD to the new key. Note: This is a fool proof process, but I cannot account for hardware faults or failure, so proceed at your own risk.</Item>
+						<Item Action="MessageBox" Arg1="Warning">If you have already registered your xbox with the Insignia Setup Tool, do not change the HDD key. This will stop XBL from functioning until you restore the original HDD Key.</Item>
+						<Item Action="AskUser" Arg1="I Agree" arg2="I read the two previous menus and I understand\nwhat may happen if I continue.\n\nProceed?"/>
+						<Item Action="MessageBox" Arg1="Master Password">The Master Password will be set to:\nTEAMASSEMBLY\n\nNote: Not all hard drives allow setting the master password. You will need the HDD Key to unlock these drives.</Item>
 						<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox Softmod Tool Kit\dummy_file" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox softmod tool kit\NULL_HDD_Key.bin"/>
 						<Item Action="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox softmod tool kit\default.xbe">Xbox softmod tool kit</Item>
 					</List>
@@ -184,8 +186,8 @@
 					</List>
 					<Item></Item>
 					<List Text="Enable" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\psmode\enabled.png">
-						<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.pn">Please disable the virtual eeprom</Item>
-						<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.pn" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.png"/>
+						<!-- <Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.pn">Please disable the virtual eeprom</Item> -->
+						<!-- <Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.pn" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.png"/> -->
 						<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\psmode\disabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\psmode\disabled.pn">Please disable the persistent softmod fist</Item>
 						<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\psmode\disabled.pn" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\psmode\disabled.png"/>
 						<Item Action="AskUser" Arg1="Info">Are you sure you would like to enable the persistent softmod?</Item>
@@ -197,8 +199,8 @@
 						<Item Action="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox softmod tool kit\default.xbe">Xbox softmod tool kit</Item>
 					</List>
 					<List Text="Disable" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\psmode\disabled.png">
-						<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.pn">Please disable the virtual eeprom</Item>
-						<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.pn" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.png"/>
+						<!-- <Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.pn">Please disable the virtual eeprom</Item> -->
+						<!-- <Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.pn" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.png"/> -->
 						<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\psmode\enabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\psmode\enabled.pn">Please enable the persistent softmod fist</Item>
 						<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\psmode\enabled.pn" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\psmode\enabled.png"/>
 						<Item Action="AskUser" Arg1="Info">Are you sure you would like to disable the persistent softmod?</Item>
@@ -216,8 +218,8 @@
 					</List>
 					<Item></Item>
 					<List Text="English" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\syslang\eng_enabled.png">
-						<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.pn">Please disable the virtual eeprom</Item>
-						<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.pn" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.png"/>
+						<!-- <Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.pn">Please disable the virtual eeprom</Item> -->
+						<!-- <Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.pn" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.png"/> -->
 						<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\psmode\disabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\psmode\disabled.pn">Please disable the persistent softmod fist</Item>
 						<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\psmode\disabled.pn" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\psmode\disabled.png"/>
 						<Item Action="AskUser" Arg1="Info">Are you sure you would like to change your language to English?</Item>
@@ -229,8 +231,8 @@
 						<Item Action="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox softmod tool kit\default.xbe">Xbox softmod tool kit</Item>
 					</List>
 					<List Text="Japanese" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\syslang\Jap_enabled.png">
-						<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.pn">Please disable the virtual eeprom</Item>
-						<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.pn" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.png"/>
+						<!-- <Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.pn">Please disable the virtual eeprom</Item> -->
+						<!-- <Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.pn" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.png"/> -->
 						<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\psmode\disabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\psmode\disabled.pn">Please disable the persistent softmod fist</Item>
 						<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\psmode\disabled.pn" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\psmode\disabled.png"/>
 						<Item Action="AskUser" Arg1="Info">Are you sure you would like to change your language to Japanese?</Item>
@@ -242,8 +244,8 @@
 						<Item Action="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox softmod tool kit\default.xbe">Xbox softmod tool kit</Item>
 					</List>
 					<List Text="German" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\syslang\Ger_enabled.png">
-						<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.pn">Please disable the virtual eeprom</Item>
-						<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.pn" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.png"/>
+						<!-- <Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.pn">Please disable the virtual eeprom</Item> -->
+						<!-- <Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.pn" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.png"/> -->
 						<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\psmode\disabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\psmode\disabled.pn">Please disable the persistent softmod fist</Item>
 						<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\psmode\disabled.pn" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\psmode\disabled.png"/>
 						<Item Action="AskUser" Arg1="Info">Are you sure you would like to change your language to German?</Item>
@@ -255,8 +257,8 @@
 						<Item Action="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox softmod tool kit\default.xbe">Xbox softmod tool kit</Item>
 					</List>
 					<List Text="French" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\syslang\Fre_enabled.png">
-						<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.pn">Please disable the virtual eeprom</Item>
-						<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.pn" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.png"/>
+						<!-- <Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.pn">Please disable the virtual eeprom</Item> -->
+						<!-- <Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.pn" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.png"/> -->
 						<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\psmode\disabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\psmode\disabled.pn">Please disable the persistent softmod fist</Item>
 						<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\psmode\disabled.pn" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\psmode\disabled.png"/>
 						<Item Action="AskUser" Arg1="Info">Are you sure you would like to change your language to French?</Item>
@@ -268,8 +270,8 @@
 						<Item Action="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox softmod tool kit\default.xbe">Xbox softmod tool kit</Item>
 					</List>
 					<List Text="Spanish" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\syslang\Spa_enabled.png">
-						<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.pn">Please disable the virtual eeprom</Item>
-						<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.pn" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.png"/>
+						<!-- <Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.pn">Please disable the virtual eeprom</Item> -->
+						<!-- <Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.pn" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.png"/> -->
 						<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\psmode\disabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\psmode\disabled.pn">Please disable the persistent softmod fist</Item>
 						<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\psmode\disabled.pn" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\psmode\disabled.png"/>
 						<Item Action="AskUser" Arg1="Info">Are you sure you would like to change your language to Spanish?</Item>
@@ -281,8 +283,8 @@
 						<Item Action="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox softmod tool kit\default.xbe">Xbox softmod tool kit</Item>
 					</List>
 					<List Text="Italian" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\syslang\Ita_enabled.png">
-						<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.pn">Please disable the virtual eeprom</Item>
-						<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.pn" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.png"/>
+						<!-- <Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.pn">Please disable the virtual eeprom</Item> -->
+						<!-- <Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.pn" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.png"/> -->
 						<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\psmode\disabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\psmode\disabled.pn">Please disable the persistent softmod fist</Item>
 						<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\psmode\disabled.pn" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\psmode\disabled.png"/>
 						<Item Action="AskUser" Arg1="Info">Are you sure you would like to change your language to Italian?</Item>
@@ -294,8 +296,8 @@
 						<Item Action="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox softmod tool kit\default.xbe">Xbox softmod tool kit</Item>
 					</List>
 					<List Text="Korean" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\syslang\Kor_enabled.png">
-						<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.pn">Please disable the virtual eeprom</Item>
-						<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.pn" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.png"/>
+						<!-- <Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.pn">Please disable the virtual eeprom</Item> -->
+						<!-- <Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.pn" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.png"/> -->
 						<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\psmode\disabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\psmode\disabled.pn">Please disable the persistent softmod fist</Item>
 						<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\psmode\disabled.pn" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\psmode\disabled.png"/>
 						<Item Action="AskUser" Arg1="Info">Are you sure you would like to change your language to Korean?</Item>
@@ -307,8 +309,8 @@
 						<Item Action="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox softmod tool kit\default.xbe">Xbox softmod tool kit</Item>
 					</List>
 					<List Text="Chinese" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\syslang\Chi_enabled.png">
-						<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.pn">Please disable the virtual eeprom</Item>
-						<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.pn" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.png"/>
+						<!-- <Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.pn">Please disable the virtual eeprom</Item> -->
+						<!-- <Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.pn" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.png"/> -->
 						<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\psmode\disabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\psmode\disabled.pn">Please disable the persistent softmod fist</Item>
 						<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\psmode\disabled.pn" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\psmode\disabled.png"/>
 						<Item Action="AskUser" Arg1="Info">Are you sure you would like to change your language to Chinese?</Item>
@@ -320,8 +322,8 @@
 						<Item Action="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox softmod tool kit\default.xbe">Xbox softmod tool kit</Item>
 					</List>
 					<List Text="Portuguese" Sort="Off" Batch="True" Icon="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\syslang\Por_enabled.png">
-						<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.pn">Please disable the virtual eeprom</Item>
-						<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.pn" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.png"/>
+						<!-- <Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.pn">Please disable the virtual eeprom</Item> -->
+						<!-- <Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.pn" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.png"/> -->
 						<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\psmode\disabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\psmode\disabled.pn">Please disable the persistent softmod fist</Item>
 						<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\psmode\disabled.pn" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\psmode\disabled.png"/>
 						<Item Action="AskUser" Arg1="Info">Are you sure you would like to change your language to Portuguese?</Item>
@@ -339,15 +341,15 @@
 					</List>
 					<Item></Item>
 					<List Text="Set Video to NTSC" Sort="Off" Batch="True">
-						<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.pn">Please disable the virtual eeprom</Item>
-						<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.pn" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.png"/>
+						<!-- <Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.pn">Please disable the virtual eeprom</Item> -->
+						<!-- <Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.pn" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.png"/> -->
 						<Item Action="AskUser" Arg1="Warning">This option has a mandatory restart. Would you like to continue? Note: NKPatcher Settings will reload after the reboot.</Item>
 						<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox Softmod Tool Kit\dummy_file" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox softmod tool kit\NTSC.bin"/>
 						<Item Action="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox softmod tool kit\default.xbe">Xbox softmod tool kit</Item>
 					</List>
 					<List Text="Set Video to PAL" Sort="Off" Batch="True">
-						<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.pn">Please disable the virtual eeprom</Item>
-						<Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.pn" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.png"/>
+						<!-- <Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.png" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.pn">Please disable the virtual eeprom</Item> -->
+						<!-- <Item Action="Rename" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.pn" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\toggles\veeprom\disabled.png"/> -->
 						<Item Action="AskUser" Arg1="Warning">This option has a mandatory restart. Would you like to continue? Note: NKPatcher Settings will reload after the reboot.</Item>
 						<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox Softmod Tool Kit\dummy_file" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox softmod tool kit\PAL.bin"/>
 						<Item Action="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox softmod tool kit\default.xbe">Xbox softmod tool kit</Item>
@@ -362,6 +364,8 @@
 					<Item Action="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox softmod tool kit\default.xbe">Xbox softmod tool kit</Item>
 				</List>
 			</List>
+			<Item></Item>
+			<Item></Item>
 			<Item></Item>
 			<Item></Item>
 			<Item></Item>

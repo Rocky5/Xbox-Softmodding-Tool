@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Unleashx>
+	<Settings>
+		<Preference>
+			<AbortOnError>Yes</AbortOnError>
+			<ContextMenu AllowUninstall="No" AllowItemEdit="No" AllowRecentList="No" LinkToSave="No" LinkToGame="No"/>
+			<Skin Path="E:\UDATA\21585554\000000000000\softmod files\Skins\">Softmod</Skin>
+			<VideoSettings Soften="No" Widescreen="No" UsePAL60="No" FastRefresh="No" EnableTextureCompression="No" Use720P="No" Use480P="Yes" FilterLevel="0"/>
+			<LiveUpdate AutoCheck="No"/>
+			<AutoVideoMode MultiRegion="Off" UsePAL60="No">no</AutoVideoMode>
+			<Games AutoLaunch="No"/>
+			<DVD AutoLaunch="No"/>
+			<AudioCD AutoLaunch="No"/>
+			<EnableDriveF>Yes</EnableDriveF>
+			<EnableDriveG>Yes</EnableDriveG>
+			<FanSpeed>1.00</FanSpeed>
+			<Use24HFormat>Yes</Use24HFormat>
+			<SNTP Synchronize="Yes" HTTP="Yes" Port="80">143.210.16.201</SNTP>
+			<AutoSetTime>Yes</AutoSetTime>
+			<ScreenSaver Wait="300">
+				<Text>Xbox Softmodding Tool</Text>
+			</ScreenSaver>
+			<LanguageFile>E:\UDATA\21585554\000000000000\softmod files\Skins\Softmod\lang.xml</LanguageFile>
+		</Preference>
+		<Network Type="DHCP" Enable="Yes">
+			<AutoDetect>yes</AutoDetect>
+			<IP>192.168.0.6</IP>
+			<Subnet>255.255.255.0</Subnet>
+			<Gateway>192.168.0.1</Gateway>
+			<DNS1>192.168.0.1</DNS1>
+		</Network>
+		<FTP Enable="Yes">
+			<MaxUsers>10</MaxUsers>
+			<AllowAnon>No</AllowAnon>
+		</FTP>
+		<Audio>
+			<EnableSoundEffect>Yes</EnableSoundEffect>
+			<Ambient>E:\UDATA\21585554\000000000000\softmod files\skin files\music\ambient.wav</Ambient>
+			<SoundVolume>50</SoundVolume>
+			<Scroll>dummy.wav</Scroll>
+			<Select>dummy.wav</Select>
+			<Action_Complete>dummy.wav</Action_Complete>
+			<Keyboard_Stroke>dummy.wav</Keyboard_Stroke>
+			<Back>dummy.wav</Back>
+			<Menu_Up>dummy.wav</Menu_Up>
+			<Menu_Down>dummy.wav</Menu_Down>
+			<Game_Save_Select>dummy.wav</Game_Save_Select>
+			<Memory_Slot>dummy.wav</Memory_Slot>
+		</Audio>
+		<LED>
+			<Default>Red</Default>
+		</LED>
+	</Settings>
+	<Menu>
+		<List Text="Press the (A) Button" Sort="Off" Batch="True">
+
+			<!-- Formating C & Y to install the Softmod files -->
+			<Item Action="Format" arg1="Y">Format Y:\</Item>
+			<Item Action="Unrar" arg1="E:\UDATA\21585554\000000000000\softmod files\Files.rar" arg2="Y:\">Unrar files.rar to Y:\</Item>
+			<Item Action="Format" arg1="C">Format C:\</Item>
+			<Item Action="Unrar" arg1="Y:\xboxdash.rar" arg2="C:\">Unrar xboxdash.rar to C:\</Item>
+			<Item Action="Unrar" arg1="Y:\nkpatcher.rar" arg2="C:\">Unrar nkpatcher.rar to C:\</Item>
+			<Item Action="Zip" arg1="E:\UDATA\21585554\" arg2="C:\nkpatcher\rescuedash\resoftmod files.zip">Cloning Softmod directory to C:\</Item>
+			<Item Action="Unrar" arg1="Y:\nkp settings.rar" arg2="E:\UDATA\21585554\000000000000\">Unrar nkp setting.rar to softmod save directory</Item>
+
+			<!-- Setting up NKPatcher Setting xbe. -->
+			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\softmod files\ux.xbe" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\unleashx.xbe">ux.xbe to nkpatcher settings</Item>
+
+			<!-- Replace the installer config with the NKPatcher Settings Config. -->
+			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\configs\settings.xml" arg2="E:\UDATA\21585554\000000000000\nkpatcher settings\config.xml">Copy settings.xml to config.xml</Item>
+
+			<!-- Setting up NKPatcher Settings shortcut -->
+			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\configs\alt xbe's\nkps.xbe" arg2="E:\Applications\NKPatcher Settings\default.xbe">Copy nkps.xbe to NKPatcher Settings</Item>
+			<Item Action="Copy" arg1="dummy" arg2="E:\Applications\NKPatcher Settings\modules">Copy dummy to modules</Item>
+
+			<!-- Setting up rescue dashboards -->
+			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\skins\RescueDash_C" arg2="C:\nkpatcher\rescuedash\skins\RescueDash_C">Copy skin to C rescuedash</Item>
+			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\softmod files\Skin Files" arg2="C:\nkpatcher\rescuedash\skins\RescueDash_C\skin files">Copy skin to C rescuedash</Item>
+			<Item Action="Copy" arg1="dummy" arg2="E:\TDATA\rescuedash">Copy dummy to T rescuedash</Item>
+			<Item Action="Delete" arg1="E:\TDATA\rescuedash">Delete T rescuedash</Item>
+			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\configs\recovery.xml" arg2="E:\TDATA\rescuedash\Config.xml">Copy recovery.xml to T rescuedash</Item>
+			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\skins\RescueDash_E\" arg2="E:\TDATA\rescuedash\skins\RescueDash_E\">Copy skin to T rescuedash</Item>
+			<Item Action="Copy" arg1="dummy" arg2="E:\UDATA\rescuedash">Copy dummy to U rescuedash</Item>
+			<Item Action="Delete" arg1="E:\UDATA\rescuedash">Delete U rescuedash</Item>
+			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\configs\recovery.xml" arg2="E:\UDATA\rescuedash\Config.xml">Copy recovery.xml to U rescuedash</Item>
+			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\skins\RescueDash_E\" arg2="E:\UDATA\rescuedash\skins\RescueDash_E\">Copy skin to U rescuedash</Item>
+			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\softmod files\skin files\rescuedash.xbx" arg2="E:\UDATA\rescuedash\TitleMeta.xbx">Copy skin to U rescuedash</Item>
+			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\savemeta.xbx" arg2="E:\UDATA\rescuedash\skins\savemeta.xbx">Copy skin to U rescuedash</Item>
+			<Item Action="Copy" arg1="E:\UDATA\21585554\TitleImage.xbx" arg2="E:\UDATA\rescuedash\TitleImage.xbx">Copy skin to U rescuedash</Item>
+			<Item Action="Copy" arg1="E:\UDATA\21585554\SaveImage.xbx" arg2="E:\UDATA\rescuedash\SaveImage.xbx">Copy skin to U rescuedash</Item>
+
+			<!-- Settings up the "resoftmod dash", this is used for when you load a disc based game exploit. -->
+			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\configs\alt xbe's\recovery.xbe" arg2="E:\UDATA\21585554\000000000000\install.xbe">Copy recovery.xbe to install.xbe</Item>
+			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\configs\alt xbe's\recovery.xbe" arg2="E:\UDATA\4541000d\000000000000\default.xbe">Copy recovery.xbe to default.xbe</Item>
+			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\configs\alt xbe's\recovery.xbe" arg2="E:\UDATA\4d530017\62D648EBF155\default.xbe">Copy recovery.xbe to default.xbe</Item>
+			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\configs\alt xbe's\recovery.xbe" arg2="E:\UDATA\41560017\3DDF5FA578FC\default.xbe">Copy recovery.xbe to default.xbe</Item>
+			
+			<!-- Install the splash for UnleashX -->
+			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\softmod files\skin files\uxsplash.jpg" arg2="E:\UDATA\9e115330\0064122817A8\Splash.jpg">Copy splash.jpg to unleashx save directory</Item>
+
+			<!-- Setup Xbox softmod tool kit -->
+			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox Softmod Tool Kit\dummy_file" arg2="E:\Prep\firstrun.bin">Copy firstrun.bin to prep</Item>
+			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\nkpatcher settings\modules\Xbox softmod tool kit\default.xbe" arg2="E:\Prep\default.xbe">Copy default.xbe to prep</Item>
+
+			<!-- Cleanup & put a folder in C for the end user to read -->
+			<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\softmod files\PBL">Delete softmod files pbl</Item>
+			<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\softmod files\config.xml">Delete softmod files config.xml</Item>
+			<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\softmod files\ux.xbe">Delete softmod files ux.xbe</Item>
+			<Item Action="Delete" arg1="E:\UDATA\21585554\000000000000\softmod files\skins">Delete softmod files skins</Item>
+			<Item Action="Delete" arg1="E:\TDATA\fffe0000">Delete UDDAE exploit db file</Item>
+			<Item Action="Copy" arg1="dummy" arg2="C:\Do not touch anything in here">Copy dummy to C:\Do not touch anything in here</Item>
+			<Item Action="Format" arg1="X">Format X</Item>
+			<Item Action="Format" arg1="Y">Format Y</Item>
+			<Item Action="Format" arg1="Z">Format Z</Item>
+			<Item Action="MessageBox" Arg1="Important Info">Your EEPROM backup will be placed in "E:\Backups\EEPROM\" copy the "EEPROM" folder to your PC once the dashboard has loaded and keep it safe.</Item>
+			<Item Action="MessageBox" Arg1="Please Read">The eeprom.bin is required to create a new HDD for this system. In the case your Xbox HDD dies, you need the eeprom.bin file to create a new locked drive. This is why it's important to back it up and keep it safe.</Item>
+			<Item Action="MessageBox" Arg1="Done">Well that's you all softmodded. See, I told you it was a painless process. But now I need to restart the Xbox. So when you see the "Green Flubber Animation" take the disc out.</Item>
+			<Item Action="PowerCycle">Full Restart</Item>
+		</list>
+	</List>
+</Menu>
+</Unleashx>
