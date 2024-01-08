@@ -2,7 +2,7 @@
 	<Information>
 		<Author>Rocky5</Author>
 		<Copyright>Xbox</Copyright>
-		<Version>1.1.9</Version>
+		<Version>1.2.0</Version>
 	</Information>
 	<Fonts>
 		<Font Name="font1">fonts\font1.xpr</Font>
