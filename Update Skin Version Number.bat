@@ -22,6 +22,7 @@ Set "Skin17=%CD%\Installer Variants\XBHDM Build\C\installer\skins\Softmod"
 Set "Skin18=%CD%\Installer Variants\Quick Upgrade\Quick Upgrade\skins\Softmod"
 Set "Skin19=%CD%\Installer Variants\Quick Update\Quick Update\skins\Softmod"
 Set "Skin20=%CD%\Installer Variants\UDDAE\resoftmod dash\skins\ReSoftmod Dash"
+Set "Skin21=%CD%\Endgame\payload zip\skins\Softmod"
 
 Set "BuildFileLocation=%CD%\Other"
 
@@ -38,6 +39,7 @@ If "%replace%"=="" CLS & Echo: & Echo Current Build Version = %old_version% & Ec
 
 if not exist "Other\Tools\repl.bat" exit
 Call Other\Tools\repl.bat "%old_version%" "%replace%" L < "%BuildFileLocation%\Build Version.txt" >"%BuildFileLocation%\tmp.txt" & Del "%BuildFileLocation%\Build Version.txt" & rename "%BuildFileLocation%\tmp.txt" "Build Version.txt"
+Call Other\Tools\repl.bat "%old_version%" "%replace%" L < "%CD%\README.md" >"%CD%\tmp.txt" & Del "%CD%\README.md" & rename "%CD%\tmp.txt" "README.md"
 Call Other\Tools\repl.bat "<Version>%old_version%</Version>" "<Version>%replace%</Version>" L < "%Skin1%\skin.xml" >"%Skin1%\tmp.xml" & Del "%Skin1%\skin.xml" & rename "%Skin1%\tmp.xml" "skin.xml"
 Call Other\Tools\repl.bat "<Version>%old_version%</Version>" "<Version>%replace%</Version>" L < "%Skin1%\skinwide.xml" >"%Skin1%\tmp.xml" & Del "%Skin1%\skinwide.xml" & rename "%Skin1%\tmp.xml" "skinwide.xml"
 Call Other\Tools\repl.bat "<Version>%old_version%</Version>" "<Version>%replace%</Version>" L < "%Skin1%\skinevox.xml" >"%Skin1%\tmp.xml" & Del "%Skin1%\skinevox.xml" & rename "%Skin1%\tmp.xml" "skinevox.xml"
@@ -60,6 +62,7 @@ Call Other\Tools\repl.bat "<Version>%old_version%</Version>" "<Version>%replace%
 Call Other\Tools\repl.bat "<Version>%old_version%</Version>" "<Version>%replace%</Version>" L < "%Skin18%\skin.xml" >"%Skin18%\tmp.xml" & Del "%Skin18%\skin.xml" & rename "%Skin18%\tmp.xml" "skin.xml"
 Call Other\Tools\repl.bat "<Version>%old_version%</Version>" "<Version>%replace%</Version>" L < "%Skin19%\skin.xml" >"%Skin19%\tmp.xml" & Del "%Skin19%\skin.xml" & rename "%Skin19%\tmp.xml" "skin.xml"
 Call Other\Tools\repl.bat "<Version>%old_version%</Version>" "<Version>%replace%</Version>" L < "%Skin20%\skin.xml" >"%Skin20%\tmp.xml" & Del "%Skin20%\skin.xml" & rename "%Skin20%\tmp.xml" "skin.xml"
+Call Other\Tools\repl.bat "<Version>%old_version%</Version>" "<Version>%replace%</Version>" L < "%Skin21%\skin.xml" >"%Skin21%\tmp.xml" & Del "%Skin21%\skin.xml" & rename "%Skin21%\tmp.xml" "skin.xml"
 
 Call Other\Tools\repl.bat "Xbox Softmodding Tool v%old_version%" "Xbox Softmodding Tool v%replace%" L < "README.md" >"tmp.txt" & Del "README.md" & rename "tmp.txt" "README.md"
 Call Other\Tools\repl.bat "Xbox Softmodding Tool v%old_version%" "Xbox Softmodding Tool v%replace%" L < "Changes.txt" >"tmp.txt" & Del "Changes.txt" & rename "tmp.txt" "Changes.txt"

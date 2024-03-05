@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Unleashx>
+	<Settings>
+		<Preference>
+			<AbortOnError>Yes</AbortOnError>
+			<ContextMenu AllowUninstall="No" AllowItemEdit="No" AllowRecentList="No" LinkToSave="No" LinkToGame="No"/>
+			<Skin Path="E:\CACHE">Softmod</Skin>
+			<VideoSettings Soften="No" Widescreen="No" UsePAL60="No" FastRefresh="No" EnableTextureCompression="No" Use720P="No" Use480P="Yes" FilterLevel="0"/>
+			<LiveUpdate AutoCheck="No"/>
+			<AutoVideoMode MultiRegion="Off" UsePAL60="No">no</AutoVideoMode>
+			<Games AutoLaunch="No"/>
+			<DVD AutoLaunch="No"/>
+			<AudioCD AutoLaunch="No"/>
+			<EnableDriveF>Yes</EnableDriveF>
+			<EnableDriveG>Yes</EnableDriveG>
+			<FanSpeed>1.00</FanSpeed>
+			<Use24HFormat>Yes</Use24HFormat>
+			<SNTP Synchronize="Yes" HTTP="Yes" Port="80">143.210.16.201</SNTP>
+			<AutoSetTime>Yes</AutoSetTime>
+			<ScreenSaver Wait="300">
+				<Text>Xbox Softmodding Tool</Text>
+			</ScreenSaver>
+		</Preference>
+		<Network Type="DHCP" Enable="Yes">
+			<AutoDetect>yes</AutoDetect>
+			<IP>192.168.0.6</IP>
+			<Subnet>255.255.255.0</Subnet>
+			<Gateway>192.168.0.1</Gateway>
+			<DNS1>192.168.0.1</DNS1>
+		</Network>
+		<FTP Enable="Yes">
+			<MaxUsers>10</MaxUsers>
+			<AllowAnon>No</AllowAnon>
+		</FTP>
+		<LED>
+			<Default>Red</Default>
+		</LED>
+	</Settings>
+	<Menu>
+		<List Text="Press (A) to Run Installer" Sort="Off" Batch="True">
+			<Item Action="Unrar" arg1="E:\CACHE\payload.zip" arg2="E:\UDATA\">Unrar payload.zip to E:\UDATA\</Item>
+			<Item Action="Copy" arg1="E:\CACHE\unleashx.xbe" arg2="E:\UDATA\21585554\000000000000\softmod files\UX.xbe">Copy unleashx.xbe to save folder</Item>
+			<Item Action="Copy" arg1="E:\CACHE\bios.bfm" arg2="E:\UDATA\21585554\000000000000\softmod files\pbl\">Copy bios.bfm to save folder</Item>
+			<Item Action="Copy" arg1="E:\CACHE\boot.cfg" arg2="E:\UDATA\21585554\000000000000\softmod files\pbl\">Copy boot.cfg to save folder</Item>
+			<Item Action="Copy" arg1="E:\CACHE\loader.xbe" arg2="E:\UDATA\21585554\000000000000\softmod files\pbl\">Copy loader.xbe to save folder</Item>
+			<Item Action="Copy" arg1="E:\UDATA\21585554\000000000000\softmod files\skin files\UXSplash.jpg" arg2="E:\UDATA\9e115330\0064122817A8\Splash.jpg">Copy Splash.jpg to UX save folder</Item>
+			<Item Action="Delete" arg1="E:\payload.xbe">Delete payload.xbe failed</Item>
+			<Item Action="Delete" arg1="E:\CACHE">Delete CACHE folder failed</Item>
+			<Item Action="Format" arg1="Y">Format Y:\</Item>
+			<Item Action="Format" arg1="X">Format X:\</Item>
+			<Item Action="Format" arg1="Z">Format Z:\</Item>
+			<Item Action="E:\UDATA\21585554\000000000000\install.xbe">Run Installer xbe</Item>
+		</list>
+	</list>
+</Menu>
+</Unleashx>

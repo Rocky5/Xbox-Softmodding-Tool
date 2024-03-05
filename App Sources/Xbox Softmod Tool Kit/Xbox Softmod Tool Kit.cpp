@@ -2026,6 +2026,43 @@ char* ConfigMagicApp::CheckMD5 (struct Bios *Listone, char *Sign)
 	return ("Unknown");
 }
 
+BOOL DeleteDirectory(const TCHAR* sPath)  
+{  
+    HANDLE hFind; // file handle
+    WIN32_FIND_DATA FindFileData;
+
+    TCHAR DirPath[MAX_PATH];
+    TCHAR FileName[MAX_PATH];
+
+    _tcscpy(DirPath,sPath);
+    _tcscat(DirPath,_T("\\"));
+    _tcscpy(FileName,sPath);
+    _tcscat(FileName,_T("\\*")); // searching all files
+    int nRet = 0;
+    hFind = FindFirstFile(FileName, &FindFileData); // find the first file
+    if( hFind != INVALID_HANDLE_VALUE ) 
+    {
+        do
+        {
+            _tcscpy(FileName + _tcslen(DirPath), FindFileData.cFileName);
+            if((FindFileData.dwFileAttributes & FILE_ATTRIBUTE_DIRECTORY)) 
+            {
+                // we have found a directory, recurse
+                if( !DeleteDirectory(FileName) )
+                break;   // directory couldn't be deleted
+            }
+            else 
+            {
+                if( !DeleteFile(FileName) ) 
+                break;  // file couldn't be deleted
+            }
+        }
+		while( FindNextFile(hFind, &FindFileData) );
+		nRet = FindClose(hFind); // closing file handle
+    }
+    return RemoveDirectory(sPath); // remove the empty (maybe not) directory and returns zero when RemoveDirectory function fails
+}
+
 int ConfigMagicApp::file_exist(const char *name)
 {
   struct stat   buffer;

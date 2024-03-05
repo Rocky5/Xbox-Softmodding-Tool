@@ -1,5 +1,5 @@
 ![Thumb](/Other/Graphics/banner.png)
-## Current release v1.2.0
+## Current release v1.2.1
 
 ##  Background:
 
@@ -29,6 +29,7 @@ I set out to try and make the softmodding process as pain free and user friendly
 ### Main Features:
 
  * Supports all Xbox versions
+ * Using the new Endgame exploit [Endgame Github](https://github.com/XboxDev/endgame-exploit) - [Softmod Installer Endgame Github](https://github.com/Rocky5/endgame-exploit):
  * Supports all currently exploitable games including the new Tony Hawks Pro Skater 4
  * Obviously runs unsigned code
  * Doesn't require a certain Microsoft Dashboard version

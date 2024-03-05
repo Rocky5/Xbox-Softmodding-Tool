@@ -15,7 +15,6 @@
 	captionfont
 	infotextfont
 	infofont
-	SmallFont
 	smallfont
 	menufont
 

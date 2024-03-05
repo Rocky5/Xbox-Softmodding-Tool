@@ -1,8 +1,19 @@
 ========================================= 
 	Change Log
-	Xbox Softmodding Tool v1.2.0
+	Xbox Softmodding Tool v1.2.1
 	Created by Rocky5
 =========================================
+
+=========================================
+	Update: March 5 2024
+=========================================
+		Updated the installer to use the new Endgame exploit.
+		(
+			https://github.com/XboxDev/endgame-exploit
+			Big shout out to Markus Gaasedelen & shutterbug2000 without these two there would be no Endgame.
+		)
+		Legacy saves are still present.
+		(Under the legacy folder)
 
 =========================================
 	Update: Jan 8 2024
