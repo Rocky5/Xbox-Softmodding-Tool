@@ -72,6 +72,7 @@ int LaunchShortcut(char* filename)
 	target[length] = '\0';
 	/* remove ES_File */
 	remove(ES_IGR);
+	Sleep(300);
 	/* launching xbe */
 	XLaunchXBE(target);
 	/* if we get here something went wrong */
@@ -142,8 +143,10 @@ int main(int argc,char* argv[])
 	}
 	// Sleep fixes screen resetting on some xbox.
 	Sleep(300);
+	
 	if (file_exist(ES_IGR))
 	LaunchShortcut(ES_IGR);
+	
 	int timer = 0;
 	while(timer++ <= 1000)
 	{

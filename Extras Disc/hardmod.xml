@@ -980,7 +980,7 @@
 						<Item Action="Unzip" arg1="dashboards\msdash\Other\Audio.zip" arg2="C:\"/>
 					</list>
 					<Item Action="Unzip" arg1="dashboards\msdash\retail\5960.zip" arg2="C:\"/>
-					<Item Action="Copy" arg1="C:\xboxdash.xbe" arg2="E:\Applications\MSDash\default.xbe">Copying C:\xboxdash.xbe</Item>
+					<Item Action="Copy" arg1="dashboards\msdash\Other\shortcut.xbe" arg2="E:\Applications\MSDash\default.xbe">Copying shortcut.xbe</Item>
 					<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="C:\xboxdashdata.185ead00\"/>
 					<Item Action="Format" arg1="Z"/>
 					<Item Action="MessageBox" arg1="Done">That's the MS Dashboard installed.</Item>
