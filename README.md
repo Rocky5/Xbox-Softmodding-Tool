@@ -1,5 +1,5 @@
 ![Thumb](/Other/Graphics/banner.png)
-## Current release v1.2.1
+## Current release v1.2.2
 
 ##  Background:
 

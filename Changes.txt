@@ -1,8 +1,14 @@
 ========================================= 
 	Change Log
-	Xbox Softmodding Tool v1.2.1
+	Xbox Softmodding Tool v1.2.2
 	Created by Rocky5
 =========================================
+
+=========================================
+	Update: August 5 2024
+=========================================
+		Dashloader update:
+			Natively dismount virtual disc drives
 
 =========================================
 	Update: March 5 2024

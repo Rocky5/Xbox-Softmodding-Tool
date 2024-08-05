@@ -16,10 +16,25 @@
 #include <fstream>
 #include <iostream>
 #include "shortcutxbe.h"
-#include "dismountxbe.h"
 #include "kernelpatcher.h"
-#define ES_IGR	"E:\\CACHE\\LocalCache20.bin"
-#define dashloader_Files_path	"C:\\Dashloader\\"
+#include "external.h"
+
+#define ES_IGR "E:\\CACHE\\LocalCache20.bin"
+#define Dashloader_Files_Path "C:\\Dashloader\\"
+#define Ind_Checker_File "E:\\CACHE\\LocalCache30.bin"
+#define Patcher_File "E:\\CACHE\\LocalCache40.bin"
+
+#define Patched_M8 ((char*)0x8002691E)
+#define Patched_Ind ((char*)0x8002B4B7)
+
+#define UNPatched_M8_1 ((char*)0x8002691B)
+#define UNPatched_M8_2 ((char*)0x8002691E)
+#define UNPatched_M8_3 ((char*)0x8002690E)
+
+#define UNPatched_Ind_1 ((char*)0x8002B4B5)
+#define UNPatched_Ind_2 ((char*)0x8002B4B7)
+#define UNPatched_Ind_3 ((char*)0x8002B4C7)
+
 static FILE* logfile = NULL;
 int file_exist(char *name)
 {
@@ -81,72 +96,96 @@ int LaunchShortcut(char* filename)
 /* initial starting point of program */
 int main(int argc,char* argv[])
 {
-	XMount("C:", "\\Device\\Harddisk0\\Partition2"); XMount("E:", "\\Device\\Harddisk0\\Partition1");
-	CreateDirectory(dashloader_Files_path, NULL);
+	XMount("C:", "\\Device\\Harddisk0\\Partition2");
+	XMount("E:", "\\Device\\Harddisk0\\Partition1");
+	CreateDirectory("E:\\CACHE", NULL);
+	CreateDirectory(Dashloader_Files_Path, NULL);
 	XInitDevices( 0, NULL );
 	if( FAILED( XBInput_CreateGamepads( &m_Gamepad ) ) )
 	{
 		debuglog("ERROR - Cant create gamepad");
 	}
-	logfile = fopen(dashloader_Files_path"Dashloader.log", "w+t");
-	debuglog("Dashloader Build 1.4.2\n");
+	logfile = fopen(Dashloader_Files_Path"Dashloader.log", "w+t");
+	debuglog("Dashloader Build 1.4.3\n");
 	// Ind-Bios 5003/M8+ with virtual disc loader patch		
-	if (!file_exist(dashloader_Files_path"Disable Virtual ISO Support.bin"))
+	if (!file_exist(Dashloader_Files_Path"Disable Virtual ISO Support.bin"))
 	{
-		int i;
-		char *patched_M8 = (char *)0x8002691E; // M8+
-		if (*patched_M8=='™')
-		debuglog("M8+ Detected and XISO support added\n");
-		char *patched_Ind = (char *)0x8002B4B7; // ind-biod 5003
-		if (*patched_Ind=='™')
+		// I check for these so I dont try and patch unsupported bios
+		if (*UNPatched_M8_1 == 'ì' && *UNPatched_M8_2 == ' ' && *UNPatched_M8_3 == 'ÿ' ||
+			*UNPatched_Ind_1 == 'ƒ' && *UNPatched_Ind_2 == ' ' && *UNPatched_Ind_3 == '€')
+		{
+			if (!file_exist(Patcher_File))
+			{
+				std::ofstream PatcherXBEFile(Patcher_File, std::ios::binary);
+				PatcherXBEFile.write(reinterpret_cast<const char*>(kernel_patcher), sizeof(kernel_patcher));
+			}
+			XLaunchXBE(Patcher_File);
+		}
+		remove(Patcher_File);
+		int patched = 0;
+		int legacy = 0;
+		if (*Patched_M8 == '™')
+		{
+			// M8+ doesnt work with quick IGR when a virtual disc is mounted
+			debuglog("M8+ Detected and XISO support added\n");
+			patched = 1;
+		}
+		if (*Patched_Ind == '™')
 		{
 			debuglog("Ind-Bios 5003 Detected and XISO support added\n");
-			XMount("D:", "\\Device\\Cdrom0"); XMount("VD:", "\\Device\\Cdrom1");
-			CreateDirectory("E:\\CACHE", NULL);
-			if (file_exist("VD:\\default.xbe"))
+			patched = 1;
+			legacy = 1;
+ 			if (!file_exist(Ind_Checker_File))
 			{
-				if (!file_exist("E:\\CACHE\\LocalCache30.bin"))
-				{
-					debuglog("Creating De-mounter");
-					std::ofstream DismountXBEFile("E:\\CACHE\\LocalCache30.bin", std::ios::binary);
-					for(i = 0; i < sizeof(dismount_xbe); i++)
-					{
-						DismountXBEFile << dismount_xbe[i];
-					}
-					DismountXBEFile.close();
-					XLaunchXBE("D:\\default.xbe");
-				}
-				if (!file_exist(dashloader_Files_path"Disabled Virtual-ISO Dismount.bin"))
-				{
-					debuglog("Unmounting Virtual Drive");
-					XLaunchXBE("E:\\CACHE\\LocalCache30.bin");
-				}
+				// Creating blank file so I know not to keep reloading the game over and over. This wouldn't be required if I didn't need to manually load the disc for indbios
+				std::ofstream blankFile(Ind_Checker_File, std::ios::binary);
+				blankFile.close();
+				
+				// This is so we can exit the game when we IGR. If we don't it does what M8+ does.
+				// If using cerbios new attacher xbe you will need to IGR twice.
+				XLaunchXBE("D:\\default.xbe");
 			}
-			remove("E:\\CACHE\\LocalCache30.bin");
+			remove(Ind_Checker_File);
 		}
-		// Check for characters at these offsets so I know to patch it.
-		char *unpatched_M8_1 = (char *)0x8002691B; char *unpatched_M8_2 = (char *)0x8002691E; char *unpatched_M8_3 = (char *)0x8002690E;
-		char *unpatched_Ind_1 = (char *)0x8002B4B5; char *unpatched_Ind_2 = (char *)0x8002B4B7; char *unpatched_Ind_3 = (char *)0x8002B4C7;
-		if (*unpatched_M8_1=='ì' && *unpatched_M8_2==' ' && *unpatched_M8_3=='ÿ' || *unpatched_Ind_1=='ƒ' && *unpatched_Ind_2==' ' && *unpatched_Ind_3=='€')
+		// Dismount virtual disc drive if present and if not disabled
+		// loggin is disbaled for this as it will populate even if there is no disc and if I add a check for a disc it would populate every time you load a disc and IGR. (Cerbios only)
+		if (!file_exist(Dashloader_Files_Path"Disabled Virtual-ISO Dismount.bin"))
 		{
-			if (!file_exist("E:\\CACHE\\LocalCache40.bin"))
+			// debuglog("Unmounting: Virtual Drive\n");
+			HANDLE h;
+			NTSTATUS status;
+			ANSI_STRING dev_name;
+			if (legacy)
 			{
-				std::ofstream PatcherXBEFile("E:\\CACHE\\LocalCache40.bin", std::ios::binary);
-				for(i = 0; i < sizeof(kernel_patcher); i++)
-				{
-					PatcherXBEFile << kernel_patcher[i];
-				}
-				PatcherXBEFile.close();
+				RtlInitAnsiString(&dev_name, "\\Device\\CdRom1");
+				// debuglog("\t> Found NKPatcher virtual drive");
 			}
-			XLaunchXBE("E:\\CACHE\\LocalCache40.bin");
+			else
+			{
+				RtlInitAnsiString(&dev_name, "\\Device\\Virtual0\\Image0");
+				// debuglog("\t> Found Cerbios virtual drive");
+			}
+			unsigned long IOCTL_VIRTUAL_CDROM = legacy ? IOCTL_VIRTUAL_CDROM_DETACH : IOCTL_VIRTUAL_DETACH;
+			OBJECT_ATTRIBUTES obj_attr;
+			obj_attr.RootDirectory = NULL;
+			obj_attr.ObjectName = &dev_name;
+			obj_attr.Attributes = OBJ_CASE_INSENSITIVE;
+			IO_STATUS_BLOCK io_status;
+			status = NtOpenFile(&h, GENERIC_READ | SYNCHRONIZE, &obj_attr, &io_status, FILE_SHARE_READ, FILE_SYNCHRONOUS_IO_NONALERT);
+			if (NT_SUCCESS(status)) {
+				status = NtDeviceIoControlFile(h, NULL, NULL, NULL, &io_status, IOCTL_VIRTUAL_CDROM, NULL, 0, NULL, 0);
+				// if (NT_SUCCESS(status))
+					// debuglog("\t\t> Dismounted virtual drive\n");
+				// else
+					// debuglog("\t\t> Failed to dismount virtual drive\n");
+			}
+			NtClose(h);
 		}
 	}
 	// Sleep fixes screen resetting on some xbox.
 	Sleep(300);
-	
 	if (file_exist(ES_IGR))
 	LaunchShortcut(ES_IGR);
-	
 	int timer = 0;
 	while(timer++ <= 1000)
 	{
@@ -183,7 +222,7 @@ int main(int argc,char* argv[])
 		{
 			debuglog("Checking: Rescue dashboards\n");
 			debuglog("\t> Loading: Custom Rescue dashboard");
-			LaunchShortcut(dashloader_Files_path"Custom_Recovery.cfg");
+			LaunchShortcut(Dashloader_Files_Path"Custom_Recovery.cfg");
 
 			debuglog("\t\t> Custom Rescue dashboard not found\n\n\t> Loading: Rescue dashboard TDATA");
 			XLaunchXBE("E:\\TDATA\\Rescuedash\\Default.xbe");
@@ -200,50 +239,56 @@ int main(int argc,char* argv[])
 		if( m_DefaultGamepad.bPressedAnalogButtons[XINPUT_GAMEPAD_A] )
 		{
 			debuglog("Loading: A Button dashboard");
-			LaunchShortcut(dashloader_Files_path"A_Button_Dash.cfg");
+			LaunchShortcut(Dashloader_Files_Path"A_Button_Dash.cfg");
 		}
 		if( m_DefaultGamepad.bPressedAnalogButtons[XINPUT_GAMEPAD_B] )
 		{
 			debuglog("Loading: B Button dashboard");
-			LaunchShortcut(dashloader_Files_path"B_Button_Dash.cfg");
+			LaunchShortcut(Dashloader_Files_Path"B_Button_Dash.cfg");
 		}
 		if( m_DefaultGamepad.bPressedAnalogButtons[XINPUT_GAMEPAD_X] )
 		{
 			debuglog("Loading: X Button dashboard");
-			LaunchShortcut(dashloader_Files_path"X_Button_Dash.cfg");
+			LaunchShortcut(Dashloader_Files_Path"X_Button_Dash.cfg");
 		}
 		if( m_DefaultGamepad.bPressedAnalogButtons[XINPUT_GAMEPAD_Y] )
 		{
 			debuglog("Loading: Y Button dashboard");
-			LaunchShortcut(dashloader_Files_path"Y_Button_Dash.cfg");
+			LaunchShortcut(Dashloader_Files_Path"Y_Button_Dash.cfg");
 		}
 		if( m_DefaultGamepad.wPressedButtons & XINPUT_GAMEPAD_START )
 		{
 			debuglog("Loading: Start Button dashboard");
-			LaunchShortcut(dashloader_Files_path"Start_Button_Dash.cfg");
+			LaunchShortcut(Dashloader_Files_Path"Start_Button_Dash.cfg");
 		}
 		if( m_DefaultGamepad.wPressedButtons & XINPUT_GAMEPAD_BACK )
 		{
 			debuglog("Loading: Back Button dashboard");
-			LaunchShortcut(dashloader_Files_path"Back_Button_Dash.cfg");
+			LaunchShortcut(Dashloader_Files_Path"Back_Button_Dash.cfg");
 		}
 		if( m_DefaultGamepad.bPressedAnalogButtons[XINPUT_GAMEPAD_BLACK] )
 		{
 			debuglog("Loading: Black Button dashboard");
-			LaunchShortcut(dashloader_Files_path"Black_Button_Dash.cfg");
+			LaunchShortcut(Dashloader_Files_Path"Black_Button_Dash.cfg");
 		}
 		if( m_DefaultGamepad.bPressedAnalogButtons[XINPUT_GAMEPAD_WHITE] )
 		{
 			debuglog("Loading: White Button dashboard");
-			LaunchShortcut(dashloader_Files_path"White_Button_Dash.cfg");
+			LaunchShortcut(Dashloader_Files_Path"White_Button_Dash.cfg");
 		}
 
 		Sleep(1);
 	}
 	// Try preset dashboard paths
+
+	debuglog("Checking: Prep dashboard\n");
+	debuglog("\t> Loading: Prep dashboard - E:\\Prep\\Default.xbe");
+	XLaunchXBE("E:\\Prep\\Default.xbe");
+	debuglog("\t\t> Prep dashboard not found\n");
+
 	debuglog("Checking: Custom Dashboard\n");
 	debuglog("\t> Loading: Custom dashboard");
-	LaunchShortcut(dashloader_Files_path"Custom_Dash.cfg");
+	LaunchShortcut(Dashloader_Files_Path"Custom_Dash.cfg");
 	debuglog("\t\t> Custom dashboard not found\n");
 	
 	debuglog("Checking: Dashboard Locations\n");

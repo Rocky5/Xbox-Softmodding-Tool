@@ -16,9 +16,11 @@
 #include <fstream>
 #include <iostream>
 #include "shortcutxbe.h"
-#include "dismountxbe.h"
-#define ES_IGR	"E:\\CACHE\\LocalCache20.bin"
-#define dashloader_Files_path	"E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\dashloader\\"
+#include "external.h"
+
+#define ES_IGR "E:\\CACHE\\LocalCache20.bin"
+#define Dashloader_Files_Path "E:\\UDATA\\21585554\\000000000000\\nkpatcher settings\\dashloader\\"
+
 static FILE* logfile = NULL;
 int file_exist(char *name)
 {
@@ -79,39 +81,50 @@ int LaunchShortcut(char* filename)
 /* initial starting point of program */
 int main(int argc,char* argv[])
 {
-	XMount("C:", "\\Device\\Harddisk0\\Partition2"); XMount("E:", "\\Device\\Harddisk0\\Partition1");
-	CreateDirectory(dashloader_Files_path, NULL);
+	XMount("C:", "\\Device\\Harddisk0\\Partition2");
+	XMount("E:", "\\Device\\Harddisk0\\Partition1");
+	CreateDirectory(Dashloader_Files_Path, NULL);
 	CreateDirectory("E:\\CACHE", NULL);
-	char shortcut[MAX_PATH];
-	int i;
 	XInitDevices( 0, NULL );
 	if( FAILED( XBInput_CreateGamepads( &m_Gamepad ) ) )
 	{
 		debuglog("ERROR - Cant create gamepad");
 	}
-	logfile = fopen(dashloader_Files_path"Dashloader.log", "w+t");
-	debuglog("Dashloader Build 1.4.2\n");
+	logfile = fopen(Dashloader_Files_Path"Dashloader.log", "w+t");
+	debuglog("Dashloader Build 1.4.3\n");
+	// Dismount virtual drive
 	XMount("VD:", "\\Device\\Cdrom1");
-	if (file_exist("E:\\CACHE\\LocalCache30.bin"))
+	if (file_exist("VD:\\default.xbe") && !file_exist(Dashloader_Files_Path"Disabled Virtual-ISO Dismount.bin"))
 	{
-		debuglog("Cleanup from Virtual Disc removal");
-		remove("E:\\CACHE\\LocalCache30.bin");
-	}
-	if (file_exist("VD:\\default.xbe") && !file_exist(dashloader_Files_path"Disabled Virtual-ISO Dismount.bin"))
-	{
-		debuglog("Unmounting Virtual Drive");
-		std::ofstream DismountXBEFile("E:\\CACHE\\LocalCache30.bin", std::ios::binary);
-		for(i = 0; i < sizeof(dismount_xbe); i++)
-		{
-			DismountXBEFile << dismount_xbe[i];
+		debuglog("Unmounting: Virtual Drive\n");
+		// NKPatcher Virtual Drive
+		HANDLE h;
+		NTSTATUS status;
+		ANSI_STRING dev_name;
+		RtlInitAnsiString(&dev_name, "\\Device\\CdRom1");
+
+		OBJECT_ATTRIBUTES obj_attr;
+		obj_attr.RootDirectory = NULL;
+		obj_attr.ObjectName = &dev_name;
+		obj_attr.Attributes = OBJ_CASE_INSENSITIVE;
+
+		IO_STATUS_BLOCK io_status;
+		status = NtOpenFile(&h, GENERIC_READ | SYNCHRONIZE, &obj_attr, &io_status, FILE_SHARE_READ, FILE_SYNCHRONOUS_IO_NONALERT);
+		
+		if (NT_SUCCESS(status)) {
+			debuglog("\t> Found virtual drive");
+			status = NtDeviceIoControlFile(h, NULL, NULL, NULL, &io_status, IOCTL_VIRTUAL_CDROM_DETACH, NULL, 0, NULL, 0);
+			if (NT_SUCCESS(status))
+				debuglog("\t\t> Dismounted virtual drive\n");
+			else
+				debuglog("\t\t> Failed to dismount virtual drive\n");
 		}
-		DismountXBEFile.close();
-		XLaunchXBE("E:\\CACHE\\LocalCache30.bin");
+		NtClose(h);
 	}
 	// Sleep fixes screen resetting on some xbox.
 	Sleep(300);
 	if (file_exist(ES_IGR))
-	LaunchShortcut(ES_IGR);
+		LaunchShortcut(ES_IGR);
 	int timer = 0;
 	while(timer++ <= 1000)
 	{
@@ -148,7 +161,7 @@ int main(int argc,char* argv[])
 		{
 			debuglog("Checking: Rescue dashboards\n");
 			debuglog("\t> Loading: Custom Rescue dashboard");
-			LaunchShortcut(dashloader_Files_path"Custom_Recovery.cfg");
+			LaunchShortcut(Dashloader_Files_Path"Custom_Recovery.cfg");
 
 			debuglog("\t\t> Custom Rescue dashboard not found\n\n\t> Loading: Rescue dashboard TDATA");
 			XLaunchXBE("E:\\TDATA\\Rescuedash\\Default.xbe");
@@ -168,42 +181,42 @@ int main(int argc,char* argv[])
 		if( m_DefaultGamepad.bPressedAnalogButtons[XINPUT_GAMEPAD_A] )
 		{
 			debuglog("Loading: A Button dashboard");
-			LaunchShortcut(dashloader_Files_path"A_Button_Dash.cfg");
+			LaunchShortcut(Dashloader_Files_Path"A_Button_Dash.cfg");
 		}
 		if( m_DefaultGamepad.bPressedAnalogButtons[XINPUT_GAMEPAD_B] )
 		{
 			debuglog("Loading: B Button dashboard");
-			LaunchShortcut(dashloader_Files_path"B_Button_Dash.cfg");
+			LaunchShortcut(Dashloader_Files_Path"B_Button_Dash.cfg");
 		}
 		if( m_DefaultGamepad.bPressedAnalogButtons[XINPUT_GAMEPAD_X] )
 		{
 			debuglog("Loading: X Button dashboard");
-			LaunchShortcut(dashloader_Files_path"X_Button_Dash.cfg");
+			LaunchShortcut(Dashloader_Files_Path"X_Button_Dash.cfg");
 		}
 		if( m_DefaultGamepad.bPressedAnalogButtons[XINPUT_GAMEPAD_Y] )
 		{
 			debuglog("Loading: Y Button dashboard");
-			LaunchShortcut(dashloader_Files_path"Y_Button_Dash.cfg");
+			LaunchShortcut(Dashloader_Files_Path"Y_Button_Dash.cfg");
 		}
 		if( m_DefaultGamepad.wPressedButtons & XINPUT_GAMEPAD_START )
 		{
 			debuglog("Loading: Start Button dashboard");
-			LaunchShortcut(dashloader_Files_path"Start_Button_Dash.cfg");
+			LaunchShortcut(Dashloader_Files_Path"Start_Button_Dash.cfg");
 		}
 		if( m_DefaultGamepad.wPressedButtons & XINPUT_GAMEPAD_BACK )
 		{
 			debuglog("Loading: Back Button dashboard");
-			LaunchShortcut(dashloader_Files_path"Back_Button_Dash.cfg");
+			LaunchShortcut(Dashloader_Files_Path"Back_Button_Dash.cfg");
 		}
 		if( m_DefaultGamepad.bPressedAnalogButtons[XINPUT_GAMEPAD_BLACK] )
 		{
 			debuglog("Loading: Black Button dashboard");
-			LaunchShortcut(dashloader_Files_path"Black_Button_Dash.cfg");
+			LaunchShortcut(Dashloader_Files_Path"Black_Button_Dash.cfg");
 		}
 		if( m_DefaultGamepad.bPressedAnalogButtons[XINPUT_GAMEPAD_WHITE] )
 		{
 			debuglog("Loading: White Button dashboard");
-			LaunchShortcut(dashloader_Files_path"White_Button_Dash.cfg");
+			LaunchShortcut(Dashloader_Files_Path"White_Button_Dash.cfg");
 		}
 
 		Sleep(1);
@@ -227,7 +240,7 @@ int main(int argc,char* argv[])
 	
 	debuglog("Checking: Custom Dashboard\n");
 	debuglog("\t> Loading: Custom dashboard");
-	LaunchShortcut(dashloader_Files_path"Custom_Dash.cfg");
+	LaunchShortcut(Dashloader_Files_Path"Custom_Dash.cfg");
 	debuglog("\t\t> Custom dashboard not found\n");
 
 	debuglog("Checking: Dashboard Locations\n");
