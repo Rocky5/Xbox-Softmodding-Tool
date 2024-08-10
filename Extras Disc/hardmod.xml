@@ -977,10 +977,10 @@
 					<Item Action="Delete" arg1="E:\Applications\MSDash\">Deleting E:\Applications\MSDash</Item>
 					<list>
 						<Item Action="AskUser" arg1="Audio" arg2="Install the Audio? \n\nThis is not needed for the dashboard to function. \n\nAudio increases the total size to 171MB"/>
-						<Item Action="Unzip" arg1="dashboards\msdash\Other\Audio.zip" arg2="C:\"/>
+						<Item Action="Unzip" arg1="D:\Softmod\dashboards\msdash\Other\Audio.zip" arg2="C:\"/>
 					</list>
-					<Item Action="Unzip" arg1="dashboards\msdash\retail\5960.zip" arg2="C:\"/>
-					<Item Action="Copy" arg1="dashboards\msdash\Other\shortcut.xbe" arg2="E:\Applications\MSDash\default.xbe">Copying shortcut.xbe</Item>
+					<Item Action="Unzip" arg1="D:\Softmod\dashboards\msdash\retail\5960.zip" arg2="C:\"/>
+					<Item Action="Copy" arg1="D:\Softmod\dashboards\msdash\Other\shortcut.xbe" arg2="E:\Applications\MSDash\default.xbe">Copying shortcut.xbe</Item>
 					<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="C:\xboxdashdata.185ead00\"/>
 					<Item Action="Format" arg1="Z"/>
 					<Item Action="MessageBox" arg1="Done">That's the MS Dashboard installed.</Item>
