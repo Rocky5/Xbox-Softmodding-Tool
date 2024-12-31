@@ -19,8 +19,6 @@ CD "temp"
 ::Copy
 XCopy /s /y /e "..\Endgame\Endgame exploit\*" "Endgame\"
 Copy "..\Endgame\payload.xbe" "Endgame\"
-::Move
-Move "payload.zip" "Endgame\"
 CD "Endgame"
 ::Zip softmod save
 "%Winrar%" a -x*.db -afzip "..\Softmod Package\Endgame.zip" "payload.xbe"
