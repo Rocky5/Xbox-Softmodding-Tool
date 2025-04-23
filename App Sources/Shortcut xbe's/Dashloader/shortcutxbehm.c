@@ -184,8 +184,6 @@ int main(int argc,char* argv[])
 	}
 	// Sleep fixes screen resetting on some xbox.
 	Sleep(300);
-	if (file_exist(ES_IGR))
-	LaunchShortcut(ES_IGR);
 	int timer = 0;
 	while(timer++ <= 1000)
 	{
@@ -286,6 +284,13 @@ int main(int argc,char* argv[])
 	XLaunchXBE("E:\\Prep\\Default.xbe");
 	debuglog("\t\t> Prep dashboard not found\n");
 
+	if (file_exist(ES_IGR))
+	{
+		debuglog("Checking: Relaunch XBMC-Emustation\n");
+		debuglog("\t> Loading: XBMC-Emustation return to rom-list");
+		LaunchShortcut(ES_IGR);
+	}
+	
 	debuglog("Checking: Custom Dashboard\n");
 	debuglog("\t> Loading: Custom dashboard");
 	LaunchShortcut(Dashloader_Files_Path"Custom_Dash.cfg");
