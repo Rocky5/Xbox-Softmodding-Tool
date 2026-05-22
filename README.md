@@ -4,7 +4,7 @@
 ##  Background:
 
 I set out to try and make the softmodding process as pain free and user friendly as possible. You don't need to have a specific MS dashboard version or mess about in menus trying to backup your EEPROM or even working out what version to install. I do it for you, I backup the EEPROM I give you an easy to use settings menu ( NKPatcher Settings ) that has all the info you need to get the gist of things. I have also made it as safe as I possibly can, by having recovery dashboards and fail safes in place in case you remove your dashboard or you format your E partition eg... you can always recover.
-		
+
 ##### I even added support for 24 dashboard locations, so every other softmod dashboard install location is covered.
 
 ###### Note: Making changes in the unprotected C partition is not advised unless you know what you are doing, you will know you are in this mode if you see a folder named "Do not touch anything in here"
@@ -54,31 +54,30 @@ I set out to try and make the softmodding process as pain free and user friendly
  * Multiple dashboard locations built in
 <details>
   <summary>Show dashboard load order</summary>
-  
- * C:\XBMC-Emustation\default.xbe
- * E:\XBMC-Emustation\default.xbe
- * F:\XBMC-Emustation\default.xbe
- * C:\XBMC4Gamers\default.xbe
- * E:\XBMC4Gamers\default.xbe
- * F:\XBMC4Gamers\default.xbe
- * C:\XBMC4Xbox\default.xbe
- * E:\XBMC4Xbox\default.xbe
- * F:\XBMC4Xbox\default.xbe
- * C:\XBMC\default.xbe
- * E:\XBMC\default.xbe
- * F:\XBMC\default.xbe
- * C:\dashboard\default.xbe
- * E:\dashboard\default.xbe
- * F:\dashboard\default.xbe
- * C:\dash\default.xbe
- * E:\dash\default.xbe
- * F:\dash\default.xbe
- * E:\default.xbe
- * E:\dashboard.xbe
- * C:\evoxdash.xbe
- * E:\evoxdash.xbe
- * C:\XBMC.xbe
- * E:\XBMC.xbe
+
+   * E:\
+   * - XBMC-Emustation\Default.xbe
+   * - XBMC4Gamers\Default.xbe
+   * - XBMC4Xbox\Default.xbe
+   * - Dashboard\Default.xbe
+   * - Dash\Default.xbe
+   * - XBMC\Default.xbe
+   * - XBMC.xbe
+   * - Evoxdash.xbe
+   * C:\
+   * - XBMC-Emustation\Default.xbe
+   * - XBMC4Gamers\Default.xbe
+   * - XBMC4Xbox\Default.xbe
+   * - Dashboard\Default.xbe
+   * - Dash\Default.xbe
+   * - Evoxdash.xbe
+   * F:\
+   * - XBMC-Emustation\Default.xbe
+   * - XBMC4Gamers\Default.xbe
+   * - XBMC4Xbox\Default.xbe
+   * - XBMC\Default.xbe
+   * - Dashboard\Default.xbe
+   * - Dash\Default.xbe
  
 </details>
 
@@ -120,8 +119,6 @@ Power on using the eject button allows you to load an alternative dashboard.
 ### Backup EEPROM &amp; Xbox information:
  - This option will load my "Xbox Softmod Tool Kit" and backup the eeprom. You will be taken back to the NKPatcher Settings when complete.
 ### 2.1 Advanced Features
- - #### Remove Parental Controls:
-   - This option will remove the parental controls set by the MSDash without requiring the MSDash.
 ### 2.1.1 Hard Drive
  - #### Change EEPROM HDD Key:
    - This option will allow you to change your eeprom hdd Key to a known key and relock your Hard drive to this new key. This allows the creation of new hard drive's or fixing your current hard drive a doddle as you will be able to lock these drives with a 32 1s key.
@@ -166,8 +163,6 @@ Power on using the eject button allows you to load an alternative dashboard.
 ## 5. Kernel Fonts
 Displays current font used for the NDURE exploit.
 ### 5.1 Advanced Features
- - #### Install Kernel Font:
-   - This option will install a kernel specific font. This isn't really needed but if there are boot issues this can fix the issue.	
 ### 5.1.1 Kernel Font Options
  - #### Install Kernel Font:
    - This option will install a kernel specific font. This isn't really needed but if there are boot issues this can fix the issue.	
@@ -244,16 +239,16 @@ Displays current font used for the NDURE exploit.
 #### Advanced Menu
  - #### Update 2014 Softmod
    - Used to upgrade from my 2014 Softmod.
-			
+
  - #### Update Xbox Softmodding Tool
     - This is used to update to a newer version of the softmod. Your dashboards are not touched, I only update the backend.
-		
+
  - #### Upgrade Old Softmods	
     - Used to upgrade from any other softmod to mine, or install a clean softmod.
-		
+
  - #### Restore To Default Factory State
     - I install all softmod saves and the UDDAE exploit so you can resoftmod without the need for a exploitable game.
-		
+
  - #### Advanced Apps
    - Chimp 261812
    - ConfigMagic v1.6.1

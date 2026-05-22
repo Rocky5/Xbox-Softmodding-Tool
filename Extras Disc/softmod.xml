@@ -6,7 +6,7 @@
 			<AbortOnError>Yes</AbortOnError>
 			<ContextMenu AllowUninstall="No" AllowItemEdit="No" AllowRecentList="No" LinkToSave="No" LinkToGame="No"/>
 			<Skin Path="D:\Softmod\Skins\">Softmod</Skin>
-			<VideoSettings Soften="No" Widescreen="No" UsePAL60="No" FastRefresh="No" EnableTextureCompression="No" Use720P="No" Use480P="Yes" FilterLevel="0"/>
+			<VideoSettings Soften="No" Widescreen="No" UsePAL60="No" FastRefresh="No" EnableTextureCompression="No" Use1080I="No" Use720P="No" Use480P="Yes" FilterLevel="0"/>
 			<LiveUpdate AutoCheck="No"/>
 			<AutoVideoMode MultiRegion="Off" UsePAL60="No">no</AutoVideoMode>
 			<Games AutoLaunch="No"/>
@@ -769,6 +769,7 @@
 					<Item Action="Copy" arg1="dummy" arg2="E:\Dashboard"/>
 					<Item Action="Delete" arg1="E:\Dashboard">Remove old E:\Dashboard</Item>
 					<Item Action="Unzip" arg1="D:\Softmod\Dashboards\XBMC-Emustation.zip" arg2="E:\Dashboard">Installing dash to E:\Dashboard\</Item>
+					<Item Action="Unzip" arg1="D:\Softmod\Dashboards\XBMC-Emustation_emulators.zip" arg2="E:\Dashboard">Installing dash to E:\Dashboard\</Item>
 					<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="E:\Dashboard\"/>
 					<Item Action="Format" arg1="Z"/>
 					<List>
@@ -784,6 +785,7 @@
 					<Item Action="Copy" arg1="dummy" arg2="E:\XBMC-Emustation"/>
 					<Item Action="Delete" arg1="E:\XBMC-Emustation">Remove old E:\XBMC-Emustation</Item>
 					<Item Action="Unzip" arg1="D:\Softmod\Dashboards\XBMC-Emustation.zip" arg2="E:\XBMC-Emustation">Installing dash to E:\XBMC-Emustation\</Item>
+					<Item Action="Unzip" arg1="D:\Softmod\Dashboards\XBMC-Emustation_emulators.zip" arg2="E:\XBMC-Emustation">Installing dash to E:\XBMC-Emustation\</Item>
 					<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="E:\XBMC-Emustation\"/>
 					<Item Action="Format" arg1="Z"/>
 					<Item Action="MessageBox" arg1="Done">That's XBMC-Emustation installed to "E:\XBMC-Emustation\"</Item>
@@ -793,6 +795,7 @@
 					<Item Action="Copy" arg1="dummy" arg2="F:\XBMC-Emustation"/>
 					<Item Action="Delete" arg1="F:\XBMC-Emustation">Remove old F:\XBMC-Emustation</Item>
 					<Item Action="Unzip" arg1="D:\Softmod\Dashboards\XBMC-Emustation.zip" arg2="F:\XBMC-Emustation">Installing dash to F:\XBMC-Emustation\</Item>
+					<Item Action="Unzip" arg1="D:\Softmod\Dashboards\XBMC-Emustation_emulators.zip" arg2="F:\XBMC-Emustation">Installing dash to F:\XBMC-Emustation\</Item>
 					<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="F:\XBMC-Emustation\"/>
 					<Item Action="Format" arg1="Z"/>
 					<Item Action="MessageBox" arg1="Done">That's XBMC-Emustation installed to "F:\XBMC-Emustation\"</Item>
@@ -803,6 +806,7 @@
 					<Item Action="Copy" arg1="dummy" arg2="E:\Applications\XBMC-Emustation"/>
 					<Item Action="Delete" arg1="E:\Applications\XBMC-Emustation">Remove old E:\Applications\XBMC-Emustation\</Item>
 					<Item Action="Unzip" arg1="D:\Softmod\Dashboards\XBMC-Emustation.zip" arg2="E:\Applications\XBMC-Emustation">Installing dash to E:\Applications\XBMC-Emustation\</Item>
+					<Item Action="Unzip" arg1="D:\Softmod\Dashboards\XBMC-Emustation_emulators.zip" arg2="E:\Applications\XBMC-Emustation">Installing dash to E:\Applications\XBMC-Emustation\</Item>
 					<Item Action="Format" arg1="Z"/>
 					<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="E:\Applications\XBMC-Emustation"/>
 					<Item Action="MessageBox" arg1="Done">That's XBMC-Emustation installed to "E:\Applications\XBMC-Emustation\"</Item>
@@ -817,6 +821,7 @@
 					<Item Action="Copy" arg1="dummy" arg2="F:\Applications\XBMC-Emustation"/>
 					<Item Action="Delete" arg1="F:\Applications\XBMC-Emustation">Remove old F:\Applications\XBMC-Emustation\</Item>
 					<Item Action="Unzip" arg1="D:\Softmod\Dashboards\XBMC-Emustation.zip" arg2="F:\Applications\XBMC-Emustation">Installing dash to F:\Applications\XBMC-Emustation\</Item>
+					<Item Action="Unzip" arg1="D:\Softmod\Dashboards\XBMC-Emustation_emulators.zip" arg2="F:\Applications\XBMC-Emustation">Installing dash to F:\Applications\XBMC-Emustation\</Item>
 					<Item Action="Format" arg1="Z"/>
 					<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="F:\Applications\XBMC-Emustation"/>
 					<Item Action="MessageBox" arg1="Done">That's XBMC-Emustation installed to "F:\Applications\XBMC-Emustation\"</Item>
@@ -831,6 +836,7 @@
 					<Item Action="Copy" arg1="dummy" arg2="G:\Applications\XBMC-Emustation"/>
 					<Item Action="Delete" arg1="G:\Applications\XBMC-Emustation">Remove old G:\Applications\XBMC-Emustation\</Item>
 					<Item Action="Unzip" arg1="D:\Softmod\Dashboards\XBMC-Emustation.zip" arg2="G:\Applications\XBMC-Emustation">Installing dash to G:\Applications\XBMC-Emustation\</Item>
+					<Item Action="Unzip" arg1="D:\Softmod\Dashboards\XBMC-Emustation_emulators.zip" arg2="G:\Applications\XBMC-Emustation">Installing dash to G:\Applications\XBMC-Emustation\</Item>
 					<Item Action="Format" arg1="Z"/>
 					<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="G:\Applications\XBMC-Emustation"/>
 					<Item Action="MessageBox" arg1="Done">That's XBMC-Emustation installed to "G:\Applications\XBMC-Emustation\"</Item>

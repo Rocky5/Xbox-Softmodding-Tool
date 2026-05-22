@@ -49,8 +49,6 @@ Copy "..\Documents\ReadMe.url" "ReadMe.url"
 "%Winrar%" a -x*.db -afzip "..\%ZipName%" "..\Documents\Endgame Information.url"
 "%Winrar%" a -x*.db -afzip "..\%ZipName%" "..\Documents\ReadMe.url"
 "%Winrar%" a -x*.db -afzip "..\%ZipName%" "..\Changes.txt"
-"%Winrar%" a -x*.db -afzip "..\%ZipName%" "..\Utilites\PC\Open FTP Window.bat"
-"%Winrar%" a -x*.db -afzip "..\%ZipName%" "..\Utilites\PC\OpenDash Dualboot.Settings"
 
 CD "..\"
 RD /Q /S "temp" 2>NUL
