@@ -1,5 +1,5 @@
 ![Thumb](/Other/Graphics/banner.png)
-## Current release v1.2.2
+## Current release v1.3.0
 
 ##  Background:
 
@@ -215,6 +215,7 @@ Displays current font used for the NDURE exploit.
 ## Xbox Softmodding Tool Extras Disc:
 
 #### Applications
+ - Dashloader Customizer
  - DVD2Xbox
  - DVDX v2
  - EEPROM Backup Tool
@@ -225,16 +226,14 @@ Displays current font used for the NDURE exploit.
 #### Dashboards
  - Avalaunch
  - EvolutionX
- - User Interface X Dash
  - UnleashX
    - Extras:
      - Install Audio Folder
- - XBMC 3.5.3
  - XBMC4Gamers
+ - XBMC4Xbox 3.5.3
  - XBMC-Emustation
  - MS Dashboard
-   - Stock MS Dash 5960
-   - Hacked MS Dash 4920
+ - UIX Lite
  
 #### Advanced Menu
  - #### Update 2014 Softmod

@@ -1,8 +1,25 @@
 ========================================= 
 	Change Log
-	Xbox Softmodding Tool v1.2.2
+	Xbox Softmodding Tool v1.3.0
 	Created by Rocky5
 =========================================
+
+=========================================
+	Update: May 24 2026
+=========================================
+		Dashloader update:
+			Bumped to v2.1.3
+
+		Extras disc update:
+			Bumped hardmod dashloader version to v2.1.3
+			Added latest Dashloader customizer
+			Updated XBMC-Emustation installation to include emulators
+			Added UIX Lite and remove UIXDash as it's not fit for purpose
+			Added UnleashX network patched, this force UnleashX to use the MSDash network settings.
+
+		UnleashX configs
+			Updated all of them to not support 720p and 1080i
+			(You can enable them once the install is done, this is just for installation and recover dashes etc...)
 
 =========================================
 	Update: August 5 2024

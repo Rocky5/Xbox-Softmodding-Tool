@@ -60,6 +60,7 @@
 		<Item></Item>
 
 		<Item>Install:</Item>
+
 		<List Text=" Applications" Sort="Off">
 			<List Text="Applications Information" Sort="On" Batch="True">
 				<Item Action="MessageBox" arg1="Information">In this menu you can install applications to do various things, like add trainers to games or copy games to your HDD.</Item>
@@ -515,89 +516,6 @@
 				</list>
 			</list>
 
-			<List Text=" User Interface X Dash" Sort="Off">
-				<List Text=" User Interface X Dash Options" Sort="Off" Batch="True"></List>
-				<Item></Item>
-				<Item>Install as dashboard to:</Item>
-				<List Text=" C:\Dashboard\" Sort="Off" Batch="True" Icon="C:\Dashboard\installed.png">
-					<Item Action="AskUser" arg1="Continue" arg2="This will install User Interface X Dash to C:\Dashboard\ if there is currently a dashboard residing there it will be overwritten."/>
-					<Item Action="Copy" arg1="dummy" arg2="C:\Dashboard"/>
-					<Item Action="Delete" arg1="C:\Dashboard">Remove old C:\Dashboard</Item>
-					<Item Action="Unzip" arg1="D:\Softmod\Dashboards\UIX Dash.zip" arg2="C:\Dashboard">Installing dash to C:\Dashboard\</Item>
-					<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="C:\Dashboard\"/>
-					<Item Action="Format" arg1="Z"/>
-					<List>
-						<Item Action="AskUser" arg1="OH" arg2="Would you like to remove the Dashboard located in E:\Dashboard\ if it exists? This is not needed, but it would clean up your E drive & stop confusion down the road."/>
-						<Item Action="Copy" arg1="dummy" arg2="E:\Dashboard"/>
-						<Item Action="Delete" arg1="E:\Dashboard">Remove old C:\Dashboard</Item>
-					</List>
-					<Item Action="Copy" arg1="D:\Hardmod\dashloader\" arg2="C:\"/>
-					<Item Action="MessageBox" arg1="Done">That's User Interface X Dash installed to "C:\Dashboard\"</Item>
-				</list>
-				<List Text=" E:\Dashboard\" Sort="Off" Batch="True" Icon="E:\Dashboard\installed.png">
-					<Item Action="AskUser" arg1="Continue" arg2="This will install User Interface X Dash to E:\Dashboard\ if there is currently a dashboard residing there it will be overwritten."/>
-					<Item Action="Copy" arg1="dummy" arg2="E:\Dashboard"/>
-					<Item Action="Delete" arg1="E:\Dashboard">Remove old E:\Dashboard</Item>
-					<Item Action="Unzip" arg1="D:\Softmod\Dashboards\UIX Dash.zip" arg2="E:\Dashboard">Installing dash to E:\Dashboard\</Item>
-					<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="E:\Dashboard\"/>
-					<Item Action="Format" arg1="Z"/>
-					<List>
-						<Item Action="AskUser" arg1="OH" arg2="Would you like to remove the Dashboard located in C:\Dashboard\ if it exists? This is required for the E:\Dashboard\ to load on boot."/>
-						<Item Action="Copy" arg1="dummy" arg2="C:\Dashboard"/>
-						<Item Action="Delete" arg1="C:\Dashboard">Remove old C:\Dashboard</Item>
-					</List>
-					<Item Action="Copy" arg1="D:\Hardmod\dashloader\" arg2="C:\"/>
-					<Item Action="MessageBox" arg1="Done">That's User Interface X Dash installed to "E:\Dashboard\"</Item>
-				</list>
-				<Item>Install as application to:</Item>
-				<List Text=" C:\Applications\" Sort="Off" Batch="True" Icon="C:\Applications\User Interface X Dash\installed.png">
-					<Item Action="AskUser" arg1="Continue" arg2="This will install User Interface X Dash to C:\Applications\ if there is a previous installation residing there it will be overwritten."/>
-					<Item Action="Copy" arg1="dummy" arg2="C:\Applications\User Interface X Dash"/>
-					<Item Action="Delete" arg1="C:\Applications\User Interface X Dash">Remove old C:\Applications\User Interface X Dash\</Item>
-					<Item Action="Unzip" arg1="D:\Softmod\Dashboards\UIX Dash.zip" arg2="C:\Applications\User Interface X Dash">Installing dash to C:\Applications\User Interface X Dash\</Item>
-					<Item Action="Format" arg1="Z"/>
-					<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="C:\Applications\User Interface X Dash"/>
-					<Item Action="MessageBox" arg1="Done">That's User Interface X Dash installed to "C:\Applications\User Interface X Dash\"</Item>
-				</list>
-				<List Text=" E:\Applications\" Sort="Off" Batch="True" Icon="E:\Applications\User Interface X Dash\installed.png">
-					<Item Action="AskUser" arg1="Continue" arg2="This will install User Interface X Dash to E:\Applications\ if there is a previous installation residing there it will be overwritten."/>
-					<Item Action="Copy" arg1="dummy" arg2="E:\Applications\User Interface X Dash"/>
-					<Item Action="Delete" arg1="E:\Applications\User Interface X Dash">Remove old E:\Applications\User Interface X Dash\</Item>
-					<Item Action="Unzip" arg1="D:\Softmod\Dashboards\UIX Dash.zip" arg2="E:\Applications\User Interface X Dash">Installing dash to E:\Applications\User Interface X Dash\</Item>
-					<Item Action="Format" arg1="Z"/>
-					<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="E:\Applications\User Interface X Dash"/>
-					<Item Action="MessageBox" arg1="Done">That's User Interface X Dash installed to "E:\Applications\User Interface X Dash\"</Item>
-				</list>
-				<List Text=" F:\Applications\" Sort="Off" Batch="True" Icon="F:\Applications\User Interface X Dash\installed.png">
-					<Item Action="AskUser" arg1="Continue" arg2="This will install User Interface X Dash to F:\Applications\ if there is a previous installation residing there it will be overwritten."/>
-					<list>
-						<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="F:\test_partition"/>
-						<Item Action="Rename" arg1="F:\test_partition" arg2="F:\test_partition_">No F Partition found</Item>
-						<Item Action="Delete" arg="F:\test_partition_"/>
-					</list>
-					<Item Action="Copy" arg1="dummy" arg2="F:\Applications\User Interface X Dash"/>
-					<Item Action="Delete" arg1="F:\Applications\User Interface X Dash">Remove old F:\Applications\User Interface X Dash\</Item>
-					<Item Action="Unzip" arg1="D:\Softmod\Dashboards\UIX Dash.zip" arg2="F:\Applications\User Interface X Dash">Installing dash to F:\Applications\User Interface X Dash\</Item>
-					<Item Action="Format" arg1="Z"/>
-					<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="F:\Applications\User Interface X Dash"/>
-					<Item Action="MessageBox" arg1="Done">That's User Interface X Dash installed to "F:\Applications\User Interface X Dash\"</Item>
-				</list>
-				<List Text=" G:\Applications\" Sort="Off" Batch="True" Icon="G:\Applications\User Interface X Dash\installed.png">
-					<Item Action="AskUser" arg1="Continue" arg2="This will install User Interface X Dash to G:\Applications\ if there is a previous installation residing there it will be overwritten."/>
-					<list>
-						<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="G:\test_partition"/>
-						<Item Action="Rename" arg1="G:\test_partition" arg2="G:\test_partition_">No G Partition found</Item>
-						<Item Action="Delete" arg="G:\test_partition_"/>
-					</list>
-					<Item Action="Copy" arg1="dummy" arg2="G:\Applications\User Interface X Dash"/>
-					<Item Action="Delete" arg1="G:\Applications\User Interface X Dash">Remove old G:\Applications\User Interface X Dash\</Item>
-					<Item Action="Unzip" arg1="D:\Softmod\Dashboards\UIX Dash.zip" arg2="G:\Applications\User Interface X Dash">Installing dash to G:\Applications\User Interface X Dash\</Item>
-					<Item Action="Format" arg1="Z"/>
-					<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="G:\Applications\User Interface X Dash"/>
-					<Item Action="MessageBox" arg1="Done">That's User Interface X Dash installed to "G:\Applications\User Interface X Dash\"</Item>
-				</list>
-			</list>
-
 			<List Text=" UnleashX" Sort="Off">
 				<List Text=" UnleashX Options" Sort="Off" Batch="True"></List>
 				<Item></Item>
@@ -698,7 +616,108 @@
 					<Item Action="MessageBox" arg1="Done">That's the Audio installed.</Item>
 				</list>
 			</list>
-			
+
+			<List Text=" UnleashX Network Patched" Sort="Off">
+				<List Text="UnleashX Network Patched Information" Sort="Off" Batch="True">
+					<Item Action="MessageBox" arg1="Information">UnleashX now always uses the MS Dashboard’s network settings and never overwrites them. Custom DNS (like Insignia) stays intact. Network editing inside UnleashX is disabled, but toggles and FTP still work. Any actual network changes must be done through the MS Dashboard or another dashboard.</Item>
+				</List>
+				<Item></Item>
+				<Item>Install as dashboard to:</Item>
+				<List Text=" C:\Dashboard\" Sort="Off" Batch="True" Icon="C:\Dashboard\installed.png">
+					<Item Action="AskUser" arg1="Continue" arg2="This will install UnleashX to C:\Dashboard\ if there is currently a dashboard residing there it will be overwritten."/>
+					<Item Action="Copy" arg1="dummy" arg2="C:\Dashboard"/>
+					<Item Action="Delete" arg1="C:\Dashboard">Remove old C:\Dashboard</Item>
+					<Item Action="Unzip" arg1="D:\Softmod\Dashboards\UnleashX Network Patched.zip" arg2="C:\Dashboard">Installing dash to C:\Dashboard\</Item>
+					<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="C:\Dashboard\"/>
+					<Item Action="Format" arg1="Z"/>
+					<List>
+						<Item Action="AskUser" arg1="OH" arg2="Would you like to remove the Dashboard located in E:\Dashboard\ if it exists? This is not needed, but it would clean up your E drive & stop confusion down the road."/>
+						<Item Action="Copy" arg1="dummy" arg2="E:\Dashboard"/>
+						<Item Action="Delete" arg1="E:\Dashboard">Remove old C:\Dashboard</Item>
+					</List>
+					<Item Action="MessageBox" arg1="Done">That's UnleashX installed to "C:\Dashboard\"</Item>
+				</list>
+				<List Text=" E:\Dashboard\" Sort="Off" Batch="True" Icon="E:\Dashboard\installed.png">
+					<Item Action="AskUser" arg1="Continue" arg2="This will install UnleashX to E:\Dashboard\ if there is currently a dashboard residing there it will be overwritten."/>
+					<Item Action="Copy" arg1="dummy" arg2="E:\Dashboard"/>
+					<Item Action="Delete" arg1="E:\Dashboard">Remove old E:\Dashboard</Item>
+					<Item Action="Unzip" arg1="D:\Softmod\Dashboards\UnleashX Network Patched.zip" arg2="E:\Dashboard">Installing dash to E:\Dashboard\</Item>
+					<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="E:\Dashboard\"/>
+					<Item Action="Format" arg1="Z"/>
+					<List>
+						<Item Action="AskUser" arg1="OH" arg2="Would you like to remove the Dashboard located in C:\Dashboard\ if it exists? This is required for the E:\Dashboard\ to load on boot."/>
+						<Item Action="Copy" arg1="dummy" arg2="C:\Dashboard"/>
+						<Item Action="Delete" arg1="C:\Dashboard">Remove old C:\Dashboard</Item>
+					</List>
+					<Item Action="MessageBox" arg1="Done">That's UnleashX installed to "E:\Dashboard\"</Item>
+				</list>
+				<Item>Install as application to:</Item>
+				<List Text=" C:\Applications\" Sort="Off" Batch="True" Icon="C:\Applications\UnleashX\installed.png">
+					<Item Action="AskUser" arg1="Continue" arg2="This will install UnleashX to C:\Applications\ if there is a previous installation residing there it will be overwritten."/>
+					<Item Action="Copy" arg1="dummy" arg2="C:\Applications\UnleashX"/>
+					<Item Action="Delete" arg1="C:\Applications\UnleashX">Remove old C:\Applications\UnleashX\</Item>
+					<Item Action="Unzip" arg1="D:\Softmod\Dashboards\UnleashX Network Patched.zip" arg2="C:\Applications\UnleashX">Installing dash to C:\Applications\UnleashX\</Item>
+					<Item Action="Format" arg1="Z"/>
+					<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="C:\Applications\UnleashX"/>
+					<Item Action="MessageBox" arg1="Done">That's UnleashX installed to "C:\Applications\UnleashX\"</Item>
+				</list>
+				<List Text=" E:\Applications\" Sort="Off" Batch="True" Icon="E:\Applications\UnleashX\installed.png">
+					<Item Action="AskUser" arg1="Continue" arg2="This will install UnleashX to E:\Applications\ if there is a previous installation residing there it will be overwritten."/>
+					<Item Action="Copy" arg1="dummy" arg2="E:\Applications\UnleashX"/>
+					<Item Action="Delete" arg1="E:\Applications\UnleashX">Remove old E:\Applications\UnleashX\</Item>
+					<Item Action="Unzip" arg1="D:\Softmod\Dashboards\UnleashX Network Patched.zip" arg2="E:\Applications\UnleashX">Installing dash to E:\Applications\UnleashX\</Item>
+					<Item Action="Format" arg1="Z"/>
+					<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="E:\Applications\UnleashX"/>
+					<Item Action="MessageBox" arg1="Done">That's UnleashX installed to "E:\Applications\UnleashX\"</Item>
+				</list>
+				<List Text=" F:\Applications\" Sort="Off" Batch="True" Icon="F:\Applications\UnleashX\installed.png">
+					<Item Action="AskUser" arg1="Continue" arg2="This will install UnleashX to F:\Applications\ if there is a previous installation residing there it will be overwritten."/>
+					<list>
+						<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="F:\test_partition"/>
+						<Item Action="Rename" arg1="F:\test_partition" arg2="F:\test_partition_">No F Partition found</Item>
+						<Item Action="Delete" arg="F:\test_partition_"/>
+					</list>
+					<Item Action="Copy" arg1="dummy" arg2="F:\Applications\UnleashX"/>
+					<Item Action="Delete" arg1="F:\Applications\UnleashX">Remove old F:\Applications\UnleashX\</Item>
+					<Item Action="Unzip" arg1="D:\Softmod\Dashboards\UnleashX Network Patched.zip" arg2="F:\Applications\UnleashX">Installing dash to F:\Applications\UnleashX\</Item>
+					<Item Action="Format" arg1="Z"/>
+					<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="F:\Applications\UnleashX"/>
+					<Item Action="MessageBox" arg1="Done">That's UnleashX installed to "F:\Applications\UnleashX\"</Item>
+				</list>
+				<List Text=" G:\Applications\" Sort="Off" Batch="True" Icon="G:\Applications\UnleashX\installed.png">
+					<Item Action="AskUser" arg1="Continue" arg2="This will install UnleashX to G:\Applications\ if there is a previous installation residing there it will be overwritten."/>
+					<list>
+						<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="G:\test_partition"/>
+						<Item Action="Rename" arg1="G:\test_partition" arg2="G:\test_partition_">No G Partition found</Item>
+						<Item Action="Delete" arg="G:\test_partition_"/>
+					</list>
+					<Item Action="Copy" arg1="dummy" arg2="G:\Applications\UnleashX"/>
+					<Item Action="Delete" arg1="G:\Applications\UnleashX">Remove old G:\Applications\UnleashX\</Item>
+					<Item Action="Unzip" arg1="D:\Softmod\Dashboards\UnleashX Network Patched.zip" arg2="G:\Applications\UnleashX">Installing dash to G:\Applications\UnleashX\</Item>
+					<Item Action="Format" arg1="Z"/>
+					<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="G:\Applications\UnleashX"/>
+					<Item Action="MessageBox" arg1="Done">That's UnleashX installed to "G:\Applications\UnleashX\"</Item>
+				</list>
+				<Item>Extras:</Item>
+				<List Text=" Install Audio Folder" Sort="Off" Batch="True">
+					<Item Action="AskUser" arg1="Continue" arg2="This will install the MSDash's Audio folder to C:\Audio\. This will enable sound effects and background sounds in UnleashX."/>
+					<Item Action="Format" arg1="Y"/>
+					<Item Action="Unzip" arg1="dashboards\msdash\Other\Audio.zip" arg2="Y:\"/>
+					<Item Action="Copy" arg1="Y:\Audio\AmbientAudio\AMB_05_ENGINEROOM_LR.wav" arg2="C:\Audio\AmbientAudio\"/>
+					<Item Action="Copy" arg1="Y:\Audio\MainAudio\Global A Button Select.wav" arg2="C:\Audio\MainAudio\"/>
+					<Item Action="Copy" arg1="Y:\Audio\MainAudio\Global B Button Back.wav" arg2="C:\Audio\MainAudio\"/>
+					<Item Action="Copy" arg1="Y:\Audio\MainAudio\Global Completion Beep.wav" arg2="C:\Audio\MainAudio\"/>
+					<Item Action="Copy" arg1="Y:\Audio\MainAudio\Global Keyboard Stroke 1.wav" arg2="C:\Audio\MainAudio\"/>
+					<Item Action="Copy" arg1="Y:\Audio\MainAudio\Global Main MenuBack3ver2.wav" arg2="C:\Audio\MainAudio\"/>
+					<Item Action="Copy" arg1="Y:\Audio\MainAudio\Global Main MenuFwd3ver2.wav" arg2="C:\Audio\MainAudio\"/>
+					<Item Action="Copy" arg1="Y:\Audio\MainAudio\Global Scroll Beep.wav" arg2="C:\Audio\MainAudio\"/>
+					<Item Action="Copy" arg1="Y:\Audio\MemoryAudio\Memory Games Select.wav" arg2="C:\Audio\MemoryAudio\"/>
+					<Item Action="Copy" arg1="Y:\Audio\MemoryAudio\Memory Memory Slot Select.wav" arg2="C:\Audio\MemoryAudio\"/>
+					<Item Action="Format" arg1="Y"/>
+					<Item Action="MessageBox" arg1="Done">That's the Audio installed.</Item>
+				</list>
+			</list>
+
 			<List Text=" XBMC-Emustation" Sort="Off">
 				<List Text=" XBMC-Emustation Options" Sort="Off" Batch="True"></List>
 				<Item></Item>
@@ -954,7 +973,7 @@
 
 			<Item>Other:</Item>
 
-			<List Text=" MS Dashboards" Sort="Off">	
+			<List Text=" MS Dashboards" Sort="Off" icon="C:\xboxdashdata.185ead00\installed.png">	
 				<List Text="MS Dashboards Information" Sort="Off" Batch="True">
 					<Item Action="MessageBox" arg1="Information">This was the last official (5960 retail) dashboard MS released for the Xbox.</Item>
 				</List>
@@ -963,6 +982,10 @@
 					<Item Action="AskUser" arg1="Continue?" arg2="Proceed with installation? \n\nMS Dashboard total size is 138MB"/>
 					<Item Action="MessageBox" arg1="Clean Up">I'm about to clean up the C drive.</Item>
 					<!-- Remove old files (or if they don't exist create & remove) -->
+					<Item Action="Copy" arg1="dummy" arg2="C:\discord presence\">Copying C:\discord presence</Item>
+					<Item Action="Delete" arg1="C:\discord presence\">Deleting C:\discord presence\</Item>
+					<Item Action="Copy" arg1="dummy" arg2="C:\uix configs\">Copying C:\UIX Configs</Item>
+					<Item Action="Delete" arg1="C:\uix configs\">Deleting C:\UIX Configs\</Item>
 					<Item Action="Copy" arg1="dummy" arg2="C:\xboxdashdata.185ead00\">Copying C:\xboxdashdata.185ead00\</Item>
 					<Item Action="Delete" arg1="C:\xboxdashdata.185ead00\">Deleting C:\xboxdashdata.185ead00\</Item>
 					<Item Action="Copy" arg1="dummy" arg2="C:\Xbox Book.xtf">Copying C:\Xbox Book.xtf</Item>
@@ -986,7 +1009,7 @@
 						<Item Action="Unzip" arg1="D:\Softmod\dashboards\msdash\Other\Audio.zip" arg2="C:\"/>
 					</list>
 					<Item Action="Unzip" arg1="D:\Softmod\dashboards\msdash\retail\5960.zip" arg2="C:\"/>
-					<Item Action="Copy" arg1="D:\Softmod\dashboards\msdash\Other\shortcut.xbe" arg2="E:\Applications\MSDash\default.xbe">Copying shortcut.xbe</Item>
+					<Item Action="Copy" arg1="D:\Softmod\dashboards\msdash\Other\msdash.xbe" arg2="E:\Applications\MSDash\default.xbe">Copying shortcut.xbe</Item>
 					<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="C:\xboxdashdata.185ead00\"/>
 					<Item Action="Format" arg1="Z"/>
 					<Item Action="MessageBox" arg1="Done">That's the MS Dashboard installed.</Item>
@@ -995,6 +1018,10 @@
 					<Item Action="AskUser" arg1="Continue?" arg2="Proceed with the uninstall?"/>
 					<Item Action="MessageBox" arg1="Clean Up">I'm about to clean up the C drive.</Item>
 					<!-- Remove old files (or if they don't exist create & remove) -->
+					<Item Action="Copy" arg1="dummy" arg2="C:\discord presence\">Copying C:\discord presence</Item>
+					<Item Action="Delete" arg1="C:\discord presence\">Deleting C:\discord presence\</Item>
+					<Item Action="Copy" arg1="dummy" arg2="C:\uix configs\">Copying C:\UIX Configs</Item>
+					<Item Action="Delete" arg1="C:\uix configs\">Deleting C:\UIX Configs\</Item>
 					<Item Action="Copy" arg1="dummy" arg2="C:\xboxdashdata.185ead00\">Copying C:\xboxdashdata.185ead00\</Item>
 					<Item Action="Delete" arg1="C:\xboxdashdata.185ead00\">Deleting C:\xboxdashdata.185ead00\</Item>
 					<Item Action="Copy" arg1="dummy" arg2="C:\Xbox Book.xtf">Copying C:\Xbox Book.xtf</Item>
@@ -1016,9 +1043,82 @@
 					<Item Action="MessageBox" arg1="Done">That's the MS Dashboard uninstalled.</Item>
 				</list>
 			</list>
+
+			<List Text=" UIX Lite" Sort="Off" icon="C:\xodash\media\installed.png">	
+				<List Text="UIX Lite Information" Sort="Off" Batch="True">
+					<Item Action="MessageBox" arg1="Information">This is the last UIX Lite released\n(Version: 0.5 - Build: 260124) for the Xbox.</Item>
+				</List>
+				<Item></Item>
+				<list Text=" Install" Sort="Off" Batch="True" Icon="C:\xboxdashdata.185ead00\installed.png">
+					<Item Action="AskUser" arg1="Continue?" arg2="Proceed with installation? \n\nUIX Lite total size is 147MB"/>
+					<Item Action="MessageBox" arg1="Clean Up">I'm about to clean up the C drive.</Item>
+					<!-- Remove old files (or if they don't exist create & remove) -->
+					<Item Action="Copy" arg1="dummy" arg2="C:\discord presence\">Copying C:\discord presence</Item>
+					<Item Action="Delete" arg1="C:\discord presence\">Deleting C:\discord presence\</Item>
+					<Item Action="Copy" arg1="dummy" arg2="C:\uix configs\">Copying C:\UIX Configs</Item>
+					<Item Action="Delete" arg1="C:\uix configs\">Deleting C:\UIX Configs\</Item>
+					<Item Action="Copy" arg1="dummy" arg2="C:\xboxdashdata.185ead00\">Copying C:\xboxdashdata.185ead00\</Item>
+					<Item Action="Delete" arg1="C:\xboxdashdata.185ead00\">Deleting C:\xboxdashdata.185ead00\</Item>
+					<Item Action="Copy" arg1="dummy" arg2="C:\Xbox Book.xtf">Copying C:\Xbox Book.xtf</Item>
+					<Item Action="Delete" arg1="C:\Xbox Book.xtf">Deleting C:\Xbox Book.xtf</Item>
+					<Item Action="Copy" arg1="dummy" arg2="C:\Xbox.xtf">Copying C:\Xbox.xtf</Item>
+					<Item Action="Delete" arg1="C:\Xbox.xtf">Deleting C:\Xbox.xtf</Item>
+					<Item Action="Copy" arg1="dummy" arg2="C:\Audio\">Copying C:\Audio\</Item>
+					<Item Action="Delete" arg1="C:\Audio\">Deleting C:\Audio\</Item>
+					<Item Action="Copy" arg1="dummy" arg2="C:\fonts\">Copying C:\fonts\</Item>
+					<Item Action="Delete" arg1="C:\fonts\">Deleting C:\fonts\</Item>
+					<Item Action="Copy" arg1="dummy" arg2="C:\XboxDash\">Copying C:\XboxDash\</Item>
+					<Item Action="Delete" arg1="C:\XboxDash\">Deleting C:\XboxDash\</Item>
+					<Item Action="Copy" arg1="dummy" arg2="C:\xodash\">Copying C:\xodash\</Item>
+					<Item Action="Delete" arg1="C:\xodash\">Deleting C:\xodash\</Item>
+					<Item Action="Copy" arg1="dummy" arg2="C:\xboxdash.xbe">Copying C:\xboxdash.xbe</Item>
+					<Item Action="Delete" arg1="C:\xboxdash.xbe">Deleting C:\xboxdash.xbe</Item>
+					<Item Action="Copy" arg1="dummy" arg2="E:\Applications\MSDash\">Copying E:\Applications\MSDash</Item>
+					<Item Action="Delete" arg1="E:\Applications\MSDash\">Deleting E:\Applications\MSDash</Item>
+					<list>
+						<Item Action="AskUser" arg1="Audio" arg2="Install the Audio? \n\nThis is not needed for the dashboard to function. \n\nAudio increases the total size to 180MB"/>
+						<Item Action="Unzip" arg1="D:\Softmod\dashboards\msdash\Other\Audio.zip" arg2="C:\"/>
+					</list>
+					<Item Action="Unzip" arg1="D:\Softmod\dashboards\UIX Lite.zip" arg2="C:\"/>
+					<Item Action="Copy" arg1="D:\Softmod\dashboards\msdash\Other\uixlite.xbe" arg2="E:\Applications\MSDash\default.xbe">Copying shortcut.xbe</Item>
+					<Item Action="Copy" arg1="D:\Softmod\dashboards\msdash\Other\uixlite.bin" arg2="E:\Applications\MSDash\Override_TitleID.bin">Copying override bin</Item>
+					<Item Action="Copy" arg1="D:\Softmod\Skins\installed.png" arg2="C:\xodash\media\"/>
+					<Item Action="Format" arg1="Z"/>
+					<Item Action="MessageBox" arg1="Done">That's the UIX Lite installed.</Item>
+				</list>
+				<list Text=" Uninstall" Sort="Off" Batch="True">
+					<Item Action="AskUser" arg1="Continue?" arg2="Proceed with the uninstall?"/>
+					<Item Action="MessageBox" arg1="Clean Up">I'm about to clean up the C drive.</Item>
+					<!-- Remove old files (or if they don't exist create & remove) -->
+					<Item Action="Copy" arg1="dummy" arg2="C:\discord presence\">Copying C:\discord presence</Item>
+					<Item Action="Delete" arg1="C:\discord presence\">Deleting C:\discord presence\</Item>
+					<Item Action="Copy" arg1="dummy" arg2="C:\uix configs\">Copying C:\UIX Configs</Item>
+					<Item Action="Delete" arg1="C:\uix configs\">Deleting C:\UIX Configs\</Item>
+					<Item Action="Copy" arg1="dummy" arg2="C:\xboxdashdata.185ead00\">Copying C:\xboxdashdata.185ead00\</Item>
+					<Item Action="Delete" arg1="C:\xboxdashdata.185ead00\">Deleting C:\xboxdashdata.185ead00\</Item>
+					<Item Action="Copy" arg1="dummy" arg2="C:\Xbox Book.xtf">Copying C:\Xbox Book.xtf</Item>
+					<Item Action="Delete" arg1="C:\Xbox Book.xtf">Deleting C:\Xbox Book.xtf</Item>
+					<Item Action="Copy" arg1="dummy" arg2="C:\Xbox.xtf">Copying C:\Xbox.xtf</Item>
+					<Item Action="Delete" arg1="C:\Xbox.xtf">Deleting C:\Xbox.xtf</Item>
+					<Item Action="Copy" arg1="dummy" arg2="C:\Audio\">Copying C:\Audio\</Item>
+					<Item Action="Delete" arg1="C:\Audio\">Deleting C:\Audio\</Item>
+					<Item Action="Copy" arg1="dummy" arg2="C:\fonts\">Copying C:\fonts\</Item>
+					<Item Action="Delete" arg1="C:\fonts\">Deleting C:\fonts\</Item>
+					<Item Action="Copy" arg1="dummy" arg2="C:\XboxDash\">Copying C:\XboxDash\</Item>
+					<Item Action="Delete" arg1="C:\XboxDash\">Deleting C:\XboxDash\</Item>
+					<Item Action="Copy" arg1="dummy" arg2="C:\xodash\">Copying C:\xodash\</Item>
+					<Item Action="Delete" arg1="C:\xodash\">Deleting C:\xodash\</Item>
+					<Item Action="Copy" arg1="dummy" arg2="C:\xboxdash.xbe">Copying C:\xboxdash.xbe</Item>
+					<Item Action="Delete" arg1="C:\xboxdash.xbe">Deleting C:\xboxdash.xbe</Item>
+					<Item Action="Copy" arg1="dummy" arg2="E:\Applications\MSDash\">Copying E:\Applications\MSDash</Item>
+					<Item Action="Delete" arg1="E:\Applications\MSDash\">Deleting E:\Applications\MSDash</Item>
+					<Item Action="MessageBox" arg1="Done">That's the UIX Lite uninstalled.</Item>
+				</list>
+			</list>
 		</list>
 
 		<Item>Advanced Menu:</Item>
+
 		<List Text=" Enter Menu" Sort="Off">
 			<List Text="Advanced Features Information" Sort="Off" Batch="True" password="">
 				<Item Action="MessageBox" arg1="Disclaimer!">If you don't know what these do, or you don't know how they work, do not use them. I take no responsibility for you mucking about with things you don't understand.</Item>
